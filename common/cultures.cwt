@@ -1,0 +1,62 @@
+
+types = {
+	type[culture_group] = {
+		path = "game/common/cultures"
+	}
+	## skip_root_key = any
+	type[culture] = {
+		path = "game/common/cultures"
+		
+		subtype[fixed] = {
+			primary = <country_tag>
+		}
+	}
+}
+
+
+culture_group = {
+	graphical_culture = <graphical_culture> #todo
+	
+	## cardinality = 0..1
+	male_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+	
+	## cardinality = 0..1
+	female_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+	
+	## cardinality = 0..1
+	dynasty_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+	
+	alias_name[culture] = alias_match_left[culture]
+}
+
+alias[culture:scalar] = {
+	## cardinality = 0..1
+	primary = <country_tag>
+
+	## cardinality = 0..1
+	male_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+	
+	## cardinality = 0..1
+	female_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+	
+	## cardinality = 0..1
+	dynasty_names = {
+		## cardinality = 1..inf
+		scalar
+	}
+}

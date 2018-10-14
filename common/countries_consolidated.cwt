@@ -1,0 +1,13 @@
+
+types = {
+	type[country_tag] = {
+		path = "game/common/country_tags"
+	}
+}
+
+
+
+country_tag = scalar #filepath but "countries/Aachen.txt"
+
+
+#Not too sure whether I will put countries and country_colors in validation, but if I do they can go here.

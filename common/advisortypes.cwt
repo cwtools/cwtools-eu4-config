@@ -1,0 +1,44 @@
+# If you add advisortypes, and use those tags, do not change them without changing everywhere they are used.
+#
+# Additional arguments: allow_only_male/allow_only_female
+# Contains skill_scaled_modifier for which the effects get multiplied by the advisor's skill level
+# Uses all 'modifiers' possible that are exported as a Modifier.
+
+# Note that ai_will_do calculates a priority.
+# An advisor may be chosen over another if its random priority exceeds it. RandomPriority(advisor) := rand[1, 2[ * Priority(advisor).
+
+
+
+types = {
+	type[advisor_type] = {
+		path = "game/common/advisortypes"
+	}
+}
+
+advisor_type = {
+	monarch_power = enum[power_types]
+	
+	alias_name[modifier] = alias_match_left[modifier]
+	
+	## cardinality = 0..1
+	###Modifier scales by level of advisor
+	skill_scaled_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	allow_only_male = yes
+	
+	## cardinality = 0..1
+	allow_only_female = yes
+	
+	chance = {
+		factor = int
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	ai_will_do = {
+		factor = int
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}

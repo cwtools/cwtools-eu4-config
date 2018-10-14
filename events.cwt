@@ -1,0 +1,125 @@
+
+types = {
+	type[event] = {
+		name_field = "id"
+
+		path = "game/events"
+
+		## type_key_filter = country_event
+		## push_scope = country
+		subtype[country] = {
+		}
+		## type_key_filter = province_event
+		## push_scope = province
+		subtype[province] = {
+		}
+		## type_key_filter = event
+		subtype[scopeless] = {
+		}
+		path = "game/events"
+		subtype[hidden] = {
+			hidden = yes
+		}
+		subtype[triggered] = {
+			is_triggered_only = yes
+		}
+	}
+}
+
+event = {
+	id = scalar
+
+	subtype[hidden] = {
+		title = localisation
+		title = none
+		desc = localisation
+		desc = none
+		picture = enum[event_pictures] #todo: this is a terrible temporary fix
+		picture = none
+	}
+	
+	
+	subtype[!hidden] = {
+		title = localisation
+		desc = localisation
+
+		desc = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			text = localisation
+		}
+		picture = enum[event_pictures] #todo: this is a terrible temporary fix
+		picture = {
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			picture = enum[event_pictures] #todo: this is a terrible temporary fix
+		}
+		
+	}
+	
+	## cardinality = 0..1
+	hidden = yes
+
+	## cardinality = 0..1
+	is_triggered_only = bool
+
+	## cardinality = 0..1
+	fire_only_once = bool
+
+	
+	subtype[!triggered] = {
+		mean_time_to_happen = {
+			## cardinality = 0..1
+			years = int
+
+			## cardinality = 0..1
+			months = int
+
+			## cardinality = 0..1
+			days = int
+
+			## cardinality = 0..100
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+
+	#todo: check whether obligatory
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	immediate = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 1..inf
+	option = {
+		name = localisation
+
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+
+		## cardinality = 0..1
+		alias_name[effect] = alias_match_left[effect]
+
+		## cardinality = 0..1
+		ai_chance = {
+			factor = float[0..10000]
+			##cardinality = 0..100
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+		
+		## cardinality = 0..1
+		highlight = yes
+	}
+	
+	## cardinality = 0..1
+	after = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
