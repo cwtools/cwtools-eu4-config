@@ -1,0 +1,47 @@
+
+
+types = {
+	type[area] = {
+		"game/map/area.txt"
+	}
+	type[continent] = {
+		"game/map/continent.txt"
+	}
+	type[climate] = {
+		"game/map/climate.txt"
+	}
+	type[region] = {
+		"game/map/region.txt"
+	}
+	type[superregion] = {
+		"game/map/superregion.txt"
+	}
+}
+
+area = {
+	## cardinality = 1..inf
+	<province_id>
+}
+
+continent = {
+	## cardinality = 1..inf
+	<province_id>
+}
+
+climate = {
+	## cardinality = 1..inf
+	<province_id>
+}
+
+region = {
+	## cardinality = 0..1
+	areas = {
+		## cardinality = 1..inf
+		<area>
+	}
+}
+
+superregion = {
+	## cardinality = 1..inf
+	<region>
+}
