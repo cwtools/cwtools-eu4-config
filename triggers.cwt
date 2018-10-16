@@ -583,17 +583,28 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	category = enum[power_types]
 }	
-	
-## scope = Country	
-###Returns true if the estate X in the country has at least Y influence.	
-alias[trigger:estate_influence] = {	
-## scope = Country	
-###Returns true if the estate X in the country has at least Y loyalty.	
-alias[trigger:estate_loyalty] = {	
-## scope = Country	
-###Returns true if the estate X in the country controls at least Y% of the total development.	
-alias[trigger:estate_loyalty] = {	
-## scope = Anywhere	
+
+## scope = Country
+###Returns true if the estate X in the country has at least Y influence.
+alias[trigger:estate_influence] = {
+	estate = <estate>
+	influence = int[0..100]
+}
+
+## scope = Country
+###Returns true if the estate X in the country has at least Y loyalty.
+alias[trigger:estate_loyalty] = {
+	estate = <estate>
+	influence = int[0..100]
+}
+
+## scope = Country
+###Returns true if the estate X in the country controls at least Y% of the total development.
+alias[trigger:estate_loyalty] = {
+	estate = <estate>
+	territory = int[0..100]
+}
+
 ###Returns true if country X or the scoped country exists.	
 alias[trigger:exists] = <country_tag> #todo: how about exists = FROM?	
 	

@@ -703,19 +703,67 @@ alias[effect:kill_leader] = {
 	type = random
 	type = scalar #todo: name
 }	
-	
+
 ## scope = country	
 ###Creates an admiral with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. Siege improves Blockade Efficiency for admirals. The name parameter can accept a saved name variable, see set_saved_name for more context.	
 alias[effect:define_admiral] = {	
+	shock = int	
+	fire = int	
+	manuever = int	
+	siege = int	
+	## cardinality = 0..1
+	name = scalar #todo: name
+	## cardinality = 0..1
+	female = bool
+	## cardinality = 0..3
+	trait = <trait> #todo
+}	
+	
 ## scope = country	
 ###Creates an explorer with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. Siege improves Blockade Efficiency for explorers. The name parameter can accept a saved name variable, see set_saved_name for more context.	
 alias[effect:define_explorer] = {	
+	shock = int	
+	fire = int	
+	manuever = int	
+	siege = int	
+	## cardinality = 0..1
+	name = scalar #todo: name
+	## cardinality = 0..1
+	female = bool
+	## cardinality = 0..3
+	trait = <trait> #todo
+}	
+	
 ## scope = country	
 ###Creates a conquistador with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. The name parameter can accept a saved name variable, see set_saved_name for more context.	
 alias[effect:define_conquistador] = {	
+	shock = int	
+	fire = int	
+	manuever = int	
+	siege = int	
+	## cardinality = 0..1
+	name = scalar #todo: name
+	## cardinality = 0..1
+	female = bool
+	## cardinality = 0..3
+	trait = <trait> #todo
+}	
+	
 ## scope = country	
 ###Creates a general with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. The name parameter can accept a saved name variable, see set_saved_name for more context.	
 alias[effect:define_general] = {	
+	shock = int	
+	fire = int	
+	manuever = int	
+	siege = int	
+	## cardinality = 0..1
+	name = scalar #todo: name
+	## cardinality = 0..1
+	female = bool
+	## cardinality = 0..3
+	trait = <trait> #todo
+}	
+
 ## scope = country	
 ###Spawns an artillery unit for the current scope in the defined province scope. Uses the currently selected artillery unit.	
 alias[effect:artillery] = scope[province]	
@@ -2233,11 +2281,28 @@ alias[effect:add_unit_construction] = {
 	mercenary = yes
 }	
 	
-	
 ## scope = province	
 ###Builds the defined units as a percentage of the owner's forcelimit in the current province scope. 1 is equal to 100% of the owner's forcelimit.	
 alias[effect:build_to_forcelimit] = {	
 	## cardinality = 0..1
+	infantry = float	
+	## cardinality = 0..1
+	cavalry = float	
+	## cardinality = 0..1
+	artillery = float	
+	## cardinality = 0..1
+	heavy_ship = float	
+	## cardinality = 0..1
+	light_ship = float	
+	## cardinality = 0..1
+	galley = float	
+	## cardinality = 0..1
+	transport = float	
+	## cardinality = 0..1
+	<unit_name> = float #todo	
+}	
+
+
 ## scope = province	
 ###Removes loot from the current province scope and grants it to the defined country scope. The who parameter accepts enemy, which distributes the loot to all current enemies of the province owner.	
 alias[effect:remove_loot] = {	
