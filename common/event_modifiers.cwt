@@ -1,0 +1,10 @@
+
+types = {
+	type[event_modifier] = {
+		path = "game/common/event_modifiers"
+	}
+}
+
+event_modifier = {
+	alias_name[modifier] = alias_match_left[modifier]
+}

@@ -1,0 +1,144 @@
+
+types = {
+	type[rebel_type] = {
+		path = "game/common/rebel_types"
+	}
+}
+
+######################################################################
+# The five rebel types used by the game engine
+######################################################################
+# Valid arguments:
+#
+# area = [nation/nation_rebel_tag/nation_religion]
+# government = [monarchy/republic/theocracy/anti/any]
+# defection = [culture/culture_group/religion/any/none]
+# independence = [culture/culture_group/religion/any/none]
+# gfx_type = [culture_province/culture_owner]
+#
+######################################################################
+
+# All rebels in province scope
+
+# For siege_won_trigger, siege_won_effect
+# FROM = owner
+# ROOT = province
+
+# For Other
+# FROM = owner
+# ROOT = Homecountry
+
+
+enums = {
+	enum[rebel_areas] = {
+		nation
+		nation_rebel_tag
+		nation_religion
+	}
+	enum[rebel_governments] = {
+		monarchy
+		republic
+		theocracy
+		anti
+		any
+	}
+	enum[rebel_defection] = {
+		culture
+		culture_group
+		religion
+		any
+		none
+	}
+	enum[rebel_independence] = {
+		culture
+		culture_group
+		religion
+		any
+		none
+	}
+	enum[rebel_gfx_type] = {
+		culture_province
+		culture_owner
+	}
+}
+
+
+rebel_type = {
+	color = {
+		## cardinalty = 3..3
+		int[0..255]
+	}
+
+	area = enum[rebel_areas]
+	government = enum[rebel_governments]
+	religion = <religion.not_school>
+	defection = enum[rebel_defection]
+	defect_delay = int				
+	independence = enum[rebel_independence]
+	unit_transfer = bool
+	gfx_type = enum[rebel_gfx_type]
+	will_relocate = bool	
+	
+	resilient = bool
+	reinforcing = bool
+	general = bool
+	smart = bool
+	
+	artillery = float[0.0..1.0]
+	infantry = float[0.0..1.0]
+	cavalry = float[0.0..1.0]
+	
+	morale = float
+
+	handle_action_negotiate = bool
+	handle_action_stability = bool
+	handle_action_build_core = bool
+	handle_action_send_missionary = bool		
+	
+	##replace_scope = { this = province root = province }
+	###The rebel type with the highest modifier for this province gets picked
+	spawn_chance = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+ 
+	##replace_scope = { this = province root = province }
+ 	###This is checked for EACH province in the Area of Operations
+	movement_evaluation = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+ 
+	##replace_scope = { this = province root = province from = country }
+	###root = province, from = owner
+ 	siege_won_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	##replace_scope = { this = province root = province from = country }
+	###root = province, from = owner
+	siege_won_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	##replace_scope = { this = country root = country from = country }
+	###root = country negotiating, from = rebels
+	can_negotiate_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	##replace_scope = { this = country root = country from = country }
+	###root = country negotiating, from = rebels
+	can_enforce_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	###Localisation for their demands
+	demands_description = localisation
+	
+	##replace_scope = { this = country root = country from = country }
+	###root = country negotiating, from = rebels
+	demands_enforced_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}

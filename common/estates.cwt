@@ -1,0 +1,130 @@
+
+types = {
+	type[estate] = {
+		path = "game/common/estates"
+	}
+}
+
+estate = {
+	icon = int
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+
+	###Is estate kept in control of province on conquest?
+	keep_on_conquest = bool
+
+	###If true, country will get estate
+	##replace_scope = { this = country root = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	###If true, province can be granted to estate
+	##replace_scope = { this = province root = province }
+	province_trigger = {
+		religion = hinduism
+	}
+
+	###Is used to weigh importance compared to other estates
+	start_territory_weight = int
+	
+	###Min autonomy in estate provinces
+	min_autonomy = int[0..100]
+	
+	###Estate cancels out the following multiplicative local autonomy effects:
+	autonomy_does_not_affect = enum[modifiers] #todo
+
+	###These scale with loyalty & power
+	country_modifier_happy = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	###These scale with loyalty & power
+	country_modifier_neutral = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}	
+	###These scale with loyalty & power
+	country_modifier_angry = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}	
+	
+	###These do not scale, but only applied in provinces owned by the estate
+	province_modifier_happy = {
+		alias_name[modifier] = alias_match_left[modifier]	
+	}
+	###These do not scale, but only applied in provinces owned by the estate
+	province_modifier_neutral = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	###These do not scale, but only applied in provinces owned by the estate
+	province_modifier_angry = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}	
+	
+	base_influence = int
+
+	## cardinality = 0..inf
+	influence_modifier = {
+		desc = localisation
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		influence = int[-100..100]
+	}
+	
+	## cardinality = 0..inf
+	loyalty_modifier = {
+		desc = localisation
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		loyalty = int[-100..100]
+	}
+	
+	##replace_scope = { this = province root = province }
+	###For province assignment
+	ai_grant_province = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	###Does the AI want to give any extra territory beyond the minimum?
+	ai_territory_modifier = {
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}	
+		value = int		
+	}		
+	
+	## cardinality = 0..inf
+	interaction = {
+		name = localisation
+		icon = int
+		
+		years_between_use = int
+		
+		##replace_scope = { this = country root = country }
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		##replace_scope = { this = country root = country }
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		
+		ai_will_do = {
+			factor = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+}
