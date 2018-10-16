@@ -6,3 +6,4 @@
 -The same trigger doing different things in country/province scope
 -Trade_node scope (takes all rules from province but there are a couple of things that only work with it)
 -variable:new_ruler_culture (you can export cultures to a variable)
+-key_filter = enum[stuff] (if easy to add)

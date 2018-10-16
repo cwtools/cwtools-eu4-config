@@ -78,7 +78,7 @@ alias[trigger:ai] = bool
 alias[trigger:ai_attitude] = {	
 	who = scope[country]
 	who = <country_tag>
-	attitude = <attitude>
+	attitude = enum[attitudes]
 }	
 	
 ##country scope	

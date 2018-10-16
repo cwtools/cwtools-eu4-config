@@ -1,0 +1,31 @@
+
+types = {
+	type[ai_personality] = {
+		#You cannot add new ones
+		## root_key_filter = enum[ai_personalities]
+		path = "game/common/ai_personalities"
+	}
+}
+
+
+
+ai_personality = {
+	## replace_scope = { this = country root = country }
+	chance = {
+		factor = int
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	icon = int[1..6]
+}
+
+
+#For reference: This is in the enum file
+#	enum[ai_personalities] = { #hardcoded so enum is ideal
+#		human
+#		ai_capitalist
+#		ai_diplomat
+#		ai_militarist
+#		ai_colonialist
+#		ai_balanced
+#	}

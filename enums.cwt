@@ -74,10 +74,34 @@ enums = {
 		years_of_income
 		trust
 	}
-	enum[DLCs] = {
+	enum[DLCs] = { #todo
 	
 	}
-	enum[event_pictures] = {
+	enum[attitudes] = { #hardcoded so enum is ideal
+		attitude_neutral
+		atittude_rivalry
+		attitude_hostile
+		attitude_friendly
+		attitude_defensive
+		attitude_threatened
+		attitude_outraged
+		attitude_protective
+		attitude_domineering
+		attitude_overlord
+		attitude_loyal
+		attitude_disloyal
+		attitude_rebellious
+		attitude_allied
+	}
+	enum[ai_personalities] = { #hardcoded so enum is ideal
+		human
+		ai_capitalist
+		ai_diplomat
+		ai_militarist
+		ai_colonialist
+		ai_balanced
+	}
+	enum[event_pictures] = { #will need a better solution eventually
 		NOBLE_ESTATE_DEMANDS_eventPicture
 		NOBLE_ESTATE_eventPicture
 		NOBLE_ESTATE_TAKE_OVER_eventPicture
