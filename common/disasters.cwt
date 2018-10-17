@@ -1,0 +1,126 @@
+
+types = {
+	type[disaster] = {
+		path = "game/common/disasters"
+	}
+}
+
+
+disaster = {
+	## replace_scope = { root = country this = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_start = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_stop = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	can_end = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	progress = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## replace_scope = { root = country this = country }
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}	
+	
+	
+	on_start = <event.country>
+	on_end = <event.country>
+	
+	on_monthly = {
+		events = {
+		}
+		random_events = { 
+			120 = 0
+			1 = castilian_civil_war.2 #Civil War Spreads to Province
+			#Events 3 - 8 related to foreign intervention
+		}
+	}
+}
+
+
+
+estate_maratha_disaster = {
+
+	potential = {
+		has_dlc = "Dharma"
+		has_estate = estate_maratha
+		estate_influence = {
+			estate = estate_maratha
+			influence = 80
+		}
+		OR = {
+			NOT = { has_country_flag = estate_maratha_triggered }
+			had_country_flag = {
+				flag = estate_maratha_triggered
+				days = 365
+			}
+		}
+	}
+	
+	can_start = {
+		has_any_disaster = no
+		estate_influence = {
+			estate = estate_maratha
+			influence = 100
+		}
+	}
+	
+	can_stop = {
+		OR = {
+			has_any_disaster = yes
+			NOT = {
+				estate_influence = {
+					estate = estate_maratha
+					influence = 100
+				}		
+			}
+		}
+	}
+	
+	down_progress = {
+		factor = 1
+	}
+	
+	progress = {	
+		modifier = {
+			factor = 5
+			estate_influence = {
+				estate = estate_maratha
+				influence = 100
+			}
+		}		
+	}
+	
+	can_end = {
+		always = yes
+	}
+	
+	on_start = estate_disasters.11
+	
+	on_start_effect = {
+		if = {
+			limit = {
+				has_dlc = "The Cossacks"
+			}
+			custom_tooltip = estate_maratha_disaster_tooltip_cossacks
+		}
+		else = {
+			custom_tooltip = estate_maratha_disaster_tooltip
+		}
+	}
+}
