@@ -1226,7 +1226,7 @@ alias[effect:convert_ruler_to_general] = yes
 ## scope = country	
 ###Adds an event modifier to the current scope as a ruler modifier. Ruler modifiers are cleared when the ruler dies.	
 alias[effect:add_ruler_modifier] = {	
-	name = <ruler_modifier> #todo
+	name = <event_modifier>
 	## cardinality = 0..1
 	duration = int
 	## cardinality = 0..1
@@ -1755,7 +1755,7 @@ alias[effect:add_permanent_province_modifier] = {
 	
 ## scope = province	
 ###Adds a province triggered modifier to the current province scope.	
-alias[effect:add_permanent_province_modifier] = <triggered_modifier> #todo	
+alias[effect:add_province_triggered_modifier] = <triggered_modifier> #todo	
 	
 ## scope = province	
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.	

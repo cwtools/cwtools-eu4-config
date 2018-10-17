@@ -1221,7 +1221,7 @@ alias[trigger:has_ruler_leader_from] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the country has the modifier X until the ruler changes.	
-alias[trigger:has_ruler_modifier] = <ruler_modifier> #todo	
+alias[trigger:has_ruler_modifier] = <event_modifier>	
 	
 ## scope = anywhere	
 ###Returns true if the specified event target has been saved.	
