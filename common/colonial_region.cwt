@@ -1,0 +1,28 @@
+
+types = {
+	type[colonial_region] = {
+		path = "game/common/colonial_regions"
+	}
+}
+
+colonial_region = {
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+
+	## cardinality = 0..1
+	provinces = {
+		## cardinality = 1..inf
+		enum[province_ids]
+	}
+
+	## cardinality = 0..inf
+	names = {
+		## replace_scope = { root = country this = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		name = localisation
+	}
+}
