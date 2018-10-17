@@ -1,0 +1,43 @@
+
+types = {
+	type[casus_belli] = {
+		path = "game/common/cb_types"
+		
+		subtype[triggered] = {
+			is_triggered_only = yes
+		}
+	}
+}
+
+
+casus_belli = {
+	war_goal = <war_goal> #todo
+	
+	subtype[triggered] = {
+		## cardinality = 0..1
+		###The number of months this CB will be valid. Only works for triggered CBs.
+		months = int
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
+	###A condition that automatically activates a CB. Does not work for triggered CBs (according to the Vanilla documentation, but the very first Vanilla CB does this, so please clarify with Caligula if you know better!)
+	prerequisites = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	valid_for_subject = no
+
+	## cardinality = 0..1
+	###The CB will be triggered via code e.g. in event effects.
+	is_triggered_only = yes
+
+	exclusive = yes
+	independence = yes
+	## cardinality = 0..1
+	attacker_disabled_po = {
+		## cardinality = 1..inf
+		<po_type> #todo (what are these things? E.g. po_revoke_cores)
+	}
+}
