@@ -489,7 +489,7 @@ alias[effect:set_incident_variable_value] = {
 	
 ## scope = country	
 ###Adds an idea for the current scope. Ideas are found in /Europa Universalis IV/common/ideas/*.txt. Won't work if the idea isn't present in a National Idea set or a taken Idea groups set for the country	
-alias[effect:add_idea] = <idea>	
+alias[effect:add_idea] = enum[ideas]	
 	
 ## scope = country	
 ###Adds an idea group for the current scope. Idea groups are found in /Europa Universalis IV/common/ideas/*.txt. Won't work if the country doesn't have any free idea group slots.	
@@ -505,7 +505,7 @@ alias[effect:change_technology_group] = <technology_group> #todo
 	
 ## scope = country	
 ###Removes an idea for the current scope. Ideas are found in /Europa Universalis IV/common/ideas/*.txt.	
-alias[effect:remove_idea] = <idea>	
+alias[effect:remove_idea] = enum[ideas]	
 	
 ## scope = country	
 ###Removes an idea group for the current scope. Idea groups are found in /Europa Universalis IV/common/ideas/*.txt.	

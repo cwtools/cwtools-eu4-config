@@ -80,6 +80,18 @@ enums = {
 		"The Cossacks"
 		"Dharma"
 		"Rule Britannia"
+		"Mare Nostrum"
+		"Third Rome"
+		"Mandate of Heaven"
+		"Cradle of Civilization"
+		"Wealth of Nations"
+		"Common Sense"
+		"Star and Crescent"
+		"Purple Phoenix"
+		"Art of War"
+		"Res Publica"
+		"American Dream"
+		"Conquest of Paradise"
 	}
 	enum[attitudes] = { #hardcoded so enum is ideal
 		attitude_neutral

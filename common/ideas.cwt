@@ -1,0 +1,57 @@
+
+types = {
+	type[idea_group] = {
+		path = "game/common/ideas"
+		
+		subtype[selectable] = {
+			category = scalar
+		}
+		subtype[country_idea] = {
+			free = yes
+		}
+	}
+}
+
+enums = {
+	complex_enum[ideas] = {
+		path = "game/common/ideas"
+		scalar = {
+			enum_name = {
+			}
+		}
+	}
+}
+
+idea = {
+	subtype[selectable] = {
+		ai_will_do = {
+			factor = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+		category = enum[power_types]
+	}
+
+
+	bonus = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 7..7
+	localisation = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	
+	subtype[country_idea] = {
+		start = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		free = yes
+	}
+}
