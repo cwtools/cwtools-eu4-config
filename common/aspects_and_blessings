@@ -1,0 +1,49 @@
+
+types = {
+	type[aspects_and_blessings] = {
+		path = "game/common/church_aspects"
+		subtype[church_aspect] = {
+			## cardinality = 0..0
+			blessing = yes
+		}
+		subtype[blessing] = {
+			blessing = yes
+		}
+	}
+}
+
+aspects_and_blessings = {
+	sprite = scalar #todo: sprite
+	cost = int
+	## cardinality = 0..1
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	## replace_scope = { this = country root = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	## cardinality = 0..1
+	is_blessing = yes
+}
