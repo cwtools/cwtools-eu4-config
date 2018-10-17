@@ -1,0 +1,28 @@
+
+types = {
+	type[technology] = {
+		name_key_filter = technology
+		path = "game/common/technologies"
+	}
+	type[tech_ahead_of_time] = {
+		name_key_filter = ahead_of_time
+		path = "game/common/technologies"
+	}
+}
+
+tech_ahead_of_time = {
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+technology = {
+	alias_name[modifier] = alias_match_left[modifier]
+
+	## cardinality = 0..1
+	sprite_level = int
+	
+	## cardinality = 0..inf
+	<building> = yes
+	
+	## cardinality = 0..inf
+	enable = <unit_type>
+}

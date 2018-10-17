@@ -1,0 +1,29 @@
+
+types = {
+	type[trade_good] = {
+		path = "game/common/tradegoods"
+	}
+}
+
+trade_good = {
+	color = {
+		## cardinality = 3..3
+		float[0.0..1.0]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+	province = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+	chance = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}

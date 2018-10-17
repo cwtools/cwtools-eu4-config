@@ -1,0 +1,20 @@
+
+types = {
+	type[timed_modifier] = {
+		path = "game/common/timed_modifiers"
+	}
+}
+
+
+timed_modifier = {
+	## cardinality = 0..1
+	liberty_desire = {
+		value = int
+		yearly_decay = int
+	}
+	## cardinality = 0..1
+	reduced_liberty_desire = {
+		value = int
+		yearly_decay = int
+	}
+}

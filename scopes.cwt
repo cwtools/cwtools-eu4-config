@@ -90,7 +90,7 @@ alias[effect:this] = {
 #TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[effect:<province_id>] = {
+alias[effect:enum[province_ids]] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -799,7 +799,7 @@ alias[trigger:this] = {
 #TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[trigger:<province_id>] = {
+alias[trigger:enum[province_ids]] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 

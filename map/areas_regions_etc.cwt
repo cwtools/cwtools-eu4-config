@@ -2,35 +2,35 @@
 
 types = {
 	type[area] = {
-		"game/map/area.txt"
+		path = "game/map/area.txt"
 	}
 	type[continent] = {
-		"game/map/continent.txt"
+		path = "game/map/continent.txt"
 	}
 	type[climate] = {
-		"game/map/climate.txt"
+		path = "game/map/climate.txt"
 	}
 	type[region] = {
-		"game/map/region.txt"
+		path = "game/map/region.txt"
 	}
 	type[superregion] = {
-		"game/map/superregion.txt"
+		path = "game/map/superregion.txt"
 	}
 }
 
 area = {
 	## cardinality = 1..inf
-	<province_id>
+	enum[province_ids]
 }
 
 continent = {
 	## cardinality = 1..inf
-	<province_id>
+	enum[province_ids]
 }
 
 climate = {
 	## cardinality = 1..inf
-	<province_id>
+	enum[province_ids]
 }
 
 region = {

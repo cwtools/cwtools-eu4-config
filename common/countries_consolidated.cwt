@@ -6,6 +6,13 @@ types = {
 }
 
 
+enums = {
+	complex_enum[country_tags] = {
+		path = "game/common/country_tags"
+		enum_name = {
+		}
+	}
+}
 
 country_tag = scalar #filepath but "countries/Aachen.txt"
 

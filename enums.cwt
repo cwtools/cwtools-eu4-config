@@ -79,6 +79,7 @@ enums = {
 		"El Dorado"
 		"The Cossacks"
 		"Dharma"
+		"Rule Britannia"
 	}
 	enum[attitudes] = { #hardcoded so enum is ideal
 		attitude_neutral

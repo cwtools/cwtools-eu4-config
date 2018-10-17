@@ -60,7 +60,7 @@ religion_group = {
 	ai_will_propagate_through_trade = yes
 	
 	## cardinality = 0..1
-	center_of_religion = <province_id>
+	center_of_religion = enum[province_ids]
 
 	## cardinality = 0..1
 	flags_with_emblem_percentage = int[0..100]
@@ -162,7 +162,7 @@ alias[religion:scalar] = {
 	## cardinality = 0..1
 	holy_sites = {
 		## cardinality = 1..inf
-		<province_id>
+		enum[province_ids]
 	}
 	
 	## cardinality = 0..1
@@ -238,9 +238,9 @@ alias[religion:scalar] = {
 	
 	## cardinality = 0..1
 	papacy = {
-		papal_tag = <country_tag>
+		papal_tag = enum[country_tags]
 		election_cost = int
-		seat_of_papacy = <province_id>
+		seat_of_papacy = enum[province_ids]
 		
 		## cardinality = 1..inf
 		scalar = {

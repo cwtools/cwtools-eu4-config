@@ -8,7 +8,7 @@ types = {
 		path = "game/common/cultures"
 		
 		subtype[fixed] = {
-			primary = <country_tag>
+			primary = enum[country_tags]
 		}
 	}
 }
@@ -40,7 +40,7 @@ culture_group = {
 
 alias[culture:scalar] = {
 	## cardinality = 0..1
-	primary = <country_tag>
+	primary = enum[country_tags]
 
 	## cardinality = 0..1
 	male_names = {

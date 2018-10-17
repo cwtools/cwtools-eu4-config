@@ -94,10 +94,10 @@ alias[effect:country_event] = {
 ## scope = country	
 ###Adds modifier to the current scope as a country modifier.	
 alias[effect:add_country_modifier] = {	
-	name = <country_modifier> #todo
+	name = <event_modifier>
 	## cardinality = 0..1
 	###The number of days to add the country modifier for.
-	days = int
+	duration = int
 	## cardinality = 0..1
 	###The number of days to add the country modifier for.
 	hidden = yes
@@ -108,7 +108,7 @@ alias[effect:add_country_modifier] = {
 	
 ## scope = country	
 ###Removes an already assigned country modifier from the current scope.	
-alias[effect:remove_country_modifier] = <country_modifier>	
+alias[effect:remove_country_modifier] = <event_modifier>	
 	
 ## scope = country	
 ###A unique string to identify the country flag with. Flags can be appended with scopes or event targets: set_country_flag = my_flag@ROOT	
@@ -120,7 +120,7 @@ alias[effect:clr_country_flag] = scalar
 	
 ## scope = country	
 ###Changes current scope to <scope> tag.	
-alias[effect:change_tag] = <country_tag>	
+alias[effect:change_tag] = enum[country_tags]	
 	
 ## scope = country	
 ###Changes current scope to <scope> tag.	
@@ -128,7 +128,7 @@ alias[effect:change_tag] = scope[country]
 	
 ## scope = country	
 ###Switches the player view to <scope> tag. Original country becomes controlled by AI.	
-alias[effect:switch_tag] = <country_tag>	
+alias[effect:switch_tag] = enum[country_tags]	
 	
 ## scope = country	
 ###Switches the player view to <scope> tag. Original country becomes controlled by AI.	
@@ -161,7 +161,7 @@ alias[effect:set_saved_name] = {
 	scope = scope[country]
 	## cardinality = 0..1
 	###Only with type = advisor
-	scope = <country_tag>
+	scope = enum[country_tags]
 	
 	## cardinality = 0..1
 	name = scalar
@@ -227,7 +227,7 @@ alias[effect:add_legitimacy] = scope[country]
 	
 ## scope = country	
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.	
-alias[effect:add_legitimacy] = <country_tag>	
+alias[effect:add_legitimacy] = enum[country_tags]	
 	
 ## scope = country	
 ###Adds republican tradition to the current scope. No effect if not a government using republic.	
@@ -310,7 +310,7 @@ alias[effect:add_accepted_culture] = scope[country]
 	
 ## scope = country	
 ###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
-alias[effect:add_accepted_culture] = <country_tag>	
+alias[effect:add_accepted_culture] = enum[country_tags]	
 	
 #todo: variable:my_variable	
 	
@@ -324,7 +324,7 @@ alias[effect:change_primary_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
-alias[effect:change_primary_culture] = <country_tag>	
+alias[effect:change_primary_culture] = enum[country_tags]	
 	
 #todo: variable:my_variable	
 	
@@ -338,7 +338,7 @@ alias[effect:remove_accepted_culture] = scope[country]
 	
 ## scope = country	
 ###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
-alias[effect:remove_accepted_culture] = <country_tag>	
+alias[effect:remove_accepted_culture] = enum[country_tags]	
 	
 #todo: variable:my_variable	
 	
@@ -354,7 +354,7 @@ alias[effect:change_religion] = scope[country]
 	
 ## scope = country	
 ###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
-alias[effect:change_religion] = <country_tag>	
+alias[effect:change_religion] = enum[country_tags]	
 	
 #todo: variable:my_variable	
 	
@@ -396,11 +396,11 @@ alias[effect:add_church_power] = int
 	
 ## scope = country	
 ###Adds the defined aspect to the current scope. Church Aspects are found in /Europa Universalis IV/common/church_aspects/00_church_aspects.txt. No effect if the country does not hold a religion using uses_church_power and the aspect set in aspects. Does not work with Blessings.	
-alias[effect:add_church_aspect] = <church_aspect> #todo	
+alias[effect:add_church_aspect] = <aspects_and_blessings.church_aspect>	
 	
 ## scope = country	
 ###Removes the defined aspect from the current scope. Church Aspects are found in /Europa Universalis IV/common/church_aspects/00_church_aspects.txt. No effect if the country does not hold a religion using uses_church_power and the aspect set in aspects. Does not work with Blessings.	
-alias[effect:remove_church_aspect] = <church_aspect> #todo	
+alias[effect:remove_church_aspect] = <aspects_and_blessings.church_aspect>	
 	
 ## scope = country	
 ###Removes the defined aspect from the current scope. Church Aspects are found in /Europa Universalis IV/common/church_aspects/00_church_aspects.txt. No effect if the country does not hold a religion using uses_church_power and the aspect set in aspects. Does not work with Blessings.	
@@ -420,7 +420,7 @@ alias[effect:excommunicate] = scope[country]
 	
 ## scope = country	
 ###Excommunicates the defined scope. If already excommunicated, removes excommunication.	
-alias[effect:excommunicate] = <country_tag>	
+alias[effect:excommunicate] = enum[country_tags]	
 	
 ## scope = country	
 ###Enables or disables the Papacy mechanic.	
@@ -434,7 +434,7 @@ alias[effect:add_piety] = float
 ###Changes the current scope's school opinion towards the defined scope's school. -1 for negative, 0 for netural and 1 for positive.	
 alias[effect:set_school_opinion] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	opinion = int[-1..1]
 }	
 	
@@ -813,7 +813,7 @@ alias[effect:add_historical_friend] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a historical friend of the current scope.	
-alias[effect:add_historical_friend] = <country_tag>	
+alias[effect:add_historical_friend] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope a historical rival of the current scope.	
@@ -821,7 +821,7 @@ alias[effect:add_historical_rival] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a historical rival of the current scope.	
-alias[effect:add_historical_rival] = <country_tag>	
+alias[effect:add_historical_rival] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes the historical friendship between the defined scope and the current scope.	
@@ -829,7 +829,7 @@ alias[effect:remove_historical_friend] = scope[country]
 	
 ## scope = country	
 ###Removes the historical friendship between the defined scope and the current scope.	
-alias[effect:remove_historical_friend] = <country_tag>	
+alias[effect:remove_historical_friend] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes the historical rivalry between the defined scope and the current scope.	
@@ -837,13 +837,13 @@ alias[effect:remove_historical_rival] = scope[country]
 	
 ## scope = country	
 ###Removes the historical rivalry between the defined scope and the current scope.	
-alias[effect:remove_historical_rival] = <country_tag>	
+alias[effect:remove_historical_rival] = enum[country_tags]	
 	
 ## scope = country	
 ###Adds trust with the defined scope for the current scope. Used in conjuction with the Diplomatic Feedback mechanic from The Cossacks DLC.	
 alias[effect:add_trust] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	value = int
 	## cardinality = 0..1
 	mutual = yes
@@ -853,7 +853,7 @@ alias[effect:add_trust] = {
 ###Adds an opinion modifier for the current scope held against the defined scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt	
 alias[effect:add_opinion] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	modifier = <opinion_modifier> #todo
 	## cardinality = 0..1
 	###Optional: Set an expiry date for the modifier.
@@ -864,7 +864,7 @@ alias[effect:add_opinion] = {
 ###Adds an opinion modifier for the defined scope held against the current scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt	
 alias[effect:reverse_add_opinion] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	modifier = <opinion_modifier> #todo
 	## cardinality = 0..1
 	###Optional: Set an expiry date for the modifier.
@@ -875,7 +875,7 @@ alias[effect:reverse_add_opinion] = {
 ###Removes an opinion modifier for the current scope held against the defined scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt	
 alias[effect:remove_opinion] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	modifier = <opinion_modifier> #todo
 }	
 	
@@ -883,7 +883,7 @@ alias[effect:remove_opinion] = {
 ###Removes an opinion modifier for the defined scope held against the current scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt	
 alias[effect:reverse_remove_opinion] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	modifier = <opinion_modifier> #todo
 }	
 	
@@ -893,7 +893,7 @@ alias[effect:create_alliance] = scope[country]
 	
 ## scope = country	
 ###Creates an alliance between the current scope and the defined scope.	
-alias[effect:create_alliance] = <country_tag>	
+alias[effect:create_alliance] = enum[country_tags]	
 	
 ## scope = country	
 ###Creates an guarantee over the defined scope for the current scope.	
@@ -901,7 +901,7 @@ alias[effect:create_guarantee] = scope[country]
 	
 ## scope = country	
 ###Creates an guarantee over the defined scope for the current scope.	
-alias[effect:create_guarantee] = <country_tag>	
+alias[effect:create_guarantee] = enum[country_tags]	
 	
 ## scope = country	
 ###Creates a royal marriage between the current scope and the defined scope.	
@@ -909,7 +909,7 @@ alias[effect:create_marriage] = scope[country]
 	
 ## scope = country	
 ###Creates a royal marriage between the current scope and the defined scope.	
-alias[effect:create_marriage] = <country_tag>	
+alias[effect:create_marriage] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope a junior partner in a personal union with the current scope.	
@@ -917,7 +917,7 @@ alias[effect:create_union] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a junior partner in a personal union with the current scope.	
-alias[effect:create_union] = <country_tag>	
+alias[effect:create_union] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope a vassal subject of the current scope. Uses the vassal subject type.	
@@ -925,7 +925,7 @@ alias[effect:create_vassal] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a vassal subject of the current scope. Uses the vassal subject type.	
-alias[effect:create_vassal] = <country_tag>	
+alias[effect:create_vassal] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope a march subject of the current scope. Uses the march subject type.	
@@ -933,7 +933,7 @@ alias[effect:create_march] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a march subject of the current scope. Uses the march subject type.	
-alias[effect:create_march] = <country_tag>	
+alias[effect:create_march] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope a vassal subject of the current scope. Uses the vassal subject type. Exact same effect as create_vassal.	
@@ -941,14 +941,14 @@ alias[effect:vassalize] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope a vassal subject of the current scope. Uses the vassal subject type. Exact same effect as create_vassal.	
-alias[effect:vassalize] = <country_tag>	
+alias[effect:vassalize] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.	
 alias[effect:create_subject] = {	
 	subject_type = <subject_type>
 	subject = scope[country]
-	subject = <country_tag>
+	subject = enum[country_tags]
 }	
 	
 ## scope = country	
@@ -957,7 +957,7 @@ alias[effect:break_marriage] = scope[country]
 	
 ## scope = country	
 ###Breaks the current scope's royal marriage with the defined scope.	
-alias[effect:break_marriage] = <country_tag>	
+alias[effect:break_marriage] = enum[country_tags]	
 	
 ## scope = country	
 ###Breaks the current scope's union with the defined scope.	
@@ -965,7 +965,7 @@ alias[effect:break_union] = scope[country]
 	
 ## scope = country	
 ###Breaks the current scope's union with the defined scope.	
-alias[effect:break_union] = <country_tag>	
+alias[effect:break_union] = enum[country_tags]	
 	
 ## scope = country	
 ###The current scope inherits all of the defined scope's provinces.	
@@ -973,11 +973,11 @@ alias[effect:inherit] = scope[country]
 	
 ## scope = country	
 ###The current scope inherits all of the defined scope's provinces.	
-alias[effect:inherit] = <country_tag>	
+alias[effect:inherit] = enum[country_tags]	
 	
 ## scope = country	
 ###The current scope releases all provinces with the defined scope's cores.	
-alias[effect:release] = <country_tag>	
+alias[effect:release] = enum[country_tags]	
 	
 ## scope = country	
 ###The current scope releases all possible subjects from cores.	
@@ -993,14 +993,14 @@ alias[effect:declare_war] = scope[country]
 	
 ## scope = country	
 ###Creates a no casus belli war against the defined scope for the current scope.	
-alias[effect:declare_war] = <country_tag>	
+alias[effect:declare_war] = enum[country_tags]	
 	
 ## scope = country	
 ###Declares war for the current scope against the defined scope, using the defined casus belli. Casus belli are found in /Europa Universalis IV/common/cb_types/*.txt 	
 alias[effect:create_subject] = {	
 	casus_belli = <casus_belli>
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 }	
 	
 ## scope = country	
@@ -1009,7 +1009,7 @@ alias[effect:add_truce_with] = scope[country]
 	
 ## scope = country	
 ###Creates a truce between the defined scope and the current scope. The truce length is the default white peace truce length.	
-alias[effect:add_truce_with] = <country_tag>	
+alias[effect:add_truce_with] = enum[country_tags]	
 	
 ## scope = country	
 ###Forces the defined scope into a white peace truce with the current scope.	
@@ -1017,7 +1017,7 @@ alias[effect:white_peace] = scope[country]
 	
 ## scope = country	
 ###Forces the defined scope into a white peace truce with the current scope.	
-alias[effect:white_peace] = <country_tag>	
+alias[effect:white_peace] = enum[country_tags]	
 	
 ## scope = country	
 ###The current scope creates or joins a coalition against the defined scope.	
@@ -1025,14 +1025,14 @@ alias[effect:form_coalition_against] = scope[country]
 	
 ## scope = country	
 ###The current scope creates or joins a coalition against the defined scope.	
-alias[effect:form_coalition_against] = <country_tag>	
+alias[effect:form_coalition_against] = enum[country_tags]	
 	
 ## scope = country	
 ###Adds a casus belli for the current scope against the defined scope. Casus belli are found in /Europa Universalis IV/common/cb_types/*.txt 	
 alias[effect:add_casus_belli] = {	
 	type = <casus_belli>
 	target = scope[country]
-	target = <country_tag>
+	target = enum[country_tags]
 	months = int
 }	
 	
@@ -1041,7 +1041,7 @@ alias[effect:add_casus_belli] = {
 alias[effect:reverse_add_casus_belli] = {	
 	type = <casus_belli>
 	target = scope[country]
-	target = <country_tag>
+	target = enum[country_tags]
 	months = int
 }	
 	
@@ -1050,7 +1050,7 @@ alias[effect:reverse_add_casus_belli] = {
 alias[effect:remove_casus_belli] = {	
 	type = <casus_belli>
 	target = scope[country]
-	target = <country_tag>
+	target = enum[country_tags]
 }	
 	
 ## scope = country	
@@ -1058,7 +1058,7 @@ alias[effect:remove_casus_belli] = {
 alias[effect:reverse_remove_casus_belli] = {	
 	type = <casus_belli>
 	target = scope[country]
-	target = <country_tag>
+	target = enum[country_tags]
 }	
 	
 ## scope = country	
@@ -1069,7 +1069,7 @@ alias[effect:form_coalition_against] = int
 ###Adds spy network in the current scope for the defined scope.	
 alias[effect:add_spy_network_from] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	value = int
 }	
 	
@@ -1077,7 +1077,7 @@ alias[effect:add_spy_network_from] = {
 ###Adds spy network for the current scope in the defined scope.	
 alias[effect:add_spy_network_in] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	value = int
 }	
 	
@@ -1173,7 +1173,7 @@ alias[effect:set_dynasty] = scope[country]
 	
 ## scope = country	
 ###Sets the dynasty of the current scope's ruler.	
-alias[effect:set_dynasty] = <country_tag>	
+alias[effect:set_dynasty] = enum[country_tags]	
 	
 ## scope = country	
 ###Sets the dynasty of the current scope's ruler.	
@@ -1189,7 +1189,7 @@ alias[effect:set_ruler_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the ruler culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_ruler_culture] = <country_tag>	
+alias[effect:set_ruler_culture] = enum[country_tags]	
 	
 ## scope = country	
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
@@ -1201,7 +1201,7 @@ alias[effect:set_ruler_religion] = scope[country]
 	
 ## scope = country	
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_ruler_religion] = <country_tag>	
+alias[effect:set_ruler_religion] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes the current ruler of the current scope, saving them to the unique string.	
@@ -1274,7 +1274,7 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
-	dynasty = <country_tag>
+	dynasty = enum[country_tags]
 	## cardinality = 0..1
 	dynasty = original_dynasty
 	## cardinality = 0..1
@@ -1313,13 +1313,13 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
-	culture = <country_tag>
+	culture = enum[country_tags]
 	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
-	religion = <country_tag>
+	religion = enum[country_tags]
 }	
 	
 	
@@ -1351,7 +1351,7 @@ alias[effect:set_consort_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_consort_culture] = <country_tag>	
+alias[effect:set_consort_culture] = enum[country_tags]	
 	
 ## scope = country	
 ###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
@@ -1363,7 +1363,7 @@ alias[effect:set_consort_religion] = scope[country]
 	
 ## scope = country	
 ###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_consort_religion] = <country_tag>	
+alias[effect:set_consort_religion] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes a consort regent into the current ruler for the current scope.	
@@ -1381,13 +1381,13 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	country_of_origin = scope[country]
 	## cardinality = 0..1
-	country_of_origin = <country_tag>
+	country_of_origin = enum[country_tags]
 	## cardinality = 0..1
 	dynasty = scalar #todo: name
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
-	dynasty = <country_tag>
+	dynasty = enum[country_tags]
 	## cardinality = 0..1
 	dynasty = original_dynasty
 	## cardinality = 0..1
@@ -1412,13 +1412,13 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
-	culture = <country_tag>
+	culture = enum[country_tags]
 	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
-	religion = <country_tag>
+	religion = enum[country_tags]
 }	
 	
 	
@@ -1470,7 +1470,7 @@ alias[effect:set_heir_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_heir_culture] = <country_tag>	
+alias[effect:set_heir_culture] = enum[country_tags]	
 	
 ## scope = country	
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
@@ -1482,7 +1482,7 @@ alias[effect:set_heir_religion] = scope[country]
 	
 ## scope = country	
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:set_heir_religion] = <country_tag>	
+alias[effect:set_heir_religion] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes the current heir of the current scope, saving them to the unique string.	
@@ -1527,7 +1527,7 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
-	dynasty = <country_tag>
+	dynasty = enum[country_tags]
 	## cardinality = 0..1
 	dynasty = original_dynasty
 	## cardinality = 0..1
@@ -1561,13 +1561,13 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
-	culture = <country_tag>
+	culture = enum[country_tags]
 	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
-	religion = <country_tag>
+	religion = enum[country_tags]
 	## cardinality = 0..1
 	###Makes the heir a child not of the consort, i.e. a bastard
 	no_consort_with_heir = yes
@@ -1590,7 +1590,7 @@ alias[effect:elector] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope an elector of the Holy Roman Empire.	
-alias[effect:elector] = <country_tag>	
+alias[effect:elector] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.	
@@ -1646,7 +1646,7 @@ alias[effect:join_league] = scope[country]
 	
 ## scope = country	
 ###Makes the current scope join the League that the defined scope belongs to.	
-alias[effect:join_league] = <country_tag>	
+alias[effect:join_league] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the current scope leave the League that the defined scope belongs to.	
@@ -1654,7 +1654,7 @@ alias[effect:leave_league] = scope[country]
 	
 ## scope = country	
 ###Makes the current scope leave the League that the defined scope belongs to.	
-alias[effect:leave_league] = <country_tag>	
+alias[effect:leave_league] = enum[country_tags]	
 	
 ## scope = country	
 ###Removes the Empire of China and the Mandate system.	
@@ -1666,7 +1666,7 @@ alias[effect:set_emperor_of_china] = scope[country]
 	
 ## scope = country	
 ###Sets the current Emperor of China.	
-alias[effect:set_emperor_of_china] = <country_tag>	
+alias[effect:set_emperor_of_china] = enum[country_tags]	
 	
 ## scope = country	
 ###Adds mandate to the current scope. No effect if not the Emperor of China.	
@@ -1682,7 +1682,7 @@ alias[effect:set_revolution_target] = scope[country]
 	
 ## scope = country	
 ###Makes the defined scope the new revolutionary target. Use --- to remove the target and not re-assign.	
-alias[effect:set_revolution_target] = <country_tag>	
+alias[effect:set_revolution_target] = enum[country_tags]	
 	
 ## scope = country	
 ###Makes the defined scope the new revolutionary target. Use --- to remove the target and not re-assign.	
@@ -1705,7 +1705,7 @@ alias[effect:set_ai_attitude] = {
 	###Whether the personality can be re-evaluated and changed.
 	locked = bool
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 }	
 	
 	
@@ -1881,7 +1881,7 @@ alias[effect:change_culture] = <culture.fixed>
 	
 ## scope = province	
 ###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
-alias[effect:change_culture] = <country_tag>	
+alias[effect:change_culture] = enum[country_tags]	
 	
 ## scope = province	
 ###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
@@ -1897,7 +1897,7 @@ alias[effect:change_religion] = <religion.not_school>
 	
 ## scope = province	
 ###Changes the religion of the current province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.	
-alias[effect:change_religion] = <country_tag>	
+alias[effect:change_religion] = enum[country_tags]	
 	
 ## scope = province	
 ###Changes the religion of the current province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.	
@@ -1981,13 +1981,13 @@ alias[effect:spawn_rebels] = {
 	## cardinality = 0..1
 	culture = <culture.fixed>
 	## cardinality = 0..1
-	culture = <country_tag>
+	culture = enum[country_tags]
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
-	religion = <country_tag>
+	religion = enum[country_tags]
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -2001,7 +2001,7 @@ alias[effect:spawn_rebels] = {
 	friend = scope[country]
 	## cardinality = 0..1
 	###Associate a country with the rebels.
-	friend = <country_tag>
+	friend = enum[country_tags]
 	## cardinality = 0..1
 	leader = scalar #todo: name / saved name
 	## cardinality = 0..1
@@ -2049,7 +2049,7 @@ alias[effect:discover_country] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains vision over the current province scope. Best used within areas, regions, etc to add vision.	
-alias[effect:discover_country] = <country_tag>	
+alias[effect:discover_country] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope loses vision over the current province scope. Best used within areas, regions, etc to remove vision.	
@@ -2057,7 +2057,7 @@ alias[effect:undiscover_country] = scope[country]
 	
 ## scope = province	
 ###The defined scope loses vision over the current province scope. Best used within areas, regions, etc to remove vision.	
-alias[effect:undiscover_country] = <country_tag>	
+alias[effect:undiscover_country] = enum[country_tags]	
 	
 #Province Diplomacy stuff	
 	
@@ -2067,7 +2067,7 @@ alias[effect:add_claim] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains a claim on the current province scope.	
-alias[effect:add_claim] = <country_tag>	
+alias[effect:add_claim] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope gains a core on the current province scope.	
@@ -2075,7 +2075,7 @@ alias[effect:add_core] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains a core on the current province scope.	
-alias[effect:add_core] = <country_tag>	
+alias[effect:add_core] = enum[country_tags]	
 	
 ## scope = province	
 ###Starts core construction in the current province scope, for the current owner.	
@@ -2087,7 +2087,7 @@ alias[effect:add_permanent_claim] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains a permanent claim on the current province scope.	
-alias[effect:add_permanent_claim] = <country_tag>	
+alias[effect:add_permanent_claim] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope gains a territorial core on the current province scope.	
@@ -2095,7 +2095,7 @@ alias[effect:add_territorial_core] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains a territorial core on the current province scope.	
-alias[effect:add_territorial_core] = <country_tag>	
+alias[effect:add_territorial_core] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope gains ownership of the current province scope. previous_owner can be used to cede ownership to the last previous owner of a province.	
@@ -2103,7 +2103,7 @@ alias[effect:cede_province] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains ownership of the current province scope. previous_owner can be used to cede ownership to the last previous owner of a province.	
-alias[effect:cede_province] = <country_tag>	
+alias[effect:cede_province] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope gains ownership of the current province scope. previous_owner can be used to cede ownership to the last previous owner of a province.	
@@ -2115,7 +2115,7 @@ alias[effect:change_controller] = scope[country]
 	
 ## scope = province	
 ###The defined scope gains control over the current province scope. Control here means occupation, not ownership.	
-alias[effect:change_controller] = <country_tag>	
+alias[effect:change_controller] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope loses their claim on the current province scope. Works for both types of claims.	
@@ -2123,7 +2123,7 @@ alias[effect:remove_claim] = scope[country]
 	
 ## scope = province	
 ###The defined scope loses their claim on the current province scope. Works for both types of claims.	
-alias[effect:remove_claim] = <country_tag>	
+alias[effect:remove_claim] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope loses their core on the current province scope.	
@@ -2131,7 +2131,7 @@ alias[effect:remove_core] = scope[country]
 	
 ## scope = province	
 ###The defined scope loses their core on the current province scope.	
-alias[effect:remove_core] = <country_tag>	
+alias[effect:remove_core] = enum[country_tags]	
 	
 ## scope = province	
 ###The defined scope loses their territorial core on the current province scope.	
@@ -2139,7 +2139,7 @@ alias[effect:remove_territorial_core] = scope[country]
 	
 ## scope = province	
 ###The defined scope loses their territorial core on the current province scope.	
-alias[effect:remove_territorial_core] = <country_tag>	
+alias[effect:remove_territorial_core] = enum[country_tags]	
 	
 #Province Military Stuff	
 	
@@ -2149,7 +2149,7 @@ alias[effect:artillery] = scope[country]
 	
 ## scope = province	
 ###Spawns an artillery unit in the current province scope for the defined country scope. Uses the currently selected artillery unit.	
-alias[effect:artillery] = <country_tag>	
+alias[effect:artillery] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns an infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
@@ -2157,7 +2157,7 @@ alias[effect:infantry] = scope[country]
 	
 ## scope = province	
 ###Spawns an infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
-alias[effect:infantry] = <country_tag>	
+alias[effect:infantry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
@@ -2165,7 +2165,7 @@ alias[effect:cavalry] = scope[country]
 	
 ## scope = province	
 ###Spawns a cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
-alias[effect:cavalry] = <country_tag>	
+alias[effect:cavalry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a mercenary infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
@@ -2173,7 +2173,7 @@ alias[effect:mercenary_infantry] = scope[country]
 	
 ## scope = province	
 ###Spawns a mercenary infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
-alias[effect:mercenary_infantry] = <country_tag>	
+alias[effect:mercenary_infantry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a mercenary cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
@@ -2181,7 +2181,7 @@ alias[effect:mercenary_cavalry] = scope[country]
 	
 ## scope = province	
 ###Spawns a mercenary cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
-alias[effect:mercenary_cavalry] = <country_tag>	
+alias[effect:mercenary_cavalry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a streltsy infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
@@ -2189,7 +2189,7 @@ alias[effect:streltsy_infantry] = scope[country]
 	
 ## scope = province	
 ###Spawns a streltsy infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.	
-alias[effect:streltsy_infantry] = <country_tag>	
+alias[effect:streltsy_infantry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
@@ -2197,7 +2197,7 @@ alias[effect:cossack_cavalry] = scope[country]
 	
 ## scope = province	
 ###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.	
-alias[effect:cossack_cavalry] = <country_tag>	
+alias[effect:cossack_cavalry] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a heavy ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
@@ -2205,7 +2205,7 @@ alias[effect:heavy_ship] = scope[country]
 	
 ## scope = province	
 ###Spawns a heavy ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
-alias[effect:heavy_ship] = <country_tag>	
+alias[effect:heavy_ship] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a light ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
@@ -2213,7 +2213,7 @@ alias[effect:light_ship] = scope[country]
 	
 ## scope = province	
 ###Spawns a light ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
-alias[effect:light_ship] = <country_tag>	
+alias[effect:light_ship] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a galley ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
@@ -2221,7 +2221,7 @@ alias[effect:galley] = scope[country]
 	
 ## scope = province	
 ###Spawns a galley ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
-alias[effect:galley] = <country_tag>	
+alias[effect:galley] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a transport ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
@@ -2229,7 +2229,7 @@ alias[effect:transport] = scope[country]
 	
 ## scope = province	
 ###Spawns a transport ship unit in the current province scope for the defined country scope. Uses the defined scope's current transport ship unit. Requires the current province scope to have a port.	
-alias[effect:transport] = <country_tag>	
+alias[effect:transport] = enum[country_tags]	
 	
 ## scope = province	
 ###Spawns a specific unit in the current province scope for the defined country scope. Units can be found in /Europa Universalis IV/common/units/*.txt.	
@@ -2237,7 +2237,7 @@ alias[effect:<unit_name>] = scope[country]
 	
 ## scope = province	
 ###Spawns a specific unit in the current province scope for the defined country scope. Units can be found in /Europa Universalis IV/common/units/*.txt.	
-alias[effect:<unit_name>] = <country_tag>	
+alias[effect:<unit_name>] = enum[country_tags]	
 	
 #todo: did I use unit_name before? (E.g. is "British Redcoats")	
 	
@@ -2307,7 +2307,7 @@ alias[effect:build_to_forcelimit] = {
 ###Removes loot from the current province scope and grants it to the defined country scope. The who parameter accepts enemy, which distributes the loot to all current enemies of the province owner.	
 alias[effect:remove_loot] = {	
 	who = scope[country]
-	who = <country_tag>
+	who = enum[country_tags]
 	who = enemy
 	amount = int
 }	
@@ -2325,7 +2325,7 @@ alias[effect:recall_merchant] = scope[country]
 	
 ## scope = trade_node	
 ###Recalls a placed merchant in the current tradenode province scope.  Only works when the current province scope is the location of a tradenode center.	
-alias[effect:recall_merchant] = <country_tag>	
+alias[effect:recall_merchant] = enum[country_tags]	
 	
 #Todo: trade_node scope	
 	
