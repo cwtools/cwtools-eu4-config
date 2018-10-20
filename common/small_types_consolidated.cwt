@@ -1,0 +1,71 @@
+
+types = {
+	type[great_project] = {
+		path = "game/common/great_projects"
+	}
+	type[faction] = {
+		path = "game/common/factions"
+	}
+	type[fervor] = {
+		path = "game/common/fervor"
+	}
+	type[cult] = {
+		path = "game/common/fetishist_cults"
+	}
+}
+
+
+great_project = {
+	ambient_object = <ambient_object> #todo
+	province = enum[province_ids]
+	is_canal = yes
+	time = int
+	
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
+
+
+faction = {
+	monarch_power = enum[power_types]
+	always = yes
+	
+	## cardinality = 0..1
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
+
+
+fervor = {
+	cost = int
+	effect = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## replace_scope = { root = country this = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+
+cult = {
+	alias_name[modifier] = alias_match_left[modifier]
+	sprite = int
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
