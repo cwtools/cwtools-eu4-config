@@ -175,12 +175,14 @@ alias[effect:crusade_target] = {
 
 
 ## scope = country
+## push_scope = country
 ###Refers to the country (if it exists) that is the colonial parent of the current country scope.
 alias[effect:colonial_parent] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
 ## scope = country
+## push_scope = country
 ###Refers to the country (if it exists) that is the overlord of the current country scope.
 alias[effect:overlord] = {
 	alias_name[effect] = alias_match_left[effect]
@@ -209,18 +211,21 @@ alias[effect:controller] = {
 }
 
 ## scope = province
-###Refers to the country that controls the current province scope.
+## push_scope = province
+###Refers to the sea province on which the current land province scope has a port.
 alias[effect:sea_zone] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
 ## scope = province
+## push_scope = province
 ###Refers to the area that the current province scope is in.
 alias[effect:area] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
 ## scope = province
+## push_scope = province
 ###Refers to the region that the current province scope is in.
 alias[effect:region] = {
 	alias_name[effect] = alias_match_left[effect]
@@ -245,6 +250,7 @@ alias[effect:strongest_trade_power] = {
 
 
 ## scope = country
+## push_scope = country
 ###Scopes to all valid countries that meet the triggers in the limit.
 alias[effect:every_ally] = {
 	## cardinality = 0..1
@@ -255,6 +261,7 @@ alias[effect:every_ally] = {
 }
 
 ## scope = country
+## push_scope = country
 ###Scopes to all members of the coalition against the current scope (if any).
 alias[effect:every_coalition_member] = {
 	## cardinality = 0..1
@@ -264,7 +271,8 @@ alias[effect:every_coalition_member] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all members of the coalition against the current scope (if any).		
 alias[effect:every_coalition_member] = {		
 	## cardinality = 0..1	
@@ -275,7 +283,8 @@ alias[effect:every_coalition_member] = {
 }		
 		
 		
-## scope = country		
+## scope = country	
+## push_scope = country	
 ###Scopes to all countries in the world. Avoid this if you can use something more specific.		
 alias[effect:every_country] = {		
 	## cardinality = 0..1	
@@ -286,7 +295,8 @@ alias[effect:every_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all electors of the HRE.		
 alias[effect:every_elector] = {		
 	## cardinality = 0..1	
@@ -297,7 +307,8 @@ alias[effect:every_elector] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all valid countries that meet the triggers in the limit.		
 alias[effect:every_enemy_country] = {		
 	## cardinality = 0..1	
@@ -308,7 +319,8 @@ alias[effect:every_enemy_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all countries that have been discovered by the current scope.		
 alias[effect:every_known_country] = {		
 	## cardinality = 0..1	
@@ -319,7 +331,8 @@ alias[effect:every_known_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all valid countries that meet the triggers in the limit.		
 alias[effect:every_local_enemy] = {		
 	## cardinality = 0..1	
@@ -330,7 +343,8 @@ alias[effect:every_local_enemy] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all countries that share a border (or sea zone?) with the current scope.		
 alias[effect:every_neighbor_country] = {		
 	## cardinality = 0..1	
@@ -341,7 +355,8 @@ alias[effect:every_neighbor_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all valid countries that meet the triggers in the limit.		
 alias[effect:every_rival_country] = {		
 	## cardinality = 0..1	
@@ -352,7 +367,8 @@ alias[effect:every_rival_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to all subject nations under the current scope.		
 alias[effect:every_subject_country] = {		
 	## cardinality = 0..1	
@@ -363,7 +379,8 @@ alias[effect:every_subject_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one valid country that meet the triggers in the limit.		
 alias[effect:random_ally] = {		
 	## cardinality = 0..1	
@@ -374,7 +391,8 @@ alias[effect:random_ally] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random member of the coalition against the current scope.		
 alias[effect:random_coalition_member] = {		
 	## cardinality = 0..1	
@@ -385,7 +403,8 @@ alias[effect:random_coalition_member] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random country among all countries in the world. Avoid this if you can use something more specific.		
 alias[effect:random_country] = {		
 	## cardinality = 0..1	
@@ -396,7 +415,8 @@ alias[effect:random_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random elector of the HRE.		
 alias[effect:random_elector] = {		
 	## cardinality = 0..1	
@@ -407,7 +427,8 @@ alias[effect:random_elector] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one valid country that meet the triggers in the limit.		
 alias[effect:random_enemy_country] = {		
 	## cardinality = 0..1	
@@ -418,7 +439,8 @@ alias[effect:random_enemy_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random country that has been discovered by the current scope.		
 alias[effect:random_known_country] = {		
 	## cardinality = 0..1	
@@ -429,7 +451,8 @@ alias[effect:random_known_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one valid country that meet the triggers in the limit.		
 alias[effect:random_local_enemy] = {		
 	## cardinality = 0..1	
@@ -440,7 +463,8 @@ alias[effect:random_local_enemy] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random country that shares a border (or sea zone?) with the current scope.		
 alias[effect:random_neighbor_country] = {		
 	## cardinality = 0..1	
@@ -451,7 +475,8 @@ alias[effect:random_neighbor_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one valid country that meet the triggers in the limit.		
 alias[effect:random_rival_country] = {		
 	## cardinality = 0..1	
@@ -462,7 +487,8 @@ alias[effect:random_rival_country] = {
 }		
 		
 		
-## scope = country		
+## scope = country
+## push_scope = country
 ###Scopes to one random subject country under the current scope.		
 alias[effect:random_subject_country] = {		
 	## cardinality = 0..1	
@@ -584,7 +610,8 @@ alias[effect:random_active_trade_node] = {
 
 
 
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope that are colonizable and uncolonized.		
 alias[effect:every_empty_neighbor_province] = {		
 	## cardinality = 0..1	
@@ -595,7 +622,8 @@ alias[effect:every_empty_neighbor_province] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope. Does not include empty provinces.		
 alias[effect:every_neighbor_province] = {		
 	## cardinality = 0..1	
@@ -606,7 +634,8 @@ alias[effect:every_neighbor_province] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to all provinces in the same state (area?).		
 alias[effect:every_province_in_state] = {		
 	## cardinality = 0..1	
@@ -617,7 +646,8 @@ alias[effect:every_province_in_state] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to one random province sharing a border (or sea zone?) with the current scope that is colonizable and uncolonized.		
 alias[effect:random_empty_neighbor_province] = {		
 	## cardinality = 0..1	
@@ -628,7 +658,8 @@ alias[effect:random_empty_neighbor_province] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to one random province sharing a border(or sea zone?) with the current scope. Does not include empty provinces.		
 alias[effect:random_neighbor_province] = {		
 	## cardinality = 0..1	
@@ -639,7 +670,8 @@ alias[effect:random_neighbor_province] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to one random province in the same state as the current scope.		
 alias[effect:random_province_in_state] = {		
 	## cardinality = 0..1	
@@ -650,7 +682,8 @@ alias[effect:random_province_in_state] = {
 }		
 		
 		
-## scope = province		
+## scope = province
+## push_scope = province
 ###Scopes to one random province among all provinces in the world.		
 alias[effect:random_province] = {		
 	## cardinality = 0..1	
@@ -884,12 +917,14 @@ alias[trigger:crusade_target] = {
 
 
 ## scope = country
+## push_scope = country
 ###Refers to the country (if it exists) that is the colonial parent of the current country scope.
 alias[trigger:colonial_parent] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## scope = country
+## push_scope = country
 ###Refers to the country (if it exists) that is the overlord of the current country scope.
 alias[trigger:overlord] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -918,18 +953,21 @@ alias[trigger:controller] = {
 }
 
 ## scope = province
+## push_scope = province
 ###Refers to the country that controls the current province scope.
 alias[trigger:sea_zone] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## scope = province
+## push_scope = province
 ###Refers to the area that the current province scope is in.
 alias[trigger:area] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## scope = province
+## push_scope = province
 ###Refers to the region that the current province scope is in.
 alias[trigger:region] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1031,6 +1069,7 @@ alias[trigger:all_subject_country] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to all provinces that the current scope has a core on, whether owned or not.	
 alias[trigger:all_core_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1038,6 +1077,7 @@ alias[trigger:all_core_province] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to all provinces whose religion is heretic to the current scope.	
 alias[trigger:all_heretic_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1045,6 +1085,7 @@ alias[trigger:all_heretic_province] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to all provinces owned by the current scope.	
 alias[trigger:all_owned_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1052,6 +1093,7 @@ alias[trigger:all_owned_province] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to all provinces in the world. Avoid this if you can use something more specific.	
 alias[trigger:all_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1059,13 +1101,15 @@ alias[trigger:all_province] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to all provinces in states of the current scope.	
 alias[trigger:all_state_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
 }	
 	
 	
-## scope = country	
+## scope = country
+## push_scope = province
 ###Scopes to all states of the current scope.	
 alias[trigger:all_states] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1157,27 +1201,31 @@ alias[trigger:any_subject_country] = {
 	
 	
 ## scope = country	
+## push_scope = province
 ###Scopes to one province that the current scope has a core on, whether owned or not.	
 alias[trigger:any_core_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
 }	
 	
 	
-## scope = country	
+## scope = country
+## push_scope = province
 ###Scopes to one province whose religion is heretic to the current scope.	
 alias[trigger:any_heretic_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
 }	
 	
 	
-## scope = country	
+## scope = country
+## push_scope = province
 ###Scopes to one province owned by the current scope.	
 alias[trigger:any_owned_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
 }	
 	
 	
-## scope = country	
+## scope = country
+## push_scope = province
 ###Scopes to one province from among all provinces in the world. Avoid this if you can use something more specific.	
 alias[trigger:any_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1185,6 +1233,7 @@ alias[trigger:any_province] = {
 
 
 ## scope = province	
+## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope that are colonizable and uncolonized.	
 alias[trigger:all_empty_neighbor_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1192,6 +1241,7 @@ alias[trigger:all_empty_neighbor_province] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to all provinces in the same state as the current scope.	
 alias[trigger:all_province_in_state] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1199,6 +1249,7 @@ alias[trigger:all_province_in_state] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope.	
 alias[trigger:all_neighbor_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1206,6 +1257,7 @@ alias[trigger:all_neighbor_province] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to one province sharing a border (or sea zone?) with the current scope that is colonizable and uncolonized.	
 alias[trigger:any_empty_neighbor_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1213,6 +1265,7 @@ alias[trigger:any_empty_neighbor_province] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to one province among all provinces in the world. Avoid this if you can use something more specific.	
 alias[trigger:any_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1220,6 +1273,7 @@ alias[trigger:any_province] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to one province in the same state as the current scope.	
 alias[trigger:any_province_in_state] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1227,6 +1281,7 @@ alias[trigger:any_province_in_state] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to one province that shares a border with the current scope that is friendly to the current scope (meaning its owner is the same or has positive relations).	
 alias[trigger:any_friendly_coast_border_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1234,6 +1289,7 @@ alias[trigger:any_friendly_coast_border_province] = {
 	
 	
 ## scope = province	
+## push_scope = province
 ###Scopes to one province that shares a border (or sea zone?) with the current scope.	
 alias[trigger:any_neighbor_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
