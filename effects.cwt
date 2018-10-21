@@ -1149,11 +1149,11 @@ alias[effect:change_mil] = int[-6..6]
 	
 ## scope = country	
 ###Adds the defined personality to the current ruler. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:add_ruler_personality] = <personality>	
+alias[effect:add_ruler_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Removes the defined personality to the current ruler. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:remove_ruler_personality] = <personality>	
+alias[effect:remove_ruler_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Defines a ruler flag for the current scope's ruler. Flags can be appended with scopes or event targets via e.g. @root	
@@ -1327,11 +1327,11 @@ alias[effect:define_ruler] = {
 	
 ## scope = country	
 ###Adds the defined personality to the current consort. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:add_queen_personality] = <personality>	
+alias[effect:add_queen_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Removes the defined personality to the current consort. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:remove_queen_personality] = <personality>	
+alias[effect:remove_queen_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Defines a ruler flag for the current scope's consort. Flags can be appended with scopes or event targets via e.g. @root	
@@ -1438,11 +1438,11 @@ alias[effect:change_heir_mil] = int[-6..6]
 	
 ## scope = country	
 ###Adds the defined personality to the current heir. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:add_heir_personality] = <personality>	
+alias[effect:add_heir_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Removes the defined personality from the current heir. Ruler personalities are found in /Europa Universalis IV/common/ruler_personalities/00_core.txt	
-alias[effect:remove_heir_personality] = <personality>	
+alias[effect:remove_heir_personality] = <ruler_personality>	
 	
 ## scope = country	
 ###Defines an heir flag for the current scope's heir. Flags can be appended with scopes or event targets via e.g. @root	
@@ -1594,7 +1594,7 @@ alias[effect:elector] = enum[country_tags]
 	
 ## scope = country	
 ###Removes an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.	
-alias[effect:revoke_reform] = <imperial_reform> #todo	
+alias[effect:revoke_reform] = <imperial_reform>	
 	
 ## scope = country	
 ###Places the current scope and all owned provinces (if valid) in the empire.	
@@ -1755,7 +1755,7 @@ alias[effect:add_permanent_province_modifier] = {
 	
 ## scope = province	
 ###Adds a province triggered modifier to the current province scope.	
-alias[effect:add_province_triggered_modifier] = <triggered_modifier> #todo	
+alias[effect:add_province_triggered_modifier] = <province_triggered_modifier>	
 	
 ## scope = province	
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.	

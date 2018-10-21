@@ -2,7 +2,8 @@
 types = {
 	type[technology_group] = {
 		skip_root_key = groups
-		path = "game/common/technology.txt"
+		path = "game/common"
+		path_file = "technology.txt"
 	}
 }
 

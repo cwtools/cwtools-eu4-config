@@ -1,0 +1,60 @@
+
+types = {
+	type[event_modifier] = {
+		path = "game/common/event_modifiers"
+	}
+	type[static_modifier] = { #todo: As far as I can tell, you cannot add to them.
+		path = "game/common/static_modifiers"
+	}
+	type[triggered_modifier] = {
+		path = "game/common/triggered_modifiers"
+	}
+	type[province_triggered_modifier] = {
+		path = "game/common/province_triggered_modifiers"
+	}
+}
+
+event_modifier = {
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+static_modifier = {
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+
+###Triggered modifiers are checked for each country once/month and then applied. Effects are fully scriptable here.
+triggered_modifier = {
+	##replace_scope = { this = country root = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##replace_scope = { this = country root = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##replace_scope = { this = country root = country }
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+
+province_triggered_modifier = {
+	##replace_scope = { this = province root = province }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##replace_scope = { this = province root = province }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	##replace_scope = { this = province root = province }
+	alias_name[modifier] = alias_match_left[modifier]
+	##replace_scope = { this = province root = province }
+	on_activation = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	##replace_scope = { this = province root = province }
+	on_deactivation = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}

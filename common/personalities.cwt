@@ -1,0 +1,93 @@
+
+types = {
+	type[leader_personality] = {
+		path = "game/common/leader_personalities"
+	}
+	type[ruler_personality] = {
+		path = "game/common/leader_personalities"
+	}
+}
+
+leader_personality = {
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+		## cardinality = 0..1
+		is_admiral = bool
+	}
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+
+
+
+ruler_personality = {
+	ruler_allow = {
+		## replace_scope = { root = country this = country }
+		allow = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	
+		## replace_scope = { root = country this = country }
+		chance = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+
+	heir_allow = {
+		## replace_scope = { root = country this = country }
+		allow = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	
+		## replace_scope = { root = country this = country }
+		chance = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+	
+	consort_allow = {
+		## replace_scope = { root = country this = country }
+		allow = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+
+		## replace_scope = { root = country this = country }
+		chance = {
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	chance = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	## cardinality = 0..1
+	knowledge_sharing = yes
+	## cardinality = 0..1
+	wants_condottieri = yes
+	## cardinality = 0..1
+	fair_fights = yes
+	## cardinality = 0..1
+	wants_heathen_land = yes
+	## cardinality = 0..1
+	wants_heretic_land = yes
+	## cardinality = 0..1
+	wants_excommunicate = yes
+	## cardinality = 0..1
+	wants_gold = yes
+	## cardinality = 0..1
+	custom_ai_explanation = localisation
+	
+	nation_designer_cost = int
+	
+	alias_name[modifier] = alias_match_left[modifier]
+}

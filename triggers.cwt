@@ -355,7 +355,7 @@ alias[trigger:consort_culture] = <country_type>
 	
 ## scope = Country	
 ###Returns true if the country's consort has the specified personality.	
-alias[trigger:consort_has_personality] = <personality>	
+alias[trigger:consort_has_personality] = <ruler_personality>	
 	
 ## scope = Country	
 ###Returns true if the country has a consort with an military skill of at least X.	
@@ -1389,7 +1389,7 @@ alias[trigger:heir_has_consort_dynasty] = bool
 	
 ## scope = Country	
 ###Returns true if the country's heir has the specified personality.	
-alias[trigger:heir_has_personality] = <personality> #todo	
+alias[trigger:heir_has_personality] = <ruler_personality>	
 	
 ## scope = Country	
 ###Returns true if the country's heir and ruler have the same dynasty.	
@@ -2991,7 +2991,7 @@ alias[trigger:percentage_backing_issue] = float[0.0..1.0]
 	
 ## scope = Country	
 ###Returns true if the country has a ruler which personality is X.	
-alias[trigger:personality] = <personality>	
+alias[trigger:personality] = <ruler_personality>	
 	
 ## scope = Country	
 ###Returns true if the country's piety is at least X, if the country has at least as much piety as the specified country.	
@@ -3244,7 +3244,7 @@ alias[trigger:ruler_culture] = scope[country]
 	
 ## scope = Country	
 ###Returns true if the country's ruler has the specified personality.	
-alias[trigger:ruler_has_personality] = <personality>	
+alias[trigger:ruler_has_personality] = <ruler_personality>	
 	
 ## scope = Country	
 ###Returns true if the country has foreign ruler.	

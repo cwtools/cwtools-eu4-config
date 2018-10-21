@@ -12,6 +12,24 @@ types = {
 	type[cult] = {
 		path = "game/common/fetishist_cults"
 	}
+	type[revolt_trigger] = {
+		path = "game/common/revolt_triggers"
+	}
+	type[insult] = {
+		path = "game/common/insults"
+	}
+	type[natives] = {
+		path = "game/common/natives"
+	}
+	type[decree] = {
+		path = "game/common/decrees"
+	}
+	type[isolationism] = {
+		path = "game/common/isolationism"
+	}
+	type[naval_doctrine] = {
+		path = "game/common/naval_doctrines"
+	}
 }
 
 
@@ -69,3 +87,72 @@ cult = {
 	}
 }
 
+## replace_scope = { root = province this = province }
+revolt_trigger = {
+	## replace_scope = { root = province this = province }
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+insult = {
+	## replace_scope = { root = country this = country from = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+
+
+natives = {
+	graphical_culture = <graphical_culture>
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+	icon = int
+	
+	unit = <unit_type>
+	
+	provinces = {
+		## cardinality = 1..inf
+		enum[province_ids]
+	}
+}
+
+
+decree = {
+	cost = int
+	duration = int
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## replace_scope = { root = country this = country from = country }
+	###ai_will_do has to be 10 for AI to do it (with >=99 Meritocracy).
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+
+isolationism = {
+	isolation_value = int[0..inf]
+
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
+
+
+
+naval_doctrine = {
+	## replace_scope = { root = country this = country from = country }
+	can_select = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	country_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	button_gfx = int
+}

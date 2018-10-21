@@ -2,19 +2,24 @@
 
 types = {
 	type[area] = {
-		path = "game/map/area.txt"
+		path = "game/map"
+		path_file = "area.txt"
 	}
 	type[continent] = {
-		path = "game/map/continent.txt"
+		path = "game/map"
+		path_file = "continent.txt"
 	}
 	type[climate] = {
-		path = "game/map/climate.txt"
+		path = "game/map"
+		path_file = "climate.txt"
 	}
 	type[region] = {
-		path = "game/map/region.txt"
+		path = "game/map"
+		path_file = "region.txt"
 	}
 	type[superregion] = {
-		path = "game/map/superregion.txt"
+		path = "game/map"
+		path_file = "superregion.txt"
 	}
 }
 
