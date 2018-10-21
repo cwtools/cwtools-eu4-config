@@ -47,7 +47,7 @@ event = {
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-			text = localisation
+			desc = localisation
 		}
 		picture = enum[event_pictures] #todo: this is a terrible temporary fix
 		picture = {

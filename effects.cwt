@@ -580,7 +580,7 @@ alias[effect:remove_advisor] = <advisor_id> #todo
 	
 ## scope = country	
 ###Removes a hired advisor of a monarch power type for the current scope.	
-alias[effect:remove_advisor_by_category] = [power_types]	
+alias[effect:remove_advisor_by_category] = enum[power_types]	
 	
 ## scope = country	
 ###Adds the defined advisor to the current scope. Advisor types are found in /Europa Universalis IV/common/advisortypes/*.txt. Can utilise Event Scope Values for the culture and religion parameters. The name parameter can accept a saved name variable, see set_saved_name for more context.	
