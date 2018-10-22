@@ -202,7 +202,7 @@ alias[religion:scalar] = {
 	uses_church_power = yes				# Uses church power/aspect mechanics
 	## cardinality = 0..1
 	aspects = {
-		<blessings> #todo - in church aspects
+		<aspects_and_blessings.blessing>
 	}
 	## cardinality = 0..1
 	aspects_name = localisation
