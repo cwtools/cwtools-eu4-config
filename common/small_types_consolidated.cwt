@@ -36,6 +36,9 @@ types = {
 	type[professionalism_modifier] = {
 		path = "game/common/professionalism"
 	}
+	type[edict] = {
+		path = "game/common/state_edicts"
+	}
 }
 
 
@@ -207,4 +210,31 @@ professionalism_modifier = {
 	may_return_manpower_on_disband = yes
 	## cardinality = 0..1
 	reserves_organisation = yes
+}
+
+
+
+edict = {
+	## replace_scope = { root = province this = province }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = province this = province }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	color = { 50 173 192 }
+	
+	## replace_scope = { root = province this = province }
+	##has to be around at least 10 to be picked (depends on maintenance cost and general economy)
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
 }
