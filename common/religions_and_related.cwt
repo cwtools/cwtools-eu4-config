@@ -11,6 +11,18 @@ types = {
 			icon = scalar
 		}
 	}
+	type[personal_deity] = {
+		path = "game/common/personal_deities"
+	}
+	type[religion_propagation] = {
+		path = "game/common/religious_conversions"
+		subtype[trading_policy] = {
+			trading_policy = yes
+		}
+	}
+	type[religious_reform_group] = {
+		path = "game/common/religious_reforms"
+	}
 }
 
 
@@ -271,5 +283,80 @@ alias[religion:scalar] = {
 	heretic = {
 		## cardinality = 1..inf
 		localisation
+	}
+}
+
+
+
+personal_deity = {
+
+	alias_name[modifier] = alias_match_left[modifier]
+	
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	sprite = int
+	
+	## replace_scope = { root = country this = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+
+
+religion_propagation = {
+	
+	map_icon = scalar #todo: Sprite
+
+	subtype[trading_policy] = {
+		###Religion is taken from country using the trading policy. max_distance is not used.
+		trading_policy = yes
+	}
+	
+	subtype[!trading_policy] = {
+		###From Center of Reformation center province (default is NDefines::NReligion::MAX_RELIGIOUS_CENTER_SPREAD_DISTANCE).
+		max_distance = float
+	}
+		
+	
+	base_conversion_speed = float
+	
+	## replace_scope = { root = province this = province from = country }
+	target_province_weights = {
+	
+		#Will only target provinces within same node
+		#From Scope is country using the trading policy
+		
+		factor = float
+		
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+
+
+religious_reform_group = {
+	## replace_scope = { root = country this = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	can_buy_idea = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	#I don't think these are referred to from elsewhere
+	## Cardinality = 5..5
+	localisation = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## replace_scope = { root = country this = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }
