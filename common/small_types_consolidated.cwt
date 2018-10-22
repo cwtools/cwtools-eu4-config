@@ -30,6 +30,12 @@ types = {
 	type[naval_doctrine] = {
 		path = "game/common/naval_doctrines"
 	}
+	type[policy] = {
+		path = "game/common/policies"
+	}
+	type[professionalism_modifier] = {
+		path = "game/common/professionalism"
+	}
 }
 
 
@@ -155,4 +161,50 @@ naval_doctrine = {
 	}
 	
 	button_gfx = int
+}
+
+
+policy = {
+	monarch_power = enum[power_types]
+
+	## replace_scope = { this = country root = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { this = country root = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	alias_name[modifier] = alias_match_left[modifier]
+
+	## replace_scope = { this = country root = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]		
+	}
+}
+
+professionalism_modifier = {
+	## cardinality = 0..1
+	hidden = yes
+	army_professionalism = float[0.0..1.0]
+
+	marker_sprite = scalar #todo: sprite
+	unit_sprite_start = scalar #todo: sprite
+
+	trigger = {
+		always = yes
+	}
+	
+	alias_name[modifier] = alias_match_left[modifier]
+	
+	## cardinality = 0..1
+	may_build_supply_depot = yes
+	## cardinality = 0..1
+	may_refill_garrison = yes
+	## cardinality = 0..1
+	may_return_manpower_on_disband = yes
+	## cardinality = 0..1
+	reserves_organisation = yes
 }
