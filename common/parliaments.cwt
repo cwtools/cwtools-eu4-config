@@ -1,0 +1,59 @@
+
+types = {
+	type[parliament_bribe] = {
+		path = "game/common/parliament_bribes"
+	}
+	type[parliament_issue] = {
+		path = "game/common/parliament_issues"
+	}
+}
+
+
+parliament_bribe = {
+	## replace_scope = { root = country this = country from = province }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country from = province }
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	## replace_scope = { root = country this = country from = province }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+
+parliament_issue = {
+	category = int
+
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## replace_scope = { root = country this = country }
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## replace_scope = { root = country this = country }
+	chance = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## replace_scope = { root = country this = country }
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
