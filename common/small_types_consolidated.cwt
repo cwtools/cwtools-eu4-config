@@ -229,7 +229,10 @@ edict = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	
-	color = { 50 173 192 }
+	color = {
+		# cardinality = 3..3
+		int[0..255
+	}
 	
 	## replace_scope = { root = province this = province }
 	##has to be around at least 10 to be picked (depends on maintenance cost and general economy)
