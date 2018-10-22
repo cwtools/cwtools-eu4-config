@@ -39,9 +39,6 @@ types = {
 	type[edict] = {
 		path = "game/common/state_edicts"
 	}
-	type[trade_company] = {
-		path = "game/common/trade_companies"
-	}
 }
 
 
@@ -245,25 +242,3 @@ edict = {
 	}
 }
 
-
-trade_company = {
-	color = {
-		## cardinality = 3..3
-		int[0..255
-	}
-	
-	provinces = {
-		## cardinality = 1..inf
-		enum[province_ids]
-	}
-	
-	## cardinality = 1..inf
-	names = {
-		## cardinality = 0..1
-		## replace_scope = { root = country this = country }
-		trigger = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		name = localisation #todo: there is something special about this. i.e. Root_Culture_GetName turned up in the name
-	}
-}
