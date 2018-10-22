@@ -6,6 +6,12 @@ types = {
 	type[trade_company] = {
 		path = "game/common/trade_companies"
 	}
+	type[trade_company_investment] = {
+		path = "game/common/tradecompany_investments"
+	}
+	type[trade_node] = {
+		path = "game/common/tradenodes"
+	}
 }
 
 trade_good = {
@@ -52,5 +58,80 @@ trade_company = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 		name = localisation #todo: there is something special about this. i.e. Root_Culture_GetName turned up in the name
+	}
+}
+
+
+trade_company_investment = {
+
+	category = enum[trade_company_investment_types] #todo: verify how these are defined. Could conceivably be scalar
+
+	sprite = scalar #todo: sprite
+	
+	upgrades_to = <trade_company_investment>
+	
+	cost = float
+	
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	owner_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	company_province_area_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	area_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	ai_global_worth = { factor = int }
+	ai_area_worth = { factor = int }
+	ai_region_worth = { factor = int }
+}
+
+enums = {
+	enum[trade_company_investment_types] = {
+		company_garrison
+		harbor
+		local_venture
+		foreign_influence
+		governance
+	}
+}
+
+
+
+trade_node = {
+	location = enum[province_ids]
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+	## cardinality = 0..1
+	inland = yes
+	## cardinality = 0..inf
+	outgoing = {
+		name = <trade_node>
+		path = {
+			## cardinality = 1..inf
+			enum[province_ids]
+		}
+		control = {
+			## cardinality = 1..inf
+			float
+		}
+	}
+	members = {
+		## cardinality = 1..inf
+		enum[province_ids]
 	}
 }
