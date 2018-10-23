@@ -218,4 +218,9 @@ enums = {
 		WOUNDED_SOLDIERS_eventPicture
 
 	}
+	complex_enum[graphical_cultures] = {
+		path = "game/common/graphicalculturetype.txt"
+		enum_name = {
+		}
+	}
 }
