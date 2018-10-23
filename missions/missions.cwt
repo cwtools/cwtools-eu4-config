@@ -3,9 +3,9 @@ types = {
 	type[mission_series] = {
 		path = "game/missions"
 	}
-	## skip_root_key = any
 	type[mission] = {
 		path = "game/missions"
+		skip_root_key = any
 		subtype[fixed] = {
 			icon = scalar
 		}

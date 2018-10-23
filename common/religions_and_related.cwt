@@ -3,10 +3,10 @@ types = {
 	type[religion_group] = {
 		path = "game/common/religions"
 	}
-	## skip_root_key = any
 	type[religion] = {
-		path = "game/common/religions"
-		
+		path = "game/common/religions"	
+		skip_root_key = any
+
 		subtype[not_school] = {
 			icon = scalar
 		}
@@ -106,7 +106,7 @@ religion_group = {
 			### If you don't set this it will expand on_invite_scholar effect which might be super big
 			invite_scholar_modifier_display = <country_modifier>
 			
-			picture = scalar #todo: sprite
+			picture = <sprite>
 			
 			alias_name[modifier] = alias_match_left[modifier]
 		}
@@ -309,7 +309,7 @@ personal_deity = {
 
 religion_propagation = {
 	
-	map_icon = scalar #todo: Sprite
+	map_icon = <sprite>
 
 	subtype[trading_policy] = {
 		###Religion is taken from country using the trading policy. max_distance is not used.

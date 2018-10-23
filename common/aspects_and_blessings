@@ -13,7 +13,7 @@ types = {
 }
 
 aspects_and_blessings = {
-	sprite = scalar #todo: sprite
+	sprite = <sprite>
 	cost = int
 	## cardinality = 0..1
 	modifier = {

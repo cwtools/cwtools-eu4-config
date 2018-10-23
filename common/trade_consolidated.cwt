@@ -69,7 +69,7 @@ trade_company_investment = {
 
 	category = enum[trade_company_investment_types] #todo: verify how these are defined. Could conceivably be scalar
 
-	sprite = scalar #todo: sprite
+	sprite = <sprite>
 	
 	upgrades_to = <trade_company_investment>
 	
@@ -179,5 +179,5 @@ trading_policy = {
 	## cardinality = 0..1
 	show_alert = yes
 	
-	button_gfx = scalar #todo: sprite
+	button_gfx = <sprite>
 }

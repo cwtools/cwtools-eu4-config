@@ -3,9 +3,9 @@ types = {
 	type[culture_group] = {
 		path = "game/common/cultures"
 	}
-	## skip_root_key = any
 	type[culture] = {
 		path = "game/common/cultures"
+		skip_root_key = any
 		
 		subtype[fixed] = {
 			primary = enum[country_tags]

@@ -14,13 +14,13 @@ subject_type = {
 	count = <subject_type>
 
 	## cardinality = 0..1
-	sprite = scalar #todo: sprite
+	sprite = <sprite>
 	## cardinality = 0..1
 	###The one that the overlord sees
-	diplomacy_overlord_sprite = scalar #todo: sprite
+	diplomacy_overlord_sprite = <sprite>
 	## cardinality = 0..1
 	###The one that the subject sees
-	diplomacy_subject_sprite = scalar #todo: sprite
+	diplomacy_subject_sprite = <sprite>
 
 	## cardinality = 0..1
 	##replace_scope = { root = country this = country }

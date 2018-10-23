@@ -6,17 +6,17 @@ types = {
 		path_file = "ambient_object.txt"
 	}
 	type[terrain] = {
-		## skip_root_key = categories
+		skip_root_key = categories
 		path = "game/map"
 		path_file = "terrain.txt"
 	}
 	type[graphical_terrain] = {
-		## skip_root_key = terrain
+		skip_root_key = terrain
 		path = "game/map"
 		path_file = "terrain.txt"
 	}
 	type[tree_terrain] = {
-		## skip_root_key = tree
+		skip_root_key = tree
 		path = "game/map"
 		path_file = "terrain.txt"
 	}

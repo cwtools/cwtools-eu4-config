@@ -5,8 +5,8 @@ types = {
 	}
 	type[government_reform] = {
 		path = "game/common/government_reforms"
+		## type_key_filter = defaults_reform
 		subtype[default] = {
-			## type_key_filter = defaults_reform
 		}
 		subtype[legacy] = {
 			legacy_government = yes

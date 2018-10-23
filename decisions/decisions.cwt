@@ -1,8 +1,8 @@
 
 types = {
-	## skip_root_key = country_decisions
 	type[decision] = {
 		path = "game/decisions"
+		skip_root_key = country_decisions
 	}
 }
 

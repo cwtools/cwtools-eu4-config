@@ -199,8 +199,8 @@ professionalism_modifier = {
 	hidden = yes
 	army_professionalism = float[0.0..1.0]
 
-	marker_sprite = scalar #todo: sprite
-	unit_sprite_start = scalar #todo: sprite
+	marker_sprite = <sprite>
+	unit_sprite_start = <sprite>
 
 	trigger = {
 		always = yes
