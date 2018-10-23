@@ -201,7 +201,7 @@ government_reform = {
 			## cardinality = 0..1
 			can_form_trade_league = bool
 			## cardinality = 0..1
-			trade_city_reform = <trade_reform> #todo
+			trade_city_reform = <government_reform>
 			## cardinality = 0..1
 			has_parliament = bool
 

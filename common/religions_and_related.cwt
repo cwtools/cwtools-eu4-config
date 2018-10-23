@@ -179,7 +179,7 @@ alias[religion:scalar] = {
 	
 	## cardinality = 0..1
 	blessings = {
-		<blessings> #todo - in church aspects
+		<aspects_and_blessings.blessing>
 	}
 
 	## cardinality = 0..1

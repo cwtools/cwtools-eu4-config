@@ -117,7 +117,21 @@ enums = {
 		ai_colonialist
 		ai_balanced
 	}
-	enum[event_pictures] = { #will need a better solution eventually
+	enum[government_groups] = {
+		monarchy
+		republic
+		theocracy
+	}
+	enum[winter_types] = {
+		mild_winter
+		normal_winter
+		severe_winter
+	}
+	enum[religious_leagues] = { #todo: is it theoretically possible to add more?
+		catholic
+		protestant
+	}
+	enum[event_pictures] = { #covered via sprite type, hopefully
 		NOBLE_ESTATE_DEMANDS_eventPicture
 		NOBLE_ESTATE_eventPicture
 		NOBLE_ESTATE_TAKE_OVER_eventPicture

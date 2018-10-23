@@ -59,7 +59,7 @@ enums = {
 
 
 casus_belli = {
-	war_goal = <war_goal> #todo
+	war_goal = <wargoal_type>
 	
 	subtype[triggered] = {
 		## cardinality = 0..1

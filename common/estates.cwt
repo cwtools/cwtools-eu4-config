@@ -3,6 +3,18 @@ types = {
 	type[estate] = {
 		path = "game/common/estates"
 	}
+	## type_key_filter = influence_modifier
+	type[estate_influence_modifier] = {
+		path = "game/common/estates"
+		skip_root_key = any
+		name_field = "desc"
+	}
+	## type_key_filter = loyalty_modifier
+	type[estate_loyalty_modifier] = {
+		path = "game/common/estates"
+		skip_root_key = any
+		name_field = "desc"
+	}
 }
 
 estate = {

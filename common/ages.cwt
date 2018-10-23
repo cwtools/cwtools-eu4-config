@@ -5,6 +5,18 @@ types = {
 	}
 }
 
+enums = {
+	complex_enum[game_age_abilities] = {
+		path = "game/common/ages"
+		scalar = {
+			abilities = {
+				enum_name = {
+				}
+			}
+		}
+	}
+}
+
 
 game_age = {
 	start = int

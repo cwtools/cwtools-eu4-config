@@ -1,6 +1,6 @@
-####Scopes and Logical Operators
+#Scopes and Logical Operators
 
-###Effect scopes
+#Effect scopes
 
 ###Hides the enclosed effects
 alias[effect:hidden_effect] = {
@@ -87,63 +87,54 @@ alias[effect:random] = {
 
 
 
-#TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<province_id>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
 alias[effect:<tag>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<area>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[effect:<region>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[effect:<superregion>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
 alias[effect:<provincegroup>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[effect:<continent>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
 alias[effect:<trade_company>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[effect:<colonial_region>] = {
@@ -795,7 +786,7 @@ alias[effect:unit_owner] = {
 
 
 
-#########Triggers
+#Triggers
 
 #TODO: Verify whether this is actually "nor"
 alias[trigger:NOT] = {
@@ -829,63 +820,54 @@ alias[trigger:AND] = {
 
 
 
-#TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[trigger:<province_id>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
 alias[trigger:<tag>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[trigger:<area>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[trigger:<region>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[trigger:<superregion>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
 alias[trigger:<provincegroup>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[trigger:<continent>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
 alias[trigger:<trade_company>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#TODO
 ## push_scope = province
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[trigger:<colonial_region>] = {

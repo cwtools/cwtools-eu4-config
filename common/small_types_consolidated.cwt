@@ -49,7 +49,7 @@ types = {
 
 
 great_project = {
-	ambient_object = <ambient_object> #todo
+	ambient_object = <ambient_object>
 	province = <province_id>
 	is_canal = yes
 	time = int

@@ -3,7 +3,7 @@
 
 types = {
 	type[sprite] = { #these are links that start with the GFX_ prefix in vanilla
-		name_field = name
+		name_field = "name"
 		path = "game/interface"
 		skip_root_key = spriteTypes
 		severity = warning

@@ -4,7 +4,7 @@ types = {
 		path = "game/common/leader_personalities"
 	}
 	type[ruler_personality] = {
-		path = "game/common/leader_personalities"
+		path = "game/common/ruler_personalities"
 	}
 }
 

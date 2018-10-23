@@ -34,7 +34,7 @@ event = {
 		title = none
 		desc = localisation
 		desc = none
-		picture = enum[event_pictures] #todo: this is a terrible temporary fix
+		picture = <sprite>
 		picture = none
 	}
 	
@@ -49,12 +49,12 @@ event = {
 			}
 			desc = localisation
 		}
-		picture = enum[event_pictures] #todo: this is a terrible temporary fix
+		picture = <sprite>
 		picture = {
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-			picture = enum[event_pictures] #todo: this is a terrible temporary fix
+			picture = <sprite>
 		}
 		
 	}
