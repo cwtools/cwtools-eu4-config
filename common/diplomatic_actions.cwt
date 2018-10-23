@@ -1,0 +1,142 @@
+
+types = {
+	type[diplomatic_action] = {
+		path = "game/common/diplomatic_actions"
+	}
+	type[new_diplomatic_action] = {
+		path = "game/common/new_diplomatic_actions"
+		
+		subtype[static_actions] = {
+			## type_filter_key = static_actions
+		}
+	}
+}
+
+
+diplomatic_action = {
+	## cardinality = 0..inf
+	###A diplomatic action can have any number of condition blocks, each with its own tooltip, potential and allow section.
+	condition = {
+		tooltip = localisation
+
+		## replace_scope = { this = country root = country from = country }
+		###Determines if the trigger is applicable or not. ROOT = actor, FROM = target
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## replace_scope = { this = country root = country from = country }
+		###Determines if the action is valid or not. ROOT = actor, FROM = target
+		allow = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+}
+
+
+#with only two examples, I don't have much to base this on - need more info! -Caligula
+new_diplomatic_action = {
+	subtype[static_actions] = {
+		## cardinality = 1..inf
+		scalar = {
+			alert_index = int
+			alert_tooltip = localisation #possibly scalar
+		}
+	}
+	subtype[!static_actions] = {
+		category = influence
+
+		###Can the other side decline?
+		require_acceptance = bool
+		
+		## cardinality = 0..1
+		alert_index = int
+		## cardinality = 0..1
+		alert_tooltip = localisation
+		
+		## replace_scope = { this = country root = country from = country }
+		is_visible = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		## replace_scope = { this = country root = country from = country }
+		is_allowed = {
+			reverse_has_opinion_modifier = {
+				modifier = insulted
+				who = FROM
+			}
+		}
+		## replace_scope = { this = country root = country from = country }
+		on_accept = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country from = country }
+		on_accept = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		
+		
+		## cardinality = 0..1
+		###This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
+		ai_acceptance = {
+			## cardinality = 1..inf
+			## replace_scope = { this = country root = country from = country }
+			add_entry = {
+				name = localisation
+				limit = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				
+				
+				## cardinality = 0..inf
+				export_to_variable = {
+					which = ai_value
+					value = enum[export_to_variable_data]
+					## cardinality = 0..1
+					who = scope[country]
+					## cardinality = 0..1
+					with = scope[country]
+				}
+				
+				## cardinality = 0..inf
+				multiply_variable = {
+					which = ai_value
+					value = float
+				}
+				
+				## cardinality = 0..inf
+				subtract_variable = {
+					which = ai_value
+					value = float
+				}
+
+				## cardinality = 0..inf
+				change_variable = {
+					which = ai_value
+					value = float
+				}
+				
+				## cardinality = 0..inf
+				check_variable = {
+					cardinality = 2..2
+					which = scalar #todo: variable
+				}
+				
+				## cardinality = 0..inf
+				is_variable_equal = {
+					cardinality = 2..2
+					which = scalar #todo: variable
+				}
+			}
+		}
+		
+		## replace_scope = { this = country root = country from = country }
+		ai_will_do = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
+}
