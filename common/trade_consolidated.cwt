@@ -12,6 +12,9 @@ types = {
 	type[trade_node] = {
 		path = "game/common/tradenodes"
 	}
+	type[trading_policy] = {
+		path = "game/common/trading_policies"
+	}
 }
 
 trade_good = {
@@ -134,4 +137,47 @@ trade_node = {
 		## cardinality = 1..inf
 		enum[province_ids]
 	}
+}
+
+
+
+trading_policy = {
+	## replace_scope = { this = country root = country from = province }
+	can_select = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## replace_scope = { this = country root = country from = province }
+	can_maintain = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+	node_province_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	###Also applied versus countries with the node as their home node
+	countries_with_merchant_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	trade_power = {
+		###-1 = limitless
+		duration = int
+		power_modifier = float
+		key = localisation
+	}
+	
+	## cardinality = 0..1
+	center_of_reformation = bool
+
+	## cardinality = 0..1
+	show_alert = yes
+	
+	button_gfx = scalar #todo: sprite
 }
