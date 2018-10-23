@@ -10,7 +10,11 @@ types = {
 			free = yes
 		}
 	}
+	type[native_advancement_group] = {
+		path = "game/common/native_advancements"
+	}
 }
+
 
 enums = {
 	complex_enum[ideas] = {
@@ -20,9 +24,17 @@ enums = {
 			}
 		}
 	}
+	complex_enum[native_advancements] = {
+		path = "game/common/native_advancements"
+		scalar = {
+			enum_name = {
+			}
+		}
+	}
 }
 
-idea = {
+
+idea_group = {
 	subtype[selectable] = {
 		ai_will_do = {
 			factor = float
@@ -53,5 +65,21 @@ idea = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		free = yes
+	}
+}
+
+
+#todo: not sure if these are referred to anywhere. Maybe they count as ideas.
+native_advancement_group = {
+	category = enum[power_types]
+	
+	## cardinality = 5..5
+	localisation = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	###ai_will do does not actually determine weighting, but AI will not pick an idea with ai_will_do = 0
+	ai_will_do = {
+		factor = int[0..1]
 	}
 }
