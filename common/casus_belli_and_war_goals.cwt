@@ -38,22 +38,17 @@ enums = {
 		po_enforce_rebel_demands
 	}
 	enum[wargoal_types] = {
-		po_demand_provinces
-		po_revoke_cores
-		po_release_vassals
-		po_release_annexed
-		po_change_religion
-		po_form_personal_union
-		po_gold
-		po_become_vassal
-		po_concede_defeat
-		po_annul_treaties
-		po_change_government
-		po_revoke_elector
-		po_trade_power
-		po_steer_trade
-		po_humiliate
-		po_enforce_rebel_demands
+		take_colony
+		take_core
+		take_border
+		take_province
+		take_capital
+		defend_capital
+		defend_country
+		naval_superiority
+		superiority
+		take_region
+		blockade_ports
 	}
 }
 
@@ -81,7 +76,9 @@ casus_belli = {
 	###The CB will be triggered via code e.g. in event effects.
 	is_triggered_only = yes
 
+	## cardinality = 0..1
 	exclusive = yes
+	## cardinality = 0..1
 	independence = yes
 	## cardinality = 0..1
 	attacker_disabled_po = {

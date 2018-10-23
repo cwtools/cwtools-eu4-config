@@ -23,10 +23,12 @@ trade_center = {
     province_modifiers = {
         alias_name[modifier] = alias_match_left[modifier]
     }
+	## cardinality = 0..1
 	## replace_scope = { this = province root = province }
     state_modifiers = {
         alias_name[modifier] = alias_match_left[modifier]
     }
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
     global_modifiers = {
         alias_name[modifier] = alias_match_left[modifier]

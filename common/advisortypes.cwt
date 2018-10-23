@@ -28,7 +28,7 @@ advisor_type = {
 	}
 	
 	ai_will_do = {
-		factor = int
+		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }

@@ -16,11 +16,15 @@ building = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	
+	## cardinality = 0..1
 	## replace_scope = { root = province this = province from = owner }
 	###An and trigger that needs to be fullfilled to build and keep the building
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+
+	## cardinality = 0..1
+	government_specific = yes
 	
 	## cardinality = 0..1
 	one_per_country = yes
@@ -44,6 +48,7 @@ building = {
 		## cardinality = 1..inf
 		<trade_good>
 	}
+	## cardinality = 0..1
 	###Show as a sprite on the map
 	onmap = yes
 	

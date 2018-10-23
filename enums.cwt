@@ -117,11 +117,6 @@ enums = {
 		ai_colonialist
 		ai_balanced
 	}
-	enum[government_groups] = {
-		monarchy
-		republic
-		theocracy
-	}
 	enum[winter_types] = {
 		mild_winter
 		normal_winter

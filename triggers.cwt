@@ -664,19 +664,11 @@ alias[trigger:gold_income] = float
 ## scope = Country	
 ###Returns true if in the country the proportion of income from gold is at least X.	
 alias[trigger:gold_income_percentage] = float[0.0..1.0]	
-	
+
 ## scope = Country	
 ###Returns true if the country has government type X.	
-alias[trigger:government] = enum[government_groups]
-	
-## scope = Country	
-###Returns true if the country has government type X.	
-alias[trigger:government] = <government>	
-	
-## scope = Country	
-###Returns true if the country has government type X.	
-alias[trigger:government] = tribal	
-	
+alias[trigger:government] = <government.normal>	
+
 ## scope = Country	
 ###Returns true if the country has a government rank of X or higher.	
 alias[trigger:government_rank] = int	
@@ -3741,4 +3733,11 @@ alias[trigger:years_of_income] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the country's treasury contains ducats of at least X times their yearly income, or if the country's treasury contains ducats of at least the yearly income of the specified country.	
-alias[trigger:years_of_income] = scope[country]	
+alias[trigger:years_of_income] = scope[country]
+
+
+#stuff the wiki lacks
+
+## scope = country
+###Returns true if the country has the specified government reform.
+alias[trigger:has_reform] = <government_reform.new> #todo: how about legacy reforms?

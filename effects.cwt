@@ -267,7 +267,7 @@ alias[effect:change_statists_vs_orangists] = int
 	
 ## scope = country	
 ###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt.	
-alias[effect:change_government] = <government>	
+alias[effect:change_government] = <government.normal>	
 	
 ## scope = country	
 ###Changes the government rank of the current scope. Default range is 1 to 3.	
@@ -2350,3 +2350,14 @@ alias[effect:remove_trade_modifier] = {
 	who = scope[country]
 	key = localisation
 }	
+
+
+
+
+
+#Stuff missing from the wiki
+
+## scope = country	
+###Sets legacy (pre-Dharma) govt for the current scope.	
+alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn't work, can use the key in governments instead
+	
