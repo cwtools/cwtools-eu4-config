@@ -15,7 +15,7 @@ institution = {
 	## cardinality = 0..1
 	historical_start_date = scalar #todo: date
 	## cardinality = 0..1
-	historical_start_province = enum[province_ids]
+	historical_start_province = <province_id>
 
 	## replace_scope = { this = province root = province }
 	history = {

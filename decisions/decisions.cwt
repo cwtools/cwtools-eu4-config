@@ -1,0 +1,43 @@
+
+types = {
+	## skip_root_key = country_decisions
+	type[decision] = {
+		path = "game/decisions"
+	}
+}
+
+
+decision = {
+	## cardinality = 0..1
+	major = yes
+	
+	## replace_scope = { root = country this = country }
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = country this = province }
+	provinces_to_highlight = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	allow = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	#Not sure other settings are used or do anything
+	ai_will_do = {
+		factor = int[0..1]
+	}
+
+	## cardinality = 0..1
+	ai_importance = int
+
+	## cardinality = 0..inf
+	do_not_integrate = enum[country_tags]
+}
+	

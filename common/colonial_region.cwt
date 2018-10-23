@@ -14,7 +14,7 @@ colonial_region = {
 	## cardinality = 0..1
 	provinces = {
 		## cardinality = 1..inf
-		enum[province_ids]
+		<province_id>
 	}
 
 	## cardinality = 0..inf

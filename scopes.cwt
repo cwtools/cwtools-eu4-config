@@ -68,21 +68,21 @@ alias[effect:random] = {
 }
 
 
-alias[effect:root] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+#alias[effect:root] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-alias[effect:prev] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+#alias[effect:prev] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-alias[effect:from] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+#alias[effect:from] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-alias[effect:this] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+#alias[effect:this] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
 
 
@@ -90,7 +90,7 @@ alias[effect:this] = {
 #TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[effect:enum[province_ids]] = {
+alias[effect:<province_id>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -810,21 +810,21 @@ alias[trigger:AND] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-alias[trigger:root] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+#alias[trigger:root] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
-alias[trigger:prev] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+#alias[trigger:prev] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
-alias[trigger:from] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+#alias[trigger:from] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
-alias[trigger:this] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+#alias[trigger:this] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
 
 
@@ -832,7 +832,7 @@ alias[trigger:this] = {
 #TODO
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[trigger:enum[province_ids]] = {
+alias[trigger:<province_id>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 

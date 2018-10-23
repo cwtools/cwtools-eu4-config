@@ -15,7 +15,7 @@ types = {
 
 
 culture_group = {
-	graphical_culture = <graphical_culture> #todo
+	graphical_culture = enum[graphical_cultures] #todo
 	
 	## cardinality = 0..1
 	male_names = {

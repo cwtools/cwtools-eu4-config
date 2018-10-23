@@ -39,7 +39,7 @@ alias[trigger:accepted_culture] = scope[province]
 	
 ##country scope	
 ###Returns true if X is the current mission of the country.	
-alias[trigger:active_major_mission] = <mission> #todo	
+alias[trigger:active_major_mission] = <mission.fixed> #todo	
 	
 ##country scope	
 ###Returns true if the country has a ruler with an administrative skill of at least X.	
@@ -252,7 +252,7 @@ alias[trigger:can_spawn_rebels] = <rebel_type> #todo
 	
 ##country scope	
 ###Returns true if the country's capital is the province with the ID X.	
-alias[trigger:capital] = enum[province_ids] #todo	
+alias[trigger:capital] = <province_id> #todo	
 	
 ##country scope	
 ###Returns true if distance between the capitals of the countries is at least X.	
@@ -264,7 +264,7 @@ alias[trigger:capital_distance] = {
 	
 ##region scope	
 ###Returns true if trade node capital is X.	
-alias[trigger:capital_trade_node] = enum[province_ids]	
+alias[trigger:capital_trade_node] = <province_id>	
 	
 ##country scope	
 ###Returns true if the ratio of the cavalry fraction to the army size of the country is at least X.	
@@ -391,7 +391,7 @@ alias[trigger:controlled_by] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the province with id X is controlled by the country.	
-alias[trigger:controls] = enum[province_ids]	
+alias[trigger:controls] = <province_id>	
 	
 ## scope = Country	
 ###Returns true if the country has a core on any province owned by country X.	
@@ -885,7 +885,7 @@ alias[trigger:has_disaster_progress] = {
 	
 ## scope = Country	
 ###Returns true if the country has discovered the province with the ID X.	
-alias[trigger:has_discovered] = enum[province_ids]	
+alias[trigger:has_discovered] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the country X has discovered the province.	
@@ -1590,7 +1590,7 @@ alias[trigger:is_city] = bool
 	
 ## scope = Country	
 ###Returns true if the country has a claim on the province with the ID X.	
-alias[trigger:is_claim] = enum[province_ids]	
+alias[trigger:is_claim] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the specified country has a claim on the province.	
@@ -1630,7 +1630,7 @@ alias[trigger:is_colony] = bool
 	
 ## scope = Country	
 ###Returns true if the country has a core on the province with the ID X.	
-alias[trigger:is_core] = enum[province_ids]	
+alias[trigger:is_core] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the country X has a core on the province.	
@@ -1806,7 +1806,7 @@ alias[trigger:is_in_war] = {
 	start_date = scalar #todo: date
 	
 	## cardinality = 0..1
-	war_goal_province = enum[province_ids]
+	war_goal_province = <province_id>
 	
 	# defenders, attackers, participants (not sure what these are meant to look like)
 }	
@@ -1993,7 +1993,7 @@ alias[trigger:is_state] = bool
 	
 ## scope = Country	
 ###Returns true if the country has a state core on the province with the ID X.	
-alias[trigger:is_state_core] = enum[province_ids]	
+alias[trigger:is_state_core] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the specified country has a claim on the province.	
@@ -2033,7 +2033,7 @@ alias[trigger:is_subject_of_type] = <subject_type>
 	
 ## scope = Country	
 ###Returns true if the country has a territorial core on the province with the ID X.	
-alias[trigger:is_territorial_core] = enum[province_ids]	
+alias[trigger:is_territorial_core] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the country X has a territorial core on the province.	
@@ -2152,7 +2152,7 @@ alias[trigger:land_morale] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the last mission of the country was the specified mission.	
-alias[trigger:last_mission] = <mission>	
+alias[trigger:last_mission] = <mission.fixed>	
 	
 ## scope = Country	
 ###Returns true if the country has at least X legitimacy, or if the country has at least as much legitimacy as the specified country.	
@@ -2943,15 +2943,15 @@ alias[trigger:owned_by] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the country owns the specified province.	
-alias[trigger:owns] = enum[province_ids]	
+alias[trigger:owns] = <province_id>	
 	
 ## scope = Country	
 ###Returns true if the country owns and has a core on the specified province.	
-alias[trigger:owns_core_province] = enum[province_ids]	
+alias[trigger:owns_core_province] = <province_id>	
 	
 ## scope = Country	
 ###Returns true if the country or a subject that is not categorized as "sovereign" (e.g. tributary states are excluded) owns the specified province.	
-alias[trigger:owns_or_non_sovereign_subject_of] = enum[province_ids]	
+alias[trigger:owns_or_non_sovereign_subject_of] = <province_id>	
 	
 ## scope = Country	
 ###Returns true if the country or a subject that is not categorized as "sovereign" (e.g. tributary states are excluded) owns the specified province.	
@@ -3078,14 +3078,14 @@ alias[trigger:production_leader] = {
 ## scope = Province	
 ###Returns true if the distance between specified provinces is at least X.	
 alias[trigger:province_distance] = {	
-	who = enum[province_ids]
+	who = <province_id>
 	distance = int
 }	
 	
 	
 ## scope = Province	
 ###Returns true if the province has the ID X.	
-alias[trigger:province_id] = enum[province_ids]	
+alias[trigger:province_id] = <province_id>	
 	
 ## scope = Province	
 ###Returns true if the province belongs to the specified province group.	
@@ -3284,7 +3284,7 @@ alias[trigger:same_continent] = scope[province]
 	
 ## scope = Province	
 ###Returns true if specified provinces are on the same continent.	
-alias[trigger:same_continent] = enum[province_ids]	
+alias[trigger:same_continent] = <province_id>	
 	
 ## scope = Country	
 ###Returns true the secondary religion of the country is X.	

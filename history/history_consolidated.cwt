@@ -1,0 +1,29 @@
+
+types = {
+	type[advisor_id] = {
+		path = "game/history/advisors"
+		name_field = "advisor_id"
+	}
+#	type[country_history] = { #the rest are all impractical due to file layout (type = file name and you must imagine a { } around everything)
+#		path = "game/history/countries"
+#		name_field = "advisor_id"
+#	}
+}
+
+
+
+
+advisor_id = {
+	advisor_id = int
+	name = scalar #todo: name
+	location = <province_id>
+	discount = bool
+	skill = int[1..3]
+	type = <advisor_type>
+	## cardinality = 0..1
+	culture = <culture.fixed>
+	## cardinality = 0..1
+	religion = <religion.not_school>
+	date = scalar #todo: date
+	death_date = scalar #todo: date
+}

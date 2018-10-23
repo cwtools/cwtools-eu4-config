@@ -136,7 +136,7 @@ alias[effect:switch_tag] = scope[country]
 	
 ## scope = country	
 ###Changes the current scope's graphical culture. Graphical culture determines the unit models, advisor portraits, etc that a country uses. Graphical cultures are found in /Europa Universalis IV/common/graphicalculturetype.txt.	
-alias[effect:change_graphical_culture] = <graphical_culture> #todo	
+alias[effect:change_graphical_culture] = enum[graphical_cultures] #todo	
 	
 ## scope = country	
 ###Adds Administrative power to the current scope.	

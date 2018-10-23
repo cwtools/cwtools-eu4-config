@@ -39,12 +39,18 @@ types = {
 	type[edict] = {
 		path = "game/common/state_edicts"
 	}
+	type[power_projection] = {
+		path = "game/common/powerprojection"
+	}
+	type[client_state] = {
+		path = "game/common/client_states"
+	}
 }
 
 
 great_project = {
 	ambient_object = <ambient_object> #todo
-	province = enum[province_ids]
+	province = <province_id>
 	is_canal = yes
 	time = int
 	
@@ -112,7 +118,7 @@ insult = {
 
 
 natives = {
-	graphical_culture = <graphical_culture>
+	graphical_culture = enum[graphical_cultures]
 	color = {
 		## cardinality = 3..3
 		int[0..255]
@@ -123,7 +129,7 @@ natives = {
 	
 	provinces = {
 		## cardinality = 1..inf
-		enum[province_ids]
+		<province_id>
 	}
 }
 
@@ -242,3 +248,22 @@ edict = {
 	}
 }
 
+
+power_projection = {
+	alias_name[modifier] = alias_match_left[modifier]
+}
+
+
+
+client_state = {
+	region = <region>
+
+	## cardinality = 1..inf	
+	name = {
+		name = localisation
+		## replace_scope = { this = province from = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
+}
