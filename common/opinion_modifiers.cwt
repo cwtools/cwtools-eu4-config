@@ -26,6 +26,9 @@ opinion_modifier = {
 	}
 	## cardinality = 0..1
 	yearly_decay = int
+
+	## cardinality = 0..1
+	years = int
 }
 
 

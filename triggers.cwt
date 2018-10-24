@@ -628,7 +628,7 @@ alias[trigger:estate_influence] = {
 ###Returns true if the estate X in the country has at least Y loyalty.
 alias[trigger:estate_loyalty] = {
 	estate = <estate>
-	influence = int[0..100]
+	loyalty = int[0..100]
 }
 
 ## scope = Country
@@ -1170,6 +1170,8 @@ alias[trigger:has_opinion_modifier] = {
 	who = scope[country]
 	who = enum[country_tags]
 	modifier = <opinion_modifier>
+	## cardinality = 0..1
+	value = int
 }	
 	
 ## scope = Province	
@@ -2441,7 +2443,7 @@ alias[trigger:navy_size] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the ratio of the total navy size of the country to its naval force limit is at least X.	
-alias[trigger:navy_size_percentage] = int	
+alias[trigger:navy_size_percentage] = float	
 	
 ## scope = Country	
 ###Returns true if the country's navy size is at least the size of X times the navy size of the specified country.	
@@ -3906,3 +3908,6 @@ alias[trigger:province_has_center_of_trade_of_level] = int[1..3]
 
 ## scope = country
 alias[trigger:num_of_centers_of_trade] = int
+
+## scope = country
+alias[trigger:is_in_important_war] = bool

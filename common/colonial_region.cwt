@@ -12,6 +12,33 @@ colonial_region = {
 	}
 
 	## cardinality = 0..1
+	tax_income = int
+	## cardinality = 0..1
+	native_size = int
+	## cardinality = 0..1
+	native_ferocity = int
+	## cardinality = 0..1
+	native_hostileness = int
+	
+	## cardinality = 0..1
+	trade_goods = {
+		## cardinality = 1..inf
+		<trade_good> = int
+	}
+	
+	## cardinality = 0..1
+	culture = {
+		## cardinality = 1..inf
+		<culture.fixed> = int
+	}
+	
+	## cardinality = 0..1
+	religion = {
+		## cardinality = 1..inf
+		<religion.not_school> = int
+	}
+
+	## cardinality = 0..1
 	provinces = {
 		## cardinality = 1..inf
 		<province_id>

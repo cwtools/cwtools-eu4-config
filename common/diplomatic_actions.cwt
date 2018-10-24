@@ -17,6 +17,7 @@ diplomatic_action = {
 	## cardinality = 0..inf
 	###A diplomatic action can have any number of condition blocks, each with its own tooltip, potential and allow section.
 	condition = {
+		## cardinality = 0..1
 		tooltip = localisation
 
 		## replace_scope = { this = country root = country from = country }
@@ -65,10 +66,7 @@ new_diplomatic_action = {
 		}
 		## replace_scope = { this = country root = country from = country }
 		is_allowed = {
-			reverse_has_opinion_modifier = {
-				modifier = insulted
-				who = FROM
-			}
+			alias_name[trigger] = alias_match_left[trigger]
 		}
 		## replace_scope = { this = country root = country from = country }
 		on_accept = {

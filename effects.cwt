@@ -2555,3 +2555,25 @@ alias[effect:add_to_trade_company] = {
 	investor = scope[country]
 	investor = enum[country_tags]
 }
+
+
+## scope = country
+alias[effect:add_mutual_opinion_modifier_effect] = {
+	scope_country = scope[country]
+	scope_country = enum[country_tags]
+	opinion_modifier = <opinion_modifier>
+}
+
+
+## scope = country
+alias[effect:declare_war_with_cb] = {
+	who = scope[country]
+	who = enum[country_tags]
+	casus_belli = <casus_belli>
+}
+
+## scope = country
+alias[effect:free_vassal] = scope[country]
+
+## scope = country
+alias[effect:free_vassal] = enum[country_tags]
