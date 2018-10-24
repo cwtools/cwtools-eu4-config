@@ -65,6 +65,14 @@ event = {
 	## cardinality = 0..1
 	is_triggered_only = bool
 
+	subtype[triggered] = { #experiment
+		## severity = information
+		## cardinality = 0..0
+		mean_time_to_happen = {
+			days = 1
+		}
+	}
+
 	## cardinality = 0..1
 	fire_only_once = bool
 
@@ -83,6 +91,9 @@ event = {
 			## cardinality = 0..100
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
+		
+		## cardinality = 0..1
+		is_mtth_scaled_to_size = 1 #todo: what does this do, and can one have other options here?
 	}
 
 	## cardinality = 0..1
