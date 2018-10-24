@@ -1,79 +1,79 @@
 
 alias[trigger:<scripted_trigger>] = bool
 
-##country scope	
+## scope = country
 ###Returns true if the country has hired an advisor of the specified type which has at least level X.	
 alias[trigger:<advisor_type>] = int[1..3]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X buildings from the specified building type.	
 alias[trigger:<building>] = int	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X ideas from the specified idea group.	
 alias[trigger:<idea_group>] = int[1..8]	
 	
-##country scope	
+## scope = country
 ###Returns true if the support for the specified institution in the province is at least X.	
 alias[trigger:<institution>] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.	
 alias[trigger:<religion.not_school>] = int	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X provinces producing the specified trade good.	
 alias[trigger:<trade_good>] = int	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X absolutism.	
 alias[trigger:absolutism] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country accepts the specified culture.	
 alias[trigger:accepted_culture] = <culture.fixed> #todo	
 	
-##country scope	
+## scope = country
 ###Returns true if the country accepts the specified culture.	
 alias[trigger:accepted_culture] = scope[province]	
 	
-##country scope	
+## scope = country
 ###Returns true if X is the current mission of the country.	
 alias[trigger:active_major_mission] = <mission.fixed> #todo	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has a ruler with an administrative skill of at least X.	
 alias[trigger:adm] = int[0..6]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X administrative power, or at least as much as the specified country.	
 alias[trigger:adm_power] = int	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X administrative power, or at least as much as the specified country.	
 alias[trigger:adm_power] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X administrative power, or at least as much as the specified country.	
 alias[trigger:adm_power] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an administrative technology of at least X.	
 alias[trigger:adm_tech] = int[0..200]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an advisor of the specified type.	
 alias[trigger:advisor] = <advisor_type>	
 	
-##country scope	
+## scope = country
 ###Returns true if the advisor X exists.	
 alias[trigger:advisor_exists] = <advisor_id>	
 	
-##country scope	
+## scope = country
 ###Returns true if the country is controlled by the AI.	
 alias[trigger:ai] = bool	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has the specified attitude towards country X.	
 alias[trigger:ai_attitude] = {	
 	who = scope[country]
@@ -81,43 +81,43 @@ alias[trigger:ai_attitude] = {
 	attitude = enum[attitudes]
 }	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an alliance with X.	
 alias[trigger:alliance_with] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an alliance with X.	
 alias[trigger:alliance_with] = enum[country_tags]	
 	
-##anywhere	
+## scope = any	
 ###Returns true if females can become emperor.	
 alias[trigger:allows_female_emperor] = bool	
 	
-##anywhere	
+## scope = any	
 ###Returns true under all circumstances if set to yes, returns false under all circumstances if set to no.	
 alias[trigger:always] = bool	
 	
-##province scope	
+## scope = province
 ###Returns true if the province is part of the area X.	
 alias[trigger:area] = <area>	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army of at least X k soldiers, or at least as many soldiers as the specified country.	
 alias[trigger:army_size] = int	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army of at least X k soldiers, or at least as many soldiers as the specified country.	
 alias[trigger:army_size] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army of at least X k soldiers, or at least as many soldiers as the specified country.	
 alias[trigger:army_size] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the total army size of the country is at least X% of its land force limit.	
 alias[trigger:army_size_percentage] = float	
 	
-##country scope	
+## scope = country
 ###Returns true if the country's army size is at least the size of X times the army size of the specified country.	
 alias[trigger:army_strength] = {	
 	who = scope[country]
@@ -125,87 +125,87 @@ alias[trigger:army_strength] = {
 	value = float
 }	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army tradition of at least X, or at least as high as the specified country.	
 alias[trigger:army_tradition] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army tradition of at least X, or at least as high as the specified country.	
 alias[trigger:army_tradition] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an army tradition of at least X, or at least as high as the specified country.	
 alias[trigger:army_tradition] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the ratio of the artillery fraction to the army size of the country is at least X.	
 alias[trigger:artillery_fraction] = float[0.0..1.0]	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X artillery units in the province, or if there are artillery units from the specified country in the province.	
 alias[trigger:artillery_in_province] = int	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X artillery units in the province, or if there are artillery units from the specified country in the province.	
 alias[trigger:artillery_in_province] = scope[country]	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X artillery units in the province, or if there are artillery units from the specified country in the province.	
 alias[trigger:artillery_in_province] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country is at war with any country of a different religion.	
 alias[trigger:at_war_with_religious_enemy] = bool	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X authority, or if the country has at least as much authority as the specified country.	
 alias[trigger:authority] = int[0..100] #todo: What is authority? If it is imperial authority, it can be 0-100, but how can it be more for one country than for another?	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X authority, or if the country has at least as much authority as the specified country.	
 alias[trigger:authority] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has at least X authority, or if the country has at least as much authority as the specified country.	
 alias[trigger:authority] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an average autonomy in its provinces of at least X.	
 alias[trigger:average_autonomy] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###TODO: Needs description	
 alias[trigger:average_autonomy_above_min] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###TODO: Needs description	
 alias[trigger:average_effective_unrest] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an average autonomy in its provinces excluding overseas provinces is at least X.	
 alias[trigger:average_home_autonomy] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country has an average unrest in its provinces of at least X.	
 alias[trigger:average_unrest] = int[0..100]	
 	
-##province scope	
+## scope = province
 ###Returns true if the base manpower of the province is at least X.	
 alias[trigger:base_manpower] = int[0..100]	
 	
-##province scope	
+## scope = province
 ###Returns true if the base production of the province is at least X.	
 alias[trigger:base_production] = int[0..100]	
 	
-##province scope	
+## scope = province
 ###Returns true if the base tax of the province is at least X.	
 alias[trigger:base_tax] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if the blockade penalty of the country is at least X%.	
 alias[trigger:blockade] = int[0..100]	
 	
-##country scope	
+## scope = country
 ###Returns true if distance between the borders of the countries is at least X.	
 alias[trigger:border_distance] = {	
 	who = scope[country]
@@ -213,46 +213,46 @@ alias[trigger:border_distance] = {
 	distance = int
 }	
 	
-##anywhere	
+## scope = any	
 ###Returns true if at least amount number of targets within the specified scope match the specified conditions. Use "all_x" scopes.
 alias[trigger:calc_true_if] = {
 	alias_name[trigger] = alias_match_left[trigger]
 	amount = int
 }	
 	
-##country scope	
+## scope = country
 ###Returns true if country meets the conditions defined in the subject type's is_potential_overlord section.	
 alias[trigger:can_be_overlord] = <subject_type>	
 	
-##province scope	
+## scope = province
 ###Returns true if the specified building can be built in the province.	
 alias[trigger:can_build] = <building>	
 	
-##country scope	
-###Returns true if the country can create a vassal. Warning: Interprets anything after ‘=’ as “yes”. Note: Works only for independent countries.	
+## scope = country
+###Returns true if the country can create a vassal. Warning: Interprets anything after ‘=' as “yes”. Note: Works only for independent countries.	
 alias[trigger:can_create_vassals] = yes #deliberate	
 	
-##country scope	
-###Returns true if the country’s heir can potentially be the consort’s child.	
+## scope = country
+###Returns true if the country's heir can potentially be the consort's child.	
 alias[trigger:can_heir_be_child_of_consort] = bool	
 	
-##country scope	
+## scope = country
 ###Returns true if the country can justify a trade conflict against country X.	
 alias[trigger:can_justify_trade_conflict] = scope[country]	
 	
-##country scope	
+## scope = country
 ###Returns true if the country can justify a trade conflict against country X.	
 alias[trigger:can_justify_trade_conflict] = enum[country_tags]	
 	
-##province scope	
+## scope = province
 ###Returns true if the specified rebel faction is a valid rebel faction of the province.	
 alias[trigger:can_spawn_rebels] = <rebel_type>	
 	
-##country scope	
+## scope = country
 ###Returns true if the country's capital is the province with the ID X.	
 alias[trigger:capital] = <province_id>	
 	
-##country scope	
+## scope = country
 ###Returns true if distance between the capitals of the countries is at least X.	
 alias[trigger:capital_distance] = {	
 	who = scope[country]
@@ -264,23 +264,23 @@ alias[trigger:capital_distance] = {
 ###Returns true if trade node capital is X.	
 alias[trigger:capital_trade_node] = <province_id>	
 	
-##country scope	
+## scope = country
 ###Returns true if the ratio of the cavalry fraction to the army size of the country is at least X.	
 alias[trigger:cavalry_fraction] = float[0.0..1.0]	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.	
 alias[trigger:cavalry_in_province] = int	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.	
 alias[trigger:cavalry_in_province] = scope[country]	
 	
-##province scope	
+## scope = province
 ###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.	
 alias[trigger:cavalry_in_province] = enum[country_tags]	
 	
-##country scope	
+## scope = country
 ###Returns true if the specified variable is at least X.	
 alias[trigger:check_variable] = {	
 	which = scalar
@@ -345,12 +345,20 @@ alias[trigger:consort_culture] = <culture.fixed>
 	
 ## scope = Country	
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.	
-alias[trigger:consort_culture] = scope[country] #todo: I assume province works here (and elsewhere) too	
+alias[trigger:consort_culture] = scope[country]
+
+## scope = Country	
+###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:consort_culture] = enum[country_tags]	
 	
 ## scope = Country	
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.	
-alias[trigger:consort_culture] = <country_type>	
-	
+alias[trigger:consort_culture] = scope[province]
+
+## scope = Country	
+###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:consort_culture] = <province_id>
+
 ## scope = Country	
 ###Returns true if the country's consort has the specified personality.	
 alias[trigger:consort_has_personality] = <ruler_personality>	
@@ -365,12 +373,20 @@ alias[trigger:consort_religion] = <religion.not_school>
 	
 ## scope = Country	
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.	
-alias[trigger:consort_religion] = scope[country] #todo: I assume province works here (and elsewhere) too	
+alias[trigger:consort_religion] = scope[country]	
 	
 ## scope = Country	
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.	
-alias[trigger:consort_religion] = <country_type>	
+alias[trigger:consort_religion] = enum[country_tags]	
+
+## scope = Country	
+###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:consort_religion] = scope[province]	
 	
+## scope = Country	
+###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:consort_religion] = <province_id>	
+
 ## scope = Province	
 ###Returns true if the construction progress is at least X%.	
 alias[trigger:construction_progress] = float[0.0..1.0]	
@@ -571,11 +587,19 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	religion = enum[country_tags]
 	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
+	## cardinality = 0..1
 	culture = <culture.fixed>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
 	culture = enum[country_tags]
+	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
+	culture = <province_id>
 	## cardinality = 0..1
 	type = <advisor_type>
 	## cardinality = 0..1
@@ -1253,7 +1277,7 @@ alias[trigger:has_spawned_supported_rebels] = enum[country_tags]
 ###Returns true if the country X has a spy network of at least the specified size in the country.	
 alias[trigger:has_spy_network_from] = {	
 	who = scope[country]
-	who = <country_type>
+	who = enum[country_tags]
 	value = int
 }	
 	
@@ -1261,7 +1285,7 @@ alias[trigger:has_spy_network_from] = {
 ###Returns true if the country has a spy network of at least the specified size in country X.	
 alias[trigger:has_spy_network_in] = {	
 	who = scope[country]
-	who = <country_type>
+	who = enum[country_tags]
 	value = int
 }	
 	
@@ -1372,7 +1396,15 @@ alias[trigger:heir_culture] = scope[country]
 ## scope = Country	
 ###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.	
 alias[trigger:heir_culture] = enum[country_tags]	
+
+## scope = Country	
+###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:heir_culture] = scope[province]	
 	
+## scope = Country	
+###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:heir_culture] = <province_id>	
+
 ## scope = Country	
 ###Returns true if the country's heir and consort have the same dynasty.	
 alias[trigger:heir_has_consort_dynasty] = bool	
@@ -1408,7 +1440,15 @@ alias[trigger:heir_religion] = scope[country]
 ## scope = Country	
 ###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.	
 alias[trigger:heir_religion] = enum[country_tags]	
+
+## scope = Country	
+###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:heir_religion] = scope[province]	
 	
+## scope = Country	
+###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:heir_religion] = <province_id>	
+
 ## scope = anywhere	
 ###Hides the enclosed conditions so that they are still required but cannot be seen by human players.	
 alias[trigger:hidden_trigger] = {	
@@ -1458,7 +1498,15 @@ alias[trigger:hre_heretic_religion] = scope[country]
 ## scope = Anywhere	
 ###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.	
 alias[trigger:hre_heretic_religion] = enum[country_tags]	
+
+## scope = Anywhere	
+###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.	
+alias[trigger:hre_heretic_religion] = scope[province]	
 	
+## scope = Anywhere	
+###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.	
+alias[trigger:hre_heretic_religion] = <province_id>
+
 ## scope = Anywhere	
 ###Returns true if religious leagues are enabled.	
 alias[trigger:hre_leagues_enabled] = bool	
@@ -1478,7 +1526,15 @@ alias[trigger:hre_religion] = scope[country]
 ## scope = Anywhere	
 ###Returns true if the specified religion is the dominant faith of the HRE.	
 alias[trigger:hre_religion] = enum[country_tags]	
+
+## scope = Anywhere	
+###Returns true if the specified religion is the dominant faith of the HRE.	
+alias[trigger:hre_religion] = scope[province]	
 	
+## scope = Anywhere	
+###Returns true if the specified religion is the dominant faith of the HRE.	
+alias[trigger:hre_religion] = <province_id>	
+
 ## scope = Anywhere	
 ###Returns true if an official faith of the HRE has been permanently established.	
 alias[trigger:hre_religion_locked] = bool	
@@ -1739,7 +1795,7 @@ alias[trigger:is_institution_enabled] = <institution>
 alias[trigger:is_institution_origin] = Attention!!! <institution>	
 	
 ## scope = Province	
-###Returns true if the province is in the capital area of its owner (i.e. has a land connection to the owner’s capital through whose provinces).	
+###Returns true if the province is in the capital area of its owner (i.e. has a land connection to the owner's capital through whose provinces).	
 alias[trigger:is_in_capital_area] = bool	
 	
 ## scope = Country	
@@ -1866,11 +1922,11 @@ alias[trigger:is_nomad] = bool
 alias[trigger:is_orangists_in_power] = bool	
 	
 ## scope = Country	
-###Returns true if the specified country is the origin country of the scoped country’s consort.	
+###Returns true if the specified country is the origin country of the scoped country's consort.	
 alias[trigger:is_origin_of_consort] = scope[country]	
 	
 ## scope = Country	
-###Returns true if the specified country is the origin country of the scoped country’s consort.	
+###Returns true if the specified country is the origin country of the scoped country's consort.	
 alias[trigger:is_origin_of_consort] = enum[country_tags]	
 	
 ## scope = Province	
@@ -2759,15 +2815,15 @@ alias[trigger:num_of_religion] = {
 }	
 	
 ## scope = Country	
-###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces’.	
+###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces'.	
 alias[trigger:num_of_revolts] = int	
 	
 ## scope = Country	
-###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces’.	
+###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces'.	
 alias[trigger:num_of_revolts] = scope[country]	
 	
 ## scope = Country	
-###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces’.	
+###Returns true if the number of revolts in the country is at least X, or at least as many rebel controlled provinces as the specified country. The same as ‘num_of_rebel_controlled_provinces'.	
 alias[trigger:num_of_revolts] = enum[country_tags]	
 	
 ## scope = Country	
@@ -2823,7 +2879,7 @@ alias[trigger:num_of_total_ports] = enum[country_tags]
 alias[trigger:num_of_trade_embargos] = int	
 	
 ## scope = Country	
-###Returns true if the country hasat least X ‘trading in’ bonuses.	
+###Returns true if the country hasat least X ‘trading in' bonuses.	
 alias[trigger:num_of_trading_bonuses] = int	
 	
 	
@@ -3030,7 +3086,19 @@ alias[trigger:primary_culture] = <culture.fixed>
 ## scope = Country	
 ###Returns true if the country's primary culture is X.	
 alias[trigger:primary_culture] = scope[country]	
+
+## scope = Country	
+###Returns true if the country's primary culture is X.	
+alias[trigger:primary_culture] = enum[country_tags]
+
+## scope = Country	
+###Returns true if the country's primary culture is X.	
+alias[trigger:primary_culture] = scope[province]	
 	
+## scope = Country	
+###Returns true if the country's primary culture is X.	
+alias[trigger:primary_culture] = <province_id>
+
 ## scope = Country	
 ###Returns true if the country is primitive.	
 alias[trigger:primitives] = bool	
@@ -3124,11 +3192,19 @@ alias[trigger:religion] = <religion.not_school>
 ## scope = country	
 ###Returns true if the country/province has religion X.	
 alias[trigger:religion] = scope[country]	
-	
+
 ## scope = country	
 ###Returns true if the country/province has religion X.	
 alias[trigger:religion] = enum[country_tags]	
-	
+
+## scope = country	
+###Returns true if the country/province has religion X.	
+alias[trigger:religion] = scope[province]	
+
+## scope = country	
+###Returns true if the country/province has religion X.	
+alias[trigger:religion] = <province_id>	
+
 ## scope = province	
 ###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
 alias[trigger:religion] = <religion.not_school>	
@@ -3136,11 +3212,19 @@ alias[trigger:religion] = <religion.not_school>
 ## scope = province	
 ###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
 alias[trigger:religion] = scope[country]	
-	
+
 ## scope = province	
 ###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
 alias[trigger:religion] = enum[country_tags]	
-	
+
+## scope = province	
+###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
+alias[trigger:religion] = scope[province]	
+
+## scope = province	
+###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
+alias[trigger:religion] = <province_id>	
+
 ## scope = province	
 ###Returns true if the province has religion X. Note: Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.	
 alias[trigger:religion] = secondary	
@@ -3233,6 +3317,18 @@ alias[trigger:ruler_culture] = <culture.fixed>
 alias[trigger:ruler_culture] = scope[country]	
 	
 ## scope = Country	
+###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:ruler_culture] = enum[country_ids]
+	
+## scope = Country	
+###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:ruler_culture] = <province_id>	
+	
+## scope = Country	
+###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.	
+alias[trigger:ruler_culture] = scope[province]	
+	
+## scope = Country	
 ###Returns true if the country's ruler has the specified personality.	
 alias[trigger:ruler_has_personality] = <ruler_personality>	
 	
@@ -3251,7 +3347,15 @@ alias[trigger:ruler_religion] = scope[country]
 ## scope = Country	
 ###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.	
 alias[trigger:ruler_religion] = enum[country_tags]	
+
+## scope = Country	
+###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:ruler_religion] = scope[province]	
 	
+## scope = Country	
+###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.	
+alias[trigger:ruler_religion] = <province_id>
+
 ## scope = Country	
 ###Returns true if the country has at least X sailors.	
 alias[trigger:sailors] = int	
@@ -3279,7 +3383,7 @@ alias[trigger:same_continent] = <province_id>
 ## scope = Country	
 ###Returns true the secondary religion of the country is X.	
 alias[trigger:secondary_religion] = <religion.not_school>	
-	
+
 ## scope = Country	
 ###Returns true if the country is the senior partner in a personal union over country X.	
 alias[trigger:senior_union_with] = scope[country]	
@@ -3465,7 +3569,7 @@ alias[trigger:trade_share] = {
 }	
 	
 ## scope = Country	
-###Returns true if the country has the ‘trading in’ bonus of the specified trade good.	
+###Returns true if the country has the ‘trading in' bonus of the specified trade good.	
 alias[trigger:trading_bonus] = {	
 	trade_goods = <trade_good>
 	value = bool
@@ -3741,3 +3845,7 @@ alias[trigger:years_of_income] = scope[country]
 ## scope = country
 ###Returns true if the country has the specified government reform.
 alias[trigger:has_reform] = <government_reform.new> #todo: how about legacy reforms?
+
+## scope = country
+###Returns true if the country has at least X army professionalism.
+alias[trigger:army_professionalism] = float[0.0..1.0]
