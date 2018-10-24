@@ -212,6 +212,11 @@ alias[effect:sea_zone] = {
 ## push_scope = province
 ###Refers to the area that the current province scope is in.
 alias[effect:area] = {
+	## cardinality = 0..1
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
