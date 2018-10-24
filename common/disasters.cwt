@@ -39,13 +39,18 @@ disaster = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	
+	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}	
 	
-	
+	## cardinality = 0..1
+	stability_hit_on_war = int[1..6]
+
 	on_start = <event.country>
+
+	## cardinality = 0..1
 	on_end = <event.country>
 	
 	## cardinality = 0..1
@@ -55,12 +60,14 @@ disaster = {
 	
 	## cardinality = 0..1
 	on_monthly = {
+		## cardinality = 0..1
 		events = {
 			## cardinality = 0..inf
 			int = 0
 			## cardinality = 0..inf
 			int = <event.country>
 		}
+		## cardinality = 0..1
 		random_events = {
 			## cardinality = 0..inf
 			int = 0

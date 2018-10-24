@@ -633,7 +633,7 @@ alias[trigger:estate_loyalty] = {
 
 ## scope = Country
 ###Returns true if the estate X in the country controls at least Y% of the total development.
-alias[trigger:estate_loyalty] = {
+alias[trigger:estate_territory] = {
 	estate = <estate>
 	territory = int[0..100]
 }
