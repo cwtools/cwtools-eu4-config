@@ -85,7 +85,7 @@ event = {
 		}
 	}
 
-	#todo: check whether obligatory
+	## cardinality = 0..1
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
