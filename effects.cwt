@@ -622,6 +622,8 @@ alias[effect:define_advisor] = {
 	## cardinality = 0..1
 	name = scalar #todo: name or saved name
 	## cardinality = 0..1
+	cost_multiplier = float
+	## cardinality = 0..1
 	discount = yes
 	## cardinality = 0..1
 	culture = <culture.fixed>
@@ -643,6 +645,10 @@ alias[effect:define_advisor] = {
 	religion = scope[province]
 	## cardinality = 0..1
 	religion = <province_id>
+	## cardinality = 0..1
+	location = scope[province]
+	## cardinality = 0..1
+	location = <province_id>
 	## cardinality = 0..1
 	female = bool
 }	
@@ -1575,7 +1581,7 @@ alias[effect:set_heir_culture] = enum[country_tags]
 ## scope = country	
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_heir_religion] = <religion.not_school>	
-	
+
 ## scope = country	
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_heir_religion] = scope[country]	
@@ -2500,3 +2506,52 @@ alias[effect:remove_trade_modifier] = {
 ## scope = country	
 ###Sets legacy (pre-Dharma) govt for the current scope.	
 alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn't work, can use the key in governments instead
+
+## scope = country
+alias[effect:define_exiled_ruler] = {
+	exiled_as = scalar	#todo: like a variable
+	## cardinality = 0..1
+	dynasty = scalar #todo: name
+	## cardinality = 0..1
+	random_gender = bool
+	min_age = int
+	max_age = int
+	## cardinality = 0..1
+	adm = int[0..6]
+	## cardinality = 0..1
+	dip = int[0..6]
+	## cardinality = 0..1
+	mil = int[0..6]
+}
+
+## scope = province
+alias[effect:add_center_of_trade_level] = int[1..3]
+
+## scope = province
+alias[effect:add_to_trade_company] = scope[province]
+
+## scope = province
+alias[effect:add_to_trade_company] = <province_id>
+
+## scope = country
+alias[effect:add_years_of_manpower_scaled_to_seats] = int
+
+## scope = country
+alias[effect:add_years_of_sailors_scaled_to_seats] = int
+
+## scope = country
+alias[effect:add_years_of_tax_scaled_to_seats] = int
+
+## scope = country
+alias[effect:add_prestige_scaled_to_seats] = int
+
+## scope = country
+alias[effect:add_militarization_scaled_to_seats] = int
+
+
+## scope = province
+alias[effect:add_to_trade_company] = {
+	investment = <trade_company_investment>
+	investor = scope[country]
+	investor = enum[country_tags]
+}

@@ -110,7 +110,16 @@ estate = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}	
 		value = int		
-	}		
+	}
+	
+	## cardinality = 0..inf
+	custom_name = {
+		desc = localisation
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
 	
 	## cardinality = 0..inf
 	interaction = {

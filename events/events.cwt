@@ -66,7 +66,7 @@ event = {
 	is_triggered_only = bool
 
 	subtype[triggered] = { #experiment
-		## severity = information
+		# severity = information
 		## cardinality = 0..0
 		mean_time_to_happen = {
 			days = 1
@@ -93,7 +93,7 @@ event = {
 		}
 		
 		## cardinality = 0..1
-		is_mtth_scaled_to_size = 1 #todo: what does this do, and can one have other options here?
+		is_mtth_scaled_to_size = float #todo: what does this do?
 	}
 
 	## cardinality = 0..1

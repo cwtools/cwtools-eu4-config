@@ -438,11 +438,11 @@ alias[effect:random_enemy_country] = {
 ## scope = country
 ## push_scope = country
 ###Scopes to one random country that has been discovered by the current scope.		
-alias[effect:random_known_country] = {		
+alias[effect:random_known_country] = {
 	## cardinality = 0..1	
-	limit = {	
+	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
-	}	
+	}
 	alias_name[effect] = alias_match_left[effect]	
 }		
 		

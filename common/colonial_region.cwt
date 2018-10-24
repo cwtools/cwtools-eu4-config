@@ -19,6 +19,7 @@ colonial_region = {
 
 	## cardinality = 0..inf
 	names = {
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
