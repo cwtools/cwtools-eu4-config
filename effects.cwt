@@ -311,6 +311,14 @@ alias[effect:add_accepted_culture] = scope[country]
 ## scope = country	
 ###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
 alias[effect:add_accepted_culture] = enum[country_tags]	
+
+## scope = country	
+###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:add_accepted_culture] = scope[province]	
+	
+## scope = country	
+###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:add_accepted_culture] = <province_id>	
 	
 #todo: variable:my_variable	
 	
@@ -325,6 +333,14 @@ alias[effect:change_primary_culture] = scope[country]
 ## scope = country	
 ###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
 alias[effect:change_primary_culture] = enum[country_tags]	
+
+## scope = country	
+###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:change_primary_culture] = scope[province]	
+	
+## scope = country	
+###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:change_primary_culture] = <province_id>	
 	
 #todo: variable:my_variable	
 	
@@ -339,6 +355,14 @@ alias[effect:remove_accepted_culture] = scope[country]
 ## scope = country	
 ###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
 alias[effect:remove_accepted_culture] = enum[country_tags]	
+
+## scope = country	
+###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:remove_accepted_culture] = scope[province]	
+	
+## scope = country	
+###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.	
+alias[effect:remove_accepted_culture] = <province_id>
 	
 #todo: variable:my_variable	
 	
@@ -346,7 +370,7 @@ alias[effect:remove_accepted_culture] = enum[country_tags]
 	
 ## scope = country	
 ###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
-alias[effect:change_religion] = <culture.fixed>	
+alias[effect:change_religion] = <religion.not_school>	
 	
 ## scope = country	
 ###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
@@ -355,6 +379,14 @@ alias[effect:change_religion] = scope[country]
 ## scope = country	
 ###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
 alias[effect:change_religion] = enum[country_tags]	
+
+## scope = country	
+###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
+alias[effect:change_religion] = scope[province]	
+	
+## scope = country	
+###Changes the religion of the current scope. Religions are found in /Europa Universalis IV/common/religions/*.txt	
+alias[effect:change_religion] = <province_id>
 	
 #todo: variable:my_variable	
 	
@@ -596,9 +628,21 @@ alias[effect:define_advisor] = {
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
+	culture = enum[country_tags]
+	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
+	## cardinality = 0..1
+	religion = enum[country_tags]
+	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
 	## cardinality = 0..1
 	female = bool
 }	
@@ -1192,6 +1236,14 @@ alias[effect:set_ruler_culture] = scope[country]
 alias[effect:set_ruler_culture] = enum[country_tags]	
 	
 ## scope = country	
+###Changes the ruler culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_ruler_culture] = <province_id>	
+	
+## scope = country	
+###Changes the ruler culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_ruler_culture] = scope[province]	
+	
+## scope = country	
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_ruler_religion] = <religion.not_school>	
 	
@@ -1202,7 +1254,15 @@ alias[effect:set_ruler_religion] = scope[country]
 ## scope = country	
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_ruler_religion] = enum[country_tags]	
+
+## scope = country	
+###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_ruler_religion] = scope[province]	
 	
+## scope = country	
+###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_ruler_religion] = <province_id>	
+
 ## scope = country	
 ###Removes the current ruler of the current scope, saving them to the unique string.	
 alias[effect:exile_ruler_as] = scalar #todo: kinda like a variable	
@@ -1315,11 +1375,19 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	culture = enum[country_tags]
 	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
 	religion = enum[country_tags]
+	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
 }	
 	
 	
@@ -1351,6 +1419,14 @@ alias[effect:set_consort_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_consort_culture] = scope[province]
+	
+## scope = country	
+###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_consort_culture] = <province_id>
+	
+## scope = country	
+###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_consort_culture] = enum[country_tags]	
 	
 ## scope = country	
@@ -1364,6 +1440,14 @@ alias[effect:set_consort_religion] = scope[country]
 ## scope = country	
 ###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_consort_religion] = enum[country_tags]	
+	
+## scope = country	
+###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_consort_religion] = scope[province]	
+	
+## scope = country	
+###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_consort_religion] = <province_id>	
 	
 ## scope = country	
 ###Makes a consort regent into the current ruler for the current scope.	
@@ -1414,11 +1498,19 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	culture = enum[country_tags]
 	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
 	religion = enum[country_tags]
+	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
 }	
 	
 	
@@ -1470,6 +1562,14 @@ alias[effect:set_heir_culture] = scope[country]
 	
 ## scope = country	
 ###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_heir_culture] = <province_id>	
+	
+## scope = country	
+###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_heir_culture] = scope[province]	
+	
+## scope = country	
+###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_heir_culture] = enum[country_tags]	
 	
 ## scope = country	
@@ -1483,6 +1583,14 @@ alias[effect:set_heir_religion] = scope[country]
 ## scope = country	
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:set_heir_religion] = enum[country_tags]	
+	
+## scope = country	
+###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_heir_religion] = scope[province]	
+	
+## scope = country	
+###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:set_heir_religion] = <province_id>
 	
 ## scope = country	
 ###Removes the current heir of the current scope, saving them to the unique string.	
@@ -1563,11 +1671,19 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	culture = enum[country_tags]
 	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
 	religion = enum[country_tags]
+	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
 	## cardinality = 0..1
 	###Makes the heir a child not of the consort, i.e. a bastard
 	no_consort_with_heir = yes
@@ -1886,7 +2002,15 @@ alias[effect:change_culture] = enum[country_tags]
 ## scope = province	
 ###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
 alias[effect:change_culture] = scope[country]	
+
+## scope = province	
+###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:change_culture] = <province_id>
 	
+## scope = province	
+###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.	
+alias[effect:change_culture] = scope[province]	
+
 ## scope = province	
 ###Starts culture conversion in the current province scope, for the current owner.	
 alias[effect:add_culture_construction] = yes	
@@ -1902,7 +2026,15 @@ alias[effect:change_religion] = enum[country_tags]
 ## scope = province	
 ###Changes the religion of the current province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.	
 alias[effect:change_religion] = scope[country]	
+
+## scope = province	
+###Changes the religion of the current province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.	
+alias[effect:change_religion] = <province_id>
 	
+## scope = province	
+###Changes the religion of the current province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.	
+alias[effect:change_religion] = scope[province]	
+
 ## scope = province	
 ###Changes the religion in the current province scope to the syncretic religion of its owner.	
 alias[effect:change_to_secondary_religion] = yes	
@@ -1985,11 +2117,19 @@ alias[effect:spawn_rebels] = {
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	## cardinality = 0..1
 	religion = enum[country_tags]
 	## cardinality = 0..1
 	religion = scope[country]
+	## cardinality = 0..1
+	religion = <province_id>
+	## cardinality = 0..1
+	religion = scope[province]
 	## cardinality = 0..1
 	###Adds this amount of unrest to the province the rebels spawn in.
 	unrest = int
@@ -2360,4 +2500,3 @@ alias[effect:remove_trade_modifier] = {
 ## scope = country	
 ###Sets legacy (pre-Dharma) govt for the current scope.	
 alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn't work, can use the key in governments instead
-	
