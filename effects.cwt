@@ -472,7 +472,7 @@ alias[effect:set_school_opinion] = {
 	
 ## scope = country	
 ###Adds Patriarch Authority to the current scope. No effect if the country does not hold a religion using has_patriarchs.	
-alias[effect:add_patriarch_authority] = int[-100..100]	
+alias[effect:add_patriarch_authority] = float #todo: from -1 to 1?
 	
 ## scope = country	
 ###Changes the current personal deity for the current scope. Personal Deities are found in /Europa Universalis IV/common/personal_deities/*.txt. No effect if the country does not hold a religion using personal_deity.	
