@@ -19,7 +19,7 @@ types = {
 			basic_reform = yes
 		}
 		subtype[new] = {
-			legacy_equivalent = <government_reform.legacy>
+			legacy_equivalent = scalar
 		}
 	}
 }
