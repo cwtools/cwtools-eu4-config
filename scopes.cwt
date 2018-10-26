@@ -60,7 +60,7 @@ alias[effect:random] = {
 }
 
 ###The random_list scope is used to add different sets of effects to a single random roll.
-alias[effect:random] = {
+alias[effect:random_list] = {
 	## cardinality = 2..inf
 	int = {
 		alias_name[effect] = alias_match_left[effect]
@@ -95,7 +95,7 @@ alias[effect:<province_id>] = {
 
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
-alias[effect:enum[country_tags]] = {
+alias[effect:enum[country_tags] ] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -833,7 +833,7 @@ alias[trigger:<province_id>] = {
 
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
-alias[trigger:enum[country_tags]] = {
+alias[trigger:enum[country_tags] ] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
