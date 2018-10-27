@@ -1,4 +1,5 @@
 
+## scope = any
 alias[trigger:<scripted_trigger>] = bool
 
 ## scope = country

@@ -46,6 +46,7 @@ enums = {
 		culture
 		culture_group
 		religion
+		nation_rebel_tag
 		any
 		none
 	}
@@ -53,6 +54,7 @@ enums = {
 		culture
 		culture_group
 		religion
+		nation_rebel_tag
 		any
 		none
 	}
@@ -65,20 +67,31 @@ enums = {
 
 rebel_type = {
 	color = {
-		## cardinalty = 3..3
+		## cardinality = 3..3
 		int[0..255]
 	}
 
 	area = enum[rebel_areas]
+	## cardinality = 0..1
 	government = enum[rebel_governments]
+	## cardinality = 0..1
+	has_reform = <government_reform>
+	## cardinality = 0..1
 	religion = <religion.not_school>
 	defection = enum[rebel_defection]
+	## cardinality = 0..1
 	defect_delay = int				
 	independence = enum[rebel_independence]
 	unit_transfer = bool
 	gfx_type = enum[rebel_gfx_type]
 	will_relocate = bool	
 	
+	## cardinality = 0..1
+	disband_on_leader_death = bool
+	## cardinality = 0..1
+	dynasty = bool
+
+
 	resilient = bool
 	reinforcing = bool
 	general = bool
@@ -92,7 +105,9 @@ rebel_type = {
 
 	handle_action_negotiate = bool
 	handle_action_stability = bool
+	## cardinality = 0..1
 	handle_action_build_core = bool
+	## cardinality = 0..1
 	handle_action_send_missionary = bool		
 	
 	##replace_scope = { this = province root = province }

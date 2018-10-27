@@ -1,4 +1,5 @@
 
+## scope = any
 alias[effect:<scripted_effect>] = yes
 
 #Variables

@@ -23,11 +23,13 @@ leader_personality = {
 
 ruler_personality = {
 	ruler_allow = {
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		allow = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		chance = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -35,11 +37,13 @@ ruler_personality = {
 	}
 
 	heir_allow = {
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		allow = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		chance = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -47,11 +51,13 @@ ruler_personality = {
 	}
 	
 	consort_allow = {
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		allow = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		chance = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
