@@ -43,6 +43,7 @@ enums = {
 		po_change_hre_religion
 		po_take_mandate
 		po_force_migration
+		po_transfer_vassals
 	}
 	enum[wargoal_types] = {
 		take_colony

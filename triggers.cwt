@@ -1733,7 +1733,11 @@ alias[trigger:is_empty] = bool
 	
 ## scope = Country	
 ###Returns true the country views country X as an enemy.	
-alias[trigger:is_enemy] = bool	
+alias[trigger:is_enemy] = scope[country]
+
+## scope = Country	
+###Returns true the country views country X as an enemy.	
+alias[trigger:is_enemy] = enum[country_tags]
 	
 ## scope = Country	
 ###Returns true if the ruler of the country is excommunicated.	
