@@ -3924,3 +3924,6 @@ alias[trigger:is_in_important_war] = bool
 
 ## scope = country
 alias[trigger:has_government_attribute] = enum[govenment_attributes]
+
+## scope = province
+alias[trigger:has_state_edict] = <edict>
