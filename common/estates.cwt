@@ -3,18 +3,6 @@ types = {
 	type[estate] = {
 		path = "game/common/estates"
 	}
-	## type_key_filter = influence_modifier
-	type[estate_influence_modifier] = {
-		path = "game/common/estates"
-		skip_root_key = any
-		name_field = "desc"
-	}
-	## type_key_filter = loyalty_modifier
-	type[estate_loyalty_modifier] = {
-		path = "game/common/estates"
-		skip_root_key = any
-		name_field = "desc"
-	}
 }
 
 estate = {
@@ -36,7 +24,7 @@ estate = {
 	###If true, province can be granted to estate
 	##replace_scope = { this = province root = province }
 	province_trigger = {
-		religion = hinduism
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	###Is used to weigh importance compared to other estates
@@ -128,7 +116,8 @@ estate = {
 		
 		years_between_use = int
 		
-		##replace_scope = { this = country root = country }
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}

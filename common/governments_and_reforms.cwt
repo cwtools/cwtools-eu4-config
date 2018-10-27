@@ -109,7 +109,7 @@ government_reform = {
 	}
 
 	subtype[!default] = {
-		icon = enum[government_icons]
+		icon = enum[government_icons] #todo: refers to a file name in a certain folder
 		
 		## cardinality = 0..1
 		religion = bool
@@ -270,22 +270,119 @@ government_reform = {
 			election_on_death = bool
 			## cardinality = 0..1
 			is_merchant_republic = bool
+			## cardinality = 0..1
+			locked_government_type = bool
+			## cardinality = 0..1
+			maratha_general_interaction = bool
+			## cardinality = 0..1
+			better_purbias_interaction = bool
+			## cardinality = 0..1
+			enables_nepotism = bool
 		}
 	}
 }
 
-enums = { #todo: complete this
+enums = {
 	enum[government_icons] = {
-		crown
+		ambrosian_republic
+		arabic_scripture
+		asian_scripture
+		assembly_hall
+		ballot_box
+		british_queen
 		castle
-		paper_with_seal
+		celestial_empire
+		chieftain
+		chinese_palace
+		church
+		clergyman
+		compass
 		constitution
-		paper_with_seal_3
-		rioting_burning
-		politician
+		crown
+		crown_highlighted
+		daimyo
+		dutch_flag
+		dutch_republic
+		elective_monarchy
+		english_monarchy
+		feudal_theocracy
+		fist_in_air
+		free_city
+		general_eastern_administrative
+		generic_people
+		horde_riding
+		horde_riding_highlighted
+		indian_crown
+		indian_palace
+		indian_sultanate
+		judge
+		king
+		king_2
+		king_2_highlighted
+		king_highlighted
+		landscape
+		mamluk_government
+		man_and_children
+		man_on_podium
+		mandala_system
+		map
+		map_2
+		merchant
+		merchant_ship
+		misl_confederacy
+		monks
+		muslim
+		muslim_highlighted
+		nayankara_system
+		noble_indian
+		noble_muslim
 		nobleman
+		ottoman_government
+		papacy
 		paper_money_map
+		paper_with_seal
+		paper_with_seal_3
+		parliament
+		parliament_hall
+		parliament_highlighted
+		peacock_throne
+		peasant_republic
+		peasants
+		people_walking
+		politician
+		pope
+		pope_highlighted
+		prussian_monarchy
+		prussian_monarchy_2
+		queen
+		rajput_kingdom
+		religious_leader
+		religious_leader_highlighted
+		retain_tribal_hierarchy
+		revolutionary_republic
+		rioting_burning
+		rioting_burning_2
+		russian_principality
+		samurai
+		shaman
+		shogunate
+		siddhi_recruitment
+		soldiers
+		soldiers_2
+		soldiers_3
+		soldiers_3_highlighted
+		soldiers_4
+		soldiers_5
+		soldiers_6
+		states_general
+		strength_of_the_khalsa
+		trading_city
+		tribal_centralize_power
+		tribal_civil_society
 		tribal_council
+		tribal_lip_service
+		tribal_martial_society
+		tribal_religious_society
 	}
 }
 

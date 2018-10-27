@@ -33,4 +33,18 @@ incident = {
 	immediate_effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+
+	## cardinality = 0..1
+	absolutism = {
+		harsh_treatment = int
+		stability = int
+		decrease_autonomy_command = int
+		strengthen_government = int
+		
+		increase_autonomy_command = int
+		debase_currency = int
+		execute_rebel_acceptance_command = int
+		seat_in_parliament = int
+		war_exhaustion = int
+	}
 }

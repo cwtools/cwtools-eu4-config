@@ -68,82 +68,24 @@ alias[effect:random_list] = {
 }
 
 
-#alias[effect:root] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
-
-#alias[effect:prev] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
-
-#alias[effect:from] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
-
-#alias[effect:this] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
-
-
-
-
-## push_scope = province
-###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[effect:<province_id>] = {
+alias[effect:root] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = country
-###Refers to the country tags listed /Europa Universalis IV/common/country_tags
-alias[effect:enum[country_tags] ] = {
+alias[effect:prev] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = province
-###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[effect:<area>] = {
+alias[effect:from] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = province
-###Refers to any region found in /Europa Universalis IV/map/region.txt
-alias[effect:<region>] = {
+alias[effect:this] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## push_scope = province
-###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
-alias[effect:<superregion>] = {
-	alias_name[effect] = alias_match_left[effect]
-}
 
-# push_scope = province
-#Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-#alias[effect:<provincegroup>] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
 
-## push_scope = province
-###Refers to any continent found in /Europa Universalis IV/map/continent.txt
-alias[effect:<continent>] = {
-	alias_name[effect] = alias_match_left[effect]
-}
-
-## push_scope = province
-###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
-alias[effect:<trade_company>] = {
-	alias_name[effect] = alias_match_left[effect]
-}
-
-## push_scope = province
-###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
-alias[effect:<colonial_region>] = {
-	alias_name[effect] = alias_match_left[effect]
-}
-
-alias[effect:event_target:scalar] = {
-	alias_name[effect] = alias_match_left[effect]
-}
 
 
 ## push_scope = country
@@ -806,82 +748,23 @@ alias[trigger:AND] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#alias[trigger:root] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
-
-#alias[trigger:prev] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
-
-#alias[trigger:from] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
-
-#alias[trigger:this] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
-
-
-
-
-## push_scope = province
-###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[trigger:<province_id>] = {
+alias[trigger:root] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = country
-###Refers to the country tags listed /Europa Universalis IV/common/country_tags
-alias[trigger:enum[country_tags] ] = {
+alias[trigger:prev] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = province
-###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[trigger:<area>] = {
+alias[trigger:from] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = province
-###Refers to any region found in /Europa Universalis IV/map/region.txt
-alias[trigger:<region>] = {
+alias[trigger:this] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = province
-###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
-alias[trigger:<superregion>] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
 
-# push_scope = province
-#Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-#alias[trigger:<provincegroup>] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
-
-## push_scope = province
-###Refers to any continent found in /Europa Universalis IV/map/continent.txt
-alias[trigger:<continent>] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
-## push_scope = province
-###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
-alias[trigger:<trade_company>] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
-## push_scope = province
-###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
-alias[trigger:<colonial_region>] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
-alias[trigger:event_target:scalar] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
 
 
 ## push_scope = country

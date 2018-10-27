@@ -32,7 +32,7 @@ game_age = {
 	objectives = {
 		## cardinality = 9..9
 		## replace_scope = { root = country this = country }
-		localisation = {
+		scalar = { #todo: localisation
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			allow = {

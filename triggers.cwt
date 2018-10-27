@@ -16,11 +16,7 @@ alias[trigger:<idea_group>] = int[1..8]
 ## scope = country
 ###Returns true if the support for the specified institution in the province is at least X.	
 alias[trigger:<institution>] = int[0..100]	
-	
-## scope = country
-###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.	
-alias[trigger:<religion.not_school>] = int	
-	
+		
 ## scope = country
 ###Returns true if the country has at least X provinces producing the specified trade good.	
 alias[trigger:<trade_good>] = int	
@@ -614,7 +610,7 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	type = <advisor_type>
 	## cardinality = 0..1
-	category = enum[power_types]
+	category = enum[power_categories]
 }	
 
 ## scope = Country
@@ -890,9 +886,17 @@ alias[trigger:has_construction] = enum[construction_types]
 alias[trigger:has_country_flag] = scalar	
 	
 ## scope = Country	
-###Returns true if the country has the modifier X.	
+###Returns true if the country has the modifier X. Accepts event, triggered and static modifiers.
 alias[trigger:has_country_modifier] = <event_modifier>	
 	
+## scope = Country	
+###Returns true if the country has the modifier X. Accepts event, triggered and static modifiers.	
+alias[trigger:has_country_modifier] = <static_modifier>	
+	
+## scope = Country	
+###Returns true if the country has the modifier X. Accepts event, triggered and static modifiers.	
+alias[trigger:has_country_modifier] = <triggered_modifier>	
+
 ## scope = Country	
 ###Returns true if the country has custom ideas.	
 alias[trigger:has_custom_ideas] = bool	
@@ -953,14 +957,14 @@ alias[trigger:has_estate] = <estate>
 ###Returns true if the estate X in the country has the influence modifier Y.	
 alias[trigger:has_estate_influence_modifier] = {	
 	estate = <estate>
-	modifier = <estate_influence_modifier>
+	modifier = localisation #todo: should check one that is defined somewhere (but can be done in any effect field). Localisation will cover it for now though.
 }	
 	
 ## scope = Country	
 ###Returns true if the estate X in the country has the loyalty modifier Y.	
 alias[trigger:has_estate_loyalty_modifier] = {	
 	estate = <estate>
-	modifier = <estate_loyalty_modifier>
+	modifier = localisation #todo: should check one that is defined somewhere (but can be done in any effect field). Localisation will cover it for now though.
 }	
 	
 ## scope = Country	
@@ -2383,7 +2387,7 @@ alias[trigger:nationalism] = int
 	
 ## scope = Country	
 ###Returns true if country has set the national focus to X.	
-alias[trigger:national_focus] = enum[power_types]	
+alias[trigger:national_focus] = enum[power_categories]	
 	
 ## scope = Country	
 ###Returns true if at least X points were used when creating the custom nation.	
@@ -3046,7 +3050,7 @@ alias[trigger:percentage_backing_issue] = float[0.0..1.0]
 	
 ## scope = Country	
 ###Returns true if the country has a ruler which personality is X.	
-alias[trigger:personality] = <ruler_personality>	
+alias[trigger:personality] = enum[ai_personalities]
 	
 ## scope = Country	
 ###Returns true if the country's piety is at least X, if the country has at least as much piety as the specified country.	
@@ -3911,3 +3915,7 @@ alias[trigger:num_of_centers_of_trade] = int
 
 ## scope = country
 alias[trigger:is_in_important_war] = bool
+
+
+## scope = country
+alias[trigger:has_government_attribute] = enum[govenment_attributes]

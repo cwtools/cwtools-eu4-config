@@ -61,7 +61,7 @@ great_project = {
 
 
 faction = {
-	monarch_power = enum[power_types]
+	monarch_power = enum[power_categories]
 	always = yes
 	
 	## cardinality = 0..1
@@ -174,7 +174,7 @@ naval_doctrine = {
 
 
 policy = {
-	monarch_power = enum[power_types]
+	monarch_power = enum[power_categories]
 
 	## replace_scope = { this = country root = country }
 	potential = {
