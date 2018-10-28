@@ -1289,11 +1289,11 @@ alias[effect:kill_ruler] = yes
 	
 ## scope = country	
 ###Converts a female ruler into a general.	
-alias[effect:convert_female_ruler_to_general] = yes	
+alias[effect:convert_female_ruler_to_general] = int	
 	
 ## scope = country	
 ###Converts a male ruler into a general.	
-alias[effect:convert_ruler_to_general] = yes	
+alias[effect:convert_ruler_to_general] = int	
 	
 ## scope = country	
 ###Adds an event modifier to the current scope as a ruler modifier. Ruler modifiers are cleared when the ruler dies.	
@@ -1622,11 +1622,11 @@ alias[effect:remove_heir] = yes
 	
 ## scope = country	
 ###Converts a female heir into a general.	
-alias[effect:convert_female_heir_to_general] = yes	
+alias[effect:convert_female_heir_to_general] = int	
 	
 ## scope = country	
 ###Converts a male heir into a general.	
-alias[effect:convert_heir_to_general] = yes	
+alias[effect:convert_heir_to_general] = int	
 	
 ## scope = country	
 ###Creates a general from the heir of the current scope.	
@@ -1673,9 +1673,9 @@ alias[effect:define_heir] = {
 	###Hides the skill values for this ruler.
 	hide_skills = yes
 	## cardinality = 0..1
-	female = yes
+	female = bool
 	## cardinality = 0..1
-	male = yes
+	male = bool
 	## cardinality = 0..1
 	culture = <culture.fixed>
 	## cardinality = 0..1
@@ -1733,8 +1733,8 @@ alias[effect:set_in_empire] = yes
 alias[effect:hre_inheritable] = yes	
 	
 ## scope = country	
-###Enables the Imperial Ban casus belli.	
-alias[effect:imperial_ban_allowed] = yes	
+###Enables or disables the Imperial Ban casus belli.	
+alias[effect:imperial_ban_allowed] = bool	
 	
 ## scope = country	
 ###Disables casus belli creation for HRE members against one another.	
@@ -1996,8 +1996,8 @@ alias[effect:add_building_construction] = {
 alias[effect:create_advisor] = <advisor_type>	
 	
 ## scope = province	
-###Adds the current province scope to Parliament. No effect if the owner of the province does not have a government using has_parliament.	
-alias[effect:set_seat_in_parliament] = yes	
+###Adds or removes the current province scope to/from Parliament. No effect if the owner of the province does not have a government using has_parliament.	
+alias[effect:set_seat_in_parliament] = bool	
 	
 ## scope = province	
 ###Backs or blocks the current issue in Parliament, if the current province scope has a seat. No effect if the owner of the province does not have a government using has_parliament.	

@@ -64,6 +64,11 @@ enums = {
 casus_belli = {
 	war_goal = <wargoal_type>
 	
+	## cardinality = 0..1
+	coalition = yes
+	## cardinality = 0..1
+	no_opinion_hit = yes
+	
 	subtype[triggered] = {
 		## cardinality = 0..1
 		###The number of months this CB will be valid. Only works for triggered CBs.

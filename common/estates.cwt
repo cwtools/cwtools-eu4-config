@@ -30,6 +30,9 @@ estate = {
 	###Is used to weigh importance compared to other estates
 	start_territory_weight = int
 	
+	## cardinality = 0..1
+	min_territory = float
+
 	###Min autonomy in estate provinces
 	min_autonomy = int[0..100]
 	

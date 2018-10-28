@@ -1352,6 +1352,9 @@ alias[trigger:has_terrain] = <terrain>
 alias[trigger:has_trade_modifier] = {	
 	who = scope[country]
 	who = enum[country_tags]
+	## cardinality = 0..1
+	name = scalar #todo: like a variable, set via add_trade_modifier
+	## cardinality = 0..1
 	key = scalar #todo: like a variable, set via add_trade_modifier
 }	
 	
@@ -3958,7 +3961,7 @@ alias[trigger:cb_on_religious_enemies] = bool
 
 
 ## scope = province
-alias[trigger:has_monsoon] = bool
+alias[trigger:has_monsoon] = enum[monsoons]
 
 
 ## scope = country

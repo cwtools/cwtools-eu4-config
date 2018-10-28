@@ -139,6 +139,11 @@ enums = {
 		maratha_general_interaction
 		locked_government_type
 	}
+	enum[monsoons] = {
+		severe_monsoon
+		normal_monsoon
+		mild_monsoon
+	}
 	enum[event_pictures] = { #covered via sprite type, hopefully
 		NOBLE_ESTATE_DEMANDS_eventPicture
 		NOBLE_ESTATE_eventPicture
