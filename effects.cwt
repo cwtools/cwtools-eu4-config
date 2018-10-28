@@ -2575,12 +2575,15 @@ alias[effect:free_vassal] = scope[country]
 alias[effect:free_vassal] = enum[country_tags]
 
 
+## scope = country
+alias[effect:change_innovativeness] = int
 
-## scope = { country province }
+## scope = country
 alias[effect:adm_power_cost] = int
 
-## scope = { country province }
+## scope = country
 alias[effect:dip_power_cost] = int
 
-## scope = { country province }
+## scope = country
 alias[effect:mil_power_cost] = int
+

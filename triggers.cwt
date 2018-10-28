@@ -3959,3 +3959,7 @@ alias[trigger:cb_on_religious_enemies] = bool
 
 ## scope = province
 alias[trigger:has_monsoon] = bool
+
+
+## scope = country
+alias[trigger:innovativeness] = int[1..100]
