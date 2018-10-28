@@ -198,7 +198,13 @@ government_reform = {
 		## cardinality = 0..inf
 		conditional = {
 			allow = {
+				## cardinality = 0..inf
 				has_dlc = enum[DLCs]
+				## cardinality = 0..inf
+				NOT = {
+					## cardinality = 0..inf
+					has_dlc = enum[DLCs]
+				}
 			}
 			## cardinality = 0..1
 			can_use_trade_post = bool
