@@ -71,6 +71,9 @@ casus_belli = {
 	}
 	
 	## cardinality = 0..1
+	months = int
+
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country from = country }
 	###A condition that automatically activates a CB. Does not work for triggered CBs (according to the Vanilla documentation, but the very first Vanilla CB does this, so please clarify with Caligula if you know better!)
 	prerequisites = {

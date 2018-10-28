@@ -5,7 +5,10 @@ alias[effect:<scripted_effect>] = yes
 #Variables
 
 alias[effect:export_to_variable] = {
-	which = scalar #todo: Variable
+	## cardinality = 0..1
+	variable_name = scalar #todo: variable
+	## cardinality = 0..1
+	which = scalar #todo: variable
 	value = enum[export_to_variable_data]
 	## cardinality = 0..1
 	who = scope[country]
@@ -761,6 +764,7 @@ alias[effect:define_admiral] = {
 	shock = int	
 	fire = int	
 	manuever = int	
+	## cardinality = 0..1
 	siege = int	
 	## cardinality = 0..1
 	name = scalar #todo: name
@@ -776,6 +780,7 @@ alias[effect:define_explorer] = {
 	shock = int	
 	fire = int	
 	manuever = int	
+	## cardinality = 0..1
 	siege = int	
 	## cardinality = 0..1
 	name = scalar #todo: name
@@ -791,6 +796,7 @@ alias[effect:define_conquistador] = {
 	shock = int	
 	fire = int	
 	manuever = int	
+	## cardinality = 0..1
 	siege = int	
 	## cardinality = 0..1
 	name = scalar #todo: name
@@ -806,6 +812,7 @@ alias[effect:define_general] = {
 	shock = int	
 	fire = int	
 	manuever = int	
+	## cardinality = 0..1
 	siege = int	
 	## cardinality = 0..1
 	name = scalar #todo: name
@@ -1886,7 +1893,7 @@ alias[effect:extend_province_modifier] = {
 	
 ## scope = province	
 ###Removes an already assigned province modifier from the current province scope.	
-alias[effect:add_permanent_province_modifier] = <event_modifier>	
+alias[effect:remove_province_modifier] = <event_modifier>	
 	
 ## scope = province	
 ###Defines a province flag for the current province scope. Flags can be appended with scopes or event targets with @scope.	
@@ -2566,3 +2573,14 @@ alias[effect:free_vassal] = scope[country]
 
 ## scope = country
 alias[effect:free_vassal] = enum[country_tags]
+
+
+
+## scope = { country province }
+alias[effect:adm_power_cost] = int
+
+## scope = { country province }
+alias[effect:dip_power_cost] = int
+
+## scope = { country province }
+alias[effect:mil_power_cost] = int

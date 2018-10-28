@@ -2,6 +2,7 @@
 #I don't know anything about interface modding. For now I have just rigged up the sprites to show because that is rather useful.
 
 types = {
+	## type_key_filter = spriteType
 	type[sprite] = { #these are links that start with the GFX_ prefix in vanilla
 		name_field = "name"
 		path = "game/interface"

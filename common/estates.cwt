@@ -91,6 +91,7 @@ estate = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	
+	## cardinality = 0..inf
 	###Does the AI want to give any extra territory beyond the minimum?
 	ai_territory_modifier = {
 		##replace_scope = { this = country root = country }

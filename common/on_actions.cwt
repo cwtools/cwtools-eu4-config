@@ -1,0 +1,25 @@
+
+types = {
+	type[on_action] = {
+		path = "game/common/on_actions"
+	}
+}
+
+#todo: compile a full list of when which scopes are valid
+
+on_action = {
+	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	events = {
+		## cardinality = 0..inf
+		<event>
+	}
+	## cardinality = 0..1
+	random_events = {
+		## cardinality = 0..inf
+		int = 0
+		## cardinality = 0..inf
+		int = <event>
+	}
+}
