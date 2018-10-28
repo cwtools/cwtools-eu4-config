@@ -3,8 +3,8 @@ types = {
 	type[aspects_and_blessings] = {
 		path = "game/common/church_aspects"
 		subtype[church_aspect] = {
-			## cardinality = 0..0
-			blessing = yes
+			## cardinality = 0..1
+			blessing = no
 		}
 		subtype[blessing] = {
 			blessing = yes

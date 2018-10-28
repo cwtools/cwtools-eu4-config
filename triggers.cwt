@@ -55,9 +55,17 @@ alias[trigger:adm_power] = scope[country]
 alias[trigger:adm_power] = enum[country_tags]	
 	
 ## scope = country
-###Returns true if the country has an administrative technology of at least X.	
+###Returns true if the country has an administrative technology of at least X, or at least as high as the specified country.
 alias[trigger:adm_tech] = int[0..200]	
-	
+
+## scope = country
+###Returns true if the country has an administrative technology of at least X, or at least as high as the specified country.
+alias[trigger:adm_tech] = scope[country]	
+
+## scope = country
+###Returns true if the country has an administrative technology of at least X, or at least as high as the specified country.
+alias[trigger:adm_tech] = enum[country_tags]
+
 ## scope = country
 ###Returns true if the country has an advisor of the specified type.	
 alias[trigger:advisor] = <advisor_type>	
@@ -548,9 +556,17 @@ alias[trigger:dip_power] = scope[country]
 alias[trigger:dip_power] = enum[country_tags]	
 	
 ## scope = Country	
-###Returns true if the country has an diplomatic technology of at least level X.	
+###Returns true if the country has an diplomatic technology of at least level X, or at least as high as the specified country.		
 alias[trigger:dip_tech] = int	
-	
+
+## scope = Country	
+###Returns true if the country has an diplomatic technology of at least level X, or at least as high as the specified country.		
+alias[trigger:dip_tech] = scope[country]	
+
+## scope = Country	
+###Returns true if the country has an diplomatic technology of at least level X, or at least as high as the specified country.		
+alias[trigger:dip_tech] = enum[country_tags]	
+
 ## scope = Country	
 ###Returns true if the dominant culture in the country is X.	
 alias[trigger:dominant_culture] = <culture.fixed> #todo: wiki says "capital"	
@@ -2367,9 +2383,17 @@ alias[trigger:mil_power] = scope[country]
 alias[trigger:mil_power] = enum[country_tags]	
 	
 ## scope = Country	
-###Returns true if the country has an military technology of at least level X.	
+###Returns true if the country has an military technology of at least level X, or at least as high as the specified country.
 alias[trigger:mil_tech] = int	
-	
+
+## scope = Country	
+###Returns true if the country has an military technology of at least level X, or at least as high as the specified country.
+alias[trigger:mil_tech] = scope[country]	
+
+## scope = Country	
+###Returns true if the country has an military technology of at least level X, or at least as high as the specified country.
+alias[trigger:mil_tech] = enum[country_tags]
+
 ## scope = Country	
 ###Returns true if the country has a monthly income of at least X.	
 alias[trigger:monthly_income] = int	
