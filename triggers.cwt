@@ -3967,3 +3967,6 @@ alias[trigger:innovativeness] = int[1..100]
 
 ## scope = any
 alias[trigger:map_setup] = map_setup_random
+
+## scope = country
+alias[trigger:num_of_trade_companies] = int
