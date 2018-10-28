@@ -3963,3 +3963,7 @@ alias[trigger:has_monsoon] = bool
 
 ## scope = country
 alias[trigger:innovativeness] = int[1..100]
+
+
+## scope = any
+alias[trigger:map_setup] = map_setup_random
