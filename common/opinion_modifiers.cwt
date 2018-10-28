@@ -29,6 +29,9 @@ opinion_modifier = {
 
 	## cardinality = 0..1
 	years = int
+	
+	## cardinality = 0..1
+	months = int
 }
 
 

@@ -2292,7 +2292,7 @@ alias[trigger:likely_rebels] = <rebel_type>
 	
 ## scope = Province	
 ###Returns true if the province has a local autonomy of at least X.	
-alias[trigger:local_autonomy] = float[0.0..1.0]	
+alias[trigger:local_autonomy] = int[0..100]	
 	
 ## scope = Province	
 ###Returns true if the province's local autonomy is at least X above the local development's minimum value.	
