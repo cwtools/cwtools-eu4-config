@@ -732,19 +732,21 @@ alias[effect:add_yearly_sailors] = float[0.1..10.0] #I am assuming no one wants 
 	
 ## scope = country	
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.	
-alias[effect:create_admiral] = int[0..100]	
+alias[effect:create_admiral] = int
 	
 ## scope = country	
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.	
-alias[effect:create_explorer] = int[0..100]	
+alias[effect:create_explorer] = int
 	
 ## scope = country	
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.	
-alias[effect:create_conquistador] = int[0..100]	
+alias[effect:create_conquistador] = int
 	
 ## scope = country	
-###Generates an new general for the current scope. The number is the amount of army tradition to use in generation.	
-alias[effect:create_general] = int[0..100]	
+###Generates an new general for the current scope.
+alias[effect:create_general] = {
+	tradition = int
+}
 	
 ## scope = country	
 ###Change the unit type for the current scope. The unit types correspond to the technology groups found in /Europa Universalis IV/common/technology.txt. 1.1	
