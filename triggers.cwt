@@ -3699,7 +3699,7 @@ alias[trigger:unit_type] = <unit_type>
 	
 ## scope = Province	
 ###Returns true if the unrest in the province is at least X.	
-alias[trigger:unrest] = int	
+alias[trigger:unrest] = float[0.0..100.0]
 	
 ## scope = Country	
 ###Returns true if the country uses authority mechanics.	

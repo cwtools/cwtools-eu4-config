@@ -1,5 +1,23 @@
 #Scopes and Logical Operators
 
+#Complicated ones
+
+## push_scope = country
+###Refers to the country tags listed /Europa Universalis IV/common/country_tags
+alias[effect:enum[country_tags] ] = {
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+###Refers to the country tags listed /Europa Universalis IV/common/country_tags
+alias[trigger:enum[country_tags] ] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+
+
+
+
 #Effect scopes
 
 ###Hides the enclosed effects
