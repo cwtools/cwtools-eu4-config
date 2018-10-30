@@ -37,6 +37,11 @@ alias[effect:subtract_variable] = {
 	value = float
 }
 
+## scope = any
+alias[effect:set_variable] = {
+	which = scalar #todo: Variable
+	value = scalar #todo: Variable or float
+}
 
 
 
