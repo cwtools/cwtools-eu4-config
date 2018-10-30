@@ -12,6 +12,17 @@ enums = {
 		galley
 		transport
 	}
+	enum[land_unit_types] = {
+		infantry
+		cavalry
+		artillery
+	}
+	enum[naval_unit_types] = {
+		heavy_ship
+		light_ship
+		galley
+		transport
+	}
 	enum[power_categories] = {
 		ADM
 		DIP
