@@ -403,8 +403,16 @@ alias[trigger:consort_religion] = <province_id>
 alias[trigger:construction_progress] = float[0.0..1.0]
 
 ## scope = province
-###Returns true if the province is located on continent X.
+###Returns true if the province is located on continent X, or on the same continent as the (capital of the) specified scope.
 alias[trigger:continent] = <continent>
+
+## scope = province
+###Returns true if the province is located on continent X, or on the same continent as the (capital of the) specified scope.
+alias[trigger:continent] = scope[country]
+
+## scope = province
+###Returns true if the province is located on continent X, or on the same continent as the (capital of the) specified scope.
+alias[trigger:continent] = scope[province]
 
 ## scope = province
 ###Returns true if the province is controlled by X.
@@ -3966,3 +3974,6 @@ alias[trigger:have_had_reform] = <government_reform.new>
 
 ## scope = country
 alias[trigger:has_states_general_mechanic] = bool
+
+## scope = country
+alias[trigger:can_migrate] = bool

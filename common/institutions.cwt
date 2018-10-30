@@ -64,6 +64,7 @@ alias[institution_modifier_rule:modifier] = {
 
 	## cardinality = 0..1
 	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
 		## cardinality = 0..1
 		## push_scope = province
 		###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.

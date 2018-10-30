@@ -2235,41 +2235,73 @@ alias[effect:undiscover_country] = scope[country]
 ###The defined scope loses vision over the current province scope. Best used within areas, regions, etc to remove vision.
 alias[effect:undiscover_country] = enum[country_tags]
 
-## scope = province
-###The defined scope gains a claim on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a claim on the current province scope. In country scope, the current scope gains a claim on the defined province scope.
 alias[effect:add_claim] = scope[country]
 
-## scope = province
-###The defined scope gains a claim on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a claim on the current province scope. In country scope, the current scope gains a claim on the defined province scope.
 alias[effect:add_claim] = enum[country_tags]
 
-## scope = province
-###The defined scope gains a core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a claim on the current province scope. In country scope, the current scope gains a claim on the defined province scope.
+alias[effect:add_claim] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope gains a claim on the current province scope. In country scope, the current scope gains a claim on the defined province scope.
+alias[effect:add_claim] = <province_id>
+
+## scope = { country province }
+###In province scope, the defined scope gains a core on the current province scope. In country scope, the current scope gains a core on the defined province scope.
 alias[effect:add_core] = scope[country]
 
-## scope = province
-###The defined scope gains a core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a core on the current province scope. In country scope, the current scope gains a core on the defined province scope.
 alias[effect:add_core] = enum[country_tags]
+
+## scope = { country province }
+###In province scope, the defined scope gains a core on the current province scope. In country scope, the current scope gains a core on the defined province scope.
+alias[effect:add_core] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope gains a core on the current province scope. In country scope, the current scope gains a core on the defined province scope.
+alias[effect:add_core] = <province_id>
 
 ## scope = province
 ###Starts core construction in the current province scope, for the current owner.
 alias[effect:add_core_construction] = yes
 
-## scope = province
-###The defined scope gains a permanent claim on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a permanent claim on the current province scope. In country scope, the current scope gains a permanent claim on the defined province scope.
 alias[effect:add_permanent_claim] = scope[country]
 
-## scope = province
-###The defined scope gains a permanent claim on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a permanent claim on the current province scope. In country scope, the current scope gains a permanent claim on the defined province scope.
 alias[effect:add_permanent_claim] = enum[country_tags]
 
-## scope = province
-###The defined scope gains a territorial core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a permanent claim on the current province scope. In country scope, the current scope gains a permanent claim on the defined province scope.
+alias[effect:add_permanent_claim] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope gains a permanent claim on the current province scope. In country scope, the current scope gains a permanent claim on the defined province scope.
+alias[effect:add_permanent_claim] = <province_id>
+
+## scope = { country province }
+###In province scope, the defined scope gains a territorial core on the current province scope. In country scope, the current scope gains a territorial core on the defined province scope.
 alias[effect:add_territorial_core] = scope[country]
 
-## scope = province
-###The defined scope gains a territorial core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope gains a territorial core on the current province scope. In country scope, the current scope gains a territorial core on the defined province scope.
 alias[effect:add_territorial_core] = enum[country_tags]
+
+## scope = { country province }
+###In province scope, the defined scope gains a territorial core on the current province scope. In country scope, the current scope gains a territorial core on the defined province scope.
+alias[effect:add_territorial_core] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope gains a territorial core on the current province scope. In country scope, the current scope gains a territorial core on the defined province scope.
+alias[effect:add_territorial_core] = <province_id>
 
 ## scope = province
 ###The defined scope gains ownership of the current province scope. previous_owner can be used to cede ownership to the last previous owner of a province.
@@ -2291,29 +2323,53 @@ alias[effect:change_controller] = scope[country]
 ###The defined scope gains control over the current province scope. Control here means occupation, not ownership.
 alias[effect:change_controller] = enum[country_tags]
 
-## scope = province
-###The defined scope loses their claim on the current province scope. Works for both types of claims.
+## scope = { country province }
+###In province scope, the defined scope loses their claim on the current province scope. In country scope, the current scope loses their claim on the defined province scope. Works for both types of claims.
 alias[effect:remove_claim] = scope[country]
 
-## scope = province
-###The defined scope loses their claim on the current province scope. Works for both types of claims.
+## scope = { country province }
+###In province scope, the defined scope loses their claim on the current province scope. In country scope, the current scope loses their claim on the defined province scope. Works for both types of claims.
 alias[effect:remove_claim] = enum[country_tags]
 
-## scope = province
-###The defined scope loses their core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope loses their claim on the current province scope. In country scope, the current scope loses their claim on the defined province scope. Works for both types of claims.
+alias[effect:remove_claim] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope loses their claim on the current province scope. In country scope, the current scope loses their claim on the defined province scope. Works for both types of claims.
+alias[effect:remove_claim] = <province_id>
+
+## scope = { country province }
+###In province scope, the defined scope loses their core on the current province scope. In country scope, the current scope loses their core on the defined province scope. Works for both types of claims.
 alias[effect:remove_core] = scope[country]
 
-## scope = province
-###The defined scope loses their core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope loses their core on the current province scope. In country scope, the current scope loses their core on the defined province scope. Works for both types of claims.
 alias[effect:remove_core] = enum[country_tags]
 
-## scope = province
-###The defined scope loses their territorial core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope loses their core on the current province scope. In country scope, the current scope loses their core on the defined province scope. Works for both types of claims.
+alias[effect:remove_core] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope loses their core on the current province scope. In country scope, the current scope loses their core on the defined province scope. Works for both types of claims.
+alias[effect:remove_core] = <province_id>
+
+## scope = { country province }
+###In province scope, the defined scope loses their territorial core on the current province scope. In country scope, the current scope loses their territorial core on the defined province scope. Works for both types of claims.
 alias[effect:remove_territorial_core] = scope[country]
 
-## scope = province
-###The defined scope loses their territorial core on the current province scope.
+## scope = { country province }
+###In province scope, the defined scope loses their territorial core on the current province scope. In country scope, the current scope loses their territorial core on the defined province scope. Works for both types of claims.
 alias[effect:remove_territorial_core] = enum[country_tags]
+
+## scope = { country province }
+###In province scope, the defined scope loses their territorial core on the current province scope. In country scope, the current scope loses their territorial core on the defined province scope. Works for both types of claims.
+alias[effect:remove_territorial_core] = scope[province]
+
+## scope = { country province }
+###In province scope, the defined scope loses their territorial core on the current province scope. In country scope, the current scope loses their territorial core on the defined province scope. Works for both types of claims.
+alias[effect:remove_territorial_core] = <province_id>
 
 ## scope = province
 ###Spawns a streltsy infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
