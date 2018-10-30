@@ -6,6 +6,7 @@ alias[effect:<scripted_effect>] = yes
 
 #Variables
 
+## scope = any
 alias[effect:export_to_variable] = {
 	## cardinality = 0..1
 	variable_name = scalar #todo: variable
@@ -18,16 +19,19 @@ alias[effect:export_to_variable] = {
 	with = scope[country] #for when you use "trust"
 }
 
+## scope = any
 alias[effect:multiply_variable] = {
 	which = scalar #todo: Variable
 	value = float
 }
 
+## scope = any
 alias[effect:change_variable] = {
 	which = scalar #todo: Variable
 	value = float
 }
 
+## scope = any
 alias[effect:subtract_variable] = {
 	which = scalar #todo: Variable
 	value = float
@@ -714,6 +718,33 @@ alias[effect:create_conquistador] = int
 ###Generates an new general for the current scope.
 alias[effect:create_general] = {
 	tradition = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_fire = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_shock = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_manuever = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_siege = int
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <culture.fixed>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[province]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <province_id>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[country]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[country_tags]
 }
 
 ## scope = country

@@ -261,7 +261,7 @@ client_state = {
 	## cardinality = 1..inf	
 	name = {
 		name = localisation
-		## replace_scope = { this = province from = country }
+		## replace_scope = { this = province root = province from = country }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}

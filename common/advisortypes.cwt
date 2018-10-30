@@ -22,11 +22,13 @@ advisor_type = {
 	## cardinality = 0..1
 	allow_only_female = yes
 	
+	## replace_scope = { this = province root = province }
 	chance = {
 		factor = int
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	
+	## replace_scope = { this = country root = country }
 	ai_will_do = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]

@@ -26,7 +26,9 @@ types = {
 ambient_object = {
 	type = scalar
 	use_animation = bool
+	## cardinality = 0..1
 	scale = float
+	## cardinality = 0..1
 	time_duration = float
 	## cardinality = 0..1
 	always_visible = yes
@@ -99,7 +101,7 @@ graphical_terrain = {
 }
 
 tree_terrain = {
-	type = <terrain>
+	terrain = <terrain>
 	color = {
 		## cardinality = 1..inf
 		int

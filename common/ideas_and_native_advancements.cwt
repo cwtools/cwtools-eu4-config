@@ -46,6 +46,9 @@ idea_group = {
 
 	bonus = {
 		alias_name[modifier] = alias_match_left[modifier]
+
+		## cardinality = 0..inf
+		enum[game_rules_ideas] = bool
 	}
 
 	## cardinality = 0..1
@@ -57,12 +60,18 @@ idea_group = {
 	## cardinality = 7..7
 	localisation = {
 		alias_name[modifier] = alias_match_left[modifier]
+
+		## cardinality = 0..inf
+		enum[game_rules_ideas] = bool
 	}
 	
 	
 	subtype[country_idea] = {
 		start = {
 			alias_name[modifier] = alias_match_left[modifier]
+			
+			## cardinality = 0..inf
+			enum[game_rules_ideas] = bool
 		}
 		free = yes
 	}

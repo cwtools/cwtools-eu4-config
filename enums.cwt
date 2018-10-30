@@ -150,6 +150,13 @@ enums = {
 		maratha_general_interaction
 		locked_government_type
 	}
+	enum[game_rules_ideas] = { #currently only in ideas, but I have seen stuff like this elsewhere, maybe it is generalisable?
+		cb_on_primitives
+		may_explore
+		may_establish_frontier
+		may_perform_slave_raid
+		no_religion_penalty
+	}
 	enum[monsoons] = {
 		severe_monsoon
 		normal_monsoon

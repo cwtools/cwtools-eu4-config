@@ -558,12 +558,44 @@ alias[trigger:dip_tech] = scope[country]
 alias[trigger:dip_tech] = enum[country_tags]
 
 ## scope = country
-###Returns true if the dominant culture in the country is X.
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
 alias[trigger:dominant_culture] = <culture.fixed> #todo: wiki says "capital"
 
 ## scope = country
-###Returns true if the dominant religion in the country is X.
-alias[trigger:dominant_religion] = <religion.not_school> #todo: wiki says "capital"
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
+alias[trigger:dominant_culture] = scope[country]
+
+## scope = country
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
+alias[trigger:dominant_culture] = scope[province]
+
+## scope = country
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
+alias[trigger:dominant_culture] = enum[country_tags]
+
+## scope = country
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
+alias[trigger:dominant_culture] = <province_id>
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = <religion.not_school>
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = scope[country]
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = scope[province]
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = enum[country_tags]
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = <province_id>
 
 ## scope = country
 ###Returns true if the country has at least X doom, or at least as much doom as the specified country.
@@ -3911,6 +3943,9 @@ alias[trigger:cb_on_primitives] = bool
 ## scope = country
 alias[trigger:cb_on_religious_enemies] = bool
 
+## scope = country
+alias[trigger:cb_on_government_enemies] = bool
+
 
 ## scope = province
 alias[trigger:has_monsoon] = enum[monsoons]
@@ -3925,3 +3960,9 @@ alias[trigger:map_setup] = map_setup_random
 
 ## scope = country
 alias[trigger:num_of_trade_companies] = int
+
+## scope = country
+alias[trigger:have_had_reform] = <government_reform.new>
+
+## scope = country
+alias[trigger:has_states_general_mechanic] = bool

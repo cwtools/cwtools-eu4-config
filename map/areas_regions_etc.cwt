@@ -44,17 +44,17 @@ province_id = {
 
 
 area = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<province_id>
 }
 
 continent = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<province_id>
 }
 
 climate = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<province_id>
 }
 
@@ -64,9 +64,15 @@ region = {
 		## cardinality = 1..inf
 		<area>
 	}
+
+	## cardinality = 0..inf	
+	monsoon = {
+		## cardinality = 2..2
+		scalar #no idea what the numbers are (00.00.00)
+	}
 }
 
 superregion = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<region>
 }

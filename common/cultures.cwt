@@ -8,7 +8,7 @@ types = {
 		skip_root_key = any
 		
 		subtype[fixed] = {
-			primary = enum[country_tags]
+			primary = scalar
 		}
 	}
 }

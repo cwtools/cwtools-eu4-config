@@ -2,60 +2,70 @@
 
 #Complicated ones (separated from the rest for testing reasons)
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
 alias[effect:enum[country_tags] ] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
 alias[trigger:enum[country_tags] ] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<province_id>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<area>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[effect:<region>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[effect:<superregion>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+# scope = { country province }
 # push_scope = province
 #Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
 #alias[effect:<provincegroup>] = {
 #	alias_name[effect] = alias_match_left[effect]
 #}
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[effect:<continent>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
 alias[effect:<trade_company>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[effect:<colonial_region>] = {
@@ -63,18 +73,21 @@ alias[effect:<colonial_region>] = {
 }
 
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[trigger:<province_id>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[trigger:<area>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[trigger:<region>] = {
@@ -87,12 +100,14 @@ alias[trigger:<superregion>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+# scope = { country province }
 # push_scope = province
 #Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
 #alias[trigger:<provincegroup>] = {
 #	alias_name[trigger] = alias_match_left[trigger]
 #}
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[trigger:<continent>] = {
@@ -100,12 +115,14 @@ alias[trigger:<continent>] = {
 }
 
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any trade company found in /Europa Universalis IV/common/trade_companies/
 alias[trigger:<trade_company>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = province
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[trigger:<colonial_region>] = {
@@ -124,12 +141,14 @@ alias[effect:hidden_effect] = {
 }
 
 
+## scope = any
 ###The enclosed effects will be displayed in tooltips but not executed
 alias[effect:tooltip] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
 
+## scope = any
 alias[effect:if] = {
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -137,6 +156,7 @@ alias[effect:if] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 alias[effect:else_if] = {
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -144,11 +164,13 @@ alias[effect:else_if] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 alias[effect:else] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
 
+## scope = any
 ###The while scope is used to repeat execution of a set of effects whilst a set of trigger values remain true. Notes: A while scope loop will continue for 100,000 loops before it terminates if the trigger values never become false. It will also produce no tooltip.
 alias[effect:while] = {
 	limit = {
@@ -157,6 +179,7 @@ alias[effect:while] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 ###The trigger_switch scope is used in conjuction with triggers that return discrete values. You list each trigger value you wish to act on, and add the effects within.
 alias[effect:trigger_switch] = {
 	on_trigger = scalar
@@ -167,6 +190,7 @@ alias[effect:trigger_switch] = {
 	}
 }
 
+## scope = any
 ###The random scope is used to add a single random roll to a set of effects. The chance is out of 100.
 alias[effect:random] = {
 	###Out of 100
@@ -175,6 +199,7 @@ alias[effect:random] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 ###The random_list scope is used to add different sets of effects to a single random roll.
 alias[effect:random_list] = {
 	## cardinality = 2..inf
@@ -184,18 +209,22 @@ alias[effect:random_list] = {
 }
 
 
+## scope = any
 alias[effect:root] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 alias[effect:prev] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 alias[effect:from] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = any
 alias[effect:this] = {
 	alias_name[effect] = alias_match_left[effect]
 }
@@ -204,18 +233,21 @@ alias[effect:this] = {
 
 
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is currently the Holy Roman Emperor.
 alias[effect:emperor] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is the current revolution target.
 alias[effect:revolution_target] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is the current crusade target.
 alias[effect:crusade_target] = {
@@ -851,31 +883,38 @@ alias[effect:unit_owner] = {
 
 #Triggers
 
-#TODO: Verify whether this is actually "nor"
+## scope = any
+###This is "NOR" rather than "NAND"
 alias[trigger:NOT] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:OR] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:AND] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:root] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:prev] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:from] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = any
 alias[trigger:this] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
@@ -883,18 +922,21 @@ alias[trigger:this] = {
 
 
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is currently the Holy Roman Emperor.
 alias[trigger:emperor] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is the current revolution target.
 alias[trigger:revolution_target] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = { country province }
 ## push_scope = country
 ###Refers to the country (if it exists) that is the current crusade target.
 alias[trigger:crusade_target] = {
@@ -1338,3 +1380,14 @@ alias[trigger:all_trade_node_member_province] = {
 alias[trigger:any_trade_node_member_province] = {	
 	alias_name[trigger] = alias_match_left[trigger]
 }	
+
+
+#The wiki mislead me. This is also used a lot
+
+## scope = any
+alias[trigger:if] = {
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[trigger] = alias_match_left[trigger]
+}
