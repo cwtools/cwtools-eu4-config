@@ -1,0 +1,34 @@
+
+types = {
+	type[unit_type] = {
+		path = "game/common/units"
+		name_from_file
+		subtype[land] = {
+			type = enum[land_unit_types]
+		}
+		subtype[naval] = {
+			type = enum[naval_unit_types]
+		}
+	}
+}
+
+unit_type = {
+	type = enum[unit_types]
+
+	subtype[land] = {
+		unit_type = <technology_group>
+		maneuver = int
+		offensive_morale = int
+		defensive_morale = int
+		offensive_fire = int
+		defensive_fire = int
+		offensive_shock = int
+		defensive_shock = int
+	}
+	subtype[naval] = {
+		hull_size = int
+		base_cannons = int
+		sail_speed = int
+		sprite_level = int
+	}
+}
