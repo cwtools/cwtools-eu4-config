@@ -1382,12 +1382,25 @@ alias[trigger:any_trade_node_member_province] = {
 }	
 
 
-#The wiki mislead me. This is also used a lot
+#The wiki mislead me. This is also possible and used a lot
 
 ## scope = any
 alias[trigger:if] = {
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = any
+alias[trigger:else_if] = {
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = any
+alias[trigger:else] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
