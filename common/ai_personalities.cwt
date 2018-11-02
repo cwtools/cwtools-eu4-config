@@ -12,7 +12,7 @@ types = {
 ai_personality = {
 	## replace_scope = { this = country root = country }
 	chance = {
-		factor = int
+		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 	

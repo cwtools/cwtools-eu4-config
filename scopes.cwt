@@ -1404,3 +1404,19 @@ alias[trigger:else_if] = {
 alias[trigger:else] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+
+
+#Those of which the wiki knows not
+
+## scope = country	
+## push_scope = trade_node	
+alias[trigger:any_active_trade_node] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = country	
+## push_scope = trade_node	
+alias[effect:every_active_trade_node] = {
+	alias_name[effect] = alias_match_left[effect]
+}

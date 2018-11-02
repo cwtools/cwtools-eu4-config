@@ -3,6 +3,7 @@ types = {
 	type[religion_group] = {
 		path = "game/common/religions"
 	}
+	## type_key_filter <> religious_schools
 	type[religion] = {
 		path = "game/common/religions"	
 		skip_root_key = any
@@ -87,6 +88,7 @@ religion_group = {
 	
 	## cardinality = 0..1
 	religious_schools = {
+		## cardinality = 0..inf
 		scalar = {
 			## replace_scope = { this = country root = country }
 			potential_invite_scholar = { 
@@ -193,7 +195,7 @@ alias[religion:scalar] = {
 	
 	## cardinality = 0..1
 	orthodox_icons = {
-	
+		## cardinality = 0..inf
 		scalar = {
 			alias_name[modifier] = alias_match_left[modifier]
 			
@@ -201,7 +203,7 @@ alias[religion:scalar] = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 			ai_will_do = {
-				factor = int
+				factor = float
 				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
 		}
@@ -214,7 +216,7 @@ alias[religion:scalar] = {
 	uses_church_power = yes				# Uses church power/aspect mechanics
 	## cardinality = 0..1
 	aspects = {
-		<aspects_and_blessings.blessing>
+		<aspects_and_blessings.church_aspect>
 	}
 	## cardinality = 0..1
 	aspects_name = localisation
@@ -231,11 +233,18 @@ alias[religion:scalar] = {
 	
 	## cardinality = 0..1
 	religious_reforms = yes
+	## cardinality = 0..1
 	reform_tooltip = localisation
 
 	
 	## cardinality = 0..1
 	allowed_conversion = {
+		## cardinality = 1..inf
+		<religion.not_school>
+	}
+
+	## cardinality = 0..1
+	allowed_center_conversion = {
 		## cardinality = 1..inf
 		<religion.not_school>
 	}
@@ -274,7 +283,7 @@ alias[religion:scalar] = {
 			}
 			
 			ai_will_do = {
-				factor = int
+				factor = float
 				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
 		}

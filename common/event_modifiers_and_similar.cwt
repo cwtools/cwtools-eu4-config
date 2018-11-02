@@ -20,6 +20,9 @@ event_modifier = {
 	## cardinality = 0..1
 	###Please tell Caligula what this does
 	religion = yes
+
+	## cardinality = 0..1
+	picture = scalar #todo: sprite?
 }
 
 static_modifier = {

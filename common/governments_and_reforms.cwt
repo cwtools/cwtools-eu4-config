@@ -112,6 +112,10 @@ government_reform = {
 		icon = enum[government_icons] #todo: refers to a file name in a certain folder
 		
 		## cardinality = 0..1
+		queen = bool
+		## cardinality = 0..1
+		heir = bool
+		## cardinality = 0..1
 		religion = bool
 		## cardinality = 0..1
 		papacy = bool

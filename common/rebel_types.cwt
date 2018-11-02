@@ -91,6 +91,8 @@ rebel_type = {
 	## cardinality = 0..1
 	dynasty = bool
 
+	## cardinality = 0..1
+	handle_action_change_culture = bool
 
 	resilient = bool
 	reinforcing = bool

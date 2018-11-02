@@ -12,6 +12,17 @@ estate = {
 		int[0..255]
 	}
 
+	## cardinality = 0..1
+	##replace_scope = { this = province root = province }
+	###Used for when declaring independence
+	independence_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	
+	## cardinality = 0..1
+	###Giving territory affects power this much compared to base
+	territory_power_modifier = float
+
 	###Is estate kept in control of province on conquest?
 	keep_on_conquest = bool
 

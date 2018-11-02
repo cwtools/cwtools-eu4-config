@@ -96,9 +96,9 @@ trade_company_investment = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	
-	ai_global_worth = { factor = int }
-	ai_area_worth = { factor = int }
-	ai_region_worth = { factor = int }
+	ai_global_worth = { factor = float }
+	ai_area_worth = { factor = float }
+	ai_region_worth = { factor = float }
 }
 
 enums = {
@@ -115,6 +115,7 @@ enums = {
 
 trade_node = {
 	location = <province_id>
+	## cardinality = 0..1
 	color = {
 		## cardinality = 3..3
 		int[0..255]

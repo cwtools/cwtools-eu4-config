@@ -50,6 +50,7 @@ institution = {
 
 alias[institution_modifier_rule:modifier] = {
 	factor = float
+	## cardinality = 0..1
 	###if a modifier is scaled, it is multiplied with development in the province.
 	scale = bool
 

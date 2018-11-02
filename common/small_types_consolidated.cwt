@@ -41,6 +41,15 @@ types = {
 	}
 	type[power_projection] = {
 		path = "game/common/powerprojection"
+		
+		subtype[positive] = {
+			power = float[0.1..inf]
+		}
+
+		subtype[negative] = {
+			power = float[-1000.0..-0.1]
+		}
+
 	}
 	type[client_state] = {
 		path = "game/common/client_states"
@@ -250,7 +259,20 @@ edict = {
 
 
 power_projection = {
-	alias_name[modifier] = alias_match_left[modifier]
+	power = float
+
+	subtype[positive] = {
+		## cardinality = 0..1
+		max = float
+	}
+
+	subtype[negative] = {
+		## cardinality = 0..1
+		min = float
+	}
+
+	## cardinality = 0..1
+	yearly_decay = float
 }
 
 

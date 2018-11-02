@@ -41,6 +41,12 @@ parliament_issue = {
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	on_issue_taken = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 	
 	## cardinality = 0..1
 	modifier = {

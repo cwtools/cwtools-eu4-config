@@ -543,7 +543,7 @@ alias[effect:swap_free_idea_group] = bool
 
 ## scope = country
 ###Adds embracement for the current progressing institution within the current scope. Institutions are found in /Europa Universalis IV/common/institutions/*.txt.
-alias[effect:add_next_institution_embracement] = int[0..100]
+alias[effect:add_next_institution_embracement] = int[-100..100]
 
 ## scope = country
 ###Adds ADM technologies to the current scope. You cannot remove technologies.
@@ -689,11 +689,11 @@ alias[effect:add_navy_tradition] = int
 
 ## scope = country
 ###Adds Army Professionalism to the current scope.
-alias[effect:add_army_professionalism] = float[0.0..1.0]
+alias[effect:add_army_professionalism] = float[-1.0..1.0]
 
 ## scope = country
 ###Adds manpower to the current scope. 1 is equal to 1000 manpower.
-alias[effect:add_manpower] = float[0.1..999.0] #I am assuming no one wants to add 1,000,000 manpower to a country
+alias[effect:add_manpower] = float[-999.0..999.0] #I am assuming no one wants to add 1,000,000 manpower to a country
 
 ## scope = country
 ###Adds sailors to the current scope. 1 is equal to 1 sailor.
@@ -701,11 +701,11 @@ alias[effect:add_sailors] = int
 
 ## scope = country
 ###Adds manpower to the current scope, as a percentage of total yearly manpower. 1 is equal to 100% of total yearly manpower.
-alias[effect:add_yearly_manpower] = float[0.1..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
+alias[effect:add_yearly_manpower] = float[-10.0..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
 
 ## scope = country
 ###Adds sailors to the current scope, as a percentage of total yearly sailors. 1 is equal to 100% of total yearly sailors.
-alias[effect:add_yearly_sailors] = float[0.1..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
+alias[effect:add_yearly_sailors] = float[-10.0..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
 
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
@@ -1224,11 +1224,29 @@ alias[effect:add_spy_network_in] = {
 
 ## scope = country
 ###Creates an independent nation from provinces owned by the specified estate within the current scope's owned provinces. Estates are found in /Europa Universalis IV/common/estates/*.txt. The additional parameters for the independent nation are found within an estate's file.
-alias[effect:create_independent_estate] = <estate>
+alias[effect:create_independent_estate] = {
+	estate = <estate>
+	play_as = bool
+	## cardinality = 0..1
+	government = <government>
+	## cardinality = 0..1
+	government_reform = <government_reform>
+	## cardinality = 0..1
+	custom_national_ideas = <idea_group.country_idea>
+}
 
 ## scope = country
 ###Creates an independent nation from provinces owned by the specified estate within the current scope's owned provinces. Estates are found in /Europa Universalis IV/common/estates/*.txt. Created with the religion that the majority of the provinces that the defined estate own holds. The additional parameters for the independent nation are found within an estate's file.
-alias[effect:create_independent_estate_from_religion] = <estate>
+alias[effect:create_independent_estate_from_religion] = {
+	estate = <estate>
+	play_as = bool
+	## cardinality = 0..1
+	government = <government>
+	## cardinality = 0..1
+	government_reform = <government_reform>
+	## cardinality = 0..1
+	custom_national_ideas = <idea_group.country_idea>
+}
 
 ## scope = country
 ###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
@@ -2233,12 +2251,28 @@ alias[effect:discover_country] = scope[country]
 alias[effect:discover_country] = enum[country_tags]
 
 ## scope = province
-###The defined scope loses vision over the current province scope. Best used within areas, regions, etc to remove vision.
+###The defined scope loses vision of the current province scope. Best used within areas, regions, etc to remove vision.
 alias[effect:undiscover_country] = scope[country]
 
 ## scope = province
-###The defined scope loses vision over the current province scope. Best used within areas, regions, etc to remove vision.
+###The defined scope loses vision of the current province scope. Best used within areas, regions, etc to remove vision.
 alias[effect:undiscover_country] = enum[country_tags]
+
+## scope = country
+###The current country scope gains vision over the defined province scope. Best used with areas, regions, etc to add vision.
+alias[effect:discover_province] = scope[province]
+
+## scope = country
+###The current country scope gains vision over the defined province scope. Best used with areas, regions, etc to add vision.
+alias[effect:discover_province] = <province_id>
+
+## scope = country
+###The current country scope loses vision of the defined province scope. Best used with areas, regions, etc to add vision.
+alias[effect:undiscover_province] = scope[province]
+
+## scope = country
+###The current country scope loses vision of the defined province scope. Best used with areas, regions, etc to add vision.
+alias[effect:undiscover_province] = <province_id>
 
 ## scope = { country province }
 ###In province scope, the defined scope gains a claim on the current province scope. In country scope, the current scope gains a claim on the defined province scope.
@@ -2417,6 +2451,8 @@ alias[effect:add_unit_construction] = {
 	speed = float
 	## cardinality = 0..1
 	mercenary = yes
+	## cardinality = 0..1
+	amount = int
 }
 
 ## scope = province
@@ -2586,3 +2622,8 @@ alias[effect:dip_power_cost] = int
 ## scope = country
 alias[effect:mil_power_cost] = int
 
+## scope = country
+alias[effect:change_government_reform_progress] = int[-100..100]
+
+## scope = country
+alias[effect:change_government_via_reform] = <government.normal>

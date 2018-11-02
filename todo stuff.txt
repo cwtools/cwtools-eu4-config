@@ -21,7 +21,3 @@ effects:
 
 
 triggers
-
-## scope = country
-###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.	
-alias[trigger:<religion.not_school>] = int	
