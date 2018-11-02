@@ -19,7 +19,8 @@ types = {
 			basic_reform = yes
 		}
 		subtype[new] = {
-			legacy_equivalent = scalar
+			## cardinality = 0..1
+			legacy_government = no
 		}
 	}
 }
@@ -93,12 +94,6 @@ government_reform = {
 	subtype[new] = {
 		legacy_equivalent = <government_reform.legacy>
 		
-		## replace_scope = { root = country this = country }
-		## cardinality = 0..1
-		potential = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		
 		## cardinality = 0..1
 		assimilation_cultures = {
 			## cardinality = 1..inf
@@ -134,6 +129,8 @@ government_reform = {
 		## cardinality = 0..1
 		monarchy = bool
 		
+		## cardinality = 0..1
+		has_devotion = bool
 		## cardinality = 0..1
 		allow_force_tributary = bool
 		## cardinality = 0..1
@@ -201,6 +198,30 @@ government_reform = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 
+		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		
+		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
+		removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		
 
 		## cardinality = 0..inf
 		conditional = {

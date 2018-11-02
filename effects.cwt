@@ -235,7 +235,7 @@ alias[effect:add_legitimacy] = enum[country_tags]
 
 ## scope = country
 ###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = int
+alias[effect:add_republican_tradition] = float
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.

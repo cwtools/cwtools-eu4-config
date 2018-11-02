@@ -209,7 +209,7 @@ professionalism_modifier = {
 	army_professionalism = float[0.0..1.0]
 
 	marker_sprite = <sprite>
-	unit_sprite_start = <sprite>
+	unit_sprite_start = scalar #todo: Is the first part of a sprite name, actually
 
 	trigger = {
 		always = yes

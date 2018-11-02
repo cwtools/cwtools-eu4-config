@@ -104,6 +104,9 @@ enums = {
 		"Res Publica"
 		"American Dream"
 		"Conquest of Paradise"
+		"Dharma - Indian Sultanate Pack"
+		"Dharma - Hindu Unit Pack"
+		"Women in History"
 	}
 	enum[attitudes] = { #hardcoded so enum is ideal
 		attitude_neutral
