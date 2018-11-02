@@ -129,7 +129,7 @@ event = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		required_personality = <ruler_personality>
 		
 		## cardinality = 0..1
