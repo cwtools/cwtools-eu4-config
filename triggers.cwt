@@ -2370,7 +2370,7 @@ alias[trigger:march_of] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has at least X * 1000 available manpower.
-alias[trigger:manpower] = int
+alias[trigger:manpower] = float
 
 ## scope = country
 ###Returns true if the country has a manpower level of at least X%.

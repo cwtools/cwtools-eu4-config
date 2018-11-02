@@ -2195,6 +2195,7 @@ alias[effect:<rebel_type>] = int
 ###Spawns the defined rebels in the current province scope. Rebel types found in /Europa Universalis IV/common/rebel_types/*.txt. Note: the size of revolts follows this formula: number of regiments = round[(4 + 0.3 * total development) * (1 + 0.03 * technology level) * rebellion size]
 alias[effect:spawn_rebels] = {
 	type = <rebel_type>
+	type = religious_rebels
 	size = int
 	## cardinality = 0..1
 	culture = <culture.fixed>
