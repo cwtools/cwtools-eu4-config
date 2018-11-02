@@ -1097,6 +1097,8 @@ alias[trigger:has_global_flag] = scalar
 alias[trigger:has_global_modifier_value] = {
 	which = enum[modifiers] #todo
 	value = float
+	## cardinality = 0..1
+	extra_shortcut = bool
 }
 
 ## scope = country
@@ -1396,10 +1398,7 @@ alias[trigger:has_terrain] = <terrain>
 alias[trigger:has_trade_modifier] = {
 	who = scope[country]
 	who = enum[country_tags]
-	## cardinality = 0..1
-	name = scalar #todo: like a variable, set via add_trade_modifier
-	## cardinality = 0..1
-	key = scalar #todo: like a variable, set via add_trade_modifier
+	enum[key_name] = scalar #todo: like a variable, set via add_trade_modifier
 }
 
 ## scope = trade_node
@@ -3193,7 +3192,9 @@ alias[trigger:primitives] = bool
 ## scope = trade_node
 ###Returns true if the country has at least X trade power from privateering in the trade node.
 alias[trigger:privateer_power] = {
+	## cardinality = 0..1
 	country = scope[country]
+	## cardinality = 0..1
 	country = enum[country_tags]
 	share = int
 }
@@ -4036,3 +4037,17 @@ alias[trigger:has_trade_company_investment_in_area] = {
 ## scope = country
 ###Checks whether a tag has previously been selected by the player.
 alias[trigger:was_tag] = enum[country_tags]
+
+
+## scope = unit
+###Checks whether a tag has previously been selected by the player.
+alias[trigger:general_with_steam_name] = bool
+
+
+
+## scope = province
+###Checks whether a tag has previously been selected by the player.
+alias[trigger:num_investments_in_trade_company_region] = { 
+	investment = <trade_company_investment>
+	value = int
+}

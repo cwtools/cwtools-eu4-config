@@ -162,27 +162,38 @@ subject_type = {
 	###Root = subject, from = overlord.
 	can_fight = {
 		alias_name[trigger] = alias_match_left[trigger]
+
+		## cardinality = 0..1
+		same_overlord = <subject_type>
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_rival = {
 		alias_name[trigger] = alias_match_left[trigger]
+
+		## cardinality = 0..1
+		same_overlord = <subject_type>
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_ally = {
 		alias_name[trigger] = alias_match_left[trigger]
+
+		## cardinality = 0..1
+		same_overlord = <subject_type>
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_marry = {
 		alias_name[trigger] = alias_match_left[trigger]
+
+		## cardinality = 0..1
+		same_overlord = <subject_type>
 	}
 
-	
 	## cardinality = 0..1
 	embargo_rivals = bool
 	## cardinality = 0..1

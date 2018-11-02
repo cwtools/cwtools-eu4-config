@@ -15,7 +15,29 @@ tech_ahead_of_time = {
 }
 
 technology = {
+	## cardinality = 0..1
+	year = int
+
 	alias_name[modifier] = alias_match_left[modifier]
+
+	## cardinality = 0..1
+	combat_width = int
+	## cardinality = 0..1
+	cavalry_shock = int
+	## cardinality = 0..1
+	infantry_shock = int
+	## cardinality = 0..1
+	artillery_shock = int
+	## cardinality = 0..1
+	cavalry_fire = int
+	## cardinality = 0..1
+	infantry_fire = int
+	## cardinality = 0..1
+	artillery_fire = int
+	## cardinality = 0..1
+	military_tactics = int
+	## cardinality = 0..1
+	maneuver_value = int
 
 	## cardinality = 0..1
 	sprite_level = int

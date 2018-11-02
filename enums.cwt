@@ -53,6 +53,7 @@ enums = {
 		navy
 		canal
 		great_project
+		siberian
 	}
 	enum[export_to_variable_data] = {
 		consort_adm
@@ -107,6 +108,10 @@ enums = {
 		"Dharma - Indian Sultanate Pack"
 		"Dharma - Hindu Unit Pack"
 		"Women in History"
+	}
+	enum[key_name] = {
+		key
+		name
 	}
 	enum[attitudes] = { #hardcoded so enum is ideal
 		attitude_neutral

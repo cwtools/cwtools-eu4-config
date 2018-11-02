@@ -1,8 +1,16 @@
 
-
-
 ## scope = any
 alias[effect:<scripted_effect>] = yes
+
+## scope = any
+###The scripted effect will draw the value of the right clause via $left_clause$.
+#Todo: Make sure this works
+alias[effect:<scripted_effect>] = {
+	## cardinality = 1..inf
+	scalar = scalar
+}
+
+
 
 #Variables
 
@@ -1178,6 +1186,7 @@ alias[effect:add_casus_belli] = {
 	type = <casus_belli>
 	target = scope[country]
 	target = enum[country_tags]
+	## cardinality = 0..1
 	months = int
 }
 
@@ -1187,6 +1196,7 @@ alias[effect:reverse_add_casus_belli] = {
 	type = <casus_belli>
 	target = scope[country]
 	target = enum[country_tags]
+	## cardinality = 0..1
 	months = int
 }
 
@@ -1726,6 +1736,8 @@ alias[effect:define_heir_to_general] = {
 	shock = int
 	manuever = int
 	siege = int
+	## cardinality = 0..1
+	hidden = bool
 }
 
 ## scope = country
@@ -2011,6 +2023,18 @@ alias[effect:add_base_production] = int
 ## scope = province
 ###Adds base manpower to the current province scope.
 alias[effect:add_base_manpower] = int
+
+## scope = province
+###Sets base tax of the current province scope.
+alias[effect:set_base_tax] = int
+
+## scope = province
+###Sets base production of the current province scope.
+alias[effect:set_base_production] = int
+
+## scope = province
+###Sets base manpower of the current province scope.
+alias[effect:set_base_manpower] = int
 
 ## scope = province
 ###Adds prosperity to the current province scope.
@@ -2517,7 +2541,7 @@ alias[effect:add_trade_modifier] = {
 ###Removes a trade modifier for the defined country scope in the current tradenode province scope.
 alias[effect:remove_trade_modifier] = {
 	who = scope[country]
-	key = localisation
+	enum[key_name] = localisation
 }
 
 
@@ -2595,14 +2619,6 @@ alias[effect:add_to_trade_company] = {
 	investor = enum[country_tags]
 }
 
-
-## scope = country
-alias[effect:add_mutual_opinion_modifier_effect] = {
-	scope_country = scope[country]
-	scope_country = enum[country_tags]
-	opinion_modifier = <opinion_modifier>
-}
-
 ## scope = country
 alias[effect:free_vassal] = scope[country]
 
@@ -2627,3 +2643,16 @@ alias[effect:change_government_reform_progress] = int[-100..100]
 
 ## scope = country
 alias[effect:change_government_via_reform] = <government.normal>
+
+
+## scope = country
+alias[effect:set_capital] = scope[province]
+
+## scope = country
+alias[effect:set_capital] = <province_id>
+
+## scope = country
+alias[effect:add_government_reform] = <government_reform>
+
+## scope = country
+alias[effect:end_incident] = <incident>

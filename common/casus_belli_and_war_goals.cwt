@@ -96,6 +96,9 @@ casus_belli = {
 	valid_for_subject = no
 
 	## cardinality = 0..1
+	support_rebels = yes
+
+	## cardinality = 0..1
 	###The CB will be triggered via code e.g. in event effects.
 	is_triggered_only = yes
 

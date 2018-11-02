@@ -9,7 +9,8 @@ types = {
 enums = {
 	complex_enum[country_tags] = {
 		path = "game/common/country_tags"
-		enum_name = {
+		name = {
+			enum_name = scalar
 		}
 	}
 }

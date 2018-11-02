@@ -94,6 +94,9 @@ ruler_personality = {
 	custom_ai_explanation = localisation
 	
 	nation_designer_cost = int
+
+	## cardinality = 0..1
+	immortal = 1
 	
 	alias_name[modifier] = alias_match_left[modifier]
 }

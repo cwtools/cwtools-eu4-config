@@ -71,6 +71,7 @@ trade_company_investment = {
 
 	sprite = <sprite>
 	
+	## cardinality = 0..1
 	upgrades_to = <trade_company_investment>
 	
 	cost = float

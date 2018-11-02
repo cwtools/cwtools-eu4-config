@@ -1418,5 +1418,26 @@ alias[trigger:any_active_trade_node] = {
 ## scope = country	
 ## push_scope = trade_node	
 alias[effect:every_active_trade_node] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = country	
+## push_scope = trade_node	
+alias[effect:random_trade_node] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = country	
+## push_scope = trade_node
+###Scopes to one country that owns a province in the current trade node.	
+alias[trigger:any_trade_node] = {	
+	alias_name[trigger] = alias_match_left[trigger]
 }

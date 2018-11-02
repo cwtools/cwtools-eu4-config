@@ -27,6 +27,9 @@ event_modifier = {
 
 static_modifier = {
 	alias_name[modifier] = alias_match_left[modifier]
+
+	## cardinality = 0..1
+	picture = scalar #todo
 }
 
 
