@@ -19,8 +19,8 @@ alias[trigger:<idea_group>] = int[1..8]
 alias[trigger:<institution>] = int[0..100]
 
 ## scope = country
-###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.	
-alias[trigger:<religion.not_school>] = int	
+###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.
+alias[trigger:<religion.not_school>] = int
 
 ## scope = country
 ###Returns true if the country has at least X provinces producing the specified trade good.
@@ -3966,7 +3966,7 @@ alias[trigger:is_in_important_war] = bool
 
 
 ## scope = country
-alias[trigger:has_government_attribute] = enum[govenment_attributes]
+alias[trigger:has_government_attribute] = enum[government_attributes]
 
 ## scope = province
 alias[trigger:has_state_edict] = <edict>
@@ -4047,7 +4047,7 @@ alias[trigger:general_with_steam_name] = bool
 
 ## scope = province
 ###Checks whether a tag has previously been selected by the player.
-alias[trigger:num_investments_in_trade_company_region] = { 
+alias[trigger:num_investments_in_trade_company_region] = {
 	investment = <trade_company_investment>
 	value = int
 }

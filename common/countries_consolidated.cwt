@@ -12,6 +12,7 @@ enums = {
 		name = {
 			enum_name = scalar
 		}
+		start_from_root = yes
 	}
 }
 
