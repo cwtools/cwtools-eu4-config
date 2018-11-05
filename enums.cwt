@@ -275,7 +275,7 @@ enums = {
 	complex_enum[graphical_cultures] = {
 		path = "game/common/graphicalculturetype.txt"
 		name = {
-			enum_name = scalar
+			enum_name
 		}
 		start_from_root = yes
 	}
