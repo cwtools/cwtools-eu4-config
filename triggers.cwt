@@ -20,7 +20,7 @@ alias[trigger:<institution>] = int[0..100]
 
 ## scope = country
 ###Returns true if the country has a tolerance of at least X of the specified religion. Note: No correct localisation.
-alias[trigger:<religion.not_school>] = int
+alias[trigger:<religion>] = int
 
 ## scope = country
 ###Returns true if the country has at least X provinces producing the specified trade good.
@@ -303,7 +303,7 @@ alias[trigger:check_variable] = {
 	## cardinality = 1..2
 	which = scalar
 	## cardinality = 0..1
-	value = int
+	value = float
 }
 
 ## scope = country
@@ -328,7 +328,7 @@ alias[trigger:coalition_target] = enum[country_tags]
 
 ## scope = province
 ###Returns true if ... has gotten a colonial grant for the scope's colonial region from any potential pope-like entities.
-alias[trigger:colonial_claim_by_anyone_of_religion] = <religion.not_school> #todo: how does this work?
+alias[trigger:colonial_claim_by_anyone_of_religion] = <religion> #todo: how does this work?
 
 ## scope = province
 ###Returns true if the province is part of the colonial region X.
@@ -392,7 +392,7 @@ alias[trigger:consort_mil] = int[0..6]
 
 ## scope = country
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
-alias[trigger:consort_religion] = <religion.not_school>
+alias[trigger:consort_religion] = <religion>
 
 ## scope = country
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
@@ -599,7 +599,7 @@ alias[trigger:dominant_culture] = <province_id>
 
 ## scope = country
 ###Returns true if the dominant religion in the country is X or the same as the specified scope's.
-alias[trigger:dominant_religion] = <religion.not_school>
+alias[trigger:dominant_religion] = <religion>
 
 ## scope = country
 ###Returns true if the dominant religion in the country is X or the same as the specified scope's.
@@ -651,7 +651,9 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	is_male = bool
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	is_female = bool
+	## cardinality = 0..1
+	religion = <religion>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -1111,7 +1113,7 @@ alias[trigger:has_government_power] = unknown
 
 ## scope = country
 ###Returns true if the country has harmonized with the specified religion or religion group.
-alias[trigger:has_harmonized_with] = <religion.not_school>
+alias[trigger:has_harmonized_with] = <religion>
 
 ## scope = country
 ###Returns true if the country has harmonized with the specified religion or religion group.
@@ -1189,7 +1191,7 @@ alias[trigger:has_local_modifier_value] = {
 
 ## scope = country
 ###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
-alias[trigger:has_matching_religion] = <religion.not_school>
+alias[trigger:has_matching_religion] = <religion>
 
 ## scope = country
 ###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
@@ -1573,7 +1575,7 @@ alias[trigger:horde_unity] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.
-alias[trigger:hre_heretic_religion] = <religion.not_school>
+alias[trigger:hre_heretic_religion] = <religion>
 
 ## scope = any
 ###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.
@@ -1601,7 +1603,7 @@ alias[trigger:hre_reform_level] = int
 
 ## scope = any
 ###Returns true if the specified religion is the dominant faith of the HRE.
-alias[trigger:hre_religion] = <religion.not_school>
+alias[trigger:hre_religion] = <religion>
 
 ## scope = any
 ###Returns true if the specified religion is the dominant faith of the HRE.
@@ -1937,7 +1939,7 @@ alias[trigger:is_in_war] = {
 	war_score = int[0..100]
 
 	## cardinality = 0..1
-	start_date = scalar #todo: date
+	start_date = date_field
 
 	## cardinality = 0..1
 	war_goal_province = <province_id>
@@ -1982,8 +1984,8 @@ alias[trigger:is_looted] = bool
 alias[trigger:is_monarch_leader] = bool
 
 ## scope = any
-###Returns true if the current month is at least X (zero based).
-alias[trigger:is_month] = int[1..12]
+###Returns true if the current month is at least X (zero based i.e. 0 = January).
+alias[trigger:is_month] = int[0..11]
 
 ## scope = country
 ###Returns true if the country is a march.
@@ -2099,7 +2101,7 @@ alias[trigger:is_religion_grant_colonial_claim] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the specified religion is enabled.
-alias[trigger:is_religion_enabled] = <religion.not_school>
+alias[trigger:is_religion_enabled] = <religion>
 
 ## scope = country
 ###Returns true if the country has reformed their religion.
@@ -2902,7 +2904,8 @@ alias[trigger:num_of_rebel_controlled_provinces] = enum[country_tags]
 ## scope = country
 ###Float value: Returns true if the ratio of the provinces with the specified religion to the total provinces of the country is at least X. Integer value: Returns true if the country has at least X provinces with the specified religion.
 alias[trigger:num_of_religion] = {
-	religion = <religion.not_school>
+	## cardinality = 0..1
+	religion = <religion>
 	value = float
 	value = int
 	## cardinality = 0..1
@@ -3274,7 +3277,7 @@ alias[trigger:region] = <region>
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
-alias[trigger:religion] = <religion.not_school>
+alias[trigger:religion] = <religion>
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
@@ -3308,6 +3311,14 @@ alias[trigger:religion_group] = scope[country]
 ###Returns true if the country/province has a religion of the specified religious group.
 alias[trigger:religion_group] = enum[country_tags]
 
+## scope = { country province }
+###Returns true if the country/province has a religion of the specified religious group.
+alias[trigger:religion_group] = scope[province]
+
+## scope = { country province }
+###Returns true if the country/province has a religion of the specified religious group.
+alias[trigger:religion_group] = <province_id>
+
 ## scope = province
 ###Returns true if the country has the same religion as country X.
 alias[trigger:religion_group_claim] = scope[country]
@@ -3319,7 +3330,7 @@ alias[trigger:religion_group_claim] = enum[country_tags]
 ## scope = any
 ###Returns true if the specified religion is enabled for at least X years.
 alias[trigger:religion_years] = {
-	<religion.not_school> = int
+	<religion> = int
 }
 
 ## scope = country
@@ -3403,7 +3414,7 @@ alias[trigger:ruler_is_foreigner] = bool
 
 ## scope = country
 ###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.
-alias[trigger:ruler_religion] = <religion.not_school>
+alias[trigger:ruler_religion] = <religion>
 
 ## scope = country
 ###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.
@@ -3447,7 +3458,7 @@ alias[trigger:same_continent] = <province_id>
 
 ## scope = country
 ###Returns true the secondary religion of the country is X.
-alias[trigger:secondary_religion] = <religion.not_school>
+alias[trigger:secondary_religion] = <religion>
 
 ## scope = country
 ###Returns true if the country is the senior partner in a personal union over country X.
@@ -3483,11 +3494,11 @@ alias[trigger:stability] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the start date of the campaign is X.
-alias[trigger:start_date] = scalar #todo: date
+alias[trigger:start_date] = date_field
 
 ## scope = any
 ###Returns true if the start date of the campaign is X or after.
-alias[trigger:started_in] = scalar #todo: date
+alias[trigger:started_in] = date_field
 
 ## scope = country
 ###Returns true if Statists vs Orangists is at least X.
@@ -3798,19 +3809,25 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..inf
 	multiply_variable = {
+		## cardinality = 1..2
 		which = scalar #todo: Variable
+		## cardinality = 0..1
 		value = float
 	}
 
 	## cardinality = 0..inf
 	subtract_variable = {
+		## cardinality = 1..2
 		which = scalar #todo: Variable
+		## cardinality = 0..1
 		value = float
 	}
 
 	## cardinality = 0..inf
 	change_variable = {
+		## cardinality = 1..2
 		which = scalar #todo: Variable
+		## cardinality = 0..1
 		value = float
 	}
 
@@ -3819,12 +3836,12 @@ alias[trigger:variable_arithmetic_trigger] = {
 		## cardinality = 1..2
 		which = scalar
 		## cardinality = 0..1
-		value = int
+		value = float
 	}
 
 	## cardinality = 0..inf
 	is_variable_equal = {
-		cardinality = 2..2
+		## cardinality = 2..2
 		which = scalar #todo: variable
 	}
 }
@@ -3926,7 +3943,7 @@ alias[trigger:army_professionalism] = float[0.0..1.0]
 
 ## scope = province
 alias[trigger:can_have_center_of_reformation_trigger] = {
-	religion = <religion.not_school>
+	religion = <religion>
 }
 
 ## scope = country
@@ -3940,7 +3957,7 @@ alias[trigger:exiled_same_dynasty_as_current] = scalar	#todo: like a variable
 
 ## scope = country
 alias[trigger:compare_regiments_to_province_of_estate] = {
-	regiment = <unit_type>
+	regiment = rajput_regiment
 	estate = <estate>
 	compare = less
 }
@@ -4050,4 +4067,41 @@ alias[trigger:general_with_steam_name] = bool
 alias[trigger:num_investments_in_trade_company_region] = {
 	investment = <trade_company_investment>
 	value = int
+}
+
+## scope = country
+alias[trigger:has_mission] = <mission>
+
+
+## scope = country
+###Changes the current scope's school opinion towards the defined scope's school. -1 for negative, 0 for netural and 1 for positive.
+alias[trigger:school_opinion] = {
+	who = scope[country]
+	who = enum[country_tags]
+	###0 = 0 or more; 1 = 1 or less
+	opinion = 0
+	###0 = 0 or more; 1 = 1 or less
+	opinion = 1
+}
+
+
+## scope = country
+###Returns true if the current scope has a trust level of at least X with the specified tag. -1 for negative, 0 for netural and 1 for positive.
+alias[trigger:trust] = {
+	who = scope[country]
+	who = enum[country_tags]
+	value = int
+}
+
+## scope = province
+###Returns true if the current province scope has a prosperity level of at least X.
+alias[trigger:prosperity] = int[0..100]
+
+
+## scope = province
+alias[trigger:has_leaders] = {
+	value = int
+	type = enum[military_leader_types]
+	include_monarch = bool
+	include_heir = bool
 }

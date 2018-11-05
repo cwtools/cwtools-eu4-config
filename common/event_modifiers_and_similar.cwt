@@ -30,6 +30,17 @@ static_modifier = {
 
 	## cardinality = 0..1
 	picture = scalar #todo
+
+	## cardinality = 0..1
+	###Will make icon placed next to religion modifier
+	religion_sub_modifier = yes 
+	## cardinality = 0..1
+	religion = yes
+	## cardinality = 0..1
+	###Tells the AI and will only show the alert if country has none
+	is_scholar_modifier = yes
+	## cardinality = 0..1
+	expire_message_type = localisation
 }
 
 
@@ -68,3 +79,9 @@ province_triggered_modifier = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 }
+
+###Will affect Janissary regiments if CoC DLC is available, otherwise used as a country modifier.
+alias[modifier:is_janissary_modifier] = yes
+
+###Will affect Rajput regiments if Dharma DLC is available, otherwise used as a country modifier.
+alias[modifier:is_rajput_modifier] = yes

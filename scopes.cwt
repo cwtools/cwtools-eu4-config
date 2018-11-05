@@ -31,6 +31,10 @@ alias[effect:<province_id>] = {
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<area>] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -38,6 +42,10 @@ alias[effect:<area>] = {
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[effect:<region>] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -45,6 +53,10 @@ alias[effect:<region>] = {
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[effect:<superregion>] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -162,6 +174,7 @@ alias[effect:if] = {
 
 ## scope = any
 alias[effect:else_if] = {
+	## severity = info
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -1398,6 +1411,7 @@ alias[trigger:if] = {
 
 ## scope = any
 alias[trigger:else_if] = {
+	## severity = info
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -1443,5 +1457,12 @@ alias[effect:random_trade_node] = {
 ## push_scope = trade_node
 ###Scopes to one country that owns a province in the current trade node.
 alias[trigger:any_trade_node] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+
+## scope = country
+## push_scope = trade_node
+alias[trigger:home_trade_node] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }

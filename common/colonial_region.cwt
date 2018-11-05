@@ -35,7 +35,7 @@ colonial_region = {
 	## cardinality = 0..1
 	religion = {
 		## cardinality = 1..inf
-		<religion.not_school> = int
+		<religion> = int
 	}
 
 	## cardinality = 0..1

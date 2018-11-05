@@ -35,28 +35,28 @@ culture_group = {
 		scalar
 	}
 	
-	alias_name[culture] = alias_match_left[culture]
+	## cardinality = 1..inf
+	<culture.fixed> = {
+		## cardinality = 0..1
+		primary = enum[country_tags]
+	
+		## cardinality = 0..1
+		male_names = {
+			## cardinality = 1..inf
+			scalar
+		}
+		
+		## cardinality = 0..1
+		female_names = {
+			## cardinality = 1..inf
+			scalar
+		}
+		
+		## cardinality = 0..1
+		dynasty_names = {
+			## cardinality = 1..inf
+			scalar
+		}
+	}
 }
 
-alias[culture:scalar] = {
-	## cardinality = 0..1
-	primary = enum[country_tags]
-
-	## cardinality = 0..1
-	male_names = {
-		## cardinality = 1..inf
-		scalar
-	}
-	
-	## cardinality = 0..1
-	female_names = {
-		## cardinality = 1..inf
-		scalar
-	}
-	
-	## cardinality = 0..1
-	dynasty_names = {
-		## cardinality = 1..inf
-		scalar
-	}
-}

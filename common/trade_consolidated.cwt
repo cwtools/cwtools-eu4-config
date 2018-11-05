@@ -144,6 +144,10 @@ trade_node = {
 
 
 trading_policy = {
+	## cardinality = 0..1
+	###Only one country can select this in a certain node.
+	unique = yes
+
 	## replace_scope = { this = country root = country from = province }
 	can_select = {
 		alias_name[trigger] = alias_match_left[trigger]

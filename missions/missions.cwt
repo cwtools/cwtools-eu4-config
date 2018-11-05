@@ -55,7 +55,7 @@ mission_series = {
 		}
 
 		## cardinality = 0..1
-		completed_by = scalar #todo: date
+		completed_by = date_field
 
 		## cardinality = 0..1
 		position = int

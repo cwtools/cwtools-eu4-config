@@ -68,6 +68,12 @@ casus_belli = {
 	coalition = yes
 	## cardinality = 0..1
 	no_opinion_hit = yes
+
+	## cardinality = 0..1
+	ai_peace_desire = int
+
+	## cardinality = 0..1
+	league = yes
 	
 	subtype[triggered] = {
 		## cardinality = 0..1

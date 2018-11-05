@@ -113,6 +113,10 @@ enums = {
 		key
 		name
 	}
+	enum[which_varname] = {
+		which
+		variable_name
+	}
 	enum[attitudes] = { #hardcoded so enum is ideal
 		attitude_neutral
 		atittude_rivalry
@@ -158,6 +162,8 @@ enums = {
 		better_purbias_interaction
 		maratha_general_interaction
 		locked_government_type
+		states_general_mechanic
+		militarised_society
 	}
 	enum[game_rules_ideas] = { #currently only in ideas, but I have seen stuff like this elsewhere, maybe it is generalisable?
 		cb_on_primitives

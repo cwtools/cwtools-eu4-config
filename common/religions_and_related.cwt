@@ -7,10 +7,6 @@ types = {
 	type[religion] = {
 		path = "game/common/religions"	
 		skip_root_key = any
-
-		subtype[not_school] = {
-			icon = scalar
-		}
 	}
 	type[personal_deity] = {
 		path = "game/common/personal_deities"
@@ -77,6 +73,7 @@ religion_group = {
 
 	## cardinality = 0..1
 	flags_with_emblem_percentage = int[0..100]
+	## cardinality = 0..1
 	flag_emblem_index_range = {
 		## cardinality = 2..2
 		int
@@ -106,7 +103,7 @@ religion_group = {
 			}
 			
 			### If you don't set this it will expand on_invite_scholar effect which might be super big
-			invite_scholar_modifier_display = <country_modifier>
+			invite_scholar_modifier_display = <static_modifier>
 			
 			picture = <sprite>
 			
@@ -114,184 +111,190 @@ religion_group = {
 		}
 	}
 	
-	#Religions are inside here:
-	alias_name[religion] = alias_match_left[religion]
-}
-
-
-
-alias[religion:scalar] = {
-	icon = int
-	color = {
-		## cardinality = 3..3
-		int[0..255]
-	}
-	## cardinality = 0..1
-	country = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-	## cardinality = 0..1
-	country_as_secondary = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-	
-	## cardinality = 0..1
-	province = {
-		alias_name[modifier] = alias_match_left[modifier] #todo
-	}
-	
-	## cardinality = 0..1
-	can_have_secondary_religion = yes
-	
-	## cardinality = 0..1
-	personal_deity = yes
-	
-	## cardinality = 0..1
-	doom = yes
-	
-	## cardinality = 0..1
-	declare_war_in_regency = yes
-	
-	## cardinality = 0..1
-	authority = yes
-	
-	## cardinality = 0..1
-	fetishist_cult = yes
-			
-	## cardinality = 0..1
-	uses_isolationism = yes
-	
-	## cardinality = 0..1
-	uses_harmony = yes
-	
-	## cardinality = 0..1
-	uses_karma = yes
-	
-	## cardinality = 0..1
-	uses_piety = yes
-	
-	## cardinality = 0..1
-	misguided_heretic = yes
-	
-	## cardinality = 0..1
-	holy_sites = {
-		## cardinality = 1..inf
-		<province_id>
-	}
-	
-	## cardinality = 0..1
-	blessings = {
-		<aspects_and_blessings.blessing>
-	}
-
-	## cardinality = 0..1
-	has_patriarchs = yes
-	
-	## cardinality = 0..1
-	date = scalar #todo: date
-
-	## cardinality = 0..1
-	fervor = yes
-	
-	## cardinality = 0..1
-	orthodox_icons = {
-		## cardinality = 0..inf
-		scalar = {
-			alias_name[modifier] = alias_match_left[modifier]
-			
-			allow = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			ai_will_do = {
-				factor = float
-				alias_name[modifier_rule] = alias_match_left[modifier_rule]
-			}
-		}
-	}
-	
-	
-	## cardinality = 0..1
-	uses_anglican_power = yes				# Uses church power/aspect mechanics
-	## cardinality = 0..1
-	uses_church_power = yes				# Uses church power/aspect mechanics
-	## cardinality = 0..1
-	aspects = {
-		<aspects_and_blessings.church_aspect>
-	}
-	## cardinality = 0..1
-	aspects_name = localisation
-	
-	## cardinality = 0..1
-	hre_heretic_religion = yes
-	
-	## cardinality = 0..1
-	## replace_scope = { this = country root = country }
-	will_get_center = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-
-	
-	## cardinality = 0..1
-	religious_reforms = yes
-	## cardinality = 0..1
-	reform_tooltip = localisation
-
-	
-	## cardinality = 0..1
-	allowed_conversion = {
-		## cardinality = 1..inf
-		<religion.not_school>
-	}
-
-	## cardinality = 0..1
-	allowed_center_conversion = {
-		## cardinality = 1..inf
-		<religion.not_school>
-	}
-	
-	## cardinality = 0..1
-	on_convert = {
-		alias_name[effect] = alias_match_left[effect]
-	}
-	
-	## cardinality = 0..1
-	hre_religion = yes
-	
-	## cardinality = 0..1
-	papacy = {
-		papal_tag = enum[country_tags]
-		election_cost = int
-		seat_of_papacy = <province_id>
+	#Religions are inside here
+	## cardinality = 0..inf
+	<religion> = {
 		
-		## cardinality = 1..inf
-		scalar = {
-			cost = int[0..100]
-			
-			## replace_scope = { this = country root = country }
-			potential = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			
-			## replace_scope = { this = country root = country }
-			allow = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			
-			## replace_scope = { this = country root = country }
-			effect = {
-				alias_name[effect] = alias_match_left[effect]
-			}
-			
-			ai_will_do = {
-				factor = float
-				alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		## cardinality = 0..1
+		flags_with_emblem_percentage = int[0..100]
+		## cardinality = 0..1
+		flag_emblem_index_range = {
+			## cardinality = 2..2
+			int
+		}
+
+		icon = int
+		color = {
+			## cardinality = 3..3
+			int[0..255]
+		}
+		## cardinality = 0..1
+		country = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		country_as_secondary = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		
+		## cardinality = 0..1
+		province = {
+			alias_name[modifier] = alias_match_left[modifier] #todo
+		}
+		
+		## cardinality = 0..1
+		can_have_secondary_religion = yes
+		
+		## cardinality = 0..1
+		personal_deity = yes
+		
+		## cardinality = 0..1
+		doom = yes
+		
+		## cardinality = 0..1
+		declare_war_in_regency = yes
+		
+		## cardinality = 0..1
+		authority = yes
+		
+		## cardinality = 0..1
+		fetishist_cult = yes
+				
+		## cardinality = 0..1
+		uses_isolationism = yes
+		
+		## cardinality = 0..1
+		uses_harmony = yes
+		
+		## cardinality = 0..1
+		uses_karma = yes
+		
+		## cardinality = 0..1
+		uses_piety = yes
+		
+		## cardinality = 0..1
+		misguided_heretic = yes
+		
+		## cardinality = 0..1
+		holy_sites = {
+			## cardinality = 1..inf
+			<province_id>
+		}
+		
+		## cardinality = 0..1
+		blessings = {
+			<aspects_and_blessings.blessing>
+		}
+	
+		## cardinality = 0..1
+		has_patriarchs = yes
+		
+		## cardinality = 0..1
+		date = date_field
+	
+		## cardinality = 0..1
+		fervor = yes
+		
+		## cardinality = 0..1
+		orthodox_icons = {
+			## cardinality = 0..inf
+			scalar = {
+				alias_name[modifier] = alias_match_left[modifier]
+				
+				allow = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				ai_will_do = {
+					factor = float
+					alias_name[modifier_rule] = alias_match_left[modifier_rule]
+				}
 			}
 		}
-	}
+		
+		
+		## cardinality = 0..1
+		uses_anglican_power = yes				# Uses church power/aspect mechanics
+		## cardinality = 0..1
+		uses_church_power = yes				# Uses church power/aspect mechanics
+		## cardinality = 0..1
+		aspects = {
+			<aspects_and_blessings.church_aspect>
+		}
+		## cardinality = 0..1
+		aspects_name = localisation
+		
+		## cardinality = 0..1
+		hre_heretic_religion = yes
+		
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
+		will_get_center = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	
-	heretic = {
-		## cardinality = 1..inf
-		localisation
+		
+		## cardinality = 0..1
+		religious_reforms = yes
+		## cardinality = 0..1
+		reform_tooltip = localisation
+	
+		
+		## cardinality = 0..1
+		allowed_conversion = {
+			## cardinality = 1..inf
+			<religion>
+		}
+	
+		## cardinality = 0..1
+		allowed_center_conversion = {
+			## cardinality = 1..inf
+			<religion>
+		}
+		
+		## cardinality = 0..1
+		on_convert = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		
+		## cardinality = 0..1
+		hre_religion = yes
+		
+		## cardinality = 0..1
+		papacy = {
+			papal_tag = enum[country_tags]
+			election_cost = int
+			seat_of_papacy = <province_id>
+			
+			## cardinality = 1..inf
+			scalar = {
+				cost = int[0..100]
+				
+				## replace_scope = { this = country root = country }
+				potential = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				
+				## replace_scope = { this = country root = country }
+				allow = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				
+				## replace_scope = { this = country root = country }
+				effect = {
+					alias_name[effect] = alias_match_left[effect]
+				}
+				
+				ai_will_do = {
+					factor = float
+					alias_name[modifier_rule] = alias_match_left[modifier_rule]
+				}
+			}
+		}
+		
+		heretic = {
+			## cardinality = 1..inf
+			localisation
+		}
 	}
 }
 

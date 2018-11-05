@@ -13,7 +13,7 @@ institution = {
 	}
 
 	## cardinality = 0..1
-	historical_start_date = scalar #todo: date
+	historical_start_date = date_field
 	## cardinality = 0..1
 	historical_start_province = <province_id>
 
@@ -62,6 +62,10 @@ alias[institution_modifier_rule:modifier] = {
 	any_friendly_coast_border_province = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+
+	## cardinality = 0..1
+	###Hide the this modifier when potential is false
+	force_potential = yes
 
 	## cardinality = 0..1
 	potential = {

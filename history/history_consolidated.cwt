@@ -23,7 +23,7 @@ advisor_id = {
 	## cardinality = 0..1
 	culture = <culture.fixed>
 	## cardinality = 0..1
-	religion = <religion.not_school>
-	date = scalar #todo: date
-	death_date = scalar #todo: date
+	religion = <religion>
+	date = date_field
+	death_date = date_field
 }

@@ -29,25 +29,33 @@ alias[effect:export_to_variable] = {
 
 ## scope = any
 alias[effect:multiply_variable] = {
+	## cardinality = 1..2
 	which = scalar #todo: Variable
+	## cardinality = 0..1
 	value = float
 }
 
 ## scope = any
 alias[effect:change_variable] = {
+	## cardinality = 1..2
 	which = scalar #todo: Variable
+	## cardinality = 0..1
 	value = float
 }
 
 ## scope = any
 alias[effect:subtract_variable] = {
+	## cardinality = 1..2
 	which = scalar #todo: Variable
+	## cardinality = 0..1
 	value = float
 }
 
 ## scope = any
 alias[effect:set_variable] = {
+	## cardinality = 1..2
 	which = scalar #todo: Variable
+	## cardinality = 0..1
 	value = scalar #todo: Variable or float
 }
 
@@ -113,6 +121,7 @@ alias[effect:country_event] = {
 ###Adds modifier to the current scope as a country modifier.
 alias[effect:add_country_modifier] = {
 	name = <event_modifier>
+	name = <static_modifier>
 	## cardinality = 0..1
 	###The number of days to add the country modifier for.
 	duration = int
@@ -371,7 +380,7 @@ alias[effect:remove_accepted_culture] = <province_id>
 
 ## scope = { country province }
 ###Changes the religion of the current country/province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.
-alias[effect:change_religion] = <religion.not_school>
+alias[effect:change_religion] = <religion>
 
 ## scope = { country province }
 ###Changes the religion of the current country/province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.
@@ -485,7 +494,7 @@ alias[effect:add_harmony] = int
 
 ## scope = country
 ###Adds a religion to the list of Harmonized religions for the current scope. No effect if the country does not hold a religion using uses_harmony.
-alias[effect:add_harmonized_religion] = <religion.not_school>
+alias[effect:add_harmonized_religion] = <religion>
 
 ## scope = country
 ###Adds Harmonization Progress for the current harmonization target to the current scope. No effect if the country does not hold a religion using uses_harmony.
@@ -631,7 +640,7 @@ alias[effect:define_advisor] = {
 	## cardinality = 0..1
 	culture = scope[province]
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	religion = <religion>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -1265,6 +1274,8 @@ alias[effect:add_estate_influence_modifier] = {
 	desc = localisation
 	influence = int
 	duration = int
+	## cardinality = 0..1
+	add = yes
 }
 
 ## scope = country
@@ -1364,7 +1375,7 @@ alias[effect:set_ruler_culture] = scope[province]
 
 ## scope = country
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_ruler_religion] = <religion.not_school>
+alias[effect:set_ruler_religion] = <religion>
 
 ## scope = country
 ###Changes the ruler religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1498,7 +1509,7 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	culture = <province_id>
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	religion = <religion>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -1547,7 +1558,7 @@ alias[effect:set_consort_culture] = enum[country_tags]
 
 ## scope = country
 ###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_consort_religion] = <religion.not_school>
+alias[effect:set_consort_religion] = <religion>
 
 ## scope = country
 ###Changes the consort religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1618,7 +1629,7 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	culture = <province_id>
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	religion = <religion>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -1687,7 +1698,7 @@ alias[effect:set_heir_culture] = enum[country_tags]
 
 ## scope = country
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_heir_religion] = <religion.not_school>
+alias[effect:set_heir_religion] = <religion>
 
 ## scope = country
 ###Changes the heir religion of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1790,7 +1801,7 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	culture = <province_id>
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	religion = <religion>
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -1858,11 +1869,11 @@ alias[effect:enable_hre_leagues] = yes
 
 ## scope = country
 ###Makes the defined religion the official religion of the HRE.
-alias[effect:set_hre_religion] = <religion.not_school>
+alias[effect:set_hre_religion] = <religion>
 
 ## scope = country
 ###Makes the defined religion the heretic religion of the HRE.
-alias[effect:set_hre_heretic_religion] = <religion.not_school>
+alias[effect:set_hre_heretic_religion] = <religion>
 
 ## scope = country
 ###Locks the official and heretic religion assignments, ending the Religious Leagues.
@@ -2146,11 +2157,11 @@ alias[effect:remove_cardinal] = yes
 
 ## scope = province
 ###Adds a Center of Reformation for the defined religion in the current province scope.
-alias[effect:add_reform_center] = <religion.not_school>
+alias[effect:add_reform_center] = <religion>
 
 ## scope = province
 ###Removes the Center of Reformation for the defined religion in the current province scope.
-alias[effect:remove_reform_center] = <religion.not_school>
+alias[effect:remove_reform_center] = <religion>
 
 ## scope = province
 ###Adds an estate to the current province scope. Will override any previous estate.
@@ -2208,7 +2219,7 @@ alias[effect:spawn_rebels] = {
 	## cardinality = 0..1
 	culture = scope[province]
 	## cardinality = 0..1
-	religion = <religion.not_school>
+	religion = <religion>
 	## cardinality = 0..1
 	religion = enum[country_tags]
 	## cardinality = 0..1
@@ -2657,3 +2668,10 @@ alias[effect:add_government_reform] = <government_reform>
 
 ## scope = country
 alias[effect:end_incident] = <incident>
+
+
+## scope = province
+alias[effect:rajput_infantry] = scope[country]
+
+## scope = province
+alias[effect:rajput_infantry] = enum[country_tags]

@@ -93,7 +93,7 @@ new_diplomatic_action = {
 				
 				## cardinality = 0..inf
 				export_to_variable = {
-					which = ai_value
+					enum[which_varname] = ai_value
 					value = enum[export_to_variable_data]
 					## cardinality = 0..1
 					who = scope[country]
