@@ -274,7 +274,8 @@ enums = {
 	}
 	complex_enum[graphical_cultures] = {
 		path = "game/common/graphicalculturetype.txt"
-		enum_name = {
+		name = {
+			enum_name = scalar
 		}
 	}
 }
