@@ -1518,6 +1518,8 @@ alias[effect:define_ruler] = {
 	religion = scope[province]
 	## cardinality = 0..1
 	religion = <province_id>
+	## cardinality = 0..1
+	rebel = yes
 }
 
 ## scope = country
