@@ -2685,3 +2685,15 @@ alias[effect:rajput_infantry] = enum[country_tags]
 ## scope = country
 alias[effect:remove_government_reform] = <government_reform.new>
 
+## scope = country
+alias[effect:add_loan] = {
+	interest_modifier = float
+	###If yes, interest will never change.
+	fixed_interest = bool
+	###In months
+	duration = int
+}
+
+## scope = country
+###Raises war taxes without spending Military Power.
+alias[effect:raise_war_taxes] = yes

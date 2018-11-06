@@ -13,6 +13,10 @@ estate = {
 	}
 
 	## cardinality = 0..1
+	###Estate will always be removed when conquered by a different religion than previous owner
+	always_remove_on_religious_conquest = yes
+
+	## cardinality = 0..1
 	##replace_scope = { this = province root = province }
 	###Used for when declaring independence
 	independence_trigger = {
