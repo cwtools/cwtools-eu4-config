@@ -44,6 +44,7 @@ enums = {
 		po_take_mandate
 		po_force_migration
 		po_transfer_vassals
+		po_dismantle_revolution
 	}
 	enum[wargoal_types] = {
 		take_colony
@@ -137,17 +138,15 @@ wargoal_type = {
 		## cardinality = 1..inf
 		enum[peace_options]
 	}
-
-	subtype[demand_provinces] = {
-		## cardinality = 0..1
-		## replace_scope = { root = country this = province from = country }
-		###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
-		allowed_provinces = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## cardinality = 0..1
-		allowed_provinces_are_eligible = yes
+	
+	## cardinality = 0..1
+	## replace_scope = { root = country this = province from = country }
+	###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
+	allowed_provinces = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	allowed_provinces_are_eligible = yes
 	
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country from = country }
@@ -166,17 +165,15 @@ wargoal_type = {
 		###Multiplied with the cost of the peace options in the peace treaty.
 		peace_cost_factor = float
 
-		subtype[demand_provinces] = {
-			## cardinality = 0..1
-			## replace_scope = { root = country this = province from = country }
-			###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
-			allowed_provinces = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			## cardinality = 0..1
-			allowed_provinces_are_eligible = yes
+		## cardinality = 0..1
+		## replace_scope = { root = country this = province from = country }
+		###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
+		allowed_provinces = {
+			alias_name[trigger] = alias_match_left[trigger]
 		}
-
+		## cardinality = 0..1
+		allowed_provinces_are_eligible = yes
+		
 		peace_options = {
 			## cardinality = 1..inf
 			enum[peace_options]
@@ -184,6 +181,8 @@ wargoal_type = {
 
 		## cardinality = 0..1
 		prov_desc = localisation
+		## cardinality = 0..1
+		country_desc = localisation
 	}
 
 	## cardinality = 0..1
@@ -197,16 +196,14 @@ wargoal_type = {
 		###Multiplied with the cost of the peace options in the peace treaty.
 		peace_cost_factor = float
 
-		subtype[demand_provinces] = {
-			## cardinality = 0..1
-			## replace_scope = { root = country this = province from = country }
-			###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
-			allowed_provinces = {
-				alias_name[trigger] = alias_match_left[trigger]
-			}
-			## cardinality = 0..1
-			allowed_provinces_are_eligible = yes
+		## cardinality = 0..1
+		## replace_scope = { root = country this = province from = country }
+		###If 'po_demand_provinces' is on, badboy_factor applies to these provinces.
+		allowed_provinces = {
+			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..1
+		allowed_provinces_are_eligible = yes
 
 		peace_options = {
 			## cardinality = 1..inf
@@ -215,6 +212,8 @@ wargoal_type = {
 
 		## cardinality = 0..1
 		prov_desc = localisation
+		## cardinality = 0..1
+		country_desc = localisation
 	}
 
 	## cardinality = 0..1
