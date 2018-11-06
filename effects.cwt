@@ -1844,20 +1844,20 @@ alias[effect:set_in_empire] = yes
 alias[effect:set_in_empire] = bool
 
 ## scope = country
-###Makes the seat of the Emperor inheritable.
-alias[effect:hre_inheritable] = yes
+###Makes the seat of the Emperor inheritable or no longer inheritable.
+alias[effect:hre_inheritable] = bool
 
 ## scope = country
 ###Enables or disables the Imperial Ban casus belli.
 alias[effect:imperial_ban_allowed] = bool
 
 ## scope = country
-###Disables casus belli creation for HRE members against one another.
-alias[effect:internal_hre_cb] = no
+###Enables or disables casus belli creation for HRE members against one another.
+alias[effect:internal_hre_cb] = bool
 
 ## scope = country
-###Enables female rulers to become emperor.
-alias[effect:set_allow_female_emperor] = yes
+###Allows or disallows female rulers to become emperor.
+alias[effect:set_allow_female_emperor] = bool
 
 ## scope = country
 ###Disbands the HRE and removes all members from it.
