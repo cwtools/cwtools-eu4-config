@@ -83,6 +83,12 @@ subject_type = {
 	## cardinality = 0..1
 	uses_military_focus = bool
 	## cardinality = 0..1
+	created_by_overlord = bool
+	## cardinality = 0..1
+	transfer_subjects_when_made = bool
+	## cardinality = 0..1
+	restoration_cb = <casus_belli>
+	## cardinality = 0..1
 	###Whether overlord always gets called (declinable) against countries without the same overlord. When this is 'no' overlord will only join if the defender would have been blocked (by its subject type) from attacking the attacker.
 	overlord_protects_external = bool
 	## cardinality = 0..1
@@ -161,37 +167,77 @@ subject_type = {
 	##replace_scope = { root = country this = country from = country }
 	###Root = subject, from = overlord.
 	can_fight = {
-		alias_name[trigger] = alias_match_left[trigger]
-
 		## cardinality = 0..1
 		same_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = all
+		## cardinality = 0..1
+		neighboring_primitives = yes
+		## cardinality = 0..1
+		colonial_region_nations = yes
+		## cardinality = 0..1
+		independent_nations = yes
+		## cardinality = 0..1
+		can_send_tribute = yes
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_rival = {
-		alias_name[trigger] = alias_match_left[trigger]
-
 		## cardinality = 0..1
 		same_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = all
+		## cardinality = 0..1
+		neighboring_primitives = yes
+		## cardinality = 0..1
+		colonial_region_nations = yes
+		## cardinality = 0..1
+		independent_nations = yes
+		## cardinality = 0..1
+		can_send_tribute = yes
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_ally = {
-		alias_name[trigger] = alias_match_left[trigger]
-
 		## cardinality = 0..1
 		same_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = all
+		## cardinality = 0..1
+		neighboring_primitives = yes
+		## cardinality = 0..1
+		colonial_region_nations = yes
+		## cardinality = 0..1
+		independent_nations = yes
+		## cardinality = 0..1
+		can_send_tribute = yes
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_marry = {
-		alias_name[trigger] = alias_match_left[trigger]
-
 		## cardinality = 0..1
 		same_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = <subject_type>
+		## cardinality = 0..1
+		other_overlord = all
+		## cardinality = 0..1
+		neighboring_primitives = yes
+		## cardinality = 0..1
+		colonial_region_nations = yes
+		## cardinality = 0..1
+		independent_nations = yes
+		## cardinality = 0..1
+		can_send_tribute = yes
 	}
 
 	## cardinality = 0..1
