@@ -287,8 +287,12 @@ alias[effect:add_tribal_allegiance] = int
 alias[effect:change_statists_vs_orangists] = float
 
 ## scope = country
-###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt.
+###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt. In rebel_types, REB will make it pick the preferred rebel government.
 alias[effect:change_government] = <government.normal>
+
+## scope = country
+###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt. In rebel_types, REB will make it pick the preferred rebel government.
+alias[effect:change_government] = REB
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
@@ -698,11 +702,11 @@ alias[effect:end_disaster] = <disaster>
 
 ## scope = country
 ###Adds Army Tradition to the current scope.
-alias[effect:add_army_tradition] = int
+alias[effect:add_army_tradition] = float
 
 ## scope = country
 ###Adds Navy Tradition to the current scope.
-alias[effect:add_navy_tradition] = int
+alias[effect:add_navy_tradition] = float
 
 ## scope = country
 ###Adds Army Professionalism to the current scope.
@@ -2677,3 +2681,7 @@ alias[effect:rajput_infantry] = scope[country]
 
 ## scope = province
 alias[effect:rajput_infantry] = enum[country_tags]
+
+## scope = country
+alias[effect:remove_government_reform] = <government_reform.new>
+

@@ -165,17 +165,19 @@ enums = {
 		states_general_mechanic
 		militarised_society
 	}
-	enum[game_rules_ideas] = { #currently only in ideas, but I have seen stuff like this elsewhere, maybe it is generalisable?
-		cb_on_primitives
-		may_explore
-		may_establish_frontier
-		may_perform_slave_raid
-		no_religion_penalty
-	}
 	enum[monsoons] = {
 		severe_monsoon
 		normal_monsoon
 		mild_monsoon
+	}
+	enum[local_autonomy_modifier] = {
+		local_manpower_modifier
+		local_sailors_modifier
+		land_forcelimit_modifier
+		naval_forcelimit_modifier
+		province_trade_power_modifier
+		local_tax_modifier
+		local_production_efficiency
 	}
 	enum[event_pictures] = { #covered via sprite type, hopefully
 		NOBLE_ESTATE_DEMANDS_eventPicture

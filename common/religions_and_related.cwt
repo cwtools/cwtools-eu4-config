@@ -361,9 +361,11 @@ religious_reform_group = {
 	}
 	
 	#I don't think these are referred to from elsewhere
-	## Cardinality = 5..5
+	## cardinality = 5..5
 	localisation = {
 		alias_name[modifier] = alias_match_left[modifier]
+		
+		alias_name[ability] = alias_match_left[ability]
 	}
 	
 	## replace_scope = { root = country this = country }

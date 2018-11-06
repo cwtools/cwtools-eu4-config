@@ -63,9 +63,7 @@ disaster = {
 		## cardinality = 0..1
 		events = {
 			## cardinality = 0..inf
-			int = 0
-			## cardinality = 0..inf
-			int = <event.country>
+			<event.country>
 		}
 		## cardinality = 0..1
 		random_events = {

@@ -195,14 +195,8 @@ policy = {
 	}
 	
 	alias_name[modifier] = alias_match_left[modifier]
-	
-	## cardinality = 0..1
-	#todo: can this be used elsewhere?
-	auto_explore_adjacent_to_colony = yes
 
-	## cardinality = 0..1
-	#todo: can this be used elsewhere?
-	may_recruit_female_generals = yes
+	alias_name[ability] = alias_match_left[ability]
 	
 	## replace_scope = { this = country root = country }
 	ai_will_do = {

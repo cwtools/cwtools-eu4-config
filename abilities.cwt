@@ -1,0 +1,20 @@
+
+#This is for stuff that lets a country have a new ability. I do not know the scope of what can be put in multiple files, so for now I will only put stuff in here that I have found in multiple files, with annotations as to which.
+
+
+#Found in ideas, native advancements, policies and religious reforms
+alias[ability:auto_explore_adjacent_to_colony] = yes
+
+#Found in ideas, policies
+alias[ability:may_recruit_female_generals] = yes
+
+
+#the following stuff has only been seen in ideas
+
+alias[ability:reduced_stab_impacts] = yes
+alias[ability:may_convert_territories] = yes
+alias[ability:cb_on_primitives] = yes
+alias[ability:may_explore] = yes
+alias[ability:may_establish_frontier] = yes
+alias[ability:may_perform_slave_raid] = yes
+alias[ability:no_religion_penalty] = yes

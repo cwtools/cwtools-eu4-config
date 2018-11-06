@@ -47,8 +47,9 @@ estate = {
 	###Min autonomy in estate provinces
 	min_autonomy = int[0..100]
 	
+	## cardinality = 0..inf
 	###Estate cancels out the following multiplicative local autonomy effects:
-	autonomy_does_not_affect = enum[modifiers] #todo
+	autonomy_does_not_affect = enum[local_autonomy_modifier]
 
 	###These scale with loyalty & power
 	country_modifier_happy = {

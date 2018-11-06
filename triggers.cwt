@@ -4109,3 +4109,13 @@ alias[trigger:has_leaders] = {
 	include_monarch = bool
 	include_heir = bool
 }
+
+
+## scope = country
+alias[trigger:num_of_janissaries] = int
+
+## scope = country
+alias[trigger:neighbors_tech_discount] = float
+
+## scope = country
+alias[trigger:is_primitive] = bool

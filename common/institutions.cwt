@@ -22,11 +22,14 @@ institution = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
+	## cardinality = 0..1
 	## replace_scope = { this = province root = province }
 	can_start = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
 	start_chance = int[0..100]
+	## cardinality = 0..1
 	on_start = <event.country>
 
 	## replace_scope = { this = province root = province }

@@ -17,9 +17,10 @@ types = {
 
 
 enums = {
+	#todo: Make this into a type which excludes start, trigger, bonus
 	complex_enum[ideas] = {
 		path = "game/common/ideas"
-		scalar = {
+		name = {
 			enum_name = {
 			}
 		}
@@ -37,6 +38,9 @@ enums = {
 
 idea_group = {
 	subtype[selectable] = {
+		## cardinality = 0..1
+		important = yes
+
 		ai_will_do = {
 			factor = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -48,8 +52,7 @@ idea_group = {
 	bonus = {
 		alias_name[modifier] = alias_match_left[modifier]
 
-		## cardinality = 0..inf
-		enum[game_rules_ideas] = bool
+		alias_name[ability] = alias_match_left[ability]
 	}
 
 	## cardinality = 0..1
@@ -62,8 +65,7 @@ idea_group = {
 	localisation = {
 		alias_name[modifier] = alias_match_left[modifier]
 
-		## cardinality = 0..inf
-		enum[game_rules_ideas] = bool
+		alias_name[ability] = alias_match_left[ability]
 	}
 	
 	
@@ -71,8 +73,7 @@ idea_group = {
 		start = {
 			alias_name[modifier] = alias_match_left[modifier]
 			
-			## cardinality = 0..inf
-			enum[game_rules_ideas] = bool
+			alias_name[ability] = alias_match_left[ability]
 		}
 		free = yes
 	}
@@ -86,6 +87,8 @@ native_advancement_group = {
 	## cardinality = 5..5
 	localisation = {
 		alias_name[modifier] = alias_match_left[modifier]
+		
+		alias_name[ability] = alias_match_left[ability]
 	}
 	
 	###ai_will do does not actually determine weighting, but AI will not pick an idea with ai_will_do = 0
