@@ -3232,8 +3232,12 @@ alias[trigger:province_distance] = {
 }
 
 ## scope = province
-###Returns true if the province has the ID X.
+###Returns true if the province has the ID X or the same ID as the specified province scope.
 alias[trigger:province_id] = <province_id>
+
+## scope = province
+###Returns true if the province has the ID X or the same ID as the specified province scope.
+alias[trigger:province_id] = scope[province]
 
 ## scope = province
 ###Returns true if the province belongs to the specified province group.
