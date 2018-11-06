@@ -24,9 +24,10 @@ enums = {
 			}
 		}
 	}
+	#todo: Make this into a type which excludes start, trigger, bonus
 	complex_enum[native_advancements] = {
 		path = "game/common/native_advancements"
-		scalar = {
+		name = {
 			enum_name = {
 			}
 		}
