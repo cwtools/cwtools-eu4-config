@@ -3,18 +3,16 @@ types = {
 	type[culture_group] = {
 		path = "game/common/cultures"
 	}
+	#todo: exclude male_names, femaile_names and dynasty_names
 	type[culture] = {
 		path = "game/common/cultures"
 		skip_root_key = any
-		
-		subtype[fixed] = {
-			primary = scalar
-		}
 	}
 }
 
 
 culture_group = {
+	## cardinality = 0..1
 	graphical_culture = enum[graphical_cultures]
 	
 	## cardinality = 0..1
@@ -36,7 +34,7 @@ culture_group = {
 	}
 	
 	## cardinality = 1..inf
-	<culture.fixed> = {
+	<culture> = {
 		## cardinality = 0..1
 		primary = enum[country_tags]
 	

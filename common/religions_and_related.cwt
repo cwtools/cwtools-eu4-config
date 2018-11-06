@@ -26,7 +26,7 @@ types = {
 enums = {
 	complex_enum[orthodox_icons] = {
 		path = "game/common/religions"
-		scalar = {
+		name = {
 			scalar = {
 				orthodox_icons = {
 					enum_name = {
@@ -37,7 +37,7 @@ enums = {
 	}
 	complex_enum[papal_policies] = {
 		path = "game/common/religions"
-		scalar = {
+		name = {
 			scalar = {
 				papacy = {
 					enum_name = {
@@ -48,7 +48,7 @@ enums = {
 	}
 	complex_enum[religious_schools] = {
 		path = "game/common/religions"
-		scalar = {
+		name = {
 			religious_schools = {
 				enum_name = {
 				}
@@ -79,6 +79,7 @@ religion_group = {
 		int
 	}
 	
+	## cardinality = 0..1
 	harmonized_modifier = <event_modifier>
 	
 	crusade_name = localisation
@@ -114,6 +115,8 @@ religion_group = {
 	#Religions are inside here
 	## cardinality = 0..inf
 	<religion> = {
+		## cardinality = 0..1
+		harmonized_modifier = <event_modifier>
 		
 		## cardinality = 0..1
 		flags_with_emblem_percentage = int[0..100]

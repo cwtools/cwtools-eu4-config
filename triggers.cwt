@@ -32,7 +32,7 @@ alias[trigger:absolutism] = int[0..100]
 
 ## scope = country
 ###Returns true if the country accepts the specified culture.
-alias[trigger:accepted_culture] = <culture.fixed> #todo
+alias[trigger:accepted_culture] = <culture> #todo
 
 ## scope = country
 ###Returns true if the country accepts the specified culture.
@@ -364,7 +364,7 @@ alias[trigger:consort_dip] = int[0..6]
 
 ## scope = country
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.
-alias[trigger:consort_culture] = <culture.fixed>
+alias[trigger:consort_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.
@@ -464,11 +464,27 @@ alias[trigger:country_or_vassal_holds] = enum[country_tags]
 
 ## scope = province
 ###Returns true if the province culture is X.
-alias[trigger:culture] = <culture.fixed>
+alias[trigger:culture] = <culture>
 
 ## scope = { country province }
 ###Returns true if the country/province has a culture of the specified culture group.
 alias[trigger:culture_group] = <culture_group>
+
+## scope = { country province }
+###Returns true if the country/province has a culture of the specified culture group or the same culture group as the specified scope.
+alias[trigger:culture_group] = scope[province]
+
+## scope = { country province }
+###Returns true if the country/province has a culture of the specified culture group.
+alias[trigger:culture_group] = scope[country]
+
+## scope = { country province }
+###Returns true if the country/province has a culture of the specified culture group.
+alias[trigger:culture_group] = <province_id>
+
+## scope = { country province }
+###Returns true if the country/province has a culture of the specified culture group.
+alias[trigger:culture_group] = enum[country_tags]
 
 ## scope = country
 ###Returns true if country's primary culture is the same culture group as any province owned by country X.
@@ -579,7 +595,7 @@ alias[trigger:dip_tech] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the dominant culture in the country is X or the same as the specified scope's.
-alias[trigger:dominant_culture] = <culture.fixed> #todo: wiki says "capital"
+alias[trigger:dominant_culture] = <culture> #todo: wiki says "capital"
 
 ## scope = country
 ###Returns true if the dominant culture in the country is X or the same as the specified scope's.
@@ -663,7 +679,7 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	religion = <province_id>
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -1473,7 +1489,7 @@ alias[trigger:heir_claim] = int[0..100]
 
 ## scope = country
 ###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.
-alias[trigger:heir_culture] = <culture.fixed>
+alias[trigger:heir_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.
@@ -1517,7 +1533,7 @@ alias[trigger:heir_nationality] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.
-alias[trigger:heir_religion] = <culture.fixed>
+alias[trigger:heir_religion] = <culture>
 
 ## scope = country
 ###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.
@@ -3170,7 +3186,7 @@ alias[trigger:previous_owner] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country's primary culture is X.
-alias[trigger:primary_culture] = <culture.fixed>
+alias[trigger:primary_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's primary culture is X.
@@ -3390,7 +3406,7 @@ alias[trigger:ruler_consort_marriage_length] = int
 
 ## scope = country
 ###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.
-alias[trigger:ruler_culture] = <culture.fixed>
+alias[trigger:ruler_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.

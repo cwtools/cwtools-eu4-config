@@ -29,7 +29,7 @@ colonial_region = {
 	## cardinality = 0..1
 	culture = {
 		## cardinality = 1..inf
-		<culture.fixed> = int
+		<culture> = int
 	}
 	
 	## cardinality = 0..1

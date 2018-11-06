@@ -3,6 +3,7 @@ types = {
 	type[unit_type] = {
 		path = "game/common/units"
 		name_from_file = yes
+		path_strict = yes
 		subtype[land] = {
 			type = enum[land_unit_types]
 		}

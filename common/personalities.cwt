@@ -22,6 +22,7 @@ leader_personality = {
 
 
 ruler_personality = {
+	## cardinality = 0..1
 	ruler_allow = {
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
@@ -36,6 +37,7 @@ ruler_personality = {
 		}
 	}
 
+	## cardinality = 0..1
 	heir_allow = {
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
@@ -50,6 +52,7 @@ ruler_personality = {
 		}
 	}
 	
+	## cardinality = 0..1
 	consort_allow = {
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
@@ -77,26 +80,69 @@ ruler_personality = {
 	}
 	
 	## cardinality = 0..1
-	knowledge_sharing = yes
-	## cardinality = 0..1
-	wants_condottieri = yes
-	## cardinality = 0..1
-	fair_fights = yes
-	## cardinality = 0..1
-	wants_heathen_land = yes
-	## cardinality = 0..1
-	wants_heretic_land = yes
-	## cardinality = 0..1
-	wants_excommunicate = yes
-	## cardinality = 0..1
-	wants_gold = yes
-	## cardinality = 0..1
 	custom_ai_explanation = localisation
 	
+	alias_name[modifier] = alias_match_left[modifier]
+	alias_name[personality_modifier] = alias_match_left[personality_modifier]
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	war_priority = {
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
 	nation_designer_cost = int
 
 	## cardinality = 0..1
 	immortal = 1
-	
-	alias_name[modifier] = alias_match_left[modifier]
+
+	## cardinality = 0..1
+	###Makes nation_designer_cost not scale with age etc. 
+	static = yes
 }
+
+
+#All this stuff can go in personalities and nowhere else (that I know of)
+alias[personality_modifier:knowledge_sharing] = yes
+alias[personality_modifier:wants_condottieri] = yes
+alias[personality_modifier:fair_fights] = yes
+alias[personality_modifier:wants_heathen_land] = yes
+alias[personality_modifier:wants_heretic_land] = yes
+alias[personality_modifier:wants_excommunicate] = yes
+alias[personality_modifier:wants_gold] = yes
+alias[personality_modifier:wants_explorers] = yes
+alias[personality_modifier:random_insults] = yes
+alias[personality_modifier:wants_disclose_attack] = yes
+alias[personality_modifier:wants_debase] = yes
+alias[personality_modifier:wants_sell_provinces] = yes
+alias[personality_modifier:wants_colonies] = yes
+alias[personality_modifier:wants_avoid_debase] = yes
+alias[personality_modifier:wants_land] = yes
+alias[personality_modifier:wants_avoid_loans] = yes
+alias[personality_modifier:wants_loans] = yes
+###"Often indistinguishable from a bug"
+alias[personality_modifier:random_troop_moves] = yes
+alias[personality_modifier:razing] = yes
+alias[personality_modifier:wants_betray_allies] = yes
+alias[personality_modifier:lower_autonomy] = yes
+alias[personality_modifier:underestimate_ae] = yes
+alias[personality_modifier:wants_avoid_ugly_borders] = yes
+alias[personality_modifier:wants_threaten_war] = yes
+
+alias[personality_modifier:easy_war_chance_multiplier] = float
+alias[personality_modifier:other_ai_help_us_multiplier] = float
+alias[personality_modifier:different_religion_war_multiplier] = float
+alias[personality_modifier:war_chance_multiplier] = float
+alias[personality_modifier:building_budget_multiplier] = float
+alias[personality_modifier:other_ai_war_chance_multiplier] = float
+alias[personality_modifier:enemy_strength_multiplier] = float
+
+alias[personality_modifier:heretic_ally_acceptance] = int
+alias[personality_modifier:heathen_ally_acceptance] = int
+alias[personality_modifier:gift_chance] = int
+alias[personality_modifier:other_ai_peace_term_bonus] = int
+alias[personality_modifier:alliance_acceptance] = int
+alias[personality_modifier:royal_marriage_acceptance] = int
+alias[personality_modifier:peace_desire] = int
+alias[personality_modifier:trade_league_acceptance] = int
+alias[personality_modifier:send_warning_desire] = int

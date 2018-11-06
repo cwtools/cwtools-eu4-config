@@ -97,7 +97,7 @@ government_reform = {
 		## cardinality = 0..1
 		assimilation_cultures = {
 			## cardinality = 1..inf
-			<culture.fixed> = {
+			<culture> = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
 		}

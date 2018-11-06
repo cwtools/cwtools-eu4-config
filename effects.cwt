@@ -324,7 +324,7 @@ alias[effect:reinstate_parliament] = yes
 
 ## scope = country
 ###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
-alias[effect:add_accepted_culture] = <culture.fixed>
+alias[effect:add_accepted_culture] = <culture>
 
 ## scope = country
 ###Adds a new accepted culture to the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
@@ -344,7 +344,7 @@ alias[effect:add_accepted_culture] = <province_id>
 
 ## scope = country
 ###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
-alias[effect:change_primary_culture] = <culture.fixed>
+alias[effect:change_primary_culture] = <culture>
 
 ## scope = country
 ###Changes the primary culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
@@ -364,7 +364,7 @@ alias[effect:change_primary_culture] = <province_id>
 
 ## scope = country
 ###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
-alias[effect:remove_accepted_culture] = <culture.fixed>
+alias[effect:remove_accepted_culture] = <culture>
 
 ## scope = country
 ###Removes an accepted culture from the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt.
@@ -406,7 +406,7 @@ alias[effect:change_religion] = <province_id>
 
 ## scope = country
 ###Enables a religion that has been restricted with the date parameter. Religions are found in /Europa Universalis IV/common/religions/*.txt
-alias[effect:enable_religion] = <culture.fixed>
+alias[effect:enable_religion] = <culture>
 
 ## scope = country
 ###Sets whether the current scope has been force converted.
@@ -634,7 +634,7 @@ alias[effect:define_advisor] = {
 	## cardinality = 0..1
 	discount = yes
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -758,7 +758,7 @@ alias[effect:create_general] = {
 	add_siege = int
 	## cardinality = 0..1
 	###Gives the general a random name from the specified culture.
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	###Gives the general a random name from the specified culture.
 	culture = scope[province]
@@ -1359,7 +1359,7 @@ alias[effect:set_dynasty] = original_dynasty
 
 ## scope = country
 ###Changes the ruler culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_ruler_culture] = <culture.fixed>
+alias[effect:set_ruler_culture] = <culture>
 
 ## scope = country
 ###Changes the ruler culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1503,7 +1503,7 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	male = yes
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -1544,7 +1544,7 @@ alias[effect:clr_consort_flag] = scalar
 
 ## scope = country
 ###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_consort_culture] = <culture.fixed>
+alias[effect:set_consort_culture] = <culture>
 
 ## scope = country
 ###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1625,7 +1625,7 @@ alias[effect:define_consort] = {
 	## cardinality = 0..1
 	male = yes
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -1684,7 +1684,7 @@ alias[effect:add_heir_support] = int
 
 ## scope = country
 ###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:set_heir_culture] = <culture.fixed>
+alias[effect:set_heir_culture] = <culture>
 
 ## scope = country
 ###Changes the heir culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1797,7 +1797,7 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	male = bool
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -2123,7 +2123,7 @@ alias[effect:back_current_issue] = bool
 
 ## scope = province
 ###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
-alias[effect:change_culture] = <culture.fixed>
+alias[effect:change_culture] = <culture>
 
 ## scope = province
 ###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -2215,7 +2215,7 @@ alias[effect:spawn_rebels] = {
 	type = religious_rebels
 	size = int
 	## cardinality = 0..1
-	culture = <culture.fixed>
+	culture = <culture>
 	## cardinality = 0..1
 	culture = enum[country_tags]
 	## cardinality = 0..1
