@@ -2,6 +2,10 @@
 types = {
 	type[trade_good] = {
 		path = "game/common/tradegoods"
+		
+		subtype[latent] = {
+			is_latent = yes
+		}
 	}
 	type[trade_company] = {
 		path = "game/common/trade_companies"
@@ -22,6 +26,10 @@ trade_good = {
 		## cardinality = 3..3
 		float[0.0..1.0]
 	}
+	
+	## cardinality = 0..1
+	is_valuable = yes
+	
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	modifier = {
@@ -37,6 +45,17 @@ trade_good = {
 	chance = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	
+	subtype[latent] = {
+		is_latent = yes
+		###"Kind of on average how many provinces we want to spawn with it."
+		rnw_latent_chance = int
+		
+		## replace_scope = { this = province root = province }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	}
 }
 
