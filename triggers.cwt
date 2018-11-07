@@ -1802,6 +1802,10 @@ alias[trigger:is_core] = <province_id>
 
 ## scope = { country province }
 ###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
+alias[trigger:is_core] = scope[province]
+
+## scope = { country province }
+###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
 alias[trigger:is_core] = scope[country]
 
 ## scope = { country province }
