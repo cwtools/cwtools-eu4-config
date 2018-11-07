@@ -9,9 +9,19 @@ types = {
 		path = "game/history/diplomacy"
 		name_from_file = yes
 	}
+	#Todo: The name presumably has some requirements, but they are ignored for now
+	type[province_history] = {
+		path = "game/history/diplomacy"
+		name_from_file = yes
+		
+		subtype[not_sea] = {
+			owner = scalar
+		}
+		subtype[owned] = {
+			capital = scalar
+		}
+	}
 }
-
-
 
 
 advisor_id = {
@@ -54,5 +64,95 @@ enums = {
 		union
 		alliance
 		royal_marriage
+	}
+}
+
+
+province_history = {
+	subtype[not_sea] = {
+		culture = <culture>
+		religion = <religion>
+		hre = bool
+		base_tax = int 
+		base_production = int
+		base_manpower = int
+		trade_goods = <trade_good>
+		trade_goods = unknown
+		capital = scalar #todo: is this referred to anywhere?
+		## cardinality = 0..1
+		extra_cost = int
+		## cardinality = 0..1
+		center_of_trade = int[1..3]
+		
+		## cardinality = 0..inf
+		date_field = {
+			## cardinality = 0..1
+			revolt = {
+				## cardinality = 0..1
+				type = <rebel_type>
+				## cardinality = 0..1
+				size = int
+				## cardinality = 0..1
+				leader = scalar #todo: name
+			}
+			## cardinality = 0..1
+			base_tax = int
+			## cardinality = 0..1
+			base_manpower = int
+			## cardinality = 0..1
+			base_production = int
+			## cardinality = 0..1
+			controller = enum[country_tags]
+			## cardinality = 0..1
+			discovered_by = enum[country_tags]
+			## cardinality = 0..1
+			owner = enum[country_tags]
+			## cardinality = 0..1
+			controller = enum[country_tags]
+			## cardinality = 0..1
+			add_core = enum[country_tags]
+			## cardinality = 0..1
+			remove_core = enum[country_tags]
+			## cardinality = 0..1
+			is_city = yes
+			## cardinality = 0..1
+			culture = <culture>
+			## cardinality = 0..1
+			religion = <religion>
+			## cardinality = 0..1
+			reformation_center = <religion>
+			## cardinality = 0..1
+			trade_goods = <trade_good>
+			## cardinality = 0..1
+			capital = scalar #todo: is this referred to anywhere?
+			## cardinality = 0..1
+			trade_goods = <trade_good>
+			## cardinality = 0..1
+			unrest = int
+			#todo: what is the max number of buildings?
+			## cardinality = 0..inf
+			<building> = yes
+		}
+	}
+	
+	## cardinality = 0..inf
+	discovered_by = <technology_group>
+	
+	subtype[owned] = {
+		owner = enum[country_tags]
+		controller = enum[country_tags]
+		is_city = yes
+		## cardinality = 0..inf
+		add_core = enum[country_tags]
+		
+		#todo: what is the max number of buildings?
+		## cardinality = 0..inf
+		<building> = yes
+	}
+	
+	subtype[!owned] = {
+		native_size = int
+		native_ferocity = int[0..10]
+		native_hostileness = int[0..10]
 	}
 }
