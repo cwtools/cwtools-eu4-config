@@ -3190,7 +3190,7 @@ alias[trigger:preferred_emperor] = enum[country_tags]
 
 ## scope = country
 ###Return true if the country has a prestige of at least X, or at least as much prestige as the specified country.
-alias[trigger:prestige] = int[0..100]
+alias[trigger:prestige] = int[-100..100]
 
 ## scope = country
 ###Return true if the country has a prestige of at least X, or at least as much prestige as the specified country.
