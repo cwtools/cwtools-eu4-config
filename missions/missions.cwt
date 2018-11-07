@@ -18,11 +18,12 @@ mission_series = {
 	###if a mission without generic = yes wants this slot then it overrides this.
 	generic = bool
 
+	## cardinality = 0..1
 	###Can exist under the series itself or within individual missions.
 	ai = bool
 
 	## cardinality = 0..1
-	has_country_shield = yes
+	has_country_shield = bool
 	
 	## replace_scope = { this = country root = country }
 	###These are triggers for the entire series
@@ -31,7 +32,7 @@ mission_series = {
 	}
 
 	## cardinality = 1..inf
-	scalar = {
+	<mission.fixed> = {
 		icon = scalar #todo
 		required_missions = {
 			## cardinality = 0..inf
@@ -59,5 +60,19 @@ mission_series = {
 
 		## cardinality = 0..1
 		position = int
+		
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
+		ai_weight = {
+			factor = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+
+		## cardinality = 0..1
+		## replace_scope = { this = country root = country }
+		ai_priority = {
+			factor = float
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
 	}
 }

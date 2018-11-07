@@ -2697,3 +2697,9 @@ alias[effect:add_loan] = {
 ## scope = country
 ###Raises war taxes without spending Military Power.
 alias[effect:raise_war_taxes] = yes
+
+## scope = country
+alias[effect:swap_non_generic_missions] = yes
+
+## scope = country
+alias[effect:complete_mission] = <mission>

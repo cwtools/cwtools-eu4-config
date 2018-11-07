@@ -4165,3 +4165,27 @@ alias[trigger:owns_or_vassal_of] = <province_id>
 
 ## scope = country
 alias[trigger:owns_or_vassal_of] = scope[province]
+
+## scope = country
+alias[trigger:mission_completed] = <mission>
+
+## scope = province
+alias[trigger:country_or_non_sovereign_subject_holds] = scope[country]
+
+## scope = province
+alias[trigger:country_or_non_sovereign_subject_holds] = enum[country_tags]
+
+## scope = country
+alias[trigger:grown_by_states] = int
+
+## scope = country
+alias[trigger:share_of_starting_income] = float
+
+## scope = country
+alias[trigger:num_of_foreign_hre_provinces] = int
+
+## scope = trade_node
+alias[trigger:is_strongest_trade_power] = scope[country]
+
+## scope = trade_node
+alias[trigger:is_strongest_trade_power] = enum[country_tags]

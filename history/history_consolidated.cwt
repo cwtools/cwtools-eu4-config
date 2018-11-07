@@ -53,6 +53,8 @@ advisor_id = {
 	religion = <religion>
 	date = date_field
 	death_date = date_field
+	## cardinality = 0..1
+	female = yes
 }
 
 
