@@ -1,8 +1,8 @@
 
 types = {
+	#You cannot add new ones
+	#type_key_filter = enum[ai_personalities]
 	type[ai_personality] = {
-		#You cannot add new ones
-		## root_key_filter = enum[ai_personalities]
 		path = "game/common/ai_personalities"
 	}
 }

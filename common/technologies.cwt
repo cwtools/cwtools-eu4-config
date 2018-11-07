@@ -1,11 +1,11 @@
 
 types = {
+	## type_key_filter = technology
 	type[technology] = {
-		name_key_filter = technology
 		path = "game/common/technologies"
 	}
+	## type_key_filter = ahead_of_time
 	type[tech_ahead_of_time] = {
-		name_key_filter = ahead_of_time
 		path = "game/common/technologies"
 	}
 }
