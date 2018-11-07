@@ -4,10 +4,11 @@ types = {
 		path = "game/history/advisors"
 		name_field = "advisor_id"
 	}
-#	type[country_history] = { #the rest are all impractical due to file layout (type = file name and you must imagine a { } around everything)
-#		path = "game/history/countries"
-#		name_field = "advisor_id"
-#	}
+	#note: name is actually irrelevant, I just want it to check the scalar = { } as only certain stuff is actually allowed.
+	type[diplomacy_history] = {
+		path = "game/history/diplomacy"
+		name_from_file = yes
+	}
 }
 
 
@@ -26,4 +27,32 @@ advisor_id = {
 	religion = <religion>
 	date = date_field
 	death_date = date_field
+}
+
+
+diplomacy_history = {
+	## cardinality = 0..inf
+	<subject_type> = {
+		first = enum[country_tags]
+		second = enum[country_tags]
+		start_date = date_field
+		end_date = date_field
+	}
+	
+	## cardinality = 0..inf
+	enum[other_diplo_history] = {
+		first = enum[country_tags]
+		second = enum[country_tags]
+		start_date = date_field
+		end_date = date_field
+	}
+}
+
+enums = {
+	enum[other_diplo_history] = {
+		guarantee
+		union
+		alliance
+		royal_marriage
+	}
 }
