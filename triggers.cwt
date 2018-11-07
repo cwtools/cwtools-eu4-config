@@ -4159,3 +4159,9 @@ alias[trigger:neighbors_tech_discount] = float
 
 ## scope = country
 alias[trigger:is_primitive] = bool
+
+## scope = country
+alias[trigger:owns_or_vassal_of] = <province_id>
+
+## scope = country
+alias[trigger:owns_or_vassal_of] = scope[province]
