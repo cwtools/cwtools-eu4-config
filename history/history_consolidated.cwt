@@ -11,7 +11,7 @@ types = {
 	}
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	type[province_history] = {
-		path = "game/history/diplomacy"
+		path = "game/history/provinces"
 		name_from_file = yes
 		
 		subtype[not_sea] = {
@@ -20,6 +20,13 @@ types = {
 		subtype[owned] = {
 			capital = scalar
 		}
+	}
+	#todo: does this work with two name_x stuff?
+	type[war_history] = {
+		path = "game/history/wars"
+		name_from_file = yes
+		
+		name_field = "name"
 	}
 }
 
@@ -154,5 +161,45 @@ province_history = {
 		native_size = int
 		native_ferocity = int[0..10]
 		native_hostileness = int[0..10]
+	}
+}
+
+war_history = {
+	name = scalar #todo: name
+	war_goal = {
+		type = <war_goal>
+		casus_belli = <casus_belli>
+	}
+	
+	## cardinality = 2..inf
+	date_field = {
+		## cardinality = 0..inf
+		add_attacker = enum[country_tags]
+		#todo: I assume you must remove all those added or the war will go down as never ending
+		## cardinality = 0..inf
+		rem_attacker = enum[country_tags]
+		
+		## cardinality = 0..1
+		battle = {
+			name = scalar
+			location = <province_id>
+			attacker = {
+				commander = scalar #todo: name?
+				## cardinality = 1..4
+				enum[unit_types] = int
+				###In percent (0-100)
+				losses = int[0..100]
+				country = enum[country_tags]
+			}
+			defender = {
+				commander = scalar #todo: name?
+				## cardinality = 1..4
+				enum[unit_types] = int
+				###In percent (0-100)
+				losses = int[0..100]
+				country = enum[country_tags]
+			}
+			result = bool
+		}
 	}
 }
