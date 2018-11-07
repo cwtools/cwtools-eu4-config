@@ -463,8 +463,24 @@ alias[trigger:country_or_vassal_holds] = scope[country]
 alias[trigger:country_or_vassal_holds] = enum[country_tags]
 
 ## scope = province
-###Returns true if the province culture is X.
+###Returns true if the province culture is X, or the same as the specified scope.
 alias[trigger:culture] = <culture>
+
+## scope = province
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = scope[country]
+
+## scope = province
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = scope[province]
+
+## scope = province
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = <province_id>
+
+## scope = province
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = enum[country_tags]
 
 ## scope = { country province }
 ###Returns true if the country/province has a culture of the specified culture group.
@@ -678,6 +694,10 @@ alias[trigger:employed_advisor] = {
 	religion = scope[province]
 	## cardinality = 0..1
 	religion = <province_id>
+	## cardinality = 0..1
+	religion = heretic
+	## cardinality = 0..1
+	religion = heathen
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
