@@ -1477,7 +1477,7 @@ alias[trigger:home_trade_node] = {
 
 ## scope = country
 ## push_scope = trade_node
-alias[trigger:home_trade_node_effect_scope] = {
+alias[effect:home_trade_node_effect_scope] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
