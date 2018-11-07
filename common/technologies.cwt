@@ -76,6 +76,10 @@ technology = {
 	may_agitate_for_liberty = yes
 	## cardinality = 0..1
 	may_infiltrate_administration = yes
+	## cardinality = 0..1
+	may_slander_merchants = yes
+	## cardinality = 0..1
+	may_sow_discontent = yes
 	
 	## cardinality = 0..1
 	combat_width = int
