@@ -24,6 +24,12 @@ mission_series = {
 
 	## cardinality = 0..1
 	has_country_shield = bool
+
+	## cardinality = 0..1
+	potential_on_load = {
+		## cardinality = 0..inf
+		has_dlc = enum[DLCs]
+	}
 	
 	## replace_scope = { this = country root = country }
 	###These are triggers for the entire series

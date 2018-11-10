@@ -1503,6 +1503,8 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	male = yes
 	## cardinality = 0..1
+	random_gender = yes
+	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
 	culture = scope[country]
@@ -2703,3 +2705,6 @@ alias[effect:swap_non_generic_missions] = yes
 
 ## scope = country
 alias[effect:complete_mission] = <mission>
+
+## scope = country
+alias[effect:clear_exiled_ruler] = scalar #todo: variable

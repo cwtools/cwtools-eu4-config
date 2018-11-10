@@ -32,8 +32,6 @@ alias[effect:<province_id>] = {
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<area>] = {
 	## cardinality = 0..1
-	type = all
-	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -44,8 +42,6 @@ alias[effect:<area>] = {
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[effect:<region>] = {
-	## cardinality = 0..1
-	type = all
 	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -108,6 +104,8 @@ alias[trigger:<province_id>] = {
 ## push_scope = province
 ###Refers to the areas listed /Europa Universalis IV/map/areas.txt
 alias[trigger:<area>] = {
+	## cardinality = 0..1
+	type = all
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -115,6 +113,8 @@ alias[trigger:<area>] = {
 ## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[trigger:<region>] = {
+	## cardinality = 0..1
+	type = all
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
