@@ -121,6 +121,8 @@ alias[trigger:<region>] = {
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[trigger:<superregion>] = {
+	## cardinality = 0..1
+	type = all
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -150,6 +152,8 @@ alias[trigger:<trade_company>] = {
 ## push_scope = province
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[trigger:<colonial_region>] = {
+	## cardinality = 0..1
+	type = all
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -1482,10 +1486,28 @@ alias[effect:home_trade_node_effect_scope] = {
 }
 
 
+#todo: this is probably for missions only
 ## scope = province
 ## push_scope = province
 alias[trigger:region_for_scope_province] = {
 	## cardinality = 0..1
 	type = all
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+#todo: this is probably for missions only
+## scope = province
+## push_scope = province
+alias[trigger:area_for_scope_province] = {
+	## cardinality = 0..1
+	type = all
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+
+## scope = country
+## push_scope = province
+alias[trigger:num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with] = {
+	value = int
 	alias_name[trigger] = alias_match_left[trigger]
 }

@@ -4,7 +4,7 @@ alias[trigger:<scripted_trigger>] = bool
 
 ## scope = country
 ###Returns true if the country has hired an advisor of the specified type which has at least level X.
-alias[trigger:<advisor_type>] = int[1..3]
+alias[trigger:<advisor_type>] = int[1..5]
 
 ## scope = country
 ###Returns true if the country has at least X buildings from the specified building type.
@@ -4189,3 +4189,15 @@ alias[trigger:is_strongest_trade_power] = scope[country]
 
 ## scope = trade_node
 alias[trigger:is_strongest_trade_power] = enum[country_tags]
+
+## scope = country
+alias[trigger:num_of_non_tributary_subjects] = int
+
+## scope = province
+alias[trigger:is_capital_of] = scope[country]
+
+## scope = province
+alias[trigger:is_capital_of] = enum[country_tags]
+
+## scope = country
+alias[trigger:num_of_rajput] = int

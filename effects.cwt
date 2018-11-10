@@ -562,7 +562,7 @@ alias[effect:set_primitive] = bool
 ###Re-evaluates the current scope's national idea set assignment, if they match a different set, they will switch to it. Used after tag changes to change National Idea sets.
 alias[effect:swap_free_idea_group] = bool
 
-## scope = country
+## scope = province
 ###Adds embracement for the current progressing institution within the current scope. Institutions are found in /Europa Universalis IV/common/institutions/*.txt.
 alias[effect:add_next_institution_embracement] = int[-100..100]
 
@@ -626,7 +626,7 @@ alias[effect:remove_advisor_by_category] = enum[power_categories]
 ###Adds the defined advisor to the current scope. Advisor types are found in /Europa Universalis IV/common/advisortypes/*.txt. Can utilise Event Scope Values for the culture and religion parameters. The name parameter can accept a saved name variable, see set_saved_name for more context.
 alias[effect:define_advisor] = {
 	type = <advisor_type>
-	skill = int[1..3]
+	skill = int[1..5]
 	## cardinality = 0..1
 	name = scalar #todo: name or saved name
 	## cardinality = 0..1
