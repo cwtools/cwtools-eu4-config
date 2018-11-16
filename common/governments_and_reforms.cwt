@@ -104,6 +104,7 @@ government_reform = {
 	}
 
 	subtype[!default] = {
+		## severity = info
 		icon = enum[government_icons] #todo: refers to a file name in a certain folder
 		
 		## cardinality = 0..1
