@@ -8,14 +8,16 @@ types = {
 	type[diplomacy_history] = {
 		path = "game/history/diplomacy"
 		name_from_file = yes
+		type_per_file = yes
 	}
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	type[province_history] = {
 		path = "game/history/provinces"
 		name_from_file = yes
-		
+		type_per_file = yes
+
 		subtype[not_sea] = {
-			owner = scalar
+			trade_goods = scalar
 		}
 		subtype[owned] = {
 			capital = scalar
@@ -25,13 +27,15 @@ types = {
 	type[war_history] = {
 		path = "game/history/wars"
 		name_from_file = yes
-		
+		type_per_file = yes
+
 		name_field = "name"
 	}
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	type[country_history] = {
 		path = "game/history/countries"
 		name_from_file = yes
+		type_per_file = yes
 
 		subtype[sunni] = {
 			religion = sunni
@@ -66,7 +70,7 @@ diplomacy_history = {
 		start_date = date_field
 		end_date = date_field
 	}
-	
+
 	## cardinality = 0..inf
 	enum[other_diplo_history] = {
 		first = enum[country_tags]
@@ -91,7 +95,7 @@ province_history = {
 		culture = <culture>
 		religion = <religion>
 		hre = bool
-		base_tax = int 
+		base_tax = int
 		base_production = int
 		base_manpower = int
 		trade_goods = <trade_good>
@@ -101,7 +105,9 @@ province_history = {
 		extra_cost = int
 		## cardinality = 0..1
 		center_of_trade = int[1..3]
-		
+		## cardinality = 0..1
+		estate = <estate>
+
 		## cardinality = 0..inf
 		date_field = {
 			## cardinality = 0..1
@@ -148,26 +154,32 @@ province_history = {
 			## cardinality = 0..1
 			unrest = int
 			#todo: what is the max number of buildings?
+			#todo: yes/no?
 			## cardinality = 0..inf
-			<building> = yes
+			<building> = bool
+			## cardinality = 0..1
+			hre = bool
+
 		}
 	}
-	
+
 	## cardinality = 0..inf
 	discovered_by = <technology_group>
-	
+	## cardinality = 0..inf
+	discovered_by = enum[country_tags]
+
 	subtype[owned] = {
 		owner = enum[country_tags]
 		controller = enum[country_tags]
 		is_city = yes
 		## cardinality = 0..inf
 		add_core = enum[country_tags]
-		
+
 		#todo: what is the max number of buildings?
 		## cardinality = 0..inf
 		<building> = yes
 	}
-	
+
 	subtype[!owned] = {
 		native_size = int
 		native_ferocity = int[0..10]
@@ -178,10 +190,14 @@ province_history = {
 war_history = {
 	name = scalar #todo: name
 	war_goal = {
-		type = <war_goal>
+		type = <wargoal_type>
 		casus_belli = <casus_belli>
+		## cardinality = 0..1
+		province = <province_id>
+		## cardinality = 0..1
+		tag = enum[country_tags]
 	}
-	
+
 	## cardinality = 2..inf
 	date_field = {
 		## cardinality = 0..inf
@@ -189,7 +205,13 @@ war_history = {
 		#todo: I assume you must remove all those added or the war will go down as never ending
 		## cardinality = 0..inf
 		rem_attacker = enum[country_tags]
-		
+
+		## cardinality = 0..inf
+		add_defender = enum[country_tags]
+		#todo: I assume you must remove all those added or the war will go down as never ending
+		## cardinality = 0..inf
+		rem_defender = enum[country_tags]
+
 		## cardinality = 0..1
 		battle = {
 			name = scalar
@@ -226,6 +248,8 @@ country_history = {
 	## cardinality = 0..1
 	mercantilism = int[0..100]
 	technology_group = <technology_group>
+	## cardinality = 0..1
+	unit_type = <technology_group>
 	religion = <religion>
 	primary_culture = <culture>
 	capital = <province_id>
@@ -240,7 +264,7 @@ country_history = {
 	subtype[sunni] = {
 		religious_school = enum[religious_schools]
 	}
-	
+
 	## cardinality = 0..inf
 	date_field = {
 		## cardinality = 0..1
@@ -248,6 +272,7 @@ country_history = {
 			name = scalar #todo: name
 			## cardinality = 0..1
 			dynasty = scalar #todo: dynasty name
+			## cardinality = 0..1
 			birth_date = date_field
 			## cardinality = 0..1
 			death_date = date_field
@@ -339,4 +364,3 @@ country_history = {
 		decision = <decision>
 	}
 }
-	

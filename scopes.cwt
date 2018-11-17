@@ -911,42 +911,42 @@ alias[effect:unit_owner] = {
 
 
 #Triggers
+#These are not required as they are covered by the `scope_field` rule
+# ## scope = any
+# ###This is "NOR" rather than "NAND"
+# alias[trigger:NOT] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-###This is "NOR" rather than "NAND"
-alias[trigger:NOT] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:OR] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-alias[trigger:OR] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:AND] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-alias[trigger:AND] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:root] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-alias[trigger:root] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:prev] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-alias[trigger:prev] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:from] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
-## scope = any
-alias[trigger:from] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
-## scope = any
-alias[trigger:this] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# ## scope = any
+# alias[trigger:this] = {
+# 	alias_name[trigger] = alias_match_left[trigger]
+# }
 
 
 
