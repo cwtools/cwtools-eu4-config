@@ -6,6 +6,10 @@ types = {
 		subtype[normal] = {
 			basic_reform = scalar
 		}
+
+		## type_key_filter = pre_dharma_mapping
+		subtype[pre_dharma_mapping] = {
+		}
 	}
 	type[government_reform] = {
 		path = "game/common/government_reforms"
@@ -271,6 +275,14 @@ government_reform = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
 			}
+			## cardinality = 0..1
+			factions = {
+				## cardinality = 0..inf
+				<faction>
+			}
+
+			## cardinality = 0..1
+			is_elective = bool
 		}
 		
 		## cardinality = 0..1
@@ -433,8 +445,10 @@ government = {
 		reform_levels = {
 			## cardinality = 7..7
 			localisation = {
-				## cardinality = 1..inf
-				<government_reform.new>
+				reforms = {
+					## cardinality = 1..inf
+					<government_reform.new>
+				}
 			}
 		}
 		legacy_government = {
@@ -445,6 +459,13 @@ government = {
 		exclusive_reforms = {
 			## cardinality = 1..inf
 			<government_reform.new>
+		}
+	}
+
+	subtype[pre_dharma_mapping] = {
+		<government_reform.new> = {
+			government = <government>
+			legacy_government = <government_reform.legacy>
 		}
 	}
 }

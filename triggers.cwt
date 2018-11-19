@@ -3774,6 +3774,10 @@ alias[trigger:units_in_province] = enum[country_tags]
 ###Returns true if the country has units of type X.
 alias[trigger:unit_type] = <unit_type>
 
+## scope = country
+###Returns true if the country has units of type X.
+alias[trigger:unit_type] = <technology_group>
+
 ## scope = province
 ###Returns true if the unrest in the province is at least X.
 alias[trigger:unrest] = float[0.0..100.0]
@@ -4142,7 +4146,7 @@ alias[trigger:trust] = {
 alias[trigger:prosperity] = int[0..100]
 
 
-## scope = province
+## scope = country
 alias[trigger:has_leaders] = {
 	value = int
 	type = enum[military_leader_types]
@@ -4201,3 +4205,30 @@ alias[trigger:is_capital_of] = enum[country_tags]
 
 ## scope = country
 alias[trigger:num_of_rajput] = int
+
+
+## scope = country
+alias[trigger:num_custom_nation_provinces] = int
+
+## scope = country
+alias[trigger:is_reform_available] = <government_reform.new>
+
+
+## scope = country
+###Hmmm... -Caligula
+alias[trigger:has_government_attribute_short_desc] = locked_government_type
+
+## scope = province
+alias[trigger:num_of_centers_of_reformation] = {
+	religion = <religion>
+	count = int
+}
+
+## scope = province
+alias[trigger:has_latent_trade_goods] = <trade_good.latent>
+
+## scope = province
+alias[trigger:provincial_institution_progress] = {
+	which = <institution>
+	value = int
+}

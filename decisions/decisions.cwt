@@ -30,8 +30,10 @@ decision = {
 	}
 
 	#Not sure other settings are used or do anything
+	## replace_scope = { root = country this = country }
 	ai_will_do = {
 		factor = int[0..1]
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
 	## cardinality = 0..1

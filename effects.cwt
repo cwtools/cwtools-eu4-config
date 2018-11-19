@@ -406,7 +406,7 @@ alias[effect:change_religion] = <province_id>
 
 ## scope = country
 ###Enables a religion that has been restricted with the date parameter. Religions are found in /Europa Universalis IV/common/religions/*.txt
-alias[effect:enable_religion] = <culture>
+alias[effect:enable_religion] = <religion>
 
 ## scope = country
 ###Sets whether the current scope has been force converted.
@@ -1262,6 +1262,7 @@ alias[effect:create_independent_estate] = {
 ###Creates an independent nation from provinces owned by the specified estate within the current scope's owned provinces. Estates are found in /Europa Universalis IV/common/estates/*.txt. Created with the religion that the majority of the provinces that the defined estate own holds. The additional parameters for the independent nation are found within an estate's file.
 alias[effect:create_independent_estate_from_religion] = {
 	estate = <estate>
+	## cardinality = 0..1
 	play_as = bool
 	## cardinality = 0..1
 	government = <government>
@@ -1892,20 +1893,12 @@ alias[effect:set_hre_religion_locked] = yes
 alias[effect:set_hre_religion_treaty] = yes
 
 ## scope = country
-###Makes the current scope join the League that the defined scope belongs to.
-alias[effect:join_league] = scope[country]
+###Makes the current scope join the specified League.
+alias[effect:join_league] = <religion>
 
 ## scope = country
-###Makes the current scope join the League that the defined scope belongs to.
-alias[effect:join_league] = enum[country_tags]
-
-## scope = country
-###Makes the current scope leave the League that the defined scope belongs to.
-alias[effect:leave_league] = scope[country]
-
-## scope = country
-###Makes the current scope leave the League that the defined scope belongs to.
-alias[effect:leave_league] = enum[country_tags]
+###Makes the current scope leave the specified League.
+alias[effect:leave_league] = <religion>
 
 ## scope = country
 ###Removes the Empire of China and the Mandate system.
@@ -2215,7 +2208,7 @@ alias[effect:<rebel_type>] = int
 alias[effect:spawn_rebels] = {
 	type = <rebel_type>
 	type = religious_rebels
-	size = int
+	size = float
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
@@ -2708,3 +2701,6 @@ alias[effect:complete_mission] = <mission>
 
 ## scope = country
 alias[effect:clear_exiled_ruler] = scalar #todo: variable
+
+## scope = country
+alias[effect:lose_reforms] = int

@@ -126,6 +126,9 @@ subject_type = {
 	can_union_break = bool
 	
 	## cardinality = 0..1
+	can_send_tribute = bool
+	
+	## cardinality = 0..1
 	###0 means no limit
 	max_government_rank = int
 	## cardinality = 0..1

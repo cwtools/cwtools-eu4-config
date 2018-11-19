@@ -797,7 +797,7 @@ alias[effect:random_province_in_state] = {
 }
 
 
-## scope = province
+## scope = { province country }
 ## push_scope = province
 ###Scopes to one random province among all provinces in the world.
 alias[effect:random_province] = {

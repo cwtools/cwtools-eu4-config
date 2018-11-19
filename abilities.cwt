@@ -18,3 +18,6 @@ alias[ability:may_explore] = yes
 alias[ability:may_establish_frontier] = yes
 alias[ability:may_perform_slave_raid] = yes
 alias[ability:no_religion_penalty] = yes
+alias[ability:cb_on_overseas] = yes
+alias[ability:sea_repair] = yes
+alias[ability:cb_on_religious_enemies] = yes

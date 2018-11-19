@@ -324,6 +324,9 @@ personal_deity = {
 
 religion_propagation = {
 	
+	## cardinality = 0..1
+	religion = <religion>
+
 	map_icon = <sprite>
 
 	subtype[trading_policy] = {

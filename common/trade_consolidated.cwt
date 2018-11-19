@@ -168,6 +168,11 @@ trade_node = {
 		## cardinality = 1..inf
 		<province_id>
 	}
+
+	## cardinality = 0..1
+	ai_will_propagate_through_trade = yes
+	## cardinality = 0..1
+	end = yes
 }
 
 
@@ -182,6 +187,7 @@ trading_policy = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country from = province }
 	can_maintain = {
 		alias_name[trigger] = alias_match_left[trigger]

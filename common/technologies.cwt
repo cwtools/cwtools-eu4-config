@@ -21,6 +21,9 @@ technology = {
 	#alias_name[modifier] = alias_match_left[modifier]
 	
 	## cardinality = 0..1
+	administrative_efficiency = float
+
+	## cardinality = 0..1
 	production_efficiency = float
 	
 	## cardinality = 0..1
@@ -40,6 +43,9 @@ technology = {
 	
 	## cardinality = 0..1
 	may_fabricate_claims = yes
+	
+	## cardinality = 0..1
+	may_support_rebels = yes
 	
 	## cardinality = 0..1
 	naval_morale = float

@@ -4,11 +4,16 @@ types = {
 		path = "game/history/advisors"
 		name_field = "advisor_id"
 	}
-	#note: name is actually irrelevant, I just want it to check the scalar = { } as only certain stuff is actually allowed.
 	type[diplomacy_history] = {
 		path = "game/history/diplomacy"
 		name_from_file = yes
 		type_per_file = yes
+		## type_key_filter = celestial_empire
+		subtype[celestial] = {
+		}
+		## type_key_filter = hre
+		subtype[hre] = {
+		}
 	}
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	type[province_history] = {
@@ -72,11 +77,36 @@ diplomacy_history = {
 	}
 
 	## cardinality = 0..inf
+	alliance = {
+		first = enum[country_tags]
+		second = enum[country_tags]
+		start_date = date_field
+		end_date = date_field
+		## cardinality = 0..1
+		trade_league = 1
+	}
+
+	## cardinality = 0..inf
 	enum[other_diplo_history] = {
 		first = enum[country_tags]
 		second = enum[country_tags]
 		start_date = date_field
 		end_date = date_field
+	}
+
+	subtype[celestial] = {
+		## cardinality = 0..inf
+		date_field = {
+			celestial_emperor = enum[country_tags]
+			celestial_emperor = ---
+		}
+	}
+	subtype[hre] = {
+		## cardinality = 0..inf
+		date_field = {
+			emperor = enum[country_tags]
+			emperor = ---
+		}
 	}
 }
 
@@ -84,8 +114,8 @@ enums = {
 	enum[other_diplo_history] = {
 		guarantee
 		union
-		alliance
 		royal_marriage
+		dependency
 	}
 }
 
@@ -189,6 +219,9 @@ province_history = {
 
 war_history = {
 	name = scalar #todo: name
+	## cardinality = 0..1
+	succession = enum[country_tags]
+	
 	war_goal = {
 		type = <wargoal_type>
 		casus_belli = <casus_belli>
@@ -251,14 +284,24 @@ country_history = {
 	## cardinality = 0..1
 	unit_type = <technology_group>
 	religion = <religion>
+	## cardinality = 0..1
+	secondary_religion = <religion>
 	primary_culture = <culture>
 	capital = <province_id>
 	## cardinality = 0..1
 	###Cannot move capital away from this province & no power cost to move to it
 	fixed_capital = <province_id>
 	## cardinality = 0..1
-	national_focus = enum[power_types]
-
+	national_focus = enum[power_categories]
+	## cardinality = 0..1
+	religious_school = enum[religious_schools]
+	## cardinality = 0..inf
+	historical_rival = enum[country_tags]
+	## cardinality = 0..inf
+	historical_friend = enum[country_tags]
+	## cardinality = 0..1
+	elector = yes
+	
 	alias_name[effect] = alias_match_left[effect]
 
 	subtype[sunni] = {
@@ -299,11 +342,14 @@ country_history = {
 				shock = int
 				manuever = int
 				siege = int
+				## cardinality = 0..1
+				personality = <leader_personality>
 			}
 		}
 		## cardinality = 0..1
 		heir = {
 			name = scalar #todo: name
+			## cardinality = 0..1
 			monarch_name = scalar #todo: name
 			## cardinality = 0..1
 			dynasty = scalar #todo: dynasty name
@@ -314,6 +360,7 @@ country_history = {
 			adm = int[0..6]
 			dip = int[0..6]
 			mil = int[0..6]
+			## cardinality = 0..1
 			claim = int[0..100]
 			## cardinality = 0..1
 			female = yes
@@ -321,6 +368,18 @@ country_history = {
 			culture = <culture>
 			## cardinality = 0..1
 			religion = <religion>
+
+			## cardinality = 0..1
+			leader = {
+				name = scalar #todo: name
+				type = general
+				fire = int
+				shock = int
+				manuever = int
+				siege = int
+				## cardinality = 0..1
+				personality = <leader_personality>
+			}
 		}
 		## cardinality = 0..1
 		queen = {
@@ -331,7 +390,7 @@ country_history = {
 			## cardinality = 0..1
 			death_date = date_field
 			## cardinality = 0..1
-			female = yes
+			female = bool
 			adm = int[0..6]
 			dip = int[0..6]
 			mil = int[0..6]
@@ -339,6 +398,18 @@ country_history = {
 			culture = <culture>
 			## cardinality = 0..1
 			religion = <religion>
+
+			## cardinality = 0..1
+			leader = {
+				name = scalar #todo: name
+				type = general
+				fire = int
+				shock = int
+				manuever = int
+				siege = int
+				## cardinality = 0..1
+				personality = <leader_personality>
+			}
 		}
 		## cardinality = 0..1
 		leader = {
@@ -350,10 +421,15 @@ country_history = {
 			siege = int
 			## cardinality = 0..1
 			death_date = date_field
+			## cardinality = 0..1
+			personality = <leader_personality>
 		}
 
 		alias_name[effect] = alias_match_left[effect]
 
+		## cardinality = 0..1
+		###Pretty sure this one only works when a leader is spawned
+		clear_scripted_personalities = yes
 		## cardinality = 0..1
 		religion = <religion>
 		## cardinality = 0..1
@@ -361,6 +437,26 @@ country_history = {
 		## cardinality = 0..1
 		culture = <culture>
 		## cardinality = 0..1
+		primary_culture = <culture>
+		## cardinality = 0..1
 		decision = <decision>
+		## cardinality = 0..1
+		capital = <province_id>
+		## cardinality = 0..1
+		religious_school = enum[religious_schools]
+		## cardinality = 0..1
+		historical_rival = enum[country_tags]
+		## cardinality = 0..1
+		historical_friend = enum[country_tags]
+		## cardinality = 0..1
+		government_rank = int[1..3]
+		## cardinality = 0..1
+		elector = bool
+		## cardinality = 0..1
+		technology_group = <technology_group>
+		## cardinality = 0..1
+		mercantilism = int[0..100]
+		## cardinality = 0..1
+		changed_tag_from = enum[country_tags]
 	}
 }
