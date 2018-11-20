@@ -239,6 +239,10 @@ government_reform = {
 			alias_name[effect] = alias_match_left[effect]
 		}
 		
+		## cardinality = 0..1
+		government_abilities = {
+			enum[government_mechanics]
+		}
 
 		## cardinality = 0..inf
 		conditional = {
@@ -280,13 +284,29 @@ government_reform = {
 			foreign_slave_rulers = bool
 			## cardinality = 0..1
 			states_general_mechanic = {
+				## cardinality = 0..1
 				statists = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
+				## cardinality = 0..1
 				orangists = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
+				## cardinality = 0..1
+				monarchists = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
 			}
+
+			## cardinality = 0..1
+			queen = bool
+			## cardinality = 0..1
+			heir = bool
+			## cardinality = 0..1
+			duration = int
+			## cardinality = 0..1
+			has_term_election = bool
+			
 			## cardinality = 0..1
 			factions = {
 				## cardinality = 0..inf

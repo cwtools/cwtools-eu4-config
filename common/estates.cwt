@@ -19,7 +19,7 @@ estate = {
 	## cardinality = 0..1
 	independence_government = <government>
 	## cardinality = 0..1
-	starting_reform = <government_reform.basic>
+	starting_reform = <government_reform>
 	## cardinality = 0..1
 	independence_tech_group = <technology_group>
 

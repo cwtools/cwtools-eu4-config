@@ -322,8 +322,15 @@ bookmark = {
 	## cardinality = 0..1
 	center = <province_id>
 	
+	#todo: presumably this can only be used once, ever
+	## cardinality = 0..1
+	default = yes
+
 	## cardinality = 0..12
 	country = enum[country_tags]
+	
+	## cardinality = 0..12
+	easy_country = enum[country_tags]
 }
 
 dynasty_colors = {

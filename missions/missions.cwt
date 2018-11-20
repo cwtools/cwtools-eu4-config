@@ -15,6 +15,7 @@ types = {
 mission_series = {
 	slot = int
 	
+	## cardinality = 0..1
 	###if a mission without generic = yes wants this slot then it overrides this.
 	generic = bool
 

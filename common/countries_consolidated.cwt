@@ -59,19 +59,29 @@ country_file = {
 	graphical_culture = enum[graphical_cultures]
 	
 	## cardinality = 0..1
-	revolutionary_colors = {
-		## cardinality = 3..3
-		int[0..255]
-	}
+	preferred_religion = <religion>
 
 	## cardinality = 0..1
 	historical_score = int
 	
+	## cardinality = 0..1
+	random_nation_chance = int[0..100]
+
+	## cardinality = 0..1
+	###Excludes them from random countries, makes sure they only can be spawned once
+	all_your_core_are_belong_to_us = yes
+
 	color = {
 		## cardinality = 3..3
 		int[0..255]
 	}
 	
+	## cardinality = 0..1
+	revolutionary_colors = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+
 	historical_idea_groups = {
 		## cardinality = 8..8
 		<idea_group.selectable>

@@ -2629,7 +2629,7 @@ alias[effect:add_militarization_scaled_to_seats] = int
 
 
 ## scope = province
-alias[effect:add_to_trade_company] = {
+alias[effect:add_trade_company_investment] = {
 	investment = <trade_company_investment>
 	investor = scope[country]
 	investor = enum[country_tags]
@@ -2707,3 +2707,9 @@ alias[effect:clear_exiled_ruler] = scalar #todo: variable
 
 ## scope = country
 alias[effect:lose_reforms] = int
+
+## scope = country
+alias[effect:set_religious_school] = {
+	group = <religion_group>
+	school = enum[religious_schools]
+}

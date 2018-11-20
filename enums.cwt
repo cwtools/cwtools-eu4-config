@@ -164,6 +164,7 @@ enums = {
 		locked_government_type
 		states_general_mechanic
 		militarised_society
+		has_term_election
 	}
 	enum[monsoons] = {
 		severe_monsoon
