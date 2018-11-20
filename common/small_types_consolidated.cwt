@@ -54,6 +54,27 @@ types = {
 	type[client_state] = {
 		path = "game/common/client_states"
 	}
+	## type_key_filter = bookmark
+	type[bookmark] = {
+		path = "game/common/bookmarks"
+		name_field = "name"
+	}
+	type[dynasty_colors] = {
+		path = "game/common/dynasty_colors"
+		name_from_file = yes
+		type_per_file = yes
+	}
+	type[region_colors] = {
+		path = "game/common/region_colors"
+		name_from_file = yes
+		type_per_file = yes
+	}
+	#todo: The name of the file must be a country tag, culture or cultural group
+	type[province_names] = {
+		path = "game/common/region_colors"
+		name_from_file = yes
+		type_per_file = yes
+	}
 }
 
 
@@ -291,4 +312,37 @@ client_state = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
+}
+
+bookmark = {
+	name = localisation
+	desc = localisation
+	date = date_field
+	
+	## cardinality = 0..1
+	center = <province_id>
+	
+	## cardinality = 0..12
+	country = enum[country_tags]
+}
+
+dynasty_colors = {
+	## cardinality = 1..inf
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+}
+
+region_colors = {
+	## cardinality = 1..inf
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+}
+
+province_names = {
+	## cardinality = 1..inf
+	<province_id> = scalar #todo: name
 }
