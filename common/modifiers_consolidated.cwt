@@ -12,6 +12,10 @@ types = {
 	type[province_triggered_modifier] = {
 		path = "game/common/province_triggered_modifiers"
 	}
+	#todo: Don't think you can add to them. Included for completeness
+	type[timed_modifier] = {
+		path = "game/common/timed_modifiers"
+	}
 }
 
 event_modifier = {
@@ -77,6 +81,20 @@ province_triggered_modifier = {
 	##replace_scope = { this = province root = province }
 	on_deactivation = {
 		alias_name[effect] = alias_match_left[effect]
+	}
+}
+
+timed_modifier = {
+	enum[timed_modifier_liberty] = {
+		value = int
+		yearly_decay = int
+	}
+}
+
+enums = {
+	enum[timed_modifier_liberty] = {
+		liberty_desire
+		reduced_liberty_desire
 	}
 }
 
