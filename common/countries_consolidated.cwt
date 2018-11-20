@@ -14,6 +14,12 @@ types = {
 		type_per_file = yes
 		path = "game/common/countries"
 	}
+	type[custom_country_colors] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/common/countries"
+		path_file = "00_custom_country_colors.txt"
+	}
 }
 
 
@@ -98,5 +104,32 @@ country_file = {
 		#todo: names
 		## cardinality = 1..inf
 		scalar
+	}
+}
+
+
+custom_country_colors = {
+	num_symbols = int
+	## cardinality = 1..inf
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+	## cardinality = 1..inf
+	flag_color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+	## cardinality = 1..inf
+	textures = {
+		texture = {
+			file = scalar #todo: sortof filepath - "gfx\\custom_flags\\pattern.tga"
+			size = {
+				x = int
+				y = int
+			}
+			noOfFrames = int
+			color = int
+		}
 	}
 }
