@@ -19,6 +19,11 @@ types = {
 	type[trading_policy] = {
 		path = "game/common/trading_policies"
 	}
+	type[prices] = {
+		path = "game/common/prices"
+		name_from_file = yes
+		type_per_file = yes
+	}
 }
 
 trade_good = {
@@ -221,4 +226,14 @@ trading_policy = {
 	show_alert = yes
 	
 	button_gfx = <sprite>
+}
+
+
+prices = {
+	## cardinality = 1..inf
+	<trade_good> = {
+		base_price = float
+		## cardinality = 0..1
+		goldtype = yes
+	}
 }
