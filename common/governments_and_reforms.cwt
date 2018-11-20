@@ -27,6 +27,12 @@ types = {
 			legacy_government = no
 		}
 	}
+	type[government_ranks] = {
+		path = "game/common/government_ranks"
+		path_file = "00_government_ranks.txt"
+		name_from_file = yes
+		type_per_file = yes
+	}
 }
 
 government_reform = {
@@ -467,5 +473,12 @@ government = {
 			government = <government>
 			legacy_government = <government_reform.legacy>
 		}
+	}
+}
+
+government_ranks = {
+	## cardinality = 0..10
+	int[1..10] = {
+		alias_name[modifier] = alias_match_left[modifier]
 	}
 }
