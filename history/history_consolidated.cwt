@@ -8,14 +8,16 @@ types = {
 		path = "game/history/diplomacy"
 		name_from_file = yes
 		type_per_file = yes
-		## type_key_filter = celestial_empire
 		subtype[celestial] = {
+			path_file = "celestial_empire.txt"
 		}
-		## type_key_filter = hre
 		subtype[hre] = {
+			path_file = "hre.txt"
 		}
 	}
 	#Todo: The name presumably has some requirements, but they are ignored for now
+	
+	## push_scope = province
 	type[province_history] = {
 		path = "game/history/provinces"
 		name_from_file = yes
@@ -25,7 +27,7 @@ types = {
 			trade_goods = scalar
 		}
 		subtype[owned] = {
-			capital = scalar
+			owner = scalar
 		}
 	}
 	#todo: does this work with two name_x stuff?
@@ -137,6 +139,17 @@ province_history = {
 		center_of_trade = int[1..3]
 		## cardinality = 0..1
 		estate = <estate>
+		## cardinality = 0..1
+		revolt_risk = int[0..100]
+		## cardinality = 0..1
+		unrest = int[0..100]
+		
+		## cardinality = 0..1
+		latent_trade_goods = {
+			<trade_good.latent>
+		}
+		
+		alias_name[effect] = alias_match_left[effect]
 
 		## cardinality = 0..inf
 		date_field = {
@@ -145,9 +158,11 @@ province_history = {
 				## cardinality = 0..1
 				type = <rebel_type>
 				## cardinality = 0..1
-				size = int
+				size = float
 				## cardinality = 0..1
 				leader = scalar #todo: name
+				## cardinality = 0..1
+				name = scalar #todo: name
 			}
 			## cardinality = 0..1
 			base_tax = int
@@ -157,15 +172,21 @@ province_history = {
 			base_production = int
 			## cardinality = 0..1
 			controller = enum[country_tags]
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			discovered_by = enum[country_tags]
+			## cardinality = 0..inf
+			discovered_by = <technology_group>
 			## cardinality = 0..1
 			owner = enum[country_tags]
 			## cardinality = 0..1
+			owner = ---
+			## cardinality = 0..1
 			controller = enum[country_tags]
 			## cardinality = 0..1
+			controller = ---
+			## cardinality = 0..inf
 			add_core = enum[country_tags]
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			remove_core = enum[country_tags]
 			## cardinality = 0..1
 			is_city = yes
@@ -182,14 +203,17 @@ province_history = {
 			## cardinality = 0..1
 			trade_goods = <trade_good>
 			## cardinality = 0..1
-			unrest = int
+			unrest = int[0..100]
 			#todo: what is the max number of buildings?
 			#todo: yes/no?
 			## cardinality = 0..inf
 			<building> = bool
 			## cardinality = 0..1
 			hre = bool
-
+			## cardinality = 0..1
+			revolt_risk = int[0..100]
+			
+			alias_name[effect] = alias_match_left[effect]
 		}
 	}
 
@@ -197,6 +221,17 @@ province_history = {
 	discovered_by = <technology_group>
 	## cardinality = 0..inf
 	discovered_by = enum[country_tags]
+	
+	
+	subtype[!not_sea] = {
+		## cardinality = 0..inf
+		date_field = {
+			## cardinality = 0..inf
+			discovered_by = enum[country_tags]
+			## cardinality = 0..inf
+			discovered_by = <technology_group>
+		}
+	}
 
 	subtype[owned] = {
 		owner = enum[country_tags]
@@ -337,11 +372,13 @@ country_history = {
 			## cardinality = 0..1
 			leader = {
 				name = scalar #todo: name
-				type = general
+				type = enum[military_leader_types]
 				fire = int
 				shock = int
 				manuever = int
 				siege = int
+				## cardinality = 0..1
+				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
 			}
@@ -372,11 +409,13 @@ country_history = {
 			## cardinality = 0..1
 			leader = {
 				name = scalar #todo: name
-				type = general
+				type = enum[military_leader_types]
 				fire = int
 				shock = int
 				manuever = int
 				siege = int
+				## cardinality = 0..1
+				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
 			}
@@ -402,11 +441,13 @@ country_history = {
 			## cardinality = 0..1
 			leader = {
 				name = scalar #todo: name
-				type = general
+				type = enum[military_leader_types]
 				fire = int
 				shock = int
 				manuever = int
 				siege = int
+				## cardinality = 0..1
+				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
 			}
