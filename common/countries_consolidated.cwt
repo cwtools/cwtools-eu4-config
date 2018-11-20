@@ -1,9 +1,20 @@
 
-#types = {
+types = {
 #	type[country_tag] = {
 #		path = "game/common/country_tags"
 #	}
-#}
+	#Note: I do name from file because so far as I know this is not referred to elsewhere and this lets me check whether you have used a valid country tag
+	type[country_color_file] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/common/country_colors"
+	}
+	type[country_file] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/common/countries"
+	}
+}
 
 
 enums = {
@@ -16,7 +27,76 @@ enums = {
 	}
 }
 
-#country_tag = scalar #filepath but "countries/Aachen.txt"
+#country_tag = scalar #todo: filepath but "countries/Aachen.txt" (where "Aachen" is a <country_file>)
 
 
-#Not too sure whether I will put countries and country_colors in validation, but if I do they can go here.
+country_color_file = {
+	## cardinality = 0..inf
+	enum[country_tags] = {
+	    color1 = {
+			## cardinality = 3..3
+			int[0..255]
+		}
+	    color2 = {
+			## cardinality = 3..3
+			int[0..255]
+		}
+	    color3 = {
+			## cardinality = 3..3
+			int[0..255]
+		}
+	}
+}
+
+
+country_file = {
+	graphical_culture = enum[graphical_cultures]
+	
+	## cardinality = 0..1
+	revolutionary_colors = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+
+	## cardinality = 0..1
+	historical_score = int
+	
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+	
+	historical_idea_groups = {
+		## cardinality = 8..8
+		<idea_group.selectable>
+	}
+	historical_units = {
+		## cardinality = 1..inf
+		<unit_type>
+	}
+	monarch_names = {
+		#todo: names (with "#7" for VII)
+		## cardinality = 1..inf
+		scalar = int
+	}
+	leader_names = {
+		#todo: names
+		## cardinality = 1..inf
+		scalar
+	}
+	ship_names = {
+		#todo: names
+		## cardinality = 1..inf
+		scalar
+	}
+	army_names = {
+		#todo: names
+		## cardinality = 1..inf
+		scalar
+	}
+	fleet_names = {
+		#todo: names
+		## cardinality = 1..inf
+		scalar
+	}
+}
