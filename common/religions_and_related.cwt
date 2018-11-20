@@ -22,12 +22,12 @@ types = {
 	}
 	type[aspects_and_blessings] = {
 		path = "game/common/church_aspects"
+		subtype[blessing] = {
+			is_blessing = yes
+		}
 		subtype[church_aspect] = {
 			## cardinality = 0..1
-			blessing = no
-		}
-		subtype[blessing] = {
-			blessing = yes
+			is_blessing = no
 		}
 	}
 }
@@ -196,6 +196,7 @@ religion_group = {
 		
 		## cardinality = 0..1
 		blessings = {
+			## cardinality = 1..inf
 			<aspects_and_blessings.blessing>
 		}
 	
@@ -231,10 +232,11 @@ religion_group = {
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		## cardinality = 0..1
 		aspects = {
+			## cardinality = 1..inf
 			<aspects_and_blessings.church_aspect>
 		}
 		## cardinality = 0..1
-		aspects_name = localisation
+		aspects_name = scalar #todo: localisation is <name>_LONG/SHORT
 		
 		## cardinality = 0..1
 		hre_heretic_religion = yes
