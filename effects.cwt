@@ -2604,10 +2604,13 @@ alias[effect:define_exiled_ruler] = {
 alias[effect:add_center_of_trade_level] = int[1..3]
 
 ## scope = province
-alias[effect:add_to_trade_company] = scope[province]
+alias[effect:add_to_trade_company] = scope[country]
 
 ## scope = province
-alias[effect:add_to_trade_company] = <province_id>
+alias[effect:add_to_trade_company] = enum[country_tags]
+
+## scope = province
+alias[effect:add_to_trade_company] = ---
 
 ## scope = country
 alias[effect:add_years_of_manpower_scaled_to_seats] = int
