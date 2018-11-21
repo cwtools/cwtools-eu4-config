@@ -32,5 +32,7 @@ unit_type = {
 		base_cannons = int
 		sail_speed = int
 		sprite_level = int
+		## cardinality = 0..1
+		trade_power = float
 	}
 }
