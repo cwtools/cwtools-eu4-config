@@ -2179,7 +2179,7 @@ alias[trigger:is_state_core] = scope[country]
 ###In country scope, returns true if the country has a state core on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_state_core] = enum[country_tags]
 
-## scope = province
+## scope = country
 ###Returns true if in the country the statists are in power.
 alias[trigger:is_statists_in_power] = bool
 
