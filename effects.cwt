@@ -1835,6 +1835,8 @@ alias[effect:define_heir] = {
 	no_consort_with_heir = yes
 	## cardinality = 0..1
 	hidden = yes
+	## cardinality = 0..1
+	birth_date = date_field
 }
 
 ## scope = country
