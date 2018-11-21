@@ -667,7 +667,7 @@ alias[effect:add_stability] = int
 
 ## scope = country
 ###Adds war exhaustion to the current scope.
-alias[effect:add_war_exhaustion] = int
+alias[effect:add_war_exhaustion] = float
 
 ## scope = country
 ###Adds liberty desire to the current scope.
