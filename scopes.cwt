@@ -21,6 +21,13 @@ alias[trigger:enum[country_tags]] = {
 }
 
 ## scope = { country province }
+## push_scope = trade_node
+###Scopes to the province, which is also a trade node (defined in common/tradenodes)
+alias[effect:<trade_node>] = {
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
 alias[effect:<province_id>] = {
@@ -92,6 +99,13 @@ alias[effect:<colonial_region>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+
+## scope = { country province }
+## push_scope = trade_node
+###Scopes to the province, which is also a trade node (defined in common/tradenodes)
+alias[trigger:<trade_node>] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
 
 ## scope = { country province }
 ## push_scope = province

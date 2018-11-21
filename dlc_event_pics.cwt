@@ -1,8 +1,8 @@
 enums = { #these are in the DLC .zip files
 	enum[dlc_event_pictures] = {
-		#Vanilla
-#		NOBLE_ESTATE_DEMANDS_eventPicture
-#		NOBLE_ESTATE_eventPicture
+		#Vanilla		#Vanilla
+		NOBLE_ESTATE_DEMANDS_eventPicture
+		NOBLE_ESTATE_eventPicture
 #		NOBLE_ESTATE_TAKE_OVER_eventPicture
 #		BURGHER_ESTATE_eventPicture
 #		BURGHER_ESTATE_UPSET_eventPicture
@@ -10,20 +10,15 @@ enums = { #these are in the DLC .zip files
 #		CHURCH_ESTATE_2_eventPicture
 #		CHURCH_ESTATE_UPSET_eventPicture
 #		SYNTHETICS_eventPicture
-#		easterngfx_WOUNDED_SOLDIERS_eventPicture
-#		easterngfx_COUNTRY_COLLAPSE_eventPicture
-#		easterngfx_NAVAL_MILITARY_eventPicture
-#		easterngfx_LAND_MILITARY_eventPicture
-#		easterngfx_MILITARY_CAMP_eventPicture
-#		altaic_MILITARY_CAMP_eventPicture
-#		tartar_MILITARY_CAMP_eventPicture
-#		altaic_LAND_MILITARY_eventPicture
-#		tartar_LAND_MILITARY_eventPicture
-#		altaic_TOURNAMENT_eventPicture_eventPicture
-#		tartar_TOURNAMENT_eventPicture_eventPicture
-#		easterngfx_COURT_eventPicture
-#		easterngfx_LIBERUM_VETO_eventPicture
-#		easterngfx_DEBATE_REPUBLICAN_eventPicture
+#		WOUNDED_SOLDIERS_eventPicture
+#		COUNTRY_COLLAPSE_eventPicture
+#		NAVAL_MILITARY_eventPicture
+#		LAND_MILITARY_eventPicture
+#		MILITARY_CAMP_eventPicture
+#		TOURNAMENT_eventPicture_eventPicture
+#		COURT_eventPicture
+#		LIBERUM_VETO_eventPicture
+#		DEBATE_REPUBLICAN_eventPicture
 #		BATTLE_VISTULA_LAGOON_eventPicture
 #		HUSSARS_eventPicture
 #		IMPALED_SOLDIERS_eventPicture
@@ -47,11 +42,8 @@ enums = { #these are in the DLC .zip files
 #		COMET_SIGHTED_eventPicture
 #		CONQUEST_eventPicture
 #		CORRUPTION_eventPicture
-#		COUNTRY_COLLAPSE_eventPicture
-#		COURT_eventPicture
 #		CULTURE_eventPicture
 #		DEATH_OF_HEIR_eventPicture
-#		DEBATE_REPUBLICAN_eventPicture
 #		DIPLOMACY_eventPicture
 #		ECONOMY_eventPicture
 #		ELECTION_REPUBLICAN_eventPicture
@@ -68,12 +60,8 @@ enums = { #these are in the DLC .zip files
 #		IMPORTANT_STATUE_eventPicture
 #		INVENTION_eventPicture
 #		KING_SICK_IN_BED_eventPicture
-#		LAND_MILITARY_eventPicture
-#		LIBERUM_VETO_eventPicture
 #		MERCHANTS_TALKING_eventPicture
-#		MILITARY_CAMP_eventPicture
 #		NATIVES_eventPicture
-#		NAVAL_MILITARY_eventPicture
 #		NEW_HEIR_eventPicture
 #		ORTHODOX_eventPicture
 #		OVEREXTENSION_eventPicture
@@ -98,13 +86,7 @@ enums = { #these are in the DLC .zip files
 #		UNIVERSITY_eventPicture
 #		WAR_OF_THE_ROSES_eventPicture
 #		WESTERNISATION_eventPicture
-#		WOUNDED_SOLDIERS_eventPicture
-
 		#Dharma
-		indiangfx_DEBATE_REPUBLICAN_eventPicture
-		indiangfx_GREAT_BUILDING_eventPicture
-		indiangfx_HARBOUR_eventPicture
-		indiangfx_IMPORTANT_STATUE_eventPicture
 		1_Brahmin_Estate__eventPicture
 		2_Brahmin_Estate_eventPicture
 		3_Rajput_Estate__eventPicture
@@ -136,7 +118,7 @@ enums = { #these are in the DLC .zip files
 		KING_OF_FOREIGN_CUSTOMS_eventPicture
 		MAMLUK_WARRIORS_eventPicture
 		MECCA_eventPicture
-		MUSLIM_SCHOLAR_WRITING_eventPicture
+		SCHOLAR_WRITING_eventPicture
 		MYSTIC_IN_PRAYER_eventPicture
 		PRAYER_IN_MOSQUE_eventPicture
 		TRADE_GOODS_eventPicture
@@ -150,81 +132,7 @@ enums = { #these are in the DLC .zip files
 		SOUP_KITCHEN_eventPicture
 		SULTAN_AND_MERCHANT_eventPicture
 		SULTAN_WIFE_VIZIER_eventPicture
-		muslim_REVOLUTION_eventPicture
-		muslim_MILITARY_CAMP_eventPicture
-		iranian_BATTLE_eventPicture
-		turko_semitic_BATTLE_eventPicture
-		turkish_BATTLE_eventPicture
-		muslim_Conquest_eventPicture
-		muslim_LAND_MILITARY_eventPicture
-		muslim_CIVIL_WAR_eventPicture
-		muslim_ANGRY_MOB_eventPicture
-		muslim_FORT_eventPicture
-		muslim_SIEGE_eventPicture
-		muslim_TOURNAMENT_eventPicture
-		muslim_SHIP_SAILING_eventPicture
-		muslim_CITY_DEVELOPMENT_eventPicture
-		muslim_ADVISOR_eventPicture
-		muslim_ARTWORK_eventPicture
-		muslim_INVENTION_eventPicture
-		muslim_CITY_VIEW_eventPicture
-		muslim_TRADEGOODS_eventPicture
-		MERCHANTS_TALKING_eventPicture
-		muslim_ECONOMY_eventPicture
-		muslim_IMPORTANT_STATUE_eventPicture
-		muslim_ASSASSINATION_eventPicture
-		muslim_BAD_WITH_MONARCH_eventPicture
-		muslim_SPY_eventPicture
-		muslim_COURT_eventPicture
-		muslim_GOOD_WITH_MONARCH_eventPicture
-		muslim_DIPLOMACY_eventPicture
-		muslim_RELIGIOUS_CONVERSION_eventPicture
-		muslim_STREET_SPEECH_eventPicture
-		muslim_PAINTER_ARTIST_eventPicture
-		muslim_THEATRE_eventPicture
-		muslim_GREAT_BUILDING_eventPicture
-		muslim_HARBOUR_eventPicture
-		muslim_PRAYING_eventPicture
-		muslim_RELIGION_eventPicture
-		muslim_RELIGIOUS_CONVERSION_eventPicture
-		muslim_RELIGIOUS_TURMOIL_eventPicture
-		muslim_RELIGIOUS_WARS_eventPicture
-		muslim_REFORM_eventPicture
-		muslim_CORRUPTION_eventPicture
-		muslim_WOUNDED_SOLDIERS_eventPicture
 		#Third Rome
-		east_slavic_ANGRY_MOB_eventPicture
-		south_slavic_ANGRY_MOB_eventPicture
-		east_slavic_RELIGIOUS_TURMOIL_eventPicture
-		south_slavic_RELIGIOUS_TURMOIL_eventPicture
-		east_slavic_RELIGIOUS_CONVERSION_eventPicture
-		east_slavic_WESTERNISATION_eventPicture
-		east_slavic_CITY_DEVELOPMENT_eventPicture
-		east_slavic_CITY_VIEW_eventPicture
-		east_slavic_DIPLOMACY_eventPicture
-		east_slavic_COLONIZATION_eventPicture
-		south_slavic_COLONIZATION_eventPicture
-		east_slavic_FARMING_eventPicture
-		east_slavic_GREAT_BUILDING_eventPicture
-		east_slavic_GOOD_WITH_MONARCH_eventPicture
-		east_slavic_RELIGION_eventPicture
-		south_slavic_RELIGION_eventPicture
-		east_slavic_COURT_eventPicture
-		east_slavic_DEBATE_REPUBLICAN_eventPicture
-		east_slavic_ASSASSINATION_eventPicture
-		east_slavic_ACCUSATION_eventPicture
-		east_slavic_MERCHANTS_TALKING_eventPicture
-		east_slavic_NATIVES_eventPicture
-		east_slavic_FORT_eventPicture
-		east_slavic_FORT_eventPicture
-		east_slavic_BATTLE_eventPicture
-		east_slavic_LAND_MILITARY_eventPicture
-		east_slavic_FAMINE_eventPicture
-		east_slavic_REFORM_eventPicture
-		east_slavic_ECONOMY_eventPicture
-		east_slavic_BORDER_TENSION_eventPicture
-		tartar_BORDER_TENSION_eventPicture
-		east_slavic_EXPLORERS_eventPicture
 		ENTERING_MOSCOW_eventPicture
 		COSSACKS_IN_SIBERIA_eventPicture
 		ICONS_IN_CHURCH_eventPicture
@@ -240,91 +148,7 @@ enums = { #these are in the DLC .zip files
 		WESTERN_TZAR_AND_PETERSBURG_eventPicture
 		OPRICHINA_eventPicture
 		#Mandate of Heaven
-		east_asian_ANGRY_MOB_eventPicture
-		shinto_ANGRY_MOB_eventPicture
-		confucianism_ANGRY_MOB_eventPicture
-		east_asian_RELIGIOUS_TURMOIL_eventPicture
-		shinto_RELIGIOUS_TURMOIL_eventPicture
-		confucianism_RELIGIOUS_TURMOIL_eventPicture
-		east_asian_BAD_WITH_MONARCH_eventPicture
-		shinto_BAD_WITH_MONARCH_eventPicture
-		confucianism_BAD_WITH_MONARCH_eventPicture
-		east_asian_PLAGUE_eventPicture
-		shinto_PLAGUE_eventPicture
-		confucianism_PLAGUE_eventPicture
-		east_asian_CITY_DEVELOPMENT_eventPicture
-		shinto_CITY_DEVELOPMENT_eventPicture
-		confucianism_CITY_DEVELOPMENT_eventPicture
-		east_asian_CITY_VIEW_eventPicture
-		shinto_CITY_VIEW_eventPicture
-		confucianism_CITY_VIEW_eventPicture
-		east_asian_COLONIZATION_eventPicture
-		shinto_COLONIZATION_eventPicture
-		confucianism_COLONIZATION_eventPicture
-		east_asian_GOOD_WITH_MONARCH_eventPicture
-		shinto_GOOD_WITH_MONARCH_eventPicture
-		confucianism_GOOD_WITH_MONARCH_eventPicture
-		east_asian_RELIGION_eventPicture
-		shinto_RELIGION_eventPicture
-		confucianism_RELIGION_eventPicture
-		east_asian_ADVISOR_eventPicture
-		shinto_ADVISOR_eventPicture
-		confucianism_ADVISOR_eventPicture
-		east_asian_COURT_eventPicture
-		shinto_COURT_eventPicture
-		confucianism_COURT_eventPicture
-		east_asian_DIPLOMACY_eventPicture
-		shinto_DIPLOMACY_eventPicture
-		confucianism_DIPLOMACY_eventPicture
-		east_asian_FORT_eventPicture
-		shinto_FORT_eventPicture
-		confucianism_FORT_eventPicture
-		east_asian_UNIVERSITY_eventPicture
-		shinto_UNIVERSITY_eventPicture
-		confucianism_UNIVERSITY_eventPicture
-		east_asian_BATTLE_eventPicture
-		shinto_BATTLE_eventPicture
-		confucianism_BATTLE_eventPicture
 		tengri_pagan_reformed_BATTLE_eventPicture
-		east_asian_NAVAL_MILITARY_eventPicture
-		shinto_NAVAL_MILITARY_eventPicture
-		confucianism_NAVAL_MILITARY_eventPicture
-		east_asian_THEATRE_eventPicture
-		shinto_THEATRE_eventPicture
-		confucianism_THEATRE_eventPicture
-		east_asian_LAND_MILITARY_eventPicture
-		shinto_LAND_MILITARY_eventPicture
-		confucianism_LAND_MILITARY_eventPicture
-		east_asian_IMPORTANT_STATUE_eventPicture
-		shinto_IMPORTANT_STATUE_eventPicture
-		confucianism_IMPORTANT_STATUE_eventPicture
-		east_asian_REFORM_eventPicture
-		shinto_REFORM_eventPicture
-		confucianism_REFORM_eventPicture
-		east_asian_DEBATE_REPUBLICAN_eventPicture
-		shinto_DEBATE_REPUBLICAN_eventPicture
-		confucianism_DEBATE_REPUBLICAN_eventPicture
-		east_asian_NEW_HEIR_eventPicture
-		shinto_NEW_HEIR_eventPicture
-		confucianism_NEW_HEIR_eventPicture
-		east_asian_MILITARY_CAMP_eventPicture
-		shinto_MILITARY_CAMP_eventPicture
-		confucianism_MILITARY_CAMP_eventPicture
-		east_asian_MILITARY_CAMP_eventPicture
-		shinto_MILITARY_CAMP_eventPicture
-		confucianism_MILITARY_CAMP_eventPicture
-		east_asian_SHIP_SAILING_eventPicture
-		shinto_SHIP_SAILING_eventPicture
-		confucianism_SHIP_SAILING_eventPicture
-		east_asian_ELECTION_REPUBLICAN_eventPicture
-		shinto_ELECTION_REPUBLICAN_eventPicture
-		confucianism_ELECTION_REPUBLICAN_eventPicture
-		east_asian_DEATH_OF_HEIR_eventPicture
-		shinto_DEATH_OF_HEIR_eventPicture
-		confucianism_DEATH_OF_HEIR_eventPicture
-		east_asian_ECONOMY_eventPicture
-		shinto_ECONOMY_eventPicture
-		confucianism_ECONOMY_eventPicture
 		NANBAN_INCIDENT_eventPicture
 		FIREARMS_INCIDENT_eventPicture
 		URBANISATION_INCIDENT_eventPicture
@@ -388,26 +212,6 @@ enums = { #these are in the DLC .zip files
 		RELIGIOUS_MIGRANTS_eventPicture
 		SENCRATIC_ALTER_eventPicture
 		#Common Sense
-		asiangfx_ANGRY_MOB_eventPicture
-		asiangfx_RELIGIOUS_TURMOIL_eventPicture
-		asiangfx_RELIGIOUS_WARS_eventPicture
-		asiangfx_RELIGIOUS_WARS_eventPicture
-		asiangfx_BAD_WITH_MONARCH_eventPicture
-		asiangfx_CITY_DEVELOPMENT_eventPicture
-		asiangfx_CITY_VIEW_eventPicture
-		asiangfx_COLONIZATION_eventPicture
-		asiangfx_FARMING_eventPicture
-		asiangfx_GOOD_WITH_MONARCH_eventPicture
-		asiangfx_RELIGION_eventPicture
-		asiangfx_ADVISOR_eventPicture
-		asiangfx_COURT_eventPicture
-		asiangfx_DIPLOMACY_eventPicture
-		asiangfx_POPE_PREACHING_eventPicture
-		asiangfx_PRAYING_eventPicture
-		asiangfx_RELIGIOUS_CONVERSION_eventPicture
-		asiangfx_GREAT_BUILDING_eventPicture
-		asiangfx_FORT_eventPicture
-		asiangfx_UNIVERSITY_eventPicture
 		PARLIAMENT_eventPicture
 		PROTESTANT_GREAT_REFORMER_eventPicture
 		PROTESTANT_PRINTED_eventPicture
@@ -424,33 +228,6 @@ enums = { #these are in the DLC .zip files
 		wihgfx_FEMALE_SCHOLAR_eventPicture
 		wihgfx_FEMALES_eventPicture
 		#El Dorado
-		southamericagfx_GREAT_BUILDING_eventPicture
-		southamericagfx_CITY_VIEW_eventPicture
-		southamericagfx_CITY_DEVELOPMENT_eventPicture
-		southamericagfx_FORT_eventPicture
-		southamericagfx_MILITARY_CAMP_eventPicture
-		southamericagfx_LAND_MILITARY_eventPicture
-		southamericagfx_NEW_HEIR_eventPicture
-		southamericagfx_CIVIL_WAR_eventPicture
-		southamericagfx_REVOLUTION_eventPicture
-		southamericagfx_BAD_WITH_MONARCH_eventPicture
-		southamericagfx_COURT_eventPicture
-		southamericagfx_FAMINE_eventPicture
-		southamericagfx_RELIGIOUS_TURMOIL_eventPicture
-		southamericagfx_RELIGION_eventPicture
-		southamericagfx_ANGRY_MOB_eventPicture
-		southamericagfx_ADVISOR_eventPicture
-		southamericagfx_REFORM_eventPicture
-		southamericagfx_PAINTER_ARTIST_eventPicture
-		southamericagfx_PLAGUE_eventPicture
-		southamericagfx_MERCHANTS_TALKING_eventPicture
-		southamericagfx_ECONOMY_eventPicture
-		southamericagfx_FEAST_eventPicture
-		southamericagfx_BATTLE_eventPicture
-		southamericagfx_RELIGIOUS_CONVERSION_eventPicture
-		southamericagfx_DIPLOMACY_eventPicture
-		southamericagfx_DEBATE_REPUBLICAN_eventPicture
-		southamericagfx_EXPLORERS_eventPicture
 		HUMAN_SACRIFICE_eventPicture
 		GOLDEN_CITY_eventPicture
 		FOUNTAIN_OF_YOUTH_eventPicture
@@ -515,6 +292,244 @@ enums = { #these are in the DLC .zip files
 		PEASANTS_BARTERING_eventPicture
 		DUTCH_SHIPS_PLUNDERING_eventPicture
 		#Wealth of Nations
+		#Conquest of Paradise
+		#Purple Phoenix
+		BYZANTINE_EMPEROR_eventPicture
+		BYZANTINE_EAGLE_eventPicture
+		ATHENS_eventPicture
+		JERUSALEM_eventPicture
+		#The American Dream
+		TEA_PARTY_eventPicture
+		CONGRESS_eventPicture
+		DECLARATION_INDEPENDENCE_eventPicture
+		FUR_TRADE_eventPicture
+		GREAT_FIRE_eventPicture
+		NATIVE_AMERICANS_eventPicture
+		INDIAN_WARS_eventPicture
+		CONSTITUTION_eventPicture
+		#Stars and Crescent
+		TEMPORAL_RIFT_eventPicture
+		HAJJ_eventPicture
+		PILGRIMAGE_eventPicture
+		RAMADAN_eventPicture
+		#unordered but prefix is a giveaway
+		easterngfx_WOUNDED_SOLDIERS_eventPicture
+		easterngfx_COUNTRY_COLLAPSE_eventPicture
+		easterngfx_NAVAL_MILITARY_eventPicture
+		easterngfx_LAND_MILITARY_eventPicture
+		easterngfx_MILITARY_CAMP_eventPicture
+		altaic_MILITARY_CAMP_eventPicture
+		tartar_MILITARY_CAMP_eventPicture
+		altaic_LAND_MILITARY_eventPicture
+		tartar_LAND_MILITARY_eventPicture
+		altaic_TOURNAMENT_eventPicture_eventPicture
+		tartar_TOURNAMENT_eventPicture_eventPicture
+		easterngfx_COURT_eventPicture
+		easterngfx_LIBERUM_VETO_eventPicture
+		easterngfx_DEBATE_REPUBLICAN_eventPicture
+		indiangfx_DEBATE_REPUBLICAN_eventPicture
+		indiangfx_GREAT_BUILDING_eventPicture
+		indiangfx_HARBOUR_eventPicture
+		indiangfx_IMPORTANT_STATUE_eventPicture
+		MUSLIM_SCHOLAR_WRITING_eventPicture
+		muslim_REVOLUTION_eventPicture
+		muslim_MILITARY_CAMP_eventPicture
+		iranian_BATTLE_eventPicture
+		turko_semitic_BATTLE_eventPicture
+		turkish_BATTLE_eventPicture
+		muslim_Conquest_eventPicture
+		muslim_LAND_MILITARY_eventPicture
+		muslim_CIVIL_WAR_eventPicture
+		muslim_ANGRY_MOB_eventPicture
+		muslim_FORT_eventPicture
+		muslim_SIEGE_eventPicture
+		muslim_TOURNAMENT_eventPicture
+		muslim_SHIP_SAILING_eventPicture
+		muslim_CITY_DEVELOPMENT_eventPicture
+		muslim_ADVISOR_eventPicture
+		muslim_ARTWORK_eventPicture
+		muslim_INVENTION_eventPicture
+		muslim_CITY_VIEW_eventPicture
+		muslim_TRADEGOODS_eventPicture
+		muslim_ECONOMY_eventPicture
+		muslim_IMPORTANT_STATUE_eventPicture
+		muslim_ASSASSINATION_eventPicture
+		muslim_BAD_WITH_MONARCH_eventPicture
+		muslim_SPY_eventPicture
+		muslim_COURT_eventPicture
+		muslim_GOOD_WITH_MONARCH_eventPicture
+		muslim_DIPLOMACY_eventPicture
+		muslim_RELIGIOUS_CONVERSION_eventPicture
+		muslim_STREET_SPEECH_eventPicture
+		muslim_PAINTER_ARTIST_eventPicture
+		muslim_THEATRE_eventPicture
+		muslim_GREAT_BUILDING_eventPicture
+		muslim_HARBOUR_eventPicture
+		muslim_PRAYING_eventPicture
+		muslim_RELIGION_eventPicture
+		muslim_RELIGIOUS_TURMOIL_eventPicture
+		muslim_RELIGIOUS_WARS_eventPicture
+		muslim_REFORM_eventPicture
+		muslim_CORRUPTION_eventPicture
+		muslim_WOUNDED_SOLDIERS_eventPicture
+		east_slavic_ANGRY_MOB_eventPicture
+		south_slavic_ANGRY_MOB_eventPicture
+		east_slavic_RELIGIOUS_TURMOIL_eventPicture
+		south_slavic_RELIGIOUS_TURMOIL_eventPicture
+		east_slavic_RELIGIOUS_CONVERSION_eventPicture
+		east_slavic_WESTERNISATION_eventPicture
+		east_slavic_CITY_DEVELOPMENT_eventPicture
+		east_slavic_CITY_VIEW_eventPicture
+		east_slavic_DIPLOMACY_eventPicture
+		east_slavic_COLONIZATION_eventPicture
+		south_slavic_COLONIZATION_eventPicture
+		east_slavic_FARMING_eventPicture
+		east_slavic_GREAT_BUILDING_eventPicture
+		east_slavic_GOOD_WITH_MONARCH_eventPicture
+		east_slavic_RELIGION_eventPicture
+		south_slavic_RELIGION_eventPicture
+		east_slavic_COURT_eventPicture
+		east_slavic_DEBATE_REPUBLICAN_eventPicture
+		east_slavic_ASSASSINATION_eventPicture
+		east_slavic_ACCUSATION_eventPicture
+		east_slavic_MERCHANTS_TALKING_eventPicture
+		east_slavic_NATIVES_eventPicture
+		east_slavic_FORT_eventPicture
+		east_slavic_BATTLE_eventPicture
+		east_slavic_LAND_MILITARY_eventPicture
+		east_slavic_FAMINE_eventPicture
+		east_slavic_REFORM_eventPicture
+		east_slavic_ECONOMY_eventPicture
+		east_slavic_BORDER_TENSION_eventPicture
+		tartar_BORDER_TENSION_eventPicture
+		east_slavic_EXPLORERS_eventPicture
+		east_asian_ANGRY_MOB_eventPicture
+		shinto_ANGRY_MOB_eventPicture
+		confucianism_ANGRY_MOB_eventPicture
+		east_asian_RELIGIOUS_TURMOIL_eventPicture
+		shinto_RELIGIOUS_TURMOIL_eventPicture
+		confucianism_RELIGIOUS_TURMOIL_eventPicture
+		east_asian_BAD_WITH_MONARCH_eventPicture
+		shinto_BAD_WITH_MONARCH_eventPicture
+		confucianism_BAD_WITH_MONARCH_eventPicture
+		east_asian_PLAGUE_eventPicture
+		shinto_PLAGUE_eventPicture
+		confucianism_PLAGUE_eventPicture
+		east_asian_CITY_DEVELOPMENT_eventPicture
+		shinto_CITY_DEVELOPMENT_eventPicture
+		confucianism_CITY_DEVELOPMENT_eventPicture
+		east_asian_CITY_VIEW_eventPicture
+		shinto_CITY_VIEW_eventPicture
+		confucianism_CITY_VIEW_eventPicture
+		east_asian_COLONIZATION_eventPicture
+		shinto_COLONIZATION_eventPicture
+		confucianism_COLONIZATION_eventPicture
+		east_asian_GOOD_WITH_MONARCH_eventPicture
+		shinto_GOOD_WITH_MONARCH_eventPicture
+		confucianism_GOOD_WITH_MONARCH_eventPicture
+		east_asian_RELIGION_eventPicture
+		shinto_RELIGION_eventPicture
+		confucianism_RELIGION_eventPicture
+		east_asian_ADVISOR_eventPicture
+		shinto_ADVISOR_eventPicture
+		confucianism_ADVISOR_eventPicture
+		east_asian_COURT_eventPicture
+		shinto_COURT_eventPicture
+		confucianism_COURT_eventPicture
+		east_asian_DIPLOMACY_eventPicture
+		shinto_DIPLOMACY_eventPicture
+		confucianism_DIPLOMACY_eventPicture
+		east_asian_FORT_eventPicture
+		shinto_FORT_eventPicture
+		confucianism_FORT_eventPicture
+		east_asian_UNIVERSITY_eventPicture
+		shinto_UNIVERSITY_eventPicture
+		confucianism_UNIVERSITY_eventPicture
+		east_asian_BATTLE_eventPicture
+		shinto_BATTLE_eventPicture
+		confucianism_BATTLE_eventPicture
+		east_asian_NAVAL_MILITARY_eventPicture
+		shinto_NAVAL_MILITARY_eventPicture
+		confucianism_NAVAL_MILITARY_eventPicture
+		east_asian_THEATRE_eventPicture
+		shinto_THEATRE_eventPicture
+		confucianism_THEATRE_eventPicture
+		east_asian_LAND_MILITARY_eventPicture
+		shinto_LAND_MILITARY_eventPicture
+		confucianism_LAND_MILITARY_eventPicture
+		east_asian_IMPORTANT_STATUE_eventPicture
+		shinto_IMPORTANT_STATUE_eventPicture
+		confucianism_IMPORTANT_STATUE_eventPicture
+		east_asian_REFORM_eventPicture
+		shinto_REFORM_eventPicture
+		confucianism_REFORM_eventPicture
+		east_asian_DEBATE_REPUBLICAN_eventPicture
+		shinto_DEBATE_REPUBLICAN_eventPicture
+		confucianism_DEBATE_REPUBLICAN_eventPicture
+		east_asian_NEW_HEIR_eventPicture
+		shinto_NEW_HEIR_eventPicture
+		confucianism_NEW_HEIR_eventPicture
+		east_asian_MILITARY_CAMP_eventPicture
+		shinto_MILITARY_CAMP_eventPicture
+		confucianism_MILITARY_CAMP_eventPicture
+		east_asian_SHIP_SAILING_eventPicture
+		shinto_SHIP_SAILING_eventPicture
+		confucianism_SHIP_SAILING_eventPicture
+		east_asian_ELECTION_REPUBLICAN_eventPicture
+		shinto_ELECTION_REPUBLICAN_eventPicture
+		confucianism_ELECTION_REPUBLICAN_eventPicture
+		east_asian_DEATH_OF_HEIR_eventPicture
+		shinto_DEATH_OF_HEIR_eventPicture
+		confucianism_DEATH_OF_HEIR_eventPicture
+		east_asian_ECONOMY_eventPicture
+		shinto_ECONOMY_eventPicture
+		confucianism_ECONOMY_eventPicture
+		asiangfx_ANGRY_MOB_eventPicture
+		asiangfx_RELIGIOUS_TURMOIL_eventPicture
+		asiangfx_RELIGIOUS_WARS_eventPicture
+		asiangfx_BAD_WITH_MONARCH_eventPicture
+		asiangfx_CITY_DEVELOPMENT_eventPicture
+		asiangfx_CITY_VIEW_eventPicture
+		asiangfx_COLONIZATION_eventPicture
+		asiangfx_FARMING_eventPicture
+		asiangfx_GOOD_WITH_MONARCH_eventPicture
+		asiangfx_RELIGION_eventPicture
+		asiangfx_ADVISOR_eventPicture
+		asiangfx_COURT_eventPicture
+		asiangfx_DIPLOMACY_eventPicture
+		asiangfx_POPE_PREACHING_eventPicture
+		asiangfx_PRAYING_eventPicture
+		asiangfx_RELIGIOUS_CONVERSION_eventPicture
+		asiangfx_GREAT_BUILDING_eventPicture
+		asiangfx_FORT_eventPicture
+		asiangfx_UNIVERSITY_eventPicture
+		southamericagfx_GREAT_BUILDING_eventPicture
+		southamericagfx_CITY_VIEW_eventPicture
+		southamericagfx_CITY_DEVELOPMENT_eventPicture
+		southamericagfx_FORT_eventPicture
+		southamericagfx_MILITARY_CAMP_eventPicture
+		southamericagfx_LAND_MILITARY_eventPicture
+		southamericagfx_NEW_HEIR_eventPicture
+		southamericagfx_CIVIL_WAR_eventPicture
+		southamericagfx_REVOLUTION_eventPicture
+		southamericagfx_BAD_WITH_MONARCH_eventPicture
+		southamericagfx_COURT_eventPicture
+		southamericagfx_FAMINE_eventPicture
+		southamericagfx_RELIGIOUS_TURMOIL_eventPicture
+		southamericagfx_RELIGION_eventPicture
+		southamericagfx_ANGRY_MOB_eventPicture
+		southamericagfx_ADVISOR_eventPicture
+		southamericagfx_REFORM_eventPicture
+		southamericagfx_PAINTER_ARTIST_eventPicture
+		southamericagfx_PLAGUE_eventPicture
+		southamericagfx_MERCHANTS_TALKING_eventPicture
+		southamericagfx_ECONOMY_eventPicture
+		southamericagfx_FEAST_eventPicture
+		southamericagfx_BATTLE_eventPicture
+		southamericagfx_RELIGIOUS_CONVERSION_eventPicture
+		southamericagfx_DIPLOMACY_eventPicture
+		southamericagfx_DEBATE_REPUBLICAN_eventPicture
+		southamericagfx_EXPLORERS_eventPicture
 		indiangfx_BATTLE_eventPicture
 		indiangfx_CITY_DEVELOPMENT_eventPicture
 		indiangfx_SIEGE_eventPicture
@@ -558,7 +573,6 @@ enums = { #these are in the DLC .zip files
 		indiangfx_ASSASSINATION_eventPicture
 		indiangfx_FORT_eventPicture
 		indiangfx_SPY_eventPicture
-		#Conquest of Paradise
 		northamericagfx_BATTLE_eventPicture
 		northamericagfx_CITY_DEVELOPMENT_eventPicture
 		northamericagfx_SIEGE_eventPicture
@@ -613,7 +627,6 @@ enums = { #these are in the DLC .zip files
 		northamericagfx_ASSASSINATION_eventPicture
 		northamericagfx_FORT_eventPicture
 		northamericagfx_SPY_eventPicture
-		#Purple Phoenix
 		BYZ_HARBOUR_eventPicture
 		BYZ_SHIP_SAILING_eventPicture
 		BYZ_BYZANTINE_EMPEROR_eventPicture
@@ -628,19 +641,14 @@ enums = { #these are in the DLC .zip files
 		BYZ_REVOLUTION_eventPicture
 		BYZ_ATHENS_eventPicture
 		BYZ_JERUSALEM_eventPicture
-		#The American Dream
 		USA_TEA_PARTY_eventPicture
 		USA_CONGRESS_eventPicture
-		DECLARATION_INDEPENDENCE_eventPicture
 		USA_FUR_TRADE_eventPicture
 		USA_GREAT_FIRE_eventPicture
 		USA_NATIVE_AMERICANS_eventPicture
-		INDIAN_WARS_eventPicture
 		USA_EXPLORERS_eventPicture
 		USA_COLONIZATION_eventPicture
 		USA_CONSTITUTION_eventPicture
-		#Stars and Crescent
-		TEMPORAL_RIFT_eventPicture
 		muslimgfx_BATTLE_eventPicture
 		muslimgfx_BIG_BOOK_eventPicture
 		muslimgfx_CITY_DEVELOPMENT_eventPicture
@@ -701,6 +709,7 @@ enums = { #these are in the DLC .zip files
 		muslimgfx_ASSASSINATION_eventPicture
 		muslimgfx_FORT_eventPicture
 		muslimgfx_SPY_eventPicture
-		muslimgfx_RELIGIOUS_CONVERSION_eventPicture		
+		muslimgfx_RELIGIOUS_CONVERSION_eventPicture
+	
 	}
 }
