@@ -2871,6 +2871,7 @@ alias[trigger:num_of_missionaries] = int
 alias[trigger:num_of_owned_and_controlled_institutions] = int
 
 ## scope = country
+## push_scope = province
 ###Returns true if at least X provinces of the scoped country match the specified condition(s).
 alias[trigger:num_of_owned_provinces_with] = {
 	value = int
