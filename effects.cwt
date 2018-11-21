@@ -1826,6 +1826,8 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	###Makes the heir a child not of the consort, i.e. a bastard
 	no_consort_with_heir = yes
+	## cardinality = 0..1
+	hidden = yes
 }
 
 ## scope = country
