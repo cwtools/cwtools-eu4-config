@@ -209,7 +209,7 @@ alias[effect:add_inflation] = float
 
 ## scope = country
 ###Adds mercantilism to the current scope. Can also subtract.
-alias[effect:add_mercantilism] = int
+alias[effect:add_mercantilism] = float
 
 ## scope = country
 ###Adds tariff value to to the current scope. Tariff value is the ducats sent to an overlord by subjects such as colonial nations. Can also subtract.
