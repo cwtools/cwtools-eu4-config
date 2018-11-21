@@ -284,6 +284,10 @@ alias[effect:add_tribal_allegiance] = int
 alias[effect:change_statists_vs_orangists] = float
 
 ## scope = country
+###Changes the Organist-Monarchist balance. Positive (probably) moves towards Monarchist, negative (probably) moves towards Statists.
+alias[effect:change_statists_vs_monarchists] = float
+
+## scope = country
 ###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt. In rebel_types, REB will make it pick the preferred rebel government.
 alias[effect:change_government] = <government.normal>
 
