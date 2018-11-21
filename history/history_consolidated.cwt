@@ -4,22 +4,23 @@ types = {
 		path = "game/history/advisors"
 		name_field = "advisor_id"
 	}
-	type[diplomacy_history] = {
-		path = "game/history/diplomacy"
-		name_from_file = yes
-		type_per_file = yes
-		subtype[normal] = {
-			## cardinality = 0..0
-			date_field = {
-			}
-		}
-		subtype[celestial] = {
-			path_file = "celestial_empire.txt"
-		}
-		subtype[hre] = {
-			path_file = "hre.txt"
-		}
-	}
+    type[diplomacy_history] = {
+        path = "game/history/diplomacy"
+        name_from_file = yes
+        type_per_file = yes
+        subtype[normal] = {
+            ## cardinality = 0..0
+            date_field = {
+                scalar = scalar
+            }
+        }
+		## type_key_filter = celestial_empire
+        subtype[celestial] = {
+        }
+		## type_key_filter = hre
+        subtype[hre] = {
+        }
+    }
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	
 	## push_scope = province
@@ -171,7 +172,7 @@ province_history = {
 
 		## cardinality = 0..inf
 		date_field = {
-			## cardinality = 0..1
+			## cardinality = 0..2
 			revolt = {
 				## cardinality = 0..1
 				type = <rebel_type>
@@ -428,6 +429,8 @@ country_history = {
 				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
+				## cardinality = 0..1
+				female = yes
 			}
 		}
 		## cardinality = 0..1
@@ -465,6 +468,8 @@ country_history = {
 				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
+				## cardinality = 0..1
+				female = yes
 			}
 		}
 		## cardinality = 0..1
@@ -497,6 +502,8 @@ country_history = {
 				death_date = date_field
 				## cardinality = 0..1
 				personality = <leader_personality>
+				## cardinality = 0..1
+				female = yes
 			}
 		}
 		## cardinality = 0..1
@@ -511,6 +518,8 @@ country_history = {
 			death_date = date_field
 			## cardinality = 0..1
 			personality = <leader_personality>
+			## cardinality = 0..1
+			female = yes
 		}
 
 		alias_name[effect] = alias_match_left[effect]
@@ -526,7 +535,7 @@ country_history = {
 		culture = <culture>
 		## cardinality = 0..1
 		primary_culture = <culture>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		decision = <decision>
 		## cardinality = 0..1
 		capital = <province_id>
@@ -546,5 +555,7 @@ country_history = {
 		mercantilism = int[0..100]
 		## cardinality = 0..1
 		changed_tag_from = enum[country_tags]
+		## cardinality = 0..1
+		revolution_target = bool
 	}
 }
