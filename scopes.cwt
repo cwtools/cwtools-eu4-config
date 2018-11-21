@@ -952,6 +952,13 @@ alias[effect:unit_owner] = {
 
 
 
+## push_scope = country
+## scope = unit
+###Returns the unit's owner country scope.
+alias[trigger:unit_owner] = {
+	## cardinality = 0..1
+	alias_name[trigger] = alias_match_left[trigger]
+}
 
 ## scope = { country province }
 ## push_scope = country
