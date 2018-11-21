@@ -608,6 +608,7 @@ government_name = {
 
 		## cardinality = 0..1
 		heir_male = {
+			## cardinality = 0..1
 			1 = localisation
 			## cardinality = 0..1
 			2 = localisation
@@ -617,6 +618,7 @@ government_name = {
 
 		## cardinality = 0..1
 		heir_female = {
+			## cardinality = 0..1
 			1 = localisation
 			## cardinality = 0..1
 			2 = localisation
