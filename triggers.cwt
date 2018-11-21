@@ -3850,7 +3850,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..inf
 	export_to_variable = {
-		enum[which_variable_name] = scalar #todo: variable + is which and variable_name exactly the same thing or do I need to know something here?
+		enum[which_varname] = scalar #todo: variable + is which and variable_name exactly the same thing or do I need to know something here?
 		value = enum[export_to_variable_data]
 		## cardinality = 0..1
 		who = scope[country]
