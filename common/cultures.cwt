@@ -58,6 +58,15 @@ culture_group = {
 			## cardinality = 0..inf
 			scalar
 		}
+		
+		## replace_scope = { this = province root = province }
+		province = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		
+		## replace_scope = { this = country root = country }
+		country = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 	}
 }
-
