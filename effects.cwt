@@ -864,6 +864,10 @@ alias[effect:define_general] = {
 
 ## scope = { country province }
 ###Spawns an artillery unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected artillery unit.
+alias[effect:artillery] = <province_id>
+
+## scope = { country province }
+###Spawns an artillery unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected artillery unit.
 alias[effect:artillery] = scope[province]
 
 ## scope = { country province }
@@ -873,6 +877,10 @@ alias[effect:artillery] = scope[country]
 ## scope = { country province }
 ###Spawns an artillery unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected artillery unit.
 alias[effect:artillery] = enum[country_tags]
+
+## scope = { country province }
+###Spawns a cavalry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected cavalry unit.
+alias[effect:cavalry] = <province_id>
 
 ## scope = { country province }
 ###Spawns a cavalry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected cavalry unit.
@@ -888,6 +896,10 @@ alias[effect:cavalry] = enum[country_tags]
 
 ## scope = { country province }
 ###Spawns a infantry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected infantry unit.
+alias[effect:infantry] = <province_id>
+
+## scope = { country province }
+###Spawns a infantry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected infantry unit.
 alias[effect:infantry] = scope[province]
 
 ## scope = { country province }
@@ -897,6 +909,10 @@ alias[effect:infantry] = scope[country]
 ## scope = { country province }
 ###Spawns a infantry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected infantry unit.
 alias[effect:infantry] = enum[country_tags]
+
+## scope = { country province }
+###Spawns a mercenary infantry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected mercenary infantry unit.
+alias[effect:mercenary_infantry] = <province_id>
 
 ## scope = { country province }
 ###Spawns a mercenary infantry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected mercenary infantry unit.
@@ -912,6 +928,10 @@ alias[effect:mercenary_infantry] = enum[country_tags]
 
 ## scope = { country province }
 ###Spawns a mercenary cavalry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected mercenary cavalry unit.
+alias[effect:mercenary_cavalry] = <province_id>
+
+## scope = { country province }
+###Spawns a mercenary cavalry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected mercenary cavalry unit.
 alias[effect:mercenary_cavalry] = scope[province]
 
 ## scope = { country province }
@@ -921,6 +941,10 @@ alias[effect:mercenary_cavalry] = scope[country]
 ## scope = { country province }
 ###Spawns a mercenary cavalry unit for the current country scope in the defined province scope, or vice versa. Uses the currently selected mercenary cavalry unit.
 alias[effect:mercenary_cavalry] = enum[country_tags]
+
+## scope = { country province }
+###Spawns a heavy ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current heavy ship unit. Requires the province scope to have a port.
+alias[effect:heavy_ship] = <province_id>
 
 ## scope = { country province }
 ###Spawns a heavy ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current heavy ship unit. Requires the province scope to have a port.
@@ -936,6 +960,10 @@ alias[effect:heavy_ship] = enum[country_tags]
 
 ## scope = { country province }
 ###Spawns a light ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current light ship unit. Requires the province scope to have a port.
+alias[effect:light_ship] = <province_id>
+
+## scope = { country province }
+###Spawns a light ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current light ship unit. Requires the province scope to have a port.
 alias[effect:light_ship] = scope[province]
 
 ## scope = { country province }
@@ -948,6 +976,10 @@ alias[effect:light_ship] = enum[country_tags]
 
 ## scope = { country province }
 ###Spawns a galley ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current galley ship unit. Requires the province scope to have a port.
+alias[effect:galley] = <province_id>
+
+## scope = { country province }
+###Spawns a galley ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current galley ship unit. Requires the province scope to have a port.
 alias[effect:galley] = scope[province]
 
 ## scope = { country province }
@@ -957,6 +989,10 @@ alias[effect:galley] = scope[country]
 ## scope = { country province }
 ###Spawns a galley ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current galley ship unit. Requires the province scope to have a port.
 alias[effect:galley] = enum[country_tags]
+
+## scope = { country province }
+###Spawns a transport ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current transport ship unit. Requires the province scope to have a port.
+alias[effect:transport] = <province_id>
 
 ## scope = { country province }
 ###Spawns a transport ship unit for the current country scope in the defined province scope, or vice versa. Uses the current scope's current transport ship unit. Requires the province scope to have a port.

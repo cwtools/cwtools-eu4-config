@@ -550,8 +550,16 @@ alias[trigger:defensive_war_with] = enum[country_tags]
 alias[trigger:devastation] = int
 
 ## scope = province
-###Returns true if the development of the province is at least X.
+###Returns true if the development of the province is at least X, or at least as much as the specified province scope.
 alias[trigger:development] = int
+
+## scope = province
+###Returns true if the development of the province is at least X, or at least as much as the specified province scope.
+alias[trigger:development] = scope[province]
+
+## scope = province
+###Returns true if the development of the province is at least X, or at least as much as the specified province scope.
+alias[trigger:development] = <province_id>
 
 ## scope = country
 ###Returns true if the country has X percent of its overlord's development
@@ -3630,8 +3638,16 @@ alias[trigger:total_base_tax] = scope[country]
 alias[trigger:total_base_tax] = enum[country_tags]
 
 ## scope = country
-###Returns true if the country has a total development of at least X.
+###Returns true if the country has a total development of at least X, or at least as much as the specified country.
 alias[trigger:total_development] = int
+
+## scope = country
+###Returns true if the country has a total development of at least X, or at least as much as the specified country.
+alias[trigger:total_development] = scope[country]
+
+## scope = country
+###Returns true if the country has a total development of at least X, or at least as much as the specified country.
+alias[trigger:total_development] = enum[country_types]
 
 ## scope = any
 ###Returns true if the total number of cardinals is at least X.
@@ -4257,3 +4273,13 @@ alias[trigger:provincial_institution_progress] = {
 	which = <institution>
 	value = int
 }
+
+## scope = country
+alias[trigger:is_monarchists_in_power] = bool
+
+## scope = country
+alias[trigger:has_reform_level] = int
+
+## scope = province
+alias[trigger:trade_company_region] = <trade_company>
+

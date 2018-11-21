@@ -30,6 +30,7 @@ decision = {
 	}
 
 	#Not sure other settings are used or do anything
+	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	ai_will_do = {
 		factor = int[0..1]

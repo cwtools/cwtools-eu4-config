@@ -33,7 +33,8 @@ event = {
 		title = none
 		desc = localisation
 		desc = none
-		picture = <sprite>
+		picture = <sprite>		
+		picture = enum[dlc_event_pictures]
 		picture = none
 	}
 	
@@ -48,16 +49,14 @@ event = {
 			}
 			desc = localisation
 		}
-		## severity = info
-		#Many pictures are hidden in DLC.zips, apparently. So this is a temporary solution until we can work out a way to access the full list.
 		picture = <sprite>
+		picture = enum[dlc_event_pictures]
 		picture = {
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-			## severity = info
-			#Many pictures are hidden in DLC.zips, apparently. So this is a temporary solution until we can work out a way to access the full list.
 			picture = <sprite>
+			picture = enum[dlc_event_pictures]
 		}
 		
 	}

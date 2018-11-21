@@ -13,8 +13,12 @@ types = {
 	type[trade_company_investment] = {
 		path = "game/common/tradecompany_investments"
 	}
+	type[trade_node_name] = {
+		path = "game/common/tradenodes"
+	}
 	type[trade_node] = {
 		path = "game/common/tradenodes"
+		name_field = "location"
 	}
 	type[trading_policy] = {
 		path = "game/common/trading_policies"
@@ -159,7 +163,7 @@ trade_node = {
 	inland = yes
 	## cardinality = 0..inf
 	outgoing = {
-		name = <trade_node>
+		name = <trade_node_name>
 		path = {
 			## cardinality = 1..inf
 			<province_id>
