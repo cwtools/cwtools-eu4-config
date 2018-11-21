@@ -1594,6 +1594,10 @@ alias[effect:change_consort_regent_to_ruler] = yes
 alias[effect:remove_consort] = yes
 
 ## scope = country
+###Kills the consort of the current scope. Displays consort death message.
+alias[effect:kill_consort] = yes
+
+## scope = country
 ###Creates the defined consort for the current scope. The skill values are not rolled for consorts, meaning the values set are the exact values a consort gets.
 alias[effect:define_consort] = {
 	## cardinality = 0..1
@@ -2713,3 +2717,9 @@ alias[effect:set_religious_school] = {
 	group = <religion_group>
 	school = enum[religious_schools]
 }
+
+## scope = country
+alias[effect:adopt_reform_progress] = scope[country]
+
+## scope = country
+alias[effect:adopt_reform_progress] = enum[country_tags]
