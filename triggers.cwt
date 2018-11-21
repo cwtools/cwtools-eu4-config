@@ -3987,8 +3987,16 @@ alias[trigger:years_of_income] = scope[country]
 alias[trigger:has_reform] = <government_reform>
 
 ## scope = country
-###Returns true if the country has at least X army professionalism.
+###Returns true if the country has at least X army professionalism, or at least as much as the specified country.
 alias[trigger:army_professionalism] = float[0.0..1.0]
+
+## scope = country
+###Returns true if the country has at least X army professionalism, or at least as much as the specified country.
+alias[trigger:army_professionalism] = scope[country]
+
+## scope = country
+###Returns true if the country has at least X army professionalism, or at least as much as the specified country.
+alias[trigger:army_professionalism] = enum[country_tags]
 
 ## scope = province
 alias[trigger:can_have_center_of_reformation_trigger] = {
