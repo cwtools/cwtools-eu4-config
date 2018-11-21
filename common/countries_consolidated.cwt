@@ -66,9 +66,19 @@ country_file = {
 	
 	## cardinality = 0..1
 	random_nation_chance = int[0..100]
+	
+	## cardinality = 0..1
+	colonial_parent = enum[country_tags]
+	
+	## cardinality = 0..1
+	###What does this do? Vanilla comment is: Excludes them from random countries, makes sure they only can be spawned once
+	right_to_bear_arms = yes
+	
+	## cardinality = 0..1
+	special_unit_culture = south_east_asian_special
 
 	## cardinality = 0..1
-	###Excludes them from random countries, makes sure they only can be spawned once
+	###What does this do? Vanilla comment is: Excludes them from random countries, makes sure they only can be spawned once
 	all_your_core_are_belong_to_us = yes
 
 	color = {
@@ -82,10 +92,14 @@ country_file = {
 		int[0..255]
 	}
 
+	#usually needed but the "specials" survive without
+	## severity = warning
 	historical_idea_groups = {
 		## cardinality = 8..8
 		<idea_group.selectable>
 	}
+	#usually needed but the "specials" survive without
+	## severity = warning
 	historical_units = {
 		## cardinality = 1..inf
 		<unit_type>
@@ -100,16 +114,20 @@ country_file = {
 		## cardinality = 1..inf
 		scalar
 	}
+	#Only "rebels" lack this
+	## severity = warning
 	ship_names = {
 		#todo: names
 		## cardinality = 1..inf
 		scalar
 	}
+	## cardinality = 0..1
 	army_names = {
 		#todo: names
 		## cardinality = 1..inf
 		scalar
 	}
+	## cardinality = 0..1
 	fleet_names = {
 		#todo: names
 		## cardinality = 1..inf
