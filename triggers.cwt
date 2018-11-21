@@ -896,8 +896,16 @@ alias[trigger:has_active_fervor] = bool
 alias[trigger:has_active_policy] = <policy>
 
 ## scope = country
-###Returns true if the country has adopted the specified cult.
+###Returns true if the country has adopted the specified cult, or the same cult as the specified country.
 alias[trigger:has_adopted_cult] = <cult>
+
+## scope = country
+###Returns true if the country has adopted the specified cult, or the same cult as the specified country.
+alias[trigger:has_adopted_cult] = enum[country_tags]
+
+## scope = country
+###Returns true if the country has adopted the specified cult, or the same cult as the specified country.
+alias[trigger:has_adopted_cult] = scope[country]
 
 ## scope = country
 ###Returns true if the country has hired an advisor. Warning: Inteprets every right side argument as yes.
@@ -1464,8 +1472,16 @@ alias[trigger:has_unified_culture_group] = bool
 alias[trigger:has_unit_type] = <unit_type> #todo
 
 ## scope = country
-###Returns true if the country has unlocked the specified cult.
+###Returns true if the country has unlocked the specified cult, or the same cult as the specified country.
 alias[trigger:has_unlocked_cult] = <cult>
+
+## scope = country
+###Returns true if the country has unlocked the specified cult, or the same cult as the specified country.
+alias[trigger:has_unlocked_cult] = scope[country]
+
+## scope = country
+###Returns true if the country has unlocked the specified cult, or the same cult as the specified country.
+alias[trigger:has_unlocked_cult] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has raised war taxes.
