@@ -85,14 +85,7 @@ event = {
 	
 	subtype[!triggered] = {
 		mean_time_to_happen = {
-			## cardinality = 0..1
-			years = int
-
-			## cardinality = 0..1
-			months = int
-
-			## cardinality = 0..1
-			days = int
+			enum[days_months_years] = int
 
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
@@ -113,8 +106,14 @@ event = {
 
 	## cardinality = 1..inf
 	option = {
-		## cardinality = 0..1
-		name = localisation
+		subtype[hidden] = {
+			## cardinality = 0..1
+			name = localisation
+		}
+		subtype[!hidden] = {
+			## severity = warning
+			name = localisation
+		}
 
 		## cardinality = 0..1
 		trigger = {
@@ -127,7 +126,6 @@ event = {
 		## cardinality = 0..1
 		ai_chance = {
 			factor = float[0..10000]
-			##cardinality = 0..100
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 

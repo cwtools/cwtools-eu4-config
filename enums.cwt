@@ -133,6 +133,11 @@ enums = {
 		attitude_rebellious
 		attitude_allied
 	}
+	enum[days_months_years] = {
+		days
+		months
+		years
+	}
 	enum[ai_personalities] = { #hardcoded so enum is ideal
 		human
 		ai_capitalist
