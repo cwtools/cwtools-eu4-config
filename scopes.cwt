@@ -321,20 +321,21 @@ alias[effect:capital_scope] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+#scope_field
 
-## scope = province
-## push_scope = country
-###Refers to the country that owns the current province scope.
-alias[effect:owner] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# scope = province
+# push_scope = country
+#Refers to the country that owns the current province scope.
+#alias[effect:owner] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-## scope = province
-## push_scope = country
-###Refers to the country that controls the current province scope.
-alias[effect:controller] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# scope = province
+# push_scope = country
+#Refers to the country that controls the current province scope.
+#alias[effect:controller] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
 ## scope = province
 ## push_scope = province
@@ -1017,20 +1018,21 @@ alias[trigger:capital_scope] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+#scope_field
 
-## scope = province
-## push_scope = country
-###Refers to the country that owns the current province scope.
-alias[trigger:owner] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# scope = province
+# push_scope = country
+#Refers to the country that owns the current province scope.
+#alias[trigger:owner] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
-## scope = province
-## push_scope = country
-###Refers to the country that controls the current province scope.
-alias[trigger:controller] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
+# scope = province
+# push_scope = country
+#Refers to the country that controls the current province scope.
+#alias[trigger:controller] = {
+#	alias_name[trigger] = alias_match_left[trigger]
+#}
 
 ## scope = province
 ## push_scope = province
