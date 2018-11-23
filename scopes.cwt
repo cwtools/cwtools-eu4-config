@@ -415,7 +415,7 @@ alias[effect:every_coalition_member] = {
 }
 
 
-## scope = country
+## scope = { country province }
 ## push_scope = country
 ###Scopes to all countries in the world. Avoid this if you can use something more specific.
 alias[effect:every_country] = {
@@ -523,7 +523,7 @@ alias[effect:random_ally] = {
 }
 
 
-## scope = country
+## scope = { country province }
 ## push_scope = country
 ###Scopes to one random member of the coalition against the current scope.
 alias[effect:random_coalition_member] = {
@@ -1226,7 +1226,7 @@ alias[trigger:any_coalition_member] = {
 }
 
 ## push_scope = country
-## scope = country
+## scope = { country province }
 ###Scopes to one country among all countries in the world. Avoid this if you can use something more specific.
 alias[trigger:any_country] = {
 	alias_name[trigger] = alias_match_left[trigger]

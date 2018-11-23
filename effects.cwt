@@ -2587,7 +2587,7 @@ alias[effect:recall_merchant] = enum[country_tags]
 
 ## scope = trade_node
 ###Adds income to the current tradenode province scope. Only works when the current province scope is the location of a tradenode center.
-alias[effect:add_trade_node_income] = int
+alias[effect:add_trade_node_income] = float
 
 ## scope = province
 ###Adds a trade modifier for the defined country scope in the current tradenode province scope. Can be added to any province within a tradenode.

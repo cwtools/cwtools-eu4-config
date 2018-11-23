@@ -2103,13 +2103,21 @@ alias[trigger:is_papal_controller] = bool
 ###Returns true if the country/province is part of the HRE.
 alias[trigger:is_part_of_hre] = bool
 
-## scope = province
+## scope = { country province }
 ###Returns true if the province is a permanent claim of X.
 alias[trigger:is_permanent_claim] = scope[country]
 
-## scope = province
+## scope = { country province }
 ###Returns true if the province is a permanent claim of X.
 alias[trigger:is_permanent_claim] = enum[country_tags]
+
+## scope = { country province }
+###Returns true if the province is a permanent claim of X.
+alias[trigger:is_permanent_claim] = scope[province]
+
+## scope = { country province }
+###Returns true if the province is a permanent claim of X.
+alias[trigger:is_permanent_claim] = <province_id>
 
 ## scope = country
 ###Returns true if the country is a player-designed custom nation.
