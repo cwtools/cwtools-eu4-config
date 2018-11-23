@@ -1,20 +1,45 @@
+#Loc done
 
 types = {
 	type[trade_good] = {
 		path = "game/common/tradegoods"
 		
+#		localisation = {
+#			## required
+#			name = "€"
+#			## required
+#			description = "€DESC"
+#		}
+
 		subtype[latent] = {
 			is_latent = yes
 		}
 	}
 	type[trade_company] = {
 		path = "game/common/trade_companies"
+		
+#		localisation = {
+#			## required
+#			name = "€"
+#		}
 	}
 	type[trade_company_investment] = {
 		path = "game/common/tradecompany_investments"
+		
+#		localisation = {
+#			## required
+#			name = "€"
+#			## required
+#			description = "€_desc"
+#		}
 	}
 	type[trade_node_name] = {
 		path = "game/common/tradenodes"
+		
+#		localisation = {
+#			## required
+#			name = "€"
+#		}
 	}
 	type[trade_node] = {
 		path = "game/common/tradenodes"
@@ -22,6 +47,13 @@ types = {
 	}
 	type[trading_policy] = {
 		path = "game/common/trading_policies"
+
+#		localisation = {
+#			## required
+#			name = "€"
+#			## required
+#			description = "€_desc"
+#		}
 	}
 	type[prices] = {
 		path = "game/common/prices"
@@ -88,7 +120,7 @@ trade_company = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		name = localisation #todo: there is something special about this. i.e. Root_Culture_GetName turned up in the name
+		name = localisation
 	}
 }
 

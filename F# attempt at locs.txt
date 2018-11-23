@@ -55,5 +55,38 @@
 	let valAdvisorTypeLocs : LocalisationValidator =
 		fun _ keys es ->
 			let advisor_type = es.GlobMatchChildren("**/common/advisor_types/*.txt")
-			let inner = checkLocNodeKeyAdvs keys "" [""; "DESC"]
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
 			advisor_type <&!&> inner
+
+	let valTradeGoodLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trade_good = es.GlobMatchChildren("**/common/tradegoods/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "DESC"]
+			trade_good <&!&> inner
+		
+	let valTradeCompanyLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trade_company = es.GlobMatchChildren("**/common/trade_companies/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""]
+			trade_company <&!&> inner
+	
+	let valTradeCompanyInvestmentLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trade_company_investment = es.GlobMatchChildren("**/common/trade_companies/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
+			trade_company_investment <&!&> inner
+	
+	let valTradeNodeLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trade_node = es.GlobMatchChildren("**/common/tradenodes/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""]
+			trade_node <&!&> inner
+	
+	let valTradingPolicyLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trading_policy = es.GlobMatchChildren("**/common/trading_policies/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
+			trading_policy <&!&> inner
+	
+			
+		
