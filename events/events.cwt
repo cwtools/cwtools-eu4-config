@@ -86,13 +86,19 @@ event = {
 	subtype[!triggered] = {
 		mean_time_to_happen = {
 			enum[days_months_years] = int
-
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
-		
-		## cardinality = 0..1
-		is_mtth_scaled_to_size = float #todo: what does this do?
 	}
+	subtype[triggered] = {
+		## cardinality = 0..1
+		mean_time_to_happen = {
+			enum[days_months_years] = 1
+			alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		}
+	}
+		
+	## cardinality = 0..1
+	is_mtth_scaled_to_size = float #todo: what does this do?
 
 	## cardinality = 0..1
 	trigger = {
