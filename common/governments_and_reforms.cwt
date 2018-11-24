@@ -475,7 +475,7 @@ government = {
 		}
 	
 		reform_levels = {
-			## cardinality = 7..7
+			## cardinality = 1..7
 			localisation = {
 				reforms = {
 					## cardinality = 1..inf
@@ -495,7 +495,7 @@ government = {
 	}
 
 	subtype[pre_dharma_mapping] = {
-		<government_reform.new> = {
+		<government_reform> = {
 			government = <government>
 			legacy_government = <government_reform.legacy>
 		}

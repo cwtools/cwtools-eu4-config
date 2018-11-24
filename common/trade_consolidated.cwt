@@ -60,7 +60,18 @@ types = {
 		name_from_file = yes
 		type_per_file = yes
 	}
+	type[trade_center] = {
+		path = "game/common/centers_of_trade"
+		
+#		localisation = {
+#			## required
+#			name = "€"
+#			## required
+#			description = "€_desc"
+#		}
+	}
 }
+
 
 trade_good = {
 	color = {
@@ -271,5 +282,35 @@ prices = {
 		base_price = float
 		## cardinality = 0..1
 		goldtype = yes
+	}
+}
+
+
+trade_center = {
+	level = int
+	## cardinality = 0..1
+	cost = int
+	type = enum[trade_center_types]
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+    province_modifiers = {
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+    state_modifiers = {
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+    global_modifiers = {
+        alias_name[modifier] = alias_match_left[modifier]
+    }
+}
+
+enums = {
+	enum[trade_center_types] = {
+		coastal
+		inland
 	}
 }

@@ -88,5 +88,23 @@
 			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
 			trading_policy <&!&> inner
 	
-			
+		
+	let valTradeCenterLocs : LocalisationValidator =
+		fun _ keys es ->
+			let trade_center = es.GlobMatchChildren("**/common/centers_of_trade/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
+			trade_center <&!&> inner
+		
+	let valCasusBelliLocs : LocalisationValidator =
+		fun _ keys es ->
+			let casus_belli = es.GlobMatchChildren("**/common/casus_belli/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
+			casus_belli <&!&> inner
+		
+	let valWarGoalLocs : LocalisationValidator =
+		fun _ keys es ->
+			let war_goal = es.GlobMatchChildren("**/common/wargoal_types/*.txt")
+			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
+			war_goal <&!&> inner
+		
 		
