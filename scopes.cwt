@@ -254,25 +254,25 @@ alias[effect:random_list] = {
 }
 
 
-## scope = any
-alias[effect:root] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# ## scope = any
+#alias[effect:root] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-## scope = any
-alias[effect:prev] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# ## scope = any
+#alias[effect:prev] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-## scope = any
-alias[effect:from] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# ## scope = any
+#alias[effect:from] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
-## scope = any
-alias[effect:this] = {
-	alias_name[effect] = alias_match_left[effect]
-}
+# ## scope = any
+#alias[effect:this] = {
+#	alias_name[effect] = alias_match_left[effect]
+#}
 
 
 
