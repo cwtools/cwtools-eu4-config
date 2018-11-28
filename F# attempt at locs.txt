@@ -72,7 +72,7 @@
 	
 	let valTradeCompanyInvestmentLocs : LocalisationValidator =
 		fun _ keys es ->
-			let trade_company_investment = es.GlobMatchChildren("**/common/trade_companies/*.txt")
+			let trade_company_investment = es.GlobMatchChildren("**/common/tradecompany_investments/*.txt")
 			let inner = checkLocNodeKeyAdvs keys "" [""; "_desc"]
 			trade_company_investment <&!&> inner
 	
