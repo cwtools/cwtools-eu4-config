@@ -4291,3 +4291,6 @@ alias[trigger:has_reform_level] = int
 ## scope = province
 alias[trigger:trade_company_region] = <trade_company>
 
+## scope = country
+###Checks whether the country has large debts (multiple loans, to be confirmed how many - returned false with two but true with ten). Note: "No" is treated as a "yes" so use NOT = { is_in_large_debt = yes }
+alias[trigger:is_in_large_debt] = yes

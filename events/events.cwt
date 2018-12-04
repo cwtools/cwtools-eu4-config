@@ -13,8 +13,9 @@ types = {
 		## push_scope = province
 		subtype[province] = {
 		}
-		## type_key_filter = event
-		subtype[scopeless] = {
+		subtype[mean_time_to_happen] = {
+			mean_time_to_happen = {
+			}
 		}
 		subtype[hidden] = {
 			hidden = yes
@@ -74,6 +75,12 @@ event = {
 
 	## cardinality = 0..1
 	is_triggered_only = bool
+
+	#well, technically you can get an event every 12 days without it, I just don't think you should
+	subtype[!mean_time_to_happen] = {
+		## severity = warning
+		is_triggered_only = yes
+	}
 
 	subtype[triggered] = { #experiment
 		## severity = info
