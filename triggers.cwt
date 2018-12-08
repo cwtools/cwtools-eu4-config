@@ -658,6 +658,10 @@ alias[trigger:dominant_religion] = enum[country_tags]
 alias[trigger:dominant_religion] = <province_id>
 
 ## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = secondary
+
+## scope = country
 ###Returns true if the country has at least X doom, or at least as much doom as the specified country.
 alias[trigger:doom] = int
 

@@ -405,7 +405,7 @@ alias[effect:change_religion] = <province_id>
 
 
 
-## scope = country
+## scope = { province country }
 ###Enables a religion that has been restricted with the date parameter. Religions are found in /Europa Universalis IV/common/religions/*.txt
 alias[effect:enable_religion] = <religion>
 
