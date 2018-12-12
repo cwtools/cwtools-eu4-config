@@ -3659,7 +3659,7 @@ alias[trigger:total_development] = scope[country]
 
 ## scope = country
 ###Returns true if the country has a total development of at least X, or at least as much as the specified country.
-alias[trigger:total_development] = enum[country_types]
+alias[trigger:total_development] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the total number of cardinals is at least X.

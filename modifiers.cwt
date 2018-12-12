@@ -1,0 +1,20 @@
+
+#These are the ones missed by the wiki
+
+## scope = country
+alias[modifier:has_banners] = int
+
+## scope = province
+alias[modifier:local_has_banners] = int
+
+## scope = country
+alias[modifier:treasure_fleet_income] = float
+
+## scope = country
+alias[modifier:global_naval_barrage_cost] = float
+
+## scope = country
+alias[modifier:monthly_support_heir_gain] = float
+
+## scope = province
+alias[modifier:local_missionary_maintenance_cost] = float
