@@ -13,6 +13,9 @@ institution = {
 	}
 
 	## cardinality = 0..1
+	trade_company_efficiency = float
+
+	## cardinality = 0..1
 	historical_start_date = date_field
 	## cardinality = 0..1
 	historical_start_province = <province_id>
