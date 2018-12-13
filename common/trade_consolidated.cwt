@@ -234,19 +234,19 @@ trading_policy = {
 	###Only one country can select this in a certain node.
 	unique = yes
 
-	## replace_scope = { this = country root = country from = province }
+	## replace_scope = { this = country root = country from = trade_node }
 	can_select = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { this = country root = country from = province }
+	## replace_scope = { this = country root = country from = trade_node }
 	can_maintain = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## cardinality = 0..1
-	## replace_scope = { this = province root = province }
+	## replace_scope = { this = trade_node root = trade_node }
 	node_province_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
