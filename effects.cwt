@@ -2120,6 +2120,10 @@ alias[effect:set_local_autonomy] = int[0..100]
 alias[effect:change_trade_goods] = <trade_good>
 
 ## scope = province
+###Sets the trade good for the current province scope. Trade Goods are found in /Europa Universalis IV/common/tradegoods/*.txt.
+alias[effect:change_trade_goods] = random
+
+## scope = province
 ###Adds Administrative power to the owner of the current province scope, scaling with the base tax. 1 power per point of yearly base tax.
 alias[effect:add_scaled_local_adm_power] = int
 

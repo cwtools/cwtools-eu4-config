@@ -1269,11 +1269,11 @@ alias[trigger:has_merchant] = enum[country_tags]
 ###Returns true if the province has an active missionary.
 alias[trigger:has_missionary] = bool
 
-## scope = trade_node
+## scope = province
 ###Returns true if the country X has most amount of trade power in trade node.
 alias[trigger:has_most_province_trade_power] = scope[country]
 
-## scope = trade_node
+## scope = province
 ###Returns true if the country X has most amount of trade power in trade node.
 alias[trigger:has_most_province_trade_power] = enum[country_tags]
 
@@ -1459,11 +1459,11 @@ alias[trigger:has_trade_modifier] = {
 	enum[key_name] = scalar #todo: like a variable, set via add_trade_modifier
 }
 
-## scope = trade_node
+## scope = province
 ###Returns true if the specified country has a merchant in the trade node.
 alias[trigger:has_trader] = scope[country]
 
-## scope = trade_node
+## scope = province
 ###Returns true if the specified country has a merchant in the trade node.
 alias[trigger:has_trader] = enum[country_tags]
 
@@ -2219,11 +2219,11 @@ alias[trigger:is_state_core] = enum[country_tags]
 ###Returns true if in the country the statists are in power.
 alias[trigger:is_statists_in_power] = bool
 
-## scope = trade_node
+## scope = province
 ###Returns true if the specified country has the most trade power in the area.
 alias[trigger:is_strongest_trade_power] = scope[country]
 
-## scope = trade_node
+## scope = province
 ###Returns true if the specified country has the most trade power in the area.
 alias[trigger:is_strongest_trade_power] = enum[country_tags]
 
@@ -3269,7 +3269,7 @@ alias[trigger:primary_culture] = <province_id>
 ###Returns true if the country is primitive.
 alias[trigger:primitives] = bool
 
-## scope = trade_node
+## scope = province
 ###Returns true if the country has at least X trade power from privateering in the trade node.
 alias[trigger:privateer_power] = {
 	## cardinality = 0..1
@@ -4240,12 +4240,6 @@ alias[trigger:share_of_starting_income] = float
 
 ## scope = country
 alias[trigger:num_of_foreign_hre_provinces] = int
-
-## scope = trade_node
-alias[trigger:is_strongest_trade_power] = scope[country]
-
-## scope = trade_node
-alias[trigger:is_strongest_trade_power] = enum[country_tags]
 
 ## scope = country
 alias[trigger:num_of_non_tributary_subjects] = int
