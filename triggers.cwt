@@ -4028,7 +4028,7 @@ alias[trigger:years_of_income] = scope[country]
 
 ## scope = country
 ###Returns true if the country has the specified government reform.
-alias[trigger:has_reform] = <government_reform>
+alias[trigger:has_reform] = <government_reform.new>
 
 ## scope = country
 ###Returns true if the country has at least X army professionalism, or at least as much as the specified country.

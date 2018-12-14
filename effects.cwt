@@ -2715,8 +2715,8 @@ alias[effect:mil_power_cost] = int
 ## scope = country
 alias[effect:change_government_reform_progress] = int[-100..100]
 
-## scope = country
-alias[effect:change_government_via_reform] = <government.normal>
+# ## scope = country
+# alias[effect:change_government_via_reform] = <government.normal>
 
 
 ## scope = country
@@ -2726,7 +2726,7 @@ alias[effect:set_capital] = scope[province]
 alias[effect:set_capital] = <province_id>
 
 ## scope = country
-alias[effect:add_government_reform] = <government_reform>
+alias[effect:add_government_reform] = <government_reform.new>
 
 ## scope = country
 alias[effect:end_incident] = <incident>
