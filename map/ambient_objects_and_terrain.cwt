@@ -55,6 +55,14 @@ ambient_object = {
 	}
 }
 
+complex_enum[ambient_objects] = {
+	path = "game/map/ambient_object.txt"
+	name = {
+		object = {
+			name = enum_name
+		}
+	}
+}
 
 
 terrain = {

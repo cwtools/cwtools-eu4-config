@@ -199,4 +199,9 @@ enums = {
 		discipline
 		ship_durability
 	}
+	enum[native_policies] = {
+		native_policy_coexist
+		native_policy_trade
+		native_policy_hostile
+	}
 }

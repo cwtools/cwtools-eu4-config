@@ -62,11 +62,11 @@ alias[effect:set_variable] = {
 
 ## scope = any
 ###Defines a global flag.
-alias[effect:set_global_flag] = scalar
+alias[effect:set_global_flag] = value_set[global_flag]
 
 ## scope = any
 ###Clears a defined global flag.
-alias[effect:clr_global_flag] = scalar
+alias[effect:clr_global_flag] = value[global_flag]
 
 ## scope = any
 ###Displays a localized key in the effect tooltip.
@@ -94,11 +94,11 @@ alias[effect:clear_global_event_targets] = yes
 
 ## scope = any
 ###Displays a hidden ambient object from the map/ambient_objects.txt file.
-alias[effect:show_ambient_object] = <ambient_object>
+alias[effect:show_ambient_object] = enum[ambient_objects]
 
 ## scope = any
 ###Hides a visible ambient object from the map/ambient_objects.txt file.
-alias[effect:hide_ambient_object] = <ambient_object>
+alias[effect:hide_ambient_object] = enum[ambient_objects]
 
 
 ## scope = country
@@ -137,12 +137,16 @@ alias[effect:add_country_modifier] = {
 alias[effect:remove_country_modifier] = <event_modifier>
 
 ## scope = country
+###Removes an already assigned country modifier from the current scope.
+alias[effect:remove_country_modifier] = <static_modifier>
+
+## scope = country
 ###A unique string to identify the country flag with. Flags can be appended with scopes or event targets: set_country_flag = my_flag@ROOT
-alias[effect:set_country_flag] = scalar
+alias[effect:set_country_flag] = value_set[country_flag]
 
 ## scope = country
 ###Clears a defined country flag for the current scope.
-alias[effect:clr_country_flag] = scalar
+alias[effect:clr_country_flag] = value[country_flag]
 
 ## scope = country
 ###Changes current scope to <scope> tag.
@@ -392,6 +396,10 @@ alias[effect:remove_accepted_culture] = <province_id>
 ## scope = { country province }
 ###Changes the religion of the current country/province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.
 alias[effect:change_religion] = <religion>
+
+## scope = { country province }
+###Changes the religion of the current country/province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.
+alias[effect:change_religion] = heretic
 
 ## scope = { country province }
 ###Changes the religion of the current country/province scope. Religions are found in /Europa Universalis IV/common/religions/*.txt. Can utilise Event Scope Values.
@@ -1393,11 +1401,11 @@ alias[effect:remove_ruler_personality] = <ruler_personality>
 
 ## scope = country
 ###Defines a ruler flag for the current scope's ruler. Flags can be appended with scopes or event targets via e.g. @root
-alias[effect:set_ruler_flag] = scalar
+alias[effect:set_ruler_flag] = value_set[ruler_flag]
 
 ## scope = country
 ###Clears a ruler flag for the current scope's ruler.
-alias[effect:clr_ruler_flag] = scalar
+alias[effect:clr_ruler_flag] = value[ruler_flag]
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
@@ -1457,11 +1465,11 @@ alias[effect:set_ruler_religion] = <province_id>
 
 ## scope = country
 ###Removes the current ruler of the current scope, saving them to the unique string.
-alias[effect:exile_ruler_as] = scalar #todo: kinda like a variable
+alias[effect:exile_ruler_as] = value_set[exiled_ruler]
 
 ## scope = country
 ###Makes an exiled ruler the ruler of the current scope.
-alias[effect:set_ruler] = scalar #todo: kinda like a variable, is the string from exile_ruler_as
+alias[effect:set_ruler] = value[exiled_ruler]
 
 ## scope = country
 ###Kills the ruler of the current scope.
@@ -1602,11 +1610,11 @@ alias[effect:remove_queen_personality] = <ruler_personality>
 
 ## scope = country
 ###Defines a ruler flag for the current scope's consort. Flags can be appended with scopes or event targets via e.g. @root
-alias[effect:set_consort_flag] = scalar
+alias[effect:set_consort_flag] = value_set[consort_flag]
 
 ## scope = country
 ###Clears a ruler flag for the current scope's consort.
-alias[effect:clr_consort_flag] = scalar
+alias[effect:clr_consort_flag] = value[consort_flag]
 
 ## scope = country
 ###Changes the consort culture of the current scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
@@ -1738,11 +1746,11 @@ alias[effect:remove_heir_personality] = <ruler_personality>
 
 ## scope = country
 ###Defines an heir flag for the current scope's heir. Flags can be appended with scopes or event targets via e.g. @root
-alias[effect:set_heir_flag] = scalar
+alias[effect:set_heir_flag] = value_set[heir_flag]
 
 ## scope = country
 ###Clears an heir flag for the current scope's heir.
-alias[effect:clr_heir_flag] = scalar
+alias[effect:clr_heir_flag] = value[heir_flag]
 
 ## scope = country
 ###Adds to the current scope's heir claim.
@@ -1794,11 +1802,11 @@ alias[effect:set_heir_religion] = <province_id>
 
 ## scope = country
 ###Removes the current heir of the current scope, saving them to the unique string.
-alias[effect:exile_heir_as] = scalar #todo: kinda like a variable
+alias[effect:exile_heir_as] = value_set[exiled_heir]
 
 ## scope = country
 ###Makes an exiled heir the heir of the current scope.
-alias[effect:set_heir] = scalar #todo: kinda like a variable, is the string from exile_heir_as
+alias[effect:set_heir] = value[exiled_heir]
 
 ## scope = country
 ###Kills the heir of the current scope. Displays heir death message.
@@ -1906,12 +1914,8 @@ alias[effect:add_imperial_influence] = int
 alias[effect:add_scaled_imperial_influence] = int
 
 ## scope = country
-###Makes the defined scope an elector of the Holy Roman Empire.
-alias[effect:elector] = scope[country]
-
-## scope = country
-###Makes the defined scope an elector of the Holy Roman Empire.
-alias[effect:elector] = enum[country_tags]
+###Makes the current scope an elector (or no longer an elector) of the Holy Roman Empire.
+alias[effect:elector] = bool
 
 ## scope = country
 ###Removes an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.
@@ -2017,6 +2021,7 @@ alias[effect:set_ai_personality] = {
 ###Makes the current scope (if AI) have the defined attitude against the defined scope. AI attitudes are found in /Europa Universalis IV/common/ai_attitudes/00_ai_attitudes.txt.
 alias[effect:set_ai_attitude] = {
 	attitude = enum[attitudes]
+	## cardinality = 0..1
 	###Whether the personality can be re-evaluated and changed.
 	locked = bool
 	who = scope[country]
@@ -2083,11 +2088,11 @@ alias[effect:remove_province_modifier] = <event_modifier>
 
 ## scope = province
 ###Defines a province flag for the current province scope. Flags can be appended with scopes or event targets with @scope.
-alias[effect:set_province_flag] = scalar
+alias[effect:set_province_flag] = value_set[province_flag]
 
 ## scope = province
 ###Clears a defined province flag for the current province scope.
-alias[effect:clr_province_flag] = scalar
+alias[effect:clr_province_flag] = value[province_flag]
 
 ## scope = province
 ###Changes the province name of the current province scope to the defined name.
@@ -2630,10 +2635,11 @@ alias[effect:add_trade_modifier] = {
 	key = localisation
 }
 
-## scope = trade_node
+## scope = province
 ###Removes a trade modifier for the defined country scope in the current tradenode province scope.
 alias[effect:remove_trade_modifier] = {
 	who = scope[country]
+	who = enum[country_tags]
 	enum[key_name] = localisation
 }
 
@@ -2665,7 +2671,7 @@ alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn'
 
 ## scope = country
 alias[effect:define_exiled_ruler] = {
-	exiled_as = scalar	#todo: like a variable
+	exiled_as = value_set[exiled_ruler]
 	## cardinality = 0..1
 	dynasty = scalar #todo: name
 	## cardinality = 0..1
@@ -2675,11 +2681,13 @@ alias[effect:define_exiled_ruler] = {
 	## cardinality = 0..1
 	max_age = int
 	## cardinality = 0..1
-	adm = int[0..6]
+	adm = int[-6..6]
 	## cardinality = 0..1
-	dip = int[0..6]
+	dip = int[-6..6]
 	## cardinality = 0..1
-	mil = int[0..6]
+	mil = int[-6..6]
+	## cardinality = 0..1
+	option = int
 }
 
 ## scope = province
@@ -2785,7 +2793,7 @@ alias[effect:swap_non_generic_missions] = yes
 alias[effect:complete_mission] = <mission>
 
 ## scope = country
-alias[effect:clear_exiled_ruler] = scalar #todo: variable
+alias[effect:clear_exiled_ruler] = value[exiled_ruler]
 
 ## scope = country
 alias[effect:lose_reforms] = int
@@ -2801,3 +2809,16 @@ alias[effect:adopt_reform_progress] = scope[country]
 
 ## scope = country
 alias[effect:adopt_reform_progress] = enum[country_tags]
+
+
+## scope = province
+alias[effect:create_flagship] = {	
+	name = scalar
+	type = enum[naval_unit_types]
+}
+
+## scope = province
+alias[effect:create_named_ship] = {	
+	name = scalar
+	type = enum[naval_unit_types]
+}

@@ -31,4 +31,21 @@ alias[modifier:trade_company_investment_cost] = float
 ## scope = country
 alias[modifier:expel_minorities_cost] = float
 
+## scope = country
+alias[modifier:naval_tradition_from_trade] = float
+## scope = country
+alias[modifier:admiral_cost] = float
+## scope = country
+alias[modifier:global_supply_limit_modifier] = float
+## scope = country
+alias[modifier:center_of_trade_upgrade_cost] = float
+
+## scope = country
+alias[modifier:artillery_fire] = int
+## scope = country
+alias[modifier:possible_policy] = int
+## scope = country
+alias[modifier:power_projection_from_insults] = int
+
+
 #mr_<faction>_influence

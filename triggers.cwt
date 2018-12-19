@@ -12,7 +12,7 @@ alias[trigger:<building>] = int
 
 ## scope = country
 ###Returns true if the country has at least X ideas from the specified idea group.
-alias[trigger:<idea_group>] = int[1..8]
+alias[trigger:<idea_group>] = int[0..8]
 
 ## scope = province
 ###Returns true if the support for the specified institution in the province is at least X.
@@ -338,12 +338,12 @@ alias[trigger:colonial_region] = <colonial_region>
 ###
 alias[trigger:colony] = int
 
-## scope = country
-###Returns true if country has claim on colony
+## scope = { province country }
+###Returns true if the scoped country has a claim on a colony owned by the target country, or if the scoped colony province is claimed by the target country.
 alias[trigger:colony_claim] = scope[country]
 
-## scope = country
-###Returns true if country has claim on colony
+## scope = { province country }
+###Returns true if the scoped country has a claim on a colony owned by the target country, or if the scoped colony province is claimed by the target country.
 alias[trigger:colony_claim] = enum[country_tags]
 
 ## scope = province
@@ -844,35 +844,35 @@ alias[trigger:had_active_policy] = {
 ## scope = country
 ###Returns true if the consort flag X was last set at least Y days ago.
 alias[trigger:had_consort_flag] = {
-	flag = scalar
+	flag = value[consort_flag]
 	days = int
 }
 
 ## scope = country
 ###Returns true if the country flag X was last set for the country at least Y days ago.
 alias[trigger:had_country_flag] = {
-	flag = scalar
+	flag = value[country_flag]
 	days = int
 }
 
 ## scope = any
 ###Returns true if the global flag X was last set at least Y days ago.
 alias[trigger:had_global_flag] = {
-	flag = scalar
+	flag = value[global_flag]
 	days = int
 }
 
 ## scope = country
 ###Returns true if the heir flag X was last set at least Y days ago.
 alias[trigger:had_heir_flag] = {
-	flag = scalar
+	flag = value[heir_flag]
 	days = int
 }
 
 ## scope = province
 ###Returns true if the province flag X was last set for the province at least Y days ago.
 alias[trigger:had_province_flag] = {
-	flag = scalar
+	flag = value[province_flag]
 	days = int
 }
 
@@ -883,7 +883,7 @@ alias[trigger:had_recent_war] = int
 ## scope = country
 ###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
 alias[trigger:had_ruler_flag] = {
-	flag = scalar
+	flag = value[ruler_flag]
 	days = int
 }
 
@@ -993,7 +993,7 @@ alias[trigger:has_consort] = bool
 
 ## scope = country
 ###Returns true if the consort flag X is set.
-alias[trigger:has_consort_flag] = scalar
+alias[trigger:has_consort_flag] = value[consort_flag]
 
 ## scope = country
 ###Returns true if the country has a consort regency.
@@ -1005,7 +1005,7 @@ alias[trigger:has_construction] = enum[construction_types]
 
 ## scope = country
 ###Returns true if the flag X is set for the country.
-alias[trigger:has_country_flag] = scalar
+alias[trigger:has_country_flag] = value[country_flag]
 
 ## scope = country
 ###Returns true if the country has the modifier X. Accepts event, triggered and static modifiers.
@@ -1037,6 +1037,10 @@ alias[trigger:has_disaster_progress] = {
 ## scope = { country province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = <province_id>
+
+## scope = { country province }
+###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
+alias[trigger:has_discovered] = scope[province]
 
 ## scope = { country province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
@@ -1148,7 +1152,7 @@ alias[trigger:has_guaranteed] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the specified global flag is set.
-alias[trigger:has_global_flag] = scalar
+alias[trigger:has_global_flag] = value[global_flag]
 
 ## scope = country
 ###Returns true if the value of the specified modifier is at least X for the country.
@@ -1189,7 +1193,7 @@ alias[trigger:has_heir] = scalar #todo: name
 
 ## scope = country
 ###Returns true if the heir flag X is set.
-alias[trigger:has_heir_flag] = scalar
+alias[trigger:has_heir_flag] = value[heir_flag]
 
 ## scope = province
 ###Returns true if an army in the province is led by an heir from X.
@@ -1337,11 +1341,15 @@ alias[trigger:has_promote_investments] = <trade_company>
 
 ## scope = province
 ###Returns true if the province has the province flag X.
-alias[trigger:has_province_flag] = scalar
+alias[trigger:has_province_flag] = value[province_flag]
 
 ## scope = province
 ###Returns true if province has the province modifier X.
 alias[trigger:has_province_modifier] = <event_modifier>
+
+## scope = province
+###Returns true if province has the province modifier X.
+alias[trigger:has_province_modifier] = static_modifier>
 
 ## scope = province
 ###Returns true if the province is controlled by (the specified) rebel faction. =REB is used in Vanilla but apparently doesn't work as of 1.25
@@ -1365,7 +1373,7 @@ alias[trigger:has_ruler] = scalar #todo: name
 
 ## scope = country
 ###Returns true if the ruler flag X is set for the country.
-alias[trigger:has_ruler_flag] = scalar
+alias[trigger:has_ruler_flag] = value[ruler_flag]
 
 ## scope = province
 ###Returns true if an army in the province is led by a ruler from X.
@@ -1451,12 +1459,12 @@ alias[trigger:has_switched_nation] = bool
 ###Returns true if the province has terrain X.
 alias[trigger:has_terrain] = <terrain>
 
-## scope = trade_node
+## scope = province
 ###Returns true the specified country has the trade modifier X in the trade node.
 alias[trigger:has_trade_modifier] = {
 	who = scope[country]
 	who = enum[country_tags]
-	enum[key_name] = scalar #todo: like a variable, set via add_trade_modifier
+	enum[key_name] = localisation #todo: like a variable, set via add_trade_modifier
 }
 
 ## scope = province
@@ -1469,11 +1477,7 @@ alias[trigger:has_trader] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has truce.
-alias[trigger:has_truce] = scope[country]
-
-## scope = country
-###Returns true if the country has truce.
-alias[trigger:has_truce] = enum[country_tags]
+alias[trigger:has_truce] = bool
 
 ## scope = country
 ###Returns true if the country owns all provinces of its culture group.
@@ -1605,7 +1609,7 @@ alias[trigger:hidden_trigger] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## scope = trade_node
+## scope = province
 ###Returns true if the trade node is the highest valued trade node in the world. The value is calculated as total trade value minus outgoing trade value.
 alias[trigger:highest_value_trade_node] = bool
 
@@ -1902,7 +1906,7 @@ alias[trigger:is_great_power] = bool
 
 ## scope = country
 ###Returns true if the country is currently harmonizing with the specified religion or religion group.
-alias[trigger:is_harmonizing_with] = scope[country]
+alias[trigger:is_harmonizing_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country is currently harmonizing with the specified religion or religion group.
@@ -2282,7 +2286,7 @@ alias[trigger:is_vassal] = bool
 ## scope = any
 ###Returns true if the specified variable is equal to X.
 alias[trigger:is_variable_equal] = {
-	which = scalar #todo: variable
+	which = value[variable]
 	value = float
 }
 
@@ -3823,7 +3827,7 @@ alias[trigger:unit_type] = <unit_type>
 ###Returns true if the country has units of type X.
 alias[trigger:unit_type] = <technology_group>
 
-## scope = province
+## scope = { province country }
 ###Returns true if the unrest in the province is at least X.
 alias[trigger:unrest] = float[0.0..100.0]
 
@@ -4300,3 +4304,19 @@ alias[trigger:province_is_on_an_island] = yes
 
 ## scope = country
 alias[trigger:ai_wants_raise_cossack] = bool
+
+## scope = country
+###Returns true if the country a claim against any province owned by the target country.
+alias[trigger:claim] = scope[country]
+
+## scope = country
+###Returns true if the country a claim against any province owned by the target country.
+alias[trigger:claim] = enum[country_tags]
+
+## scope = province
+alias[trigger:expelling_minorities_from] = <province_id>
+## scope = province
+alias[trigger:expelling_minorities_from] = scope[province]
+
+## scope = country
+alias[trigger:native_policy] = enum[native_policies]

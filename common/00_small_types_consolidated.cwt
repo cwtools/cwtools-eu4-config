@@ -79,7 +79,7 @@ types = {
 
 
 great_project = {
-	ambient_object = <ambient_object>
+	ambient_object = enum[ambient_objects]
 	province = <province_id>
 	is_canal = yes
 	time = int
@@ -259,7 +259,7 @@ edict = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
-	## replace_scope = { root = province this = province }
+	## replace_scope = { root = country this = country }
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

@@ -21,3 +21,5 @@ alias[ability:no_religion_penalty] = yes
 alias[ability:cb_on_overseas] = yes
 alias[ability:sea_repair] = yes
 alias[ability:cb_on_religious_enemies] = yes
+alias[ability:can_fabricate_for_vassals] = yes
+alias[ability:idea_claim_colonies] = yes
