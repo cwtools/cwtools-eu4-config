@@ -16,7 +16,7 @@ alias[effect:<scripted_effect>] = {
 
 ## scope = any
 alias[effect:export_to_variable] = {
-	enum[which_varname] = scalar #todo: variable + is which and variable_name exactly the same thing or do I need to know something here?
+	enum[which_varname] = value_set[variable]
 	value = enum[export_to_variable_data]
 	## cardinality = 0..1
 	who = scope[country]
@@ -27,7 +27,7 @@ alias[effect:export_to_variable] = {
 ## scope = any
 alias[effect:multiply_variable] = {
 	## cardinality = 1..2
-	which = scalar #todo: Variable
+	which = value[variable]
 	## cardinality = 0..1
 	value = float
 }
@@ -35,7 +35,7 @@ alias[effect:multiply_variable] = {
 ## scope = any
 alias[effect:change_variable] = {
 	## cardinality = 1..2
-	which = scalar #todo: Variable
+	which = value_set[variable]
 	## cardinality = 0..1
 	value = float
 }
@@ -43,7 +43,7 @@ alias[effect:change_variable] = {
 ## scope = any
 alias[effect:subtract_variable] = {
 	## cardinality = 1..2
-	which = scalar #todo: Variable
+	which = value[variable]
 	## cardinality = 0..1
 	value = float
 }
@@ -51,9 +51,11 @@ alias[effect:subtract_variable] = {
 ## scope = any
 alias[effect:set_variable] = {
 	## cardinality = 1..2
-	which = scalar #todo: Variable
+	which = value_set[variable]
 	## cardinality = 0..1
-	value = scalar #todo: Variable or float
+	value = float
+	## cardinality = 0..1
+	value = value[variable]
 }
 
 
@@ -76,15 +78,15 @@ alias[effect:log] = scalar
 
 ## scope = any
 ###Saves the current scope as a key to be used in further effects/triggers and in localisations. Is cleared once execution ends (i.e. end of event and any events subsequently triggered by this event). Use event_target:<key> to access the scope.
-alias[effect:save_event_target_as] = scalar
+alias[effect:save_event_target_as] = value_set[event_target]
 
 ## scope = any
 ###Saves the current scope as a key to be used in further effects/triggers and in localisations. Is NOT cleared once execution ends, but rather is kept until cleared with clear_global_event_target. Use event_target:<key> to access the scope.
-alias[effect:save_global_event_target_as] = scalar
+alias[effect:save_global_event_target_as] = value_set[event_target]
 
 ## scope = any
 ###Clears a specific global event target.
-alias[effect:clear_global_event_target] = scalar
+alias[effect:clear_global_event_target] = value[event_target]
 
 ## scope = any
 ###Clears all global event targets.
@@ -177,7 +179,7 @@ alias[effect:add_mil_power] = int
 ## scope = country
 ###Saves a name to an unique key for usage in other effects. Usable with define_admiral, define_explorer, define_conquistador, define_general, define_ruler, define_consort, define_heir, define_advisor and spawn_rebels.
 alias[effect:set_saved_name] = {
-	key = scalar #todo: make sure this name is remembered and can be checked elsewhere, kinda like variables
+	key = value_set[saved_name]
 	type = advisor
 	type = simple
 	## cardinality = 0..1
@@ -193,7 +195,7 @@ alias[effect:set_saved_name] = {
 
 ## scope = country
 ###Clears a saved name key. Use this after using the saved name in an effect.
-alias[effect:clear_saved_name] = scalar #todo
+alias[effect:clear_saved_name] = value[saved_name]
 
 ## scope = country
 ###Adds ducats equal to the years of income defined. 1 is equal to 1 year of income, based of a country's current monthly income.
@@ -249,7 +251,11 @@ alias[effect:add_legitimacy] = enum[country_tags]
 
 ## scope = country
 ###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = float
+alias[effect:add_republican_tradition] = float[-100.0..-1.0]
+
+## scope = country
+###Adds republican tradition to the current scope. No effect if not a government using republic.
+alias[effect:add_republican_tradition] = float[1.0..100.0]
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.
@@ -629,7 +635,9 @@ alias[effect:define_advisor] = {
 	type = <advisor_type>
 	skill = int[1..5]
 	## cardinality = 0..1
-	name = scalar #todo: name or saved name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	cost_multiplier = float
 	## cardinality = 0..1
@@ -731,7 +739,9 @@ alias[effect:add_yearly_sailors] = float[-10.0..10.0] #I am assuming no one want
 
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
-alias[effect:create_admiral] = int
+alias[effect:create_admiral] = {
+	tradition = int
+}
 
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
@@ -807,7 +817,9 @@ alias[effect:define_admiral] = {
 	## cardinality = 0..1
 	siege = int
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
 	## cardinality = 0..3
@@ -823,7 +835,9 @@ alias[effect:define_explorer] = {
 	## cardinality = 0..1
 	siege = int
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
 	## cardinality = 0..3
@@ -839,7 +853,9 @@ alias[effect:define_conquistador] = {
 	## cardinality = 0..1
 	siege = int
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
 	## cardinality = 0..3
@@ -855,7 +871,9 @@ alias[effect:define_general] = {
 	## cardinality = 0..1
 	siege = int
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
 	## cardinality = 0..3
@@ -1502,7 +1520,9 @@ alias[effect:define_leader_to_ruler] = {
 ###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.
 alias[effect:define_ruler] = {
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	dynasty = scalar #todo: name
 	## cardinality = 0..1
@@ -1812,6 +1832,8 @@ alias[effect:define_heir_to_general] = {
 alias[effect:define_heir] = {
 	## cardinality = 0..1
 	name = scalar #todo: name
+	## cardinality = 0..1
+	name = value[saved_name]
 	## cardinality = 0..1
 	dynasty = scalar #todo: name
 	## cardinality = 0..1
@@ -2297,7 +2319,9 @@ alias[effect:spawn_rebels] = {
 	###Associate a country with the rebels.
 	friend = enum[country_tags]
 	## cardinality = 0..1
-	leader = scalar #todo: name / saved name
+	leader = scalar #todo: name
+	## cardinality = 0..1
+	leader = value[saved_name]
 	## cardinality = 0..1
 	female = yes
 	## cardinality = 0..1

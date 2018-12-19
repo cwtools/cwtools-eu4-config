@@ -50,18 +50,12 @@ event = {
 			}
 			desc = localisation
 		}
-		## severity = warning
-		picture = <sprite>
-		## severity = warning
-		picture = enum[dlc_event_pictures]
+		picture = scalar #todo: until such a time as I know how to check this
 		picture = {
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
-			## severity = warning
-			picture = <sprite>
-			## severity = warning
-			picture = enum[dlc_event_pictures]
+			picture = scalar #todo: until such a time as I know how to check this
 		}
 		
 	}

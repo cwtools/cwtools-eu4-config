@@ -301,7 +301,7 @@ alias[trigger:cavalry_in_province] = enum[country_tags]
 ###Returns true if the specified variable is at least X.
 alias[trigger:check_variable] = {
 	## cardinality = 1..2
-	which = scalar
+	which = value[variable]
 	## cardinality = 0..1
 	value = float
 }
@@ -1381,7 +1381,7 @@ alias[trigger:has_ruler_modifier] = <event_modifier>
 
 ## scope = any
 ###Returns true if the specified event target has been saved.
-alias[trigger:has_saved_event_target] = scalar
+alias[trigger:has_saved_event_target] = value[event_target]
 
 ## scope = country
 ###Returns true if the vassal pays scutage.
@@ -3147,7 +3147,7 @@ alias[trigger:overseas_provinces_percentage] = float
 
 ## scope = province
 ###Returns true if the province is owned by the country X.
-alias[trigger:owned_by] = scope[country]
+alias[trigger:owned_by] = scope[any]
 
 ## scope = province
 ###Returns true if the province is owned by the country X.
@@ -3894,16 +3894,18 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..inf
 	export_to_variable = {
-		enum[which_varname] = scalar #todo: variable + is which and variable_name exactly the same thing or do I need to know something here?
+		enum[which_varname] = value_set[variable]
 		value = enum[export_to_variable_data]
 		## cardinality = 0..1
 		who = scope[country]
+		## cardinality = 0..1
+		with = scope[country] #for when you use "trust"
 	}
 
 	## cardinality = 0..inf
 	multiply_variable = {
 		## cardinality = 1..2
-		which = scalar #todo: Variable
+		which = value[variable]
 		## cardinality = 0..1
 		value = float
 	}
@@ -3911,7 +3913,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 	## cardinality = 0..inf
 	subtract_variable = {
 		## cardinality = 1..2
-		which = scalar #todo: Variable
+		which = value[variable]
 		## cardinality = 0..1
 		value = float
 	}
@@ -3919,7 +3921,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 	## cardinality = 0..inf
 	change_variable = {
 		## cardinality = 1..2
-		which = scalar #todo: Variable
+		which = value[variable]
 		## cardinality = 0..1
 		value = float
 	}
@@ -3927,7 +3929,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 	## cardinality = 0..inf
 	check_variable = {
 		## cardinality = 1..2
-		which = scalar
+		which = value[variable]
 		## cardinality = 0..1
 		value = float
 	}
@@ -3935,7 +3937,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 	## cardinality = 0..inf
 	is_variable_equal = {
 		## cardinality = 2..2
-		which = scalar #todo: variable
+		which = value[variable]
 	}
 }
 
@@ -4028,7 +4030,7 @@ alias[trigger:years_of_income] = scope[country]
 
 ## scope = country
 ###Returns true if the country has the specified government reform.
-alias[trigger:has_reform] = <government_reform.new>
+alias[trigger:has_reform] = <government_reform>
 
 ## scope = country
 ###Returns true if the country has at least X army professionalism, or at least as much as the specified country.
@@ -4295,3 +4297,6 @@ alias[trigger:is_in_large_debt] = yes
 
 ## scope = province
 alias[trigger:province_is_on_an_island] = yes
+
+## scope = country
+alias[trigger:ai_wants_raise_cossack] = bool

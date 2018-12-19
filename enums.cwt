@@ -193,4 +193,10 @@ enums = {
 		}
 		start_from_root = yes
 	}
+	#no idea what all can go here
+	enum[modifiers] = {
+		cavalry_power
+		discipline
+		ship_durability
+	}
 }

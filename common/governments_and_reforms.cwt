@@ -96,6 +96,15 @@ government_reform = {
 		allow_normal_conversion = bool
 		start_territory_to_estates = float
 		has_term_election = bool
+		factions_frame = 2
+		factions_frame = 9
+		force_admiral_leader = bool
+		admirals_become_rulers = bool
+		generals_become_rulers = bool
+		disallowed_trade_goods = {
+			## cardinality = 0..inf
+			<trade_good>
+		}
 	}
 
 	
@@ -121,7 +130,7 @@ government_reform = {
 
 	subtype[!default] = {
 		## severity = info
-		icon = enum[government_icons] #todo: refers to a file name in a certain folder
+		icon = scalar #todo: refers to a file name in a certain folder
 		
 		## cardinality = 0..1
 		queen = bool
@@ -318,6 +327,9 @@ government_reform = {
 		}
 		
 		## cardinality = 0..1
+		can_form_trade_league = bool
+		
+		## cardinality = 0..1
 		has_term_election = bool
 		## cardinality = 0..1
 		duration = int
@@ -357,6 +369,24 @@ government_reform = {
 			better_purbias_interaction = bool
 			## cardinality = 0..1
 			enables_nepotism = bool
+			## cardinality = 0..1
+			force_admiral_leader = bool
+			## cardinality = 0..1
+			admirals_become_rulers = bool
+			## cardinality = 0..1
+			gives_war_against_the_world_tooltip_dummy = yes
+		}
+
+		## cardinality = 0..1
+		factions_frame = 2
+		## cardinality = 0..1
+		factions_frame = 9
+		## cardinality = 0..1
+		generals_become_rulers = bool
+		## cardinality = 0..1
+		disallowed_trade_goods = {
+			## cardinality = 0..inf
+			<trade_good>
 		}
 	}
 }

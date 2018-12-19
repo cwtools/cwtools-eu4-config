@@ -18,3 +18,17 @@ alias[modifier:monthly_support_heir_gain] = float
 
 ## scope = province
 alias[modifier:local_missionary_maintenance_cost] = float
+
+## scope = country
+alias[modifier:missionary_maintenance_cost] = float
+
+## scope = country
+alias[modifier:establish_order_cost] = float
+
+## scope = country
+alias[modifier:trade_company_investment_cost] = float
+
+## scope = country
+alias[modifier:expel_minorities_cost] = float
+
+#mr_<faction>_influence

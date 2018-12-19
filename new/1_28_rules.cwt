@@ -69,7 +69,7 @@ flagship_modification = {
     }
 }
 
-alias[flagship_modifier:flagship_durability] = int
+alias[flagship_modifier:flagship_durability] = float
 alias[flagship_modifier:naval_maintenance_flagship_modifier] = float
 alias[flagship_modifier:number_of_cannons_flagship_modifier] = float
 alias[flagship_modifier:flagship_morale] = float
@@ -82,9 +82,12 @@ alias[flagship_modifier:barrage_cost_in_fleet_modifier] = float
 alias[flagship_modifier:cannons_for_hunting_pirates_in_fleet] = int
 alias[flagship_modifier:movement_speed_onto_off_boat_modifier] = float
 alias[flagship_modifier:flagship_landing_penalty] = int
-alias[flagship_modifier:admiral_skill_gain] = float
+alias[flagship_modifier:admiral_skill_gain_modifier] = float
 alias[flagship_modifier:privateering_efficiency_in_fleet_modifier] = float
 alias[flagship_modifier:prestige_from_battles_in_fleet_modifier] = int
+alias[flagship_modifier:morale_in_fleet_modifier] = float
+alias[flagship_modifier:naval_attrition_in_fleet_modifier] = float
+alias[flagship_modifier:naval_tradition_in_fleet_modifier] = float
 
 
 holy_order = {
