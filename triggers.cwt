@@ -4320,3 +4320,6 @@ alias[trigger:expelling_minorities_from] = scope[province]
 
 ## scope = country
 alias[trigger:native_policy] = enum[native_policies]
+
+## scope = province
+alias[trigger:can_establish_order] = bool
