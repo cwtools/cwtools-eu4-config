@@ -535,7 +535,7 @@ alias[effect:random_coalition_member] = {
 }
 
 
-## scope = country
+## scope = { country province }
 ## push_scope = country
 ###Scopes to one random country among all countries in the world. Avoid this if you can use something more specific.
 alias[effect:random_country] = {

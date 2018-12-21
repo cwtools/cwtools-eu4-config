@@ -47,5 +47,7 @@ alias[modifier:possible_policy] = int
 ## scope = country
 alias[modifier:power_projection_from_insults] = int
 
+## scope = province
+alias[modifier:local_religious_unity_contribution] = float
 
 #mr_<faction>_influence

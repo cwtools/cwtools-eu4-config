@@ -539,7 +539,7 @@ alias[trigger:custom_trigger_tooltip] = {
 
 ## scope = country
 ###Returns true if the country is in a defensive war with country X.
-alias[trigger:defensive_war_with] = scope[country]
+alias[trigger:defensive_war_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country is in a defensive war with country X.
@@ -1288,7 +1288,7 @@ alias[trigger:has_new_dynasty] = bool
 ## scope = country
 ###Returns true if the country has at least value opinion of the country specified by who.
 alias[trigger:has_opinion] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	value = int
 }
@@ -1615,7 +1615,7 @@ alias[trigger:highest_value_trade_node] = bool
 
 ## scope = country
 ###Returns true if the countries are historical friends.
-alias[trigger:historical_friend_with] = scope[country]
+alias[trigger:historical_friend_with] = scope[any]
 
 ## scope = country
 ###Returns true if the countries are historical friends.
@@ -1623,7 +1623,7 @@ alias[trigger:historical_friend_with] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the countries are historical rivals
-alias[trigger:historical_rival_with] = scope[country]
+alias[trigger:historical_rival_with] = scope[any]
 
 ## scope = country
 ###Returns true if the countries are historical rivals
@@ -1874,7 +1874,7 @@ alias[trigger:is_empty] = bool
 
 ## scope = country
 ###Returns true the country views country X as an enemy.
-alias[trigger:is_enemy] = scope[country]
+alias[trigger:is_enemy] = scope[any]
 
 ## scope = country
 ###Returns true the country views country X as an enemy.
@@ -2265,7 +2265,7 @@ alias[trigger:is_territory] = bool
 
 ## scope = country
 ###Returns true if country X is threatened by the country.
-alias[trigger:is_threat] = scope[country]
+alias[trigger:is_threat] = scope[any]
 
 ## scope = country
 ###Returns true if country X is threatened by the country.
@@ -2432,7 +2432,7 @@ alias[trigger:likely_rebels] = <rebel_type>
 
 ## scope = province
 ###Returns true if the province has a local autonomy of at least X.
-alias[trigger:local_autonomy] = int[0..100]
+alias[trigger:local_autonomy] = float[0.5..100.0]
 
 ## scope = province
 ###Returns true if the province's local autonomy is at least X above the local development's minimum value.
@@ -3127,7 +3127,7 @@ alias[trigger:num_ships_privateering] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country is in an offensive war with country X.
-alias[trigger:offensive_war_with] = scope[country]
+alias[trigger:offensive_war_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country is in an offensive war with country X.
@@ -3139,7 +3139,7 @@ alias[trigger:overextension_percentage] = float
 
 ## scope = country
 ###Returns true if the country is the overlord of X.
-alias[trigger:overlord_of] = scope[country]
+alias[trigger:overlord_of] = scope[any]
 
 ## scope = country
 ###Returns true if the country is the overlord of X.
@@ -3607,7 +3607,7 @@ alias[trigger:superregion] = <superregion>
 
 ## scope = country
 ###Returns true if the country is the specified country.
-alias[trigger:tag] = scope[country]
+alias[trigger:tag] = scope[any]
 
 ## scope = country
 ###Returns true if the country is the specified country.
@@ -3789,7 +3789,7 @@ alias[trigger:tribal_allegiance] = int
 
 ## scope = country
 ###Returns true if the country has a truce with X.
-alias[trigger:truce_with] = scope[country]
+alias[trigger:truce_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country has a truce with X.
@@ -3955,7 +3955,7 @@ alias[trigger:vassal_of] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has a war exhaustion of at least X, or at least as much war exhaustion as the specified country.
-alias[trigger:war_exhaustion] = int
+alias[trigger:war_exhaustion] = float
 
 ## scope = country
 ###Returns true if the country has a war exhaustion of at least X, or at least as much war exhaustion as the specified country.
@@ -3979,7 +3979,7 @@ alias[trigger:war_score_against] = {
 
 ## scope = country
 ###Returns true if the country is at war with country X.
-alias[trigger:war_with] = scope[country]
+alias[trigger:war_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country is at war with country X.

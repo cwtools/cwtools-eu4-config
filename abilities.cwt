@@ -8,6 +8,8 @@ alias[ability:auto_explore_adjacent_to_colony] = yes
 #Found in ideas, policies
 alias[ability:may_recruit_female_generals] = yes
 
+#found in govt
+alias[ability:may_perform_slave_raid_on_same_religion] = yes
 
 #the following stuff has only been seen in ideas
 

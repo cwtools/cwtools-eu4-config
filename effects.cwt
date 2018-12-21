@@ -734,8 +734,12 @@ alias[effect:add_army_professionalism] = float[-1.0..1.0]
 alias[effect:add_manpower] = float[-999.0..999.0] #I am assuming no one wants to add 1,000,000 manpower to a country
 
 ## scope = country
-###Adds sailors to the current scope. 1 is equal to 1 sailor.
+###Adds sailors to the current scope. 100 is equal to 100 sailors but 0-1 is read as a fraction of the total sailor cap of the country.
 alias[effect:add_sailors] = int
+
+## scope = country
+###Adds sailors to the current scope. 100 is equal to 100 sailors but 0-1 is read as a fraction of the total sailor cap of the country.
+alias[effect:add_sailors] = float[-1.0..1.0]
 
 ## scope = country
 ###Adds manpower to the current scope, as a percentage of total yearly manpower. 1 is equal to 100% of total yearly manpower.
@@ -748,6 +752,8 @@ alias[effect:add_yearly_sailors] = float[-10.0..10.0] #I am assuming no one want
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_admiral] = {
+	## cardinality = 0..1
+	name = value[saved_name]
 	tradition = int
 }
 
@@ -1077,7 +1083,7 @@ alias[effect:add_trust] = {
 ## scope = country
 ###Adds an opinion modifier for the current scope held against the defined scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt
 alias[effect:add_opinion] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	modifier = <opinion_modifier>
 	## cardinality = 0..1
@@ -1088,7 +1094,7 @@ alias[effect:add_opinion] = {
 ## scope = country
 ###Adds an opinion modifier for the defined scope held against the current scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt
 alias[effect:reverse_add_opinion] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	modifier = <opinion_modifier>
 	## cardinality = 0..1
@@ -1099,7 +1105,7 @@ alias[effect:reverse_add_opinion] = {
 ## scope = country
 ###Removes an opinion modifier for the current scope held against the defined scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt
 alias[effect:remove_opinion] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	modifier = <opinion_modifier>
 }
@@ -1107,7 +1113,7 @@ alias[effect:remove_opinion] = {
 ## scope = country
 ###Removes an opinion modifier for the defined scope held against the current scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt
 alias[effect:reverse_remove_opinion] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	modifier = <opinion_modifier>
 }
@@ -1262,7 +1268,7 @@ alias[effect:remove_fow] = int
 ###Adds a casus belli for the current scope against the defined scope. Casus belli are found in /Europa Universalis IV/common/cb_types/*.txt
 alias[effect:add_casus_belli] = {
 	type = <casus_belli>
-	target = scope[country]
+	target = scope[any]
 	target = enum[country_tags]
 	## cardinality = 0..1
 	months = int
@@ -2251,8 +2257,12 @@ alias[effect:remove_reform_center] = <religion>
 alias[effect:set_estate] = <estate>
 
 ## scope = province
-###Removes an estate in the current province scope. Does not produce a tooltip.
+###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
 alias[effect:remove_estate] = <estate>
+
+## scope = province
+###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
+alias[effect:remove_estate] = yes
 
 ## scope = province
 ###Adds institution embracement progress for the defined institution in the current province scope. The defined institution must be enabled for the owner of the province first.
@@ -2288,7 +2298,9 @@ alias[effect:<rebel_type>] = int
 ## scope = province
 ###Spawns the defined rebels in the current province scope. Rebel types found in /Europa Universalis IV/common/rebel_types/*.txt. Note: the size of revolts follows this formula: number of regiments = round[(4 + 0.3 * total development) * (1 + 0.03 * technology level) * rebellion size]
 alias[effect:spawn_rebels] = {
+	## cardinality = 0..1
 	type = <rebel_type>
+	## cardinality = 0..1
 	type = religious_rebels
 	size = float
 	## cardinality = 0..1
@@ -2726,7 +2738,7 @@ alias[effect:add_trade_company_investment] = {
 }
 
 ## scope = country
-alias[effect:free_vassal] = scope[country]
+alias[effect:free_vassal] = scope[any]
 
 ## scope = country
 alias[effect:free_vassal] = enum[country_tags]
