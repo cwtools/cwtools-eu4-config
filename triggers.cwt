@@ -308,7 +308,7 @@ alias[trigger:check_variable] = {
 
 ## scope = country
 ###Returns true if the country has at least X church power, or at least as much as the specified country.
-alias[trigger:church_power] = int[0..100]
+alias[trigger:church_power] = int[0..200]
 
 ## scope = country
 ###Returns true if the country has at least X church power, or at least as much as the specified country.
@@ -811,8 +811,12 @@ alias[trigger:gold_income] = float
 alias[trigger:gold_income_percentage] = float[0.0..1.0]
 
 ## scope = country
-###Returns true if the country has government type X. Vanilla includes "dictatorship" as a government type 5 or so times, need to verify whether this is a thing -Caligula
+###Returns true if the country has government type X. Includes "dictatorship", which checks whether the country has a government reform with the label "is_dictatorship = yes"
 alias[trigger:government] = <government.normal>
+
+## scope = country
+###Returns true if the country has government type X. Includes "dictatorship", which checks whether the country has a government reform with the label "is_dictatorship = yes"
+alias[trigger:government] = dictatorship
 
 ## scope = country
 ###Returns true if the country has a government rank of X or higher.
@@ -1037,6 +1041,11 @@ alias[trigger:has_disaster_progress] = {
 ## scope = { country province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = <province_id>
+
+#I wonder whether this works with all things that accept <province_id>
+## scope = { country province }
+###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
+alias[trigger:has_discovered] = <area>
 
 ## scope = { country province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.

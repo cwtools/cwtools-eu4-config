@@ -453,7 +453,7 @@ alias[effect:set_karma] = int
 
 ## scope = country
 ###Adds Church Power to the current scope. No effect if the country does not hold a religion using uses_church_power.
-alias[effect:add_church_power] = int
+alias[effect:add_church_power] = int[-200..200]
 
 ## scope = country
 ###Adds the defined aspect to the current scope. Church Aspects are found in /Europa Universalis IV/common/church_aspects/00_church_aspects.txt. No effect if the country does not hold a religion using uses_church_power and the aspect set in aspects. Does not work with Blessings.
@@ -2637,7 +2637,7 @@ alias[effect:add_trade_node_income] = float
 ## scope = province
 ###Adds a trade modifier for the defined country scope in the current tradenode province scope. Can be added to any province within a tradenode.
 alias[effect:add_trade_modifier] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
 	###The duration of the modifier.
 	duration = int
@@ -2817,7 +2817,7 @@ alias[effect:set_religious_school] = {
 }
 
 ## scope = country
-alias[effect:adopt_reform_progress] = scope[country]
+alias[effect:adopt_reform_progress] = scope[any]
 
 ## scope = country
 alias[effect:adopt_reform_progress] = enum[country_tags]

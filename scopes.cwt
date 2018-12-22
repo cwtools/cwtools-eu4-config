@@ -664,7 +664,7 @@ alias[effect:every_owned_province] = {
 }
 
 ## push_scope = province
-## scope = country
+## scope = { province country }
 ###Scopes to all provinces in the world. Note: executing effects on every province without a limit will cause slowdown in game. Use something more specific if you can.
 alias[effect:every_province] = {
 	## cardinality = 0..1
