@@ -9,9 +9,9 @@ types = {
 
 #		localisation = {
 #			## required
-#			name = "€"
+#			name = "$"
 #			## required
-#			description = "€DESC"
+#			description = "$DESC"
 #		}
 			
 		subtype[land] = {

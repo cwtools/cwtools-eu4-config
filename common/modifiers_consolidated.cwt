@@ -4,61 +4,59 @@ types = {
 	type[event_modifier] = {
 		path = "game/common/event_modifiers"
 		
-#		localisation = {
-#			## on_use
-#			name = "€"
-#			## on_use
-#			description = "desc_€"
-#		}
+		subtype[not_flag] = {
+			alias_name[modifier] = alias_match_left[modifier]
+			localisation = {
+				name = "$"
+				description = "desc_$"
+			}
+		}
 	}
 	type[static_modifier] = { #todo: As far as I can tell, you cannot add to them.
 		path = "game/common/static_modifiers"
 		
-#		localisation = {
-#			## required
-#			name = "€"
-#		}
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[triggered_modifier] = {
 		path = "game/common/triggered_modifiers"
 		
-#		localisation = {
-#			## required
-#			name = "€"
-#			## required
-#			description = "desc_€"
-#		}
+		localisation = {
+			name = "$"
+			description = "desc_$"
+		}
 	}
 	type[province_triggered_modifier] = {
 		path = "game/common/province_triggered_modifiers"
 		
-#		localisation = {
-#			## required
-#			name = "€"
-#			## required
-#			description = "desc_€"
-#		}
+		localisation = {
+			name = "$"
+			description = "desc_$"
+		}
 	}
 	#todo: Don't think you can add to them. Included for completeness
 	type[timed_modifier] = {
 		path = "game/common/timed_modifiers"
 
-#		localisation = {
-#			## required
-#			name = "€"
-#		}
+		localisation = {
+			name = "$"
+		}
 	}
 }
 
 event_modifier = {
-	alias_name[modifier] = alias_match_left[modifier]
-
-	## cardinality = 0..1
-	###Please tell Caligula what this does
-	religion = yes
-
-	## cardinality = 0..1
-	picture = scalar #todo: sprite?
+	subtype[not_flag] = {
+		alias_name[modifier] = alias_match_left[modifier]
+	
+		## cardinality = 0..1
+		###Please tell Caligula what this does
+		religion = yes
+	
+		## cardinality = 0..1
+		picture = scalar #todo: sprite?
+	}
 }
 
 static_modifier = {

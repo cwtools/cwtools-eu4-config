@@ -4,12 +4,12 @@ types = {
 	type[advisor_type] = {
 		path = "game/common/advisortypes"
 
-#		localisation = {
-#			## on_use
-#			name = "€"
-#			## on_use
-#			description = "€_desc"
-#		}
+		localisation = {
+			## required
+			name = "$"
+			## required
+			description = "$_desc"
+		}
 	}
 }
 
