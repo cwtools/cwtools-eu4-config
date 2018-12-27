@@ -1,9 +1,15 @@
 
 types = {
+	type[ambient_object_basis] = {
+		path = "game/map"
+		path_file = "ambient_object.txt"
+		name_field = "type"
+	}
 	type[ambient_object] = {
 		path = "game/map"
-		name_field = "type"
 		path_file = "ambient_object.txt"
+		skip_root_key = type
+		name_field = "name"
 	}
 	type[terrain] = {
 		skip_root_key = categories
@@ -29,7 +35,7 @@ types = {
 }
 
 
-ambient_object = {
+ambient_object_basis = {
 	type = scalar
 	use_animation = bool
 	## cardinality = 0..1
@@ -51,15 +57,6 @@ ambient_object = {
 		rotation = {
 			## cardinality = 3..3
 			float
-		}
-	}
-}
-
-complex_enum[ambient_objects] = {
-	path = "game/map/ambient_object.txt"
-	name = {
-		object = {
-			name = enum_name
 		}
 	}
 }

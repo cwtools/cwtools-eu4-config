@@ -5,6 +5,10 @@ types = {
 
 		subtype[normal] = {
 			basic_reform = scalar
+			localisation = {
+				## required
+				name = "$_name"
+			}
 		}
 
 		## type_key_filter = pre_dharma_mapping
@@ -25,6 +29,12 @@ types = {
 		subtype[new] = {
 			## cardinality = 0..1
 			legacy_government = no
+		}
+		localisation = {
+			## required
+			name = "$"
+			## required
+			description = "$_desc"
 		}
 	}
 	type[government_ranks] = {

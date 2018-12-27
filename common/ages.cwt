@@ -2,7 +2,17 @@
 types = {
 	type[game_age] = {
 		path = "game/common/ages"
+
+		localisation = {
+			## required
+			name = "$"
+			## required
+			short = "$_short"
+			## required
+			description = "$_desc"
+		}
 	}
+	#todo: Abilities also have _desc, but they are third tier so canno be reached with types yet
 }
 
 enums = {

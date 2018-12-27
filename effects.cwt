@@ -94,11 +94,11 @@ alias[effect:clear_global_event_targets] = yes
 
 ## scope = any
 ###Displays a hidden ambient object from the map/ambient_objects.txt file.
-alias[effect:show_ambient_object] = enum[ambient_objects]
+alias[effect:show_ambient_object] = <ambient_object>
 
 ## scope = any
 ###Hides a visible ambient object from the map/ambient_objects.txt file.
-alias[effect:hide_ambient_object] = enum[ambient_objects]
+alias[effect:hide_ambient_object] = <ambient_object>
 
 
 ## scope = country

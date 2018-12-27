@@ -4,6 +4,19 @@ types = {
 	#type_key_filter = enum[ai_personalities]
 	type[ai_personality] = {
 		path = "game/common/ai_personalities"
+		localisation = {
+			## required
+			name = "$"
+		}
+		## type_key_filter <> human
+		subtype[ai] = {
+			localisation = {
+				## required
+				desc = "$_desc"
+				## required
+				become = "an_$"
+			}
+		}
 	}
 }
 

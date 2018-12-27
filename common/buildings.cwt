@@ -2,6 +2,11 @@
 types = {
 	type[building] = {
 		path = "game/common/buildings"
+
+		localisation = { #not sure what the rules are on whether _short and ledger_ etc are needed or generated
+			## required
+			name = "building_$"
+		}
 		
 		subtype[not_manufactory] = {
 			cost = int

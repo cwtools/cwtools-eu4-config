@@ -204,4 +204,7 @@ enums = {
 		native_policy_trade
 		native_policy_hostile
 	}
+	enum[legacy_reforms_with_no_new_equivalent] = {
+		administrative_monarchy
+	}
 }

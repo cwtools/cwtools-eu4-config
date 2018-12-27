@@ -2,42 +2,126 @@
 types = {
 	type[great_project] = {
 		path = "game/common/great_projects"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+			## required
+			great_project_title = "great_project_$"
+			## required
+			construct = "construct_$_title"
+			## required
+			construct_desc = "construct_$_desc"
+			## required
+			cancel = "cancel_$_title"
+			## required
+			cancel_desc = "cancel_$_desc"
+		}
 	}
 	type[faction] = {
 		path = "game/common/factions"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_FACTION_DESC"
+			## required
+			influence_modifier = "$_influence"
+			## required
+			support = "support_$_title"
+			## required
+			support_desc = "support_$_desc"
+		}
 	}
 	type[fervor] = {
 		path = "game/common/fervor"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			short = "$_short"
+		}
 	}
 	type[cult] = {
 		path = "game/common/fetishist_cults"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
 	}
 	type[revolt_trigger] = {
 		path = "game/common/revolt_triggers"
 	}
 	type[insult] = {
 		path = "game/common/insults"
+		localisation = {
+			## required
+			insult = "$"
+		}
 	}
 	type[natives] = {
 		path = "game/common/natives"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[decree] = {
 		path = "game/common/decrees"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+			## required
+			title = "$_title"
+		}
 	}
 	type[isolationism] = {
 		path = "game/common/isolationism"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+			## required
+			title = "$_title"
+		}
 	}
 	type[naval_doctrine] = {
 		path = "game/common/naval_doctrines"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
 	}
 	type[policy] = {
 		path = "game/common/policies"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+		}
 	}
 	type[professionalism_modifier] = {
 		path = "game/common/professionalism"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[edict] = {
 		path = "game/common/state_edicts"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[power_projection] = {
 		path = "game/common/powerprojection"
@@ -71,7 +155,7 @@ types = {
 	}
 	#todo: The name of the file must be a country tag, culture or cultural group
 	type[province_names] = {
-		path = "game/common/region_colors"
+		path = "game/common/province_names"
 		name_from_file = yes
 		type_per_file = yes
 	}
@@ -79,7 +163,7 @@ types = {
 
 
 great_project = {
-	ambient_object = enum[ambient_objects]
+	ambient_object = <ambient_object>
 	province = <province_id>
 	is_canal = yes
 	time = int
