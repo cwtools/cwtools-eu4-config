@@ -15,6 +15,10 @@ types = {
 		skip_root_key = categories
 		path = "game/map"
 		path_file = "terrain.txt"
+		localisation = {
+			## required
+			type = "$"
+		}
 	}
 	type[graphical_terrain] = {
 		skip_root_key = terrain

@@ -2,23 +2,52 @@
 types = {
 	type[religion_group] = {
 		path = "game/common/religions"
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			harmonized = "harmonized_$"
+			## optional
+			harmonized_desc = "desc_harmonized_$"
+		}
 	}
 	## type_key_filter <> religious_schools
 	type[religion] = {
 		path = "game/common/religions"	
 		skip_root_key = any
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			desc = "$_religion_desc"
+		}
+		#todo: desc_<orthodox_icon>, <religious_school>_desc
 	}
 	type[personal_deity] = {
 		path = "game/common/personal_deities"
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			desc = "$_desc"
+		}
 	}
 	type[religion_propagation] = {
 		path = "game/common/religious_conversions"
 		subtype[trading_policy] = {
 			trading_policy = yes
 		}
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[religious_reform_group] = {
 		path = "game/common/religious_reforms"
+		localisation = {
+			## required
+			name = "$"
+		}#todo: reform_desc (not reform_group_desc)
 	}
 	type[aspects_and_blessings] = {
 		path = "game/common/church_aspects"
@@ -28,6 +57,14 @@ types = {
 		subtype[church_aspect] = {
 			## cardinality = 0..1
 			is_blessing = no
+		}
+		localisation = {
+			## required
+			name = "$"
+			subtype[church_aspect] = {
+				## required
+				desc = "desc_$"
+			}
 		}
 	}
 }
@@ -97,7 +134,7 @@ religion_group = {
 	## cardinality = 0..1
 	religious_schools = {
 		## cardinality = 0..inf
-		scalar = {
+		localisation = {
 			## replace_scope = { this = country root = country }
 			potential_invite_scholar = { 
 				alias_name[trigger] = alias_match_left[trigger]
@@ -212,7 +249,7 @@ religion_group = {
 		## cardinality = 0..1
 		orthodox_icons = {
 			## cardinality = 0..inf
-			scalar = {
+			localisation = {
 				alias_name[modifier] = alias_match_left[modifier]
 				
 				allow = {
@@ -281,7 +318,7 @@ religion_group = {
 			seat_of_papacy = <province_id>
 			
 			## cardinality = 1..inf
-			scalar = {
+			localisation = {
 				cost = int[0..100]
 				
 				## replace_scope = { this = country root = country }

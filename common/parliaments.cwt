@@ -2,9 +2,19 @@
 types = {
 	type[parliament_bribe] = {
 		path = "game/common/parliament_bribes"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[parliament_issue] = {
 		path = "game/common/parliament_issues"
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			tooltip = "$_tooltip"
+		}
 	}
 }
 

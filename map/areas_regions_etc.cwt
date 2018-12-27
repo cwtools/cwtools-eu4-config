@@ -3,26 +3,60 @@ types = {
 	type[province_id] = {
 		path = "game/map"
 		path_file = "positions.txt"
+		localisation = {
+			## required
+			name = "PROV$"
+			## required
+			adj = "PROV_ADJ$"
+		}
 	}
 	type[area] = {
 		path = "game/map"
 		path_file = "area.txt"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
-	type[continent] = {
+	type[continent] = { #seems to not need locs
 		path = "game/map"
 		path_file = "continent.txt"
 	}
 	type[climate] = {
 		path = "game/map"
 		path_file = "climate.txt"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+		}
 	}
 	type[region] = {
 		path = "game/map"
 		path_file = "region.txt"
+		localisation = {
+			## required
+			type = "$"
+			#these two are usually needed, but only if the regions are not sea regions
+			## optional
+			name = "$_name"
+			## optional
+			adj = "$_adj"
+		}
 	}
 	type[superregion] = {
 		path = "game/map"
 		path_file = "superregion.txt"
+		localisation = {
+			#these are usually needed, but only if the regions are not sea regions
+			## optional
+			type = "$"
+			## optional
+			name = "$_name"
+			## optional
+			adj = "$_adj"
+		}
 	}
 }
 

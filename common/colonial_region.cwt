@@ -2,6 +2,12 @@
 types = {
 	type[colonial_region] = {
 		path = "game/common/colonial_regions"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			short = "short_$"
+		}
 	}
 }
 

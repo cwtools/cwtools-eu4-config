@@ -8,6 +8,32 @@ types = {
 		subtype[china] = {
 			empire = celestial_empire
 		}
+		
+		subtype[member] = {
+			member = scalar
+		}
+		subtype[emperor] = {
+			emperor = scalar
+		}
+
+		localisation = {
+			## required
+			name = "$_title"
+			## required
+			desc = "$_desc"
+			subtype[member] = {
+				## required
+				member = "$_member"
+				## optional
+				member_desc = "desc_$_member"
+			}
+			subtype[emperor] = {
+				## required
+				emperor = "$_emperor"
+				## optional
+				emperor_desc = "desc_$_emperor"
+			}
+		}
 	}
 }
 

@@ -2,6 +2,14 @@
 types = {
 	type[estate] = {
 		path = "game/common/estates"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			curtail = "curtail_$_title"
+			## required
+			curtail_desc = "curtail_$_desc"
+		}
 	}
 }
 

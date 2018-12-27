@@ -2,11 +2,17 @@
 types = {
 	type[culture_group] = {
 		path = "game/common/cultures"
+		localisation = {
+			name = "$"
+		}
 	}
 	#todo: exclude male_names, femaile_names and dynasty_names
 	type[culture] = {
 		path = "game/common/cultures"
 		skip_root_key = any
+		localisation = {
+			name = "$"
+		}
 	}
 }
 

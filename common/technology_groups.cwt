@@ -4,6 +4,12 @@ types = {
 		path = "game/common"
 		path_file = "technology.txt"
 		skip_root_key = groups
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
 	}
 }
 

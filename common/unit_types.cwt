@@ -7,12 +7,12 @@ types = {
 		type_per_file = yes
 		path_strict = yes
 
-#		localisation = {
-#			## required
-#			name = "$"
-#			## required
-#			description = "$DESC"
-#		}
+		localisation = {
+			## required
+			name = "$"
+			## required
+			description = "$DESC"
+		}
 			
 		subtype[land] = {
 			type = enum[land_unit_types]

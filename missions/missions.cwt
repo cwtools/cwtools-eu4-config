@@ -9,6 +9,14 @@ types = {
 		subtype[fixed] = {
 			icon = scalar
 		}
+		localisation = {
+			subtype[fixed] = {
+				## required
+				name = "$_title"
+				## required
+				desc = "$_desc"
+			}
+		}
 	}
 }
 

@@ -2,9 +2,25 @@
 types = {
 	type[leader_personality] = {
 		path = "game/common/leader_personalities"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+			## required
+			death_message = "$_die_desc"
+		}
 	}
 	type[ruler_personality] = {
 		path = "game/common/ruler_personalities"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+			## required
+			death_message = "$_die_desc"
+		}
 	}
 }
 

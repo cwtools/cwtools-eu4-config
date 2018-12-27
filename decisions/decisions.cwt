@@ -3,6 +3,12 @@ types = {
 	type[decision] = {
 		path = "game/decisions"
 		skip_root_key = country_decisions
+		localisation = {
+			## required
+			name = "$_title"
+			## required
+			desc = "$_desc"
+		}
 	}
 }
 

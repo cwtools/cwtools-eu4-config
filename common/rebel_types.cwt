@@ -2,6 +2,24 @@
 types = {
 	type[rebel_type] = {
 		path = "game/common/rebel_types"
+		localisation = {
+			## required
+			name = "$_name"
+			## required
+			title = "$_title"
+			## required
+			desc = "$_desc"
+			## required
+			army = "$_army"
+		}
+	}
+	type[rebel_demand_loc] = { #used to make sure the _desc is checked (loc is already in the type)
+		path = "game/common/rebel_types"
+		name_field = demands_description
+		localisation = {
+			## required
+			demand_desc = "$_desc"
+		}
 	}
 }
 

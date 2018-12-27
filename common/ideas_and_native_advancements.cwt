@@ -3,6 +3,18 @@ types = {
 	type[idea_group] = {
 		path = "game/common/ideas"
 		
+		localisation = {
+			## required
+			name = "$"
+			## required
+			bonus = "$_bonus"
+			subtype[country_idea] = {
+				## required
+				start = "$_start"
+			}
+		}
+		#todo: the ideas also need desc
+
 		subtype[selectable] = {
 			category = scalar
 		}
@@ -12,6 +24,10 @@ types = {
 	}
 	type[native_advancement_group] = {
 		path = "game/common/native_advancements"
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 }
 

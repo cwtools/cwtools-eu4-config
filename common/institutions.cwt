@@ -2,6 +2,14 @@
 types = {
 	type[institution] = {
 		path = "game/common/institutions"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+			## required
+			date = "$_date"
+		}
 	}
 }
 

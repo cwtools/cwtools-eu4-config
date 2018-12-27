@@ -206,5 +206,10 @@ enums = {
 	}
 	enum[legacy_reforms_with_no_new_equivalent] = {
 		administrative_monarchy
+		constitutional_republic
+		enlightened_despotism
+		tribal_democracy_legacy
+		noble_republic
+		bureaucratic_despotism
 	}
 }

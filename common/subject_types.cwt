@@ -2,6 +2,16 @@
 types = {
 	type[subject_type] = {
 		path = "game/common/subject_types"
+		localisation = {
+			## required
+			name = "$_title"
+			## required
+			plural = "$_title_plural"
+			## required
+			longform = "$_long_desc"
+			## required
+			is_ours = "$_is_our"
+		}
 	}
 }
 

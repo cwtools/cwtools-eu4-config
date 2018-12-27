@@ -2,6 +2,12 @@
 types = {
 	type[disaster] = {
 		path = "game/common/disasters"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "desc_$"
+		}
 	}
 }
 
