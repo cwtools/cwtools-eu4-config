@@ -6,7 +6,10 @@ types = {
 		
 		subtype[not_flag] = {
 			alias_name[modifier] = alias_match_left[modifier]
-			localisation = {
+		}
+		
+		localisation = {
+			subtype[not_flag] = {
 				name = "$"
 				description = "desc_$"
 			}

@@ -7,15 +7,15 @@ types = {
 		localisation = {
 			## required
 			name = "$"
-		}
-		## type_key_filter <> human
-		subtype[ai] = {
-			localisation = {
+			subtype[ai] = {
 				## required
 				desc = "$_desc"
 				## required
 				become = "an_$"
 			}
+		}
+		## type_key_filter <> human
+		subtype[ai] = {
 		}
 	}
 }
