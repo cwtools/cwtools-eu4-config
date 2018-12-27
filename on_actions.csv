@@ -1,4 +1,5 @@
-﻿on_startup,root = country this = country,country
+﻿key,scopes,event
+on_startup,root = country this = country,country
 on_religion_change,root = country this = country,country
 on_secondary_religion_change,root = country this = country,country
 on_colonial_liberation,root = country this = country,country
@@ -144,5 +145,5 @@ on_colonial_pulse,root = province this = province,province
 on_siberian_pulse,root = province this = province,province
 on_hre_province_reconquest,root = province this = province,province
 ,,
-on_battle_won_unit,root = unit this = unit,n/a
-on_battle_lost_unit,root = unit this = unit,n/a
+on_battle_won_unit,root = unit this = unit,
+on_battle_lost_unit,root = unit this = unit,
