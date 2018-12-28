@@ -11,7 +11,7 @@ types = {
 			## required
 			name = "$"
 			## required
-			description = "$DESC"
+			description = "$DESCR"
 		}
 			
 		subtype[land] = {

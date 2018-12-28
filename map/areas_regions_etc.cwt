@@ -4,9 +4,9 @@ types = {
 		path = "game/map"
 		path_file = "positions.txt"
 		localisation = {
-			## required
+			## optional
 			name = "PROV$"
-			## required
+			## optional
 			adj = "PROV_ADJ$"
 		}
 	}
