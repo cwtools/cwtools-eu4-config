@@ -5,6 +5,7 @@ types = {
 		path = "game/common/event_modifiers"
 		
 		subtype[not_flag] = {
+			## cardinality 1..inf
 			scalar = scalar
 		}
 		
@@ -50,16 +51,14 @@ types = {
 }
 
 event_modifier = {
-	subtype[not_flag] = {
-		alias_name[modifier] = alias_match_left[modifier]
-	
-		## cardinality = 0..1
-		###Please tell Caligula what this does
-		religion = yes
-	
-		## cardinality = 0..1
-		picture = scalar #todo: sprite?
-	}
+	alias_name[modifier] = alias_match_left[modifier]
+
+	## cardinality = 0..1
+	###Please tell Caligula what this does
+	religion = yes
+
+	## cardinality = 0..1
+	picture = scalar #todo: sprite?
 }
 
 static_modifier = {

@@ -86,6 +86,7 @@ enums = {
 		manpower
 		years_of_income
 		trust
+		ruler_consort_marriage_length
 	}
 	enum[DLCs] = { #todo
 		"Rights of Man"
