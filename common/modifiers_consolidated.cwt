@@ -5,7 +5,7 @@ types = {
 		path = "game/common/event_modifiers"
 		
 		subtype[not_flag] = {
-			alias_name[modifier] = alias_match_left[modifier]
+			scalar = scalar
 		}
 		
 		localisation = {
