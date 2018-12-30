@@ -7,10 +7,14 @@ alias[effect:<scripted_effect>] = yes
 #Todo: Make sure this works
 alias[effect:<scripted_effect>] = {
 	## cardinality = 1..inf
-	scalar = scalar
+	enum[scripted_effect_params] = scalar
+	## cardinality = 1..inf
+	enum[scripted_effect_params] = scope_field
 }
 
-
+alias[effect:enum[scripted_effect_params_dollar]] = {
+	alias_name[effect] = alias_match_left[effect]
+}
 
 #Variables
 
@@ -2824,13 +2828,13 @@ alias[effect:adopt_reform_progress] = enum[country_tags]
 
 
 ## scope = province
-alias[effect:create_flagship] = {	
+alias[effect:create_flagship] = {
 	name = scalar
 	type = enum[naval_unit_types]
 }
 
 ## scope = province
-alias[effect:create_named_ship] = {	
+alias[effect:create_named_ship] = {
 	name = scalar
 	type = enum[naval_unit_types]
 }

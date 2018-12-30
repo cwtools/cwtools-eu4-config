@@ -2,6 +2,19 @@
 ## scope = any
 alias[trigger:<scripted_trigger>] = bool
 
+## scope = any
+alias[trigger:<scripted_trigger>] = {
+	## cardinality = 1..inf
+	enum[scripted_effect_params] = scalar
+	## cardinality = 1..inf
+	enum[scripted_effect_params] = scope_field
+}
+
+alias[trigger:enum[scripted_effect_params_dollar]] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+
 ## scope = country
 ###Returns true if the country has hired an advisor of the specified type which has at least level X.
 alias[trigger:<advisor_type>] = int[1..5]
