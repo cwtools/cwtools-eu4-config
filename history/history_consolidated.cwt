@@ -22,7 +22,7 @@ types = {
         }
     }
 	#Todo: The name presumably has some requirements, but they are ignored for now
-	
+
 	## push_scope = province
 	type[province_history] = {
 		path = "game/history/provinces"
@@ -102,7 +102,7 @@ diplomacy_history = {
 			start_date = date_field
 			end_date = date_field
 		}
-		
+
 		## cardinality = 0..inf
 		dependency = {
 			#or can you have different stuff entered there? <subject_type> would make sense except they already have their own stuff
@@ -162,12 +162,12 @@ province_history = {
 		unrest = int[0..100]
 		## cardinality = 0..1
 		seat_in_parliament = yes
-		
+
 		## cardinality = 0..1
 		latent_trade_goods = {
 			<trade_good.latent>
 		}
-		
+
 		alias_name[effect] = alias_match_left[effect]
 
 		## cardinality = 0..inf
@@ -238,14 +238,14 @@ province_history = {
 			## cardinality = 0..1
 			revolt_risk = int[0..100]
 
-			
+
 			## cardinality = 0..1
 			native_size = int
 			## cardinality = 0..1
 			native_ferocity = int[0..10]
 			## cardinality = 0..1
 			native_hostileness = int[0..10]
-			
+
 			## cardinality = 0..1
 			extra_cost = int
 			## cardinality = 0..1
@@ -259,8 +259,8 @@ province_history = {
 	discovered_by = <technology_group>
 	## cardinality = 0..inf
 	discovered_by = enum[country_tags]
-	
-	
+
+
 	subtype[!not_sea] = {
 		## cardinality = 0..inf
 		date_field = {
@@ -281,7 +281,7 @@ province_history = {
 		#todo: what is the max number of buildings?
 		## cardinality = 0..inf
 		<building> = yes
-		
+
 		## cardinality = 0..0
 		## severity = info
 		native_size = scalar
@@ -304,7 +304,7 @@ war_history = {
 	name = scalar #todo: name
 	## cardinality = 0..1
 	succession = enum[country_tags]
-	
+
 	war_goal = {
 		type = <wargoal_type>
 		casus_belli = <casus_belli>
@@ -377,18 +377,18 @@ country_history = {
 	## cardinality = 0..1
 	national_focus = enum[power_categories]
 	## cardinality = 0..1
-	religious_school = enum[religious_schools]
+	religious_school = <religious_school>
 	## cardinality = 0..inf
 	historical_rival = enum[country_tags]
 	## cardinality = 0..inf
 	historical_friend = enum[country_tags]
 	## cardinality = 0..1
 	elector = yes
-	
+
 	alias_name[effect] = alias_match_left[effect]
 
 	subtype[sunni] = {
-		religious_school = enum[religious_schools]
+		religious_school = <religious_school>
 	}
 
 	## cardinality = 0..inf
@@ -540,7 +540,7 @@ country_history = {
 		## cardinality = 0..1
 		capital = <province_id>
 		## cardinality = 0..1
-		religious_school = enum[religious_schools]
+		religious_school = <religious_school>
 		## cardinality = 0..1
 		historical_rival = enum[country_tags]
 		## cardinality = 0..1

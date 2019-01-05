@@ -2817,7 +2817,7 @@ alias[effect:lose_reforms] = int
 ## scope = country
 alias[effect:set_religious_school] = {
 	group = <religion_group>
-	school = enum[religious_schools]
+	school = <religious_school>
 }
 
 ## scope = country
