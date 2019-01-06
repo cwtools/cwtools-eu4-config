@@ -105,7 +105,7 @@ alias[trigger:ai_attitude] = {
 
 ## scope = country
 ###Returns true if the country has an alliance with X.
-alias[trigger:alliance_with] = scope[country]
+alias[trigger:alliance_with] = scope[any]
 
 ## scope = country
 ###Returns true if the country has an alliance with X.
@@ -441,7 +441,7 @@ alias[trigger:continent] = scope[province]
 
 ## scope = province
 ###Returns true if the province is controlled by X.
-alias[trigger:controlled_by] = scope[country]
+alias[trigger:controlled_by] = scope[any]
 
 ## scope = province
 ###Returns true if the province is controlled by X.
@@ -453,7 +453,7 @@ alias[trigger:controls] = <province_id>
 
 ## scope = country
 ###Returns true if the country has a core on any province owned by country X.
-alias[trigger:core_claim] = scope[country]
+alias[trigger:core_claim] = scope[any]
 
 ## scope = country
 ###Returns true if the country has a core on any province owned by country X.
@@ -1816,7 +1816,7 @@ alias[trigger:is_claim] = <province_id>
 
 ## scope = { country province }
 ###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
-alias[trigger:is_claim] = scope[country]
+alias[trigger:is_claim] = scope[any]
 
 ## scope = { country province }
 ###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
@@ -2215,7 +2215,7 @@ alias[trigger:is_revolution_target] = bool
 
 ## scope = country
 ###Returns true if country X is a rival of the country.
-alias[trigger:is_rival] = scope[country]
+alias[trigger:is_rival] = scope[any]
 
 ## scope = country
 ###Returns true if country X is a rival of the country.
@@ -3759,7 +3759,7 @@ alias[trigger:trade_range] = scope[country]
 ###Returns true if the trade node is within the trade range of the specified country.
 alias[trigger:trade_range] = enum[country_tags]
 
-## scope = trade_node
+## scope = province
 ###Returns true if the country controls at least X% of the trade in the specified trade node.
 alias[trigger:trade_share] = {
 	country = scope[country]
