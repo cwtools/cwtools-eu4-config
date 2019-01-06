@@ -1231,7 +1231,7 @@ alias[trigger:has_hostile_reformation_center] = bool
 
 ## scope = country
 ###Returns true if the country has the X idea.
-alias[trigger:has_idea] = enum[ideas]
+alias[trigger:has_idea] = <idea>
 
 ## scope = country
 ###Returns true if the country has chosen the X idea group.

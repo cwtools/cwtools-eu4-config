@@ -22,6 +22,17 @@ types = {
 			free = yes
 		}
 	}
+	## type_key_filter <> { start trigger bonus }
+	type[idea] = {
+		path = "game/common/ideas"
+		skip_root_key = any
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
+	}
 	type[native_advancement_group] = {
 		path = "game/common/native_advancements"
 		localisation = {
@@ -29,24 +40,15 @@ types = {
 			name = "$"
 		}
 	}
-}
-
-
-enums = {
-	#todo: Make this into a type which excludes start, trigger, bonus
-	complex_enum[ideas] = {
-		path = "game/common/ideas"
-		name = {
-			enum_name = {
-			}
-		}
-	}
-	#todo: Make this into a type which excludes start, trigger, bonus
-	complex_enum[native_advancements] = {
+	## type_key_filter <> { start trigger bonus }
+	type[native_advancement] = {
 		path = "game/common/native_advancements"
-		name = {
-			enum_name = {
-			}
+		skip_root_key = any
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
 		}
 	}
 }
