@@ -970,7 +970,7 @@ alias[trigger:has_casus_belli] = {
 
 ## scope = country
 ###Returns true if the country has a casus belli against country X.
-alias[trigger:has_casus_belli_against] = scope[country]
+alias[trigger:has_casus_belli_against] = scope[any]
 
 ## scope = country
 ###Returns true if the country has a casus belli against country X.
@@ -2259,7 +2259,7 @@ alias[trigger:is_subject] = bool
 
 ## scope = country
 ###Returns true if the country is a subject of X.
-alias[trigger:is_subject_of] = scope[country]
+alias[trigger:is_subject_of] = scope[any]
 
 ## scope = country
 ###Returns true if the country is a subject of X.

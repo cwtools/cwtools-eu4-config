@@ -149,5 +149,9 @@ alias[trigger:recent_treasure_ship_passage] = yes
 
 #effects
 
+## scope = province
+###Applies the specified holy order to the province
+alias[effect:holy_order] = <holy_order>
+
 
 
