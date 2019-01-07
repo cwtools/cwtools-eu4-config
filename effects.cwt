@@ -811,7 +811,7 @@ alias[effect:change_unit_type] = <technology_group>
 alias[effect:kill_leader] = {
 	type = enum[military_leader_types]
 	type = random
-	type = scalar #todo: name
+	type = value[leader_name]
 }
 
 ## scope = { country province }
@@ -824,7 +824,7 @@ alias[effect:kill_leader] = random
 
 ## scope = { country province }
 ###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = scalar #todo: name
+alias[effect:kill_leader] = value[leader_name]
 
 ## scope = country
 ###Creates an admiral with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. Siege improves Blockade Efficiency for admirals. The name parameter can accept a saved name variable, see set_saved_name for more context.
@@ -836,6 +836,8 @@ alias[effect:define_admiral] = {
 	siege = int
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	leader = value_set[leader_name]
 	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
@@ -855,6 +857,8 @@ alias[effect:define_explorer] = {
 	## cardinality = 0..1
 	name = localisation_synced
 	## cardinality = 0..1
+	leader = value_set[leader_name]
+	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
@@ -873,6 +877,8 @@ alias[effect:define_conquistador] = {
 	## cardinality = 0..1
 	name = localisation_synced
 	## cardinality = 0..1
+	leader = value_set[leader_name]
+	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
 	female = bool
@@ -890,6 +896,8 @@ alias[effect:define_general] = {
 	siege = int
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	leader = value_set[leader_name]
 	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
@@ -1419,7 +1427,7 @@ alias[effect:clr_ruler_flag] = value[ruler_flag]
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
-alias[effect:set_dynasty] = scalar #todo: name e.g. "Smith"
+alias[effect:set_dynasty] = value[dynasty_name]
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
@@ -1518,7 +1526,7 @@ alias[effect:define_ruler_to_general] = {
 ###Creates a ruler from a leader for the current scope.
 alias[effect:define_leader_to_ruler] = {
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = value_set[ruler_name]
 	## cardinality = 0..1
 	type = enum[military_leader_types]
 	## cardinality = 0..1
@@ -1542,7 +1550,11 @@ alias[effect:define_ruler] = {
 	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
-	dynasty = scalar #todo: name
+	dynasty = value_set[ruler_name]
+	## cardinality = 0..1
+	dynasty = value_set[dynasty_name]
+	## cardinality = 0..1
+	dynasty = localisation_synced
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
@@ -1579,7 +1591,7 @@ alias[effect:define_ruler] = {
 	regency = yes
 	## cardinality = 0..1
 	###The name of the leader to generate with the ruler.
-	attach_leader = scalar #name
+	attach_leader = value_set[leader_name]
 	## cardinality = 0..1
 	female = yes
 	## cardinality = 0..1
@@ -1682,13 +1694,17 @@ alias[effect:kill_consort] = yes
 ###Creates the defined consort for the current scope. The skill values are not rolled for consorts, meaning the values set are the exact values a consort gets.
 alias[effect:define_consort] = {
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value_set[consort_name]
 	## cardinality = 0..1
 	country_of_origin = scope[country]
 	## cardinality = 0..1
 	country_of_origin = enum[country_tags]
 	## cardinality = 0..1
-	dynasty = scalar #todo: name
+	dynasty = localisation_synced
+	## cardinality = 0..1
+	dynasty = value_set[dynasty_name]
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
@@ -1849,11 +1865,15 @@ alias[effect:define_heir_to_general] = {
 ###Creates the defined heir for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.
 alias[effect:define_heir] = {
 	## cardinality = 0..1
-	name = scalar #todo: name
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value_set[heir_name]
 	## cardinality = 0..1
 	name = value[saved_name]
 	## cardinality = 0..1
-	dynasty = scalar #todo: name
+	dynasty = localisation_synced
+	## cardinality = 0..1
+	dynasty = value_set[dynasty_name]
 	## cardinality = 0..1
 	dynasty = scope[country]
 	## cardinality = 0..1
@@ -2340,7 +2360,9 @@ alias[effect:spawn_rebels] = {
 	###Associate a country with the rebels.
 	friend = enum[country_tags]
 	## cardinality = 0..1
-	leader = scalar #todo: name
+	leader = value_set[leader_name]
+	## cardinality = 0..1
+	leader = localisation_synced
 	## cardinality = 0..1
 	leader = value[saved_name]
 	## cardinality = 0..1
@@ -2689,7 +2711,7 @@ alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn'
 alias[effect:define_exiled_ruler] = {
 	exiled_as = value_set[exiled_ruler]
 	## cardinality = 0..1
-	dynasty = scalar #todo: name
+	dynasty = value_set[dynasty_name]
 	## cardinality = 0..1
 	random_gender = bool
 	## cardinality = 0..1

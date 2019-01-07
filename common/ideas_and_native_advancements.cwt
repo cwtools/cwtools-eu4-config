@@ -13,7 +13,6 @@ types = {
 				start = "$_start"
 			}
 		}
-		#todo: the ideas also need desc
 
 		subtype[selectable] = {
 			category = scalar

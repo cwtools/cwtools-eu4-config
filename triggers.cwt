@@ -533,7 +533,7 @@ alias[trigger:current_debate] = <parliament_issue>
 
 ## scope = country
 ###Returns true if the country has the specified (orthodox) icon.
-alias[trigger:current_icon] = enum[orthodox_icons]
+alias[trigger:current_icon] = <orthodox_icon>
 
 ## scope = { country province }
 ###Returns true if the country/province has an institution growth of at least X for the first not embraced institution.
@@ -688,7 +688,7 @@ alias[trigger:doom] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the ruling dynasty of the country is X, or is the same as that of country X.
-alias[trigger:dynasty] = scalar #todo: dynasty name e.g. "von Habsburg"
+alias[trigger:dynasty] = value[dynasty_name]
 
 ## scope = country
 ###Returns true if the ruling dynasty of the country is X, or is the same as that of country X.
@@ -942,7 +942,7 @@ alias[trigger:has_advisor] = yes
 
 ## scope = country
 ###Returns true if the country has the specified age ability.
-alias[trigger:has_age_ability] = enum[game_age_abilities]
+alias[trigger:has_age_ability] = <game_age_ability>
 
 ## scope = country
 ###Returns true if the country is currently in a disaster.
@@ -1211,7 +1211,7 @@ alias[trigger:has_heir] = bool
 
 ## scope = country
 ###Returns true if the country has an heir (named X).
-alias[trigger:has_heir] = scalar #todo: name
+alias[trigger:has_heir] = value[heir_name]
 
 ## scope = country
 ###Returns true if the heir flag X is set.
@@ -1247,7 +1247,7 @@ alias[trigger:has_institution] = <institution>
 
 ## scope = country
 ###Returns true if the country has the leader "X".
-alias[trigger:has_leader] = scalar #todo: name
+alias[trigger:has_leader] = value[leader_name]
 
 ## scope = country
 ###Returns true if the country has a leader with at least the specified stats.
@@ -1391,7 +1391,7 @@ alias[trigger:has_removed_fow] = bool
 
 ## scope = country
 ###Returns true if the country has a ruler named "X".
-alias[trigger:has_ruler] = scalar #todo: name
+alias[trigger:has_ruler] = value[ruler_name]
 
 ## scope = country
 ###Returns true if the ruler flag X is set for the country.
@@ -4086,7 +4086,7 @@ alias[trigger:invasion_nation] = bool
 alias[trigger:current_bribe] = <parliament_bribe>
 
 ## scope = country
-alias[trigger:exiled_same_dynasty_as_current] = scalar	#todo: like a variable
+alias[trigger:exiled_same_dynasty_as_current] = value[dynasty_name]
 
 ## scope = country
 alias[trigger:compare_regiments_to_province_of_estate] = {

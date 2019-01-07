@@ -122,13 +122,17 @@ new_diplomatic_action = {
 				## cardinality = 0..inf
 				check_variable = {
 					cardinality = 2..2
-					which = scalar #todo: variable
+					which = ai_value
+					cardinality = 2..2
+					which = value[variable]
 				}
 				
 				## cardinality = 0..inf
 				is_variable_equal = {
 					cardinality = 2..2
-					which = scalar #todo: variable
+					which = ai_value
+					cardinality = 2..2
+					which = value[variable]
 				}
 			}
 		}
