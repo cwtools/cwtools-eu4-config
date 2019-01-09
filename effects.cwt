@@ -185,7 +185,7 @@ alias[effect:add_dip_power] = int
 alias[effect:add_mil_power] = int
 
 ## scope = country
-###Saves a name to an unique key for usage in other effects. Usable with define_admiral, define_explorer, define_conquistador, define_general, define_ruler, define_consort, define_heir, define_advisor and spawn_rebels.
+###Saves a name to an unique key for usage in other effects. Usable with define_admiral, define_explorer, define_conquistador, define_general, define_ruler, define_consort, define_heir, define_advisor and spawn_rebels. Note: Does not work with country tags as scope, also type = simple does not work with spawn_rebels.
 alias[effect:set_saved_name] = {
 	key = value_set[saved_name]
 	type = advisor
@@ -193,9 +193,6 @@ alias[effect:set_saved_name] = {
 	## cardinality = 0..1
 	###Only with type = advisor
 	scope = scope[country]
-	## cardinality = 0..1
-	###Only with type = advisor
-	scope = enum[country_tags]
 
 	## cardinality = 0..1
 	name = scalar
