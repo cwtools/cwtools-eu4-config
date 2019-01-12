@@ -21,7 +21,7 @@ types = {
 			free = yes
 		}
 	}
-	## type_key_filter <> { start trigger bonus }
+	## type_key_filter <> { start trigger bonus ai_will_do }
 	type[idea] = {
 		path = "game/common/ideas"
 		skip_root_key = any
