@@ -5,10 +5,15 @@ types = {
 		localisation = {
 			## required
 			name = "$"
-			## optional
-			harmonized = "harmonized_$"
-			## optional
-			harmonized_desc = "desc_harmonized_$"
+			subtype[harmonized] = {
+				## optional
+				harmonized = "harmonized_$"
+				## optional
+				harmonized_desc = "desc_harmonized_$"
+			}
+		}
+		subtype[harmonized] = {
+			harmonized_modifier = scalar
 		}
 	}
 	## type_key_filter <> religious_schools
@@ -20,6 +25,16 @@ types = {
 			name = "$"
 			## optional
 			desc = "$_religion_desc"
+			subtype[harmonized] = {
+				## optional
+				harmonized = "harmonized_$"
+				## optional
+				harmonized_desc = "desc_harmonized_$"
+			}
+
+		}
+		subtype[harmonized] = {
+			harmonized_modifier = scalar
 		}
 		#todo: desc_<orthodox_icon>, <religious_school>_desc
 	}
