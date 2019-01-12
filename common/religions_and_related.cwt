@@ -36,11 +36,37 @@ types = {
 		subtype[harmonized] = {
 			harmonized_modifier = scalar
 		}
-		#todo: desc_<orthodox_icon>, <religious_school>_desc
+	}
+	type[orthodox_icon] = {
+		path = "game/common/religions"
+		skip_root_key = { any any orthodox_icons }
+
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			desc = "desc_$"
+		}
 	}
 	type[religious_school] = {
 		path = "game/common/religions"
 		skip_root_key = { any religious_schools }
+
+		localisation = {
+			## required
+			name = "$"
+			## optional
+			desc = "$_desc"
+		}
+	}
+	type[papal_policy] = {
+		path = "game/common/religions"
+		skip_root_key = { any any papacy }
+
+		localisation = {
+			## required
+			name = "$"
+		}
 	}
 	type[personal_deity] = {
 		path = "game/common/personal_deities"
@@ -88,31 +114,6 @@ types = {
 	}
 }
 
-
-enums = {
-	complex_enum[orthodox_icons] = {
-		path = "game/common/religions"
-		name = {
-			scalar = {
-				orthodox_icons = {
-					enum_name = {
-					}
-				}
-			}
-		}
-	}
-	complex_enum[papal_policies] = {
-		path = "game/common/religions"
-		name = {
-			scalar = {
-				papacy = {
-					enum_name = {
-					}
-				}
-			}
-		}
-	}
-}
 
 
 religion_group = {

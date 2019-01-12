@@ -12,17 +12,16 @@ types = {
 			description = "$_desc"
 		}
 	}
-	#todo: Abilities also have _desc, but they are third tier so canno be reached with types yet
-}
-
-enums = {
-	complex_enum[game_age_abilities] = {
+	type[game_age_ability] = {
 		path = "game/common/ages"
-		scalar = {
-			abilities = {
-				enum_name = {
-				}
-			}
+
+		skip_root_key = { any abilities }
+
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_short"
 		}
 	}
 }
@@ -78,7 +77,6 @@ game_age = {
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			effect = {
-				custom_tooltip = feudal_de_jure_law
 				alias_name[effect] = alias_match_left[effect]
 			}
 			## cardinality = 0..1

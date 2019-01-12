@@ -110,9 +110,8 @@ country_file = {
 		scalar = int
 	}
 	leader_names = {
-		#todo: names
 		## cardinality = 1..inf
-		scalar
+		value_set[leader_name]
 	}
 	#Only "rebels" lack this
 	## severity = warning
