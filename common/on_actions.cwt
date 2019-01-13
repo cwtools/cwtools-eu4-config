@@ -287,8 +287,20 @@ types = {
         ## type_key_filter = on_battle_won_unit
         subtype[on_battle_won_unit] = { }
         ## type_key_filter = on_battle_lost_unit
-        subtype[on_battle_lost_unit] = { }
-    }
+		subtype[on_battle_lost_unit] = { }
+        ## type_key_filter = on_holy_order_established
+		subtype[on_holy_order_established] = { }
+        ## type_key_filter = on_minority_expelled
+		subtype[on_minority_expelled] = { }
+        ## type_key_filter = on_raid_coast
+		subtype[on_raid_coast] = { }
+        ## type_key_filter = on_flagship_captured
+		subtype[on_flagship_captured] = { }
+        ## type_key_filter = on_flagship_destroyed
+		subtype[on_flagship_destroyed] = { }
+        ## type_key_filter = on_country_released
+		subtype[on_country_released] = { }
+	}
 }
 on_action = {
 
@@ -2691,36 +2703,113 @@ on_action = {
     }
     ## replace_scope = { root = unit this = unit }
     subtype[on_battle_won_unit] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event>
-        }
-
         alias_name[effect] = alias_match_left[effect]
     }
     ## replace_scope = { root = unit this = unit }
     subtype[on_battle_lost_unit] = {
+        alias_name[effect] = alias_match_left[effect]
+	}
+	
+    ## replace_scope = { root = country this = country }
+    subtype[on_holy_order_established] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
-            <event>
+            <event.country>
         }
         ## cardinality = 0..1
         random_events = {
             ## cardinality = 0..inf
             int = 0
             ## cardinality = 0..inf
-            int = <event>
+            int = <event.country>
         }
 
         alias_name[effect] = alias_match_left[effect]
-    }
+	}
+    ## replace_scope = { root = province this = province from = province }
+    subtype[on_minority_expelled] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.province>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.province>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = province this = province from = province }
+    subtype[on_raid_coast] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.province>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.province>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_flagship_captured] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_flagship_destroyed] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_country_released] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
 }
