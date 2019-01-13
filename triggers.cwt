@@ -4086,7 +4086,7 @@ alias[trigger:invasion_nation] = bool
 alias[trigger:current_bribe] = <parliament_bribe>
 
 ## scope = country
-alias[trigger:exiled_same_dynasty_as_current] = value[dynasty_name]
+alias[trigger:exiled_same_dynasty_as_current] = value[saved_name]
 
 ## scope = country
 alias[trigger:compare_regiments_to_province_of_estate] = {
