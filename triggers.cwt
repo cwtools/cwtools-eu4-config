@@ -344,8 +344,12 @@ alias[trigger:coalition_target] = scope[country]
 alias[trigger:coalition_target] = enum[country_tags]
 
 ## scope = province
-###Returns true if ... has gotten a colonial grant for the scope's colonial region from any potential pope-like entities.
-alias[trigger:colonial_claim_by_anyone_of_religion] = <religion> #todo: how does this work?
+###Returns true if the scope province's colonial region been given as a colonial grant by any potential pope-like entities of the specified religion or country's religion.
+alias[trigger:colonial_claim_by_anyone_of_religion] = <religion>
+
+## scope = province
+###Returns true if the scope province's colonial region been given as a colonial grant by any potential pope-like entities of the specified religion or country's religion.
+alias[trigger:colonial_claim_by_anyone_of_religion] = enum[country_tags]
 
 ## scope = province
 ###Returns true if the province is part of the colonial region X.
@@ -3565,7 +3569,7 @@ alias[trigger:ruler_culture] = scope[country]
 
 ## scope = country
 ###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.
-alias[trigger:ruler_culture] = enum[country_ids]
+alias[trigger:ruler_culture] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.
