@@ -55,39 +55,6 @@ enums = {
 		great_project
 		siberian
 	}
-	enum[export_to_variable_data] = {
-		consort_adm
-		consort_dip
-		consort_mil
-		consort_culture
-		consort_religion
-		consort_age
-		ruler_adm
-		ruler_dip
-		ruler_mil
-		ruler_culture
-		ruler_religion
-		ruler_age
-		heir_adm
-		heir_dip
-		heir_mil
-		heir_culture
-		heir_religion
-		heir_age
-		adm_advisor_religion
-		dip_advisor_religion
-		mil_advisor_religion
-		adm_advisor_culture
-		dip_advisor_culture
-		mil_advisor_culture
-		monthly_income
-		treasury
-		max_manpower
-		manpower
-		years_of_income
-		trust
-		ruler_consort_marriage_length
-	}
 	enum[DLCs] = { #todo
 		"Rights of Man"
 		"El Dorado"

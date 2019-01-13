@@ -45,7 +45,11 @@ alias[trigger:absolutism] = int[0..100]
 
 ## scope = country
 ###Returns true if the country accepts the specified culture.
-alias[trigger:accepted_culture] = <culture> #todo
+alias[trigger:accepted_culture] = <culture>
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:accepted_culture] = enum[culture_new_variables]
 
 ## scope = country
 ###Returns true if the country accepts the specified culture.
@@ -381,6 +385,10 @@ alias[trigger:consort_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.
+alias[trigger:consort_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.
 alias[trigger:consort_culture] = scope[country]
 
 ## scope = country
@@ -406,6 +414,10 @@ alias[trigger:consort_mil] = int[0..6]
 ## scope = country
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
 alias[trigger:consort_religion] = <religion>
+
+## scope = country
+###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
+alias[trigger:consort_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
@@ -478,6 +490,10 @@ alias[trigger:country_or_vassal_holds] = enum[country_tags]
 ## scope = province
 ###Returns true if the province culture is X, or the same as the specified scope.
 alias[trigger:culture] = <culture>
+
+## scope = province
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = enum[culture_new_variables]
 
 ## scope = province
 ###Returns true if the province culture is X, or the same as the specified scope.
@@ -636,6 +652,10 @@ alias[trigger:dominant_culture] = <culture> #todo: wiki says "capital"
 
 ## scope = country
 ###Returns true if the dominant culture in the country is X or the same as the specified scope's.
+alias[trigger:dominant_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the dominant culture in the country is X or the same as the specified scope's.
 alias[trigger:dominant_culture] = scope[country]
 
 ## scope = country
@@ -653,6 +673,10 @@ alias[trigger:dominant_culture] = <province_id>
 ## scope = country
 ###Returns true if the dominant religion in the country is X or the same as the specified scope's.
 alias[trigger:dominant_religion] = <religion>
+
+## scope = country
+###Returns true if the dominant religion in the country is X or the same as the specified scope's.
+alias[trigger:dominant_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the dominant religion in the country is X or the same as the specified scope's.
@@ -712,6 +736,8 @@ alias[trigger:employed_advisor] = {
 	## cardinality = 0..1
 	religion = <religion>
 	## cardinality = 0..1
+	religion = enum[religion_new_variables]
+	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
 	religion = enum[country_tags]
@@ -725,6 +751,8 @@ alias[trigger:employed_advisor] = {
 	religion = heathen
 	## cardinality = 0..1
 	culture = <culture>
+	## cardinality = 0..1
+	culture = enum[culture_new_variables]
 	## cardinality = 0..1
 	culture = scope[country]
 	## cardinality = 0..1
@@ -1199,6 +1227,10 @@ alias[trigger:has_harmonized_with] = <religion>
 
 ## scope = country
 ###Returns true if the country has harmonized with the specified religion or religion group.
+alias[trigger:has_harmonized_with] = enum[religion_new_variables]
+
+## scope = country
+###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = <religion_group>
 
 ## scope = province
@@ -1274,6 +1306,10 @@ alias[trigger:has_local_modifier_value] = {
 ## scope = country
 ###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
 alias[trigger:has_matching_religion] = <religion>
+
+## scope = country
+###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
+alias[trigger:has_matching_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
@@ -1567,6 +1603,10 @@ alias[trigger:heir_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.
+alias[trigger:heir_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the country's heir has the specified culture. Can utilise Event Scope Values.
 alias[trigger:heir_culture] = scope[country]
 
 ## scope = country
@@ -1607,7 +1647,11 @@ alias[trigger:heir_nationality] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.
-alias[trigger:heir_religion] = <culture>
+alias[trigger:heir_religion] = <religion>
+
+## scope = country
+###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.
+alias[trigger:heir_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the country's heir has the specified religion. Can utilise Event Scope Values.
@@ -1669,6 +1713,10 @@ alias[trigger:hre_heretic_religion] = <religion>
 
 ## scope = any
 ###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.
+alias[trigger:hre_heretic_religion] = enum[religion_new_variables]
+
+## scope = any
+###Returns true if the specified religion is the opposition religion of the HRE. Note: No localisation for the negation.
 alias[trigger:hre_heretic_religion] = scope[country]
 
 ## scope = any
@@ -1694,6 +1742,10 @@ alias[trigger:hre_reform_level] = int
 ## scope = any
 ###Returns true if the specified religion is the dominant faith of the HRE.
 alias[trigger:hre_religion] = <religion>
+
+## scope = any
+###Returns true if the specified religion is the dominant faith of the HRE.
+alias[trigger:hre_religion] = enum[religion_new_variables]
 
 ## scope = any
 ###Returns true if the specified religion is the dominant faith of the HRE.
@@ -3277,6 +3329,10 @@ alias[trigger:primary_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's primary culture is X.
+alias[trigger:primary_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the country's primary culture is X.
 alias[trigger:primary_culture] = scope[country]
 
 ## scope = country
@@ -3385,6 +3441,10 @@ alias[trigger:region] = <region>
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = <religion>
+
+## scope = { country province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:religion] = enum[religion_new_variables]
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
@@ -3497,6 +3557,10 @@ alias[trigger:ruler_culture] = <culture>
 
 ## scope = country
 ###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.
+alias[trigger:ruler_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the country's ruler has the specified culture. Can utilise Event Scope Values.
 alias[trigger:ruler_culture] = scope[country]
 
 ## scope = country
@@ -3522,6 +3586,10 @@ alias[trigger:ruler_is_foreigner] = bool
 ## scope = country
 ###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.
 alias[trigger:ruler_religion] = <religion>
+
+## scope = country
+###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.
+alias[trigger:ruler_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the country's ruler has the specified religion. Can utilise Event Scope Values.
@@ -3566,6 +3634,10 @@ alias[trigger:same_continent] = <province_id>
 ## scope = country
 ###Returns true the secondary religion of the country is X.
 alias[trigger:secondary_religion] = <religion>
+
+## scope = country
+###Returns true the secondary religion of the country is X.
+alias[trigger:secondary_religion] = enum[religion_new_variables]
 
 ## scope = country
 ###Returns true if the country is the senior partner in a personal union over country X.
