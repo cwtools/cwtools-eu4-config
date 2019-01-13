@@ -292,11 +292,11 @@ alias[effect:add_tribal_allegiance] = int
 
 ## scope = country
 ###Changes the Organist-Statist balance. Positive moves towards Orangist, negative moves towards Statists.
-alias[effect:change_statists_vs_orangists] = float[-1.0..1.0]
+alias[effect:change_statists_vs_orangists] = float[-2.0..2.0]
 
 ## scope = country
 ###Changes the Organist-Monarchist balance. Positive (probably) moves towards Monarchist, negative (probably) moves towards Statists.
-alias[effect:change_statists_vs_monarchists] = float[-1.0..1.0]
+alias[effect:change_statists_vs_monarchists] = float[-2.0..2.0]
 
 ## scope = country
 ###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt. In rebel_types, REB will make it pick the preferred rebel government.
@@ -686,7 +686,7 @@ alias[effect:define_advisor] = {
 	## cardinality = 0..1
 	religion = <religion>
 	## cardinality = 0..1
-	religion = enum[religion_new_variables
+	religion = enum[religion_new_variables]
 	## cardinality = 0..1
 	religion = scope[country]
 	## cardinality = 0..1
@@ -809,6 +809,7 @@ alias[effect:create_general] = {
 	## cardinality = 0..1
 	###Gives the general a random name from the specified culture.
 	culture = <culture>
+	## cardinality = 0..1
 	###Gives the general a random name from the specified culture.
 	culture = enum[culture_new_variables]
 	## cardinality = 0..1

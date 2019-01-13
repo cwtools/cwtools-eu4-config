@@ -48,5 +48,8 @@ decision = {
 
 	## cardinality = 0..inf
 	do_not_integrate = enum[country_tags]
+
+	## cardinality = 0..inf
+	do_not_core = <province_id>
 }
 	

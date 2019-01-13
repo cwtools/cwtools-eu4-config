@@ -4421,3 +4421,6 @@ alias[trigger:native_policy] = enum[native_policies]
 
 ## scope = province
 alias[trigger:can_establish_order] = bool
+
+## scope = any
+alias[is_tutorial_active] = bool
