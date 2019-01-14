@@ -716,7 +716,7 @@ alias[trigger:doom] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the ruling dynasty of the country is X, or is the same as that of country X.
-alias[trigger:dynasty] = value[dynasty_name]
+alias[trigger:dynasty] = localisation_synced #value[dynasty_name]
 
 ## scope = country
 ###Returns true if the ruling dynasty of the country is X, or is the same as that of country X.
@@ -1247,7 +1247,7 @@ alias[trigger:has_heir] = bool
 
 ## scope = country
 ###Returns true if the country has an heir (named X).
-alias[trigger:has_heir] = value[heir_name]
+alias[trigger:has_heir] = localisation_synced #value[heir_name]
 
 ## scope = country
 ###Returns true if the heir flag X is set.
@@ -1283,7 +1283,7 @@ alias[trigger:has_institution] = <institution>
 
 ## scope = country
 ###Returns true if the country has the leader "X".
-alias[trigger:has_leader] = value[leader_name]
+alias[trigger:has_leader] = localisation_synced #value[leader_name]
 
 ## scope = country
 ###Returns true if the country has a leader with at least the specified stats.
@@ -1431,7 +1431,7 @@ alias[trigger:has_removed_fow] = bool
 
 ## scope = country
 ###Returns true if the country has a ruler named "X".
-alias[trigger:has_ruler] = value[ruler_name]
+alias[trigger:has_ruler] = localisation_synced #value[ruler_name]
 
 ## scope = country
 ###Returns true if the ruler flag X is set for the country.

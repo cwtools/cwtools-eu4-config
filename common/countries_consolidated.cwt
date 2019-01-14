@@ -111,7 +111,7 @@ country_file = {
 	}
 	leader_names = {
 		## cardinality = 1..inf
-		value_set[leader_name]
+		localisation_synced #value_set[leader_name]
 	}
 	#Only "rebels" lack this
 	## severity = warning
