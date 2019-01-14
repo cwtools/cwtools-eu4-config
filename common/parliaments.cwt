@@ -12,8 +12,6 @@ types = {
 		localisation = {
 			## required
 			name = "$"
-			## optional
-			tooltip = "$_tooltip"
 		}
 	}
 }
