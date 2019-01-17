@@ -28,10 +28,11 @@ types = {
 			desc = "$_FACTION_DESC"
 			## required
 			influence_modifier = "$_influence"
-			## required
-			support = "support_$_title"
-			## required
-			support_desc = "support_$_desc"
+			#Old Chinese factions lack this and I can't see what it does
+#			## required
+#			support = "support_$_title"
+#			## required
+#			support_desc = "support_$_desc"
 		}
 	}
 	type[fervor] = {
