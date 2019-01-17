@@ -1415,7 +1415,7 @@ alias[trigger:has_province_modifier] = <event_modifier>
 
 ## scope = province
 ###Returns true if province has the province modifier X.
-alias[trigger:has_province_modifier] = static_modifier>
+alias[trigger:has_province_modifier] = <static_modifier>
 
 ## scope = province
 ###Returns true if the province is controlled by (the specified) rebel faction. =REB is used in Vanilla but apparently doesn't work as of 1.25
