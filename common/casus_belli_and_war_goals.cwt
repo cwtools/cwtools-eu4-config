@@ -16,12 +16,12 @@ types = {
 	type[wargoal_type] = {
 		path = "game/common/wargoal_types"
 
-		localisation = {
-			## required
-			name = "$"
-			## required
-			description = "$_desc"
-		}
+#		localisation = {
+#			## required
+#			name = "$"
+#			## required
+#			description = "$_desc"
+#		}
 		subtype[demand_provinces] = {
 			peace_options = {
 				po_demand_provinces

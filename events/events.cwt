@@ -30,10 +30,8 @@ event = {
 	id = scalar
 
 	subtype[hidden] = {
-		title = localisation
-		title = none
-		desc = localisation
-		desc = none
+		title = scalar
+		desc = scalar
 		picture = <sprite>		
 		picture = enum[dlc_event_pictures]
 		picture = none

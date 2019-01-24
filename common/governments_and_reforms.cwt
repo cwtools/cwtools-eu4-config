@@ -32,12 +32,16 @@ types = {
 		subtype[new] = {
 			## cardinality = 0..1
 			legacy_government = no
+			## cardinality = 0..1
+			basic_reform = no
+			localisation = {
+				## required
+				description = "$_desc"
+			}
 		}
 		localisation = {
 			## required
 			name = "$"
-			## required
-			description = "$_desc"
 		}
 	}
 	type[government_ranks] = {

@@ -42,7 +42,7 @@ rnw_tiles = {
 	}
 
 	## cardinality = 0..inf
-	river_estuary_modifier = {
+	<event_modifier> = {
 		## cardinality = 3..3
 		int[0..255]
 	}
@@ -66,6 +66,9 @@ rnw_tiles = {
 	continent = yes
 	## cardinality = 0..1
 	fantasy = yes
+
+	## cardinality = 0..1
+	unique = int
 
 	weight = int
 

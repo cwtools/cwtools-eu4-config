@@ -6,8 +6,6 @@ types = {
 			## required
 			name = "$"
 			## required
-			desc = "$_desc"
-			## required
 			great_project_title = "great_project_$"
 			## required
 			construct = "construct_$_title"

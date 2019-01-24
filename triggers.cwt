@@ -1087,26 +1087,30 @@ alias[trigger:has_disaster_progress] = {
 	value = int[0..100]
 }
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = <province_id>
 
 #I wonder whether this works with all things that accept <province_id>
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = <area>
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = scope[province]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
-alias[trigger:has_discovered] = scope[country]
+alias[trigger:has_discovered] = scope[any]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = enum[country_tags]
+
+## scope = { province }
+###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
+alias[trigger:has_discovered] = bool
 
 ## scope = any
 ###Returns true if the DLC X is enabled.
@@ -1302,6 +1306,8 @@ alias[trigger:has_leader_with] = {
 	manuever = int
 	## cardinality = 0..1
 	siege = int
+	## cardinality = 0..1
+	total_pips = int
 }
 
 ## scope = province
@@ -2107,7 +2113,7 @@ alias[trigger:is_island] = bool
 
 ## scope = country
 ###Returns true if country X is league enemy of the country('s league).
-alias[trigger:is_league_enemy] = scope[country]
+alias[trigger:is_league_enemy] = scope[any]
 
 ## scope = country
 ###Returns true if country X is league enemy of the country('s league).
@@ -4261,6 +4267,20 @@ alias[trigger:has_trade_company_investment_in_area] = {
 	investment = <trade_company_investment>
 	investor = scope[country]
 	investor = enum[country_tags]
+}
+
+## scope = province
+alias[trigger:has_trade_company_investment_in_area] = {
+	count_one_per_area = yes
+	investor = scope[country]
+	investor = enum[country_tags]
+}
+
+## scope = country
+## push_scope = province
+alias[trigger:num_of_states_owned_or_owned_by_non_sovereign_subjects_with] = {
+	alias_name[trigger] = alias_match_left[trigger]
+	value = int
 }
 
 
