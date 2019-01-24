@@ -20,7 +20,7 @@ types = {
 		path = "game/common/static_modifiers"
 		
 		localisation = {
-			## required
+			## optional
 			name = "$"
 		}
 	}

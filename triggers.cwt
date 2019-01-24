@@ -4158,6 +4158,10 @@ alias[trigger:has_reform] = <government_reform.new>
 
 ## scope = country
 ###Returns true if the country has the specified government reform.
+alias[trigger:has_reform] = <government_reform.basic>
+
+## scope = country
+###Returns true if the country has the specified government reform.
 alias[trigger:has_reform] = enum[legacy_reforms_with_no_new_equivalent]
 
 ## scope = country
