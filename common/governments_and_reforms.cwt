@@ -29,11 +29,10 @@ types = {
 		subtype[basic] = {
 			basic_reform = yes
 		}
+		## type_key_filter <> { republic_mechanic monarchy_mechanic theocracy_mechanic tribe_mechanic }
 		subtype[new] = {
 			## cardinality = 0..1
 			legacy_government = no
-			## cardinality = 0..1
-			basic_reform = no
 			localisation = {
 				## required
 				description = "$_desc"

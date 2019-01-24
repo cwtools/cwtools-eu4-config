@@ -1129,11 +1129,11 @@ alias[trigger:has_embargo_rivals] = bool
 alias[trigger:has_empty_adjacent_province] = yes
 
 ## scope = { country province }
-###Returns true if the country has estate X, of in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
+###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
 alias[trigger:has_estate] = <estate>
 
-## scope = { country province }
-###Returns true if the country has estate X, of in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
+## scope = { province }
+###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
 alias[trigger:has_estate] = bool
 
 ## scope = country
@@ -1876,15 +1876,19 @@ alias[trigger:is_capital] = bool
 ###Returns true if the province is a city, i.e. has a population of at least 1000.
 alias[trigger:is_city] = bool
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_claim] = <province_id>
 
-## scope = { country province }
+## scope = { country }
+###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
+alias[trigger:is_claim] = scope[province]
+
+## scope = { province }
 ###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_claim] = scope[any]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has a claim on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_claim] = enum[country_tags]
 
@@ -1916,19 +1920,19 @@ alias[trigger:is_colonial_nation_of] = enum[country_tags]
 ###Returns true if the province is a colony.
 alias[trigger:is_colony] = bool
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
 alias[trigger:is_core] = <province_id>
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
 alias[trigger:is_core] = scope[province]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
-alias[trigger:is_core] = scope[country]
+alias[trigger:is_core] = scope[any]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has a core on the province with the ID X. In province scope, returns true if the country X has a core on the province.
 alias[trigger:is_core] = enum[country_tags]
 
@@ -2199,20 +2203,20 @@ alias[trigger:is_papal_controller] = bool
 ###Returns true if the country/province is part of the HRE.
 alias[trigger:is_part_of_hre] = bool
 
-## scope = { country province }
-###Returns true if the province is a permanent claim of X.
-alias[trigger:is_permanent_claim] = scope[country]
+## scope = { province }
+###Returns true if the province is a permanent claim of X, or if country has a permanent claim on X.
+alias[trigger:is_permanent_claim] = scope[any]
 
-## scope = { country province }
-###Returns true if the province is a permanent claim of X.
+## scope = { province }
+###Returns true if the province is a permanent claim of X, or if country has a permanent claim on X.
 alias[trigger:is_permanent_claim] = enum[country_tags]
 
-## scope = { country province }
-###Returns true if the province is a permanent claim of X.
+## scope = { country }
+###Returns true if the province is a permanent claim of X, or if country has a permanent claim on X.
 alias[trigger:is_permanent_claim] = scope[province]
 
-## scope = { country province }
-###Returns true if the province is a permanent claim of X.
+## scope = { country }
+###Returns true if the province is a permanent claim of X, or if country has a permanent claim on X.
 alias[trigger:is_permanent_claim] = <province_id>
 
 ## scope = country
@@ -2295,15 +2299,19 @@ alias[trigger:is_sea] = bool
 ###Returns true if the province is in a state.
 alias[trigger:is_state] = bool
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a state core on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_state_core] = <province_id>
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a state core on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
-alias[trigger:is_state_core] = scope[country]
+alias[trigger:is_state_core] = scope[province]
 
-## scope = { country province }
+## scope = { province }
+###In country scope, returns true if the country has a state core on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
+alias[trigger:is_state_core] = scope[any]
+
+## scope = { province }
 ###In country scope, returns true if the country has a state core on the province with the ID X. In province scope, returns true if the specified country has a claim on the province.
 alias[trigger:is_state_core] = enum[country_tags]
 
@@ -2335,15 +2343,19 @@ alias[trigger:is_subject_of] = enum[country_tags]
 ###Returns true if the country is a subject of subject type.
 alias[trigger:is_subject_of_type] = <subject_type>
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the country has a territorial core on the province with the ID X. In province scope, returns true if the country X has a territorial core on the province.
 alias[trigger:is_territorial_core] = <province_id>
 
-## scope = { country province }
+## scope = { country }
+###In country scope, returns true if the country has a territorial core on the province with the ID X. In province scope, returns true if the country X has a territorial core on the province.
+alias[trigger:is_territorial_core] = scope[province]
+
+## scope = { province }
 ###In country scope, returns true if the country has a territorial core on the province with the ID X. In province scope, returns true if the country X has a territorial core on the province.
 alias[trigger:is_territorial_core] = scope[country]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the country has a territorial core on the province with the ID X. In province scope, returns true if the country X has a territorial core on the province.
 alias[trigger:is_territorial_core] = enum[country_tags]
 
@@ -3629,19 +3641,19 @@ alias[trigger:sailors] = int
 ###Returns true if the country has a sailor level of at least X%.
 alias[trigger:sailors_percentage] = float[0.0..1.0]
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = enum[country_tags]
 
-## scope = { country province }
+## scope = { country }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = scope[country]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = scope[province]
 
-## scope = { country province }
+## scope = { province }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = <province_id>
 
