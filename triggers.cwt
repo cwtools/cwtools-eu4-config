@@ -149,7 +149,7 @@ alias[trigger:army_size] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the total army size of the country is at least X% of its land force limit.
-alias[trigger:army_size_percentage] = float
+alias[trigger:army_size_percentage] = float[0.0..5.0]
 
 ## scope = country
 ###Returns true if the country's army size is at least the size of X times the army size of the specified country.
