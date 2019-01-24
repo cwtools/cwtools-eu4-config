@@ -5,8 +5,9 @@ types = {
 		localisation = {
 			## required
 			name = "$"
-			## required
-			desc = "desc_$"
+			#Both desc_ and _desc exist for different disasters, but as far as I can tell neither are used
+#			## required
+#			desc = "desc_$"
 		}
 	}
 }
