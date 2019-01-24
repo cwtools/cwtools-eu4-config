@@ -68,6 +68,9 @@ rnw_tiles = {
 	fantasy = yes
 
 	## cardinality = 0..1
+	do_not_rotate = yes
+
+	## cardinality = 0..1
 	unique = int
 
 	weight = int
