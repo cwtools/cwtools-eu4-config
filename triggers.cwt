@@ -314,7 +314,7 @@ alias[trigger:cavalry_in_province] = scope[country]
 ###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.
 alias[trigger:cavalry_in_province] = enum[country_tags]
 
-## scope = country
+## scope = { province country }
 ###Returns true if the specified variable is at least X.
 alias[trigger:check_variable] = {
 	## cardinality = 1..2
