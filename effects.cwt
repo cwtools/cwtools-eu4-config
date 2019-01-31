@@ -37,6 +37,14 @@ alias[effect:multiply_variable] = {
 }
 
 ## scope = any
+alias[effect:divide_variable] = {
+	## cardinality = 1..2
+	which = value[variable]
+	## cardinality = 0..1
+	value = float
+}
+
+## scope = any
 alias[effect:change_variable] = {
 	## cardinality = 1..2
 	which = value_set[variable]
