@@ -2,7 +2,6 @@
 .cwt config files for Europa Universalis IV
 
 To use these copy the contents of the config folder and place it in a folder called `.cwtools` in the folder you open in vscode.
-You'll also need to enable the `experimental_completion` setting.
 
 See https://github.com/tboby/cwtools/wiki/.cwt-config-file-guidance for guidance on the file format
 
