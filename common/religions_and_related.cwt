@@ -189,6 +189,10 @@ religion_group = {
 			## cardinality = 3..3
 			int[0..255]
 		}
+		color = {
+			## cardinality = 3..3
+			float[0.0..1.0]
+		}
 		## cardinality = 0..1
 		country = {
 			alias_name[modifier] = alias_match_left[modifier]
