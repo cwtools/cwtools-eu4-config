@@ -568,45 +568,38 @@ government_ranks = {
 government_name = {
 	subtype[default] = {
 		rank = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 	
 		ruler_male = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		ruler_female = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		consort_male  = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		consort_female = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		heir_male = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		heir_female = {
-			1 = localisation
-			2 = localisation
-			3 = localisation
+			## cardinality = 1..10
+			int[1..10] = localisation
 		}
 
 		government_reform = <government_reform.basic>
@@ -614,72 +607,44 @@ government_name = {
 	
 	subtype[!default] = {
 		rank = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		ruler_male = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		ruler_female = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		consort_male  = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		consort_female = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		heir_male = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 
 		## cardinality = 0..1
 		heir_female = {
-			## cardinality = 0..1
-			1 = localisation
-			## cardinality = 0..1
-			2 = localisation
-			## cardinality = 0..1
-			3 = localisation
+			## cardinality = 0..10
+			int[1..10] = localisation
 		}
 	}
 
