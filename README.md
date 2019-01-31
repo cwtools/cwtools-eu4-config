@@ -1,7 +1,7 @@
 # cwtools-eu4-config
 .cwt config files for Europa Universalis IV
 
-To use these copy the contents of the config folder and place it in a folder called `.cwtools` in the folder you open in vscode.
+To use these copy the contents of this repository and place it in a folder called `.cwtools` in the folder you open in vscode. E.g. if your mod is located at `Europa Universalis IV\mod\my_mod`, you would extract this folder into `Europa Universalis IV\mod\my_mod\.cwtools`.
 
 See https://github.com/tboby/cwtools/wiki/.cwt-config-file-guidance for guidance on the file format
 
