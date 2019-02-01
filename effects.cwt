@@ -2173,6 +2173,10 @@ alias[effect:add_permanent_province_modifier] = {
 alias[effect:add_province_triggered_modifier] = <province_triggered_modifier>
 
 ## scope = province
+alias[effect:remove_province_triggered_modifier] = <province_triggered_modifier>
+
+
+## scope = province
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.
 alias[effect:extend_province_modifier] = {
 	name = <event_modifier>
