@@ -13,7 +13,7 @@ types = {
 			## required
 			description = "$DESCR"
 		}
-			
+
 		subtype[land] = {
 			type = enum[land_unit_types]
 		}
@@ -43,5 +43,10 @@ unit_type = {
 		sprite_level = int
 		## cardinality = 0..1
 		trade_power = float
+	}
+
+	## replace_scope = { this = country root = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
