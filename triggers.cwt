@@ -4162,7 +4162,7 @@ alias[trigger:has_reform] = <government_reform.basic>
 
 ## scope = country
 ###Returns true if the country has the specified government reform.
-alias[trigger:has_reform] = enum[legacy_reforms_with_no_new_equivalent]
+alias[trigger:has_reform] = enum[hardcoded_legacy_only_governments]
 
 ## scope = country
 ###Returns true if the country has at least X army professionalism, or at least as much as the specified country.
