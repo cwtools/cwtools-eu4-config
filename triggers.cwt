@@ -4016,6 +4016,9 @@ alias[trigger:uses_syncretic_faiths] = bool
 alias[trigger:variable_arithmetic_trigger] = {
 	alias_name[trigger] = alias_match_left[trigger]
 
+	## cardinality = 0..1
+	custom_tooltip = localisation
+	
 	## cardinality = 0..inf
 	export_to_variable = {
 		enum[which_varname] = value_set[variable]
