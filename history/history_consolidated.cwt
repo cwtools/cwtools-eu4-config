@@ -106,7 +106,7 @@ diplomacy_history = {
 		## cardinality = 0..inf
 		dependency = {
 			#or can you have different stuff entered there? <subject_type> would make sense except they already have their own stuff
-			subject_type = tributary_state
+			subject_type = <subject_type>
 			first = enum[country_tags]
 			second = enum[country_tags]
 			start_date = date_field
