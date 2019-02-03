@@ -467,6 +467,10 @@ alias[trigger:controlled_by] = scope[any]
 ###Returns true if the province is controlled by X.
 alias[trigger:controlled_by] = enum[country_tags]
 
+## scope = province
+###Returns true if the province is controlled by X.
+alias[trigger:controlled_by] = <rebel_type>
+
 ## scope = country
 ###Returns true if the province with id X is controlled by the country.
 alias[trigger:controls] = <province_id>
@@ -3464,6 +3468,10 @@ alias[trigger:reform_desire] = float
 ###Returns true if the province is part of the region X.
 alias[trigger:region] = <region>
 
+## scope = province
+###Returns true if the province is part of the region X.
+alias[trigger:region] = scope[province]
+
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = <religion>
@@ -4016,6 +4024,9 @@ alias[trigger:uses_syncretic_faiths] = bool
 alias[trigger:variable_arithmetic_trigger] = {
 	alias_name[trigger] = alias_match_left[trigger]
 
+	## cardinality = 0..1
+	custom_tooltip = localisation
+	
 	## cardinality = 0..inf
 	export_to_variable = {
 		enum[which_varname] = value_set[variable]
@@ -4162,7 +4173,7 @@ alias[trigger:has_reform] = <government_reform.basic>
 
 ## scope = country
 ###Returns true if the country has the specified government reform.
-alias[trigger:has_reform] = enum[legacy_reforms_with_no_new_equivalent]
+alias[trigger:has_reform] = enum[hardcoded_legacy_only_governments]
 
 ## scope = country
 ###Returns true if the country has at least X army professionalism, or at least as much as the specified country.

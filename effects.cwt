@@ -252,7 +252,7 @@ alias[effect:add_absolutism] = int
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-alias[effect:add_legitimacy] = int
+alias[effect:add_legitimacy] = float
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
@@ -670,6 +670,7 @@ alias[effect:remove_advisor_by_category] = enum[power_categories]
 ###Adds the defined advisor to the current scope. Advisor types are found in /Europa Universalis IV/common/advisortypes/*.txt. Can utilise Event Scope Values for the culture and religion parameters. The name parameter can accept a saved name variable, see set_saved_name for more context.
 alias[effect:define_advisor] = {
 	type = <advisor_type>
+	## cardinality = 0..1
 	skill = int[1..5]
 	## cardinality = 0..1
 	name = localisation_synced
@@ -2171,6 +2172,10 @@ alias[effect:add_permanent_province_modifier] = {
 ## scope = province
 ###Adds a province triggered modifier to the current province scope.
 alias[effect:add_province_triggered_modifier] = <province_triggered_modifier>
+
+## scope = province
+alias[effect:remove_province_triggered_modifier] = <province_triggered_modifier>
+
 
 ## scope = province
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.

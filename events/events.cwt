@@ -32,12 +32,12 @@ event = {
 	subtype[hidden] = {
 		title = scalar
 		desc = scalar
-		picture = <sprite>		
+		picture = <sprite>
 		picture = enum[dlc_event_pictures]
 		picture = none
 	}
-	
-	
+
+
 	subtype[!hidden] = {
 		title = localisation
 		desc = localisation
@@ -55,10 +55,11 @@ event = {
 			}
 			picture = scalar #todo: until such a time as I know how to check this
 		}
-		
+
 	}
-	
+
 	## cardinality = 0..1
+	## severity = warning
 	hidden = yes
 
 	## cardinality = 0..1
@@ -85,7 +86,7 @@ event = {
 	## cardinality = 0..1
 	fire_only_once = bool
 
-	
+
 	subtype[!triggered] = {
 		mean_time_to_happen = {
 			enum[days_months_years] = int
@@ -99,7 +100,7 @@ event = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
-		
+
 	## cardinality = 0..1
 	is_mtth_scaled_to_size = float #todo: what does this do?
 
@@ -140,11 +141,11 @@ event = {
 
 		## cardinality = 0..inf
 		required_personality = <ruler_personality>
-		
+
 		## cardinality = 0..1
 		highlight = yes
 	}
-	
+
 	## cardinality = 0..1
 	after = {
 		alias_name[effect] = alias_match_left[effect]
