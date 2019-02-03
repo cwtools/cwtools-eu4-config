@@ -467,6 +467,10 @@ alias[trigger:controlled_by] = scope[any]
 ###Returns true if the province is controlled by X.
 alias[trigger:controlled_by] = enum[country_tags]
 
+## scope = province
+###Returns true if the province is controlled by X.
+alias[trigger:controlled_by] = <rebel_type>
+
 ## scope = country
 ###Returns true if the province with id X is controlled by the country.
 alias[trigger:controls] = <province_id>
@@ -3463,6 +3467,10 @@ alias[trigger:reform_desire] = float
 ## scope = province
 ###Returns true if the province is part of the region X.
 alias[trigger:region] = <region>
+
+## scope = province
+###Returns true if the province is part of the region X.
+alias[trigger:region] = scope[province]
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
