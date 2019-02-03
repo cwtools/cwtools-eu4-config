@@ -216,7 +216,7 @@ alias[effect:add_years_of_income] = float
 
 ## scope = country
 ###Adds ducats to the current scope. Can also subtract.
-alias[effect:add_treasury] = int
+alias[effect:add_treasury] = float
 
 ## scope = country
 ###Adds inflation to the current scope. Can also subtract.
