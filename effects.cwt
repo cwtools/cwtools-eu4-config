@@ -763,6 +763,8 @@ alias[effect:add_navy_tradition] = float
 ###Adds Army Professionalism to the current scope.
 alias[effect:add_army_professionalism] = float[-1.0..1.0]
 
+# Severity warning because M&T actually does use numbers above 1 million!
+## severity = warning
 ## scope = country
 ###Adds manpower to the current scope. 1 is equal to 1000 manpower.
 alias[effect:add_manpower] = float[-999.0..999.0] #I am assuming no one wants to add 1,000,000 manpower to a country
