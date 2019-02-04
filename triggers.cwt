@@ -2005,6 +2005,10 @@ alias[trigger:is_harmonizing_with] = scope[any]
 alias[trigger:is_harmonizing_with] = enum[country_tags]
 
 ## scope = country
+###Returns true if the country is currently harmonizing with the specified religion or religion group.
+alias[trigger:is_harmonizing_with] = <religion>
+
+## scope = country
 ###Returns true if the heir of the country is a general. Note: Proper localisation for the negation only with NOT = ...
 alias[trigger:is_heir_leader] = bool
 
