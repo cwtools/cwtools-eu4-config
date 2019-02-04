@@ -29,7 +29,7 @@ types = {
 		subtype[basic] = {
 			basic_reform = yes
 		}
-		## type_key_filter <> { defaults_reform }
+#		## type_key_filter <> defaults_reform
 		subtype[new] = {
 			## cardinality = 0..1
 			legacy_government = no
