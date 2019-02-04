@@ -253,7 +253,11 @@ alias[effect:add_absolutism] = int
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-alias[effect:add_legitimacy] = float
+alias[effect:add_legitimacy] = float[-100.0..-1.0]
+
+## scope = country
+###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
+alias[effect:add_legitimacy] = float[1.0..100.0]
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
