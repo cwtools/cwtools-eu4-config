@@ -22,6 +22,7 @@ alias[effect:enum[scripted_effect_params_dollar]] = {
 alias[effect:export_to_variable] = {
 	enum[which_varname] = value_set[variable]
 	value = enum[export_to_variable_data]
+	value = modifier:<modifier>
 	## cardinality = 0..1
 	who = scope[country]
 	## cardinality = 0..1
@@ -30,6 +31,14 @@ alias[effect:export_to_variable] = {
 
 ## scope = any
 alias[effect:multiply_variable] = {
+	## cardinality = 1..2
+	which = value[variable]
+	## cardinality = 0..1
+	value = float
+}
+
+## scope = any
+alias[effect:divide_variable] = {
 	## cardinality = 1..2
 	which = value[variable]
 	## cardinality = 0..1
@@ -208,7 +217,7 @@ alias[effect:add_years_of_income] = float
 
 ## scope = country
 ###Adds ducats to the current scope. Can also subtract.
-alias[effect:add_treasury] = int
+alias[effect:add_treasury] = float
 
 ## scope = country
 ###Adds inflation to the current scope. Can also subtract.
@@ -244,7 +253,11 @@ alias[effect:add_absolutism] = int
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-alias[effect:add_legitimacy] = int
+alias[effect:add_legitimacy] = float[-100.0..-1.0]
+
+## scope = country
+###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
+alias[effect:add_legitimacy] = float[1.0..100.0]
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
@@ -662,6 +675,7 @@ alias[effect:remove_advisor_by_category] = enum[power_categories]
 ###Adds the defined advisor to the current scope. Advisor types are found in /Europa Universalis IV/common/advisortypes/*.txt. Can utilise Event Scope Values for the culture and religion parameters. The name parameter can accept a saved name variable, see set_saved_name for more context.
 alias[effect:define_advisor] = {
 	type = <advisor_type>
+	## cardinality = 0..1
 	skill = int[1..5]
 	## cardinality = 0..1
 	name = localisation_synced
@@ -754,6 +768,8 @@ alias[effect:add_navy_tradition] = float
 ###Adds Army Professionalism to the current scope.
 alias[effect:add_army_professionalism] = float[-1.0..1.0]
 
+# Severity warning because M&T actually does use numbers above 1 million!
+## severity = warning
 ## scope = country
 ###Adds manpower to the current scope. 1 is equal to 1000 manpower.
 alias[effect:add_manpower] = float[-999.0..999.0] #I am assuming no one wants to add 1,000,000 manpower to a country
@@ -1216,6 +1232,14 @@ alias[effect:create_subject] = {
 	subject_type = <subject_type>
 	subject = scope[country]
 	subject = enum[country_tags]
+}
+
+## scope = country
+###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
+alias[effect:create_subject] = {
+	subject_type = <subject_type>
+	who = scope[country]
+	who = enum[country_tags]
 }
 
 ## scope = country
@@ -2163,6 +2187,10 @@ alias[effect:add_permanent_province_modifier] = {
 ## scope = province
 ###Adds a province triggered modifier to the current province scope.
 alias[effect:add_province_triggered_modifier] = <province_triggered_modifier>
+
+## scope = province
+alias[effect:remove_province_triggered_modifier] = <province_triggered_modifier>
+
 
 ## scope = province
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.

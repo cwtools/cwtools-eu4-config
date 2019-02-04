@@ -139,6 +139,7 @@ enums = {
 		states_general_mechanic
 		militarised_society
 		has_term_election
+		free_city
 	}
 	enum[monsoons] = {
 		severe_monsoon

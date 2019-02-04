@@ -1346,13 +1346,6 @@ alias[trigger:any_empty_neighbor_province] = {
 }
 
 
-## scope = province
-## push_scope = province
-###Scopes to one province among all provinces in the world. Avoid this if you can use something more specific.
-alias[trigger:any_province] = {
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
 
 ## scope = province
 ## push_scope = province
