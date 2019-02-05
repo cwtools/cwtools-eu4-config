@@ -125,7 +125,7 @@ alias[trigger:always] = bool
 
 ## scope = province
 ###Returns true if the province is part of the area X. Accepts province scope as target.
-alias[trigger:area] = <area>
+alias[trigger:area] = <area.used>
 
 ## scope = province
 ###Returns true if the province is part of the area X. Accepts province scope as target.
@@ -1098,7 +1098,7 @@ alias[trigger:has_discovered] = <province_id>
 #I wonder whether this works with all things that accept <province_id>
 ## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
-alias[trigger:has_discovered] = <area>
+alias[trigger:has_discovered] = <area.used>
 
 ## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
