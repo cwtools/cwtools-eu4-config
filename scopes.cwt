@@ -37,7 +37,7 @@ alias[effect:<province_id>] = {
 ## scope = { country province }
 ## push_scope = province
 ###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
-alias[effect:<area>] = {
+alias[effect:<area.used>] = {
 	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -117,7 +117,7 @@ alias[trigger:<province_id>] = {
 ## scope = { country province }
 ## push_scope = province
 ###Refers to the areas listed /Europa Universalis IV/map/areas.txt
-alias[trigger:<area>] = {
+alias[trigger:<area.used>] = {
 	## cardinality = 0..1
 	type = all
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1306,7 +1306,7 @@ alias[trigger:any_owned_province] = {
 }
 
 
-## scope = country
+## scope = { country province }
 ## push_scope = province
 ###Scopes to one province from among all provinces in the world. Avoid this if you can use something more specific.
 alias[trigger:any_province] = {

@@ -13,6 +13,12 @@ types = {
 	type[area] = {
 		path = "game/map"
 		path_file = "area.txt"
+
+		subtype[used] = {
+			## cardinality = 1..inf
+			scalar
+		}
+
 		localisation = {
 			## required
 			name = "$"
@@ -102,7 +108,7 @@ region = {
 	## cardinality = 0..1
 	areas = {
 		## cardinality = 1..inf
-		<area>
+		<area.used>
 	}
 
 	## cardinality = 0..inf	

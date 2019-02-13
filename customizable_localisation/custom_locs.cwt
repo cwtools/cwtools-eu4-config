@@ -17,6 +17,7 @@ custom_loc = {
 	text = {
 		localisation_key = scalar #localisation but only in correct language so turned off. Turn on to verify.
 
+		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
