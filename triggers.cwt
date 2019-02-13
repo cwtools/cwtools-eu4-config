@@ -3461,7 +3461,7 @@ alias[trigger:range] = enum[country_tags]
 alias[trigger:real_day_of_year] = int #todo: I assume this is wrong?
 
 ## scope = any
-###Returns true if the month of the year in reality is at least X (January ≙ 0)
+###Returns true if the month of the year in reality is at least X (January = 0)
 alias[trigger:real_month_of_year] = int
 
 ## scope = any
