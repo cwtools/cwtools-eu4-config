@@ -15,10 +15,13 @@ types = {
 		path = "game/common/ruler_personalities"
 		localisation = {
 			## required
+			## replace_scope = { root = country this = country }
 			name = "$"
 			## required
+			## replace_scope = { root = country this = country }
 			desc = "desc_$"
 			## required
+			## replace_scope = { root = country this = country }
 			death_message = "$_die_desc"
 		}
 	}
@@ -45,7 +48,7 @@ ruler_personality = {
 		allow = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-	
+
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		chance = {
@@ -60,14 +63,14 @@ ruler_personality = {
 		allow = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-	
+
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country }
 		chance = {
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
 	}
-	
+
 	## cardinality = 0..1
 	consort_allow = {
 		## cardinality = 0..1
@@ -88,19 +91,19 @@ ruler_personality = {
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	chance = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
-	
+
 	## cardinality = 0..1
 	custom_ai_explanation = localisation
-	
+
 	alias_name[modifier] = alias_match_left[modifier]
 	alias_name[personality_modifier] = alias_match_left[personality_modifier]
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	war_priority = {
@@ -113,7 +116,7 @@ ruler_personality = {
 	immortal = 1
 
 	## cardinality = 0..1
-	###Makes nation_designer_cost not scale with age etc. 
+	###Makes nation_designer_cost not scale with age etc.
 	static = yes
 }
 

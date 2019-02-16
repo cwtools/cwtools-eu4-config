@@ -12,8 +12,10 @@ types = {
 		localisation = {
 			subtype[fixed] = {
 				## required
+				## replace_scope = { root = country this = country }
 				name = "$_title"
 				## required
+				## replace_scope = { root = country this = country }
 				desc = "$_desc"
 			}
 		}
@@ -22,7 +24,7 @@ types = {
 
 mission_series = {
 	slot = int
-	
+
 	## cardinality = 0..1
 	###if a mission without generic = yes wants this slot then it overrides this.
 	generic = bool
@@ -39,7 +41,7 @@ mission_series = {
 		## cardinality = 0..inf
 		has_dlc = enum[DLCs]
 	}
-	
+
 	## replace_scope = { this = country root = country }
 	###These are triggers for the entire series
 	potential = {
@@ -75,7 +77,7 @@ mission_series = {
 
 		## cardinality = 0..1
 		position = int
-		
+
 		## cardinality = 0..1
 		## replace_scope = { this = country root = country }
 		ai_weight = {

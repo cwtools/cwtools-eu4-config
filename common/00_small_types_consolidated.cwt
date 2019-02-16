@@ -58,6 +58,7 @@ types = {
 		path = "game/common/insults"
 		localisation = {
 			## required
+			## replace_scope = { root = country this = country }
 			insult = "$"
 		}
 	}
@@ -124,7 +125,7 @@ types = {
 	}
 	type[power_projection] = {
 		path = "game/common/powerprojection"
-		
+
 		subtype[positive] = {
 			power = float[0.1..inf]
 		}
@@ -166,7 +167,7 @@ great_project = {
 	province = <province_id>
 	is_canal = yes
 	time = int
-	
+
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
@@ -176,7 +177,7 @@ great_project = {
 faction = {
 	monarch_power = enum[power_categories]
 	always = yes
-	
+
 	## cardinality = 0..1
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -237,9 +238,9 @@ natives = {
 		int[0..255]
 	}
 	icon = int
-	
+
 	unit = <unit_type>
-	
+
 	provinces = {
 		## cardinality = 1..inf
 		<province_id>
@@ -281,7 +282,7 @@ naval_doctrine = {
 	country_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	button_gfx = int
 }
 
@@ -297,15 +298,15 @@ policy = {
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	alias_name[modifier] = alias_match_left[modifier]
 
 	alias_name[ability] = alias_match_left[ability]
-	
+
 	## replace_scope = { this = country root = country }
 	ai_will_do = {
 		factor = float
-		alias_name[modifier_rule] = alias_match_left[modifier_rule]		
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }
 
@@ -321,9 +322,9 @@ professionalism_modifier = {
 	trigger = {
 		always = yes
 	}
-	
+
 	alias_name[modifier] = alias_match_left[modifier]
-	
+
 	## cardinality = 0..1
 	may_build_supply_depot = yes
 	## cardinality = 0..1
@@ -341,21 +342,21 @@ edict = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = country this = country }
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	color = {
 		## cardinality = 3..3
 		int[0..255
 	}
-	
+
 	## replace_scope = { root = province this = province }
 	##has to be around at least 10 to be picked (depends on maintenance cost and general economy)
 	ai_will_do = {
@@ -387,7 +388,7 @@ power_projection = {
 client_state = {
 	region = <region>
 
-	## cardinality = 1..inf	
+	## cardinality = 1..inf
 	name = {
 		name = localisation
 		## replace_scope = { this = province root = province from = country }
@@ -401,17 +402,17 @@ bookmark = {
 	name = localisation
 	desc = localisation
 	date = date_field
-	
+
 	## cardinality = 0..1
 	center = <province_id>
-	
+
 	#todo: presumably this can only be used once, ever
 	## cardinality = 0..1
 	default = yes
 
 	## cardinality = 0..12
 	country = enum[country_tags]
-	
+
 	## cardinality = 0..12
 	easy_country = enum[country_tags]
 }

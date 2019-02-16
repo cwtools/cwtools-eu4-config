@@ -5,8 +5,10 @@ types = {
 		skip_root_key = country_decisions
 		localisation = {
 			## required
+			## replace_scope = { root = country this = country }
 			name = "$_title"
 			## required
+			## replace_scope = { root = country this = country }
 			desc = "$_desc"
 		}
 	}
@@ -16,7 +18,7 @@ types = {
 decision = {
 	## cardinality = 0..1
 	major = yes
-	
+
 	## replace_scope = { root = country this = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -52,4 +54,4 @@ decision = {
 	## cardinality = 0..inf
 	do_not_core = <province_id>
 }
-	
+
