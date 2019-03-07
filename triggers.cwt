@@ -57,7 +57,7 @@ alias[trigger:accepted_culture] = scope[province]
 
 ## scope = country
 ###Returns true if X is the current mission of the country.
-alias[trigger:active_major_mission] = <mission.fixed> #todo
+alias[trigger:active_major_mission] = <mission> #todo
 
 ## scope = country
 ###Returns true if the country has a ruler with an administrative skill of at least X.
@@ -2476,7 +2476,7 @@ alias[trigger:land_morale] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the last mission of the country was the specified mission.
-alias[trigger:last_mission] = <mission.fixed>
+alias[trigger:last_mission] = <mission>
 
 ## scope = country
 ###Returns true if the country has at least X legitimacy, or if the country has at least as much legitimacy as the specified country.

@@ -134,7 +134,7 @@ alias[effect:country_event] = {
 alias[effect:add_country_modifier] = {
 	name = <event_modifier>
 	name = <static_modifier>
-	## cardinality = 0..1
+#	## cardinality = 0..1 #not having it means it lasts for one day!
 	###The number of days to add the country modifier for.
 	duration = int
 	## cardinality = 0..1
@@ -2162,7 +2162,7 @@ alias[effect:province_event] = {
 ###Adds an event modifier to the current province scope as a province modifier. Modifiers added with this effect are cleared automatically when the province changes ownership.
 alias[effect:add_province_modifier] = {
 	name = <event_modifier>
-	## cardinality = 0..1
+#	## cardinality = 0..1 #not having it means it lasts for one day!
 	duration = int
 	## cardinality = 0..1
 	hidden = yes

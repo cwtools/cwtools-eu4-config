@@ -3,21 +3,17 @@ types = {
 	type[mission_series] = {
 		path = "game/missions"
 	}
+	## type_key_filter <> { potential potential_on_load }
 	type[mission] = {
 		path = "game/missions"
 		skip_root_key = any
-		subtype[fixed] = {
-			icon = scalar
-		}
 		localisation = {
-			subtype[fixed] = {
-				## required
-				## replace_scope = { root = country this = country }
-				name = "$_title"
-				## required
-				## replace_scope = { root = country this = country }
-				desc = "$_desc"
-			}
+			## required
+			## replace_scope = { root = country this = country }
+			name = "$_title"
+			## required
+			## replace_scope = { root = country this = country }
+			desc = "$_desc"
 		}
 	}
 }
@@ -49,7 +45,7 @@ mission_series = {
 	}
 
 	## cardinality = 1..inf
-	<mission.fixed> = {
+	<mission> = {
 		icon = scalar #todo
 		required_missions = {
 			## cardinality = 0..inf
