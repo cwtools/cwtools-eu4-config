@@ -15,32 +15,38 @@ types = {
 
 disaster = {
 	## replace_scope = { root = country this = country }
+	###Determines whether the disaster is visible.
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## replace_scope = { root = country this = country }
+	###Determines whether the ticker from 0 to 100 will be enabled.
 	can_start = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## replace_scope = { root = country this = country }
+	###Determines when the ticker from 0 to 100 can be disabled once enabled.
 	can_stop = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## replace_scope = { root = country this = country }
+	###Determines when the disaster can end once it has started (i.e. after the ticker has reached 100).
 	can_end = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## replace_scope = { root = country this = country }
+	###Sets conditions for the disaster's prgress ticker to tick upwards.
 	progress = {
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
+	###Sets conditions for the disaster's prgress ticker to tick downwards.
 	down_progress = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
@@ -48,6 +54,7 @@ disaster = {
 	
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
+	###Modifier enabled for the country during the disaster.
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}	
@@ -55,17 +62,21 @@ disaster = {
 	## cardinality = 0..1
 	stability_hit_on_war = int[1..6]
 
+	###Event fired on the disaster's progress reaching 100 and the disaster officially starting.
 	on_start = <event.country>
 
 	## cardinality = 0..1
+	###Event fired when the disaster ends (after having officially started).
 	on_end = <event.country>
 	
 	## cardinality = 0..1
+	###Effects executed when the disaster reaches 100% progress and happens.
 	on_start_effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	
 	## cardinality = 0..1
+	###Events triggered monthly after the disaster has fired (i.e. between on_start and on_end).
 	on_monthly = {
 		## cardinality = 0..1
 		events = {
