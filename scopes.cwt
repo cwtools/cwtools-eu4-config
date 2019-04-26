@@ -894,7 +894,7 @@ alias[effect:random_trade_node_member_country] = {
 
 ## push_scope = province
 ## scope = trade_node
-###Scopes to all provinces in the current trade node.
+###Scopes to every province in the current trade node.
 alias[effect:every_trade_node_member_province] = {
 	## cardinality = 0..1
 	limit = {
@@ -1416,13 +1416,13 @@ alias[trigger:any_trade_node_member_country] = {
 
 ## push_scope = province
 ## scope = trade_node
-###Scopes to 'all provinces in the current trade node.
+###Scopes to all provinces in the current trade node.
 alias[trigger:all_trade_node_member_province] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
 ## push_scope = province
-## scope = trade_node
+## scope = province
 ###Scopes to one province in the current trade node.
 alias[trigger:any_trade_node_member_province] = {
 	alias_name[trigger] = alias_match_left[trigger]

@@ -294,10 +294,6 @@ alias[trigger:capital_distance] = {
 	distance = int
 }
 
-##region scope
-###Returns true if trade node capital is X.
-alias[trigger:capital_trade_node] = <province_id>
-
 ## scope = country
 ###Returns true if the ratio of the cavalry fraction to the army size of the country is at least X.
 alias[trigger:cavalry_fraction] = float[0.0..1.0]

@@ -406,7 +406,6 @@ country_history = {
 			birth_date = date_field
 			## cardinality = 0..1
 			death_date = date_field
-			## cardinality = 0..1
 			adm = int[0..6]
 			dip = int[0..6]
 			mil = int[0..6]
