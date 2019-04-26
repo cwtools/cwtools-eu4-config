@@ -3543,7 +3543,7 @@ alias[trigger:religious_school] = {
 
 ## scope = country
 ###Returns true if the country's religious unity is at least X.
-alias[trigger:religious_unity] = float
+alias[trigger:religious_unity] = float[0.0..1.0]
 
 ## scope = country
 ###Returns true if country's republican tradition is at least X.
