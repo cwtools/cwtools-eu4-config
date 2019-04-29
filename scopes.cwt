@@ -78,6 +78,9 @@ alias[effect:<superregion>] = {
 ## push_scope = province
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[effect:<continent>] = {
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
