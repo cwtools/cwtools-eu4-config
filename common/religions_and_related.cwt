@@ -143,6 +143,7 @@ religion_group = {
 	crusade_name = localisation
 
 	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
 	religious_schools = {
 		## cardinality = 0..inf
 		localisation = {
@@ -194,10 +195,12 @@ religion_group = {
 			float[0.0..1.0]
 		}
 		## cardinality = 0..1
+		## replace_scope = { root = country this = country }
 		country = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## cardinality = 0..1
+		## replace_scope = { root = country this = country }
 		country_as_secondary = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
@@ -264,6 +267,7 @@ religion_group = {
 		## cardinality = 0..1
 		orthodox_icons = {
 			## cardinality = 0..inf
+			## replace_scope = { root = country this = country }
 			localisation = {
 				alias_name[modifier] = alias_match_left[modifier]
 
@@ -366,7 +370,7 @@ religion_group = {
 }
 
 
-
+## replace_scope = { root = country this = country }
 personal_deity = {
 
 	alias_name[modifier] = alias_match_left[modifier]
@@ -432,6 +436,7 @@ religious_reform_group = {
 
 	#I don't think these are referred to from elsewhere
 	## cardinality = 5..5
+	## replace_scope = { root = country this = country }
 	localisation = {
 		alias_name[modifier] = alias_match_left[modifier]
 
@@ -453,6 +458,7 @@ aspects_and_blessings = {
 		cost = int
 	}
 	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
