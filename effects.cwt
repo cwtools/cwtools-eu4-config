@@ -2829,7 +2829,12 @@ alias[effect:define_exiled_ruler] = {
 }
 
 ## scope = province
-alias[effect:add_center_of_trade_level] = int[1..3]
+###Adds the specified amount to the province's center of trade levels. Cannot, however, make a province that is not a center of trade into one (use center_of_trade = 1)
+alias[effect:add_center_of_trade_level] = int[1..2]
+
+## scope = province
+###Makes the province a center of trade of the specified level.
+alias[effect:center_of_trade] = int[1..3]
 
 ## scope = province
 alias[effect:add_to_trade_company] = scope[country]
