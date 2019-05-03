@@ -1561,7 +1561,7 @@ alias[effect:convert_ruler_to_general] = int
 ###Adds an event modifier to the current scope as a ruler modifier. Ruler modifiers are cleared when the ruler dies.
 alias[effect:add_ruler_modifier] = {
 	name = <event_modifier>
-#	## cardinality = 0..1
+	## cardinality = 0..1
 	duration = int
 	## cardinality = 0..1
 	desc = localisation
@@ -2196,7 +2196,7 @@ alias[effect:remove_province_triggered_modifier] = <province_triggered_modifier>
 ###Extends the duration of an existing province modifier held by the current province scope. Modifiers added with this effect persist through ownership changes.
 alias[effect:extend_province_modifier] = {
 	name = <event_modifier>
-#	## cardinality = 0..1
+	## cardinality = 0..1
 	duration = int
 }
 
