@@ -8,6 +8,7 @@ types = {
 scripted_function = {
 	## cardinality = 0..1
 	condition = {
+		## cardinality = 0..1
 		tooltip = localisation
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
