@@ -5,7 +5,7 @@ types = {
 		path = "game/common/event_modifiers"
 		
 		subtype[not_flag] = {
-			## cardinality 1..inf
+			## cardinality = 1..inf
 			scalar = scalar
 		}
 		
