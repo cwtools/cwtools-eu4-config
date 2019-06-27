@@ -80,7 +80,7 @@ terrain = {
 	## cardinality = 0..1
 	color = {
 		## cardinality = 3..3
-		int[0..255
+		int[0..255]
 	}
 
 
