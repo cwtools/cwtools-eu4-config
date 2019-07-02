@@ -4424,7 +4424,7 @@ alias[trigger:is_reform_available] = <government_reform.new>
 ###Hmmm... -Caligula
 alias[trigger:has_government_attribute_short_desc] = locked_government_type
 
-## scope = province
+## scope = { province country }
 alias[trigger:num_of_centers_of_reformation] = {
 	religion = <religion>
 	count = int
