@@ -3649,6 +3649,10 @@ alias[trigger:sailors] = int
 ###Returns true if the country has a sailor level of at least X%.
 alias[trigger:sailors_percentage] = float[0.0..1.0]
 
+## scope = country
+###Returns true if the country has at least X maximum sailors.
+alias[trigger:max_sailors] = int
+
 ## scope = { country }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = enum[country_tags]
