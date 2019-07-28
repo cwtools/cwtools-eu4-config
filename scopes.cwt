@@ -1,0 +1,36 @@
+scopes = {
+    Country = {
+        aliases = { country }
+    }
+    Province = {
+        aliases = { province }
+    }
+    "Trade Node" = {
+        aliases = { trade_node tradenode }
+        is_subscope_of = { province }
+    }
+    Unit = {
+        aliases = { unit }
+    }
+    Monarch = {
+        aliases = { monarch }
+    }
+    Heir = {
+        aliases = { heir }
+    }
+    Consort = {
+        aliases = { consort }
+    }
+    "Rebel Faction" = {
+        aliases = { rebel_faction }
+    }
+    Religion = {
+        aliases = { religion }
+    }
+    Culture = {
+        aliases = { culture }
+    }
+    Advisor = {
+        aliases = { advisor }
+    }
+}
