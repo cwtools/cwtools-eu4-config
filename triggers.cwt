@@ -876,7 +876,7 @@ alias[trigger:government_rank] = int
 alias[trigger:grown_by_development] = int
 
 ## scope = country
-###Returns true if the country has a great power rank of X or worse. (Please tell Caligula if that is correct)
+###Returns true if the country has a great power rank of X or worse (i.e. great_power_rank will check if your rank is 2, 3 or anything except 1, including not in the top 8, i.e. use this trigger with NOT)
 alias[trigger:great_power_rank] = int
 
 ## scope = country
@@ -1230,7 +1230,7 @@ alias[trigger:has_global_modifier_value] = {
 alias[trigger:has_government_mechanic] = enum[government_mechanics]
 
 ## scope = country
-###Please tell Caligula and Dayshine if you know what this does and what values are accepted here.
+###No sure what this does and what values are accepted here, please report!
 alias[trigger:has_government_power] = unknown
 
 ## scope = country
