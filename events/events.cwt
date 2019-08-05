@@ -63,7 +63,7 @@ event = {
 	hidden = yes
 
 	## cardinality = 0..1
-	###Someone tell me what this does -Caligula
+	###If yes, every country will be notified which options are selected.
 	major = bool
 
 	## cardinality = 0..1
