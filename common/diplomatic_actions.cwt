@@ -40,7 +40,7 @@ diplomatic_action = {
 }
 
 
-#with only two examples, I don't have much to base this on - need more info! -Caligula
+#This is based on two examples, so may have inaccuracies - please report any you see.
 new_diplomatic_action = {
 	subtype[static_actions] = {
 		## cardinality = 1..inf

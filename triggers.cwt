@@ -1142,7 +1142,7 @@ alias[trigger:has_estate_influence_modifier] = {
 	estate = <estate>
 	modifier = localisation #todo: should check one that is defined somewhere (but can be done in any effect field). Localisation will cover it for now though.
 	## cardinality = 0..1
-	###What does this do? -Caligula
+	###Specify the value of influence the modifier has to contribute.
 	value = int
 }
 
@@ -1152,7 +1152,7 @@ alias[trigger:has_estate_loyalty_modifier] = {
 	estate = <estate>
 	modifier = localisation #todo: should check one that is defined somewhere (but can be done in any effect field). Localisation will cover it for now though.
 	## cardinality = 0..1
-	###What does this do? -Caligula
+	###Specify the value of loyalty the modifier has to contribute.
 	value = int
 }
 
@@ -1246,7 +1246,7 @@ alias[trigger:has_harmonized_with] = enum[religion_new_variables]
 alias[trigger:has_harmonized_with] = <religion_group>
 
 ## scope = province
-###Returns true if the province has harsh treatment (I presume -Caligula).
+###Returns true if the province has had harsh treatment used on it.
 alias[trigger:has_harsh_treatment] = bool
 
 ## scope = country
@@ -4233,6 +4233,7 @@ alias[trigger:is_in_important_war] = bool
 
 
 ## scope = country
+###Checks whether the country's government uses a specified attribute
 alias[trigger:has_government_attribute] = enum[government_attributes]
 
 ## scope = province
@@ -4425,8 +4426,8 @@ alias[trigger:is_reform_available] = <government_reform.new>
 
 
 ## scope = country
-###Hmmm... -Caligula
-alias[trigger:has_government_attribute_short_desc] = locked_government_type
+###Checks whether the country's government uses a specified attribute. Localised in short form.
+alias[trigger:has_government_attribute_short_desc] = enum[government_attributes]
 
 ## scope = { province country }
 alias[trigger:num_of_centers_of_reformation] = {
