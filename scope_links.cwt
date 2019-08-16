@@ -1098,7 +1098,7 @@ alias[trigger:all_coalition_member] = {
 }
 
 ## push_scope = country
-## scope = country
+## scope = { country province }
 ###Scopes to all countries in the world. Avoid this if you can use something more specific.
 alias[trigger:all_country] = {
 	alias_name[trigger] = alias_match_left[trigger]
