@@ -840,6 +840,8 @@ alias[effect:create_general] = {
 	## cardinality = 0..1
 	###Gives the general a random name from the specified culture.
 	culture = enum[country_tags]
+	## cardinality = 0..1
+	name = localisation_synced
 }
 
 ## scope = country
@@ -2467,6 +2469,13 @@ alias[effect:spawn_rebels] = {
 	use_heir_as_leader = yes
 	## cardinality = 0..1
 	use_consort_as_leader = yes
+	## cardinality = 0..1
+	separatists_target = scope[country]
+	## cardinality = 0..1
+	separatists_target = enum[country_tags]
+
+	## cardinality = 0..1
+	leader_dynasty = localisation_synced
 }
 
 ## scope = province
@@ -2971,3 +2980,10 @@ alias[effect:create_named_ship] = {
 ## scope = country
 ###Sets the native policy to the specified policy
 alias[effect:native_policy] = enum[native_policies]
+
+
+#1.28
+
+## scope = province
+###Applies the specified holy order to the province
+alias[effect:holy_order] = <holy_order>

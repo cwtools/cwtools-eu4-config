@@ -353,7 +353,6 @@ alias[effect:sea_zone] = {
 ###Refers to the area that the current province scope is in.
 alias[effect:area] = {
 	## cardinality = 0..1
-	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
@@ -1517,9 +1516,9 @@ alias[trigger:region_for_scope_province] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-#todo: this is probably for missions only
 ## scope = province
 ## push_scope = province
+###Scopes to all provinces in the same area as the current scope.
 alias[trigger:area_for_scope_province] = {
 	## cardinality = 0..1
 	type = all
@@ -1531,5 +1530,13 @@ alias[trigger:area_for_scope_province] = {
 ## push_scope = province
 alias[trigger:num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with] = {
 	value = int
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+
+## scope = province
+## push_scope = province
+###Scopes to the province the current province is expelling minorities to.
+alias[trigger:expulsion_target] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }

@@ -129,29 +129,5 @@ enums = {
 
 
 
-#triggers
-
-## scope = province
-###Checks if the listed holy order is present in the province
-alias[trigger:holy_order] = <holy_order>
-
-
-## scope = country
-###Checks if the country has a flagship (not a captured one)
-alias[trigger:has_flagship] = bool
-
-## scope = province
-alias[trigger:expelling_minorities] = bool
-
-## scope = province
-###Checks whether the trade node that the province is in has recently had a treasure ship pass through it. Only "yes" appears to do anything.
-alias[trigger:recent_treasure_ship_passage] = yes
-
-#effects
-
-## scope = province
-###Applies the specified holy order to the province
-alias[effect:holy_order] = <holy_order>
-
 
 
