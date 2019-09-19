@@ -66,7 +66,7 @@ game_age = {
 	
 	abilities = {
 		## cardinality = 1..inf
-		localisation = {
+		<game_age_ability> = {
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			allow = {

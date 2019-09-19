@@ -39,7 +39,7 @@ types = {
 			name = "$"
 		}
 	}
-	## type_key_filter <> { start trigger bonus }
+	## type_key_filter <> { ai_will_do }
 	type[native_advancement] = {
 		path = "game/common/native_advancements"
 		skip_root_key = any
@@ -79,7 +79,7 @@ idea_group = {
 	}
 	
 	## cardinality = 7..7
-	localisation = {
+	<idea> = {
 		alias_name[modifier] = alias_match_left[modifier]
 
 		alias_name[ability] = alias_match_left[ability]
@@ -102,7 +102,7 @@ native_advancement_group = {
 	category = enum[power_categories]
 	
 	## cardinality = 5..5
-	localisation = {
+	<native_advancement> = {
 		alias_name[modifier] = alias_match_left[modifier]
 		
 		alias_name[ability] = alias_match_left[ability]
