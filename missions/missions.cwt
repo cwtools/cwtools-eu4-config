@@ -4,12 +4,14 @@ types = {
 		path = "game/missions"
 	}
 	## type_key_filter <> { potential potential_on_load }
+	## graph_related_types = { }
 	type[mission] = {
 		path = "game/missions"
 		skip_root_key = any
 		localisation = {
 			## required
 			## replace_scope = { root = country this = country }
+			## primary
 			name = "$_title"
 			## required
 			## replace_scope = { root = country this = country }

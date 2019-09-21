@@ -156,7 +156,8 @@ enums = {
 		local_production_efficiency
 	}
 	complex_enum[graphical_cultures] = {
-		path = "game/common/graphicalculturetype.txt"
+		path = "game/common"
+		path_file = "graphicalculturetype.txt"
 		name = {
 			enum_name
 		}
