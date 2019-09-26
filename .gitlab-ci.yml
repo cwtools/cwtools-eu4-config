@@ -7,7 +7,8 @@ stages:
   - docs
 
 githubpages:
-    only: ci@tboby/cwtools-eu4-config
+    only:
+    - ci@tboby/cwtools-eu4-config
     stage: docs
     script:
     - cd ..
