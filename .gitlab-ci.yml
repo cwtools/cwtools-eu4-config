@@ -7,14 +7,21 @@ stages:
   - docs
 
 githubpages:
+    only: ci@tboby/cwtools-eu4-config
     stage: docs
     script:
     - cd ..
+    - git clone --depth 1 -b gh-pages https://tboby:$GITHUB_ACCESS_TOKEN@github.com/tboby/cwtools-eu4-config.git public
     - git clone https://www.github.com/tboby/cwtools
     - cd ./cwtools
     - git checkout htmldocs
     - cd ./CWToolsDocs
     - dotnet tool restore
     - dotnet run $CI_PROJECT_DIR
-    - cat output.html
-    - ls
+    - cp output.html $CI_PROJECT_DIR/../public/index.html
+    - cd $CI_PROJECT_DIR/../public
+    - git config user.email "th.boby@gmail.com"
+    - git config user.name "Thomas Boby"
+    - git add -A
+    - git commit -m "Build from $CI_SERVER_NAME $CI_PIPELINE_ID"
+    - git push
