@@ -1,0 +1,19 @@
+image: mcr.microsoft.com/dotnet/core/sdk:3.0
+
+variables:
+  DOCKER_DRIVER: overlay2
+
+stages:
+  - docs
+
+githubpages:
+    stage: docs
+    script:
+    - cd ..
+    - git clone https://www.github.com/tboby/cwtools
+    - cd ./cwtools
+    - git checkout htmldocs
+    - cd ./CWToolsDocs
+    - dotnet tool restore
+    - dotnet run $CI_PROJECT_DIR
+    - cat output.html
