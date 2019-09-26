@@ -17,3 +17,4 @@ githubpages:
     - dotnet tool restore
     - dotnet run $CI_PROJECT_DIR
     - cat output.html
+    - ls
