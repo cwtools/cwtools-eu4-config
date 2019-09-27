@@ -11,7 +11,7 @@ githubpages:
       variables:
       - $CI_PIPELINE_SOURCE == "schedules" && $CI_COMMIT_REF_NAME == "master"
       changes:
-      - "*"
+      - "**/*"
     stage: docs
     script:
     - cd ..
