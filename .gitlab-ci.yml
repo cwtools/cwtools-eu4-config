@@ -8,10 +8,10 @@ stages:
 
 githubpages:
     only:
+      variables:
+      - $CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_REF_NAME == "ci2"
       changes:
-      - "$CI_PROJECT_DIR/**/*.*"
-      refs:
-      - ci2
+      - "./**/*.*"
     stage: docs
     script:
     - cd ..
