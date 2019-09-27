@@ -11,6 +11,9 @@ githubpages:
     - master@tboby/cwtools-eu4-config
     only:
     - schedules
+    only:
+      changes:
+      - "*"
     stage: docs
     script:
     - cd ..
