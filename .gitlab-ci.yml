@@ -9,6 +9,7 @@ stages:
 githubpages:
     only:
     - master@tboby/cwtools-eu4-config
+    only:
     - schedules
     stage: docs
     script:
