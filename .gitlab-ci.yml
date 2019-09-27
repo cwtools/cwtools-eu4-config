@@ -9,7 +9,7 @@ stages:
 githubpages:
     only:
       changes:
-      - '**/*'
+      - ./**/*.*
       variables:
       - $CI_COMMIT_REF_NAME == "ci2"
     stage: docs
