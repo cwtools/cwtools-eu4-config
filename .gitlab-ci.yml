@@ -10,8 +10,6 @@ githubpages:
     only:
       variables:
       - $CI_PIPELINE_SOURCE == "schedule" && $CI_COMMIT_REF_NAME == "ci2"
-      changes:
-      - "./**/*.*"
     stage: docs
     script:
     - cd ..
