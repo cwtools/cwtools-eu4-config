@@ -22,7 +22,7 @@ scopes = {
         aliases = { consort }
     }
     "Rebel Faction" = {
-        aliases = { rebel_faction }
+        aliases = { rebel_faction rebelfaction }
     }
     Religion = {
         aliases = { religion }
