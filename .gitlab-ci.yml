@@ -8,15 +8,13 @@ stages:
 
 githubpages:
     only:
-    - ci@tboby/cwtools-eu4-config
+    - master@tboby/cwtools-eu4-config
     stage: docs
     script:
     - cd ..
     - git clone --depth 1 -b gh-pages https://tboby:$GITHUB_ACCESS_TOKEN@github.com/tboby/cwtools-eu4-config.git public
     - git clone https://www.github.com/tboby/cwtools
-    - cd ./cwtools
-    - git checkout htmldocs
-    - cd ./CWToolsDocs
+    - cd ./cwtools/CWToolsDocs
     - dotnet tool restore
     - dotnet run $CI_PROJECT_DIR
     - cp output.html $CI_PROJECT_DIR/../public/index.html
