@@ -9,9 +9,9 @@ stages:
 githubpages:
     only:
       changes:
-      - ./**/*.*
-      variables:
-      - $CI_COMMIT_REF_NAME == "ci2"
+      - "$CI_PROJECT_DIR/**/*.*"
+      refs:
+      - ci2
     stage: docs
     script:
     - cd ..
