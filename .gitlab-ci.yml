@@ -8,12 +8,10 @@ stages:
 
 githubpages:
     only:
-      refs:
-      - schedules
       changes:
       - '**/*'
       variables:
-      - $CI_COMMIT_REF_NAME == "master"
+      - $CI_COMMIT_REF_NAME == "ci2"
     stage: docs
     script:
     - cd ..
