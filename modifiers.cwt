@@ -283,6 +283,12 @@ modifiers = {
 	dip_tech_cost_modifier = country
 	mil_tech_cost_modifier = country
 	adm_tech_cost_modifier = country
+	clergy_loyalty_modifier = country
+	clergy_influence_modifier = country
+	burghers_loyalty_modifier = country
+	burghers_influence_modifier = country
+	nobles_loyalty_modifier = country
+	nobles_influence_modifier = country
 }
 #These are the ones missed by the wiki
 
@@ -336,3 +342,21 @@ alias[modifier:power_projection_from_insults] = int
 alias[modifier:local_religious_unity_contribution] = float
 
 #mr_<faction>_influence
+
+## scope = country
+alias[modifier:country_admin_power] = int
+
+## scope = country
+alias[modifier:country_diplomatic_power] = int
+
+## scope = country
+alias[modifier:country_military_power] = int
+
+## scope = country
+alias[modifier:stability_cost_to_declare_war] = int
+
+## scope = country
+alias[modifier:global_heathen_missionary_strength] = float
+
+## scope = country
+alias[modifier:max_revolutionary_zeal] = int

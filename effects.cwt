@@ -800,11 +800,19 @@ alias[effect:create_admiral] = {
 
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
-alias[effect:create_explorer] = int
+alias[effect:create_explorer] = {
+	## cardinality = 0..1
+	name = value[saved_name]
+	tradition = int
+}
 
 ## scope = country
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.
-alias[effect:create_conquistador] = int
+alias[effect:create_conquistador]  = {
+	## cardinality = 0..1
+	name = value[saved_name]
+	tradition = int
+}
 
 ## scope = country
 ###Generates an new general for the current scope.
@@ -2813,10 +2821,6 @@ alias[effect:<unit_type>] = enum[country_tags]
 #Stuff missing from the wiki
 
 ## scope = country
-###Sets legacy (pre-Dharma) govt for the current scope.
-alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn't work, can use the key in governments instead
-
-## scope = country
 alias[effect:define_exiled_ruler] = {
 	exiled_as = value_set[exiled_ruler]
 	## cardinality = 0..1
@@ -2987,3 +2991,56 @@ alias[effect:native_policy] = enum[native_policies]
 ## scope = province
 ###Applies the specified holy order to the province
 alias[effect:holy_order] = <holy_order>
+
+#1.30
+
+## scope = country
+### Restores the original country name
+alias[effect:restore_country_name] = bool
+
+## scope = country
+### Renames the country but tag remains the same
+alias[effect:override_country_name] = localisation
+
+## scope = country
+alias[effect:add_revolutionary_zeal] = int
+
+## scope = country
+alias[effect:add_years_of_estate_land_income] = float
+
+## scope = country
+alias[effect:kill_mercenary_leader] = this
+
+## scope = province
+alias[effect:set_revolution_in_province] = yes
+
+## scope = country
+alias[effect:create_succession_crisis] = {
+	attacker = scope[country]
+	defender = scope[country]
+	target = scope[country]
+}
+
+## scope = country
+alias[effect:support_independence_of] = scope[country]
+
+## scope = country
+alias[effect:add_power_projection] = {
+	type = <static_modifier>
+	amount = int
+}
+
+## scope = country
+alias[effect:join_trade_league] = scope[country]
+
+## scope = country
+alias[effect:transfer_trade_power] = scope[country]
+
+## scope = country
+alias[effect:add_rival] = scope[country]
+
+## scope = country
+alias[effect:remove_rival] = scope[country]
+
+## scope = country
+alias[effect:use_monarch_as_leader] = yes

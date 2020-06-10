@@ -4521,3 +4521,32 @@ alias[trigger:recent_treasure_ship_passage] = yes
 ## scope = province
 ###Checks whether the province is getting an expelled minority
 alias[trigger:province_getting_expelled_minority] = bool
+
+#1.30
+
+## scope = country 
+num_of_owned_areas = 1
+
+## scope = province
+is_revolution_center = yes
+
+## scope = country
+alias[trigger:is_defender_of_faith_of_tier] = int
+
+## scope = country
+alias[trigger:has_won_war_against] = {
+	who = scope[country]
+	max_years_since = int
+}	
+
+##scope = country
+alias[trigger:uses_revolutionary_zeal] = bool
+
+##scope = country
+alias[trigger:revolutionary_zeal] = int
+
+## scope = province
+alias[trigger:highest_supply_limit_in_area] = bool
+
+## scope = country
+alias[trigger:is_revolutionary_republic_trigger] = bool

@@ -77,6 +77,7 @@ enums = {
 		"Dharma - Hindu Unit Pack"
 		"Women in History"
 		"Golden Century"
+		"Emperor"
 	}
 	enum[key_name] = {
 		key
