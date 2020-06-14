@@ -45,15 +45,15 @@ enums = {
 	enum[construction_types] = {
 		core
 		culture
+		colonist
 		building
-		merchant
-		diplomat
 		missionary
 		army
 		navy
 		canal
 		great_project
 		siberian
+		any
 	}
 	enum[DLCs] = { #todo
 		"Rights of Man"
@@ -77,6 +77,7 @@ enums = {
 		"Dharma - Hindu Unit Pack"
 		"Women in History"
 		"Golden Century"
+		"Emperor"
 	}
 	enum[key_name] = {
 		key
@@ -183,5 +184,13 @@ enums = {
 		tribal_democracy_legacy
 		noble_republic
 		bureaucratic_despotism
+	}
+	enum[interest_modifier_fixed_interest] = {
+		interest_modifier
+		fixed_interest
+	}
+	enum[any_all] = {
+		any
+		all
 	}
 }

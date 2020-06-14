@@ -6,6 +6,11 @@ types = {
 
 		path = "game/events"
 
+		localisation = {
+			## primary
+			title = title
+		}
+		
 		## type_key_filter = country_event
 		## push_scope = country
 		subtype[country] = {
@@ -42,6 +47,15 @@ event = {
 	subtype[!hidden] = {
 		title = localisation
 		desc = localisation
+
+		## cardinality = 0..1
+		goto = <province_id>
+		## cardinality = 0..1
+		goto = value[event_target]
+		## cardinality = 0..1
+		goto = root
+		## cardinality = 0..1
+		goto = from
 
 		desc = {
 			trigger = {
@@ -124,6 +138,15 @@ event = {
 		subtype[!hidden] = {
 			## severity = warning
 			name = localisation
+
+			## cardinality = 0..1
+			goto = <province_id>
+			## cardinality = 0..1
+			goto = value[event_target]
+			## cardinality = 0..1
+			goto = root
+			## cardinality = 0..1
+			goto = from
 		}
 
 		## cardinality = 0..1

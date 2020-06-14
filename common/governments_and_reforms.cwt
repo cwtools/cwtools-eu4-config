@@ -128,6 +128,8 @@ government_reform = {
 		force_admiral_leader = bool
 		admirals_become_rulers = bool
 		generals_become_rulers = bool
+		uses_revolutionary_zeal = bool
+		revolutionary = bool
 		disallowed_trade_goods = {
 			## cardinality = 0..inf
 			<trade_good>
@@ -191,6 +193,8 @@ government_reform = {
 		different_religion_acceptance = int
 		## cardinality = 0..1
 		different_religion_group_acceptance = int
+		## cardinality = 0..1
+		uses_revolutionary_zeal = bool
 	
 		## cardinality = 0..1
 		election_on_death = bool
@@ -232,6 +236,8 @@ government_reform = {
 		## cardinality = 0..1
 		allow_vassal_alliance = bool
 	
+		## cardinality = 0..1
+		revolutionary = bool
 
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1

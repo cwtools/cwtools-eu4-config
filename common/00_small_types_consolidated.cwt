@@ -58,7 +58,6 @@ types = {
 		path = "game/common/insults"
 		localisation = {
 			## required
-			## replace_scope = { root = country this = country }
 			insult = "$"
 		}
 	}
@@ -123,7 +122,7 @@ types = {
 			name = "$"
 		}
 	}
-	type[power_projection] = {
+	type[power_projection_modifier] = {
 		path = "game/common/powerprojection"
 
 		subtype[positive] = {
@@ -158,6 +157,34 @@ types = {
 		path = "game/common/province_names"
 		name_from_file = yes
 		type_per_file = yes
+	}
+	type[achievement] = {
+		path = "game/common"
+		path_file = "achievements.txt"
+	}
+}
+
+
+
+achievement = {
+	id = int
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	visible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	possible = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = country this = province }
+	provinces_to_highlight = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## replace_scope = { root = country this = country }
+	happened = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 
@@ -434,6 +461,12 @@ region_colors = {
 }
 
 province_names = {
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<province_id> = scalar #todo: name
+	## cardinality = 0..inf
+	<province_id> = {
+		## cardinality = 1..2
+		scalar #todo: name
+	}
 }
+

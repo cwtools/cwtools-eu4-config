@@ -300,6 +300,35 @@ types = {
 		subtype[on_flagship_destroyed] = { }
         ## type_key_filter = on_country_released
 		subtype[on_country_released] = { }
+        ## type_key_filter = on_trade_good_changed
+		subtype[on_trade_good_changed] = { }
+        ## type_key_filter = on_loan_repaid
+		subtype[on_loan_repaid] = { }
+        ## type_key_filter = on_rebels_break_country
+		subtype[on_rebels_break_country] = { }
+        ## type_key_filter = on_pre_adm_advisor_fired
+		subtype[on_pre_adm_advisor_fired] = { }
+        ## type_key_filter = on_pre_dip_advisor_fired
+		subtype[on_pre_dip_advisor_fired] = { }
+        ## type_key_filter = on_pre_mil_advisor_fired
+		subtype[on_pre_mil_advisor_fired] = { }
+        ## type_key_filter = on_post_adm_advisor_fired
+		subtype[on_post_adm_advisor_fired] = { }
+        ## type_key_filter = on_post_dip_advisor_fired
+		subtype[on_post_dip_advisor_fired] = { }
+        ## type_key_filter = on_post_mil_advisor_fired
+		subtype[on_post_mil_advisor_fired] = { }
+        ## type_key_filter = on_embrace_revolution
+		subtype[on_embrace_revolution] = { }
+        ## type_key_filter = on_emperor_elected
+		subtype[on_emperor_elected] = { }
+        ## type_key_filter = on_create_client_state
+		subtype[on_create_client_state] = { }
+        ## type_key_filter = on_change_revolution_target
+		subtype[on_change_revolution_target] = { }
+        ## type_key_filter = on_golden_bull_enacted
+		subtype[on_golden_bull_enacted] = { }
+		
 	}
 }
 on_action = {
@@ -2797,6 +2826,244 @@ on_action = {
 	}
     ## replace_scope = { root = country this = country from = country }
     subtype[on_country_released] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = province this = province from = country }
+    subtype[on_trade_good_changed] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.province>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.province>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_loan_repaid] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_rebels_break_country] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_pre_adm_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_pre_dip_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_pre_mil_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_post_adm_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_post_dip_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_post_mil_advisor_fired] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_embrace_revolution] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_emperor_elected] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_create_client_state] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = country this = country }
+    subtype[on_golden_bull_enacted] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+    ## replace_scope = { root = province this = country from = country }
+    subtype[on_conquest] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf

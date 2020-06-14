@@ -71,14 +71,14 @@ country_file = {
 	colonial_parent = enum[country_tags]
 	
 	## cardinality = 0..1
-	###What does this do? Vanilla comment is: Excludes them from random countries, makes sure they only can be spawned once
+	###Jan Mayen tag: Excludes them from random countries, makes sure they only can be spawned once
 	right_to_bear_arms = yes
 	
 	## cardinality = 0..1
 	special_unit_culture = south_east_asian_special
 
 	## cardinality = 0..1
-	###What does this do? Vanilla comment is: Excludes them from random countries, makes sure they only can be spawned once
+	###Synthetics tag: Excludes them from random countries, makes sure they only can be spawned once
 	all_your_core_are_belong_to_us = yes
 
 	color = {
@@ -89,7 +89,7 @@ country_file = {
 	## cardinality = 0..1
 	revolutionary_colors = {
 		## cardinality = 3..3
-		int[0..255]
+		int[0..16]
 	}
 
 	#usually needed but the "specials" survive without
