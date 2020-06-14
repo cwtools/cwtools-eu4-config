@@ -3044,3 +3044,9 @@ alias[effect:remove_rival] = scope[country]
 
 ## scope = country
 alias[effect:use_monarch_as_leader] = yes
+
+## scope = emperor
+alias[effect:set_impirial_incident] = <impirial_incident>
+
+## scope = country
+alias[effect:restore_country_name_effect] = yes

@@ -4525,10 +4525,10 @@ alias[trigger:province_getting_expelled_minority] = bool
 #1.30
 
 ## scope = country 
-num_of_owned_areas = 1
+alias[trigger:num_of_owned_areas] = int
 
 ## scope = province
-is_revolution_center = yes
+alias[trigger:is_revolution_center] = bool
 
 ## scope = country
 alias[trigger:is_defender_of_faith_of_tier] = int
@@ -4549,4 +4549,24 @@ alias[trigger:revolutionary_zeal] = int
 alias[trigger:highest_supply_limit_in_area] = bool
 
 ## scope = country
+alias[trigger:is_revolutionary] = bool
+
+
+## scope = country
 alias[trigger:is_revolutionary_republic_trigger] = bool
+
+## scope = province
+alias[trigger:has_revolution_in_province] = bool
+
+## scope = country
+alias[trigger:revolution_spread] = float
+
+## scope = any
+alias[trigger:imperial_reform] = <imperial_reform>
+
+## scope = any
+alias[trigger:active_imperial_incident] = any
+
+
+## scope = any
+alias[trigger:active_imperial_incident] = <imperial_incident>

@@ -360,3 +360,9 @@ alias[modifier:global_heathen_missionary_strength] = float
 
 ## scope = country
 alias[modifier:max_revolutionary_zeal] = int
+
+## scope = country
+alias[modifier:mercenary_manpower] = float
+
+## scope = country
+alias[modifier:governing_capacity_modifier] = float
