@@ -4577,59 +4577,6 @@ alias[trigger:recent_treasure_ship_passage] = yes
 # alias[trigger:province_getting_expelled_minority] = bool
 
 ## scope = province
-<<<<<<< HEAD
-###Checks whether the province is getting an expelled minority
-alias[trigger:province_getting_expelled_minority] = bool
-
-#1.30
-
-## scope = country 
-alias[trigger:num_of_owned_areas] = int
-
-## scope = province
-alias[trigger:is_revolution_center] = bool
-
-## scope = country
-alias[trigger:is_defender_of_faith_of_tier] = int
-
-## scope = country
-alias[trigger:has_won_war_against] = {
-	who = scope[country]
-	max_years_since = int
-}	
-
-##scope = country
-alias[trigger:uses_revolutionary_zeal] = bool
-
-##scope = country
-alias[trigger:revolutionary_zeal] = int
-
-## scope = province
-alias[trigger:highest_supply_limit_in_area] = bool
-
-## scope = country
-alias[trigger:is_revolutionary] = bool
-
-
-## scope = country
-alias[trigger:is_revolutionary_republic_trigger] = bool
-
-## scope = province
-alias[trigger:has_revolution_in_province] = bool
-
-## scope = country
-alias[trigger:revolution_spread] = float
-
-## scope = any
-alias[trigger:imperial_reform] = <imperial_reform>
-
-## scope = any
-alias[trigger:active_imperial_incident] = any
-
-
-## scope = any
-alias[trigger:active_imperial_incident] = <imperial_incident>
-=======
 ###Checks whether the province is owned by a colonial nation
 alias[trigger:owner_is_colonial_nation] = bool
 
@@ -4679,4 +4626,3 @@ alias[trigger:expelled_different_minorities] = int
 ## scope = country
 ###Checks whether a country has any non-generic missions.
 alias[trigger:has_non_generic_missions] = bool
->>>>>>> 0ad0affa54d6d5180e5ab5c0d9703e4d2664b8cc

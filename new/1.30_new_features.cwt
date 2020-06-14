@@ -17,17 +17,6 @@ types = {
 			desc = "$_DESC"
 		}
 	}
-	type[imperial_incident] = {
-		path = "game/common/imperial_incidents"
-		localisation = {
-			## required
-			name = "$"
-			## required
-			emperor_alert = "$_emperor_alert"
-			## required
-			member_alert = "$_member_alert"
-		}
-	}
 	type[center_of_revolution_conversion] = {
 		path = "game/common/revolution"
 	}

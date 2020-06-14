@@ -837,11 +837,6 @@ alias[effect:create_admiral] = {
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_explorer] = {
-<<<<<<< HEAD
-	## cardinality = 0..1
-	name = value[saved_name]
-	tradition = int
-=======
 	tradition = int
 	## cardinality = 0..1
 	###Added to randomly generated value
@@ -875,17 +870,10 @@ alias[effect:create_explorer] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
->>>>>>> 0ad0affa54d6d5180e5ab5c0d9703e4d2664b8cc
 }
 
 ## scope = country
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.
-<<<<<<< HEAD
-alias[effect:create_conquistador]  = {
-	## cardinality = 0..1
-	name = value[saved_name]
-	tradition = int
-=======
 alias[effect:create_conquistador] = {
 	tradition = int
 	## cardinality = 0..1
@@ -920,7 +908,6 @@ alias[effect:create_conquistador] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
->>>>>>> 0ad0affa54d6d5180e5ab5c0d9703e4d2664b8cc
 }
 
 ## scope = country
