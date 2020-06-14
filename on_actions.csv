@@ -147,3 +147,14 @@ on_hre_province_reconquest,root = province this = province,province
 ,,
 on_battle_won_unit,root = unit this = unit,
 on_battle_lost_unit,root = unit this = unit,
+on_trade_good_changed,root = province this = province from = country,province
+on_rebels_break_country,root = country this = country,country
+on_pre_adm_advisor_fired,root = country this = country,country
+on_pre_dip_advisor_fired,root = country this = country,country
+on_pre_mil_advisor_fired,root = country this = country,country
+on_post_adm_advisor_fired,root = country this = country,country
+on_post_dip_advisor_fired,root = country this = country,country
+on_post_mil_advisor_fired,root = country this = country,country
+on_embrace_revolution,root = country this = country,country
+on_dismantle_revolution,root = country this = country from = country,country
+on_emperor_elected,root = country this = country from = country,country

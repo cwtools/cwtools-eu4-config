@@ -15,6 +15,15 @@ types = {
 		subtype[emperor] = {
 			emperor = scalar
 		}
+		subtype[province] = {
+			province = scalar
+		}
+		subtype[emperor_per_prince] = {
+			emperor_per_prince = scalar
+		}
+		subtype[elector_per_prince] = {
+			elector_per_prince = scalar
+		}
 
 		localisation = {
 			## required
@@ -33,6 +42,18 @@ types = {
 				## optional
 				emperor_desc = "desc_$_emperor"
 			}
+			subtype[province] = {
+				## required
+				province = "$_province"
+			}
+			subtype[emperor_per_prince] = {
+				## required
+				emperor_per_prince = "$_emperor_per_prince"
+			}
+			subtype[elector_per_prince] = {
+				## required
+				elector_per_prince = "$_elector_per_prince"
+			}
 		}
 	}
 }
@@ -40,9 +61,36 @@ types = {
 imperial_reform = {
 	subtype[hre] = {
 		empire = hre
+		## cardinality = 0..1
+		required_reform = <imperial_reform.hre>
+		## cardinality = 0..1
+		disabled_by = <imperial_reform.hre>
+		gui_container = mainline
+		gui_container = left_branch
+		gui_container = right_branch
+		
+		## cardinality = 0..1
+		## push_scope = province
+		province = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		emperor_per_prince = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		elector_per_prince = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	}
 	subtype[china] = {
 		empire = celestial_empire
+		## cardinality = 0..1
+		required_reform = <imperial_reform.china>
 	}
 
 	## cardinality = 0..1

@@ -4,6 +4,11 @@
 ###Checks the development of a certain category of provinces owned by the country. Can use crown_land, inverse_crown_land and estate as parameters (with the last of those, specify which estate using estate = <estate>)
 alias[trigger:development_in_provinces] = {
 	value = int
+	value = crown_land
+	value = inverse_crown_land
+	value = estate
+	## cardinality = 0..1
+	estate = <estate>
 	alias_name[trigger] = alias_match_left[trigger]
 }
 

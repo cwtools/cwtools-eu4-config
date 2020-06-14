@@ -95,6 +95,9 @@ casus_belli = {
 	}
 	
 	## cardinality = 0..1
+	call_empire_members = yes
+
+	## cardinality = 0..1
 	months = int
 
 	## cardinality = 0..1

@@ -1,3 +1,4 @@
+
 scopes = {
     Country = {
         aliases = { country }
@@ -21,6 +22,9 @@ scopes = {
     Consort = {
         aliases = { consort }
     }
+    "Mercenary Company" = {
+        aliases = { mercenary_company }
+    }
     "Rebel Faction" = {
         aliases = { rebel_faction rebelfaction }
     }
@@ -33,4 +37,10 @@ scopes = {
     Advisor = {
         aliases = { advisor }
     }
+	Leader = {
+		aliases = { leader }
+	}
+	"Trade Company" = {
+		aliases = { trade_company }
+	}
 }
