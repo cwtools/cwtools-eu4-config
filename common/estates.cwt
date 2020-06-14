@@ -2,6 +2,52 @@
 types = {
 	type[estate] = {
 		path = "game/common/estates"
+		path_strict = yes
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
+	type[estate_privilege] = {
+		path = "game/common/estate_privileges"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
+	}
+	type[estate_agenda] = {
+		path = "game/common/estate_agendas"
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
+	}
+	type[estate_modifier] = {
+		path = "game/common/estates_preload"
+		skip_root_key = any
+		name_field = "key"
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
+	## type_key_filter = interaction
+	type[estate_interaction] = {
+		path = "game/common/estate_crown_land"
+		name_field = "key"
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
+	## type_key_filter = bonus
+	type[estate_crown_land_bonus] = {
+		path = "game/common/estate_crown_land"
+		name_field = "key"
 		localisation = {
 			## required
 			name = "$"
@@ -17,10 +63,6 @@ estate = {
 	}
 
 	## cardinality = 0..1
-	###Estate will always be removed when conquered by a different religion than previous owner
-	always_remove_on_religious_conquest = yes
-	
-	## cardinality = 0..1
 	independence_government = <government>
 	## cardinality = 0..1
 	starting_reform = <government_reform>
@@ -34,38 +76,12 @@ estate = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
-	## cardinality = 0..1
-	###Giving territory affects power this much compared to base
-	territory_power_modifier = float
-
-	###Is estate kept in control of province on conquest?
-	keep_on_conquest = bool
-
 	###If true, country will get estate
 	##replace_scope = { this = country root = country }
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
-	###If true, province can be granted to estate
-	##replace_scope = { this = province root = province }
-	province_trigger = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-
-	###Is used to weigh importance compared to other estates
-	start_territory_weight = int
-	
-	## cardinality = 0..1
-	min_territory = float
-
-	###Min autonomy in estate provinces
-	min_autonomy = int[0..100]
-	
-	## cardinality = 0..inf
-	###Estate cancels out the following multiplicative local autonomy effects:
-	autonomy_does_not_affect = enum[local_autonomy_modifier]
-
 	###These scale with loyalty & power
 	country_modifier_happy = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -77,20 +93,7 @@ estate = {
 	###These scale with loyalty & power
 	country_modifier_angry = {
 		alias_name[modifier] = alias_match_left[modifier]
-	}	
-	
-	###These do not scale, but only applied in provinces owned by the estate
-	province_modifier_happy = {
-		alias_name[modifier] = alias_match_left[modifier]	
 	}
-	###These do not scale, but only applied in provinces owned by the estate
-	province_modifier_neutral = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}
-	###These do not scale, but only applied in provinces owned by the estate
-	province_modifier_angry = {
-		alias_name[modifier] = alias_match_left[modifier]
-	}	
 	
 	base_influence = int
 
@@ -114,23 +117,6 @@ estate = {
 		loyalty = int[-100..100]
 	}
 	
-	##replace_scope = { this = province root = province }
-	###For province assignment
-	ai_grant_province = {
-		factor = float
-		alias_name[modifier_rule] = alias_match_left[modifier_rule]
-	}
-	
-	## cardinality = 0..inf
-	###Does the AI want to give any extra territory beyond the minimum?
-	ai_territory_modifier = {
-		##replace_scope = { this = country root = country }
-		trigger = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}	
-		value = int		
-	}
-	
 	## cardinality = 0..inf
 	custom_name = {
 		desc = localisation
@@ -140,32 +126,232 @@ estate = {
 		}
 	}
 	
+	#1.30 new stuff
+
+	##replace_scope = { this = province root = province }
+	province_independence_weight = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## cardinality = 0..1
+	influence_from_dev_modifier = float[0.0..1.0]
+
+	## cardinality = 0..1
+	contributes_to_curia_treasury = yes
+
+	privileges = {
+		## cardinality = 0..inf
+		<estate_privilege>
+	}
+
+	agendas = {
+		## cardinality = 0..inf
+		<estate_agenda>
+	}
+}
+
+
+## replace_scope = { root = country this = country }
+estate_privilege = {
+	icon = scalar
+	
+	## cardinality = 0..1
+	land_share = int
+	## cardinality = 0..1
+	max_absolutism = int
+	## cardinality = 0..1
+	loyalty = float[-0.95..0.95]
+	## cardinality = 0..1
+	influence = float[-0.95..0.95]
+
+	## cardinality = 0..1
+	###Conditions for whether it is possible for the country to have this privilege (it will not display on the list if they are false, and will be revoked if it has already been granted)
+	is_valid = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Conditions for whether the country is allowed to select the privilege (with conditions for why not displayed)
+	can_select = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Effects executed immediately upon the privilege being taken
+	on_granted = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Conditions for whether the country can revoke the privilege
+	can_revoke = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Effects executed upon the privilege being revoked by the country
+	on_revoked = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Effects executed upon the privilege being removed due to invalidity (is_valid becomes false or the estate is removed)
+	on_invalid = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Positive modifiers granted while the privilege is active (creates different tooltip to penalties)
+	benefits = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	###Negative modifiers granted while the privilege is active (creates different tooltip to benefits)
+	penalties = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
 	## cardinality = 0..inf
-	interaction = {
-		name = localisation
-		icon = int
-		
-		years_between_use = int
-		
-		## cardinality = 0..1
-		## replace_scope = { this = country root = country }
-		potential = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		
-		##replace_scope = { this = country root = country }
+	###Modifier that are applied if the specified conditions are true.
+	conditional_modifier = {
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
-		##replace_scope = { this = country root = country }
-		effect = {
-			alias_name[effect] = alias_match_left[effect]
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
 		}
-		
-		ai_will_do = {
-			factor = float
-			alias_name[modifier_rule] = alias_match_left[modifier_rule]
-		}
+		## cardinality = 0..1
+		###Specifies whether the tooltip should list it as positive or not
+		is_bad = bool
+	}
+	## cardinality = 0..1
+	###Multiplies the modifier by the % of land owned by the estate.
+	modifier_by_land_ownership = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	###Special mechanics the privilege enables
+	mechanics = {
+		## cardinality = 0..1
+		enables_cossack_regiments
+		## cardinality = 0..1
+		enables_rajput_regiments
+		## cardinality = 0..1
+		exempt_from_seize_land
+		## cardinality = 0..1
+		can_veto_heirs
+		## cardinality = 0..1
+		vassal_liberty_affected_by_loyalty
+		## cardinality = 0..1
+		can_give_agendas_without_interaction
+	}
+
+	## cardinality = 0..1
+	###Time limit before which the privilege cannot be revoked
+	cooldown_years = int
+	## cardinality = 0..1
+	###Effect executed once the specified cooldown_years timer has run down
+	on_cooldown_expires = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+## replace_scope = { root = country this = country }
+estate_agenda = {
+	## cardinality = 0..1
+	###Lets you override the default of 20 years for an agenda
+	max_days_active = int
+	## cardinality = 0..1
+	###Conditions for whether the agenda can be offered to you
+	can_select = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Conditions for provinces to be highlighted by the agenda. Root = country, this = province.
+	## push_scope = province
+	provinces_to_highlight = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Determines how likely (compared to the estate's other agendas) this agenda is to be selected. Initial factor will ignore numbers below 1, use a modifier for that!
+	selection_weight = {
+		factor = float[1.0..inf]
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	###Conditions for when the agenda should be auto-failed
+	fail_if = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Effects executed to set up the task (set flags and targets), before it is shown to the player.
+	pre_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Conditions for completing the task successfully
+	task_requirements = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Effects executed when the agenda is accepted by the country
+	immediate_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Effects executed when the agenda is successfully completed
+	task_completed_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Effects executed when the agenda is failed (i.e. when fail_if is true or time runs out)
+	failing_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Effects executed when the country no longer has that estate or the invalid_trigger is true. Useful for clearing flags, modifiers etc.
+	on_invalid = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	###Conditions for when the agenda should end without it counting as a fail (executing on_invalid rather than failing_effect). Happens by default it the estate giving the agenda is removed.
+	invalid_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	###Country modifier granted while the agenda is active
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+}
+
+
+estate_interaction = {
+	key = localisation
+	random_seed = crown_land_share
+	random_seed = random
+
+	## push_scope = country
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## push_scope = country
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## cardinality = 0..1
+	## push_scope = country
+	ai_will_do = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+}
+
+estate_crown_land_bonus = {
+	key = localisation
+	range_from = float
+	range_to = float
+	## push_scope = country
+	modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
 	}
 }

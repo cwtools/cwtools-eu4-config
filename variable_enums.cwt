@@ -31,6 +31,9 @@ enums = {
 		years_of_income
 		trust
 		ruler_consort_marriage_length
+		trigger_value:base_manpower
+		trigger_value:base_production
+		trigger_value:base_tax
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture

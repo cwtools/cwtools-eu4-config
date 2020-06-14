@@ -388,6 +388,10 @@ country_history = {
 	historical_friend = enum[country_tags]
 	## cardinality = 0..1
 	elector = yes
+	## cardinality = 0..1
+	historical_council = harsh
+	## cardinality = 0..1
+	historical_council = concilatory #(sic)
 
 	alias_name[effect] = alias_match_left[effect]
 

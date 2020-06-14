@@ -193,18 +193,24 @@ alias[effect:add_dip_power] = int
 ###Adds Military power to the current scope.
 alias[effect:add_mil_power] = int
 
-## scope = country
+## scope = { country province }
 ###Saves a name to an unique key for usage in other effects. Usable with define_admiral, define_explorer, define_conquistador, define_general, define_ruler, define_consort, define_heir, define_advisor and spawn_rebels. Note: Does not work with country tags as scope, also type = simple does not work with spawn_rebels.
 alias[effect:set_saved_name] = {
 	key = value_set[saved_name]
 	type = advisor
 	type = simple
+	type = leader
 	## cardinality = 0..1
 	###Only with type = advisor
 	scope = scope[country]
+	## cardinality = 0..1
+	###Only with type = advisor
+	scope = scope[province]
 
 	## cardinality = 0..1
 	name = scalar
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -668,7 +674,7 @@ alias[effect:remove_advisor] = random
 alias[effect:remove_advisor] = <advisor_id>
 
 ## scope = country
-###Removes a hired advisor of a monarch power type for the current scope.
+###Removes a hired advisor of a monarch power type for the current scope. Fires on_action for advisor being fired.
 alias[effect:remove_advisor_by_category] = enum[power_categories]
 
 ## scope = country
@@ -793,25 +799,128 @@ alias[effect:add_yearly_sailors] = float[-10.0..10.0] #I am assuming no one want
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_admiral] = {
-	## cardinality = 0..1
-	name = value[saved_name]
 	tradition = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_fire = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_shock = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_manuever = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_siege = int
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <culture>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[culture_new_variables]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[province]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <province_id>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[country]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[country_tags]
+	## cardinality = 0..1
+	name = localisation_synced
 }
 
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_explorer] = {
+<<<<<<< HEAD
 	## cardinality = 0..1
 	name = value[saved_name]
 	tradition = int
+=======
+	tradition = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_fire = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_shock = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_manuever = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_siege = int
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <culture>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[culture_new_variables]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[province]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <province_id>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[country]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[country_tags]
+	## cardinality = 0..1
+	name = localisation_synced
+>>>>>>> 0ad0affa54d6d5180e5ab5c0d9703e4d2664b8cc
 }
 
 ## scope = country
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.
+<<<<<<< HEAD
 alias[effect:create_conquistador]  = {
 	## cardinality = 0..1
 	name = value[saved_name]
 	tradition = int
+=======
+alias[effect:create_conquistador] = {
+	tradition = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_fire = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_shock = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_manuever = int
+	## cardinality = 0..1
+	###Added to randomly generated value
+	add_siege = int
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <culture>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[culture_new_variables]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[province]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = <province_id>
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = scope[country]
+	## cardinality = 0..1
+	###Gives the general a random name from the specified culture.
+	culture = enum[country_tags]
+	## cardinality = 0..1
+	name = localisation_synced
+>>>>>>> 0ad0affa54d6d5180e5ab5c0d9703e4d2664b8cc
 }
 
 ## scope = country
@@ -1151,6 +1260,11 @@ alias[effect:add_opinion] = {
 	## cardinality = 0..1
 	###Optional: Set an expiry date for the modifier.
 	years = int
+	## cardinality = 0..1
+	###Optional: Set an expiry date for the modifier.
+	months = int
+	## cardinality = 0..1
+	multiplier = float
 }
 
 ## scope = country
@@ -1162,6 +1276,11 @@ alias[effect:reverse_add_opinion] = {
 	## cardinality = 0..1
 	###Optional: Set an expiry date for the modifier.
 	years = int
+	## cardinality = 0..1
+	###Optional: Set an expiry date for the modifier.
+	months = int
+	## cardinality = 0..1
+	multiplier = float
 }
 
 ## scope = country
@@ -1429,6 +1548,8 @@ alias[effect:add_estate_influence_modifier] = {
 alias[effect:add_estate_loyalty] = {
 	estate = <estate>
 	loyalty = int
+	## cardinality = 0..1
+	short = yes
 }
 
 ## scope = country
@@ -2378,17 +2499,17 @@ alias[effect:add_reform_center] = <religion>
 ###Removes the Center of Reformation for the defined religion in the current province scope.
 alias[effect:remove_reform_center] = <religion>
 
-## scope = province
-###Adds an estate to the current province scope. Will override any previous estate.
-alias[effect:set_estate] = <estate>
+# ## scope = province
+# ###Adds an estate to the current province scope. Will override any previous estate.
+# alias[effect:set_estate] = <estate>
 
-## scope = province
-###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
-alias[effect:remove_estate] = <estate>
+# ## scope = province
+# ###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
+# alias[effect:remove_estate] = <estate>
 
-## scope = province
-###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
-alias[effect:remove_estate] = yes
+# ## scope = province
+# ###Removes an estate in the current province scope. Does not produce a tooltip. Using "= yes" will remove any estate from the province but may refer to the wrong province in tooltips.
+# alias[effect:remove_estate] = yes
 
 ## scope = province
 ###Adds institution embracement progress for the defined institution in the current province scope. The defined institution must be enabled for the owner of the province first.
@@ -2428,7 +2549,7 @@ alias[effect:spawn_rebels] = {
 	type = <rebel_type>
 	## cardinality = 0..1
 	type = religious_rebels
-	size = float
+	size = float[0.5..3]
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
@@ -2481,9 +2602,17 @@ alias[effect:spawn_rebels] = {
 	separatists_target = scope[country]
 	## cardinality = 0..1
 	separatists_target = enum[country_tags]
+	## cardinality = 0..1
+	friend = scope[country]
+	## cardinality = 0..1
+	friend = enum[country_tags]
+	## cardinality = 0..1
+	estate = <estate>
 
 	## cardinality = 0..1
 	leader_dynasty = localisation_synced
+	## cardinality = 0..1
+	as_if_faction = yes
 }
 
 ## scope = province
@@ -2892,12 +3021,15 @@ alias[effect:free_vassal] = enum[country_tags]
 alias[effect:change_innovativeness] = int
 
 ## scope = country
+###Multiplies the value by all_power_cost modifiers
 alias[effect:adm_power_cost] = int
 
 ## scope = country
+###Multiplies the value by all_power_cost modifiers
 alias[effect:dip_power_cost] = int
 
 ## scope = country
+###Multiplies the value by all_power_cost modifiers
 alias[effect:mil_power_cost] = int
 
 ## scope = country
@@ -2931,12 +3063,13 @@ alias[effect:rajput_infantry] = enum[country_tags]
 alias[effect:remove_government_reform] = <government_reform.new>
 
 ## scope = country
+###Adds a loan to a country. interest_modifier: Adds or subtracts a value from the base interest value. fixed_interest: Interest will be the specified value. duration: Sets the amount of months before the loan is due. estate_loan = yes: Means that if a country has this loan, has_estate_loan will return true.
 alias[effect:add_loan] = {
-	interest_modifier = float
-	###If yes, interest will never change.
-	fixed_interest = bool
+	enum[interest_modifier_fixed_interest] = float
 	###In months
 	duration = int
+	## cardinality = 0..1
+	estate_loan = yes
 }
 
 ## scope = country

@@ -78,17 +78,28 @@ building = {
 	show_separate = yes 
 	
 	subtype[!cost] = {
-		cost = int
 		###List of trade goods that get a production bonus
 		manufactory = {
+			## cardinality = 0..inf
+			<trade_good>
+			## cardinality = 0..1
+			all
+		}
+		## cardinality = 0..1
+		###List of trade goods that get an extra production bonus
+		bonus_manufactory = {
 			## cardinality = 1..inf
 			<trade_good>
+		}
+		## cardinality = 0..1
+		bonus_modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
 		}
 	}
 
 	## cardinality = 0..1
 	###Show as a sprite on the map
-	onmap = yes
+	onmap = bool
 	
 	## cardinality = 0..1
 	## replace_scope = { root = province this = province from = owner }

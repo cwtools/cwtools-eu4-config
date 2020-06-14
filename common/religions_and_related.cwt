@@ -16,7 +16,7 @@ types = {
 			harmonized_modifier = scalar
 		}
 	}
-	## type_key_filter <> religious_schools
+	## type_key_filter <> { religious_schools flag_emblem_index_range }
 	type[religion] = {
 		path = "game/common/religions"
 		skip_root_key = any
@@ -94,6 +94,17 @@ types = {
 			name = "$"
 		}#todo: reform_desc (not reform_group_desc)
 	}
+	## type_key_filter <> { trigger can_buy_idea ai_will_do }
+	type[religious_reform] = {
+		path = "game/common/religious_reforms"
+		skip_root_key = any
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
+	}
 	type[aspects_and_blessings] = {
 		path = "game/common/church_aspects"
 		subtype[blessing] = {
@@ -146,7 +157,7 @@ religion_group = {
 	## replace_scope = { root = country this = country }
 	religious_schools = {
 		## cardinality = 0..inf
-		localisation = {
+		<religious_school> = {
 			## replace_scope = { this = country root = country }
 			potential_invite_scholar = {
 				alias_name[trigger] = alias_match_left[trigger]
@@ -437,7 +448,7 @@ religious_reform_group = {
 	#I don't think these are referred to from elsewhere
 	## cardinality = 5..5
 	## replace_scope = { root = country this = country }
-	localisation = {
+	<religious_reform> = {
 		alias_name[modifier] = alias_match_left[modifier]
 
 		alias_name[ability] = alias_match_left[ability]
@@ -481,6 +492,7 @@ aspects_and_blessings = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	ai_will_do = {
 		factor = float

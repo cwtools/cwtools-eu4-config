@@ -51,56 +51,47 @@ institution = {
 	## replace_scope = { this = province root = province }
 	###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
 	embracement_speed = {
-		alias_name[institution_modifier_rule] = alias_match_left[institution_modifier_rule]
+		## cardinality = 1..inf
+		modifier = {
+			factor = float
+			## cardinality = 0..1
+			###if a modifier is scaled, it is multiplied with development in the province.
+			scale = bool
+
+			## cardinality = 0..1
+			###Hide the this modifier when potential is false
+			force_potential = yes
+
+			## cardinality = 0..1
+			potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+				## cardinality = 0..1
+				## push_scope = province
+				###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
+				any_friendly_coast_border_province = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+			}
+
+			alias_name[trigger] = alias_match_left[trigger]
+
+			## cardinality = 0..1
+			custom_trigger_tooltip = {
+				tooltip = localisation
+				alias_name[trigger] = alias_match_left[trigger]
+				## cardinality = 0..1
+				## push_scope = province
+				###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
+				any_friendly_coast_border_province = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+			}
+		}
 	}
 	
 	###Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
 	ai_will_do = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
-	}
-}
-
-
-alias[institution_modifier_rule:modifier] = {
-	factor = float
-	## cardinality = 0..1
-	###if a modifier is scaled, it is multiplied with development in the province.
-	scale = bool
-
-	alias_name[trigger] = alias_match_left[trigger]
-
-	## cardinality = 0..1
-	## push_scope = province
-	###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
-	any_friendly_coast_border_province = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-
-	## cardinality = 0..1
-	###Hide the this modifier when potential is false
-	force_potential = yes
-
-	## cardinality = 0..1
-	potential = {
-		alias_name[trigger] = alias_match_left[trigger]
-		## cardinality = 0..1
-		## push_scope = province
-		###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
-		any_friendly_coast_border_province = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-	}
-
-	## cardinality = 0..1
-	custom_trigger_tooltip = {
-		tooltip = localisation
-		alias_name[trigger] = alias_match_left[trigger]
-		## cardinality = 0..1
-		## push_scope = province
-		###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
-		any_friendly_coast_border_province = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
 	}
 }

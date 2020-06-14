@@ -123,7 +123,7 @@ alias[trigger:<province_id>] = {
 ###Refers to the areas listed /Europa Universalis IV/map/areas.txt
 alias[trigger:<area.used>] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -132,7 +132,7 @@ alias[trigger:<area.used>] = {
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[trigger:<region>] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -140,7 +140,7 @@ alias[trigger:<region>] = {
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[trigger:<superregion>] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -156,7 +156,7 @@ alias[trigger:<superregion>] = {
 ###Refers to any continent found in /Europa Universalis IV/map/continent.txt
 alias[trigger:<continent>] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -173,7 +173,7 @@ alias[trigger:<trade_company>] = {
 ###Refers to any colonial region found in /Europa Universalis IV/common/colonial_regions/
 alias[trigger:<colonial_region>] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -253,6 +253,17 @@ alias[effect:random] = {
 alias[effect:random_list] = {
 	## cardinality = 2..inf
 	int = {
+		## cardinality = 0..1
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		alias_name[effect] = alias_match_left[effect]
+		#If this is wrong, check how it works in CK2 and it should be the same
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	#If this is wrong, check how it works in CK2 and it should be the same
+	## cardinality = 0..1
+	fallback = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 }
@@ -363,6 +374,10 @@ alias[effect:area] = {
 ## push_scope = province
 ###Refers to the region that the current province scope is in.
 alias[effect:region] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	alias_name[effect] = alias_match_left[effect]
 }
 
@@ -1105,6 +1120,13 @@ alias[trigger:all_country] = {
 
 ## push_scope = country
 ## scope = country
+###Scopes to all countries in the world including the current scope.
+alias[trigger:all_countries_including_self] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = country
+## scope = country
 ###Scopes to all electors of the HRE
 alias[trigger:all_elector] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1177,7 +1199,7 @@ alias[trigger:all_owned_province] = {
 }
 
 
-## scope = country
+## scope = { country province }
 ## push_scope = province
 ###Scopes to all provinces in the world. Avoid this if you can use something more specific.
 alias[trigger:all_province] = {
@@ -1512,7 +1534,7 @@ alias[effect:home_trade_node_effect_scope] = {
 ## push_scope = province
 alias[trigger:region_for_scope_province] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
@@ -1521,10 +1543,18 @@ alias[trigger:region_for_scope_province] = {
 ###Scopes to all provinces in the same area as the current scope.
 alias[trigger:area_for_scope_province] = {
 	## cardinality = 0..1
-	type = all
+	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+
+## scope = country
+## push_scope = province
+###Returns true if at least X provinces of the scoped country match the specified condition(s).
+alias[trigger:num_of_owned_provinces_with] = {
+	value = int
+	alias_name[trigger] = alias_match_left[trigger]
+}
 
 ## scope = country
 ## push_scope = province
@@ -1533,6 +1563,17 @@ alias[trigger:num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with] = 
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
+## scope = country
+alias[trigger:num_of_owned_states_with] = {
+	value = int
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = country
+alias[trigger:num_of_states_owned_or_owned_by_non_sovereign_subjects_with] = {
+	value = int
+	alias_name[trigger] = alias_match_left[trigger]
+}
 
 ## scope = province
 ## push_scope = province

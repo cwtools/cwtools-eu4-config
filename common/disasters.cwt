@@ -91,5 +91,11 @@ disaster = {
 			int = <event.country>
 		}
 	}
+
+	## cardinality = 0..1
+	###Effect executed when the progress towards the disaster ticks upwards or downwards.
+	on_progress_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 }
 
