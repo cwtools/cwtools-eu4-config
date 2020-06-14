@@ -3112,42 +3112,15 @@ alias[effect:native_policy] = enum[native_policies]
 ###Applies the specified holy order to the province
 alias[effect:holy_order] = <holy_order>
 
+
+
 #1.30
-
-## scope = country
-### Restores the original country name
-alias[effect:restore_country_name] = bool
-
-## scope = country
-### Renames the country but tag remains the same
-alias[effect:override_country_name] = localisation
-
-## scope = country
-alias[effect:add_revolutionary_zeal] = int
-
-## scope = country
-alias[effect:add_years_of_estate_land_income] = float
-
-## scope = country
-alias[effect:kill_mercenary_leader] = this
-
-## scope = province
-alias[effect:set_revolution_in_province] = yes
 
 ## scope = country
 alias[effect:create_succession_crisis] = {
 	attacker = scope[country]
 	defender = scope[country]
 	target = scope[country]
-}
-
-## scope = country
-alias[effect:support_independence_of] = scope[country]
-
-## scope = country
-alias[effect:add_power_projection] = {
-	type = <static_modifier>
-	amount = int
 }
 
 ## scope = country
@@ -3169,4 +3142,5 @@ alias[effect:use_monarch_as_leader] = yes
 alias[effect:set_impirial_incident] = <impirial_incident>
 
 ## scope = country
+#There is also restore_country_name not sure what the difference is
 alias[effect:restore_country_name_effect] = yes

@@ -4571,6 +4571,21 @@ alias[trigger:expelling_minorities] = bool
 ###Checks whether the trade node that the province is in has recently had a treasure ship pass through it. Only "yes" appears to do anything.
 alias[trigger:recent_treasure_ship_passage] = yes
 
+alias[trigger:province_getting_expelled_minority] = bool
+
+#1.30
+
+## scope = province
+alias[trigger:is_revolution_center] = bool
+
+## scope = province
+alias[trigger:highest_supply_limit_in_area] = bool
+
+## scope = country
+alias[trigger:is_revolutionary] = bool
+
+#more stuff
+
 #Does not work
 # ## scope = province
 # ###Checks whether the province is getting an expelled minority
