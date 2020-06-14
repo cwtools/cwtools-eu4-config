@@ -413,6 +413,8 @@ government_reform = {
 			admirals_become_rulers = bool
 			## cardinality = 0..1
 			gives_war_against_the_world_tooltip_dummy = yes
+			## cardinality = 0..inf
+			value_set[custom_attribute] = bool
 		}
 
 		## cardinality = 0..1
@@ -543,7 +545,7 @@ government = {
 		}
 	
 		reform_levels = {
-			## cardinality = 1..7
+			## cardinality = 1..10
 			localisation = {
 				reforms = {
 					## cardinality = 1..inf

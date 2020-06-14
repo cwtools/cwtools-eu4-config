@@ -87,18 +87,6 @@ enums = {
 }
 
 
-imperial_incident = {
-	event = <event.country>
-	default_option = int
-
-	## cardinality = 0..1
-	## replace_scope = { root = country this = country }
-	can_stop = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-}
-
-
 
 center_of_revolution_conversion = {
 	## replace_scope = { root = province this = province from = province }

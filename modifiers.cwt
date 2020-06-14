@@ -366,3 +366,6 @@ alias[modifier:mercenary_manpower] = float
 
 ## scope = country
 alias[modifier:governing_capacity_modifier] = float
+
+## scope = country
+alias[modifier:manpower_in_true_faith_provinces] = float

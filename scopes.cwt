@@ -42,5 +42,9 @@ scopes = {
 	}
 	"Trade Company" = {
 		aliases = { trade_company }
-	}
+    }
+    # not sure if that's the right place. its for localisation stuff.
+    NativeCulture = {
+        aliases = { native_culture }
+    }
 }
