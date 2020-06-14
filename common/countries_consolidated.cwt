@@ -132,6 +132,9 @@ country_file = {
 		## cardinality = 1..inf
 		scalar
 	}
+
+	## cardinality = 0..1
+	historical_council = { harsh concilatory}
 }
 
 

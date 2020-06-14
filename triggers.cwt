@@ -760,6 +760,18 @@ alias[trigger:dynasty] = scope[country]
 ###Returns true if the ruling dynasty of the country is X, or is the same as that of country X.
 alias[trigger:dynasty] = enum[country_tags]
 
+## scope = country
+###Returns true if the heirs dynasty of the country is X, or is the same as that of country X.
+alias[trigger:heir_dynasty] = localisation_synced #value[dynasty_name]
+
+## scope = country
+###Returns true if the heirs dynasty of the country is X, or is the same as that of country X.
+alias[trigger:heir_dynasty] = scope[country]
+
+## scope = country
+###Returns true if the heirs dynasty of the country is X, or is the same as that of country X.
+alias[trigger:heir_dynasty] = enum[country_tags]
+
 ## scope = any
 ###Returns true if at least X Empire of China reforms are enacted. Works similar to hre_reform_level
 alias[trigger:empire_of_china_reform_level] = int
@@ -1026,8 +1038,8 @@ alias[trigger:has_border_with_religious_enemy] = yes
 ###Returns true if there is the specified building in the province.
 alias[trigger:has_building] = <building>
 
-## scope = province
-###Returns true if the province has a cardinal in the curia.
+## scope = { country province }
+###Returns true if the province or country has a cardinal in the curia.
 alias[trigger:has_cardinal] = bool
 
 ## scope = country
@@ -3453,6 +3465,7 @@ alias[trigger:production_income_percentage] = float[0.0..1.0]
 ###Returns true if the country is the production leader of the trade good X.
 alias[trigger:production_leader] = {
 	trade_goods = <trade_good>
+	value = bool
 }
 
 ## scope = province
@@ -4645,3 +4658,22 @@ alias[trigger:expelled_different_minorities] = int
 ## scope = country
 ###Checks whether a country has any non-generic missions.
 alias[trigger:has_non_generic_missions] = bool
+
+## scope = country
+## severity = warning
+###Returns true if the province culture is X, or the same as the specified scope.
+alias[trigger:culture] = <culture>
+
+## scope = mercenary_company
+alias[trigger:hired_for_months] = int
+
+## scope = country
+### If council of trent is enabled
+alias[trigger:is_council_enabled] = bool
+
+## scope = country
+### Position in council of trent
+alias[trigger:council_position] = { concilatory harsh }
+
+## scope = country
+alias[trigger:is_all_concessions_in_council_taken] = bool

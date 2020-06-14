@@ -1399,6 +1399,10 @@ alias[effect:inherit] = enum[country_tags]
 alias[effect:release] = enum[country_tags]
 
 ## scope = country
+###The current scope releases all provinces with the defined scope's cores.
+alias[effect:release] = scope[country]
+
+## scope = country
 ###The current scope releases all possible subjects from cores.
 alias[effect:release_all_subjects] = yes
 

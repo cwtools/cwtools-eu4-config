@@ -29,8 +29,16 @@ building = {
 	
 	## cardinality = 0..1
 	## replace_scope = { root = province this = province from = owner }
-	###An and trigger that needs to be fullfilled to build and keep the building
-	trigger = {
+	###An and trigger that needs to be fullfilled to build the building
+	build_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+
+	## cardinality = 0..1
+	## replace_scope = { root = province this = province from = owner }
+	###An and trigger that needs to be fullfilled to keep the building
+	keep_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
