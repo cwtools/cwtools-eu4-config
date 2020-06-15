@@ -4679,4 +4679,5 @@ alias[trigger:council_position] = { concilatory harsh }
 alias[trigger:is_all_concessions_in_council_taken] = bool
 
 ## scope = country
+###Returns true if end game tags are block, which is the default behaviour
 alias[trigger:end_game_tags_blocked] = bool

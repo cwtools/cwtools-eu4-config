@@ -3149,6 +3149,7 @@ alias[effect:remove_rival] = scope[country]
 alias[effect:remove_rival] = enum[country_tags]
 
 ## scope = country
+### Turns the monarch into a leader
 alias[effect:use_monarch_as_leader] = yes
 
 ## scope = emperor
