@@ -298,6 +298,8 @@ religion_group = {
 		## cardinality = 0..1
 		uses_church_power = yes				# Uses church power/aspect mechanics
 		## cardinality = 0..1
+		uses_hussite_power = yes
+		## cardinality = 0..1
 		aspects = {
 			## cardinality = 1..inf
 			<aspects_and_blessings.church_aspect>
