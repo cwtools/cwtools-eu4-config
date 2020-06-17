@@ -369,3 +369,7 @@ alias[modifier:governing_capacity_modifier] = float
 
 ## scope = country
 alias[modifier:manpower_in_true_faith_provinces] = float
+
+## scope = province
+### Modifies the governing cost of the every province in the area
+alias[modifier:statewide_governing_cost] = float

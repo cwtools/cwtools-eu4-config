@@ -917,8 +917,8 @@ alias[trigger:government] = dictatorship
 ###Returns true if the country has a government rank of X or higher.
 alias[trigger:government_rank] = int
 
-## scope = country
-###Returns true if the country's total development has grown by the specified amount
+## scope = { country province }
+###Returns true if the country's or province's total development has grown by the specified amount
 alias[trigger:grown_by_development] = int
 
 ## scope = country
@@ -1319,7 +1319,7 @@ alias[trigger:has_heir_leader_from] = scope[country]
 ###Returns true if an army in the province is led by an heir from X.
 alias[trigger:has_heir_leader_from] = enum[country_tags]
 
-## scope = country
+## scope = { country province }
 ###Returns true if the country has a hostile center of reformation.
 alias[trigger:has_hostile_reformation_center] = bool
 
@@ -3465,6 +3465,7 @@ alias[trigger:production_income_percentage] = float[0.0..1.0]
 ###Returns true if the country is the production leader of the trade good X.
 alias[trigger:production_leader] = {
 	trade_goods = <trade_good>
+	## cardinality = 0..1
 	value = bool
 }
 
@@ -4673,7 +4674,7 @@ alias[trigger:is_council_enabled] = bool
 
 ## scope = country
 ### Position in council of trent
-alias[trigger:council_position] = { concilatory harsh }
+alias[trigger:council_position] = enum[council_positions]
 
 ## scope = country
 alias[trigger:is_all_concessions_in_council_taken] = bool
@@ -4681,3 +4682,14 @@ alias[trigger:is_all_concessions_in_council_taken] = bool
 ## scope = country
 ###Returns true if end game tags are block, which is the default behaviour
 alias[trigger:end_game_tags_blocked] = bool
+
+## scope = country
+###Returns true if Hegemony power is at least X
+alias[trigger:hegemon_strength] = int[0..100]
+
+## scope = country
+alias[trigger:humiliated_by] = scope[country]
+
+
+## scope = country
+alias[trigger:humiliated_by] = enum[country_tags]

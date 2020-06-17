@@ -389,9 +389,7 @@ country_history = {
 	## cardinality = 0..1
 	elector = yes
 	## cardinality = 0..1
-	historical_council = harsh
-	## cardinality = 0..1
-	historical_council = concilatory #(sic)
+	historical_council = enum[council_positions]
 
 	alias_name[effect] = alias_match_left[effect]
 

@@ -2141,6 +2141,9 @@ alias[effect:define_heir] = {
 	hidden = yes
 	## cardinality = 0..1
 	birth_date = date_field
+	## cardinality = 0..1
+	### Disables the disinherit button
+	block_disinherit = yes
 }
 
 ## scope = country
@@ -3126,8 +3129,11 @@ alias[effect:holy_order] = <holy_order>
 ## scope = country
 alias[effect:create_succession_crisis] = {
 	attacker = scope[country]
+	attacker = enum[country_tags]
 	defender = scope[country]
+	defender = enum[country_tags]
 	target = scope[country]
+	target = enum[country_tags]
 }
 
 ## scope = country
@@ -3158,3 +3164,4 @@ alias[effect:set_impirial_incident] = <impirial_incident>
 ## scope = country
 #There is also restore_country_name not sure what the difference is
 alias[effect:restore_country_name_effect] = yes
+
