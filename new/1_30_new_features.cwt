@@ -35,6 +35,8 @@ mercenary_company = {
 	## cardinality = 0..1
 	cavalry_weight = float[0.0..1.0]
 	## cardinality = 0..1
+	cavalry_cap = int
+	## cardinality = 0..1
     artillery_weight = float[0.0..1.0]
 	## cardinality = 0..1
 	###No home province means local mercenary company
