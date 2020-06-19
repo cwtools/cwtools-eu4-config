@@ -17,17 +17,6 @@ types = {
 			desc = "$_DESC"
 		}
 	}
-	type[imperial_incident] = {
-		path = "game/common/imperial_incidents"
-		localisation = {
-			## required
-			name = "$"
-			## required
-			emperor_alert = "$_emperor_alert"
-			## required
-			member_alert = "$_member_alert"
-		}
-	}
 	type[center_of_revolution_conversion] = {
 		path = "game/common/revolution"
 	}
@@ -45,6 +34,8 @@ mercenary_company = {
 	regiments_per_development = float
 	## cardinality = 0..1
 	cavalry_weight = float[0.0..1.0]
+	## cardinality = 0..1
+	cavalry_cap = int
 	## cardinality = 0..1
     artillery_weight = float[0.0..1.0]
 	## cardinality = 0..1
@@ -94,18 +85,6 @@ enums = {
 	enum[golden_bull_mechanics] = {
         cardinals_spread_institution
 		crusades_after_age_limit
-	}
-}
-
-
-imperial_incident = {
-	event = <event.country>
-	default_option = int
-
-	## cardinality = 0..1
-	## replace_scope = { root = country this = country }
-	can_stop = {
-		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 

@@ -75,6 +75,9 @@ country_file = {
 	right_to_bear_arms = yes
 	
 	## cardinality = 0..1
+	historical_council = enum[council_positions]
+
+	## cardinality = 0..1
 	special_unit_culture = south_east_asian_special
 
 	## cardinality = 0..1
@@ -132,6 +135,7 @@ country_file = {
 		## cardinality = 1..inf
 		scalar
 	}
+
 }
 
 

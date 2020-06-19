@@ -43,7 +43,7 @@ types = {
 				emperor_desc = "desc_$_emperor"
 			}
 			subtype[province] = {
-				## required
+				## optional
 				province = "$_province"
 			}
 			subtype[emperor_per_prince] = {
@@ -86,6 +86,8 @@ imperial_reform = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..1
+		gui_container = { nodlc mainline }
 	}
 	subtype[china] = {
 		empire = celestial_empire

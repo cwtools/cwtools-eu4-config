@@ -45,6 +45,7 @@ unit_type = {
 		trade_power = float
 	}
 
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]

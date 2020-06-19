@@ -66,4 +66,6 @@ localisation_commands = {
 	GetClergyName = country
 	GetBurghersName = country
 	GetCachedAgendasFlavorText = country
+	GetParliamentName = country
+	GetParliamentWithGrammer = country
 }

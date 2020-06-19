@@ -306,6 +306,10 @@ alias[effect:add_years_of_owned_provinces_production_income] = {
 alias[effect:disband_mercenary_company] = yes
 
 ## scope = mercenary_company
+###Disbands the scoped mercenary company
+alias[effect:disband_mercenary_company] = this
+
+## scope = mercenary_company
 ###Kills the leader of the scoped mercenary company
 alias[effect:kill_mercenary_leader] = this
 

@@ -259,11 +259,13 @@ alias[effect:add_absolutism] = int
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-alias[effect:add_legitimacy] = float[-100.0..-1.0]
+#Should be -100.0..-1.0 but parsing floats is bugged
+alias[effect:add_legitimacy] = float[-100..-1]
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-alias[effect:add_legitimacy] = float[1.0..100.0]
+#Should be 1.0..100.0 but parsing floats is bugged
+alias[effect:add_legitimacy] = float[1..100]
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
@@ -275,11 +277,11 @@ alias[effect:add_legitimacy] = enum[country_tags]
 
 ## scope = country
 ###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = float[-100.0..-1.0]
+alias[effect:add_republican_tradition] = float[-100..-1]
 
 ## scope = country
 ###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = float[1.0..100.0]
+alias[effect:add_republican_tradition] = float[1..100]
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.
@@ -1397,6 +1399,10 @@ alias[effect:inherit] = enum[country_tags]
 alias[effect:release] = enum[country_tags]
 
 ## scope = country
+###The current scope releases all provinces with the defined scope's cores.
+alias[effect:release] = scope[country]
+
+## scope = country
 ###The current scope releases all possible subjects from cores.
 alias[effect:release_all_subjects] = yes
 
@@ -2135,6 +2141,9 @@ alias[effect:define_heir] = {
 	hidden = yes
 	## cardinality = 0..1
 	birth_date = date_field
+	## cardinality = 0..1
+	### Disables the disinherit button
+	block_disinherit = yes
 }
 
 ## scope = country
@@ -2536,7 +2545,8 @@ alias[effect:spawn_rebels] = {
 	type = <rebel_type>
 	## cardinality = 0..1
 	type = religious_rebels
-	size = float[0.5..3]
+	#should be 0.5..3 but parsing floats is bugged
+	size = float[0..3]
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
@@ -2937,10 +2947,6 @@ alias[effect:<unit_type>] = enum[country_tags]
 #Stuff missing from the wiki
 
 ## scope = country
-###Sets legacy (pre-Dharma) govt for the current scope.
-alias[effect:set_legacy_government] = <government_reform.legacy> #if this doesn't work, can use the key in governments instead
-
-## scope = country
 alias[effect:define_exiled_ruler] = {
 	exiled_as = value_set[exiled_ruler]
 	## cardinality = 0..1
@@ -3115,3 +3121,47 @@ alias[effect:native_policy] = enum[native_policies]
 ## scope = province
 ###Applies the specified holy order to the province
 alias[effect:holy_order] = <holy_order>
+
+
+
+#1.30
+
+## scope = country
+alias[effect:create_succession_crisis] = {
+	attacker = scope[country]
+	attacker = enum[country_tags]
+	defender = scope[country]
+	defender = enum[country_tags]
+	target = scope[country]
+	target = enum[country_tags]
+}
+
+## scope = country
+alias[effect:join_trade_league] = scope[country]
+
+## scope = country
+alias[effect:transfer_trade_power] = scope[country]
+
+## scope = country
+alias[effect:add_rival] = scope[country]
+
+## scope = country
+alias[effect:add_rival] = enum[country_tags]
+
+## scope = country
+alias[effect:remove_rival] = scope[country]
+
+## scope = country
+alias[effect:remove_rival] = enum[country_tags]
+
+## scope = country
+### Turns the monarch into a leader
+alias[effect:use_monarch_as_leader] = yes
+
+## scope = emperor
+alias[effect:set_impirial_incident] = <impirial_incident>
+
+## scope = country
+#There is also restore_country_name not sure what the difference is
+alias[effect:restore_country_name_effect] = yes
+

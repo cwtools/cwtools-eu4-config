@@ -193,4 +193,9 @@ enums = {
 		any
 		all
 	}
+	enum[council_positions] = {
+		harsh
+		neutral
+		concilatory
+	}
 }
