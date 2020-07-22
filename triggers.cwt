@@ -3333,7 +3333,7 @@ alias[trigger:owns_or_non_sovereign_subject_of] = scope[province]
 
 ## scope = country
 ###Returns true if the country or a subject owns the specified province.
-alias[trigger:owns_or_subject_of] = <province_id
+alias[trigger:owns_or_subject_of] = <province_id>
 
 ## scope = country
 ###Returns true if the country or a subject owns the specified province.
