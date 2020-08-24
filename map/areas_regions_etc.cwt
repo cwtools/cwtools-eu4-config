@@ -64,6 +64,19 @@ types = {
 			adj = "$_adj"
 		}
 	}
+	type[provincegroup] = {
+		path = "game/map"
+		path_file = "provincegroup.txt"
+		localisation = {
+			#these are usually needed, but only if the regions are not sea regions
+			## optional
+			type = "$"
+			## optional
+			name = "$_name"
+			## optional
+			adj = "$_adj"
+		}
+	}
 }
 
 
@@ -119,6 +132,11 @@ region = {
 }
 
 superregion = {
+	## cardinality = 0..inf
+	<region>
+}
+
+provincegroup = {
 	## cardinality = 0..inf
 	<region>
 }

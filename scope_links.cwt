@@ -67,12 +67,16 @@ alias[effect:<superregion>] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-# scope = { country province }
-# push_scope = province
-#Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-#alias[effect:<provincegroup>] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
+## scope = { country province }
+## push_scope = province
+##Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
+alias[effect:<provincegroup>] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
 
 ## scope = { country province }
 ## push_scope = province
@@ -144,12 +148,14 @@ alias[trigger:<superregion>] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-# scope = { country province }
-# push_scope = province
-#Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-#alias[trigger:<provincegroup>] = {
-#	alias_name[trigger] = alias_match_left[trigger]
-#}
+## scope = { country province }
+## push_scope = province
+###Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
+alias[trigger:<provincegroup>] = {
+	## cardinality = 0..1
+	type = enum[any_all]
+	alias_name[trigger] = alias_match_left[trigger]
+}
 
 ## scope = { country province }
 ## push_scope = province
