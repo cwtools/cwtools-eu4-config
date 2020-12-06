@@ -47,6 +47,17 @@ alias[effect:<area.used>] = {
 
 ## scope = { country province }
 ## push_scope = province
+###Refers to the province ids listed /Europa Universalis IV/map/definition.csv
+alias[effect:<province_group.used>] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = { country province }
+## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[effect:<region>] = {
 	## cardinality = 0..1
@@ -60,17 +71,6 @@ alias[effect:<region>] = {
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[effect:<superregion>] = {
-	## cardinality = 0..1
-	limit = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-	alias_name[effect] = alias_match_left[effect]
-}
-
-## scope = { country province }
-## push_scope = province
-##Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-alias[effect:<provincegroup>] = {
 	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -133,6 +133,15 @@ alias[trigger:<area.used>] = {
 
 ## scope = { country province }
 ## push_scope = province
+###Refers to the province_group listed /Europa Universalis IV/map/provincegroup.txt
+alias[trigger:<province_group.used>] = {
+	## cardinality = 0..1
+	type = enum[any_all]
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = { country province }
+## push_scope = province
 ###Refers to any region found in /Europa Universalis IV/map/region.txt
 alias[trigger:<region>] = {
 	## cardinality = 0..1
@@ -143,15 +152,6 @@ alias[trigger:<region>] = {
 ## push_scope = province
 ###Refers to any superregion found in /Europa Universalis IV/map/superregion.txt
 alias[trigger:<superregion>] = {
-	## cardinality = 0..1
-	type = enum[any_all]
-	alias_name[trigger] = alias_match_left[trigger]
-}
-
-## scope = { country province }
-## push_scope = province
-###Refers to any province group found in /Europa Universalis IV/map/provincegroup.txt
-alias[trigger:<provincegroup>] = {
 	## cardinality = 0..1
 	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
@@ -369,6 +369,17 @@ alias[effect:sea_zone] = {
 ## push_scope = province
 ###Refers to the area that the current province scope is in.
 alias[effect:area] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = province
+## push_scope = province
+###Refers to the province_group that the current province scope is in.
+alias[effect:province_group] = {
 	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -1074,6 +1085,13 @@ alias[trigger:area] = {
 
 ## scope = province
 ## push_scope = province
+###Refers to the province_group that the current province scope is in.
+alias[trigger:province_group] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = province
+## push_scope = province
 ###Refers to the region that the current province scope is in.
 alias[trigger:region] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1552,7 +1570,6 @@ alias[trigger:area_for_scope_province] = {
 	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
-
 
 ## scope = country
 ## push_scope = province
