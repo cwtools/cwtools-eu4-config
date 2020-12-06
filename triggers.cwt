@@ -139,6 +139,18 @@ alias[trigger:area] = scope[province]
 ###Returns true if the province is part of the area X. Accepts province scope as target.
 alias[trigger:area] = <province_id>
 
+## scope = province
+###Returns true if the province is part of the province_group X. Accepts province scope as target.
+alias[trigger:province_group] = <province_group.used>
+
+## scope = province
+###Returns true if the province is part of the province_group X. Accepts province scope as target.
+alias[trigger:province_group] = scope[province]
+
+## scope = province
+###Returns true if the province is part of the province_group X. Accepts province scope as target.
+alias[trigger:province_group] = <province_id>
+
 ## scope = country
 ###Returns true if the country has an army of at least X k soldiers, or at least as many soldiers as the specified country.
 alias[trigger:army_size] = int
@@ -1145,6 +1157,11 @@ alias[trigger:has_discovered] = <province_id>
 ## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
 alias[trigger:has_discovered] = <area.used>
+
+#I wonder whether this works with all things that accept <province_id>
+## scope = { country }
+###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
+alias[trigger:has_discovered] = <province_group.used>
 
 ## scope = { country }
 ###In country scope, returns true if the country has discovered the province with the ID X. In province scope, returns true if the country X has discovered the province.
