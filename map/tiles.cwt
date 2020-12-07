@@ -36,6 +36,8 @@ rnw_tiles = {
 
 	## cardinality = 0..1
 	Regions = int
+	
+	## cardinality = 0..inf
 	region = {
 		## cardinality = 3..3
 		int[0..255]
@@ -69,6 +71,18 @@ rnw_tiles = {
 
 	## cardinality = 0..1
 	do_not_rotate = yes
+	
+	## cardinality = 0..1
+	do_not_rotate_or_mirror = yes
+		
+	## cardinality = 0..1
+	restrict_to_north_edge = yes
+	
+	## cardinality = 0..1
+	restrict_to_south_edge = yes
+		
+	## cardinality = 0..1
+	restrict_to_equator = yes
 
 	## cardinality = 0..1
 	unique = int
@@ -78,7 +92,7 @@ rnw_tiles = {
 	## cardinality = 0..1
 	add_moisture = int
 
-	## cardinality = 0..1
+	## cardinality = 0..inf
 	wasteland_province = {
 		## cardinality = 3..3
 		int[0..255]
