@@ -57,6 +57,8 @@ default_map = {
 		y = int
 	}
 	
-	## cardinality = 0..inf
-	tree = { int int int int }
+	tree = { 
+		## cardinality = 0..4
+		int[0..255]
+	}
 }
