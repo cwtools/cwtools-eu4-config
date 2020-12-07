@@ -486,7 +486,13 @@ alias[modifier:governing_capacity] = float
 ## scope = country
 alias[modifier:allowed_marine_fraction] = float
 
-
+## scope = country
+alias[modifier:local_heir_adm] = int
+alias[modifier:local_heir_dip] = int
+alias[modifier:local_heir_mil] = int
+alias[modifier:cb_on_religious_enemies] = bool
+alias[modifier:may_perform_slave_raid_on_same_religion] = bool
+alias[modifier:state_governing_cost] = float
 
 
 #Scopes
