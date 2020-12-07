@@ -289,7 +289,15 @@ modifiers = {
 	burghers_influence_modifier = country
 	nobles_loyalty_modifier = country
 	nobles_influence_modifier = country
+	papal_influence_from_cardinals = country
+	cb_on_religious_enemies = country
+	local_heir_adm = country
+	local_heir_dip = country
+	local_heir_mil = country
+	may_perform_slave_raid_on_same_religion = country
+	state_governing_cost = country
 }
+
 #These are the ones missed by the wiki
 
 ## scope = country

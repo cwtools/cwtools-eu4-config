@@ -128,8 +128,10 @@ government_reform = {
 		force_admiral_leader = bool
 		admirals_become_rulers = bool
 		generals_become_rulers = bool
+		allow_banners = bool
 		uses_revolutionary_zeal = bool
 		revolutionary = bool
+		revolutionary_client_state = bool
 		disallowed_trade_goods = {
 			## cardinality = 0..inf
 			<trade_good>
@@ -238,7 +240,8 @@ government_reform = {
 	
 		## cardinality = 0..1
 		revolutionary = bool
-
+		## cardinality = 0..1
+		revolutionary_client_state = bool
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		nation_designer_trigger = {
@@ -343,6 +346,21 @@ government_reform = {
 				monarchists = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
+				## cardinality = 0..1
+				## replace_scope = { root = country this = country }
+				revolutionaries = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
+				## cardinality = 0..1
+				## replace_scope = { root = country this = country }
+				militarists = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
+				## cardinality = 0..1
+				## replace_scope = { root = country this = country }
+				theocrats = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
 			}
 
 			## cardinality = 0..1
@@ -362,6 +380,11 @@ government_reform = {
 
 			## cardinality = 0..1
 			is_elective = bool
+			
+			## cardinality = 0..1
+			allow_banners = bool
+			## cardinality = 0..1
+			election_on_death = bool
 		}
 		
 		## cardinality = 0..1
@@ -427,6 +450,11 @@ government_reform = {
 		disallowed_trade_goods = {
 			## cardinality = 0..inf
 			<trade_good>
+		}
+		
+		## cardinality = 0..1
+		post_removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
 		}
 	}
 }
@@ -554,7 +582,7 @@ government = {
 			}
 		}
 		legacy_government = {
-			## cardinality = 1..inf
+			## cardinality = 0..inf
 			<government_reform.legacy>
 		}
 		## cardinality = 0..inf
