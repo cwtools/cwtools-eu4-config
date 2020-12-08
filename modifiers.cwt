@@ -296,6 +296,23 @@ modifiers = {
 	local_heir_mil = country
 	may_perform_slave_raid_on_same_religion = country
 	state_governing_cost = country
+	disengagement_chance = country
+	block_introduce_heir = country
+	may_recruit_female_generals = country
+	is_revolutionary_guard_modifier = country
+	special_unit_forcelimit = country
+	global_religious_conversion_resistance = country
+	local_religious_conversion_resistance = province
+	legitimate_subject_elector = country
+	mercantilism_cost = country
+	secondary_religion = country
+	monarch_lifespan = country
+	accept_vassalization_reasons = country
+	institution_growth = province
+	trade_company_governing_cost = country
+	expand_administration_cost = country
+	transfer_trade_power_reasons = country
+	relation_with_heretics = country
 }
 
 #These are the ones missed by the wiki
