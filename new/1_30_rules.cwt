@@ -493,6 +493,23 @@ alias[modifier:local_heir_mil] = int
 alias[modifier:cb_on_religious_enemies] = bool
 alias[modifier:may_perform_slave_raid_on_same_religion] = bool
 alias[modifier:state_governing_cost] = float
+alias[modifier:disengagement_chance] = float
+alias[modifier:block_introduce_heir] = bool
+alias[modifier:may_recruit_female_generals] = bool
+alias[modifier:is_revolutionary_guard_modifier] = bool
+alias[modifier:special_unit_forcelimit] = float
+alias[modifier:global_religious_conversion_resistance] = float
+alias[modifier:local_religious_conversion_resistance] = float
+alias[modifier:legitimate_subject_elector] = int
+alias[modifier:mercantilism_cost] = float
+alias[modifier:secondary_religion] = bool
+alias[modifier:monarch_lifespan] = float
+alias[modifier:accept_vassalization_reasons] = int
+alias[modifier:institution_growth] = int
+alias[modifier:trade_company_governing_cost] = float
+alias[modifier:expand_administration_cost] = float
+alias[modifier:transfer_trade_power_reasons] = int
+alias[modifier:relation_with_heretics] = int
 
 
 #Scopes
