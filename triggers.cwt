@@ -3748,6 +3748,10 @@ alias[trigger:same_continent] = scope[province]
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = <province_id>
 
+## scope = { capital_scope }
+###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
+alias[trigger:same_continent] = scope[capital_scope]
+
 ## scope = country
 ###Returns true the secondary religion of the country is X.
 alias[trigger:secondary_religion] = <religion>
