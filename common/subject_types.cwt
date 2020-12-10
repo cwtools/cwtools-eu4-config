@@ -153,11 +153,15 @@ subject_type = {
 	## cardinality = 0..1
 	base_liberty_desire = float
 	## cardinality = 0..1
+	liberty_desire_revolution = int
+	## cardinality = 0..1
 	liberty_desire_negative_prestige = float
 	## cardinality = 0..1
 	liberty_desire_development_ratio = float
 	## cardinality = 0..1
 	liberty_desire_same_dynasty = float
+	## cardinality = 0..1
+	liberty_desire_revolution = float
 	## cardinality = 0..1
 	###1.0 represents the amount payed by vassals
 	pays_overlord = float
@@ -324,6 +328,10 @@ subject_type = {
 	## cardinality = 0..1
 	knowledge_sharing = bool
 	## cardinality = 0..1
+	block_settlement_growth = bool
+	## cardinality = 0..1
+	allow_settlement_growth = bool
+	## cardinality = 0..1
 	sword_hunt = bool
 	## cardinality = 0..1
 	sankin_kotai = bool
@@ -380,3 +388,4 @@ subject_type = {
 	###If not "null" it will look for a modifier with that name in 00_opinion_modifiers.txt and other files in that directory.
 	subject_opinion_modifier = <opinion_modifier>
 }
+

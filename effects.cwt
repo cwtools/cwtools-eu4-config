@@ -514,6 +514,10 @@ alias[effect:add_papal_influence] = int
 alias[effect:add_reform_desire] = float
 
 ## scope = country
+###Adds or subtracts Catholic Reform Desire.
+alias[effect:add_reform_desire_scale] = float
+
+## scope = country
 ###Excommunicates the defined scope. If already excommunicated, removes excommunication.
 alias[effect:excommunicate] = scope[country]
 

@@ -57,6 +57,7 @@ enums = {
 		po_force_migration
 		po_transfer_vassals
 		po_dismantle_revolution
+		po_join_empire
 	}
 	enum[wargoal_types] = {
 		take_colony
@@ -73,6 +74,13 @@ enums = {
 	}
 }
 
+## scope = country
+### Used in cb types file.
+alias[trigger:can_use_peace_treaty] = {
+	who = scope[country]
+	who = enum[country_tags]
+	treaty = enum[peace_options]
+}
 
 casus_belli = {
 	war_goal = <wargoal_type>
@@ -252,3 +260,4 @@ wargoal_type = {
 	###Always deny annexation (even if other rules disallow)
 	deny_annex = bool
 }
+
