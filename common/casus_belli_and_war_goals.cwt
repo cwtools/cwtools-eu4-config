@@ -58,6 +58,8 @@ enums = {
 		po_transfer_vassals
 		po_dismantle_revolution
 		po_join_empire
+		po_spread_revolution
+		force_peasant_republic
 	}
 	enum[wargoal_types] = {
 		take_colony
@@ -213,6 +215,8 @@ wargoal_type = {
 		## cardinality = 0..1
 		badboy_factor = float
 		## cardinality = 0..1
+		is_excommunication = yes
+		## cardinality = 0..1
 		###Multiplied with any prestige increase normally associated with a peace option.
 		prestige_factor = float
 		## cardinality = 0..1
@@ -227,7 +231,8 @@ wargoal_type = {
 		}
 		## cardinality = 0..1
 		allowed_provinces_are_eligible = yes
-
+		
+		## cardinality = 0..1
 		peace_options = {
 			## cardinality = 1..inf
 			enum[peace_options]
@@ -260,4 +265,3 @@ wargoal_type = {
 	###Always deny annexation (even if other rules disallow)
 	deny_annex = bool
 }
-
