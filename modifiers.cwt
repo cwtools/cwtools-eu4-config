@@ -156,7 +156,7 @@ modifiers = {
 	mil_advisor_cost = country
 	yearly_absolutism = country
 	max_absolutism = country
-	max_states = country
+	governing_capacity = country
 	legitimacy = country
 	republican_tradition = country
 	devotion = country
@@ -391,6 +391,9 @@ alias[modifier:mercenary_manpower] = float
 
 ## scope = country
 alias[modifier:governing_capacity_modifier] = float
+
+## scope = country
+alias[modifier:governing_capacity] = int
 
 ## scope = country
 alias[modifier:manpower_in_true_faith_provinces] = float
