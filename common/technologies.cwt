@@ -36,7 +36,7 @@ technology = {
 	allowed_idea_groups = int
 
 	## cardinality = 0..1
-	max_states = int
+	governing_capacity = int
 	
 	## cardinality = 0..1
 	may_force_march = yes
