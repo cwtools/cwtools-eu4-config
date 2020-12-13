@@ -28,6 +28,10 @@ types = {
 			}
 		}
 	}
+	type[peace_options] = {
+		path = "game/common/peace_treaties"
+	}
+	
 }
 
 enums = {
@@ -59,7 +63,6 @@ enums = {
 		po_dismantle_revolution
 		po_join_empire
 		po_spread_revolution
-		force_peasant_republic
 	}
 	enum[wargoal_types] = {
 		take_colony
@@ -81,6 +84,7 @@ enums = {
 alias[trigger:can_use_peace_treaty] = {
 	who = scope[country]
 	who = enum[country_tags]
+	treaty = <peace_options>
 	treaty = enum[peace_options]
 }
 
@@ -140,8 +144,10 @@ casus_belli = {
 	independence = yes
 	## cardinality = 0..1
 	attacker_disabled_po = {
-		## cardinality = 1..inf
-		enum[peace_options]
+		## cardinality = 0..inf
+		<peace_options>
+		## cardinality = 0..inf
+		enum[peace_options]	
 	}
 }
 
@@ -158,10 +164,22 @@ wargoal_type = {
 	###Multiplied with the cost of the peace options in the peace treaty.
 	peace_cost_factor = float
 
+	## cardinality = 0..1				  
+	peace_options = {
+        ## cardinality = 1..inf
+        <peace_options>
+        ## cardinality = 1..inf
+        enum[peace_options]
+	}
 	## cardinality = 0..1
 	peace_options = {
-		## cardinality = 1..inf
-		enum[peace_options]
+			## cardinality = 1..inf
+			<peace_options>
+	}
+	## cardinality = 0..1
+	peace_options = {
+			## cardinality = 1..inf
+			enum[peace_options]
 	}
 	
 	## cardinality = 0..1
@@ -201,6 +219,16 @@ wargoal_type = {
 		
 		peace_options = {
 			## cardinality = 1..inf
+			<peace_options>
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
+		peace_options = {
+			## cardinality = 1..inf
+			<peace_options>
+		}
+		peace_options = {
+			## cardinality = 1..inf
 			enum[peace_options]
 		}
 
@@ -232,6 +260,18 @@ wargoal_type = {
 		## cardinality = 0..1
 		allowed_provinces_are_eligible = yes
 		
+		## cardinality = 0..1				  
+		peace_options = {
+			## cardinality = 1..inf
+			<peace_options>
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
+		## cardinality = 0..1
+		peace_options = {
+			## cardinality = 1..inf
+			<peace_options>
+		}
 		## cardinality = 0..1
 		peace_options = {
 			## cardinality = 1..inf
