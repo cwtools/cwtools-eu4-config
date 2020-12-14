@@ -147,6 +147,8 @@ alias[personality_modifier:lower_autonomy] = yes
 alias[personality_modifier:underestimate_ae] = yes
 alias[personality_modifier:wants_avoid_ugly_borders] = yes
 alias[personality_modifier:wants_threaten_war] = yes
+alias[personality_modifier:wants_ecumenical_council] = yes
+alias[personality_modifier:wants_to_appoint_cardinals_in_his_own_land] = yes
 
 alias[personality_modifier:easy_war_chance_multiplier] = float
 alias[personality_modifier:other_ai_help_us_multiplier] = float
