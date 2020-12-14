@@ -3549,29 +3549,85 @@ alias[trigger:region] = scope[province]
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = <religion>
 
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = <religion>
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = <religion>
+
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = enum[religion_new_variables]
+
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = enum[religion_new_variables]
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = enum[religion_new_variables]
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = scope[country]
 
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = scope[country]
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = scope[country]
+
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = enum[country_tags]
+
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = enum[country_tags]
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = enum[country_tags]
 
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = scope[province]
 
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = scope[province]
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = scope[province]
+
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = <province_id>
 
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = <province_id>
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = <province_id>
+
 ## scope = { country province }
 ###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
 alias[trigger:religion] = secondary
+
+## scope = { country }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:country_religion] = secondary
+
+## scope = { province }
+###Returns true if the country/province has religion X. Within province scope religion = secondary returns true if the province religion matches the secondary/syncretic religion of the owner.
+alias[trigger:province_religion] = secondary
 
 ## scope = { country province }
 ###Returns true if the country/province has a religion of the specified religious group.
