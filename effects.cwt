@@ -3169,3 +3169,19 @@ alias[effect:set_impirial_incident] = <impirial_incident>
 #There is also restore_country_name not sure what the difference is
 alias[effect:restore_country_name_effect] = yes
 
+## scope = country
+### Makes the current scope join all offensive wars of the specified scope
+alias[effect:join_all_offensive_wars_of] = scope[country]
+
+## scope = country
+### Makes the current scope join all offensive wars of the specified scope
+alias[effect:join_all_offensive_wars_of] = enum[country_tags]
+
+## scope = country
+### Makes the current scope join all defensive wars of the specified scope.
+alias[effect:join_all_defensive_wars_of] = scope[country]
+
+## scope = country
+### Makes the current scope join all defensive wars of the specified scope.
+alias[effect:join_all_defensive_wars_of] = enum[country_tags]
+
