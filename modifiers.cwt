@@ -313,6 +313,11 @@ modifiers = {
 	expand_administration_cost = country
 	transfer_trade_power_reasons = country
 	relation_with_heretics = country
+	free_city_imperial_authority = country
+	imperial_mercenary_cost = country
+	max_free_cities = country
+	max_electors = country
+	
 }
 
 #These are the ones missed by the wiki
@@ -401,3 +406,19 @@ alias[modifier:manpower_in_true_faith_provinces] = float
 ## scope = province
 ### Modifies the governing cost of the every province in the area
 alias[modifier:statewide_governing_cost] = float
+
+## scope = country
+### Adds to the rate of imperial authority gained per month from Free Cities
+alias[modifier:free_city_imperial_authority] = float
+
+## scope = country
+### Modifies the cost of mercenary companies for nations within the Holy Roman Empire
+alias[modifier:imperial_mercenary_cost] = float
+
+## scope = country
+### Adds to the maximum number of free cities allowed
+alias[modifier:max_free_cities] = int
+
+## scope = country
+### Adds to the maximum number of electors allowed
+alias[modifier:max_electors] = int
