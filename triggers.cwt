@@ -386,6 +386,10 @@ alias[trigger:colonial_claim_by_anyone_of_religion] = <religion>
 alias[trigger:colonial_claim_by_anyone_of_religion] = enum[country_tags]
 
 ## scope = province
+###Returns true if the scope province's colonial region been given as a colonial grant by any potential pope-like entities of the specified religion or country's religion.
+alias[trigger:colonial_claim_by_anyone_of_religion] = scope[country]
+
+## scope = province
 ###Returns true if the province is part of the colonial region X.
 alias[trigger:colonial_region] = <colonial_region>
 
