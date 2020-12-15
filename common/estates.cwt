@@ -94,6 +94,12 @@ estate = {
 	country_modifier_angry = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	###These scale with loyalty & power
+	land_ownership_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	
 	
 	base_influence = int
 
@@ -135,7 +141,7 @@ estate = {
 	}
 
 	## cardinality = 0..1
-	influence_from_dev_modifier = float[0.0..1.0]
+	influence_from_dev_modifier = float
 
 	## cardinality = 0..1
 	contributes_to_curia_treasury = yes
