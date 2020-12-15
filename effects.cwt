@@ -3185,3 +3185,6 @@ alias[effect:join_all_defensive_wars_of] = scope[country]
 ### Makes the current scope join all defensive wars of the specified scope.
 alias[effect:join_all_defensive_wars_of] = enum[country_tags]
 
+## scope = country
+###Part of Imperial Reforms - not on wiki or patch notes
+alias[effect:enable_imperial_realm_war] = bool
