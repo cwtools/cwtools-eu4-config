@@ -67,6 +67,7 @@ imperial_reform = {
 		gui_container = mainline
 		gui_container = left_branch
 		gui_container = right_branch
+		gui_container = nodlc
 		
 		## cardinality = 0..1
 		## push_scope = country
@@ -90,8 +91,6 @@ imperial_reform = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		## cardinality = 0..1
-		gui_container = { nodlc mainline }
 	}
 	subtype[china] = {
 		empire = celestial_empire
