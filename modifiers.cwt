@@ -317,6 +317,7 @@ modifiers = {
 	imperial_mercenary_cost = country
 	max_free_cities = country
 	max_electors = country
+	is_imperial_modifier = country
 	
 }
 
@@ -422,3 +423,7 @@ alias[modifier:max_free_cities] = int
 ## scope = country
 ### Adds to the maximum number of electors allowed
 alias[modifier:max_electors] = int
+
+## scope = country
+### Adds to the maximum number of electors allowed
+alias[modifier:is_imperial_modifier] = bool
