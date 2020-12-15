@@ -1604,3 +1604,12 @@ alias[trigger:num_of_states_owned_or_owned_by_non_sovereign_subjects_with] = {
 alias[trigger:expulsion_target] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+## scope = { country province }
+## push_scope = province
+###Refers to the colonial regions listed /Europa Universalis IV/common/colonial_regions/00_colonial_regions.txt
+alias[trigger:colonial_region_for_scope_province] = {
+	## cardinality = 0..1
+	type = enum[any_all]
+	alias_name[trigger] = alias_match_left[trigger]
+}
