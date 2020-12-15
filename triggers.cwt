@@ -3884,6 +3884,10 @@ alias[trigger:succession_claim] = enum[country_tags]
 ###Returns true if the province belongs to the superregion X.
 alias[trigger:superregion] = <superregion>
 
+## scope = province
+###Returns true if the province is part of the superregion X.
+alias[trigger:superregion] = scope[province]
+
 ## scope = country
 ###Returns true if the country is the specified country.
 alias[trigger:tag] = scope[any]
