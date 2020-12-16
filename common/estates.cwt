@@ -335,6 +335,7 @@ estate_interaction = {
 	key = localisation
 	random_seed = crown_land_share
 	random_seed = random
+	cooldown_months = int
 
 	## push_scope = country
 	trigger = {
