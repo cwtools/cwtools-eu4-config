@@ -77,8 +77,11 @@ alias[trigger:government] = enum[country_tags]
 alias[trigger:has_estate_privilege] = <estate_privilege>
 
 ## scope = country
-###Returns the % of the country's development that is held by the Crown Land.  Normally a whole number but can be smaller than 1.
-alias[trigger:crown_land_share] = float
+###Returns the % of the country's development that is held by the Crown Land.
+alias[trigger:crown_land_share] = int[1..100]
+## scope = country
+###Returns the % of the country's development that is held by the Crown Land.
+alias[trigger:crown_land_share] = 0.1
 
 ## scope = country
 ###Returns if the country has been force converted by a specified other country.
