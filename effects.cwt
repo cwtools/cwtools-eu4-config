@@ -1538,6 +1538,20 @@ alias[effect:add_estate_influence_modifier] = {
 	duration = int
 	## cardinality = 0..1
 	add = yes
+	## cardinality = 0..1
+	short = yes
+}
+## scope = country
+###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
+alias[effect:add_estate_influence_modifier] = {
+	estate = all
+	desc = localisation
+	influence = int
+	duration = int
+	## cardinality = 0..1
+	add = yes
+	## cardinality = 0..1
+	short = yes
 }
 
 ## scope = country
@@ -1548,7 +1562,12 @@ alias[effect:add_estate_loyalty] = {
 	## cardinality = 0..1
 	short = yes
 }
-
+alias[effect:add_estate_loyalty] = {
+	estate = all
+	loyalty = int
+	## cardinality = 0..1
+	short = yes
+}
 ## scope = country
 ###Adds a loyalty modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty_modifier] = {
