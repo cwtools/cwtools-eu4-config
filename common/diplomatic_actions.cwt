@@ -3,13 +3,6 @@ types = {
 	type[diplomatic_action] = {
 		path = "game/common/diplomatic_actions"
 	}
-	type[new_diplomatic_action] = {
-		path = "game/common/new_diplomatic_actions"
-		
-		subtype[static_actions] = {
-			## type_filter_key = static_actions
-		}
-	}
 }
 
 
@@ -36,110 +29,5 @@ diplomatic_action = {
 	## replace_scope = { this = country root = country from = country }
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
-	}
-}
-
-
-#This is based on two examples, so may have inaccuracies - please report any you see.
-new_diplomatic_action = {
-	subtype[static_actions] = {
-		## cardinality = 1..inf
-		scalar = {
-			alert_index = int
-			alert_tooltip = localisation #possibly scalar
-		}
-	}
-	subtype[!static_actions] = {
-		category = influence
-
-		###Can the other side decline?
-		require_acceptance = bool
-		
-		## cardinality = 0..1
-		alert_index = int
-		## cardinality = 0..1
-		alert_tooltip = localisation
-		
-		## replace_scope = { this = country root = country from = country }
-		is_visible = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## replace_scope = { this = country root = country from = country }
-		is_allowed = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
-		## replace_scope = { this = country root = country from = country }
-		on_accept = {
-			alias_name[effect] = alias_match_left[effect]
-		}
-		## cardinality = 0..1
-		## replace_scope = { this = country root = country from = country }
-		on_accept = {
-			alias_name[effect] = alias_match_left[effect]
-		}
-		
-		
-		## cardinality = 0..1
-		###This works similarly to variable_arithmetic_trigger, but does not support triggers generally. Instead, "limit" will be evaluated first and the rest ignored if it isn't passed.
-		ai_acceptance = {
-			## cardinality = 1..inf
-			## replace_scope = { this = country root = country from = country }
-			add_entry = {
-				name = localisation
-				limit = {
-					alias_name[trigger] = alias_match_left[trigger]
-				}
-				
-				
-				## cardinality = 0..inf
-				export_to_variable = {
-					enum[which_varname] = ai_value
-					value = enum[export_to_variable_data]
-					## cardinality = 0..1
-					who = scope[country]
-					## cardinality = 0..1
-					with = scope[country]
-				}
-				
-				## cardinality = 0..inf
-				multiply_variable = {
-					which = ai_value
-					value = float
-				}
-				
-				## cardinality = 0..inf
-				subtract_variable = {
-					which = ai_value
-					value = float
-				}
-
-				## cardinality = 0..inf
-				change_variable = {
-					which = ai_value
-					value = float
-				}
-				
-				## cardinality = 0..inf
-				check_variable = {
-					cardinality = 2..2
-					which = ai_value
-					cardinality = 2..2
-					which = value[variable]
-				}
-				
-				## cardinality = 0..inf
-				is_variable_equal = {
-					cardinality = 2..2
-					which = ai_value
-					cardinality = 2..2
-					which = value[variable]
-				}
-			}
-		}
-		
-		## replace_scope = { this = country root = country from = country }
-		ai_will_do = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
 	}
 }

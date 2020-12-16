@@ -117,6 +117,9 @@ rebel_type = {
 	general = bool
 	smart = bool
 	
+	## cardinality = 0..1
+	revolutionary = bool
+	
 	artillery = float[0.0..1.0]
 	infantry = float[0.0..1.0]
 	cavalry = float[0.0..1.0]

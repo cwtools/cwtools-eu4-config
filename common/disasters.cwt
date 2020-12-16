@@ -14,6 +14,9 @@ types = {
 
 
 disaster = {
+	## cardinality = 0..1
+	ended_by_country_breaking_to_rebels = no
+
 	## replace_scope = { root = country this = country }
 	###Determines whether the disaster is visible.
 	potential = {
@@ -62,6 +65,7 @@ disaster = {
 	## cardinality = 0..1
 	stability_hit_on_war = int[1..6]
 
+	## cardinality = 0..1
 	###Event fired on the disaster's progress reaching 100 and the disaster officially starting.
 	on_start = <event.country>
 

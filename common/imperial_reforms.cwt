@@ -8,7 +8,6 @@ types = {
 		subtype[china] = {
 			empire = celestial_empire
 		}
-		
 		subtype[member] = {
 			member = scalar
 		}
@@ -24,7 +23,7 @@ types = {
 		subtype[elector_per_prince] = {
 			elector_per_prince = scalar
 		}
-
+		
 		localisation = {
 			## required
 			name = "$_title"
@@ -68,7 +67,13 @@ imperial_reform = {
 		gui_container = mainline
 		gui_container = left_branch
 		gui_container = right_branch
+		gui_container = nodlc
 		
+		## cardinality = 0..1
+		## push_scope = country
+		all = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
 		## cardinality = 0..1
 		## push_scope = province
 		province = {
@@ -86,8 +91,6 @@ imperial_reform = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		## cardinality = 0..1
-		gui_container = { nodlc mainline }
 	}
 	subtype[china] = {
 		empire = celestial_empire
