@@ -846,6 +846,12 @@ alias[trigger:estate_loyalty] = {
 	estate = <estate>
 	loyalty = int[0..100]
 }
+## scope = country
+###Returns true if the estate X in the country has at least Y loyalty.
+alias[trigger:estate_loyalty] = {
+	estate = all
+	loyalty = int[0..100]
+}
 
 ## scope = country
 ###Returns true if the estate X in the country controls at least Y% of the total development.
@@ -3818,6 +3824,10 @@ alias[trigger:secondary_religion] = <religion>
 
 ## scope = country
 ###Returns true the secondary religion of the country is X.
+alias[trigger:secondary_religion] = scope[province]
+
+## scope = country
+###Returns true the secondary religion of the country is X.
 alias[trigger:secondary_religion] = enum[religion_new_variables]
 
 ## scope = country
@@ -4612,6 +4622,9 @@ alias[trigger:has_reform_level] = int
 
 ## scope = province
 alias[trigger:trade_company_region] = <trade_company>
+## scope = province
+alias[trigger:trade_company_region] = scope[province]
+
 
 ## scope = country
 ###Checks whether the country has large debts (multiple loans, to be confirmed how many - returned false with two but true with ten). Note: "No" is treated as a "yes" so use NOT = { is_in_large_debt = yes }
@@ -4775,6 +4788,12 @@ alias[trigger:hegemon_strength] = int[0..100]
 ## scope = country
 alias[trigger:humiliated_by] = scope[country]
 
-
 ## scope = country
 alias[trigger:humiliated_by] = enum[country_tags]
+
+## scope = country
+### Returns true if the current income balance is X
+alias[trigger:current_income_balance] = float
+
+## scope = country
+alias[trigger:cossacks_percentage] = float
