@@ -328,7 +328,10 @@ types = {
 		subtype[on_change_revolution_target] = { }
         ## type_key_filter = on_golden_bull_enacted
 		subtype[on_golden_bull_enacted] = { }
-		
+		## type_key_filter = on_conquest
+		subtype[on_conquest] = { }
+		## type_key_filter = on_country_creation
+		subtype[on_country_creation] = { }
 	}
 }
 on_action = {
@@ -3064,6 +3067,40 @@ on_action = {
 	}
     ## replace_scope = { root = province this = country from = country }
     subtype[on_conquest] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+    subtype[on_change_revolution_target] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+    subtype[on_country_creation] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
