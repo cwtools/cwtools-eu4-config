@@ -41,7 +41,7 @@ decision = {
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	ai_will_do = {
-		factor = int[0..1]
+		factor = int[0..400]
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 
@@ -54,4 +54,3 @@ decision = {
 	## cardinality = 0..inf
 	do_not_core = <province_id>
 }
-
