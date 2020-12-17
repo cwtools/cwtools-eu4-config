@@ -1613,3 +1613,10 @@ alias[trigger:colonial_region_for_scope_province] = {
 	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+## push_scope = unit
+## scope = unit
+###Returns the enemy unit's scope.
+alias[trigger:enemy_unit] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
