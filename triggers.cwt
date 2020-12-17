@@ -110,7 +110,6 @@ alias[trigger:ai_attitude] = {
 	who = enum[country_tags]
 	attitude = enum[attitudes]
 }
-
 ## scope = country
 ###Returns true if the country has an alliance with X.
 alias[trigger:alliance_with] = scope[any]
@@ -851,6 +850,12 @@ alias[trigger:estate_loyalty] = {
 alias[trigger:estate_loyalty] = {
 	estate = all
 	loyalty = int[0..100]
+}
+## scope = country
+###Returns true if the estate X in the country has at least Y loyalty.
+alias[trigger:estate_loyalty] = {
+	estate = <estate>
+	higher_than_influence = yes
 }
 
 ## scope = country
