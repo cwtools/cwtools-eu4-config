@@ -1619,6 +1619,9 @@ alias[effect:set_ruler_flag] = value_set[ruler_flag]
 ## scope = country
 ###Clears a ruler flag for the current scope's ruler.
 alias[effect:clr_ruler_flag] = value[ruler_flag]
+## scope = country
+###Clears a ruler flag for the current scope's ruler.
+alias[effect:clr_ruler_flag] = marriage_length #flag maybe set by exe???
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
