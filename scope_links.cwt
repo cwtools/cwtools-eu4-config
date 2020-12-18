@@ -1620,3 +1620,10 @@ alias[trigger:colonial_region_for_scope_province] = {
 alias[trigger:enemy_unit] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+## scope = trade_node
+## push_scope = country
+###Any country active in trade node.
+alias[trigger:any_country_active_in_node] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
