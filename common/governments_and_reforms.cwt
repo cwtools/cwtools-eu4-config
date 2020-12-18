@@ -149,6 +149,7 @@ government_reform = {
 
 	subtype[new] = {
 		legacy_equivalent = <government_reform.legacy>
+		legacy_equivalent = enum[hardcoded_legacygovernments]
 		
 		## cardinality = 0..1
 		assimilation_cultures = {
@@ -561,6 +562,67 @@ enums = {
 		tribal_martial_society
 		tribal_religious_society
 	}
+	enum[hardcoded_legacygovernments] = {
+		administrative_monarchy
+		administrative_republic
+		ambrosian_republic_legacy
+		american_republic_legacy
+		black_market_consortium_government
+		bureaucratic_despotism
+		celestial_empire_legacy
+		colonial_government_legacy
+		constitutional_monarchy
+		constitutional_republic
+		cossacks_legacy_reform
+		daimyo_legacy
+		despotic_monarchy
+		dutch_republic_legacy
+		elective_monarchy_legacy
+		english_monarchy_legacy
+		enlightened_despotism
+		federal_republic_legacy
+		feudal_monarchy
+		feudal_theocracy_legacy
+		holy_state_legacy
+		holy_state_legacy
+		imperial_city
+		indep_daimyo_legacy
+		iqta_legacy
+		mamluk_government_legacy
+		merchant_republic
+		military_dictatorship
+		monastic_order_government
+		native_council_legacy
+		noble_republic
+		oligarchic_republic
+		ottoman_government_legacy
+		papal_government
+		peasants_republic_legacy
+		pirate_kingdom
+		pirate_republic
+		principality_legacy
+		protectorate_parliament_legacy
+		prussian_monarchy_legacy
+		prussian_republic
+		republican_dictatorship
+		revolutionary_empire
+		revolutionary_republic
+		shogunate_legacy
+		siberian_native_council
+		signoria
+		steppe_horde_legacy
+		theocratic_government
+		trading_city_legacy
+		tribal_democracy_legacy
+		tribal_despotism_legacy
+		tribal_federation_legacy
+		tribal_kingdom_legacy
+		tsardom_legacy
+		united_cantons_legacy
+		veche_republic_legacy
+		venetian_merchant_republic
+		war_against_the_world_government
+	}
 }
 
 
@@ -584,6 +646,8 @@ government = {
 		legacy_government = {
 			## cardinality = 0..inf
 			<government_reform.legacy>
+			## cardinality = 0..inf
+			enum[hardcoded_legacygovernments]
 		}
 		## cardinality = 0..inf
 		exclusive_reforms = {
@@ -596,6 +660,26 @@ government = {
 		<government_reform> = {
 			government = <government>
 			legacy_government = <government_reform.legacy>
+			## cardinality = 0..inf
+			enum[hardcoded_legacygovernments]
+		}
+		tribal_democracy = {
+			government = <government>
+			legacy_government = <government_reform.legacy>
+			## cardinality = 0..inf
+			legacy_government = enum[hardcoded_legacygovernments]
+		}
+		native_council = {
+			government = <government>
+			legacy_government = <government_reform.legacy>
+			## cardinality = 0..inf
+			legacy_government = enum[hardcoded_legacygovernments]
+		}
+		all_mechanics = {
+			government = <government>
+			legacy_government = <government_reform.legacy>
+			## cardinality = 0..inf
+			legacy_government = enum[hardcoded_legacygovernments]
 		}
 	}
 }
