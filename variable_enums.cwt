@@ -34,6 +34,8 @@ enums = {
 		trigger_value:base_manpower
 		trigger_value:base_production
 		trigger_value:base_tax
+		trigger_value:production_income_percentage
+		trigger_value:trade_income_percentage
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture

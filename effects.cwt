@@ -796,7 +796,7 @@ alias[effect:add_sailors] = float[-1.0..1.0]
 
 ## scope = country
 ###Adds manpower to the current scope, as a percentage of total yearly manpower. 1 is equal to 100% of total yearly manpower.
-alias[effect:add_yearly_manpower] = float[-10.0..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
+alias[effect:add_yearly_manpower] = float[-10.0..15.0] # ming crisis uses 15
 
 ## scope = country
 ###Adds sailors to the current scope, as a percentage of total yearly sailors. 1 is equal to 100% of total yearly sailors.
@@ -2633,6 +2633,8 @@ alias[effect:spawn_rebels] = {
 	leader_dynasty = localisation_synced
 	## cardinality = 0..1
 	as_if_faction = yes
+	## cardinality = 0..1
+	use_monarch_as_leader = yes
 }
 
 ## scope = province
@@ -3207,3 +3209,15 @@ alias[effect:join_all_defensive_wars_of] = enum[country_tags]
 ## scope = country
 ###Part of Imperial Reforms - not on wiki or patch notes
 alias[effect:enable_imperial_realm_war] = bool
+
+## scope = country
+###Council of Trent
+alias[effect:enable_council] = yes
+
+## scope = country
+###Council of Trent
+alias[effect:finish_council] = yes
+
+## scope = mercenary_company
+###Mercenary leader becomes regular general
+alias[effect:convert_leader_to_general] = yes

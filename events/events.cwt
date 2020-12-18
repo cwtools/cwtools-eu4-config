@@ -80,6 +80,10 @@ event = {
 	## cardinality = 0..1
 	###If yes, every country will be notified which options are selected.
 	major = bool
+	
+	## cardinality = 0..1
+	###Only displays the event to country validating the trigger
+	major_trigger = { alias_name[trigger] = alias_match_left[trigger] }
 
 	## cardinality = 0..1
 	is_triggered_only = bool

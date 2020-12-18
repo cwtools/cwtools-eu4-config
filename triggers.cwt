@@ -3507,7 +3507,10 @@ alias[trigger:province_distance] = {
 	who = <province_id>
 	distance = int
 }
-
+alias[trigger:province_distance] = {
+	who = scope[province]
+	distance = int
+}
 ## scope = province
 ###Returns true if the province has the ID X or the same ID as the specified province scope.
 alias[trigger:province_id] = <province_id>
@@ -4802,3 +4805,4 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
+
