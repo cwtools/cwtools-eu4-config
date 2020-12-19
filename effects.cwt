@@ -801,7 +801,7 @@ alias[effect:add_yearly_manpower] = float[-10.0..15.0] # ming crisis uses 15
 
 ## scope = country
 ###Adds sailors to the current scope, as a percentage of total yearly sailors. 1 is equal to 100% of total yearly sailors.
-alias[effect:add_yearly_sailors] = float[-10.0..10.0] #I am assuming no one wants to add more than 10 years of manpower to a country
+alias[effect:add_yearly_sailors] = float[-10.0..20.0] #I am assuming no one wants to add more than 20 years of manpower to a country
 
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
