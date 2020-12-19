@@ -1214,9 +1214,9 @@ alias[trigger:has_empty_adjacent_province] = yes
 ###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
 alias[trigger:has_estate] = <estate>
 
-# ## scope = { province }
-# ###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
-# alias[trigger:has_estate] = bool
+## scope = { country province }
+###Return true if the province has no estate (province scope) or the country has no estates (country scope)
+alias[trigger:has_estate] = bool
 
 ## scope = country
 ###Returns true if the estate X in the country has the influence modifier Y.
@@ -1390,6 +1390,8 @@ alias[trigger:has_leader_with] = {
 	siege = int
 	## cardinality = 0..1
 	total_pips = int
+	## cardinality = 0..1
+	is_monarch_leader = yes
 }
 
 ## scope = province
@@ -1889,7 +1891,7 @@ alias[trigger:infantry_in_province] = int
 
 ## scope = country
 ###Returns true if the country has an inflation of at least X, or t least as much inflation as the country X.
-alias[trigger:inflation] = int
+alias[trigger:inflation] = float
 
 ## scope = country
 ###Returns true if the country has an inflation of at least X, or t least as much inflation as the country X.
@@ -4805,4 +4807,5 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
+
 
