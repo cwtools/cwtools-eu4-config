@@ -134,6 +134,9 @@ region = {
 
 superregion = {
 	## cardinality = 0..inf
+	restrict_charter
+
+	## cardinality = 0..inf
 	<region>
 }
 

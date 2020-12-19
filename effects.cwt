@@ -1,4 +1,5 @@
 
+
 ## scope = any
 alias[effect:<scripted_effect>] = yes
 
@@ -1619,9 +1620,6 @@ alias[effect:set_ruler_flag] = value_set[ruler_flag]
 ## scope = country
 ###Clears a ruler flag for the current scope's ruler.
 alias[effect:clr_ruler_flag] = value[ruler_flag]
-## scope = country
-###Clears a ruler flag for the current scope's ruler.
-alias[effect:clr_ruler_flag] = marriage_length #flag maybe set by exe???
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
@@ -3075,6 +3073,9 @@ alias[effect:set_capital] = <province_id>
 alias[effect:add_government_reform] = <government_reform.new>
 
 ## scope = country
+alias[effect:add_government_reform] = enum[hardcoded_legacygovernments]
+
+## scope = country
 alias[effect:end_incident] = <incident>
 
 
@@ -3086,6 +3087,10 @@ alias[effect:rajput_infantry] = enum[country_tags]
 
 ## scope = country
 alias[effect:remove_government_reform] = <government_reform.new>
+
+## scope = country
+alias[effect:remove_government_reform] = enum[hardcoded_legacygovernments]
+
 
 ## scope = country
 ###Adds a loan to a country. interest_modifier: Adds or subtracts a value from the base interest value. fixed_interest: Interest will be the specified value. duration: Sets the amount of months before the loan is due. estate_loan = yes: Means that if a country has this loan, has_estate_loan will return true.
@@ -3224,3 +3229,7 @@ alias[effect:finish_council] = yes
 ## scope = mercenary_company
 ###Mercenary leader becomes regular general
 alias[effect:convert_leader_to_general] = yes
+
+## scope = country
+###Switches to the given government type.  No effect if Dharma is active.
+alias[effect:set_legacy_government] = enum[hardcoded_legacygovernments]
