@@ -2628,7 +2628,7 @@ alias[trigger:likely_rebels] = <rebel_type>
 
 ## scope = province
 ###Returns true if the province has a local autonomy of at least X.
-alias[trigger:local_autonomy] = float[0.5..100.0]
+alias[trigger:local_autonomy] = float[0.1..100.0]
 
 ## scope = province
 ###Returns true if the province's local autonomy is at least X above the local development's minimum value.
@@ -3940,7 +3940,7 @@ alias[trigger:technology_group] = scope[country]
 ###Returns true if the country has the technology group X, or if the countries have the same technology group.
 alias[trigger:technology_group] = enum[country_tags]
 
-## scope = { province }
+## scope = { province country }
 ###Returns true if the country has a tolerance of at least X towards the religion of the country or scoped province.
 alias[trigger:tolerance_to_this] = int
 
@@ -4641,7 +4641,7 @@ alias[trigger:trade_company_region] = scope[province]
 alias[trigger:is_in_large_debt] = yes
 
 ## scope = province
-alias[trigger:province_is_on_an_island] = yes
+alias[trigger:province_is_on_an_island] = bool
 
 ## scope = country
 alias[trigger:ai_wants_raise_cossack] = bool
@@ -4807,5 +4807,4 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
-
 
