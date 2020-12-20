@@ -796,6 +796,16 @@ aspects_and_blessings = {
 	subtype[church_aspect] = {
 		## cardinality = 0..1
 		sprite = <sprite>
+		## cardinality = 0..1
+		sprite = gfx/interface/divorce_consort_icon.dds
+		## cardinality = 0..1
+		sprite = gfx/interface/marry_local_suitor_icon.dds
+		## cardinality = 0..1
+		sprite = gfx/interface/dissolve_monasteries_icon.dds
+		## cardinality = 0..1
+		sprite = gfx/interface/grant_monopoly_icon.dds
+		## cardinality = 0..1
+		sprite = gfx/interface/progress_of_the_supreme_governor_icon.dds
 		cost = int
 	}
 	## cardinality = 0..1
