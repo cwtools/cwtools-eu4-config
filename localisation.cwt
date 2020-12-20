@@ -68,4 +68,6 @@ localisation_commands = {
 	GetCachedAgendasFlavorText = country
 	GetParliamentName = country
 	GetParliamentWithGrammer = country
+	Leader = unit
+	Location = unit
 }
