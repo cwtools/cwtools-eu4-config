@@ -88,27 +88,9 @@ types = {
         subtype[on_parliament_debate_failed] = { }
         ## type_key_filter = on_parliament_debate_succeeded
         subtype[on_parliament_debate_succeeded] = { }
-        ## type_key_filter = on_harmonized_pagan
-        subtype[on_harmonized_pagan] = { }
-        ## type_key_filter = on_harmonized_christian
-        subtype[on_harmonized_christian] = { }
-        ## type_key_filter = on_harmonized_muslim
-        subtype[on_harmonized_muslim] = { }
-        ## type_key_filter = on_harmonized_jewish_group
-        subtype[on_harmonized_jewish_group] = { }
-        ## type_key_filter = on_harmonized_zoroastrian_group
-        subtype[on_harmonized_zoroastrian_group] = { }
-        ## type_key_filter = on_harmonized_dharmic
-        subtype[on_harmonized_dharmic] = { }
-        ## type_key_filter = on_harmonized_mahayana
-        subtype[on_harmonized_mahayana] = { }
-        ## type_key_filter = on_harmonized_buddhism
-        subtype[on_harmonized_buddhism] = { }
-        ## type_key_filter = on_harmonized_shinto
-        subtype[on_harmonized_shinto] = { }
-        ## type_key_filter = on_harmonized_vajrayana
-        subtype[on_harmonized_vajrayana] = { }
-        ## type_key_filter = on_gain_great_power_status
+		## starts_with = on_harmonized_
+        subtype[on_harmonized_religiongroup] = { }
+		## type_key_filter = on_gain_great_power_status
         subtype[on_gain_great_power_status] = { }
         ## type_key_filter = on_lose_great_power_status
         subtype[on_lose_great_power_status] = { }
@@ -335,8 +317,7 @@ types = {
 	}
 }
 on_action = {
-
-    ## replace_scope = { root = country this = country }
+	## replace_scope = { root = country this = country }
     subtype[on_startup] = {
         ## cardinality = 0..1
         events = {
@@ -655,9 +636,11 @@ on_action = {
             int = 0
             ## cardinality = 0..inf
             int = <event.country>
-        }
+		}
 
         alias_name[effect] = alias_match_left[effect]
+		## cardinality = 0..1
+		clr_ruler_flag = marriage_length
     }
     ## replace_scope = { root = country this = country }
     subtype[on_new_heir] = {
@@ -1068,160 +1051,7 @@ on_action = {
         alias_name[effect] = alias_match_left[effect]
     }
     ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_pagan] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_christian] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_muslim] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_jewish_group] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_zoroastrian_group] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_dharmic] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_mahayana] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_buddhism] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_shinto] = {
-        ## cardinality = 0..1
-        events = {
-            ## cardinality = 0..inf
-            <event.country>
-        }
-        ## cardinality = 0..1
-        random_events = {
-            ## cardinality = 0..inf
-            int = 0
-            ## cardinality = 0..inf
-            int = <event.country>
-        }
-
-        alias_name[effect] = alias_match_left[effect]
-    }
-    ## replace_scope = { root = country this = country }
-    subtype[on_harmonized_vajrayana] = {
+    subtype[on_harmonized_religiongroup] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
