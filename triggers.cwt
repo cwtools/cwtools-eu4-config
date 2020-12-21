@@ -3294,6 +3294,10 @@ alias[trigger:num_of_unlocked_cults] = int
 alias[trigger:vassal] = int
 
 ## scope = country
+###Returns true if the country has at least X vassals.
+alias[trigger:<subject_type>] = int
+
+## scope = country
 ###Returns true if the country receives war reparations from at least X countries, or from at least as many countries as the specified country.
 alias[trigger:num_of_war_reparations] = int
 
@@ -4807,4 +4811,3 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
-
