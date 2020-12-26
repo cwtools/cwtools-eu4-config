@@ -351,6 +351,7 @@ alias[trigger:cavalry_in_province] = enum[country_tags]
 ###Returns true if the specified variable is at least X.
 alias[trigger:check_variable] = {
 	## cardinality = 1..2
+	## severity = warning
 	which = value[variable]
 	## cardinality = 0..1
 	value = float
@@ -977,6 +978,7 @@ alias[trigger:had_consort_flag] = {
 ## scope = country
 ###Returns true if the country flag X was last set for the country at least Y days ago.
 alias[trigger:had_country_flag] = {
+	## severity = warning
 	flag = value[country_flag]
 	days = int
 }
@@ -1135,6 +1137,7 @@ alias[trigger:has_construction] = <building>
 
 ## scope = country
 ###Returns true if the flag X is set for the country.
+## severity = warning
 alias[trigger:has_country_flag] = value[country_flag]
 
 ## scope = country
@@ -1529,6 +1532,7 @@ alias[trigger:has_ruler] = localisation_synced #value[ruler_name]
 
 ## scope = country
 ###Returns true if the ruler flag X is set for the country.
+## severity = warning
 alias[trigger:has_ruler_flag] = value[ruler_flag]
 
 ## scope = province
