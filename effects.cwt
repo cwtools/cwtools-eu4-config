@@ -160,6 +160,7 @@ alias[effect:set_country_flag] = value_set[country_flag]
 
 ## scope = country
 ###Clears a defined country flag for the current scope.
+## severity = warning
 alias[effect:clr_country_flag] = value[country_flag]
 
 ## scope = country
@@ -1619,6 +1620,7 @@ alias[effect:set_ruler_flag] = value_set[ruler_flag]
 
 ## scope = country
 ###Clears a ruler flag for the current scope's ruler.
+## severity = warning
 alias[effect:clr_ruler_flag] = value[ruler_flag]
 
 ## scope = country
@@ -1691,6 +1693,7 @@ alias[effect:exile_ruler_as] = value_set[exiled_ruler]
 
 ## scope = country
 ###Makes an exiled ruler the ruler of the current scope.
+## severity = warning
 alias[effect:set_ruler] = value[exiled_ruler]
 
 ## scope = country
@@ -2060,6 +2063,7 @@ alias[effect:exile_heir_as] = value_set[exiled_heir]
 
 ## scope = country
 ###Makes an exiled heir the heir of the current scope.
+## severity = warning
 alias[effect:set_heir] = value[exiled_heir]
 
 ## scope = country
