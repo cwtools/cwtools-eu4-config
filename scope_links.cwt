@@ -243,6 +243,12 @@ alias[effect:trigger_switch] = {
 	scalar = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+	## cardinality = 0..1
+	advisor_events_adm = { kill_advisor_by_category_effect = { ADM = yes } }
+	## cardinality = 0..1
+	advisor_events_dip = { kill_advisor_by_category_effect = { DIP = yes } }
+	## cardinality = 0..1
+	advisor_events_mil = { kill_advisor_by_category_effect = { MIL = yes } }
 }
 
 ## scope = any
@@ -1614,8 +1620,8 @@ alias[trigger:colonial_region_for_scope_province] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## push_scope = unit
 ## scope = unit
+## push_scope = unit
 ###Returns the enemy unit's scope.
 alias[trigger:enemy_unit] = {
 	alias_name[trigger] = alias_match_left[trigger]
