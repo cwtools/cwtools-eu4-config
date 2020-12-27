@@ -3241,3 +3241,7 @@ alias[effect:set_legacy_government] = enum[hardcoded_legacygovernments]
 ## scope = country
 ###Clears scripted_personalities.
 alias[effect:clear_scripted_personalities] = yes
+
+## scope = country
+###Clears estate agenda cache.
+alias[effect:clear_estate_agenda_cache] = scope[country]

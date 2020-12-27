@@ -856,7 +856,7 @@ alias[trigger:estate_loyalty] = {
 ###Returns true if the estate X in the country has at least Y loyalty.
 alias[trigger:estate_loyalty] = {
 	estate = <estate>
-	higher_than_influence = yes
+	higher_than_influence = bool
 }
 
 ## scope = country
