@@ -3245,3 +3245,20 @@ alias[effect:clear_scripted_personalities] = yes
 ## scope = country
 ###Clears estate agenda cache.
 alias[effect:clear_estate_agenda_cache] = scope[country]
+
+## scope = province
+###Spawns the defined rebels in the current province scope. Rebel types found in /Europa Universalis IV/common/rebel_types/*.txt. Note: the size of revolts follows this formula: number of regiments = round[(4 + 0.3 * total development) * (1 + 0.03 * technology level) * rebellion size]
+alias[effect:spawn_small_scaled_rebels] = {
+	## cardinality = 0..1
+	type = <rebel_type>
+	## cardinality = 0..1
+	no_defined_leader = yes
+}
+## scope = province
+###Spawns the defined rebels in the current province scope. Rebel types found in /Europa Universalis IV/common/rebel_types/*.txt. Note: the size of revolts follows this formula: number of regiments = round[(4 + 0.3 * total development) * (1 + 0.03 * technology level) * rebellion size]
+alias[effect:spawn_large_scaled_rebels] = {
+	## cardinality = 0..1
+	type = <rebel_type>
+	## cardinality = 0..1
+	no_defined_leader = yes
+}
