@@ -186,9 +186,9 @@ subject_type = {
 	##replace_scope = { root = country this = country from = country }
 	###Root = subject, from = overlord.
 	can_fight = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		same_overlord = <subject_type>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		other_overlord = <subject_type>
 		## cardinality = 0..1
 		other_overlord = all
@@ -205,9 +205,9 @@ subject_type = {
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_rival = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		same_overlord = <subject_type>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		other_overlord = <subject_type>
 		## cardinality = 0..1
 		other_overlord = all
@@ -224,9 +224,9 @@ subject_type = {
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_ally = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		same_overlord = <subject_type>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		other_overlord = <subject_type>
 		## cardinality = 0..1
 		other_overlord = all
@@ -243,9 +243,9 @@ subject_type = {
 	###Root = subject, from = overlord.
 	##replace_scope = { root = country this = country from = country }
 	can_marry = {
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		same_overlord = <subject_type>
-		## cardinality = 0..1
+		## cardinality = 0..inf
 		other_overlord = <subject_type>
 		## cardinality = 0..1
 		other_overlord = all
