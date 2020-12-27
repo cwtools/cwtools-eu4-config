@@ -13,7 +13,7 @@ custom_loc = {
 	###Appears to default to yes.
 	random = no
 
-	## cardinality = 2..inf
+	## cardinality = 1..inf
 	text = {
 		localisation_key = scalar #localisation but only in correct language so turned off. Turn on to verify.
 
