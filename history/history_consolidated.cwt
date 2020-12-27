@@ -270,6 +270,8 @@ province_history = {
 
 	subtype[!not_sea] = {
 		## cardinality = 0..inf
+		# set to warning instead of error as some people like to have future history for wastelands in scenario editor
+		## severity = warning
 		date_field = {
 			## cardinality = 0..inf
 			discovered_by = enum[country_tags]
