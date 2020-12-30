@@ -11,7 +11,8 @@ types = {
 default_map = {
 	width = int
 	height = int
-	max_provinces = int
+	### There is an unknown minimum number required due to a paradox bug. If a custom map is crashing try a higher number.
+	max_provinces = int[2300..inf]
 	
 	sea_starts = {
 		## cardinality = 0..inf
@@ -62,3 +63,4 @@ default_map = {
 		int[0..255]
 	}
 }
+
