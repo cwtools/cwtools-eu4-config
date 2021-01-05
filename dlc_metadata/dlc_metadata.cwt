@@ -49,11 +49,13 @@ dlc_info = {
 	show_example_image = yes
 	## cardinality = 0..1
 	show_example_image_tooltips = yes
+	## cardinality = 0..1
+	icon = scalar
 }
 
 dlc_recommendation = {
 	## cardinality = 0..inf
-	<dlc_info> = {
+	enum[DLCNUM] = {
 		## cardinality = 0..inf
 		reason = {
 			tooltip_desc = localisation
