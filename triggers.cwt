@@ -4777,7 +4777,6 @@ alias[trigger:expelled_different_minorities] = int
 alias[trigger:has_non_generic_missions] = bool
 
 ## scope = country
-## severity = warning
 ###Returns true if the province culture is X, or the same as the specified scope.
 alias[trigger:culture] = <culture>
 
