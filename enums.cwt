@@ -78,6 +78,7 @@ enums = {
 		"Women in History"
 		"Golden Century"
 		"Emperor"
+		"Leviathan"
 	}
 	enum[DLCNUM] = {
 		dlc001
@@ -179,6 +180,10 @@ enums = {
 		dlc103
 		dlc104
 		dlc105
+		dlc106
+		dlc107
+		dlc108
+		dlc109
 	}
 	enum[key_name] = {
 		key
