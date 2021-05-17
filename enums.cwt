@@ -304,4 +304,17 @@ enums = {
 		neutral
 		concilatory
 	}
+	enum[sikh_guru] = {
+		guru_nanak
+		guru_angad
+		guru_amar_das
+		guru_ram_das
+		guru_arjan
+		guru_hargobind
+		guru_har_rai
+		guru_har_krishan
+		guru_tegh_bahadur
+		guru_gobind_singh
+		guru_granth_sahib
+	}
 }
