@@ -317,4 +317,8 @@ enums = {
 		guru_gobind_singh
 		guru_granth_sahib
 	}
+	enum[great_project] = {
+		any
+		monument
+	}
 }
