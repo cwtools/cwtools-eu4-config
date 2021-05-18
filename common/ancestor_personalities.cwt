@@ -18,7 +18,41 @@ types = {
 	}
 }
 
-
+enums = {
+	enum[ancestor_key] = {
+		just
+		righteous
+		tolerant
+		kind_hearted
+		free_thinker
+		well_connected
+		calm
+		careful
+		secretive
+		intricate_web_weaver
+		benevolent
+		zealot
+		pious
+		lawgiver
+		midas_touched
+		incorruptible
+		architectural_visionary
+		scholar
+		entrepreneur
+		industrious
+		expansionist
+		charismatic_negotiator
+		silver_tongue
+		conqueror
+		tactical_genius
+		bold_fighter
+		strict
+		inspiring_leader
+		martial_educator
+		navigator
+		fierce_negotiator
+	}
+}
 
 ancestor_personalities = {
 	## replace_scope = { this = country root = country }
