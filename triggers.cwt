@@ -4802,6 +4802,24 @@ alias[trigger:is_subject_of_type_with_overlord] = {
 	type = <subject_type>
 }
 
+## scope = country
+###Returns true if the country's ruler has the specified ancestor personality.
+alias[trigger:ruler_has_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+
+## scope = country
+###Returns true if the country's heir has the specified ancestor personality.
+alias[trigger:heir_has_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+
+## scope = country
+###Returns true if the country's queen has the specified ancestor personality.
+alias[trigger:queen_has_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+
 #more stuff
 
 #Does not work

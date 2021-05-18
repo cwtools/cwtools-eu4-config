@@ -1555,17 +1555,10 @@ alias[effect:add_estate_influence_modifier] = {
 	## cardinality = 0..1
 	short = yes
 }
-
 ## scope = country
 ###Adds loyalty for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty] = {
 	estate = <estate>
-	loyalty = int
-	## cardinality = 0..1
-	short = yes
-}
-alias[effect:add_estate_loyalty] = {
-	estate = all
 	loyalty = int
 	## cardinality = 0..1
 	short = yes
@@ -3261,4 +3254,49 @@ alias[effect:spawn_large_scaled_rebels] = {
 	type = <rebel_type>
 	## cardinality = 0..1
 	no_defined_leader = yes
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:add_ruler_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:add_heir_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:add_queen_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:remove_ruler_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:remove_heir_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###adds the specified ancestor personality
+alias[effect:remove_queen_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+## scope = country
+###removes the specified ancestor personality
+alias[effect:remove_ruler_personality] = {
+	ancestor_$enum[ancestor_key]$_personality
+}
+## scope = country
+###removes the specified ancestor personality
+alias[effect:remove_queen_personality] = {
+	ancestor_$enum[ancestor_key]$_personality
+}
+## scope = country
+###removes the specified ancestor personality
+alias[effect:remove_heir_personality] = {
+	ancestor_$enum[ancestor_key]$_personality
 }
