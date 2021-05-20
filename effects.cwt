@@ -3255,6 +3255,9 @@ alias[effect:spawn_large_scaled_rebels] = {
 	## cardinality = 0..1
 	no_defined_leader = yes
 }
+
+#1.31
+
 ## scope = country
 ###adds the specified ancestor personality
 alias[effect:add_ruler_personality_ancestor] = {
@@ -3299,4 +3302,11 @@ alias[effect:remove_queen_personality] = {
 ###removes the specified ancestor personality
 alias[effect:remove_heir_personality] = {
 	ancestor_$enum[ancestor_key]$_personality
+}
+
+## scope = province
+###adds the specified ancestor personality
+alias[effect:add_great_project_tier] = {
+	type = <great_project>
+	tier = int
 }
