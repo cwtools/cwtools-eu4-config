@@ -431,3 +431,31 @@ alias[modifier:is_imperial_modifier] = bool
 ## scope = country
 ### Modifies the speed at which troops disembark off ships into provinces
 alias[modifier:movement_speed_onto_off_boat_modifier] = float
+
+## scope = country
+### Monthly heir claim increase
+alias[modifier:monthly_heir_claim_increase] = float
+
+## scope = country
+### Country great project upgrade cost
+alias[modifier:great_project_upgrade_cost] = float
+
+## scope = province
+### Province great project upgrade cost
+alias[modifier:local_great_project_upgrade_cost] = float
+
+## scope = country
+### monthly reform progress
+alias[modifier:monthly_reform_progress_modifier] = float
+
+## scope = country
+### tribal development growth
+alias[modifier:tribal_development_growth] = float
+
+## scope = country
+### native migration cost
+alias[modifier:migration_cost] = float
+
+## scope = country
+### tribal land cost
+alias[modifier:add_tribal_land_cost] = int
