@@ -136,6 +136,10 @@ government_reform = {
 			## cardinality = 0..inf
 			<trade_good>
 		}
+		free_concentrate_development = bool
+		raze_province = bool
+		force_conversion_gives_global_holy_war_released_modifier = bool
+		allow_draft_transport_ships = bool
 	}
 
 	
@@ -243,6 +247,18 @@ government_reform = {
 		revolutionary = bool
 		## cardinality = 0..1
 		revolutionary_client_state = bool
+		
+		## cardinality = 0..1
+		free_concentrate_development = bool
+		## cardinality = 0..1
+		raze_province = bool
+		## cardinality = 0..1
+		force_conversion_gives_global_holy_war_released_modifier = bool
+		## cardinality = 0..1
+		allow_draft_transport_ships = bool
+		## cardinality = 0..1
+		replacement_on_independence_war = indep_daimyo
+		
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		nation_designer_trigger = {
