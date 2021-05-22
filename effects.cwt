@@ -3303,10 +3303,36 @@ alias[effect:remove_queen_personality] = {
 alias[effect:remove_heir_personality] = {
 	ancestor_$enum[ancestor_key]$_personality
 }
-
 ## scope = province
 ###adds the specified ancestor personality
 alias[effect:add_great_project_tier] = {
 	type = <great_project>
 	tier = int
+}
+## scope = province
+###Settles a tribal province belonging to the owner of the ROOT province scope
+alias[effect:settle_province] = enum[country_tags]
+## scope = province
+###Settles a tribal province belonging to the owner of the ROOT province scope
+alias[effect:settle_province] = scope[country]
+
+## scope = country
+###Changes the government rank of the current scope. Default range is 1 to 3.
+alias[effect:set_government_rank_force] = int[1..3]
+
+## scope = country
+###Disband Federation.
+alias[effect:disband_federation] = yes
+
+## scope = country
+###Allow federation offensive wars
+alias[effect:allow_federation_offensive_wars] = yes
+
+
+## scope = country
+###Form Federation Nation
+alias[effect:form_federation_nation] = {
+	post_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 }

@@ -459,3 +459,12 @@ alias[modifier:migration_cost] = float
 ## scope = country
 ### tribal land cost
 alias[modifier:add_tribal_land_cost] = int
+
+## scope = country
+### Monthly federation flavor growth
+alias[modifier:monthly_federation_favor_growth] = float
+
+## scope = country
+### Settle cost
+alias[modifier:settle_cost] = float
+

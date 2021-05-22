@@ -1633,3 +1633,25 @@ alias[trigger:enemy_unit] = {
 alias[trigger:any_country_active_in_node] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+## push_scope = country
+## scope = { country }
+###Scopes to every federation member
+alias[effect:every_federation_member] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = province
+## scope = { country }
+###Scopes to every tribal land province
+alias[effect:every_tribal_land_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
