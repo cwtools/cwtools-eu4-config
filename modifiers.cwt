@@ -458,7 +458,7 @@ alias[modifier:migration_cost] = float
 
 ## scope = country
 ### tribal land cost
-alias[modifier:add_tribal_land_cost] = int
+alias[modifier:add_tribal_land_cost] = float
 
 ## scope = country
 ### Monthly federation flavor growth
@@ -467,4 +467,16 @@ alias[modifier:monthly_federation_favor_growth] = float
 ## scope = country
 ### Settle cost
 alias[modifier:settle_cost] = float
+
+## scope = province
+### Block slave raid
+alias[modifier:block_slave_raid] = yes
+
+## scope = country
+### Monthly reform progress building
+alias[modifier:monthly_reform_progress_building] = float
+
+## scope = country
+### Monthly reform progress
+alias[modifier:monthly_reform_progress] = float
 
