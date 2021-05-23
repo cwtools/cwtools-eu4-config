@@ -324,4 +324,8 @@ enums = {
 	enum[estate_all] = {
 		all
 	}
+	enum[reb_nativesponsor] = {
+		REB
+		native_sponsor_scope
+	}
 }
