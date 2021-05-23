@@ -63,6 +63,8 @@ enums = {
 		po_dismantle_revolution
 		po_join_empire
 		po_spread_revolution
+		po_subjugate_vassal
+		po_subjugate_tributary_state
 	}
 	enum[wargoal_types] = {
 		take_colony

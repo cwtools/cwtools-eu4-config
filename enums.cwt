@@ -54,9 +54,6 @@ enums = {
 		great_project
 		siberian
 		any
-		kiel_canal
-		suez_canal
-		panama_canal
 	}
 	enum[DLCs] = { #todo
 		"Rights of Man"
@@ -326,5 +323,9 @@ enums = {
 	}
 	enum[estate_all] = {
 		all
+	}
+	enum[reb_nativesponsor] = {
+		REB
+		native_sponsor_scope
 	}
 }

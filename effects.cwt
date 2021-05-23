@@ -327,7 +327,7 @@ alias[effect:change_government] = <government.normal>
 
 ## scope = country
 ###Changes the government of the current scope. Governments are found in /Europa Universalis IV/common/governments/*.txt. In rebel_types, REB will make it pick the preferred rebel government.
-alias[effect:change_government] = REB
+alias[effect:change_government] = enum[reb_nativesponsor]
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
@@ -3061,7 +3061,7 @@ alias[effect:dip_power_cost] = int
 alias[effect:mil_power_cost] = int
 
 ## scope = country
-alias[effect:change_government_reform_progress] = int[-100..100]
+alias[effect:change_government_reform_progress] = int[-450..100]
 
 #Removed as of 1.28.3
 # ## scope = country
@@ -3344,3 +3344,7 @@ alias[effect:form_federation_nation] = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 }
+
+## scope = country
+###Changes the institutions of the current scope.  
+alias[effect:embrace_institutions_of] = native_sponsor_scope
