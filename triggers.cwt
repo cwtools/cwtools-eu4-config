@@ -1140,6 +1140,10 @@ alias[trigger:has_construction] = enum[construction_types]
 
 ## scope = province
 ###Returns true if there is the specified construction in progress in the province.
+alias[trigger:has_construction] = enum[greatproject_canals]
+
+## scope = province
+###Returns true if there is the specified construction in progress in the province.
 alias[trigger:has_construction] = <building>
 
 ## scope = country
