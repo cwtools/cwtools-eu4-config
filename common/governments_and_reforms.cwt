@@ -320,6 +320,8 @@ government_reform = {
 				}
 			}
 			## cardinality = 0..1
+			allow_migration = bool
+			## cardinality = 0..1
 			can_use_trade_post = bool
 			## cardinality = 0..1
 			can_form_trade_league = bool
@@ -402,6 +404,36 @@ government_reform = {
 			allow_banners = bool
 			## cardinality = 0..1
 			election_on_death = bool
+			
+			## cardinality = 0..1
+			custom_attributes = {
+				## cardinality = 0..1
+				enables_plutocratic_idea_group = bool
+				## cardinality = 0..1
+				enables_aristocratic_idea_group = bool
+				## cardinality = 0..1
+				lottery_election = bool
+				## cardinality = 0..1
+				election_on_death = bool
+				## cardinality = 0..1
+				is_merchant_republic = bool
+				## cardinality = 0..1
+				locked_government_type = bool
+				## cardinality = 0..1
+				maratha_general_interaction = bool
+				## cardinality = 0..1
+				better_purbias_interaction = bool
+				## cardinality = 0..1
+				enables_nepotism = bool
+				## cardinality = 0..1
+				force_admiral_leader = bool
+				## cardinality = 0..1
+				admirals_become_rulers = bool
+				## cardinality = 0..1
+				gives_war_against_the_world_tooltip_dummy = yes
+				## cardinality = 0..inf
+				value_set[custom_attribute] = bool
+			}
 		}
 		
 		## cardinality = 0..1
