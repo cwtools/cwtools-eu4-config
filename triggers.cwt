@@ -1310,6 +1310,7 @@ alias[trigger:has_guaranteed] = enum[country_tags]
 
 ## scope = any
 ###Returns true if the specified global flag is set.
+## severity = warning
 alias[trigger:has_global_flag] = value[global_flag]
 
 ## scope = country
