@@ -480,3 +480,15 @@ alias[modifier:monthly_reform_progress_building] = float
 ### Monthly reform progress
 alias[modifier:monthly_reform_progress] = float
 
+## scope = province
+### Allowed number of manufactories
+alias[modifier:allowed_num_of_manufactories] = int
+
+## scope = province
+### Local governing cost increase
+alias[modifier:local_governing_cost_increase] = int
+
+## scope = country
+### State governing cost increase
+alias[modifier:state_governing_cost_increase] = int
+
