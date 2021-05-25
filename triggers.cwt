@@ -4785,6 +4785,11 @@ alias[trigger:is_in_extended_regency] = bool
 alias[trigger:has_estate_led_regency] = {
 	estate = <estate>
 }
+## scope = country
+###Checks if country has and estate led regency
+alias[trigger:has_estate_led_regency] = {
+	estate = enum[estate_any]
+}
 
 ## scope = country
 ###Checks estate led regency influence
@@ -4847,6 +4852,10 @@ alias[trigger:tribal_land_of] = enum[country_tags]
 ## scope = country
 ###Returns true if the tribal development of the tribe is at least X.
 alias[trigger:tribal_development] = int
+
+## scope = country
+###Checks if the country is a federation nation
+alias[trigger:is_federation_nation] = bool
 
 #more stuff
 
@@ -4944,3 +4953,4 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
+
