@@ -3331,6 +3331,13 @@ alias[effect:set_government_rank_force] = int[1..3]
 ## scope = country
 ###Disband Federation.
 alias[effect:disband_federation] = yes
+## scope = country
+###Disband Federation.
+alias[effect:disband_federation] = THIS
+
+## scope = country
+###Set federation leader
+alias[effect:set_federation_leader] = THIS
 
 ## scope = country
 ###Allow federation offensive wars
