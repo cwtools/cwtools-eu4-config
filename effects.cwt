@@ -3355,3 +3355,10 @@ alias[effect:form_federation_nation] = {
 ## scope = country
 ###Changes the institutions of the current scope.  
 alias[effect:embrace_institutions_of] = native_sponsor_scope
+
+## scope = country
+###change subject type
+alias[effect:change_subject_type] = {
+	subject_type = <subject_type>
+}
+

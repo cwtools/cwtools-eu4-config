@@ -13,6 +13,9 @@ types = {
 			is_ours = "$_is_our"
 		}
 	}
+	type[subject_upgrades] = {
+		path = "game/common/subject_type_upgrades"
+	}
 }
 
 subject_type = {
@@ -420,3 +423,29 @@ subject_type = {
 	subject_opinion_modifier = <opinion_modifier>
 }
 
+subject_upgrades = {
+	## replace_scope = { root = country this = country }
+	can_upgrade_trigger = {
+		## cardinality = 0..inf
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	cost = int
+	## replace_scope = { root = country this = country }
+	effect = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country }
+	## cardinality = 0..1
+	modifier_overlord = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## replace_scope = { root = country this = country }
+	## cardinality = 0..1
+	modifier_subject = {
+		## cardinality = 0..inf
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+}
