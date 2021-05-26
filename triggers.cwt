@@ -4831,6 +4831,12 @@ alias[trigger:queen_has_personality_ancestor] = {
 }
 
 ## scope = country
+###Returns true if the country's queen has the specified ancestor personality.
+alias[trigger:consort_has_personality_ancestor] = {
+	key = enum[ancestor_key]
+}
+
+## scope = country
 ###Number of federation advancements
 alias[trigger:num_federation_advancements] = int
 
