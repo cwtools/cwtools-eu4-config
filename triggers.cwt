@@ -289,6 +289,11 @@ alias[trigger:calc_true_if] = {
 	desc = localisation
 	alias_name[trigger] = alias_match_left[trigger]
 	amount = int
+	## cardinality = 0..1
+	## push_scope = province
+	all_owned_province_cumulative = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 ## scope = country
@@ -4963,3 +4968,7 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
+
+## scope = country
+### Returns true if the country has a subject of type
+alias[trigger:has_subject_of_type] = <subject_type>
