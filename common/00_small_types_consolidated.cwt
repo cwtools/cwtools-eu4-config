@@ -151,6 +151,7 @@ types = {
 
 achievement = {
 	id = int
+	localization = scalar
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	visible = {
@@ -439,4 +440,3 @@ province_names = {
 		scalar #todo: name
 	}
 }
-
