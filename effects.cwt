@@ -1832,6 +1832,10 @@ alias[effect:define_ruler] = {
 	religion = <province_id>
 	## cardinality = 0..1
 	rebel = yes
+	## cardinality = 0..1
+	regency = {
+		estate = <estate>
+	}
 }
 
 ## scope = country
@@ -3362,3 +3366,18 @@ alias[effect:change_subject_type] = {
 	subject_type = <subject_type>
 }
 
+## scope = province
+###Change tribal land  
+alias[effect:change_tribal_land] = ROOT
+
+## scope = country
+###Changes estate regent to ruler.  
+alias[effect:change_estate_regent_to_ruler] = bool
+
+## scope = country
+###set estate led regency privilege.  
+alias[effect:set_estate_led_regency_privilege] = random
+
+## scope = country
+###extend regency.  
+alias[effect:extend_regency] = int
