@@ -1673,3 +1673,17 @@ alias[effect:every_tribal_land_province] = {
 alias[trigger:any_tribal_land] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
+
+## scope = { country }
+## push_scope = country
+###Scopes to all federation members
+alias[trigger:all_federation_members] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = { country }
+## push_scope = country
+###Scopes to any federation members
+alias[trigger:any_federation_members] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
