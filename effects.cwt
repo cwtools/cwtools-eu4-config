@@ -3238,6 +3238,9 @@ alias[effect:finish_council] = yes
 ## scope = mercenary_company
 ###Mercenary leader becomes regular general
 alias[effect:convert_leader_to_general] = yes
+## scope = mercenary_company
+###Mercenary leader becomes regular general
+alias[effect:convert_leader_to_general] = THIS
 
 ## scope = country
 ###Switches to the given government type.  No effect if Dharma is active.
@@ -3381,3 +3384,7 @@ alias[effect:set_estate_led_regency_privilege] = random
 ## scope = country
 ###extend regency.  
 alias[effect:extend_regency] = int
+
+## scope = country
+###appoint next guru.
+alias[effect:appoint_next_guru] = yes
