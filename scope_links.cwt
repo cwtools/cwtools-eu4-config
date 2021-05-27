@@ -467,6 +467,17 @@ alias[effect:every_country] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
+## scope = { country province }
+## push_scope = country
+###Scopes to all countries in the world including inactive. Avoid this if you can use something more specific.
+alias[effect:every_country_including_inactive] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
 
 ## scope = country
 ## push_scope = country
