@@ -4784,11 +4784,15 @@ alias[trigger:is_in_extended_regency] = bool
 ###Checks if country has and estate led regency
 alias[trigger:has_estate_led_regency] = {
 	estate = <estate>
+	## cardinality = 0..1
+	duration = int
 }
 ## scope = country
 ###Checks if country has and estate led regency
 alias[trigger:has_estate_led_regency] = {
 	estate = enum[estate_any]
+	## cardinality = 0..1
+	duration = int
 }
 
 ## scope = country
@@ -4959,5 +4963,3 @@ alias[trigger:current_income_balance] = float
 
 ## scope = country
 alias[trigger:cossacks_percentage] = float
-
-
