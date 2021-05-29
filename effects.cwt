@@ -3388,3 +3388,4 @@ alias[effect:extend_regency] = int
 ## scope = country
 ###appoint next guru.
 alias[effect:appoint_next_guru] = yes
+

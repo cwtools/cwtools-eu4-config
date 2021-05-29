@@ -46,6 +46,8 @@ culture_group = {
 	<culture> = {
 		## cardinality = 0..1
 		graphical_culture = enum[graphical_cultures]
+		## cardinality = 0..1
+		second_graphical_culture = enum[graphical_cultures]
 		
 		## cardinality = 0..1
 		primary = enum[country_tags]

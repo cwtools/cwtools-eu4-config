@@ -954,6 +954,10 @@ alias[trigger:government] = <government.normal>
 alias[trigger:government] = dictatorship
 
 ## scope = country
+###Returns true if the country has government type X. Includes "dictatorship", which checks whether the country has a government reform with the label "is_dictatorship = yes"
+alias[trigger:government] = has_harem
+
+## scope = country
 ###Returns true if the country has a government rank of X or higher.
 alias[trigger:government_rank] = int
 
@@ -4972,3 +4976,11 @@ alias[trigger:cossacks_percentage] = float
 ## scope = country
 ### Returns true if the country has a subject of type
 alias[trigger:has_subject_of_type] = <subject_type>
+
+## scope = country
+### Returns true if governing capacity percentage is at least X
+alias[trigger:governing_capacity_percentage] = float
+
+## scope = province
+### Returns true if development discounting tribal is at least X
+alias[trigger:development_discounting_tribal] = int
