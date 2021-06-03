@@ -1014,6 +1014,7 @@ alias[trigger:had_heir_flag] = {
 }
 
 ## scope = province
+## severity = warning
 ###Returns true if the province flag X was last set for the province at least Y days ago.
 alias[trigger:had_province_flag] = {
 	flag = value[province_flag]
@@ -1520,6 +1521,7 @@ alias[trigger:has_privateers] = bool
 alias[trigger:has_promote_investments] = <trade_company>
 
 ## scope = province
+## severity = warning
 ###Returns true if the province has the province flag X.
 alias[trigger:has_province_flag] = value[province_flag]
 
@@ -4403,6 +4405,7 @@ alias[trigger:invasion_nation] = bool
 alias[trigger:current_bribe] = <parliament_bribe>
 
 ## scope = country
+## severity = warning
 alias[trigger:exiled_same_dynasty_as_current] = value[saved_name]
 
 ## scope = country
@@ -4984,3 +4987,7 @@ alias[trigger:governing_capacity_percentage] = float
 ## scope = province
 ### Returns true if development discounting tribal is at least X
 alias[trigger:development_discounting_tribal] = int
+
+## scope = country
+### Returns true country has a reform on level X
+alias[trigger:has_reform_on_level] = int
