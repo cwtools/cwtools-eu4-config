@@ -543,6 +543,14 @@ alias[trigger:country_or_vassal_holds] = scope[country]
 alias[trigger:country_or_vassal_holds] = enum[country_tags]
 
 ## scope = province
+###Returns true if the province is part of the specified country or its subjects.
+alias[trigger:country_or_subject_holds] = scope[country]
+
+## scope = province
+###Returns true if the province is part of the specified country or its subjects.
+alias[trigger:country_or_subject_holds] = enum[country_tags]
+
+## scope = province
 ###Returns true if the province culture is X, or the same as the specified scope.
 alias[trigger:culture] = <culture>
 
