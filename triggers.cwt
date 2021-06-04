@@ -1014,9 +1014,9 @@ alias[trigger:had_heir_flag] = {
 }
 
 ## scope = province
-## severity = warning
 ###Returns true if the province flag X was last set for the province at least Y days ago.
 alias[trigger:had_province_flag] = {
+	## severity = warning
 	flag = value[province_flag]
 	days = int
 }
@@ -3303,7 +3303,7 @@ alias[trigger:personal_union] = int
 ## scope = province
 ###Returns true if the specified country has at least X units of the specified type in the province. (type and who are not needed, if not included will default to all.)
 alias[trigger:num_of_units_in_province] = {
-	amount = int
+	amount = float
 	## cardinality = 0..1
 	who = scope[country]
 	## cardinality = 0..1
