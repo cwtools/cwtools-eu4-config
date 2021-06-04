@@ -1,4 +1,5 @@
 
+
 ## scope = any
 alias[trigger:<scripted_trigger>] = bool
 
@@ -4171,7 +4172,7 @@ alias[trigger:unit_type] = <technology_group>
 
 ## scope = { province country }
 ###Returns true if the unrest in the province is at least X.
-alias[trigger:unrest] = float[0.0..100.0]
+alias[trigger:unrest] = float[-100.0..100.0]
 
 ## scope = country
 ###Returns true if the country uses authority mechanics.
