@@ -1,5 +1,4 @@
 
-
 ## scope = any
 alias[trigger:<scripted_trigger>] = bool
 
@@ -404,7 +403,11 @@ alias[trigger:colonial_region] = <colonial_region>
 alias[trigger:colonial_region] = scope[province]
 
 ## scope = country
-###
+### 1.31.5 counts number of colony subjects
+alias[trigger:colony] = int
+
+## scope = country
+### 1.31.5 counts number of colony provinces
 alias[trigger:num_of_colonies] = int
 
 ## scope = { province country }
@@ -1140,6 +1143,10 @@ alias[trigger:has_colonist] = bool
 ## scope = country
 ###Returns true if country has a three star general.
 alias[trigger:has_commanding_three_star] = bool
+
+## scope = country
+###Returns true if country has a general with name.
+alias[trigger:general_with_name] = scalar
 
 ## scope = country
 ###Returns true if the country has a consort.
