@@ -1704,6 +1704,9 @@ alias[effect:kill_ruler] = yes
 ## scope = country
 ###Converts a female ruler into a general.
 alias[effect:convert_female_ruler_to_general] = yes
+## scope = country
+###Converts a female ruler into a general.
+alias[effect:convert_female_ruler_to_general] = int
 
 ## scope = country
 ###Converts a male ruler into a general.
@@ -3397,4 +3400,3 @@ alias[effect:appoint_next_guru] = yes
 ## scope = province
 ###set permanent province flag
 alias[effect:set_permanent_province_flag] = scalar
-
