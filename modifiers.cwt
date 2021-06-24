@@ -492,6 +492,6 @@ alias[modifier:local_governing_cost_increase] = int
 ### State governing cost increase
 alias[modifier:state_governing_cost_increase] = int
 
-## scope = province
+## scope = country
 ### Yearly doom reduction
 alias[modifier:yearly_doom_reduction] = float
