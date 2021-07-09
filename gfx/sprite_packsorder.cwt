@@ -63,6 +63,7 @@ enums = {
 		dlc024_mul_sprite_pack 
 		dlc024_vij_sprite_pack 
 		dlc028_boh_sprite_pack 
+		dlc028_bra_sprite_pack_bra
 		dlc028_eng_sprite_pack 
 		dlc028_fra_sprite_pack 
 		dlc028_hes_sprite_pack 
@@ -128,7 +129,7 @@ enums = {
 		dlc053_spa_sprite_pack 
 		dlc053_spa_sprite_pack 
 		dlc054_fra_sprite_pack 
-		dlc054_pru_sprite_pack 
+		dlc054_pru_sprite_pack_bra
 		dlc054_swe_sprite_pack 
 		dlc056_lan_sprite_pack 
 		dlc056_mlo_sprite_pack 
@@ -260,4 +261,3 @@ packorder = {
 	## cardinality = 0..inf
 	enum[spritepacks] = int
 }
-
