@@ -1130,7 +1130,7 @@ alias[trigger:strongest_trade_power] = {
 }
 
 
-Trigger scopes
+#Trigger scopes
 ## push_scope = Unit
 ## scope = country
 ###Scopes to all armies currently fielded by the current scope.
