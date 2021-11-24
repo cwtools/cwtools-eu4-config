@@ -79,6 +79,7 @@ enums = {
 		"Golden Century"
 		"Emperor"
 		"Leviathan"
+		"Origins"
 	}
 	enum[DLCNUM] = {
 		dlc001
