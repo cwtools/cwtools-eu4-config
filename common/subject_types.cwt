@@ -20,7 +20,7 @@ types = {
 
 subject_type = {
 	## cardinality = 0..1
-	###copy_from copies everything except count, is_potential_overlord, and can_be_established
+	###copy_from copies everything except count and is_potential_overlord
 	copy_from = <subject_type>
 	## cardinality = 0..1
 	###count = x means it "counts as" x in some triggers.
@@ -41,13 +41,7 @@ subject_type = {
 	is_potential_overlord = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	## cardinality = 0..1
-	##replace_scope = { root = country this = country from = country }
-	###This part is not copied in copy_from. Actual default is equivalent to always = yes. Root = subject, from = overlord.
-	can_be_established = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
-	
+		
 	## cardinality = 0..1
 	has_overlords_ruler = bool
 	## cardinality = 0..1
