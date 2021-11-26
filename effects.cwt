@@ -3411,3 +3411,29 @@ alias[effect:appoint_next_guru] = yes
 ## scope = province
 ###set permanent province flag
 alias[effect:set_permanent_province_flag] = scalar
+
+## scope = province
+###Used only in the Europa Universalis IV/common/buildings/*.txt file.
+alias[effect:add_development_from_building] = {
+	building = <building>
+	type = enum[building_development_type]
+	value = int
+}
+
+## scope = province
+###Used only in the Europa Universalis IV/common/buildings/*.txt file.
+alias[effect:add_development_from_upgrading_or_building] = {
+	building = <building>
+	obsolete_building = <building>
+	type = enum[building_development_type]
+	value = int
+	upgrade_value = int
+}
+
+## scope = province
+###Used only in the Europa Universalis IV/common/buildings/*.txt file.
+alias[effect:remove_development_from_building] = {
+	building = <building>
+	type = enum[building_development_type]
+	value = int
+}
