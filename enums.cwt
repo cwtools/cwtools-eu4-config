@@ -367,4 +367,9 @@ enums = {
 		REB
 		native_sponsor_scope
 	}
+	enum[building_development_type] = {
+		manpower
+		production
+		tax
+	}
 }
