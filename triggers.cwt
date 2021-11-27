@@ -5011,3 +5011,30 @@ alias[trigger:development_discounting_tribal] = int
 ## scope = country
 ### Returns true country has a reform on level X
 alias[trigger:has_reform_on_level] = int
+
+## scope = country
+### Returns true if country has cultural union
+alias[trigger:has_cultural_union] = bool
+
+## scope = country
+### Returns true if country scope has at least x cawa troops
+alias[trigger:num_of_cawa] = int
+
+## scope = country
+### Returns true if country scope has at least x cawa troops
+alias[trigger:current_war_losses] = {
+	## cardinality = 0..1
+	who_with = <Tag>
+	## cardinality = 0..1
+	type = enum[unit_types]
+	## cardinality = 0..1
+	type = men
+	## cardinality = 0..1
+	type = ships
+	## cardinality = 0..1
+	type = all
+	## cardinality = 0..1
+	cause = attrition/battle/capture
+	## cardinality = 0..1
+	amount = int
+}
