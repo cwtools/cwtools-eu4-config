@@ -132,7 +132,10 @@ casus_belli = {
 	prerequisites = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-
+    
+	## cardinality = 0..1
+	holy_war = yes
+	
 	## cardinality = 0..1
 	valid_for_subject = no
 

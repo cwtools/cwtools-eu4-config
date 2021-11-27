@@ -850,6 +850,12 @@ aspects_and_blessings = {
 		## cardinality = 0..1
 		sprite = gfx/interface/progress_of_the_supreme_governor_icon.dds
 		cost = int
+		## cardinality = 0..1
+		monarch_power = adm
+		## cardinality = 0..1
+		monarch_power = dip
+		## cardinality = 0..1
+		monarch_power = mil
 	}
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
