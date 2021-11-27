@@ -3084,7 +3084,7 @@ alias[effect:dip_power_cost] = int
 alias[effect:mil_power_cost] = int
 
 ## scope = country
-alias[effect:change_government_reform_progress] = int[-450..100]
+alias[effect:change_government_reform_progress] = int[-800..100]
 
 #Removed as of 1.28.3
 # ## scope = country
