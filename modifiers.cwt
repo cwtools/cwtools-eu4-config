@@ -495,3 +495,68 @@ alias[modifier:state_governing_cost_increase] = int
 ## scope = country
 ### Yearly doom reduction
 alias[modifier:yearly_doom_reduction] = float
+
+## scope = country
+### Global rebel suppression efficiency
+alias[modifier:global_rebel_suppression_efficiency] = float
+
+## scope = country
+### Cawa cost modifier
+alias[modifier:cawa_cost_modifier] = float
+
+## scope = country
+### Monthly gold inflation modifier
+alias[modifier:monthly_gold_inflation_modifier] = float
+
+## scope = province
+### Gold Depletion chance modifier
+alias[modifier:gold_depletion_chance_modifier] = float	
+	
+## scope = country
+### Gobal monthly devastation
+alias[modifier:global_monthly_devastation] = float
+
+## scope = country
+### Global prosperity growth
+alias[modifier:global_prosperity_growth] = float
+	
+## scope = country
+### Global prosperity growth
+alias[modifier:global_prosperity_growth] = float
+
+## scope = province
+### Local prosperity growth
+alias[modifier:local_prosperity_growth] = float		
+	
+## scope = country
+### Monthly favor modifier
+alias[modifier:monthly_favor_modifier] = float	
+	
+## scope = country
+### Tolerance of heretics capacity
+alias[modifier:tolerance_of_heretics_capacity] = int
+
+## scope = country
+### Tolerance of heathens capacity
+alias[modifier:tolerance_of_heathens_capacity] = int
+	
+## scope = country
+### Move capital cost modifier
+alias[modifier:move_capital_cost_modifier] = float		
+	
+## scope = country
+### Movement speed in fleet modifier 
+alias[modifier:movement_speed_in_fleet_modifier] = int
+
+## scope = country
+### yearly_authority
+alias[modifier:yearly_authority] = float			
+	
+## scope = country
+### Overlord naval forcelimit
+alias[modifier:overlord_naval_forcelimit] = float
+
+## scope = country
+### All estate loyalty equilibrium
+alias[modifier:all_estate_loyalty_equilibrium] = float	
+
