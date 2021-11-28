@@ -3439,3 +3439,10 @@ alias[effect:remove_development_from_building] = {
 ## scope = country
 ###Change cult
 alias[effect:change_cult] = <cult>
+
+## scope = country
+###Discover provinces of ROOT tag
+alias[effect:discover_provinces] = scope[country]
+## scope = country
+###Discover provinces of ROOT tag
+alias[effect:discover_provinces] = enum[country_tags]
