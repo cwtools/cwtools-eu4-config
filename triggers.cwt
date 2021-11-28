@@ -1356,15 +1356,15 @@ alias[trigger:has_government_mechanic] = enum[government_mechanics]
 ###No sure what this does and what values are accepted here, please report!
 alias[trigger:has_government_power] = unknown
 
-## scope = country
+## scope = { province country }
 ###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = <religion>
 
-## scope = country
+## scope = { province country }
 ###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = enum[religion_new_variables]
 
-## scope = country
+## scope = { province country }
 ###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = <religion_group>
 
