@@ -131,7 +131,7 @@ technology = {
 
 	## cardinality = 0..1
 	expects_institution = {
-		## cardinality = 1..inf
-		<institution> = float
+	## cardinality = 1..inf
+	<institution> = float
 	}
 }
