@@ -3019,6 +3019,12 @@ alias[effect:define_exiled_ruler] = {
 	mil = int[-6..6]
 	## cardinality = 0..1
 	option = int
+	## cardinality = 0..1
+	change_adm = int[-6..6]
+	## cardinality = 0..1
+	change_dip = int[-6..6]
+	## cardinality = 0..1
+	change_mil = int[-6..6]
 }
 
 ## scope = province
