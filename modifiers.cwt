@@ -571,3 +571,7 @@ alias[modifier:local_amount_of_cawa] = float
 ## scope = country
 ### Is a cawa modifier
 alias[modifier:is_cawa_modifier] = bool	
+ 
+## scope = country
+### Country amount of cawa
+alias[modifier:amount_of_cawa] = int
