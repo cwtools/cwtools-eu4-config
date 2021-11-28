@@ -508,9 +508,13 @@ alias[modifier:cawa_cost_modifier] = float
 ### Monthly gold inflation modifier
 alias[modifier:monthly_gold_inflation_modifier] = float
 
-## scope = province
-### Gold Depletion chance modifier
+## scope = country
+### Country gold depletion chance modifier
 alias[modifier:gold_depletion_chance_modifier] = float	
+
+## scope = province
+### Province gold depletion chance modifier
+alias[modifier:local_gold_depletion_chance_modifier] = float	
 	
 ## scope = country
 ### Gobal monthly devastation
