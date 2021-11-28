@@ -1534,19 +1534,11 @@ alias[effect:create_independent_estate_from_religion] = {
 ## scope = country
 ###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_influence_modifier] = {
+	## cardinality = 0..1
 	estate = <estate>
-	desc = localisation
-	influence = int
-	duration = int
 	## cardinality = 0..1
-	add = yes
-	## cardinality = 0..1
-	short = yes
-}
-## scope = country
-###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
-alias[effect:add_estate_influence_modifier] = {
 	estate = all
+	## cardinality = 0..1
 	desc = localisation
 	influence = int
 	duration = int
