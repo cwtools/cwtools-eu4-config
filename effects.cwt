@@ -3437,3 +3437,7 @@ alias[effect:remove_development_from_building] = {
 	type = enum[building_development_type]
 	value = int
 }
+
+## scope = country
+###Change cult
+alias[effect:change_cult] = <cult>
