@@ -5042,3 +5042,7 @@ alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
 	amount = int
 }
+
+## scope = country
+### Returns true if country can_revoke an estate privilege
+alias[trigger:can_revoke_estate_privilege] = <estate_privilege>
