@@ -425,7 +425,7 @@ alias[modifier:max_free_cities] = int
 alias[modifier:max_electors] = int
 
 ## scope = country
-### Adds to the maximum number of electors allowed
+### Is an imperial modifier
 alias[modifier:is_imperial_modifier] = bool
 
 ## scope = country
@@ -565,5 +565,9 @@ alias[modifier:overlord_naval_forcelimit] = float
 alias[modifier:all_estate_loyalty_equilibrium] = float	
 
 ## scope = province
-### Local prosperity growth
+### Local amount of cawa
 alias[modifier:local_amount_of_cawa] = float		
+
+## scope = country
+### Is a cawa modifier
+alias[modifier:is_cawa_modifier] = bool	
