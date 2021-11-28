@@ -560,3 +560,6 @@ alias[modifier:overlord_naval_forcelimit] = float
 ### All estate loyalty equilibrium
 alias[modifier:all_estate_loyalty_equilibrium] = float	
 
+## scope = province
+### Local prosperity growth
+alias[modifier:local_amount_of_cawa] = float		
