@@ -3448,3 +3448,8 @@ alias[effect:discover_provinces] = scope[country]
 ## scope = country
 ###Discover provinces of ROOT tag
 alias[effect:discover_provinces] = enum[country_tags]
+
+## scope = country
+###Part of Imperial Reforms - not on wiki or patch notes
+alias[effect:disables_hre_badboy_points] = bool
+
