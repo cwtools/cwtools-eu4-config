@@ -1534,19 +1534,11 @@ alias[effect:create_independent_estate_from_religion] = {
 ## scope = country
 ###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_influence_modifier] = {
+	## cardinality = 0..1
 	estate = <estate>
-	desc = localisation
-	influence = int
-	duration = int
 	## cardinality = 0..1
-	add = yes
-	## cardinality = 0..1
-	short = yes
-}
-## scope = country
-###Adds an influence modifier for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
-alias[effect:add_estate_influence_modifier] = {
 	estate = all
+	## cardinality = 0..1
 	desc = localisation
 	influence = int
 	duration = int
@@ -1731,6 +1723,8 @@ alias[effect:define_ruler_to_general] = {
 	shock = int
 	manuever = int
 	siege = int
+	## cardinality = 0..1
+	trait = <leader_personality>
 }
 
 ## scope = country
@@ -3019,6 +3013,12 @@ alias[effect:define_exiled_ruler] = {
 	mil = int[-6..6]
 	## cardinality = 0..1
 	option = int
+	## cardinality = 0..1
+	change_adm = int[-6..6]
+	## cardinality = 0..1
+	change_dip = int[-6..6]
+	## cardinality = 0..1
+	change_mil = int[-6..6]
 }
 
 ## scope = province
@@ -3084,7 +3084,7 @@ alias[effect:dip_power_cost] = int
 alias[effect:mil_power_cost] = int
 
 ## scope = country
-alias[effect:change_government_reform_progress] = int[-450..100]
+alias[effect:change_government_reform_progress] = int[-800..100]
 
 #Removed as of 1.28.3
 # ## scope = country
@@ -3437,3 +3437,19 @@ alias[effect:remove_development_from_building] = {
 	type = enum[building_development_type]
 	value = int
 }
+
+## scope = country
+###Change cult
+alias[effect:change_cult] = <cult>
+
+## scope = country
+###Discover provinces of ROOT tag
+alias[effect:discover_provinces] = scope[country]
+## scope = country
+###Discover provinces of ROOT tag
+alias[effect:discover_provinces] = enum[country_tags]
+
+## scope = country
+###Part of Imperial Reforms - not on wiki or patch notes
+alias[effect:disables_hre_badboy_points] = bool
+

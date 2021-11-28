@@ -425,7 +425,7 @@ alias[modifier:max_free_cities] = int
 alias[modifier:max_electors] = int
 
 ## scope = country
-### Adds to the maximum number of electors allowed
+### Is an imperial modifier
 alias[modifier:is_imperial_modifier] = bool
 
 ## scope = country
@@ -508,9 +508,13 @@ alias[modifier:cawa_cost_modifier] = float
 ### Monthly gold inflation modifier
 alias[modifier:monthly_gold_inflation_modifier] = float
 
-## scope = province
-### Gold Depletion chance modifier
+## scope = country
+### Country gold depletion chance modifier
 alias[modifier:gold_depletion_chance_modifier] = float	
+
+## scope = province
+### Province gold depletion chance modifier
+alias[modifier:local_gold_depletion_chance_modifier] = float	
 	
 ## scope = country
 ### Gobal monthly devastation
@@ -560,3 +564,14 @@ alias[modifier:overlord_naval_forcelimit] = float
 ### All estate loyalty equilibrium
 alias[modifier:all_estate_loyalty_equilibrium] = float	
 
+## scope = province
+### Local amount of cawa
+alias[modifier:local_amount_of_cawa] = float		
+
+## scope = country
+### Is a cawa modifier
+alias[modifier:is_cawa_modifier] = bool	
+ 
+## scope = country
+### Country amount of cawa
+alias[modifier:amount_of_cawa] = int

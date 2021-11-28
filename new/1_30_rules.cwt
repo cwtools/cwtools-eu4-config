@@ -88,8 +88,8 @@ alias[trigger:crown_land_share] = 0.1
 alias[trigger:force_converted_by] = scope[country]
 
 ## scope = country
-###Checks whether the country has any loans with the tag "estate_loan = yes".
-alias[trigger:has_estate_loan] = int
+###Checks whether the country has any loans with the tag "estate_loan = no".
+alias[trigger:has_estate_loan] = bool
 
 ## scope = mercenary_company
 ###Checks whether the mercenary company is a foreign mercenary company.

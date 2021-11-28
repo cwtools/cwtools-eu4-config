@@ -1368,6 +1368,10 @@ alias[trigger:has_harmonized_with] = enum[religion_new_variables]
 ###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = <religion_group>
 
+## scope = country
+###Returns true if the country has harmonized with the specified religion or religion group.
+alias[trigger:has_harmonized_with] = scope[province]
+
 ## scope = province
 ###Returns true if the province has had harsh treatment used on it.
 alias[trigger:has_harsh_treatment] = bool
@@ -4890,6 +4894,9 @@ alias[trigger:tribal_land_of] = scope[country]
 ## scope = province
 ###Checks if the country is a migratory tribe
 alias[trigger:tribal_land_of] = enum[country_tags]
+## scope = province
+###Checks if the country is a migratory tribe
+alias[trigger:tribal_land_of] = none
 
 ## scope = country
 ###Returns true if the tribal development of the tribe is at least X.
@@ -5038,3 +5045,7 @@ alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
 	amount = int
 }
+
+## scope = country
+### Returns true if country can_revoke an estate privilege
+alias[trigger:can_revoke_estate_privilege] = <estate_privilege>
