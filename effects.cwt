@@ -1723,6 +1723,8 @@ alias[effect:define_ruler_to_general] = {
 	shock = int
 	manuever = int
 	siege = int
+	## cardinality = 0..1
+	trait = <leader_personality>
 }
 
 ## scope = country
