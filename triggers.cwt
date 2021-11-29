@@ -3945,7 +3945,9 @@ alias[trigger:statists_vs_orangists] = float[0.0..1.0]
 
 ## scope = country
 ###Returns true if the country receives subsidies of at least X% of its monthly income.
-alias[trigger:subsidised_percent_amount] = float[0.0..1.0]
+alias[trigger:subsidised_percent_amount] = {
+	value = float[0.0..1.0]
+}
 
 ## scope = country
 ###Returns true if the country has claimed the throne of the country X.
