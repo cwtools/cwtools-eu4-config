@@ -878,6 +878,8 @@ alias[effect:create_explorer] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = yes
 }
 
 ## scope = country
