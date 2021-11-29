@@ -67,5 +67,6 @@ enums = {
 		new_variable:From:adm_advisor_religion
 		new_variable:From:dip_advisor_religion
 		new_variable:From:mil_advisor_religion
+		noreligion
 	}
 }
