@@ -146,12 +146,12 @@ mercenary_company = {
 	}
 	## cardinality = 0..1
 	cavalry_flanking = {
-			min = float
-			max = float
-			weight = float
-			cost_modifier = float
-			sub_unit = cavalry
-		}
+		min = float
+		max = float
+		weight = float
+		cost_modifier = float
+		sub_unit = cavalry
+	}
 	## cardinality = 0..1	
 	artillery_power = {
 		min = float
