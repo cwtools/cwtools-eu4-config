@@ -5049,3 +5049,7 @@ alias[trigger:current_war_losses] = {
 ## scope = country
 ### Returns true if country can_revoke an estate privilege
 alias[trigger:can_revoke_estate_privilege] = <estate_privilege>
+
+## scope = country
+### Returns true if matches a mercenary_company
+alias[trigger:mercenary_company] = <mercenary_company>
