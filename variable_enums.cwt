@@ -52,6 +52,7 @@ enums = {
 		new_variable:From:adm_advisor_culture
 		new_variable:From:dip_advisor_culture
 		new_variable:From:mil_advisor_culture
+		noculture
 	}
 	enum[religion_new_variables] = {
 		new_variable:consort_religion
