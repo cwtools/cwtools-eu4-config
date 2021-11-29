@@ -2588,8 +2588,8 @@ alias[effect:spawn_rebels] = {
 	type = <rebel_type>
 	## cardinality = 0..1
 	type = religious_rebels
-	#should be 0.5..3 but parsing floats is bugged
-	size = float[0..3]
+	#should be 0.5..6 but parsing floats is bugged
+	size = float[0..6]
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
