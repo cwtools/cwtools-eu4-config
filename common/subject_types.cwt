@@ -431,6 +431,12 @@ subject_upgrades = {
 	}
 	## replace_scope = { root = country this = country }
 	## cardinality = 0..1
+	removed_effect = {
+		## cardinality = 0..inf
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country }
+	## cardinality = 0..1
 	modifier_overlord = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
@@ -441,5 +447,4 @@ subject_upgrades = {
 		## cardinality = 0..inf
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
 }
