@@ -1940,6 +1940,14 @@ alias[trigger:infantry_fraction] = float[0.0..1.0]
 ###Returns true if there are at least X infantry units in the province.
 alias[trigger:infantry_in_province] = int
 
+## scope = province
+###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.
+alias[trigger:infantry_in_province] = scope[country]
+
+## scope = province
+###Returns true if there are at least X cavalry units in the province, or if there are cavalry units from the specified country in the province.
+alias[trigger:infantry_in_province] = enum[country_tags]
+
 ## scope = country
 ###Returns true if the country has an inflation of at least X, or t least as much inflation as the country X.
 alias[trigger:inflation] = float
