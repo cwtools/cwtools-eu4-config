@@ -2880,6 +2880,7 @@ alias[effect:kill_units] = {
 	who = enemy
 	who = owner
 	who = controller
+	who = ROOT
 	## cardinality = 0..1
 	type = enum[unit_types]
 	## cardinality = 0..1
