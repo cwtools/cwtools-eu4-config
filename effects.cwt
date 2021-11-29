@@ -3453,3 +3453,7 @@ alias[effect:discover_provinces] = enum[country_tags]
 ###Part of Imperial Reforms - not on wiki or patch notes
 alias[effect:disables_hre_badboy_points] = bool
 
+## scope = province
+###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
+alias[effect:change_original_culture] = FROM
+
