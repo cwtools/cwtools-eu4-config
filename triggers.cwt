@@ -5063,18 +5063,3 @@ alias[trigger:can_revoke_estate_privilege] = <estate_privilege>
 ## scope = country
 ### Returns true if matches a mercenary_company
 alias[trigger:mercenary_company] = <mercenary_company>
-
-## scope = country
-### Forced scripted trigger to work
-alias[trigger:has_reached_government_reform_tier] = {
-	## cardinality = 0..1
-	tier_2 = yes
-	## cardinality = 0..1
-	tier_3 = yes
-	## cardinality = 0..1
-	tier_4 = yes
-	## cardinality = 0..1
-	tier_5 = yes
-	## cardinality = 0..1
-	tier_6 = yes
-}
