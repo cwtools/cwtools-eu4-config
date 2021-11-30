@@ -1462,11 +1462,11 @@ alias[trigger:has_matching_religion] = scope[country]
 ###Returns true if the country has the specified religion or syncretic faith, or the same religion or syncretic faith as the specified country.
 alias[trigger:has_matching_religion] = enum[country_tags]
 
-## scope = trade_node
+## scope = { trade_node province }
 ###Returns true if the scoped country has an active merchant in the trade node.
 alias[trigger:has_merchant] = scope[country]
 
-## scope = trade_node
+## scope = { trade_node province }
 ###Returns true if the scoped country has an active merchant in the trade node.
 alias[trigger:has_merchant] = enum[country_tags]
 
