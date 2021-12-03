@@ -191,6 +191,11 @@ customideas = {
 	## replace_scope = { this = country root = country }
 	chance = {
 		factor = float
-		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+		## cardinality = 0..inf
+		modifier = {
+			## cardinality = 0..inf
+			alias_name[trigger] = alias_match_left[trigger]
+			factor = float
+		}
 	}
 }
