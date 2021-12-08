@@ -3463,3 +3463,139 @@ alias[effect:change_original_culture] = FROM
 ## scope = province
 ###Remove all rebels in target province(s).
 alias[effect:clear_rebels] = yes
+
+## scope = country
+###Adds a certain amount of power projection to the country
+alias[effect:add_power_projection] = {
+	type = <power_projection_modifier>
+	amount = float
+}
+
+## scope = country
+###Makes the current country support the independence of the specified country
+alias[effect:support_independence_of] = enum[country_tags]
+## scope = country
+###Makes the current country support the independence of the specified country
+alias[effect:support_independence_of] = scope[country]
+
+## scope = country
+###Adds or removes X amount of land from the Estate's base land share. 
+alias[effect:change_estate_land_share] = {
+	estate = <estate>
+	estate = all
+	share = float[-100.0..100.0]
+	## cardinality = 0..1
+	###This will set it to change estate land share by the development of the province / development of the country X share
+	province = scope[province]
+	## cardinality = 0..1
+	###This will set it to change estate land share by the development of the province / development of the country X share
+	province = <province_id>
+}
+
+## scope = country
+###Adds the specified estate privilege to the country.
+alias[effect:set_estate_privilege] = <estate_privilege>
+
+## scope = country
+###Removes the specified estate privilege from the country.
+alias[effect:remove_estate_privilege] = <estate_privilege>
+
+## scope = country
+###Gives you a lump sum equivalent to x years of production income by y provinces (based on how much they currently produce).
+alias[effect:add_years_of_owned_provinces_production_income] = {
+	years = int
+	## push_scope = province
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = mercenary_company
+###Disbands the scoped mercenary company
+alias[effect:disband_mercenary_company] = yes
+
+## scope = mercenary_company
+###Disbands the scoped mercenary company
+alias[effect:disband_mercenary_company] = this
+
+## scope = mercenary_company
+###Kills the leader of the scoped mercenary company
+alias[effect:kill_mercenary_leader] = this
+
+## scope = mercenary_company
+###Adds or subtracts X% of the mercenary company's manpower.
+alias[effect:add_company_manpower] = float[-1.0..1.0]
+
+## scope = { province country }
+###Adds the specified amount of ducats to the Curia Treasury
+alias[effect:add_curia_treasury] = int
+
+## scope = province
+###Adds unrest to a province with a specified name
+alias[effect:add_named_unrest] = {
+	name = value_set[named_unrest]
+	value = int
+}
+
+## scope = province
+###Adds unrest to a province with a specified name
+alias[effect:remove_named_unrest] = value[named_unrest]
+
+## scope = country
+###Starts an agenda for a certain or a random estate
+alias[effect:start_estate_agenda] = random
+
+## scope = country
+###Starts an agenda for a certain or a random estate
+alias[effect:start_estate_agenda] = <estate>
+
+## scope = country
+###Applies a specified sprite pack (found in gfx/sprite_packs, often in DLC files) to the country. Not great verifying in DLC files for mods.
+alias[effect:apply_sprite_pack] = scalar #actually <sprite_pack>, but they're in DLC files
+
+
+## scope = any
+###Starts a given imperial incident, or ends it if <none> is used. Do not attempt to start an incident without checking that there isn't already one active.
+alias[effect:set_imperial_incident] = <imperial_incident>
+
+## scope = any
+###Starts a given imperial incident, or ends it if <none> is used. Do not attempt to start an incident without checking that there isn't already one active.
+alias[effect:set_imperial_incident] = none
+
+## scope = province
+###Adds or removes the Revolution to/from the province.
+alias[effect:set_revolution_in_province] = bool
+
+## scope = country
+###Adds X revolutionary zeal to the country
+alias[effect:add_revolutionary_zeal] = int
+
+## scope = province
+###Sets a province as the Center of Revolution
+alias[effect:spawn_center_of_revolution] = scope[province]
+
+## scope = province
+###Sets a province as the Center of Revolution
+alias[effect:spawn_center_of_revolution] = <province_id>
+
+## scope = { country }
+###Removes the Center of Revolution from a province
+alias[effect:remove_center_of_revolution] = yes
+
+## scope = country
+###Changes the name of the country to another specified localisation key. Needs <key>_ADJ for the adjectives.
+alias[effect:override_country_name] = localisation
+
+## scope = country
+###Restores the country name to its original if it has been changed via override_country_name
+alias[effect:restore_country_name] = yes
+
+## scope = country
+###Adds yearly income x (1 - crown land share) x years
+alias[effect:add_years_of_estate_land_income] = float
+
+## scope = country
+###Removes a hired advisor of a monarch power type for the current scope. Does not fire on_action for advisor being fired.
+alias[effect:remove_advisor_by_category_no_action] = enum[power_categories]
