@@ -5092,3 +5092,255 @@ alias[trigger:total_own_and_non_tributary_subject_development] = enum[country_ta
 ## scope = unit
 ###Checks whether the ruler is commanding the scoped unit/army
 alias[trigger:is_ruler_commanding_unit] = bool
+
+## scope = country
+###Returns true when the scope country is supporting the independence of the target country.
+alias[trigger:is_supporting_independence_of] = scope[any]
+
+## scope = country
+###Returns true when the scope country is supporting the independence of the target country.
+alias[trigger:is_supporting_independence_of] = enum[country_tags]
+
+## scope = province
+###Checks whether the province has at least as many buildings as specified.
+alias[trigger:num_of_buildings_in_province] = int
+
+## scope = country
+###Checks whether the country is gaining at least the specified amount of ADM power each month.
+alias[trigger:monthly_adm] = int
+
+## scope = country
+###Checks whether the country is gaining at least the specified amount of DIP power each month.
+alias[trigger:monthly_dip] = int
+
+## scope = country
+###Checks whether the country is gaining at least the specified amount of MIL power each month.
+alias[trigger:monthly_mil] = int
+
+## scope = country
+###Checks whether the country has at least X power projection.
+alias[trigger:power_projection] = int
+
+## scope = province
+###Returns the number of times the province has been improved by its current owner.
+alias[trigger:num_of_times_improved_by_owner] = int
+
+## scope = country
+###Checks whether the country is renting out condottieri to the target country.
+alias[trigger:is_renting_condottieri_to] = scope[any]
+
+## scope = country
+###Checks whether the country is renting out condottieri to the target country.
+alias[trigger:is_renting_condottieri_to] = enum[country_tags]
+
+## scope = country
+###Returns true if the ratio of the mercenary fraction to the army size of the country is at least X.
+alias[trigger:mercenary_fraction] = float[0.0..1.0]
+
+## scope = province
+###Checks whether the province has a higher total development value than a specified other province.
+alias[trigger:higher_development_than] = scope[province]
+
+## scope = province
+###Checks whether the province has a higher total development value than a specified other province.
+alias[trigger:higher_development_than] = <province_id>
+
+## scope = country
+###Checks whether the country is has had a golden age.
+alias[trigger:has_had_golden_age] = bool
+
+## scope = country
+###Returns the amount of a specific trade good the country is producing.
+alias[trigger:trade_goods_produced_amount] = {
+	trade_goods = <trade_good>
+	amount = int
+}
+
+## scope = country
+###Returns true if the country has government type X. Includes "dictatorship", which checks whether the country has a government reform with the label "is_dictatorship = yes"
+alias[trigger:government] = scope[any]
+
+## scope = country
+###Returns true if the country has government type X. Includes "dictatorship", which checks whether the country has a government reform with the label "is_dictatorship = yes"
+alias[trigger:government] = enum[country_tags]
+
+## scope = country
+###Returns true if the country is giving the specified estate privilege.
+alias[trigger:has_estate_privilege] = <estate_privilege>
+
+## scope = country
+###Returns the % of the country's development that is held by the Crown Land.
+alias[trigger:crown_land_share] = int[1..100]
+## scope = country
+###Returns the % of the country's development that is held by the Crown Land.
+alias[trigger:crown_land_share] = 0.1
+
+## scope = country
+###Returns if the country has been force converted by a specified other country.
+alias[trigger:force_converted_by] = scope[country]
+
+## scope = country
+###Checks whether the country has any loans with the tag "estate_loan = no".
+alias[trigger:has_estate_loan] = bool
+
+## scope = mercenary_company
+###Checks whether the mercenary company is a foreign mercenary company.
+alias[trigger:is_foreign_company] = bool
+
+## scope = mercenary_company
+###Checks whether the mercenary company uses a certain template.
+alias[trigger:template] = <mercenary_company>
+
+## scope = { country province }
+###Checks what the current amount of ducats in the Curia Treasury is.
+alias[trigger:curia_treasury_size] = int
+
+## scope = { country province }
+###Checks what the Curia Treasury's current monthly income is.
+alias[trigger:curia_treasury_income] = int
+
+## scope = country
+###Checks how much the currently scoped country contributes to the Curia Treasury each month.
+alias[trigger:curia_treasury_contribution] = int
+
+## scope = country
+###Checks whether the country is lacking institutions.
+alias[trigger:is_lacking_institutions] = bool
+
+## scope = country
+###Checks how many privileges a country has given to a specified estate.
+alias[trigger:num_of_estate_privileges] = {
+	estate = <estate>
+	value = int
+}
+
+## scope = country
+###Checks how many agendas a country has completed for a specified estate.
+alias[trigger:num_of_estate_agendas_completed] = {
+	estate = <estate>
+	value = int
+}
+
+## scope = country
+###Checks whether the country currently has an active estate agenda.
+alias[trigger:has_active_estate_agenda] = <estate_agenda>
+
+## scope = province
+###Returns the missionary strength the country would have if it tried to convert the province.
+alias[trigger:missionary_strength] = float[0.0..0.09]
+
+## scope = any
+###Returns true if the specified imperial reform has been enacted.
+alias[trigger:hre_reform_passed] = <imperial_reform.hre>
+
+## scope = any
+###Returns true if the specified Chinese imperial reform has been enacted.
+alias[trigger:empire_of_china_reform_passed] = <imperial_reform.china>
+
+## scope = any
+###Checks whether a given (or any) imperial incident is currently active.
+alias[trigger:active_imperial_incident] = <imperial_incident>
+
+## scope = any
+###Checks whether a given (or any) imperial incident is currently active.
+alias[trigger:active_imperial_incident] = any
+
+## scope = mercenary_company
+###Checks whether the mercenary company has X% of its manpower.
+alias[trigger:has_company_manpower] = float[0.0..1.0]
+
+## scope = country
+###Checks whether the country is a defender of faith of the specified tier.
+alias[trigger:is_defender_of_faith_of_tier] = int
+
+## scope = country
+###Checks how many mercenary companies the country is currently hiring.
+alias[trigger:num_of_hired_mercenary_companies] = int
+
+## scope = province
+###Checks the supply limit of a province.
+alias[trigger:supply_limit] = float
+
+## scope = province
+###Checks the supply limit of a province.
+alias[trigger:supply_limit] = scope[province]
+
+## scope = province
+###Checks the supply limit of a province.
+alias[trigger:supply_limit] = <province_id>
+
+## scope = province
+###Checks whether the province is a Center of the Revolution.
+alias[trigger:is_center_of_revolution] = bool
+
+## scope = province
+###Checks whether the province is has the Revolution in it.
+alias[trigger:has_revolution_in_province] = bool
+
+## scope = country
+###Checks how much of the country has the Revolution in it.
+alias[trigger:revolution_spread] = float[0.0..1.0]
+
+## scope = country
+###Checks whether the country can embrace the Revolution.
+alias[trigger:can_embrace_revolution] = bool
+
+## scope = country
+###Checks the country's current maximum revolutionary zeal
+alias[trigger:max_revolutionary_zeal] = int
+
+## scope = country
+###Checks whether the country uses revolutionary zeal
+alias[trigger:uses_revolutionary_zeal] = bool
+
+## scope = country
+###Checks the country's current revolutionary zeal
+alias[trigger:revolutionary_zeal] = int
+
+## scope = country
+###Checks whether the country has defeated the other country in a war (as main attacker vs main defender or vice versa)
+alias[trigger:has_won_war_against] = {
+	who = scope[country]
+	who = enum[country_tags]
+	## cardinality = 0..1
+	###Default = infinity
+	max_years_since = int
+}
+
+## scope = country
+###Checks the country is revolutionary (according to its government)
+alias[trigger:is_revolutionary] = bool
+
+## scope = country
+###Checks whether the country is a rebel faction of the specified type. Use with caution - may not work in all circumstances (e.g. controller scope breaks it, apparently)
+alias[trigger:is_rebel_type] = <rebel_type>
+
+## scope = country
+###Checks the number of owned areas (i.e. states and territories) a country has.
+alias[trigger:num_of_owned_areas] = int
+
+## scope = country
+###Checks the number of years since there has been a Revolution Target without anyone taking it up. Returns false if there has never been a Revolution Target.
+alias[trigger:years_since_dismantle_revolution] = int
+
+
+## scope = country
+###Checks whether the country is hiring condottieri from the specified country
+alias[trigger:is_hiring_condottiere_from] = enum[country_tags]
+## scope = country
+###Checks whether the country is hiring condottieri from the specified country
+alias[trigger:is_hiring_condottiere_from] = scope[country]
+
+## scope = country
+###Checks whether the country has been humiliated by the specified country
+alias[trigger:support_independence_of] = enum[country_tags]
+## scope = country
+###Checks whether the country has been humiliated by the specified country
+alias[trigger:support_independence_of] = scope[country]
+
+###Checks whether the country is a hegemon or not
+alias[trigger:is_hegemon] = bool
+
+###Checks whether the country has any active estate agenda
+alias[trigger:has_any_active_estate_agenda] = bool
+
