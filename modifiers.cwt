@@ -574,7 +574,7 @@ alias[modifier:is_cawa_modifier] = bool
  
 ## scope = country
 ### Country amount of cawa
-alias[modifier:amount_of_cawa] = int
+alias[modifier:amount_of_cawa] = float
 
 ## scope = country
 alias[modifier:<estate_modifier>] = float[-1.0..1.0]
