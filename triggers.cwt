@@ -5338,9 +5338,14 @@ alias[trigger:support_independence_of] = enum[country_tags]
 ###Checks whether the country has been humiliated by the specified country
 alias[trigger:support_independence_of] = scope[country]
 
+## scope = country
 ###Checks whether the country is a hegemon or not
 alias[trigger:is_hegemon] = bool
 
+## scope = country
 ###Checks whether the country has any active estate agenda
 alias[trigger:has_any_active_estate_agenda] = bool
 
+## scope = country
+###Checks whether the country can use crown land interation
+alias[trigger:can_use_crown_land_interaction] = seize_land
