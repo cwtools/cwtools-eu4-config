@@ -651,6 +651,9 @@ alias[modifier:flagship_cost] = float
 ## scope = country
 alias[modifier:hegemon_strength] = float[0.0..100.0]
 
+## scope = country
+alias[modifier:monthly_piety_accelerator] = float
+
 ## scope = province
 alias[modifier:blockade_force_required] = float
 ## scope = province
