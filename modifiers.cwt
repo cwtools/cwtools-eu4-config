@@ -367,7 +367,7 @@ alias[modifier:artillery_fire] = int
 ## scope = country
 alias[modifier:possible_policy] = int
 ## scope = country
-alias[modifier:power_projection_from_insults] = int
+alias[modifier:power_projection_from_insults] = float
 
 ## scope = province
 alias[modifier:local_religious_unity_contribution] = float
@@ -538,11 +538,11 @@ alias[modifier:monthly_favor_modifier] = float
 	
 ## scope = country
 ### Tolerance of heretics capacity
-alias[modifier:tolerance_of_heretics_capacity] = int
+alias[modifier:tolerance_of_heretics_capacity] = float
 
 ## scope = country
 ### Tolerance of heathens capacity
-alias[modifier:tolerance_of_heathens_capacity] = int
+alias[modifier:tolerance_of_heathens_capacity] = float
 	
 ## scope = country
 ### Move capital cost modifier
@@ -691,3 +691,6 @@ alias[modifier:trade_company_governing_cost] = float
 alias[modifier:expand_administration_cost] = float
 alias[modifier:transfer_trade_power_reasons] = int
 alias[modifier:relation_with_heretics] = int
+alias[modifier:no_stability_loss_on_monarch_death] = bool
+alias[modifier:relation_with_same_religion] = int
+alias[modifier:overlord_naval_forcelimit_modifier] = float
