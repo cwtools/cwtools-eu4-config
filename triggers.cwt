@@ -1363,6 +1363,10 @@ alias[trigger:has_harmonized_with] = <religion_group>
 ###Returns true if the country has harmonized with the specified religion or religion group.
 alias[trigger:has_harmonized_with] = scope[province]
 
+## scope = country
+###Returns true if the country has harmonized with the specified religion or religion group.
+alias[trigger:has_harmonized_with] = scope[country]
+
 ## scope = province
 ###Returns true if the province has had harsh treatment used on it.
 alias[trigger:has_harsh_treatment] = bool
@@ -5349,3 +5353,15 @@ alias[trigger:num_mothballed_forts] = int
 ## scope = country
 ###Checks regiments morale percentage
 alias[trigger:all_regiments_morale_percent] = float
+
+## scope = country
+###Checks if country uses meritocracy
+alias[trigger:uses_meritocracy] = bool
+
+## scope = country
+###Checks if country uses horde unity
+alias[trigger:uses_horde_unity] = bool
+
+## scope = country
+###Checks if country uses republican tradition
+alias[trigger:uses_republican_tradition] = bool
