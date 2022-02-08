@@ -853,34 +853,25 @@ alias[trigger:employed_advisor] = {
 ## scope = country
 ###Returns true if the estate X in the country has at least Y influence.
 alias[trigger:estate_influence] = {
+	## cardinality = 0..1
 	estate = <estate>
+	## cardinality = 0..1
+	estate = all
+	## cardinality = 0..1
+	less_than = yes
 	influence = int[0..100]
 }
 
 ## scope = country
-###Returns true if the estate X in the country has at least Y influence.
-alias[trigger:estate_influence] = {
-	estate = all
-	influence = int[0..100]
-}
-
-## scope = country
 ###Returns true if the estate X in the country has at least Y loyalty.
 alias[trigger:estate_loyalty] = {
+	## cardinality = 0..1
 	estate = <estate>
-	loyalty = int[0..100]
-}
-## scope = country
-###Returns true if the estate X in the country has at least Y loyalty.
-alias[trigger:estate_loyalty] = {
+	## cardinality = 0..1
 	estate = all
-	loyalty = int[0..100]
-}
-## scope = country
-###Returns true if the estate X in the country has at least Y loyalty.
-alias[trigger:estate_loyalty] = {
-	estate = <estate>
+	## cardinality = 0..1
 	higher_than_influence = bool
+	loyalty = float[0..100]
 }
 
 ## scope = country
@@ -1596,6 +1587,7 @@ alias[trigger:has_ruler_modifier] = <event_modifier>
 
 ## scope = any
 ###Returns true if the specified event target has been saved.
+## severity = warning
 alias[trigger:has_saved_event_target] = value[event_target]
 
 ## scope = country
@@ -5349,3 +5341,11 @@ alias[trigger:has_any_active_estate_agenda] = bool
 ## scope = country
 ###Checks whether the country can use crown land interation
 alias[trigger:can_use_crown_land_interaction] = seize_land
+
+## scope = country
+###Checks the number of mothballed forts
+alias[trigger:num_mothballed_forts] = int
+
+## scope = country
+###Checks regiments morale percentage
+alias[trigger:all_regiments_morale_percent] = float
