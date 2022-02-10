@@ -1587,6 +1587,8 @@ alias[effect:remove_faction] = <faction>
 alias[effect:add_faction_influence] = {
 	faction = <faction>
 	influence = int
+	## cardinality = 0..1
+	perform_readjustment = no
 }
 
 ## scope = country
