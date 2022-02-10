@@ -143,6 +143,10 @@ subject_type = {
 	forms_trade_companies = bool
 	## cardinality = 0..1
 	can_concentrate_development = bool
+	## cardinality = 0..1
+	can_have_great_projects_moved_by_overlord = bool
+	## cardinality = 0..1
+	extend_trading_range = bool
 	
 	## cardinality = 0..1
 	can_send_tribute = bool
