@@ -1794,7 +1794,7 @@ alias[effect:define_ruler] = {
 	###Hides the skill values for this ruler.
 	hide_skills = yes
 	## cardinality = 0..1
-	regency = yes
+	regency = bool
 	## cardinality = 0..1
 	###The name of the leader to generate with the ruler.
 	attach_leader = localisation_synced #value_set[leader_name]
