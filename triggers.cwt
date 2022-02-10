@@ -865,14 +865,18 @@ alias[trigger:estate_influence] = {
 ## scope = country
 ###Returns true if the estate X in the country has at least Y loyalty.
 alias[trigger:estate_loyalty] = {
-	## cardinality = 0..1
 	estate = <estate>
-	## cardinality = 0..1
-	estate = all
-	## cardinality = 0..1
-	higher_than_influence = bool
 	loyalty = float[0..100]
 }
+alias[trigger:estate_loyalty] = {
+	estate = all
+	loyalty = float[0..100]
+}
+alias[trigger:estate_loyalty] = {
+	estate = <estate>
+	higher_than_influence = bool
+}
+
 
 ## scope = country
 ###Returns true if the estate X in the country controls at least Y% of the total development.
