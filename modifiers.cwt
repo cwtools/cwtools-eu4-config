@@ -696,3 +696,5 @@ alias[modifier:relation_with_same_religion] = int
 alias[modifier:overlord_naval_forcelimit_modifier] = float
 alias[modifier:free_land_leader_pool] = float
 alias[modifier:free_navy_leader_pool] = float
+alias[modifier:relation_with_same_culture] = int
+alias[modifier:relation_with_same_culture_group] = int
