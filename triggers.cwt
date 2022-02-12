@@ -3414,6 +3414,9 @@ alias[trigger:owned_by] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country owns the specified province.
+alias[trigger:owns] = scope[any]
+## scope = country
+###Returns true if the country owns the specified province.
 alias[trigger:owns] = <province_id>
 
 ## scope = country
