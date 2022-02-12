@@ -132,7 +132,7 @@ casus_belli = {
 	prerequisites = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-    
+
 	## cardinality = 0..1
 	holy_war = yes
 	
@@ -240,9 +240,44 @@ wargoal_type = {
 		allowed_tribal_provinces = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-				
+		
 		## cardinality = 0..1
 		allowed_provinces_are_eligible = yes
+		
+		## cardinality = 0..1
+		allow_annex = yes
+		
+		## cardinality = 0..1
+		deny_annex = yes
+		
+		## cardinality = 0..1
+		## replace_scope = { root = country this = country from = country }
+		allowed_countries = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		
+		## cardinality = 0..1
+		transfer_trade_cost_factor = float
+		
+		
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			<peace_options>
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			<peace_options>
+		}
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
+		
 		
 		peace_options = {
 			## cardinality = 1..inf
@@ -292,6 +327,24 @@ wargoal_type = {
 		}
 		## cardinality = 0..1
 		allowed_provinces_are_eligible = yes
+		
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			<peace_options>
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			<peace_options>
+		}
+		## cardinality = 0..1
+		required_treaty_to_take_provinces = {
+			## cardinality = 1..inf
+			enum[peace_options]
+		}
 		
 		## cardinality = 0..1				  
 		peace_options = {
