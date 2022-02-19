@@ -177,21 +177,12 @@ subject_type = {
 	###1.0 represents the amount payed by vassals
 	pays_overlord = float
 	## cardinality = 0..1
-	###1.0 represents bonus from having a vassal
-	forcelimit_bonus = float
-	## cardinality = 0..1
 	###Percent of subject FL to use as base for modifiers
 	forcelimit_to_overlord = float
 	## cardinality = 0..1
-	naval_forcelimit_bonus = float
-	## cardinality = 0..1
 	naval_forcelimit_to_overlord = float
 	## cardinality = 0..1
-	manpower_bonus = float
-	## cardinality = 0..1
 	manpower_to_overlord = float
-	## cardinality = 0..1
-	sailors_bonus = float
 	## cardinality = 0..1
 	sailors_to_overlord = float
 	## cardinality = 0..1
@@ -452,3 +443,4 @@ subject_upgrades = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 }
+
