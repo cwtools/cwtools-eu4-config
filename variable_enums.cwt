@@ -36,6 +36,7 @@ enums = {
 		trigger_value:native_size
 		trigger_value:production_income_percentage
 		trigger_value:trade_income_percentage
+		trade_income_percentage
 		trust
 		years_of_income
 	}
