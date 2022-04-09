@@ -1547,7 +1547,9 @@ alias[trigger:has_province_flag] = value[province_flag]
 ## scope = province
 ###Returns true if province has the province modifier X.
 alias[trigger:has_province_modifier] = <event_modifier>
-
+## scope = province
+###Returns true if province has the province modifier X.
+alias[trigger:has_province_modifier] = <province_triggered_modifier>
 ## scope = province
 ###Returns true if province has the province modifier X.
 alias[trigger:has_province_modifier] = <static_modifier>
