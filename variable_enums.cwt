@@ -39,6 +39,9 @@ enums = {
 		trigger_value:monthly_income
 		trust
 		years_of_income
+		ADM
+		DIP
+		MIL
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture
