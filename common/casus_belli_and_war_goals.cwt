@@ -321,6 +321,9 @@ wargoal_type = {
 		prov_desc = localisation
 		## cardinality = 0..1
 		country_desc = localisation
+		
+		## cardinality = 0..1
+		transfer_trade_cost_factor = float
 	}
 
 	
