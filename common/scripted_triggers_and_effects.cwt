@@ -57,3 +57,14 @@ alias[trigger:has_reached_government_reform_tier] = {
 	## cardinality = 0..1
 	tier_6 = yes
 }
+
+## replace_scope = { this = country root = country }
+### Forced scripted trigger to work
+alias[trigger:has_completed_idea_group_of_category] = {
+	## cardinality = 0..1
+	adm_ideas = yes
+	## cardinality = 0..1
+	mil_ideas = yes
+	## cardinality = 0..1
+	dip_ideas = yes
+}
