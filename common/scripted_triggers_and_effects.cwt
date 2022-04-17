@@ -44,6 +44,16 @@ alias[effect:add_latest_building] = {
 }
 
 ## scope = country
+### Force scripted effect to work
+Event Scope Values.
+alias[effect:unlock_merc_company] = {
+	## cardinality = 0..1
+	merc_company = <mercenary_company>
+	## cardinality = 0..1
+	free_merc = yes
+}
+
+## scope = country
 ### Forced scripted trigger to work
 alias[trigger:has_reached_government_reform_tier] = {
 	## cardinality = 0..1
