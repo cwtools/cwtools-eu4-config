@@ -1249,6 +1249,14 @@ alias[effect:add_trust] = {
 }
 
 ## scope = country
+###Adds favors with the defined scope for the current scope. 
+alias[effect:add_favors] = {
+	who = scope[country]
+	who = enum[country_tags]
+	amount = int
+}
+
+## scope = country
 ###Adds an opinion modifier for the current scope held against the defined scope. Opinion modifiers are found in /Europa Universalis IV/common/opinion_modifiers/*.txt
 alias[effect:add_opinion] = {
 	who = scope[any]
