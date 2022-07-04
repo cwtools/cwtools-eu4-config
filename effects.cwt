@@ -2468,7 +2468,14 @@ alias[effect:cancel_construction] = yes
 
 ## scope = province
 ###Starts construction of a great project in the current province scope. Great projects are found in /Europa Universalis IV/common/great_projects/*.txt.
-alias[effect:add_great_project] = <great_project>
+alias[effect:add_great_project] = {
+	## cardinality = 1..1
+	###The Great Project to add.
+	type = <great_project>
+	## cardinality = 0..1
+	###Defines if the Great Project will be built instantly or not.
+	instant = bool
+}
 
 ## scope = province
 ###Changes the construction progress of a great project in the current province scope.
