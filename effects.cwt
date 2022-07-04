@@ -1850,6 +1850,9 @@ alias[effect:define_ruler] = {
 	change_dip = int[-6..6]
 	## cardinality = 0..1
 	change_mil = int[-6..6]
+	## cardinality = 0..1
+	###Makes the ruler skill roll fixed to the defined minimums.
+	fixed = yes
 }
 
 ## scope = country
