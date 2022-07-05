@@ -699,3 +699,6 @@ alias[modifier:free_navy_leader_pool] = float
 alias[modifier:relation_with_same_culture] = int
 alias[modifier:relation_with_same_culture_group] = int
 alias[modifier:is_marine_modifier] = bool
+alias[modifier:is_banner_modifier] = bool
+alias[modifier:is_streltsy_modifier] = bool
+alias[modifier:is_cossack_modifier] = bool
