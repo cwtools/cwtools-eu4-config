@@ -226,6 +226,17 @@ alias[effect:while] = {
 }
 
 ## scope = any
+###The for scope is used to repeat execution of a set of effects for a predetermined amount of times.
+alias[effect:for] = {
+	## cardinality = 1..1
+	###How many times to repeat this loop.
+	amount = int
+	## cardinality = 1..1
+	###The effect, it needs to be enclosed withing double quotes but can be across multiple lines.
+	effect = scalar
+}
+
+## scope = any
 ###The trigger_switch scope is used in conjuction with triggers that return discrete values. You list each trigger value you wish to act on, and add the effects within.
 alias[effect:trigger_switch] = {
 	on_trigger = scalar
