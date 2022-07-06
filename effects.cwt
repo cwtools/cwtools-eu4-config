@@ -3609,3 +3609,17 @@ alias[effect:add_years_of_estate_land_income] = float
 ## scope = country
 ###Removes a hired advisor of a monarch power type for the current scope. Does not fire on_action for advisor being fired.
 alias[effect:remove_advisor_by_category_no_action] = enum[power_categories]
+
+## scope = country
+###Sets the country as defender of the faith, overriding the existing defender if it exists.
+alias[effect:set_defender_of_the_faith] = {
+	## cardinality = 1..1
+	who = scope[country]
+	## cardinality = 1..1
+	who = enum[country_tags]
+
+	## cardinality = 0..1
+	religion = scope[country]
+	## cardinality = 0..1
+	religion = enum[country_tags]
+}
