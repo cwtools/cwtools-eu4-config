@@ -3609,3 +3609,7 @@ alias[effect:add_years_of_estate_land_income] = float
 ## scope = country
 ###Removes a hired advisor of a monarch power type for the current scope. Does not fire on_action for advisor being fired.
 alias[effect:remove_advisor_by_category_no_action] = enum[power_categories]
+
+## scope = province
+###Spawns a cawa infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
+alias[effect:cawa_infantry] = scope[country]
