@@ -2715,7 +2715,7 @@ on_action = {
 
         alias_name[effect] = alias_match_left[effect]
 	}
-    ## replace_scope = { root = province this = province from = province }
+    ## replace_scope = { root = country this = country from = province }
     subtype[on_raid_coast] = {
         ## cardinality = 0..1
         events = {
