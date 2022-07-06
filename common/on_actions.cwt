@@ -2720,14 +2720,14 @@ on_action = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
-            <event.province>
+            <event.country>
         }
         ## cardinality = 0..1
         random_events = {
             ## cardinality = 0..inf
             int = 0
             ## cardinality = 0..inf
-            int = <event.province>
+            int = <event.country>
         }
 
         alias_name[effect] = alias_match_left[effect]
