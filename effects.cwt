@@ -2096,7 +2096,11 @@ alias[effect:kill_heir] = {
 
 ## scope = country
 ###Removes the heir of the current scope. Does not display the heir death message.
-alias[effect:remove_heir] = {}
+alias[effect:remove_heir] = {
+	## cardinality = 0..1
+	###Whether there is a chance to immediately spawn a new heir.
+	allow_new_heir = bool
+}
 
 ## scope = country
 ###Converts a female heir into a general.
