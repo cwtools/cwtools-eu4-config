@@ -4534,7 +4534,7 @@ alias[trigger:can_migrate] = bool
 alias[trigger:current_institution] = int[0..100]
 
 ## scope = country
-alias[trigger:government_reform_progress] = int[0..100]
+alias[trigger:government_reform_progress] = int
 
 ## scope = country
 ###Returns true if the current country scope has a religious school.
