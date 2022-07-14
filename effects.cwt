@@ -2881,6 +2881,10 @@ alias[effect:streltsy_infantry] = enum[country_tags]
 alias[effect:cossack_cavalry] = scope[country]
 
 ## scope = province
+###Spawns a marine infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
+alias[effect:marine_infantry] = scope[country]
+
+## scope = province
 ###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.
 alias[effect:cossack_cavalry] = enum[country_tags]
 
