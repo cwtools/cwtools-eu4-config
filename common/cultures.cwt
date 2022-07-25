@@ -42,7 +42,7 @@ culture_group = {
 		scalar
 	}
 	
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<culture> = {
 		## cardinality = 0..1
 		graphical_culture = enum[graphical_cultures]
