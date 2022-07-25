@@ -19,16 +19,13 @@ types = {
 enums = {
 	complex_enum[dynasty_name] = {
 		path = "game/common/cultures"
-		start_from_root = yes
 		name = {
+			dynasty_names = {
+				enum_name
+			}
 			name = {
 				dynasty_names = {
 					enum_name
-				}
-				name = {
-					dynasty_names = {
-						enum_name
-					}
 				}
 			}
 		}

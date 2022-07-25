@@ -1630,7 +1630,7 @@ alias[effect:clr_ruler_flag] = value[ruler_flag]
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
-alias[effect:set_dynasty] = localisation_synced #value[dynasty_name]
+alias[effect:set_dynasty] = enum[dynasty_name]
 
 ## scope = country
 ###Sets the dynasty of the current scope's ruler.
