@@ -37,7 +37,7 @@ culture_group = {
 	}
 	
 	## cardinality = 0..1
-	dynasty_names = {
+	<dynasty_names> = {
 		## cardinality = 0..inf
 		scalar
 	}
@@ -65,7 +65,7 @@ culture_group = {
 		}
 		
 		## cardinality = 0..1
-		dynasty_names = {
+		<dynasty_names> = {
 			## cardinality = 0..inf
 			scalar
 		}
