@@ -3515,6 +3515,8 @@ alias[effect:remove_estate_privilege] = <estate_privilege>
 alias[effect:add_years_of_owned_provinces_production_income] = {
 	years = int
 	## push_scope = province
+	## cardinality = 0..1
+	###Which provinces to include in the calculation, defaults to 'always = yes' if not defined.
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
