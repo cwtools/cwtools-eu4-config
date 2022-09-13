@@ -84,21 +84,6 @@ game_age = {
 			modifier = {
 				alias_name[modifier] = alias_match_left[modifier]
 			}
-			## cardinality = 0..1
-			rule = { #todo: is there a better way to do this?
-				## cardinality = 0..1
-				can_transfer_vassal_wargoal = bool
-				## cardinality = 0..1
-				can_chain_claim = bool
-				## cardinality = 0..1
-				can_colony_boost_development = bool
-				## cardinality = 0..1
-				attack_bonus_in_capital_terrain = bool
-				## cardinality = 0..1
-				force_march_free = bool
-				## cardinality = 0..1
-				ignore_coring_distance = bool
-			}
 			## replace_scope = { root = country this = country }
 			ai_will_do = {
 				factor = float

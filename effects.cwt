@@ -3176,7 +3176,7 @@ alias[effect:complete_mission] = <mission>
 alias[effect:clear_exiled_ruler] = value[exiled_ruler]
 
 ## scope = country
-alias[effect:lose_reforms] = int
+alias[effect:lose_reforms] = int[1..inf]
 
 ## scope = country
 alias[effect:set_religious_school] = {
@@ -3246,6 +3246,12 @@ alias[effect:remove_rival] = scope[country]
 
 ## scope = country
 alias[effect:remove_rival] = enum[country_tags]
+
+## scope = country
+alias[effect:force_remove_rival] = scope[country]
+
+## scope = country
+alias[effect:force_remove_rival] = enum[country_tags]
 
 ## scope = country
 ### Turns the monarch into a leader
@@ -3423,6 +3429,9 @@ alias[effect:change_subject_type] = {
 ## scope = province
 ###Change tribal land  
 alias[effect:change_tribal_land] = ROOT
+
+## scope = province
+alias[effect:change_tribal_land] = ---
 
 ## scope = country
 ###Changes estate regent to ruler.  
@@ -3653,3 +3662,62 @@ alias[effect:cawa_infantry] = scope[country]
 ## scope = country
 ###Sets the current country scope emperor if <yes>, or removes the current emperor regardless of scope if <no>. It does not produce any popups.
 alias[effect:set_emperor] = bool
+
+###Gives you a lump of manpower equivalent to X years of manpower by Y provinces (based on how much they currently produce).
+alias[effect:add_years_of_owned_provinces_manpower] = {
+	years = int
+	## push_scope = province
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = country
+###Gives you a lump of manpower equivalent to X years of sailors by Y provinces (based on how much they currently produce).
+alias[effect:add_years_of_owned_provinces_sailors] = {
+	years = int
+	## push_scope = province
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = country
+###Force scoped country to break the alliance with specified country
+alias[effect:break_alliance] = scope[country]
+
+## scope = country
+###Force scoped country to break the alliance with specified country
+alias[effect:break_alliance] = enum[country_tags]
+
+## scope = province
+###Decolonizes the scoped province, making it unowned
+alias[effect:decolonize] = yes
+
+## scope = { country province }
+###Decolonizes the specified province, making it unowned
+alias[effect:decolonize] = <province_id>
+
+## scope = country
+###Removes the current hegemon status
+remove_hegemon = scope[country]
+
+## scope = country
+###Removes the current hegemon status
+remove_hegemon = enum[country_tags]
+
+## scope = country
+###Resets Golden Age, allowing it to be fired again if fired before
+reset_golden_age = yes
+
+## scope = country
+###Extends the current Golden Age by X months
+extend_golden_age = int[1..inf]
+
+## scope = { country province }
+###Makes specified country bankrupt
+set_bankrupt = enum[country_tags]

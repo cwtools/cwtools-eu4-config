@@ -27,6 +27,12 @@ diplomatic_action = {
 	
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country from = country }
+	pre_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country from = country }
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}

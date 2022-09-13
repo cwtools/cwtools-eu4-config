@@ -336,6 +336,8 @@ government_reform = {
 				}
 			}
 			## cardinality = 0..1
+			allow_carolean = bool
+			## cardinality = 0..1
 			allow_cawa = bool
 			## cardinality = 0..1
 			allow_draft_transport_ships = bool
@@ -481,6 +483,8 @@ government_reform = {
 				admirals_become_rulers = bool
 				## cardinality = 0..1
 				gives_war_against_the_world_tooltip_dummy = yes
+				## cardinality = 0..1
+				cannot_become_dictatorship = bool
 				## cardinality = 0..inf
 				value_set[custom_attribute] = bool
 			}
@@ -535,6 +539,8 @@ government_reform = {
 			admirals_become_rulers = bool
 			## cardinality = 0..1
 			gives_war_against_the_world_tooltip_dummy = yes
+			## cardinality = 0..1
+			cannot_become_dictatorship = bool
 			## cardinality = 0..inf
 			value_set[custom_attribute] = bool
 		}
@@ -743,7 +749,7 @@ government = {
 		}
 	
 		reform_levels = {
-			## cardinality = 1..10
+			## cardinality = 1..12
 			localisation = {
 				reforms = {
 					## cardinality = 1..inf

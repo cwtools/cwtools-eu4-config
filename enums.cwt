@@ -80,6 +80,7 @@ enums = {
 		"Emperor"
 		"Leviathan"
 		"Origins"
+		"Lions of the North"
 	}
 	enum[DLCNUM] = {
 		dlc001
@@ -252,6 +253,9 @@ enums = {
 		militarised_society
 		has_term_election
 		free_city
+		no_stability_loss_on_monarch_death
+		enables_cossacks
+		enables_nomadic_tribes
 	}
 	enum[monsoons] = {
 		severe_monsoon
