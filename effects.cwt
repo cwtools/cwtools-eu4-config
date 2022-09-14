@@ -2813,6 +2813,11 @@ alias[effect:cede_province] = enum[country_tags]
 alias[effect:cede_province] = previous_owner
 
 ## scope = province
+###The defined scope gains ownership of the current province scope. previous_owner can be used to cede ownership to the last previous owner of a province.
+alias[effect:cede_province] = ---
+
+
+## scope = province
 ###The defined scope gains control over the current province scope. Control here means occupation, not ownership.
 alias[effect:change_controller] = scope[country]
 
