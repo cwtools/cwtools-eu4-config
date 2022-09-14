@@ -876,6 +876,10 @@ alias[trigger:estate_loyalty] = {
 	estate = <estate>
 	higher_than_influence = bool
 }
+alias[trigger:estate_loyalty] = {
+	estate = all
+	higher_than_influence = bool
+}
 
 
 ## scope = country
