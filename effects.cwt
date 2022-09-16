@@ -3530,6 +3530,8 @@ alias[effect:add_years_of_owned_provinces_production_income] = {
 	###How many years worth of income, decimals can be used like 0.5 to indicate half-year.
 	years = float
 	## push_scope = province
+	## cardinality = 0..1
+	###Which provinces to include in the calculation, defaults to 'always = yes' if not defined.
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
