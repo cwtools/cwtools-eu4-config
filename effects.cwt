@@ -3520,7 +3520,8 @@ alias[effect:remove_estate_privilege] = <estate_privilege>
 ## scope = country
 ###Gives you a lump sum equivalent to x years of production income by y provinces (based on how much they currently produce).
 alias[effect:add_years_of_owned_provinces_production_income] = {
-	years = int
+	###How many years worth of income, decimals can be used like 0.5 to indicate half-year.
+	years = float
 	## push_scope = province
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
