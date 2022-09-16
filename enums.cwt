@@ -23,11 +23,6 @@ enums = {
 		galley
 		transport
 	}
-	enum[warloss_cause] = {
-		attrition
-		battle
-		capture
-	}
 	enum[power_categories] = {
 		ADM
 		DIP
@@ -182,7 +177,6 @@ enums = {
 		dlc097
 		dlc098
 		dlc099
-		dlc100
 		dlc101
 		dlc102
 		dlc103
@@ -196,11 +190,6 @@ enums = {
 		dlc111
 		dlc112
 		dlc113
-		dlc114
-		dlc115
-		dlc116
-		dlc117
-		dlc118
 	}
 	enum[key_name] = {
 		key
@@ -267,7 +256,6 @@ enums = {
 		no_stability_loss_on_monarch_death
 		enables_cossacks
 		enables_nomadic_tribes
-		can_propogate_religion
 	}
 	enum[monsoons] = {
 		severe_monsoon
