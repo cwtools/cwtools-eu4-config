@@ -78,3 +78,11 @@ alias[trigger:has_completed_idea_group_of_category] = {
 	## cardinality = 0..1
 	dip_ideas = yes
 }
+
+## scope = country
+###Kills a hired advisor of a monarch power type for the current scope. Displays the advisor death message box when used.
+alias[effect:kill_advisor_by_category_effect] = {
+	## cardinality 1..1
+	###Which monarch power advisor to kill.
+	enum[power_categories] = yes
+}
