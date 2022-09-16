@@ -147,6 +147,9 @@ subject_type = {
 	can_have_great_projects_moved_by_overlord = bool
 	## cardinality = 0..1
 	extend_trading_range = bool
+	## cardinality = 0..1
+	###How much it costs in DIP to annex, based on development
+	annex_cost_per_development = float[0..inf]
 	
 	## cardinality = 0..1
 	can_send_tribute = bool
@@ -367,7 +370,9 @@ subject_type = {
 	## cardinality = 0..inf
 	###Use "clear" to clear after copy_from. Otherwise it just adds a static modifier.
 	modifier_subject = {
+		## cardinality = 1..1
 		modifier = <static_modifier>
+		modifier = <event_modifier>
 		## cardinality = 0..1
 		##replace_scope = { root = country this = country from = country }
 		###Root = subject, from = overlord.
@@ -385,7 +390,9 @@ subject_type = {
 	## cardinality = 0..inf
 	###Use "clear" to clear after copy_from. Otherwise it just adds a static modifier.
 	modifier_overlord = {
+		## cardinality = 1..1
 		modifier = <static_modifier>
+		modifier = <event_modifier>
 		## cardinality = 0..1
 		##replace_scope = { root = country this = country from = country }
 		###Root = subject, from = overlord.

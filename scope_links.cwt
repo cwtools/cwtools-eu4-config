@@ -1844,3 +1844,111 @@ alias[effect:<trade_company>] = {
 	}
 	alias_name[effect] = alias_match_left[effect]
 }
+
+## push_scope = province
+## scope = { province country }
+###Scopes to all capital provinces.
+alias[trigger:all_capital_provinces] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = province
+## scope = { province country }
+###Scopes to any capital province.
+alias[trigger:any_capital_province] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = { province country }
+## push_scope = province
+###Scopes to every capital province.
+alias[effect:every_capital_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = { province country }
+## push_scope = province
+###Scope to a random capital province.
+alias[effect:random_capital_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = province
+## scope = country
+###Scopes to all claimed provinces.
+alias[trigger:all_claimed_provinces] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = province
+## scope = country
+###Scopes to any claimed province.
+alias[trigger:any_claimed_province] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = country
+## push_scope = province
+###Scopes to every claimed province.
+alias[effect:every_claimed_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = country
+## push_scope = province
+###Scope to a random claimed province.
+alias[effect:random_claimed_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## push_scope = country
+## scope = country
+###Scopes to all countries the scoped country is at war with.
+alias[trigger:all_war_enemy_countries] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## push_scope = country
+## scope = country
+###Scopes to any country the scoped country is at war with.
+alias[trigger:any_war_enemy_country] = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = country
+## push_scope = country
+###Scopes to every war enemy.
+alias[effect:every_war_enemy_country] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = country
+## push_scope = province
+###Scope to a random war enemy province.
+alias[effect:random_war_enemy_country] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}

@@ -87,12 +87,5 @@ mission_series = {
 			factor = float
 			alias_name[modifier_rule] = alias_match_left[modifier_rule]
 		}
-
-		## cardinality = 0..1
-		## replace_scope = { this = country root = country }
-		ai_priority = {
-			factor = float
-			alias_name[modifier_rule] = alias_match_left[modifier_rule]
-		}
 	}
 }

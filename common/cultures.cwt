@@ -56,6 +56,20 @@ culture_group = {
 		## cardinality = 0..inf
 		scalar
 	}
+
+	## cardinality = 0..1
+	## replace_scope = { this = province root = province }
+	###All provinces with a culture in this culture group will get the following modifiers, stacks with specific culture modifiers
+	province = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	## replace_scope = { this = country root = country }
+	###All countries with primary culture in this culture group will get the following modifiers, stacks with specific tulture modifiers
+	country = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
 	
 	## cardinality = 0..inf
 	<culture> = {
@@ -87,12 +101,14 @@ culture_group = {
 		
 		## cardinality = 0..1
 		## replace_scope = { this = province root = province }
+		###All provinces of this culture will get the following modifiers, stacks with culture group modifiers
 		province = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		
 		## cardinality = 0..1
 		## replace_scope = { this = country root = country }
+		###All countries with this primary culture will get the following modifiers, stacks with culture group modifiers
 		country = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}

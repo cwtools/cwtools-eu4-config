@@ -4811,6 +4811,7 @@ alias[trigger:num_of_free_explorers] = int
 alias[trigger:has_great_project] = {
 	type = enum[great_project]
 	## cardinality = 0..1
+	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
 }
 
@@ -4819,6 +4820,7 @@ alias[trigger:has_great_project] = {
 alias[trigger:has_great_project] = {
 	type = <great_project>
 	## cardinality = 0..1
+	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
 }
 
@@ -5389,3 +5391,73 @@ alias[trigger:uses_horde_unity] = bool
 ## scope = country
 ###Checks if country uses republican tradition
 alias[trigger:uses_republican_tradition] = bool
+
+## scope = country
+###Returns true if the scoped country gives Fleet Basing Rights to the specified country scope
+alias[trigger:gives_fleet_basing_rights_to] = scope[country]
+
+## scope = country
+###Returns true if the scoped country gives Fleet Basing Rights to the specified country scope
+alias[trigger:gives_fleet_basing_rights_to] = enum[country_tags]
+
+## scope = country
+###Returns true if the scoped country gives Military Access to the specified country scope
+alias[trigger:gives_military_access_to] = scope[country]
+
+## scope = country
+###Returns true if the scoped country gives Military Access to the specified country scope
+alias[trigger:gives_military_access_to] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is blockaded by the specfied country. Currently only works with country TAGs, not scopes.
+alias[trigger:is_blockaded_by] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is a (permanent) claim of any country which is not the owner of the province
+alias[trigger:is_foreign_claim] = bool
+
+## scope = country
+###Returns true if scope is hegemon of <type> or all
+alias[trigger:is_hegemon_of_type] = <hegemon>
+
+## scope = country
+###Returns true if scope is hegemon of <type> or all
+alias[trigger:is_hegemon_of_type] = all
+
+## scope = country
+###Returns true if the scope currently has at least X Caroleans
+alias[trigger:num_of_caroleans] = int
+
+## scope = country
+###Returns true if the scope currently has at least X Hussars
+alias[trigger:num_of_hussars] = int
+
+## scope = country
+###Returns true if the scope currently owes at least X favors to the specified country
+alias[trigger:owes_favors] = {
+	who = scope[country]
+	who = enum[country_tags]
+	value = int	
+}
+
+## scope = country
+###Returns true if the scope currently receives Fleet Basing Rights from the specified country
+alias[trigger:receives_fleet_basing_rights_from] = scope[country]
+
+## scope = country
+###Returns true if the scope currently receives Fleet Basing Rights from the specified country
+alias[trigger:receives_fleet_basing_rights_from] = enum[country_tags]
+
+## scope = country
+###Returns true if the scope currently receives Military Access from the specified country
+alias[trigger:receives_military_access_from] = scope[country]
+
+## scope = country
+###Returns true if the scope currently receives Military Access from the specified country
+alias[trigger:receives_military_access_from] = enum[country_tags]
+
+## scope = country
+alias[trigger:has_unlocked_government_reform] = <government_reform.new>
+
+## scope = country
+alias[trigger:has_unlocked_government_reform_tooltip] = <government_reform.new>
