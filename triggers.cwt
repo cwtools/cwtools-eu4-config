@@ -5050,6 +5050,10 @@ alias[trigger:has_cultural_union] = bool
 alias[trigger:num_of_cawa] = int
 
 ## scope = country
+### Returns true if country scope has at least x marines.
+alias[trigger:num_of_marines] = int
+
+## scope = country
 ### Returns true if country scope has at least x cawa troops
 alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
