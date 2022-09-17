@@ -338,6 +338,56 @@ types = {
 		subtype[on_estate_removed] = { }
 		## type_key_filter = on_colonist_boosting_colony
 		subtype[on_colonist_boosting_colony] = { }
+		## type_key_filter = on_concentrate_development
+		subtype[on_concentrate_development] = { }
+		## type_key_filter = on_raze
+		subtype[on_raze] = { }
+		## type_key_filter = on_national_focus_change
+		subtype[on_national_focus_change] = { }
+		## type_key_filter = on_capital_moved
+		subtype[on_capital_moved] = { }
+		## type_key_filter = monarch_on_shipwreck
+		subtype[monarch_on_shipwreck] = { }
+		## type_key_filter = heir_on_shipwreck
+		subtype[heir_on_shipwreck] = { }
+		## type_key_filter = consort_on_shipwreck
+		subtype[consort_on_shipwreck] = { }
+		## type_key_filter = on_defender_of_faith_loss
+		subtype[on_defender_of_faith_loss] = { }
+		## type_key_filter = on_defender_of_faith_claim
+		subtype[on_defender_of_faith_claim] = { }
+		## type_key_filter = on_hre_dismantled
+		subtype[on_hre_dismantled] = { }
+		## type_key_filter = on_new_age
+		subtype[on_new_age] = { }
+		## type_key_filter = on_adm_exploited
+		subtype[on_adm_exploited] = { }
+		## type_key_filter = on_dip_exploited
+		subtype[on_dip_exploited] = { }
+		## type_key_filter = on_mil_exploited
+		subtype[on_mil_exploited] = { }
+		## type_key_filter = on_monthly_pulse
+		subtype[on_monthly_pulse] = { }
+		## type_key_filter = on_yearly_pulse
+		subtype[on_yearly_pulse] = { }
+		## type_key_filter = on_yearly_pulse_2
+		subtype[on_yearly_pulse_2] = { }
+		## type_key_filter = on_yearly_pulse_3
+		subtype[on_yearly_pulse_3] = { }
+		## type_key_filter = on_yearly_pulse_4
+		subtype[on_yearly_pulse_4] = { }
+		## type_key_filter = on_yearly_pulse_5
+		subtype[on_yearly_pulse_5] = { }
+		## type_key_filter = on_main_war_won
+		subtype[on_main_war_won] = { }
+		## type_key_filter = on_separate_war_won
+		subtype[on_separate_war_won] = { }
+		## type_key_filter = on_institution_embracement
+		subtype[on_institution_embracement] = { }
+		## type_key_filter = on_centralized_state
+		subtype[on_centralized_state] = { }
+		## type_key_filter = on_force_conversion
+		subtype[on_force_conversion] = { }
 	}
 }
 on_action = {
@@ -3173,5 +3223,175 @@ on_action = {
         }
 
         alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_main_war_won] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_separate_war_won] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_adm_exploited] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.province>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.province>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_dip_exploited] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.province>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.province>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_mil_exploited] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.province>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.province>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_defender_of_faith_claim] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_defender_of_faith_loss] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_institution_embracement] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_centralized_state] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.province>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.province>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_force_conversion] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
 	}
 }
