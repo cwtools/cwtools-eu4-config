@@ -3704,20 +3704,20 @@ alias[effect:decolonize] = <province_id>
 
 ## scope = country
 ###Removes the current hegemon status
-remove_hegemon = scope[country]
+alias[effect:remove_hegemon] = scope[country]
 
 ## scope = country
 ###Removes the current hegemon status
-remove_hegemon = enum[country_tags]
+alias[effect:remove_hegemon] = enum[country_tags]
 
 ## scope = country
 ###Resets Golden Age, allowing it to be fired again if fired before
-reset_golden_age = yes
+alias[effect:reset_golden_age] = yes
 
 ## scope = country
 ###Extends the current Golden Age by X months
-extend_golden_age = int[1..inf]
+alias[effect:extend_golden_age] = int[1..inf]
 
 ## scope = { country province }
 ###Makes specified country bankrupt
-set_bankrupt = enum[country_tags]
+alias[effect:set_bankrupt] = enum[country_tags]
