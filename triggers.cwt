@@ -5426,7 +5426,7 @@ alias[trigger:is_hegemon_of_type] = all
 
 ## scope = country
 ###Returns true if the scope currently has at least X Caroleans
-alias[trigger:num_of_caroleans] = int
+alias[trigger:num_of_carolean] = int
 
 ## scope = country
 ###Returns true if the scope currently has at least X Hussars
