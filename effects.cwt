@@ -257,17 +257,12 @@ alias[effect:change_price] = {
 
 ## scope = country
 ###Adds absolutism to the current scope. Can also subtract. No effect if Absolutism isn't active.
-alias[effect:add_absolutism] = int
-
-## scope = country
-###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
-#Should be -100.0..-1.0 but parsing floats is bugged
-alias[effect:add_legitimacy] = float[-100..-1]
+alias[effect:add_absolutism] = float
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
 #Should be 1.0..100.0 but parsing floats is bugged
-alias[effect:add_legitimacy] = float[1..100]
+alias[effect:add_legitimacy] = float
 
 ## scope = country
 ###Adds legitimacy to the current scope. Can also subtract. Target can be a country, in which case that country's legitimacy value is used. No effect if not a government monarchy.
@@ -279,11 +274,7 @@ alias[effect:add_legitimacy] = enum[country_tags]
 
 ## scope = country
 ###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = float[-100..-1]
-
-## scope = country
-###Adds republican tradition to the current scope. No effect if not a government using republic.
-alias[effect:add_republican_tradition] = float[1..100]
+alias[effect:add_republican_tradition] = float
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.
@@ -291,23 +282,23 @@ alias[effect:add_scaled_republican_tradition] = int
 
 ## scope = country
 ###Adds devotion to the current scope. No effect if not a government using has_devotion.
-alias[effect:add_devotion] = int
+alias[effect:add_devotion] = float
 
 ## scope = country
 ###Adds horde unity to the current scope. No effect if not a government using nomad.
-alias[effect:add_horde_unity] = int
+alias[effect:add_horde_unity] = float
 
 ## scope = country
 ###Adds meritocracy to the current scope. No effect if not a government using has_meritocracy.
-alias[effect:add_meritocracy] = int
+alias[effect:add_meritocracy] = float
 
 ## scope = country
 ###Sets the current meritocracy for the current scope. No effect if not a government using has_meritocracy.
-alias[effect:set_meritocracy] = int
+alias[effect:set_meritocracy] = float
 
 ## scope = country
 ###Adds militarisation to the current scope. No effect if not a government using militarised_society.
-alias[effect:add_militarised_society] = int
+alias[effect:add_militarised_society] = float
 
 ## scope = country
 ###Adds tribal allegiance to the current scope. No effect if not a government using tribal_federation_mechanic.
@@ -509,7 +500,7 @@ alias[effect:remove_church_aspect] = random
 
 ## scope = country
 ###Adds Papal Influence to the current scope. No effect if the country does not hold a religion using papacy.
-alias[effect:add_papal_influence] = int
+alias[effect:add_papal_influence] = float
 
 ## scope = country
 ###Adds or subtracts Catholic Reform Desire.
@@ -551,6 +542,7 @@ alias[effect:add_patriarch_authority] = float #todo: from -1 to 1?
 ###Changes the current personal deity for the current scope. Personal Deities are found in /Europa Universalis IV/common/personal_deities/*.txt. No effect if the country does not hold a religion using personal_deity.
 alias[effect:change_personal_deity] = <personal_deity>
 
+# Only accepts int even though the interface shows 2 decimal places.
 ## scope = country
 ###Adds Harmony to the current scope. No effect if the country does not hold a religion using uses_harmony.
 alias[effect:add_harmony] = int
@@ -2204,13 +2196,14 @@ alias[effect:define_heir] = {
 	change_mil = int[-6..6] 
 }
 
+# Unlike its _scaled_ counterpart this one only accepts int
 ## scope = country
 ###Adds Imperial Influence for the current scope. No effect if not emperor.
 alias[effect:add_imperial_influence] = int
 
 ## scope = country
 ###Adds Imperial Influence for the current scope, scaled by the current Imperial Authority value. No effect if not emperor.
-alias[effect:add_scaled_imperial_influence] = int
+alias[effect:add_scaled_imperial_influence] = float
 
 ## scope = country
 ###Makes the current scope an elector (or no longer an elector) of the Holy Roman Empire.
@@ -2290,11 +2283,11 @@ alias[effect:set_emperor_of_china] = enum[country_tags]
 
 ## scope = country
 ###Adds mandate to the current scope. No effect if not the Emperor of China.
-alias[effect:add_mandate] = int
+alias[effect:add_mandate] = float
 
 ## scope = country
 ###Sets the mandate value for the current scope. No effect if not the Emperor of China.
-alias[effect:set_mandate] = int
+alias[effect:set_mandate] = float
 
 ## scope = country
 ###Makes the defined scope the new revolutionary target. Use --- to remove the target and not re-assign.
@@ -2431,7 +2424,7 @@ alias[effect:set_base_manpower] = int
 
 ## scope = province
 ###Adds prosperity to the current province scope.
-alias[effect:add_prosperity] = int
+alias[effect:add_prosperity] = float
 
 ## scope = province
 ###Adds devastation to the current province scope.
@@ -2439,11 +2432,11 @@ alias[effect:add_devastation] = int
 
 ## scope = province
 ###Adds local autonomy to the current province scope.
-alias[effect:add_local_autonomy] = int[-100..100]
+alias[effect:add_local_autonomy] = float
 
 ## scope = province
 ###Sets local autonomy to the current province scope.
-alias[effect:set_local_autonomy] = int[0..100]
+alias[effect:set_local_autonomy] = float
 
 ## scope = province
 ###Sets the trade good for the current province scope. Trade Goods are found in /Europa Universalis IV/common/tradegoods/*.txt.
@@ -3611,7 +3604,7 @@ alias[effect:set_revolution_in_province] = bool
 
 ## scope = country
 ###Adds X revolutionary zeal to the country
-alias[effect:add_revolutionary_zeal] = int
+alias[effect:add_revolutionary_zeal] = float
 
 ## scope = province
 ###Sets a province as the Center of Revolution
