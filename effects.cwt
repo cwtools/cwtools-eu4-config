@@ -3714,3 +3714,9 @@ extend_golden_age = int[1..inf]
 ## scope = { country province }
 ###Makes specified country bankrupt
 set_bankrupt = enum[country_tags]
+
+## scope = province
+alias[effect:carolean_infantry] = scope[country]
+
+## scope = province
+alias[effect:carolean_infantry] = enum[country_tags]
