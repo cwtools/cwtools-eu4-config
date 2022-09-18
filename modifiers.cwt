@@ -811,7 +811,7 @@ alias[modifier:manpower_in_culture_group_provinces] = float
 alias[modifier:manpower_in_own_culture_provinces] = float
 
 ## scope = country
-###Changes maximum hostile attrition that can be reached
+###Changes maximum hostile attrition that can be reached, unlike max_attrition it works country-wide, not province-wide
 alias[modifier:max_hostile_attrition] = int
 
 ## scope = country
