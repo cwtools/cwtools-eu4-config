@@ -3720,3 +3720,33 @@ alias[effect:carolean_infantry] = scope[country]
 
 ## scope = province
 alias[effect:carolean_infantry] = enum[country_tags]
+
+## scope = country
+###Adds or Subtracts X amount of aggressive expansion opinion modifier of the scoped country against the country in WHO
+alias[effect:add_aggressive_expansion] = {
+	## cardinality = 1..1
+	who = scope[country]
+	who = enum[country_tags]
+
+	## cardinality = 1..1
+	value = int
+
+	## cardinality = 0..1
+	###Defaults to yes
+	apply_calc = bool
+}
+
+## scope = country
+###Adds or Subtracts X amount of aggressive expansion opinion modifier of the country in WHO against the scoped country
+alias[effect:reverse_add_aggressive_expansion] = {
+	## cardinality = 1..1
+	who = scope[country]
+	who = enum[country_tags]
+
+	## cardinality = 1..1
+	value = int
+
+	## cardinality = 0..1
+	###Defaults to yes
+	apply_calc = bool
+}
