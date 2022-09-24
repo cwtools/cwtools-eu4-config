@@ -456,6 +456,9 @@ government_reform = {
 			allow_banners = bool
 			## cardinality = 0..1
 			election_on_death = bool
+	
+			## cardinality = 0..1
+			raze_province = bool
 			
 			## cardinality = 0..1
 			custom_attributes = {
