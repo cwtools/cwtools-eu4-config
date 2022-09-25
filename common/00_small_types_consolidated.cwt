@@ -336,7 +336,7 @@ professionalism_modifier = {
 
 
 edict = {
-	## replace_scope = { root = province this = province }
+	## replace_scope = { root = country this = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
