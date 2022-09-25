@@ -884,7 +884,7 @@ alias[modifier:blockade_impact_on_siege_in_fleet_modifier] = int
 
 ## scope = country
 ###Modifies the exploration range by an defined amount
-alias[modifier:exploration_mission_range_in_fleet_modifier] = int
+alias[modifier:exploration_mission_range_in_fleet_modifier] = float
 
 ## scope = country
 ###Modifies the trade power in the flagship's fleet
