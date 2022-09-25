@@ -907,8 +907,8 @@ alias[modifier:cannons_for_hunting_pirates_in_fleet] = int
 alias[modifier:movement_speed_onto_off_boat_modifier] = float
 
 ## scope = country
-###Modifies the landing penalty for the flagship's fleet
-alias[modifier:flagship_landing_penalty] = int
+###Modifies the Combat Penalty when landing
+alias[modifier:landing_penalty] = float
 
 ## scope = country
 ###Modifies the monthly chance the flagship's admiral gains a pip
