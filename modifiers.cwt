@@ -908,7 +908,7 @@ alias[modifier:movement_speed_onto_off_boat_modifier] = float
 
 ## scope = country
 ###Modifies the Combat Penalty when landing
-alias[modifier:landing_penalty] = int
+alias[modifier:landing_penalty] = float
 
 ## scope = country
 ###Modifies the monthly chance the flagship's admiral gains a pip
