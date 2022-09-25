@@ -357,6 +357,8 @@ alias[modifier:admiral_cost] = float
 alias[modifier:global_supply_limit_modifier] = float
 ## scope = country
 alias[modifier:center_of_trade_upgrade_cost] = float
+## scope = country
+alias[modifier:local_center_of_trade_upgrade_cost] = float
 
 ## scope = country
 alias[modifier:artillery_fire] = int
