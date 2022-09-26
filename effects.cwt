@@ -2529,7 +2529,7 @@ alias[effect:change_culture] = scope[province]
 ###Starts culture conversion in the current province scope, for the current owner.
 alias[effect:add_culture_construction] = yes
 
-## scope = province
+## scope = { country province }
 ###Changes the religion in the current province scope to the syncretic religion of its owner.
 alias[effect:change_to_secondary_religion] = yes
 
