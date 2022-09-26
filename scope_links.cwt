@@ -1595,6 +1595,13 @@ alias[trigger:num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with] = 
 }
 
 ## scope = country
+### push_scope = province
+alias[trigger:num_of_provinces_owned_or_owned_by_subjects_with] = {
+	value = int
+	alias_name[trigger] = alias_match_left[trigger]
+}
+
+## scope = country
 alias[trigger:num_of_owned_states_with] = {
 	value = int
 	alias_name[trigger] = alias_match_left[trigger]
