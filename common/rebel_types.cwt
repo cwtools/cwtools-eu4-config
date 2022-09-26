@@ -179,7 +179,4 @@ rebel_type = {
 	demands_enforced_effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-
-	###DO NOT USE THIS. This key is used by Paradox Internally to test things but it has made into the released files of 1.34, so we are adding it here to avoid confusing errors.
-	nationalism_debug = int
 }
