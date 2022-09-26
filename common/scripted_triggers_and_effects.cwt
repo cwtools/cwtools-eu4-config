@@ -86,3 +86,14 @@ alias[effect:kill_advisor_by_category_effect] = {
 	###Which monarch power advisor to kill.
 	enum[power_categories] = yes
 }
+
+## scope = country
+###Unlocks a estate by setting unlocked_$estate$ country flag, can be checked with 'has_unlocked_estate = { estate = $estate$ }'
+alias[effect:unlock_estate] = {
+	## cardinality = 1..1
+	###Which estate to unlock, localize 'unlock_$estate$_tt' with '"Unlock the §Y<Estate>§! Estate."'
+	estate = <estate>
+	## cardinality = 0..1
+	###Show conditions necessary to have the estate, localize 'is_unavailable_$estate$'
+	show_conditions = yes
+}
