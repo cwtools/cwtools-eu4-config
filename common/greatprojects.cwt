@@ -107,6 +107,7 @@ great_project = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
