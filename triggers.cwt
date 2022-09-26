@@ -1673,10 +1673,11 @@ alias[trigger:has_switched_nation] = bool
 alias[trigger:has_terrain] = <terrain>
 
 ## scope = province
-###Returns true the specified country has the trade modifier X in the trade node.
+###Returns true the specified country has the trade modifier X in the trade node that the scoped province belongs to.
 alias[trigger:has_trade_modifier] = {
-	who = scope[country]
+	who = scope[any]
 	who = enum[country_tags]
+
 	enum[key_name] = localisation #todo: like a variable, set via add_trade_modifier
 }
 
