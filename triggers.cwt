@@ -5067,7 +5067,11 @@ alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
 	type = enum[unit_types]
 	## cardinality = 0..1
+	###This, as of 1.34.3.0, doesn't work, use 'soldiers' instead
 	type = men
+	## cardinality = 0..1
+	###Land Units
+	type = soldiers
 	## cardinality = 0..1
 	type = ships
 	## cardinality = 0..1
