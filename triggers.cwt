@@ -4927,8 +4927,8 @@ alias[trigger:tribal_land_of] = enum[country_tags]
 ###Checks if the country is a migratory tribe
 alias[trigger:tribal_land_of] = none
 
-## scope = country
-###Returns true if the tribal development of the tribe is at least X.
+## scope = { province country }
+###Returns true if the tribal development of the scope tribe is at least X, if used in the province scope it returns true if the tribal development of the province is at least X.
 alias[trigger:tribal_development] = int
 
 ## scope = country
