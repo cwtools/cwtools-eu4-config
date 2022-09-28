@@ -3754,3 +3754,9 @@ alias[effect:reverse_add_aggressive_expansion] = {
 	###Defaults to yes
 	apply_calc = bool
 }
+
+## scope = country
+###Destroys a great project, setting it to tier 0
+alias[effect:destroy_great_project] = {
+	type = <great_project>
+}
