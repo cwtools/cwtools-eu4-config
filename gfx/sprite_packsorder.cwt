@@ -235,7 +235,8 @@ enums = {
 		dlc098_gal_sprite_pack 
 		dlc098_gra_sprite_pack 
 		dlc098_nav_sprite_pack 
-		dlc098_nss_sprite_pack 
+		dlc098_nss_sprite_pack
+		dlc098_nss_sprite_pack_western
 		dlc098_sle_sprite_pack 
 		dlc100_rom_sprite_pack 
 		dlc102_bos_sprite_pack 
@@ -262,6 +263,17 @@ enums = {
 		dlc111_RWA_sprite_pack
 		dlc111_SKA_sprite_pack
 		dlc111_ZIM_sprite_pack
+		dlc116_ICE_sprite_pack
+		dlc116_EST_sprite_pack
+		dlc116_SMI_sprite_pack
+		dlc116_RIG_sprite_pack
+		dlc116_NOR_sprite_pack
+		dlc116_NOR_b_sprite_pack
+		dlc116_DAN_sprite_pack
+		dlc116_FIN_sprite_pack
+		dlc116_SHL_sprite_pack
+		dlc116_DIT_sprite_pack
+		dlc116_DIT_sprite_pack_western
 	}
 }	
 
