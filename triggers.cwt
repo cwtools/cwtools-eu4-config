@@ -1419,8 +1419,8 @@ alias[trigger:has_influencing_fort] = bool
 ###Returns true if the country has the specified institution.
 alias[trigger:has_institution] = <institution>
 
-## scope = country
-###Returns true if the country has the leader "X".
+## scope = { country mercenary_company }
+###Returns true if the country or mercenary company has the leader "X".
 alias[trigger:has_leader] = localisation_synced #value[leader_name]
 
 ## scope = country
