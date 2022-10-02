@@ -97,3 +97,12 @@ alias[effect:unlock_estate] = {
 	###Show conditions necessary to have the estate, localize 'is_unavailable_$estate$'
 	show_conditions = yes
 }
+
+## scope = country
+###Forced scripted effect to work
+alias[effect:for_variable_amount] = {
+	## cardinality 0..1
+	variable = election_term
+	## cardinality 0..1
+	effect = scalar
+}
