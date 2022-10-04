@@ -1044,6 +1044,20 @@ alias[trigger:had_ruler_flag] = {
 }
 
 ## scope = country
+###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
+alias[trigger:had_ruler_flag] = {
+	flag = value[heir_flag]
+	days = int
+}
+
+## scope = country
+###Returns true if the ruler flag X was last set for the current ruler at least Y days ago.
+alias[trigger:had_ruler_flag] = {
+	flag = value[consort_flag]
+	days = int
+}
+
+## scope = country
 ###Returns true if the country's current harmonization progress is at least at X.
 alias[trigger:harmonization_progress] = int
 
@@ -1586,6 +1600,16 @@ alias[trigger:has_ruler] = localisation_synced #value[ruler_name]
 ###Returns true if the ruler flag X is set for the country.
 ## severity = warning
 alias[trigger:has_ruler_flag] = value[ruler_flag]
+
+## scope = country
+###Returns true if the ruler flag X is set for the country.
+## severity = warning
+alias[trigger:has_ruler_flag] = value[heir_flag]
+
+## scope = country
+###Returns true if the ruler flag X is set for the country.
+## severity = warning
+alias[trigger:has_ruler_flag] = value[consort_flag]
 
 ## scope = province
 ###Returns true if an army in the province is led by a ruler from X.
