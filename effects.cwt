@@ -1621,6 +1621,16 @@ alias[effect:set_ruler_flag] = value_set[ruler_flag]
 alias[effect:clr_ruler_flag] = value[ruler_flag]
 
 ## scope = country
+###Clears a ruler flag for the current scope's ruler.
+## severity = warning
+alias[effect:clr_ruler_flag] = value[heir_flag]
+
+## scope = country
+###Clears a ruler flag for the current scope's ruler.
+## severity = warning
+alias[effect:clr_ruler_flag] = value[consort_flag]
+
+## scope = country
 ###Sets the dynasty of the current scope's ruler.
 alias[effect:set_dynasty] = enum[dynasty_name]
 
@@ -1857,7 +1867,7 @@ alias[effect:add_queen_personality] = <ruler_personality>
 alias[effect:remove_queen_personality] = <ruler_personality>
 
 ## scope = country
-###Defines a ruler flag for the current scope's consort. Flags can be appended with scopes or event targets via e.g. @root
+###Defines a ruler flag for the current scope's consort. Flags can be appended with scopes or event targets via e.g. @root, if the consort becomes ruler then the consort flag becomes ruler flag
 alias[effect:set_consort_flag] = value_set[consort_flag]
 
 ## scope = country
@@ -2009,7 +2019,7 @@ alias[effect:add_heir_personality] = <ruler_personality>
 alias[effect:remove_heir_personality] = <ruler_personality>
 
 ## scope = country
-###Defines an heir flag for the current scope's heir. Flags can be appended with scopes or event targets via e.g. @root
+###Defines an heir flag for the current scope's heir. Flags can be appended with scopes or event targets via e.g. @root, if a heir becomes ruler then the heir flag will become a ruler flag.
 alias[effect:set_heir_flag] = value_set[heir_flag]
 
 ## scope = country
