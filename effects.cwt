@@ -25,7 +25,11 @@ alias[effect:export_to_variable] = {
 	value = enum[export_to_variable_data]
 	value = modifier:<modifier>
 	## cardinality = 0..1
+	###Takes a country scope for country-level value and a province scope on province-level value
 	who = scope[country]
+	## cardinality = 0..1
+	###Takes a country scope for country-level value and a province scope on province-level value
+	who = scope[province]
 	## cardinality = 0..1
 	with = scope[country] #for when you use "trust"
 }
