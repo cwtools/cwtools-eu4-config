@@ -106,3 +106,14 @@ alias[effect:for_variable_amount] = {
 	## cardinality 0..1
 	effect = scalar
 }
+
+## replace_scope = { this = country root = country }
+### Forced scripted effect to work
+alias[effect:show_points_needed_for_livionian_government_of_category] = {
+	## cardinality = 0..1
+	adm = yes
+	## cardinality = 0..1
+	mil = yes
+	## cardinality = 0..1
+	dip = yes
+}
