@@ -2593,11 +2593,11 @@ alias[effect:add_institution_embracement] = {
 
 ## scope = province
 ###Adds Nationalism to the current province scope.
-alias[effect:add_nationalism] = int
+alias[effect:add_nationalism] = float
 
 ## scope = province
 ###Adds Local Unrest to the current province scope. Appears under Base Unrest.
-alias[effect:add_unrest] = int
+alias[effect:add_unrest] = float
 
 ## scope = province
 ###Spawns natives in the current province scope. Only useful in colonies; will immediately disappear in cities or uncolonized provinces.
