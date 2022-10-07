@@ -3775,3 +3775,7 @@ alias[effect:reverse_add_aggressive_expansion] = {
 alias[effect:destroy_great_project] = {
 	type = <great_project>
 }
+
+## scope = country
+###Updates the unit sprites for the scoped country
+alias[effect:update_sprite_pack] = yes
