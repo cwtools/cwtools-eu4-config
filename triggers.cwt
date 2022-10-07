@@ -5495,10 +5495,11 @@ alias[trigger:has_unlocked_government_reform_tooltip] = <government_reform.new>
 ## cardinality = 0..1
 alias[trigger:nationalism_debug] = int
 
-## scope = trade_node
+## scope = { province trade_node }
 ###Returns true if country has at least X trade power in a trade node via privateering actions.
 alias[trigger:has_privateer_share_in_trade_node] = {
 	who = scope[country]
 	who = enum[country_tags]
-	share = float
+	# It uses a percentage, 0->0%, 1->100%
+	share = float[0..1]
 }
