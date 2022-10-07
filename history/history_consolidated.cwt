@@ -520,7 +520,10 @@ country_history = {
 				}
 			}
 			## cardinality = 0..1
+			###Defines a consort
 			queen = {
+				## cardinality = 0..1
+				###Country of Origin for the consort, defaults to the current country.
 				country_of_origin = enum[country_tags]
 				name = localisation_synced #value_set[consort_name]
 				dynasty = localisation_synced #value_set[dynasty_name]
