@@ -117,3 +117,14 @@ alias[effect:show_points_needed_for_livionian_government_of_category] = {
 	## cardinality = 0..1
 	dip = yes
 }
+
+## scope = country
+###Forced scripted effect to work
+alias[effect:count_won_battles_and_reward_at_end] = {
+	## cardinality 0..1
+	counting_flag = scalar
+	## cardinality 0..1
+	max_value = int
+	## cardinality 0..1
+	effect = scalar
+}
