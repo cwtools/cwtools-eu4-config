@@ -5502,3 +5502,7 @@ alias[trigger:has_privateer_share_in_trade_node] = {
 	who = enum[country_tags]
 	share = float
 }
+
+## scope = { province trade_node }
+###Returns true if the trade node has a value of at least X
+alias[trigger:trade_node_value] = int
