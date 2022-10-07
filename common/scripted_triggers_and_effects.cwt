@@ -128,3 +128,12 @@ alias[effect:count_won_battles_and_reward_at_end] = {
 	## cardinality 0..1
 	effect = scalar
 }
+
+## scope = country
+###Forced scripted effect to work
+alias[effect:faction_in_power_effect] = {
+	## cardinality 0..1
+	faction = <faction>
+	## cardinality 0..1
+	effect = scalar
+}
