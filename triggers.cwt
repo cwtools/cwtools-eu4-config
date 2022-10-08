@@ -5088,7 +5088,8 @@ alias[trigger:num_of_marines] = int
 ### Returns true if country scope has at least x cawa troops
 alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
-	who_with = <Tag>
+	who_with = scope[country]
+	who_with = enum[country_tags]
 	## cardinality = 0..1
 	type = enum[unit_types]
 	## cardinality = 0..1
