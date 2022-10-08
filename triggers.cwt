@@ -5503,3 +5503,7 @@ alias[trigger:has_privateer_share_in_trade_node] = {
 	# It uses a percentage, 0->0%, 1->100%
 	share = float[0..1]
 }
+
+## scope = { province trade_node }
+###Returns true if the trade node has a value of at least X
+alias[trigger:trade_node_value] = int
