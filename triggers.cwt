@@ -5103,7 +5103,9 @@ alias[trigger:current_war_losses] = {
 	## cardinality = 0..1
 	type = all
 	## cardinality = 0..1
-	cause = attrition/battle/capture
+	cause = attrition
+	cause = battle
+	cause = capture
 	## cardinality = 0..1
 	amount = int
 }
