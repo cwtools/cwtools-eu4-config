@@ -38,6 +38,10 @@ mission_series = {
 	potential_on_load = {
 		## cardinality = 0..inf
 		has_dlc = enum[DLCs]
+		## cardinality = 0..inf
+		NOT = {
+			has_dlc = enum[DLCs]
+		}
 	}
 
 	## replace_scope = { this = country root = country }
