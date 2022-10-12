@@ -187,6 +187,7 @@ alias[trigger:<trade_company>] = {
 
 
 ## scope = any
+## push_scope = any
 ###The enclosed effects will be displayed in tooltips but not executed
 alias[effect:tooltip] = {
 	alias_name[effect] = alias_match_left[effect]
