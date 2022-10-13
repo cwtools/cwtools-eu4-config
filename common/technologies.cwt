@@ -27,11 +27,7 @@ technology = {
 	production_efficiency = float
 	
 	## cardinality = 0..1
-	###Modifiers base cost of developing by X amount, conflicts with development_cost_modifier
-	development_efficiency = float
-
-	## cardinality = 0..1
-	###Modifiers base cost of developing by X amount, conflicts with development_efficiency
+	###Modifiers base cost of developing by X amount, replaces development_efficiency
 	development_cost_modifier = float
 	
 	## cardinality = 0..1
