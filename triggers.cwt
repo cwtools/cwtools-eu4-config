@@ -1335,10 +1335,6 @@ alias[trigger:has_given_consort_to] = scope[country]
 ###Returns true if the scoped country has given a consort to the specified country.
 alias[trigger:has_given_consort_to] = enum[country_tags]
 
-## scope = province
-###Returns true if the country has the specified great project.
-alias[trigger:has_great_project] = <great_project>
-
 ## scope = country
 ###Returns true if the country has guaranteed country X.
 alias[trigger:has_guaranteed] = scope[country]
