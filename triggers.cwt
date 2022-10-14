@@ -4835,14 +4835,6 @@ alias[trigger:num_of_free_explorers] = int
 ###Checks if province has a great project
 alias[trigger:has_great_project] = {
 	type = enum[great_project]
-	## cardinality = 0..1
-	###Returns true if this great project is tier X or higher
-	tier = int[0..100]
-}
-
-## scope = province
-###Checks if province has a great project
-alias[trigger:has_great_project] = {
 	type = <great_project>
 	## cardinality = 0..1
 	###Returns true if this great project is tier X or higher
