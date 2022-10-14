@@ -4828,10 +4828,11 @@ alias[trigger:current_guru_is] = enum[sikh_guru]
 alias[trigger:num_of_free_explorers] = int
 
 ## scope = province
-###Checks if province has a great project
+###Checks if province has the specified great project or any great project if any is used
 alias[trigger:has_great_project] = {
 	type = enum[great_project]
 	type = <great_project>
+	type = any
 	## cardinality = 0..1
 	###Returns true if this great project is tier X or higher
 	tier = int[0..100]
