@@ -3269,9 +3269,6 @@ alias[effect:force_remove_rival] = enum[country_tags]
 ### Turns the monarch into a leader
 alias[effect:use_monarch_as_leader] = yes
 
-## scope = emperor
-alias[effect:set_impirial_incident] = <impirial_incident>
-
 ## scope = country
 #There is also restore_country_name not sure what the difference is
 alias[effect:restore_country_name_effect] = yes
