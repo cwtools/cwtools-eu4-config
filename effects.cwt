@@ -1701,7 +1701,12 @@ alias[effect:set_ruler_religion] = <province_id>
 
 ## scope = country
 ###Removes the current ruler of the current scope, saving them to the unique string.
-alias[effect:exile_ruler_as] = value_set[exiled_ruler]
+alias[effect:exile_ruler_as] = {
+	## cardinality = 1..1
+	name = value_set[exiled_ruler]
+	## cardinality = 0..1
+	kill_monarch = bool
+}
 
 ## scope = country
 ###Makes an exiled ruler the ruler of the current scope.
