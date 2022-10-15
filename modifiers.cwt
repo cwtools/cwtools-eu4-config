@@ -1065,3 +1065,6 @@ alias[modifier:idea_claim_colonies] = yes
 ###Modify the rate of Imperial Mandate for the Emperor of China
 alias[modifier:imperial_mandate] = float
 
+## scope = country
+###Modify the cash cost of changing the type of a colonial subject nation
+alias[modifier:colonial_type_change_cost_modifier] = float
