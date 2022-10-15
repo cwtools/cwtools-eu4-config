@@ -22,4 +22,8 @@ links = {
         input_scopes = { country province }
         output_scope = province
     }
+		overlord = {
+			input_scopes = { country }
+			output_scope = country
+		}
 }
