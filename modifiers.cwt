@@ -1068,3 +1068,7 @@ alias[modifier:imperial_mandate] = float
 ## scope = country
 ###Modify the cash cost of changing the type of a colonial subject nation
 alias[modifier:colonial_type_change_cost_modifier] = float
+
+## scope = country
+###Modify the cash cost of activating the upgrades in the "Modify Subject Relationship" category
+alias[modifier:colonial_subject_type_upgrade_cost_modifier] = float
