@@ -5451,8 +5451,12 @@ alias[trigger:gives_military_access_to] = scope[country]
 alias[trigger:gives_military_access_to] = enum[country_tags]
 
 ## scope = province
-###Returns true if the province is blockaded by the specfied country. Currently only works with country TAGs, not scopes.
+###Returns true if the province is blockaded by the specfied country.
 alias[trigger:is_blockaded_by] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is blockaded by the specfied country.
+alias[trigger:is_blockaded_by] = scope[country]
 
 ## scope = province
 ###Returns true if the province is a (permanent) claim of any country which is not the owner of the province
