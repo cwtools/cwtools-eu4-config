@@ -3734,7 +3734,11 @@ alias[effect:extend_golden_age] = int[1..inf]
 
 ## scope = { country province }
 ###Makes specified country bankrupt
-alias[effect:set_bankrupt] = enum[country_tags]
+alias[effect:set_bankruptcy] = enum[country_tags]
+
+## scope = { country province }
+###Makes specified country bankrupt
+alias[effect:set_bankruptcy] = scope[country]
 
 ## scope = province
 alias[effect:carolean_infantry] = scope[country]
