@@ -1076,3 +1076,7 @@ alias[modifier:colonial_subject_type_upgrade_cost_modifier] = float
 ## scope = country
 ###Modify the maximum manpower while at war with enemies of the empire
 alias[modifier:manpower_against_imperial_enemies] = float
+
+## scope = country
+###Modifies the opinion the scoped country has of other countries that have their primary culture one of the scoped country's accepted cultures. Does not work with culures in the same culture group, use relation_with_same_culture_group.
+alias[modifier:relation_with_accepted_culture] = int
