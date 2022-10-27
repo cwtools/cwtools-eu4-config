@@ -1687,9 +1687,8 @@ alias[trigger:any_federation_members] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## scope = province
-## push_scope = province
-###Scopes to exclude development from provinces with the current scope.
+## scope = any
+###Excludes the triggers inside for the trigger counter in the UI, used in Age Objeciives.
 alias[trigger:exclude_from_progress] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
