@@ -1084,3 +1084,7 @@ alias[modifier:relation_with_accepted_culture] = int
 ## scope = country
 ###Modifies the governing cost of all provinces
 alias[modifier:governing_cost] = float
+
+## scope = country
+###Makes the modifiers apply only to mercenary regiments
+alias[modifier:is_mercenary_modifier] = bool
