@@ -47,6 +47,7 @@ great_project = {
 	}
 	
 	## replace_scope = { root = province this = province from = owner }
+	## cardinality = 0..1
 	on_built = {
 		## cardinality = 0..1
 		add_canal = enum[greatproject_canals]
@@ -58,6 +59,7 @@ great_project = {
 	}
 	
 	## replace_scope = { root = province this = province from = owner }
+	## cardinality = 0..1
 	on_destroyed = {
 		## cardinality = 0..1
 		remove_canal = enum[greatproject_canals]
@@ -112,6 +114,7 @@ great_project = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = province this = province }
+		## cardinality = 0..1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -157,6 +160,7 @@ great_project = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = province this = province }
+		## cardinality = 0..1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -202,6 +206,7 @@ great_project = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = province this = province }
+		## cardinality = 0..1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -242,10 +247,12 @@ great_project = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = country this = country }
+		## cardinality = 0..1
 		country_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
 		## replace_scope = { root = province this = province }
+		## cardinality = 0..1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
