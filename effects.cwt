@@ -919,7 +919,8 @@ alias[effect:create_conquistador] = {
 ## scope = country
 ###Generates an new general for the current scope.
 alias[effect:create_general] = {
-	tradition = int
+	###Maximum of 100, values above are considered 100
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
