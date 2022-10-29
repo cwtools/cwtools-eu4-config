@@ -4402,10 +4402,6 @@ alias[trigger:was_never_end_game_tag_trigger] = bool
 alias[trigger:was_player] = bool
 
 ## scope = country
-###Returns true if the member of the HRE is backing the next imperial reform.
-alias[trigger:will_back_next_reform] = bool
-
-## scope = country
 ###Returns true if the country has a yearly corruption increase of at least X.
 alias[trigger:yearly_corruption_increase] = float
 
