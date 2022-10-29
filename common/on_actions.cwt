@@ -330,6 +330,8 @@ types = {
 		subtype[on_estate_led_regency_surpassed] = { }
 		## type_key_filter = on_extended_regency
 		subtype[on_extended_regency] = { }
+		## type_key_filter = on_extend_regency
+		subtype[on_extend_regency] = { }
 		## type_key_filter = on_culture_demoted
 		subtype[on_culture_demoted] = { }
 		## type_key_filter = on_primary_culture_changed
@@ -3209,6 +3211,23 @@ on_action = {
 	}
 	## replace_scope = { root = country this = country from = country }
     subtype[on_extended_regency] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+    subtype[on_extend_regency] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
