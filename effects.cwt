@@ -1366,14 +1366,6 @@ alias[effect:create_subject] = {
 }
 
 ## scope = country
-###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
-alias[effect:create_subject] = {
-	subject_type = <subject_type>
-	who = scope[country]
-	who = enum[country_tags]
-}
-
-## scope = country
 ###Declares war for the current scope against the defined scope, using the defined casus belli. Casus belli are found in /Europa Universalis IV/common/cb_types/*.txt
 alias[effect:declare_war_with_cb] = {
 	casus_belli = <casus_belli>
