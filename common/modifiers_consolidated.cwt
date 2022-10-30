@@ -120,6 +120,10 @@ province_triggered_modifier = {
 	on_deactivation = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+
+	## cardinality = 0..1
+	###Province modifier will be hidden from view even while active
+	hidden = yes
 }
 
 timed_modifier = {
