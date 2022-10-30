@@ -2802,7 +2802,7 @@ alias[trigger:mil_tech] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has a monthly income of at least X, or at least as high as the specified country.
-alias[trigger:monthly_income] = int
+alias[trigger:monthly_income] = float
 
 ## scope = country
 ###Returns true if the country has a monthly income of at least X, or at least as high as the specified country.
