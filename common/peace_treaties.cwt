@@ -25,6 +25,7 @@ peace_treaty = {
 	## cardinality = 0..1
 	###"power_projection" will only be applied if giver is your rival.
 	power_projection = <power_projection_modifier>
+	power_projection = no
 	## cardinality = 0..1
 	###Base factor for diplomatic power cost when treaty is not allowed by casus belli. Scales with war score cost.
 	power_cost_base = float
