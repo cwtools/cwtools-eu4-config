@@ -803,7 +803,7 @@ alias[effect:add_yearly_sailors] = float[-10.0..20.0] #I am assuming no one want
 ## scope = country
 ###Generates an new admiral for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_admiral] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -841,7 +841,7 @@ alias[effect:create_admiral] = {
 ## scope = country
 ###Generates an new explorer for the current scope. The number is the amount of navy tradition to use in generation.
 alias[effect:create_explorer] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
@@ -881,7 +881,7 @@ alias[effect:create_explorer] = {
 ## scope = country
 ###Generates an new conquistador for the current scope. The number is the amount of army tradition to use in generation.
 alias[effect:create_conquistador] = {
-	tradition = int
+	tradition = int[0..100]
 	## cardinality = 0..1
 	###Added to randomly generated value
 	add_fire = int
