@@ -1361,16 +1361,9 @@ alias[effect:vassalize] = enum[country_tags]
 ###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
 alias[effect:create_subject] = {
 	subject_type = <subject_type>
-	subject = scope[country]
-	subject = enum[country_tags]
-}
-
-## scope = country
-###Makes the defined scope into the defined subject type under the current scope. Subject types are found in /Europa Universalis IV/common/subject_types/*.txt.
-alias[effect:create_subject] = {
-	subject_type = <subject_type>
-	who = scope[country]
-	who = enum[country_tags]
+	## cardinality = 1..1
+	enum[who_or_subject] = scope[country]
+	enum[who_or_subject] = enum[country_tags]
 }
 
 ## scope = country
