@@ -1263,7 +1263,7 @@ alias[trigger:has_embargo_rivals] = bool
 ###Returns true if an adjacent province is uncolonized. Warning: Works only with 'yes'.
 alias[trigger:has_empty_adjacent_province] = yes
 
-## scope = country
+## scope = { country province }
 ###Returns true if the country has estate X, or in province scope if the province is controlled by an estate (yes/no), or is controlled by estate X.
 alias[trigger:has_estate] = <estate>
 
