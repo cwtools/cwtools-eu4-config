@@ -646,8 +646,8 @@ alias[trigger:defensive_war_with] = scope[any]
 alias[trigger:defensive_war_with] = enum[country_tags]
 
 ## scope = province
-###Returns true if the devastation of the province is at least X.
-alias[trigger:devastation] = int
+###Returns true if the devastation of the province is at least X. decimal values can be used but the tooltip will round to the nearest whole number.
+alias[trigger:devastation] = float
 
 ## scope = province
 ###Returns true if the development of the province is at least X, or at least as much as the specified province scope.
