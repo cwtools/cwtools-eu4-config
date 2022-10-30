@@ -3221,6 +3221,8 @@ alias[effect:adopt_reform_progress] = enum[country_tags]
 
 ## scope = province
 alias[effect:create_flagship] = {
+	## cardinality = 0..1
+	###Name of the flagship, defaults to a random culture one
 	name = scalar
 	type = enum[naval_unit_types]
 }
