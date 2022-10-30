@@ -244,7 +244,7 @@ alias[trigger:average_home_autonomy] = int[0..100]
 
 ## scope = country
 ###Returns true if the country has an average unrest in its provinces of at least X.
-alias[trigger:average_unrest] = int[0..100]
+alias[trigger:average_unrest] = int
 
 ## scope = province
 ###Returns true if the base manpower of the province is at least X.
