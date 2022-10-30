@@ -3796,3 +3796,8 @@ alias[effect:destroy_great_project] = {
 ## scope = country
 ###Updates the unit sprites for the scoped country
 alias[effect:update_sprite_pack] = yes
+
+## scope = country
+###Changes the National Focus, or none to disable it
+alias[effect:change_national_focus] = enum[power_categories]
+alias[effect:change_national_focus] = none
