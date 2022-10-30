@@ -2270,6 +2270,8 @@ alias[trigger:is_in_war] = {
 	casus_belli = <casus_belli>
 
 	## cardinality = 0..1
+	## severity = warning
+	###Using negative war_score is currently bugged, it will always return false
 	war_score = int[0..100]
 
 	## cardinality = 0..1
