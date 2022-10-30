@@ -4163,12 +4163,6 @@ alias[trigger:trading_part] = {
 ###Returns true if the country has the specified trading policy in the specified trade node. Can also use "policy = any".
 alias[trigger:trading_policy_in_node] = {
 	node = scope[trade_node]
-	policy = <trading_policy>
-	policy = any
-}
-## scope = country
-###Returns true if the country has the specified trading policy in the specified trade node. Can also use "policy = any".
-alias[trigger:trading_policy_in_node] = {
 	node = scope[province]
 	policy = <trading_policy>
 	policy = any
