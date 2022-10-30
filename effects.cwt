@@ -2511,11 +2511,15 @@ alias[effect:add_building] = <building>
 alias[effect:remove_building] = <building>
 
 ## scope = province
-###Starts building construction in the current province scope. cost and speed are a percentage of the base value, i.e. 0.5 is 50% of the base value.
+###Starts building construction in the current province scope.
 alias[effect:add_building_construction] = {
 	building = <building>
-	speed = float
-	cost = float
+	## cardinality = 0..1
+	###Percentage of the base time to build, i.e 0.5 means built twice as fast
+	speed = float[0..inf]
+	## cardinality = 0..1
+	###Percentage of the base cost to build, i.e 0.5 means 50% of the cost
+	cost = float[0..inf]
 }
 
 ## scope = province
