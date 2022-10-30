@@ -4421,6 +4421,9 @@ alias[trigger:years_in_vassalage_under] = {
 	who = scope[country]
 	who = enum[country_tags]
 	years = int
+	## cardinality = 0..1
+	###Do not limit by subject type
+	all_subject_country = yes
 }
 
 ## scope = country
