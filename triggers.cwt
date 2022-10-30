@@ -41,7 +41,7 @@ alias[trigger:<trade_good>] = int
 
 ## scope = country
 ###Returns true if the country has at least X absolutism.
-alias[trigger:absolutism] = int[0..100]
+alias[trigger:absolutism] = int
 
 ## scope = country
 ###Returns true if the country has at least X absolutism.
