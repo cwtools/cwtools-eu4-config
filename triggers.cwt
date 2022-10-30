@@ -981,6 +981,14 @@ alias[trigger:grown_by_development] = int
 alias[trigger:great_power_rank] = int
 
 ## scope = country
+###Returns true if the country has a great power rank of X or worse (i.e. great_power_rank will check if your rank is 2, 3 or anything except 1, including not in the top 8, i.e. use this trigger with NOT)
+alias[trigger:great_power_rank] = scope[country]
+
+## scope = country
+###Returns true if the country has a great power rank of X or worse (i.e. great_power_rank will check if your rank is 2, 3 or anything except 1, including not in the top 8, i.e. use this trigger with NOT)
+alias[trigger:great_power_rank] = enum[country_tags]
+
+## scope = country
 ###Returns true if the country is guaranteed by X.
 alias[trigger:guaranteed_by] = scope[country]
 
