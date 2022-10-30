@@ -1088,3 +1088,7 @@ alias[modifier:governing_cost] = float
 ## scope = country
 ###Makes the modifiers apply only to mercenary regiments
 alias[modifier:is_mercenary_modifier] = bool
+
+## scope = province
+###Modifies the warscore cost of the province
+alias[modifier:local_warscore_cost_modifier] = float
