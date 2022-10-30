@@ -2270,7 +2270,7 @@ alias[trigger:is_in_war] = {
 	casus_belli = <casus_belli>
 
 	## cardinality = 0..1
-	war_score = int[0..100]
+	war_score = int[-100..100]
 
 	## cardinality = 0..1
 	start_date = date_field
