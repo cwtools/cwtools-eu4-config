@@ -494,4 +494,9 @@ enums = {
 		production
 		tax
 	}
+	# for create_subject
+	enum[who_or_subject] = {
+		who
+		subject
+	}
 }
