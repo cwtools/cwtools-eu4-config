@@ -3796,3 +3796,7 @@ alias[effect:update_sprite_pack] = yes
 ###Changes the National Focus, or none to disable it
 alias[effect:change_national_focus] = enum[power_categories]
 alias[effect:change_national_focus] = none
+
+## scope = country
+###Generates an agenda for the specified estate, which can then be started with start_estate_agenda = <estate>
+alias[effect:generate_estate_agenda] = <estate>
