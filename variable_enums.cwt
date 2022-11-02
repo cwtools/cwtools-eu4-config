@@ -42,6 +42,8 @@ enums = {
 		ADM
 		DIP
 		MIL
+		development
+		total_development
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture
