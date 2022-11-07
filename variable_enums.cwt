@@ -37,6 +37,7 @@ enums = {
 		trigger_value:production_income_percentage
 		trigger_value:trade_income_percentage
 		trigger_value:monthly_income
+		trigger_value:total_development
 		trust
 		years_of_income
 		ADM
