@@ -65,7 +65,7 @@ alias[trigger:active_major_mission] = <mission> #todo
 
 ## scope = country
 ###Returns true if the country has a ruler with an administrative skill of at least X, or at least as much as the ruler of the defined country.
-alias[trigger:adm] = int[0..6]
+alias[trigger:adm] = int
 
 ## scope = country
 ###Returns true if the country has a ruler with an administrative skill of at least X, or at least as much as the ruler of the defined country.
