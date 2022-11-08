@@ -21,6 +21,7 @@ advisor_type = {
 	## cardinality = 0..inf
 	###Modifier scales by level of advisor, applies if trigger is true
 	skill_scaled_modifier = {
+		## cardinality = 0..1
 		## replace_scope = { this = province }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
