@@ -64,8 +64,16 @@ alias[trigger:accepted_culture] = scope[province]
 alias[trigger:active_major_mission] = <mission> #todo
 
 ## scope = country
-###Returns true if the country has a ruler with an administrative skill of at least X.
+###Returns true if the country has a ruler with an administrative skill of at least X, or at least as much as the ruler of the defined country.
 alias[trigger:adm] = int[0..6]
+
+## scope = country
+###Returns true if the country has a ruler with an administrative skill of at least X, or at least as much as the ruler of the defined country.
+alias[trigger:adm] = scope[country]
+
+## scope = country
+###Returns true if the country has a ruler with an administrative skill of at least X, or at least as much as the ruler of the defined country.
+alias[trigger:adm] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has at least X administrative power, or at least as much as the specified country.
