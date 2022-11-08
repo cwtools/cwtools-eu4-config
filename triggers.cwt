@@ -687,7 +687,7 @@ alias[trigger:devotion] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has a ruler with a diplomatic skill of at least X, or at least as much as the defined country.
-alias[trigger:dip] = int[0..6]
+alias[trigger:dip] = int
 
 ## scope = country
 ###Returns true if the country has a ruler with a diplomatic skill of at least X, or at least as much as the defined country.
