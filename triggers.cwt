@@ -686,15 +686,15 @@ alias[trigger:devotion] = scope[country]
 alias[trigger:devotion] = enum[country_tags]
 
 ## scope = country
-###Returns true if the country has a ruler with a diplomatic skill of at least X, or at least as much as the defined country.
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = int
 
 ## scope = country
-###Returns true if the country has a ruler with a diplomatic skill of at least X, or at least as much as the defined country.
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = scope[country]
 
 ## scope = country
-###Returns true if the country has a ruler with a diplomatic skill of at least X, or at least as much as the defined country.
+###Returns true if the ountry has a ruler with diplomatic skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:dip] = enum[country_tags]
 
 ## scope = country
