@@ -1,4 +1,13 @@
 
+enums = {
+	complex_enum[custom_loc_commands] = {
+		path = "game/customizable_localization"
+		name = {
+			name = scalar
+		}	
+	}
+}
+
 types = {
 	type[custom_loc] = {
 		path = "game/customizable_localization"
