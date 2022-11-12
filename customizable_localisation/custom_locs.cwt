@@ -1,6 +1,6 @@
 
 enums = {
-	complex_enum[custom_loc_commands] = {
+	complex_enum[defined_text_commands] = {
 		path = "game/customizable_localization"
 		name = {
 			name = scalar
@@ -9,13 +9,13 @@ enums = {
 }
 
 types = {
-	type[custom_loc] = {
+	type[defined_text] = {
 		path = "game/customizable_localization"
 		name_field = "name"
 	}
 }
 
-custom_loc = {
+defined_text = {
 	name = scalar
 
 	## cardinality = 0..1
