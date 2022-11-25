@@ -31,6 +31,8 @@ dlc_info = {
 	## cardinality = 0..1
 	ms_id = scalar
 	## cardinality = 0..1
+	gog_url = scalar
+	## cardinality = 0..1
 	interesting_countries = {
 		## cardinality = 1..4
 		enum[country_tags]
