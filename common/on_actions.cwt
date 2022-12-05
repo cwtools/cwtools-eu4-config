@@ -390,6 +390,8 @@ types = {
 		subtype[on_centralized_state] = { }
 		## type_key_filter = on_force_conversion
 		subtype[on_force_conversion] = { }
+		## type_key_filter = on_expanded_infrastructure
+		subtype[on_expanded_infrastructure] = { }
 	}
 }
 on_action = {
@@ -3398,6 +3400,40 @@ on_action = {
 	}
 	## replace_scope = { root = country this = country from = country }
 	subtype[on_force_conversion] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_expanded_infrastructure] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = province this = province from = country }
+	subtype[on_raze] = {
   	## cardinality = 0..1
   	events = {
   	    ## cardinality = 0..inf
