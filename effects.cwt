@@ -2795,9 +2795,18 @@ alias[effect:add_core] = scope[province]
 ###In province scope, the defined scope gains a core on the current province scope. In country scope, the current scope gains a core on the defined province scope.
 alias[effect:add_core] = <province_id>
 
-## scope = province
+## scope = { province }
 ###Starts core construction in the current province scope, for the current owner.
 alias[effect:add_core_construction] = yes
+
+## scope = { province }
+###Starts core construction in the current province scope, for the current owner.
+alias[effect:add_core_construction] = {
+	###The cost percentage of the base unit construction cost to use.
+	cost = float
+	###The speed percentage of the base unit construction speed to use.
+	speed = float
+}
 
 ## scope = { province }
 ###In province scope, the defined scope gains a permanent claim on the current province scope. In country scope, the current scope gains a permanent claim on the defined province scope.
