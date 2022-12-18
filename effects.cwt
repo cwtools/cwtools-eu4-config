@@ -3809,3 +3809,7 @@ alias[effect:change_national_focus] = none
 ## scope = country
 ###Generates an agenda for the specified estate, which can then be started with start_estate_agenda = <estate>
 alias[effect:generate_estate_agenda] = <estate>
+
+## scope = province
+###Adds embracement of an institution based on the development of the province, up to 10% embracement.
+alias[effect:add_next_institution_embracement_scaled] = int[-10..10]
