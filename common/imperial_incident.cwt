@@ -8,7 +8,7 @@ types = {
 			## required
 			member_alert = "$_member_alert"
 			## required
-			emberor_alert = "$_emperor_alert"
+			emperor_alert = "$_emperor_alert"
 		}
 	}
 }
