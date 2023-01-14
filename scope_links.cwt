@@ -180,10 +180,11 @@ alias[trigger:<trade_company>] = {
 
 #Effect scopes
 
-#Hides the enclosed effects
-#alias[effect:hidden_effect] = {
-#	alias_name[effect] = alias_match_left[effect]
-#}
+## scope = any
+### Hides the enclosed effects from appearing as tooltips
+alias[effect:hidden_effect] = {
+	alias_name[effect] = alias_match_left[effect]
+}
 
 
 ## scope = any
