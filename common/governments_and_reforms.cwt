@@ -37,6 +37,7 @@ types = {
 		localisation = {
 			## required
 			name = "$"
+			description = "$_desc"
 		}
 	}
 	#necessary for localisations
