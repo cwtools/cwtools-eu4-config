@@ -1,3 +1,14 @@
+types = {
+	type[holy_order] = {
+		path = "game/common/holy_orders"
+		localisation = {
+			## required
+			name = "$"
+			desc = "$_desc"
+		}
+	}
+}
+
 
 holy_order = {
 	icon = <sprite>
