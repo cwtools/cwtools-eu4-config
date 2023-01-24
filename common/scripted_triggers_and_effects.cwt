@@ -102,7 +102,7 @@ alias[effect:unlock_estate] = {
 ###Forced scripted effect to work
 alias[effect:for_variable_amount] = {
 	## cardinality 0..1
-	variable = election_term
+	variable = value[variable]
 	## cardinality 0..1
 	effect = scalar
 }
