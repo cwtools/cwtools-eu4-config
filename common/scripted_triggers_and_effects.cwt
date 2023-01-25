@@ -1,7 +1,7 @@
 
 types = {
 	# Add scripted triggers that we support explicitly below
-	## type_key_filter <> { has_reached_government_reform_tier has_completed_idea_group_of_category }
+	## type_key_filter <> { has_completed_idea_group_of_category }
 	type[scripted_trigger] = {
 		path = "game/common/scripted_triggers"
 	}
@@ -55,21 +55,6 @@ alias[effect:unlock_merc_company] = {
 	merc_company = <mercenary_company>
 	## cardinality = 0..1
 	free_merc = yes
-}
-
-## scope = country
-### Forced scripted trigger to work
-alias[trigger:has_reached_government_reform_tier] = {
-	## cardinality = 0..1
-	tier_2 = yes
-	## cardinality = 0..1
-	tier_3 = yes
-	## cardinality = 0..1
-	tier_4 = yes
-	## cardinality = 0..1
-	tier_5 = yes
-	## cardinality = 0..1
-	tier_6 = yes
 }
 
 ## replace_scope = { this = country root = country }
