@@ -115,6 +115,7 @@ great_project = {
 		}
 		## replace_scope = { root = province this = province }
 		## cardinality = 0..1
+		###Effects to run when the project is upgraded to tier 0
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -161,6 +162,7 @@ great_project = {
 		}
 		## replace_scope = { root = province this = province }
 		## cardinality = 0..1
+		###Effects to run when the project is upgraded to tier 1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -207,6 +209,7 @@ great_project = {
 		}
 		## replace_scope = { root = province this = province }
 		## cardinality = 0..1
+		###Effects to run when the project is upgraded to tier 2
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
@@ -253,6 +256,7 @@ great_project = {
 		}
 		## replace_scope = { root = province this = province }
 		## cardinality = 0..1
+		###Effects to run when the project is upgraded to tier 3
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
 		}
