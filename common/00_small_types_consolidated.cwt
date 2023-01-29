@@ -318,7 +318,7 @@ professionalism_modifier = {
 	unit_sprite_start = scalar #todo: Is the first part of a sprite name, actually
 
 	trigger = {
-		always = yes
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	alias_name[modifier] = alias_match_left[modifier]
