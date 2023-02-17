@@ -3524,8 +3524,32 @@ alias[effect:discover_provinces] = enum[country_tags]
 alias[effect:disables_hre_badboy_points] = bool
 
 ## scope = province
-###Changes the culture of the current province scope. Cultures are found in /Europa Universalis IV/common/cultures/*.txt. Can utilise Event Scope Values.
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
 alias[effect:change_original_culture] = FROM
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = <culture>
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = enum[culture_new_variables]
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = enum[country_tags]
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = scope[country]
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = <province_id>
+
+## scope = province
+###Changes the original culture of the current province scope. Unlike the current culture, this one is the one defined in the province history and is always available to convert back to.
+alias[effect:change_original_culture] = scope[province]
 
 ## scope = province
 ###Remove all rebels in target province(s).
