@@ -2001,6 +2001,8 @@ alias[effect:define_consort] = {
 	religion = scope[province]
 	## cardinality = 0..1
 	religion = <province_id>
+	## cardinality = 0..1
+	birth_date = date_field
 }
 
 ## scope = country
