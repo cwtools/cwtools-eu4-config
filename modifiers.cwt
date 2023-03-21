@@ -1122,7 +1122,7 @@ alias[modifier:no_cost_for_reinforcing] = bool
 alias[modifier:number_of_cannons_flagship] = int
 
 ## scope = country
-###Modifies the opinion the scoped country has of other countries that have their primary culture one of the scoped country's non-accepted cultures.
+###Modifies the opinion the scoped country has of other countries that have their primary culture one of the scoped country's non-accepted cultures. NOTE: the culture does not be present in your country to count.
 alias[modifier:relation_with_other_culture] = int
 
 ## scope = country
