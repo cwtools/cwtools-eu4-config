@@ -1100,3 +1100,19 @@ alias[modifier:hussars_cost_modifier] = float
 ## scope = country
 ###Unknown purpose
 alias[modifier:reform_progress_growth_building] = float
+
+## scope = country
+###Required for the Revolutionary CB
+alias[modifier:cb_on_government_enemies] = bool
+
+## scope = country
+###Triple manpower on religious wars
+alias[modifier:cb_on_government_enemies] = bool
+
+## scope = country
+###Reduces the rate of native attacks. NOTE: no localisation and exact rate, or if it works at all, is unknown.
+alias[modifier:reduced_native_attacks] = bool
+
+## scope = country
+###Makes Reinforcement free. NOTE: has no effect, and no localisation.
+alias[modifier:no_cost_for_reinforcing] = bool
