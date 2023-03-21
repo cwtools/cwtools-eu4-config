@@ -1116,3 +1116,19 @@ alias[modifier:reduced_native_attacks] = bool
 ## scope = country
 ###Makes Reinforcement free. NOTE: has no effect, and no localisation.
 alias[modifier:no_cost_for_reinforcing] = bool
+
+## scope = country
+###Modify number of cannons in a flagship. NOTE: has no apparent effect
+alias[modifier:number_of_cannons_flagship] = int
+
+## scope = country
+###Modifies the opinion the scoped country has of other countries that have their primary culture one of the scoped country's non-accepted cultures.
+alias[modifier:relation_with_other_culture] = int
+
+## scope = country
+###Modifies the governing cost of territories
+alias[modifier:territories_governing_cost] = int
+
+## scope = country
+###Modifies the monthly heir claim increase by a percentage
+alias[modifier:monthly_heir_claim_increase_modifier] = int
