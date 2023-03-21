@@ -1092,3 +1092,11 @@ alias[modifier:is_mercenary_modifier] = bool
 ## scope = province
 ###Modifies the warscore cost of the province
 alias[modifier:local_warscore_cost_modifier] = float
+
+## scope = country
+###Modifies the cost of raising Hussars special units. NOTE: It uses green coloring for positive values and red values for negative ones, it also has no effecy by default as the CREATE_HUSSARS_MIL_COST define is 0 by default, and it also has no image.
+alias[modifier:hussars_cost_modifier] = float
+
+## scope = country
+###Unknown purpose
+alias[modifier:reform_progress_growth_building] = float
