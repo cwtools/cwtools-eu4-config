@@ -42,7 +42,6 @@ modifiers = {
 	mercenary_cost = country
 	merc_maintenance_modifier = country
 	possible_condottieri = country
-	possible_mercenaries = country
 	hostile_attrition = country
 	garrison_size = country
 	global_garrison_growth = country
@@ -130,7 +129,6 @@ modifiers = {
 	embracement_cost = country
 	global_institution_spread = country
 	institution_spread_from_true_faith = country
-	native_advancement_cost = country
 	all_power_cost = country
 	innovativeness_gain = country
 	free_adm_policy = country
@@ -213,7 +211,6 @@ modifiers = {
 	range = country
 	native_uprising_chance = country
 	native_assimilation = country
-	migration_cooldown = country
 	global_tariffs = country
 	caravan_power = country
 	merchants = country
@@ -265,7 +262,6 @@ modifiers = {
 	local_development_cost = province
 	local_institution_spread = province
 	local_core_creation = province
-	cs_only_local_development_cost = province
 	province_trade_power_modifier = province
 	province_trade_power_value = province
 	trade_goods_size_modifier = province
@@ -273,7 +269,6 @@ modifiers = {
 	trade_value_modifier = province
 	trade_value = province
 	local_missionary_strength = province
-	religious_conversion_resistance = province
 	local_culture_conversion_cost = province
 	local_unrest = province
 	local_autonomy = province
@@ -597,9 +592,6 @@ alias[modifier:yearly_patriarch_authority] = float
 alias[modifier:yearly_karma_decay] = float
 
 ## scope = country
-alias[modifier:special_unit_forcelimit_fraction] = float
-
-## scope = country
 alias[modifier:available_province_loot] = float
 
 ## scope = country
@@ -649,9 +641,6 @@ alias[modifier:mercenary_manpower] = float
 
 ## scope = country
 alias[modifier:flagship_cost] = float
-
-## scope = country
-alias[modifier:hegemon_strength] = float[0.0..100.0]
 
 ## scope = country
 alias[modifier:monthly_piety_accelerator] = float
