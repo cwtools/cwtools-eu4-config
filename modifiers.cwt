@@ -1116,8 +1116,8 @@ alias[modifier:relation_with_other_culture] = int
 
 ## scope = country
 ###Modifies the governing cost of territories
-alias[modifier:territories_governing_cost] = int
+alias[modifier:territories_governing_cost] = float
 
 ## scope = country
 ###Modifies the monthly heir claim increase by a percentage
-alias[modifier:monthly_heir_claim_increase_modifier] = int
+alias[modifier:monthly_heir_claim_increase_modifier] = float
