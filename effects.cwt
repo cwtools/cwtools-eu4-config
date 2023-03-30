@@ -140,10 +140,10 @@ alias[effect:add_country_modifier] = {
 	name = <event_modifier>
 	name = <static_modifier>
 #	## cardinality = 0..1 #not having it means it lasts for one day!
-	###The number of days to add the country modifier for.
+	###The number of days to add the country modifier for. If no duration it present it will last 1 day.
 	duration = int
 	## cardinality = 0..1
-	###The number of days to add the country modifier for.
+	###If the modifier appears in the country modifier screen.
 	hidden = yes
 	## cardinality = 0..1
 	###The string used to override the automatic duration string.
@@ -2362,8 +2362,10 @@ alias[effect:province_event] = {
 alias[effect:add_province_modifier] = {
 	name = <event_modifier>
 #	## cardinality = 0..1 #not having it means it lasts for one day!
+	###How many days the modifier lasts, defaults to 1 day
 	duration = int
 	## cardinality = 0..1
+	###If the modifier is hidden from the province modifier view.
 	hidden = yes
 	## cardinality = 0..1
 	###The string used to override the automatic duration string.
@@ -2377,6 +2379,7 @@ alias[effect:add_permanent_province_modifier] = {
 	## cardinality = 0..1
 	duration = int
 	## cardinality = 0..1
+	###If the modifier is hidden from the province modifier view.
 	hidden = yes
 	## cardinality = 0..1
 	###The string used to override the automatic duration string.
