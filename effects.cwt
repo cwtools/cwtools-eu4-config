@@ -775,7 +775,7 @@ alias[effect:add_army_tradition] = float
 alias[effect:add_navy_tradition] = float
 
 ## scope = country
-###Adds Army Professionalism to the current scope.
+###Adds Army Professionalism to the current scope. 1 is equal to 100 professionalism.
 alias[effect:add_army_professionalism] = float[-1.0..1.0]
 
 # Severity warning because M&T actually does use numbers above 1 million!
