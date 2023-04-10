@@ -192,4 +192,13 @@ mercenary_company = {
 		weight = float
 		cost_modifier = float
 	}
+	## cardinality = 0..1
+	###Minimum size of the mercenary army
+	min_size = int[1..inf]
+	## cardinality = 0..1
+	###Maximum size of the mercenary army
+	max_size = int[1..inf]
+	## cardinality = 0..1
+	###Starting manpower pool
+	manpower_pool = int[1..inf]
 }
