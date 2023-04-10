@@ -300,6 +300,16 @@ naval_doctrine = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
 	button_gfx = int
 }
 
