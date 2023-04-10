@@ -247,10 +247,29 @@ natives = {
 
 
 decree = {
+	###Cost in meritocracy of enacting the decree
 	cost = int
+	###Duration in days of the modifier of the decree
 	duration = int
+	###If false the decree will not appear
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]		
+	}
+	###If false you will not be able to take the decree
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]		
+	}
+	###Modifiers active during the duration of the decree
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+	###Effects to run when the decree is enacted
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	###Effects to run when the decree is expired
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 	## replace_scope = { root = country this = country from = country }
 	###ai_will_do has to be 10 for AI to do it (with >=99 Meritocracy).
