@@ -518,6 +518,7 @@ government_reform = {
 			government_abilities = {
 				enum[government_mechanics]
 			}
+			## cardinality = 0..1
 			government_abilities = {
 				## cardinality = 1..inf
 				<government_mechanic>
