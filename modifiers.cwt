@@ -715,7 +715,7 @@ alias[modifier:amount_of_hussars] = float
 
 ## scope = country
 ###Grants attack bonus in provinces with the same terrain as capital province
-alias[modifier:attack_bonus_in_capital_terrain] = yes
+alias[modifier:attack_bonus_in_capital_terrain] = int
 
 ## scope = country
 ###Can recruit Hussars
@@ -1125,3 +1125,7 @@ alias[modifier:monthly_heir_claim_increase_modifier] = float
 ## scope = country
 ###Triples manpower gain on wars declared with a casus belli that has religious_war = yes
 alias[modifier:extra_manpower_at_religious_war] = bool
+
+## scope = country
+###Colonies get +X in each development type
+alias[modifier:colony_development_boost] = int
