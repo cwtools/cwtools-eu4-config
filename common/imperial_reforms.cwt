@@ -14,6 +14,9 @@ types = {
 		subtype[emperor] = {
 			emperor = scalar
 		}
+		subtype[elector] = {
+			elector = scalar
+		}
 		subtype[province] = {
 			province = scalar
 		}
@@ -40,6 +43,12 @@ types = {
 				emperor = "$_emperor"
 				## optional
 				emperor_desc = "desc_$_emperor"
+			}
+			subtype[elector] = {
+				## required
+				elector = "$_elector"
+				## optional
+				elector_desc = "desc_$_elector"
 			}
 			subtype[province] = {
 				## optional
@@ -115,6 +124,10 @@ imperial_reform = {
 	}
 	## cardinality = 0..1
 	emperor = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	elector = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 	## cardinality = 0..1
