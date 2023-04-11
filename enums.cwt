@@ -86,6 +86,7 @@ enums = {
 		"Leviathan"
 		"Origins"
 		"Lions of the North"
+		Domination
 	}
 	enum[DLCNUM] = {
 		dlc001
