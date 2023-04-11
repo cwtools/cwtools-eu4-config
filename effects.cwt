@@ -338,6 +338,15 @@ alias[effect:add_government_power] = {
 }
 
 ## scope = country
+###Changes the pool size of one of the power pools within a government mechanic.
+alias[effect:add_government_power] = {
+	###Which government mechanic to add power to.
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+	value = int
+}
+
+## scope = country
 ###Changes the current scope's government and rank at the same time. Governments are found in /Europa Universalis IV/common/governments/*.txt. Will respect that governments have fixed ranks and the maximum ranks for subject types.
 alias[effect:set_government_and_rank] = {
 	government = <government>
