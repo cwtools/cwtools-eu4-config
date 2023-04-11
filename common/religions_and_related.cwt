@@ -792,16 +792,36 @@ personal_deity = {
 
 	alias_name[modifier] = alias_match_left[modifier]
 
-	## replace_scope = { root = country this = country }
-	allow = {
-		alias_name[trigger] = alias_match_left[trigger]
-	}
 	sprite = int
 
 	## replace_scope = { root = country this = country }
 	ai_will_do = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	###Whether the deity is visible to be picked
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	###Requirements for picking the deity
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 }
 
