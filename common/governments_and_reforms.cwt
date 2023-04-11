@@ -291,6 +291,11 @@ government_reform = {
 		allow_cawa = bool
 		can_change_primary_culture = bool
 		allow_carolean = bool
+		can_inherit_personal_unions = bool
+		block_cultural_union = bool
+		has_cultural_union = bool
+		can_remove_idea_group = bool
+		mercs_do_not_cost_army_professionalism = bool
 	}
 
 	
@@ -650,6 +655,14 @@ government_reform = {
 				cannot_become_dictatorship = bool
 				## cardinality = 0..inf
 				value_set[custom_attribute] = bool
+				## cardinality = 0..1
+				block_cultural_union = bool
+				## cardinality = 0..1
+				has_cultural_union = bool
+				## cardinality = 0..1
+				can_remove_idea_group = bool
+				## cardinality = 0..1
+				mercs_do_not_cost_army_professionalism = bool
 			}
 		}
 		
@@ -708,6 +721,14 @@ government_reform = {
 			cannot_become_dictatorship = bool
 			## cardinality = 0..inf
 			value_set[custom_attribute] = bool
+			## cardinality = 0..1
+			block_cultural_union = bool
+			## cardinality = 0..1
+			has_cultural_union = bool
+			## cardinality = 0..1
+			can_remove_idea_group = bool
+			## cardinality = 0..1
+			mercs_do_not_cost_army_professionalism = bool
 		}
 
 		## cardinality = 0..1
