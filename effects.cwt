@@ -3857,3 +3857,7 @@ alias[effect:add_rebel_progress] = {
 	## cardinality = 0..1
 	type = <rebel_type>
 }
+
+## scope = country
+###Ends current debate, if yes debate passes and is enacted, if no debate fails and you get penalized
+alias[effect:end_current_debate] = bool
