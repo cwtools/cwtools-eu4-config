@@ -3861,3 +3861,11 @@ alias[effect:add_rebel_progress] = {
 ## scope = country
 ###Ends current debate, if yes debate passes and is enacted, if no debate fails and you get penalized
 alias[effect:end_current_debate] = bool
+
+## scope = country
+###Extends current country modifier X by Y days
+alias[effect:extend_country_modifier] = {
+	name = <event_modifier>
+	name = <static_modifier>
+	duration = int[1..inf]
+}
