@@ -1129,3 +1129,7 @@ alias[modifier:extra_manpower_at_religious_war] = bool
 ## scope = country
 ###Colonies get +X in each development type
 alias[modifier:colony_development_boost] = int
+
+## scope = country
+###Triples manpower gain on wars declared with a casus belli that has religious_war = yes
+alias[modifier:extra_manpower_at_religious_war] = bool
