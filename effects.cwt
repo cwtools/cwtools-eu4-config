@@ -3849,3 +3849,11 @@ alias[effect:add_next_institution_embracement_scaled] = int[-10..10]
 ## scope = province
 ###Add X random development to the scoped province
 alias[effect:add_random_development] = int
+
+## scope = country
+###Adds X rebel progress of type Y, if type is not defined then all rebels get it
+alias[effect:add_rebel_progress] = {
+	value = int
+	## cardinality = 0..1
+	type = <rebel_type>
+}
