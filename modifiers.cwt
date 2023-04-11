@@ -1136,3 +1136,11 @@ alias[modifier:extra_manpower_at_religious_war] = bool
 
 ## scope = country
 alias[modifier:reduced_trade_penalty_on_non_main_tradenode] = float
+
+## scope = country
+###Modifies the monthly gain of power for this mechanic power
+alias[modifier:monthly_<government_mechanic_power>] = float
+
+## scope = country
+###Modifies the gain from the add_government_power effect
+alias[modifier:<government_mechanic_power>_gain_modifier] = float
