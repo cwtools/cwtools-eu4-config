@@ -5564,3 +5564,11 @@ alias[trigger:has_government_power] = {
 	power_type = <government_mechanic_power>
 	value = int
 }
+
+## scope = country
+###Returns true if country has at least X subjects of type Y with at least Z liberty desire
+alias[trigger:num_subjects_of_type_with_liberty_desire] = {
+	type = <subject_type>
+	liberty_desire = int
+	value = int
+}
