@@ -799,7 +799,7 @@ alias[effect:every_empty_neighbor_province] = {
 }
 
 
-## scope = province
+## scope = { province country }
 ## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope. Does not include empty provinces.
 alias[effect:every_neighbor_province] = {
@@ -1422,7 +1422,7 @@ alias[trigger:any_friendly_coast_border_province] = {
 }
 
 
-## scope = province
+## scope = { province country }
 ## push_scope = province
 ###Scopes to one province that shares a border (or sea zone?) with the current scope.
 alias[trigger:any_neighbor_province] = {
@@ -1955,6 +1955,17 @@ alias[effect:every_war_enemy_country] = {
 ## push_scope = province
 ###Scope to a random war enemy province.
 alias[effect:random_war_enemy_country] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = province
+## push_scope = province
+###Scope to a random province in the area
+alias[effect:random_area_province] = {
 	## cardinality = 0..1
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
