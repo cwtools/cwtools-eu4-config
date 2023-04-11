@@ -89,7 +89,7 @@ types = {
 	}
 	type[government_mechanic_interaction] = {
 		path = "game/common/government_mechanics"
-		# Only look for things inside <mechanic> = { powers = { HERE } }
+		# Only look for things inside <mechanic> = { interactions = { HERE } }
 		skip_root_key = { any interactions }
 		localisation = {
 			## required
@@ -101,8 +101,10 @@ types = {
 }
 
 government_mechanic = {
+	## cardinality = 0..1
 	###GFX icon strip the alert icon to use for this mechanic is in
 	alert_icon_gfx = scalar # TODO: make it a gfx value
+	## cardinality = 0..1
 	###the index of the icon for this mechanic in the strip of alert_icon_gfx
 	alert_icon_index = int[1..inf]
 	## replace_scope = { root = country this = country }
@@ -120,8 +122,9 @@ government_mechanic = {
 			gui = scalar
 			###Maximum value the bar can go
 			max = int[1..inf]
+			## cardinality = 0..1
 			###Minimum value the bar can go
-			max = int[-999999999..0]
+			min = int
 			## cardinality = 0..1
 			###default power when resetting
 			default = int
@@ -131,6 +134,7 @@ government_mechanic = {
 			###How much it grows by each month
 			base_monthly_growth = float
 			## cardinality = 0..1
+			###Resets back to value defined in default (or 0 if not defined) when your ruler dies
 			reset_on_new_ruler = bool
 			## cardinality = 0..1
 			development_scaled_monthly_growth = float
@@ -145,7 +149,7 @@ government_mechanic = {
 				}
 			}
 			## cardinality = 0..1
-			reversed_scaled_modifier = {
+			reverse_scaled_modifier = {
 				## cardinality = 0..1
 				trigger = {
 					alias_name[trigger] = alias_match_left[trigger]
