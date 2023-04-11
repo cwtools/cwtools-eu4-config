@@ -5550,3 +5550,17 @@ alias[trigger:defensive_pact_with] = scope[any]
 ###Returns true if the country has a defensive pact with X.
 alias[trigger:defensive_pact_with] = enum[country_tags]
 
+## scope = country
+###Returns true if the country has at least X rebel progress.
+alias[trigger:rebel_progress_at_least] = {
+	value = int
+	# TODO: test if it accepts type like add_rebel_progress does
+}
+
+## scope = country
+###Returns true if government has mechanic X with power Y and value Z
+alias[trigger:has_government_power] = {
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+	value = int
+}
