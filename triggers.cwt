@@ -118,6 +118,7 @@ alias[trigger:ai_attitude] = {
 	who = enum[country_tags]
 	attitude = enum[attitudes]
 }
+
 ## scope = country
 ###Returns true if the country has an alliance with X.
 alias[trigger:alliance_with] = scope[any]
@@ -5540,3 +5541,12 @@ alias[trigger:trade_node_value] = int
 ## scope = country
 ###Returns whether the country has been forced to change religion
 alias[trigger:religion_enforced] = bool
+
+## scope = country
+###Returns true if the country has a defensive pact with X.
+alias[trigger:defensive_pact_with] = scope[any]
+
+## scope = country
+###Returns true if the country has a defensive pact with X.
+alias[trigger:defensive_pact_with] = enum[country_tags]
+
