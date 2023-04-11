@@ -100,11 +100,11 @@ alias[effect:save_event_target_as] = value_set[event_target]
 
 ## scope = any
 ###Saves the current scope as a key to be used in further effects/triggers and in localisations. Is NOT cleared once execution ends, but rather is kept until cleared with clear_global_event_target. Use event_target:<key> to access the scope.
-alias[effect:save_global_event_target_as] = value_set[event_target]
+alias[effect:save_global_event_target_as] = value_set[global_event_target]
 
 ## scope = any
 ###Clears a specific global event target.
-alias[effect:clear_global_event_target] = value[event_target]
+alias[effect:clear_global_event_target] = value[global_event_target]
 
 ## scope = any
 ###Clears all global event targets.

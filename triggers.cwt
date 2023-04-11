@@ -1653,6 +1653,11 @@ alias[trigger:has_ruler_modifier] = <event_modifier>
 ## severity = warning
 alias[trigger:has_saved_event_target] = value[event_target]
 
+## scope = any
+###Returns true if the specified event target has been saved.
+## severity = warning
+alias[trigger:has_saved_event_target] = value[global_event_target]
+
 ## scope = country
 ###Returns true if the vassal pays scutage.
 alias[trigger:has_scutage] = bool
