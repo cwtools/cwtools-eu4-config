@@ -347,6 +347,40 @@ alias[effect:add_government_power] = {
 }
 
 ## scope = country
+###Set the pool size of one of the power pools within a government mechanic.
+alias[effect:set_government_power] = {
+	###Which government mechanic to add power to.
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+	value = int
+}
+
+## scope = country
+###Freezes the pool size of one of the power pools within a government mechanic so it cannot changed until unfrozen.
+alias[effect:freeze_government_power] = {
+	###Which government mechanic to add power to.
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+}
+
+## scope = country
+###Freezes the pool size of one of the power pools within a government mechanic so it cannot changed until unfrozen.
+alias[effect:unfreeze_government_power] = {
+	###Which government mechanic to add power to.
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+}
+
+## scope = country
+###Changes the pool size of one of the power pools within a government mechanic, scaled to number of seats in parliament.
+alias[effect:add_government_power_scaled_to_eats] = {
+	###Which government mechanic to add power to.
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+	value = int
+}
+
+## scope = country
 ###Changes the current scope's government and rank at the same time. Governments are found in /Europa Universalis IV/common/governments/*.txt. Will respect that governments have fixed ranks and the maximum ranks for subject types.
 alias[effect:set_government_and_rank] = {
 	government = <government>
@@ -734,6 +768,12 @@ alias[effect:define_advisor] = {
 	location = <province_id>
 	## cardinality = 0..1
 	female = bool
+	## cardinality = 0..1
+	age = int
+	## cardinality = 0..1
+	min_age = int
+	## cardinality = 0..1
+	max_age = int
 }
 
 ## scope = country
@@ -2509,7 +2549,7 @@ alias[effect:add_great_project] = {
 }
 
 ## scope = province
-###Changes the construction progress of a great project in the current province scope.
+###Changes the construction progress of any construction in the current province scope.
 alias[effect:add_construction_progress] = float[-1.0..1.0]
 
 ## scope = province
@@ -3877,4 +3917,324 @@ alias[effect:extend_country_modifier] = {
 	name = <event_modifier>
 	name = <static_modifier>
 	duration = int[1..inf]
+}
+
+## scope = country
+###Changes country color to country in scope or a RGB defined color, or yes to restore it
+## scope = country
+###Changes country color to country in scope or a RGB defined color, or yes to restore it
+alias[effect:change_country_color] = {
+	country = enum[country_tags]
+	country = scope[country]
+}
+
+## scope = country
+###Changes country color to country in scope or a RGB defined color, or yes to restore it
+alias[effect:change_country_color] = {
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+}
+
+## scope = country
+###Changes country color to country in scope or a RGB defined color, or yes to restore it
+alias[effect:change_country_color] = yes
+
+## scope = country
+###Forces the scoped country to release all possible nations, starting from smallest to biggest if possible, otherwise randomly
+alias[effect:release_all_possible_countries] = yes
+
+## scope = province
+alias[effect:janissary_infantry] = scope[country]
+
+## scope = province
+alias[effect:janissary_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:revolutionary_guard_infantry] = scope[country]
+
+## scope = province
+alias[effect:revolutionary_guard_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:revolutionary_guard_cavalry] = scope[country]
+
+## scope = province
+alias[effect:revolutionary_guard_cavalry] = enum[country_tags]
+
+## scope = province
+alias[effect:revolutionary_guard_artillery] = scope[country]
+
+## scope = province
+alias[effect:revolutionary_guard_artillery] = enum[country_tags]
+
+## scope = country
+###Adds the defined advisor to the current scope. Advisor types are found in /Europa Universalis IV/common/advisortypes/*.txt. Can utilise Event Scope Values for the culture and religion parameters. The name parameter can accept a saved name variable, see set_saved_name for more context.
+alias[effect:hire_advisor] = {
+	type = <advisor_type>
+	## cardinality = 0..1
+	skill = int[1..5]
+	## cardinality = 0..1
+	name = localisation_synced
+	## cardinality = 0..1
+	name = value[saved_name]
+	## cardinality = 0..1
+	cost_multiplier = float
+	## cardinality = 0..1
+	discount = yes
+	## cardinality = 0..1
+	culture = <culture>
+	## cardinality = 0..1
+	culture = enum[culture_new_variables]
+	## cardinality = 0..1
+	culture = scope[country]
+	## cardinality = 0..1
+	culture = enum[country_tags]
+	## cardinality = 0..1
+	culture = <province_id>
+	## cardinality = 0..1
+	culture = scope[province]
+	## cardinality = 0..1
+	religion = <religion>
+	## cardinality = 0..1
+	religion = enum[religion_new_variables]
+	## cardinality = 0..1
+	religion = scope[country]
+	## cardinality = 0..1
+	religion = enum[country_tags]
+	## cardinality = 0..1
+	religion = scope[province]
+	## cardinality = 0..1
+	religion = <province_id>
+	## cardinality = 0..1
+	location = scope[province]
+	## cardinality = 0..1
+	location = <province_id>
+	## cardinality = 0..1
+	female = bool
+	## cardinality = 0..1
+	age = int
+	## cardinality = 0..1
+	min_age = int
+	## cardinality = 0..1
+	max_age = int
+}
+
+## scope = country
+###Forces scoped country to steer trade to defined country
+alias[effect:steer_trade] = enum[country_tags]
+
+## scope = country
+###Forces scoped country to steer trade to defined country
+alias[effect:steer_trade] = scope[country]
+
+## scope = country
+###Disbands all units, even those in combat, considered "stack wiped"
+alias[effect:disband_all_units] = yes
+
+## scope = country
+###Disbands all regiments, even those in combat, considered "stack wiped"
+alias[effect:disband_all_regiments] = yes
+
+## scope = country
+###Disbands all ships, even those in combat, considered "stack wiped"
+alias[effect:disband_all_ships] = yes
+
+## scope = country
+###Forces current scope to remove guarantee over specified country
+alias[effect:remove_guarantee] = enum[country_tags]
+
+## scope = country
+###Forces current scope to remove guarantee over specified country
+alias[effect:remove_guarantee] = scope[country]
+
+## scope = country
+###Removes scoped country from existence, all provinces become uncolonized, all subjects independent, and all units deleted
+alias[effect:remove_country] = yes
+
+## scope = country
+###Starts debate on issue, cancelling any previous active debate with no loss of prestige
+alias[effect:start_debate] = <parliament_issue>
+
+## scope = country
+###Cancels current debate, allowing a new debate to start
+alias[effect:cancel_current_debate] = <parliament_issue>
+
+## scope = country
+###Removes an enacted issue, allowing a new debate to start
+alias[effect:remove_enacted_issue] = <parliament_issue>
+
+## scope = country
+###Enacts a parliament issue, skipping the debate
+alias[effect:enact_issue] = <parliament_issue>
+
+## scope = country
+###Regenerates the country's government mechanics. Used for UI purposes
+alias[effect:regenerate_government_mechanics] = yes
+
+## scope = country
+###Sets the defined country scope as the Papal Controller
+alias[effect:set_papal_controller] = enum[country_tags]
+
+## scope = country
+###Sets the defined country scope as the Papal Controller
+alias[effect:set_papal_controller] = scope[country]
+
+## scope = country
+alias[effect:remove_hegemon] = enum[country_tags]
+
+## scope = country
+alias[effect:remove_hegemon] = scope[country]
+
+## scope = country
+###Removes an active power projection, if amount is not defined remove it fully
+alias[effect:remove_power_projection] = {
+	type = <power_projection_modifier>
+	## cardinality = 0..1
+	amount = float
+}
+
+## scope = country
+###Add ducats based on the development of subjects, multiplier, age_multiplier, custom_tooltip, and trigger control behaviour, check the individual keys
+alias[effect:add_subjects_development_ducats] = {
+	## cardinality = 0..1
+	###multiply number of ducats gained
+	multiplier = int
+	## cardinality = 0..1
+	###Multiply number of ducats gained based on age
+	age_multiplier = int
+	## cardinality = 0..1
+	###Custom description to use in tooltip
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	###Only consider subjects that pass this trigger
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## scope = country
+###Add manpower based on the development of subjects, multiplier, age_multiplier, custom_tooltip, and trigger control behaviour, check the individual keys
+alias[effect:add_subjects_development_manpower] = {
+	## cardinality = 0..1
+	###multiply manpower gained
+	multiplier = int
+	## cardinality = 0..1
+	###Multiply manpower gained based on age
+	age_multiplier = int
+	## cardinality = 0..1
+	###Custom description to use in tooltip
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	###Only consider subjects that pass this trigger
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## scope = country
+###Add ducats based on the development of owned provinces, multiplier, age_multiplier, custom_tooltip, and trigger control behaviour, check the individual keys
+alias[effect:add_owned_provinces_development_ducats] = {
+	## cardinality = 0..1
+	###multiply number of ducats gained
+	multiplier = int
+	## cardinality = 0..1
+	###Multiply number of ducats gained based on age
+	age_multiplier = int
+	## cardinality = 0..1
+	###Custom description to use in tooltip
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	###Only consider provinces that pass this trigger
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## scope = country
+###Add manpower based on the development of owned provinces, multiplier, age_multiplier, custom_tooltip, and trigger control behaviour, check the individual keys
+alias[effect:add_owned_provinces_development_manpower] = {
+	## cardinality = 0..1
+	###multiply manpower gained
+	multiplier = int
+	## cardinality = 0..1
+	###Multiply manpower gained based on age
+	age_multiplier = int
+	## cardinality = 0..1
+	###Custom description to use in tooltip
+	custom_tooltip = localisation
+	## cardinality = 0..1
+	###Only consider provinces that pass this trigger
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}
+
+## scope = province
+alias[effect:tercio_infantry] = scope[country]
+
+## scope = province
+alias[effect:tercio_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:musketeer_infantry] = scope[country]
+
+## scope = province
+alias[effect:musketeer_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:samurai_infantry] = scope[country]
+
+## scope = province
+alias[effect:samurai_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:geobukseon_galley] = scope[country]
+
+## scope = province
+alias[effect:geobukseon_galley] = enum[country_tags]
+
+## scope = province
+alias[effect:man_of_war_heavy] = scope[country]
+
+## scope = province
+alias[effect:man_of_war_heavy] = enum[country_tags]
+
+## scope = province
+alias[effect:man_of_war_light] = scope[country]
+
+## scope = province
+alias[effect:man_of_war_light] = enum[country_tags]
+
+## scope = province
+alias[effect:galleon_heavy] = scope[country]
+
+## scope = province
+alias[effect:galleon_heavy] = enum[country_tags]
+
+## scope = province
+alias[effect:galleass_galley] = scope[country]
+
+## scope = province
+alias[effect:galleass_galley] = enum[country_tags]
+
+## scope = province
+alias[effect:caravel_light] = scope[country]
+
+## scope = province
+alias[effect:caravel_light] = enum[country_tags]
+
+## scope = province
+alias[effect:voc_indiamen_light] = scope[country]
+
+## scope = province
+alias[effect:voc_indiamen_light] = enum[country_tags]
+
+## scope = country
+alias[effect:create_unit_forcelimit_percentage] = {
+	type = enum[unit_types]
+	force_limit_percentage = float
+	## cardinality = 0..1
+	special_unit_category = scalar # TODO: add enum with all special unit types	
 }
