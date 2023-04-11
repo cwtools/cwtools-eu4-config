@@ -49,7 +49,8 @@ game_age = {
 		increase_autonomy_command = int
 		debase_currency = int
 		execute_rebel_acceptance_command = int
-		seat_in_parliament = int
+		automatic_seat_in_parliament = int
+		manual_seat_in_parliament = int
 		war_exhaustion = int
 	}
 	
