@@ -205,6 +205,7 @@ government_mechanic = {
 			## cardinality = 0..1
 			###defines the string to use for the name of the cooldown. If not specified, it will use the name of the interaction.
 			cooldown_desc = localisation
+			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			ai_chance = {
 				factor = float[0..10000]
