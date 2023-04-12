@@ -722,6 +722,10 @@ religion_group = {
 		gurus = {
 			## cardinality = 0..inf
 			enum[sikh_guru] = {
+				## cardinality = 0..1
+				potential = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
 				trigger = {
 					alias_name[trigger] = alias_match_left[trigger]
 				}

@@ -273,6 +273,11 @@ trading_policy = {
 	show_alert = yes
 	
 	button_gfx = <sprite>
+
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 

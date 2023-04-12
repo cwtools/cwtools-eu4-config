@@ -192,6 +192,14 @@ fervor = {
 	effect = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	## replace_scope = { root = country this = country }
 	ai_will_do = {
 		factor = float
@@ -285,6 +293,10 @@ isolationism = {
 
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
 
