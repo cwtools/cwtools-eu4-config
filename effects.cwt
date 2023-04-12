@@ -343,7 +343,7 @@ alias[effect:add_government_power] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
-	value = int
+	value = float
 }
 
 ## scope = country
@@ -352,7 +352,7 @@ alias[effect:set_government_power] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
-	value = int
+	value = float
 }
 
 ## scope = country
