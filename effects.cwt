@@ -4100,10 +4100,10 @@ alias[effect:remove_power_projection] = {
 alias[effect:add_subjects_development_ducats] = {
 	## cardinality = 0..1
 	###multiply number of ducats gained
-	multiplier = int
+	multiplier = float
 	## cardinality = 0..1
 	###Multiply number of ducats gained based on age
-	age_multiplier = int
+	age_multiplier = float
 	## cardinality = 0..1
 	###Custom description to use in tooltip
 	custom_tooltip = localisation
@@ -4119,10 +4119,10 @@ alias[effect:add_subjects_development_ducats] = {
 alias[effect:add_subjects_development_manpower] = {
 	## cardinality = 0..1
 	###multiply manpower gained
-	multiplier = int
+	multiplier = float
 	## cardinality = 0..1
 	###Multiply manpower gained based on age
-	age_multiplier = int
+	age_multiplier = float
 	## cardinality = 0..1
 	###Custom description to use in tooltip
 	custom_tooltip = localisation
@@ -4138,10 +4138,10 @@ alias[effect:add_subjects_development_manpower] = {
 alias[effect:add_owned_provinces_development_ducats] = {
 	## cardinality = 0..1
 	###multiply number of ducats gained
-	multiplier = int
+	multiplier = float
 	## cardinality = 0..1
 	###Multiply number of ducats gained based on age
-	age_multiplier = int
+	age_multiplier = float
 	## cardinality = 0..1
 	###Custom description to use in tooltip
 	custom_tooltip = localisation
@@ -4157,10 +4157,10 @@ alias[effect:add_owned_provinces_development_ducats] = {
 alias[effect:add_owned_provinces_development_manpower] = {
 	## cardinality = 0..1
 	###multiply manpower gained
-	multiplier = int
+	multiplier = float
 	## cardinality = 0..1
 	###Multiply manpower gained based on age
-	age_multiplier = int
+	age_multiplier = float
 	## cardinality = 0..1
 	###Custom description to use in tooltip
 	custom_tooltip = localisation
