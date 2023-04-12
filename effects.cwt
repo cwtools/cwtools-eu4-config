@@ -334,7 +334,7 @@ alias[effect:add_government_power] = {
 	###Which government mechanic to add power to.
 	government_mechanic = enum[government_mechanics]
 	which = enum[power_categories]
-	amount = int
+	amount = float
 }
 
 ## scope = country
