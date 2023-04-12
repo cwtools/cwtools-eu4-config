@@ -201,4 +201,10 @@ mercenary_company = {
 	## cardinality = 0..1
 	###Starting manpower pool
 	manpower_pool = int[1..inf]
+	## cardinality = 0..1
+	###If mercenary company counts toward force limit
+	counts_towards_force_limit = no
+	## cardinality = 0..1
+	###If extra manpower from company being above max_size is trasfered to company's manpower pool
+	no_additional_manpower_from_max_size = yes
 }
