@@ -119,4 +119,16 @@ building = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = province this = province }
+	on_construction_started = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	## replace_scope = { root = province this = province }
+	on_construction_canceled = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 }
