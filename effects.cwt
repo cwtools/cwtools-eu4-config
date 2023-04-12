@@ -4238,3 +4238,6 @@ alias[effect:create_unit_forcelimit_percentage] = {
 	## cardinality = 0..1
 	special_unit_category = scalar # TODO: add enum with all special unit types	
 }
+
+## scope = province
+alias[effect:add_local_autonomy_no_authority_effect] = float
