@@ -131,6 +131,7 @@ government_mechanic = {
 			## cardinality = 0..1
 			###Category of monarch power used for this mechanic
 			monarch_power = enum[power_categories]
+			## cardinality = 0..1
 			###How much it grows by each month
 			base_monthly_growth = float
 			## cardinality = 0..1
