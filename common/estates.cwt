@@ -267,6 +267,8 @@ estate_privilege = {
 		vassal_liberty_affected_by_loyalty
 		## cardinality = 0..1
 		can_give_agendas_without_interaction
+		## cardinality = 0..1
+		no_estate_crownland_loss_from_developing
 	}
 
 	## cardinality = 0..1
