@@ -4166,7 +4166,7 @@ alias[trigger:trade_range] = enum[country_tags]
 alias[trigger:trade_share] = {
 	country = scope[country]
 	country = enum[country_tags]
-	share = int[0.100]
+	share = float[0..100]
 }
 
 ## scope = country
