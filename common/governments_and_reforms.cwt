@@ -81,12 +81,19 @@ types = {
 		subtype[base_monthly_growth] = {
 			base_monthly_growth = float	
 		}
+		subtype[development_scaled_monthly_growth] = {
+			development_scaled_monthly_growth = float	
+		}
 		localisation = {
 			## required
 			name = "$"
 			## required
 			gain_modifier = "$_gain_modifier"
 			subtype[base_monthly_growth] = {
+				## required
+				modifier = "monthly_$"
+			}
+			subtype[development_scaled_monthly_growth] = {
 				## required
 				modifier = "monthly_$"
 			}
