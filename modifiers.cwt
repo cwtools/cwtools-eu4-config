@@ -1479,3 +1479,99 @@ alias[modifier:local_has_voc_indiamen] = yes
 
 ## scope = province
 alias[modifier:local_has_streltsy] = yes
+
+## scope = country
+alias[modifier:allowed_tercio_fraction] = float
+
+## scope = country
+alias[modifier:allowed_musketeer_fraction] = float
+
+## scope = country
+alias[modifier:allowed_samurai_fraction] = float
+
+## scope = country
+alias[modifier:allowed_geobukseon_fraction] = float
+
+## scope = country
+alias[modifier:allowed_man_of_war_fraction] = float
+
+## scope = country
+alias[modifier:allowed_galleon_fraction] = float
+
+## scope = country
+alias[modifier:allowed_galleass_fraction] = float
+
+## scope = country
+alias[modifier:allowed_caravel_fraction] = float
+
+## scope = country
+alias[modifier:allowed_voc_indiamen_fraction] = float
+
+## scope = country
+alias[modifier:allowed_streltsy_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_tercio] = float
+
+## scope = country
+alias[modifier:amount_of_musketeer] = float
+
+## scope = country
+alias[modifier:amount_of_samurai] = float
+
+## scope = country
+alias[modifier:amount_of_geobukseon] = float
+
+## scope = country
+alias[modifier:amount_of_man_of_war] = float
+
+## scope = country
+alias[modifier:amount_of_galleon] = float
+
+## scope = country
+alias[modifier:amount_of_galleass] = float
+
+## scope = country
+alias[modifier:amount_of_caravel] = float
+
+## scope = country
+alias[modifier:amount_of_voc_indiamen] = float
+
+## scope = country
+alias[modifier:amount_of_streltsy] = float
+
+## scope = province
+alias[modifier:local_amount_of_tercio] = float
+
+## scope = province
+alias[modifier:local_amount_of_musketeer] = float
+
+## scope = province
+alias[modifier:local_amount_of_samurai] = float
+
+## scope = province
+alias[modifier:local_amount_of_geobukseon] = float
+
+## scope = province
+alias[modifier:local_amount_of_man_of_war] = float
+
+## scope = province
+alias[modifier:local_amount_of_galleon] = float
+
+## scope = province
+alias[modifier:local_amount_of_galleass] = float
+
+## scope = province
+alias[modifier:local_amount_of_caravel] = float
+
+## scope = province
+alias[modifier:local_amount_of_voc_indiamen] = float
+
+## scope = province
+alias[modifier:local_amount_of_streltsy] = float
+
+## scope = country
+alias[modifier:can_recruit_janissaries] = bool
+
+## scope = country
+alias[modifier:allow_janissaries_from_own_faith] = bool
