@@ -1394,6 +1394,11 @@ alias[trigger:has_government_mechanic] = enum[government_mechanics]
 
 ## scope = country
 ###Returns true if the country uses the specified government mechanic.
+alias[trigger:has_government_mechanic] = <government_mechanic>
+
+## scope = country
+###Returns true if the country uses the specified government mechanic.
+# It seems to accept a government power too
 alias[trigger:has_government_mechanic] = <government_mechanic_power>
 
 ## scope = country
