@@ -5798,3 +5798,11 @@ alias[trigger:needs_regiment_type] = cossacks
 ###This is not documented and appears in government mechanics
 # appears in common/government_mechancis/00_cossacks.txt
 alias[trigger:has_neighbor] = yes
+
+## scope = country
+###Returns true if selected naval doctrine is activated, or any
+alias[trigger:has_naval_doctrine] = <naval_doctrine>
+
+## scope = country
+###Returns true if selected naval doctrine is activated, or any
+alias[trigger:has_naval_doctrine] = any
