@@ -1121,3 +1121,7 @@ alias[modifier:territories_governing_cost] = float
 ## scope = country
 ###Modifies the monthly heir claim increase by a percentage
 alias[modifier:monthly_heir_claim_increase_modifier] = float
+
+## scope = country
+###Triples manpower gain on wars declared with a casus belli that has religious_war = yes
+alias[modifier:extra_manpower_at_religious_war] = bool
