@@ -78,13 +78,18 @@ types = {
 		path = "game/common/government_mechanics"
 		# Only look for things inside <mechanic> = { powers = { HERE } }
 		skip_root_key = { any powers }
+		subtype[base_monthly_growth] = {
+			base_monthly_growth = float	
+		}
 		localisation = {
 			## required
 			name = "$"
 			## required
-			modifier = "monthly_$"
-			## required
 			gain_modifier = "$_gain_modifier"
+			subtype[base_monthly_growth] = {
+				## required
+				modifier = "monthly_$"
+			}
 		}
 	}
 	type[government_mechanic_interaction] = {
