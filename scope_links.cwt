@@ -1972,3 +1972,10 @@ alias[effect:random_area_province] = {
 	}
 	alias_name[effect] = alias_match_left[effect]
 }
+
+## scope = { country province }
+## push_scope = country
+###Refers to the country (if it exists) that is currently the Papal Controller.
+alias[effect:papal_controller] = {
+	alias_name[effect] = alias_match_left[effect]
+}
