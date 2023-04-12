@@ -1167,6 +1167,9 @@ alias[modifier:free_concentrate_development] = yes
 alias[modifier:expand_infrastructure_cost] = float
 
 ## scope = country
+alias[modifier:expand_infrastructure_cost_modifier] = float
+
+## scope = country
 alias[modifier:max_absolutism_effect] = float
 
 ## scope = country
