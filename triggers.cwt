@@ -5763,7 +5763,7 @@ alias[trigger:empire_of_china_has_active_decree] = bool
 alias[trigger:num_of_times_expanded_infrastructure] = int
 
 ## scope = country
-alias[trigger:has_liberty_desire_modifier] = enum[timed_modifier_liberty]
+alias[trigger:has_liberty_desire_modifier] = <timed_modifier>
 
 ## scope = country
 ###Returns true if specified country is too powerful (has eclipsed) the scoped country
@@ -5806,3 +5806,14 @@ alias[trigger:has_naval_doctrine] = <naval_doctrine>
 ## scope = country
 ###Returns true if selected naval doctrine is activated, or any
 alias[trigger:has_naval_doctrine] = any
+
+## scope = country
+alias[trigger:has_unembraced_institution] = bool
+
+## scope = country
+###Returns true if scoped country has ever humiliated the specified country
+alias[trigger:has_ever_humiliated] = enum[country_tags]
+
+## scope = country
+###Returns true if scoped country has ever humiliated the specified country
+alias[trigger:has_ever_humiliated] = scope[country]
