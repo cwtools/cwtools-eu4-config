@@ -152,10 +152,10 @@ subject_type = {
 	can_gain_favors = bool
 	## cardinality = 0..1
 	###Enemies can force this subject to join defensive wars against the overlord
-	co_belligerent = bool
+	can_be_co_belligerented = bool
 	## cardinality = 0..1
 	###Overlord can use favors to ask subject to join wars, only effective if joins_overlords_wars = no
-	called_to_wars = bool
+	can_be_called_to_wars = bool
 	## cardinality = 0..1
 	favors_cost_to_join_offensive_wars = int
 	## cardinality = 0..1
