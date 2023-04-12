@@ -371,6 +371,10 @@ enums = {
 		winning_battles_increases_legitimacy
 		winning_war_increases_legitimacy
 		winning_wars_gives_rt
+		cannot_form_alliances
+		manpower_from_capturing_forts
+		civil_war_on_every_new_ruler
+		selectable_trade_goods_for_colonies
 	}
 	enum[monsoons] = {
 		severe_monsoon
