@@ -500,4 +500,25 @@ enums = {
 		who
 		subject
 	}
+	# special units
+	enum[special_units] = {
+		banners
+		caravel
+		carolean
+		cawa
+		cossacks
+		galleass
+		galleon
+		geobukeson
+		janissaries
+		man_of_war
+		mustekeer
+		rajput
+		revolutionary_guard
+		samurai
+		streltsy
+		tercio
+		has_voc_indiamen	
+		hussars
+	}
 }

@@ -422,7 +422,7 @@ government_reform = {
 		can_change_primary_culture = bool
 				
 		## cardinality = 0..1
-		replacement_on_independence_war = indep_daimyo
+		replacement_on_independence_war = <government_reform.new>
 		
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
