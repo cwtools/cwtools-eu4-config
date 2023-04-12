@@ -5581,6 +5581,13 @@ alias[trigger:has_government_power] = {
 	value = int
 }
 
+## scope = ountry
+###Returns true if the government power is frozen
+alias[trigger:government_power_frozen] = {
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+}
+
 ## scope = country
 ###Returns true if country has at least X subjects of type Y with at least Z liberty desire
 alias[trigger:num_subjects_of_type_with_liberty_desire] = {
