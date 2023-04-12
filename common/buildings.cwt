@@ -70,7 +70,7 @@ building = {
 	government_specific = yes
 	
 	## cardinality = 0..1
-	one_per_country = yes
+	one_per_country = bool
 	
 	## cardinality = 0..1
 	allow_in_gold_provinces = no
