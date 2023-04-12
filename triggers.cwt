@@ -5783,3 +5783,13 @@ alias[trigger:subject_owns] = scope[province]
 ## scope = country
 ###Returns true if any subject of the scoped country owns the specified province
 alias[trigger:subject_owns] = <province_id>
+
+## scope = country
+###This is not documented and appears in government mechanics
+# appears in common/government_mechanics/00_cossacks.txt
+alias[trigger:needs_regiment_type] = cossacks
+
+## scope = country
+###This is not documented and appears in government mechanics
+# appears in common/government_mechancis/00_cossacks.txt
+alias[trigger:has_neighbor] = yes
