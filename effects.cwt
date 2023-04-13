@@ -3939,7 +3939,7 @@ alias[effect:change_country_color] = {
 
 ## scope = country
 ###Changes country color to country in scope or a RGB defined color, or yes to restore it
-alias[effect:change_country_color] = yes
+alias[effect:restore_country_color] = yes
 
 ## scope = country
 ###Forces the scoped country to release all possible nations, starting from smallest to biggest if possible, otherwise randomly
