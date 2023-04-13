@@ -5824,3 +5824,30 @@ alias[trigger:has_ever_humiliated] = enum[country_tags]
 ## scope = country
 ###Returns true if scoped country has ever humiliated the specified country
 alias[trigger:has_ever_humiliated] = scope[country]
+
+## scope = country
+alias[trigger:num_of_tercio] = int
+
+## scope = country
+alias[trigger:num_of_musketeer] = int
+
+## scope = country
+alias[trigger:num_of_samurai] = int
+
+## scope = country
+alias[trigger:num_of_geobukseon] = int
+
+## scope = country
+alias[trigger:num_of_man_of_war] = int
+
+## scope = country
+alias[trigger:num_of_galleon] = int
+
+## scope = country
+alias[trigger:num_of_galleass] = int
+
+## scope = country
+alias[trigger:num_of_caravel] = int
+
+## scope = country
+alias[trigger:num_of_voc_indiamen] = int
