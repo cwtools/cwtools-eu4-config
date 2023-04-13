@@ -1800,3 +1800,11 @@ alias[modifier:rajput_cost_modifier] = float
 
 ## scope = country
 alias[modifier:revolutionary_guard_cost_modifier] = float
+
+# TODO: add ship scope
+## scope = country
+alias[modifier:ship_trade_power_modifier] = float
+
+# TODO: add ship scope
+## scope = country
+alias[modifier:can_transport_units] = bool
