@@ -1797,3 +1797,6 @@ alias[modifier:is_rajput_modifier] = float
 
 ## scope = country
 alias[modifier:rajput_cost_modifier] = float
+
+## scope = country
+alias[modifier:revolutionary_guard_cost_modifier] = float
