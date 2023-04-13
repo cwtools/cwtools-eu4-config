@@ -5601,7 +5601,7 @@ alias[trigger:num_of_revolutionary_guard] = int
 
 ## scope = country
 alias[trigger:num_of_special_units] = {
-	special_unit_category = scalar # TODO: make enum of special units
+	special_unit_category = enum[special_units]
 	type = enum[unit_types]
 	value = int
 }

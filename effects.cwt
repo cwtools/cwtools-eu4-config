@@ -4240,7 +4240,7 @@ alias[effect:create_unit_forcelimit_percentage] = {
 	type = enum[unit_types]
 	force_limit_percentage = float
 	## cardinality = 0..1
-	special_unit_category = scalar # TODO: add enum with all special unit types	
+	special_unit_category = enum[special_units]
 }
 
 ## scope = province
