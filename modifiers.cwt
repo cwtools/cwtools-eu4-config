@@ -1427,7 +1427,7 @@ alias[modifier:no_claim_cost_increasement] = yes
 alias[modifier:has_tercio] = yes
 
 ## scope = country
-alias[modifier:has_musketeer] = yes
+alias[modifier:has_musketeers] = yes
 
 ## scope = country
 alias[modifier:has_samurai] = yes
@@ -1457,7 +1457,7 @@ alias[modifier:has_streltsy] = yes
 alias[modifier:local_has_tercio] = yes
 
 ## scope = province
-alias[modifier:local_has_musketeer] = yes
+alias[modifier:local_has_musketeers] = yes
 
 ## scope = province
 alias[modifier:local_has_samurai] = yes
