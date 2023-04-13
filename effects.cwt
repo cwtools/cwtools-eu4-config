@@ -2220,7 +2220,7 @@ alias[effect:define_heir] = {
 # Unlike its _scaled_ counterpart this one only accepts int
 ## scope = country
 ###Adds Imperial Influence for the current scope. No effect if not emperor.
-alias[effect:add_imperial_influence] = int
+alias[effect:add_imperial_influence] = float
 
 ## scope = country
 ###Adds Imperial Influence for the current scope, scaled by the current Imperial Authority value. No effect if not emperor.
