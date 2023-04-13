@@ -161,7 +161,6 @@ modifiers = {
 	horde_unity = country
 	meritocracy = country
 	monthly_militarized_society = country
-	yearly_tribal_allegiance = country
 	imperial_authority = country
 	imperial_authority_value = country
 	election_cycle = country
