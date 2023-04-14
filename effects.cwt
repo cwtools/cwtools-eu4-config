@@ -328,15 +328,6 @@ alias[effect:set_government_rank] = int[1..3]
 ###Changes the pool size of one of the power pools within a government mechanic.
 alias[effect:add_government_power] = {
 	###Which government mechanic to add power to.
-	government_mechanic = enum[government_mechanics]
-	which = enum[power_categories]
-	amount = float
-}
-
-## scope = country
-###Changes the pool size of one of the power pools within a government mechanic.
-alias[effect:add_government_power] = {
-	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
 	value = float
