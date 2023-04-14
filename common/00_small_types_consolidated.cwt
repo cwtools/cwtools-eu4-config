@@ -261,11 +261,11 @@ decree = {
 	duration = int
 	###If false the decree will not appear
 	potential = {
-		alias_name[trigger] = alias_match_left[trigger]		
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 	###If false you will not be able to take the decree
 	trigger = {
-		alias_name[trigger] = alias_match_left[trigger]		
+		alias_name[trigger] = alias_match_left[trigger]
 	}
 	###Modifiers active during the duration of the decree
 	modifier = {
@@ -341,6 +341,16 @@ policy = {
 	alias_name[modifier] = alias_match_left[modifier]
 
 	alias_name[ability] = alias_match_left[ability]
+
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 
 	## replace_scope = { this = country root = country }
 	ai_will_do = {
