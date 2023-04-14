@@ -1422,7 +1422,7 @@ alias[modifier:no_claim_cost_increasement] = yes
 alias[modifier:has_tercio] = yes
 
 ## scope = country
-alias[modifier:has_musketeers] = yes
+alias[modifier:has_musketeer] = yes
 
 ## scope = country
 alias[modifier:has_samurai] = yes
