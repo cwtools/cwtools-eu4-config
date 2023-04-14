@@ -502,12 +502,12 @@ alias[modifier:monthly_gold_inflation_modifier] = float
 
 ## scope = country
 ### Country gold depletion chance modifier
-alias[modifier:gold_depletion_chance_modifier] = float	
+alias[modifier:gold_depletion_chance_modifier] = float
 
 ## scope = province
 ### Province gold depletion chance modifier
-alias[modifier:local_gold_depletion_chance_modifier] = float	
-	
+alias[modifier:local_gold_depletion_chance_modifier] = float
+
 ## scope = country
 ### Gobal monthly devastation
 alias[modifier:global_monthly_devastation] = float
@@ -515,19 +515,19 @@ alias[modifier:global_monthly_devastation] = float
 ## scope = country
 ### Global prosperity growth
 alias[modifier:global_prosperity_growth] = float
-	
+
 ## scope = country
 ### Global prosperity growth
 alias[modifier:global_prosperity_growth] = float
 
 ## scope = province
 ### Local prosperity growth
-alias[modifier:local_prosperity_growth] = float		
-	
+alias[modifier:local_prosperity_growth] = float
+
 ## scope = country
 ### Monthly favor modifier
-alias[modifier:monthly_favor_modifier] = float	
-	
+alias[modifier:monthly_favor_modifier] = float
+
 ## scope = country
 ### Tolerance of heretics capacity
 alias[modifier:tolerance_of_heretics_capacity] = float
@@ -535,26 +535,26 @@ alias[modifier:tolerance_of_heretics_capacity] = float
 ## scope = country
 ### Tolerance of heathens capacity
 alias[modifier:tolerance_of_heathens_capacity] = float
-	
+
 ## scope = country
 ### Move capital cost modifier
-alias[modifier:move_capital_cost_modifier] = float		
-	
+alias[modifier:move_capital_cost_modifier] = float
+
 ## scope = country
-### Movement speed in fleet modifier 
+### Movement speed in fleet modifier
 alias[modifier:movement_speed_in_fleet_modifier] = int
 
 ## scope = country
 ### yearly_authority
-alias[modifier:yearly_authority] = float			
-	
+alias[modifier:yearly_authority] = float
+
 ## scope = country
 ### Overlord naval forcelimit
 alias[modifier:overlord_naval_forcelimit] = float
 
 ## scope = country
 ### All estate loyalty equilibrium
-alias[modifier:all_estate_loyalty_equilibrium] = float	
+alias[modifier:all_estate_loyalty_equilibrium] = float
 
 ## scope = country
 ### All estate influence modifier
@@ -562,12 +562,12 @@ alias[modifier:all_estate_influence_modifier] = float
 
 ## scope = province
 ### Local amount of cawa
-alias[modifier:local_amount_of_cawa] = float		
+alias[modifier:local_amount_of_cawa] = float
 
 ## scope = country
 ### Is a cawa modifier
-alias[modifier:is_cawa_modifier] = bool	
- 
+alias[modifier:is_cawa_modifier] = bool
+
 ## scope = country
 ### Country amount of cawa
 alias[modifier:amount_of_cawa] = float
@@ -923,10 +923,6 @@ alias[modifier:naval_attrition_in_fleet_modifier] = float
 ## scope = country
 ###Modifies amount of naval tradition gained from battles of the flagship's fleet
 alias[modifier:naval_tradition_in_fleet_modifier] = float
-
-## scope = country
-###Colonies get +1 in each development type
-alias[modifier:can_colony_boost_development] = yes
 
 ## scope = country
 ###Can use transfer vassal Peace Option
@@ -1588,10 +1584,10 @@ alias[modifier:can_recruit_carolean] = float
 alias[modifier:carolean_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_cawa] = bool	
+alias[modifier:has_cawa] = bool
 
 ## scope = province
-alias[modifier:local_has_cawa] = bool	
+alias[modifier:local_has_cawa] = bool
 
 ## scope = country
 alias[modifier:allowed_cawa_fraction] = float
@@ -1678,19 +1674,19 @@ alias[modifier:is_voc_indiamen_modifier] = float
 alias[modifier:voc_indiamen_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_hussars] = bool	
+alias[modifier:has_hussars] = bool
 
 ## scope = province
-alias[modifier:local_has_hussars] = bool	
+alias[modifier:local_has_hussars] = bool
 
 ## scope = country
 alias[modifier:allowed_hussars_fraction] = float
 
 ## scope = country
-alias[modifier:has_marines] = bool	
+alias[modifier:has_marines] = bool
 
 ## scope = province
-alias[modifier:local_has_marines] = bool	
+alias[modifier:local_has_marines] = bool
 
 ## scope = country
 alias[modifier:amount_of_marines] = float
@@ -1705,10 +1701,10 @@ alias[modifier:can_recruit_marines] = float
 alias[modifier:marines_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_revolutionary_guard] = bool	
+alias[modifier:has_revolutionary_guard] = bool
 
 ## scope = province
-alias[modifier:local_has_revolutionary_guard] = bool	
+alias[modifier:local_has_revolutionary_guard] = bool
 
 ## scope = country
 alias[modifier:allowed_revolutionary_guard_fraction] = float
@@ -1735,10 +1731,10 @@ alias[modifier:can_recruit_streltsy] = float
 alias[modifier:streltsy_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_cossacks] = bool	
+alias[modifier:has_cossacks] = bool
 
 ## scope = province
-alias[modifier:local_has_cossacks] = bool	
+alias[modifier:local_has_cossacks] = bool
 
 ## scope = country
 alias[modifier:allowed_cossacks_fraction] = float
@@ -1756,10 +1752,10 @@ alias[modifier:is_cossacks_modifier] = float
 alias[modifier:cossacks_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_janissaries] = bool	
+alias[modifier:has_janissaries] = bool
 
 ## scope = province
-alias[modifier:local_has_janissaries] = bool	
+alias[modifier:local_has_janissaries] = bool
 
 ## scope = country
 alias[modifier:allowed_janissaries_fraction] = float
@@ -1777,10 +1773,10 @@ alias[modifier:is_janissaries_modifier] = float
 alias[modifier:janissaries_cost_modifier] = float
 
 ## scope = country
-alias[modifier:has_rajput] = bool	
+alias[modifier:has_rajput] = bool
 
 ## scope = province
-alias[modifier:local_has_rajput] = bool	
+alias[modifier:local_has_rajput] = bool
 
 ## scope = country
 alias[modifier:allowed_rajput_fraction] = float
