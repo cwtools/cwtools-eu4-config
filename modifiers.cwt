@@ -1803,3 +1803,7 @@ alias[modifier:ship_trade_power_modifier] = float
 # TODO: add ship scope
 ## scope = country
 alias[modifier:can_transport_units] = bool
+
+## scope = country
+###Maximum terms a candidate can be re-elected for
+alias[modifier:max_terms] = int
