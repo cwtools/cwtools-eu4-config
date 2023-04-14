@@ -301,10 +301,6 @@ alias[effect:add_meritocracy] = float
 alias[effect:set_meritocracy] = float
 
 ## scope = country
-###Adds militarisation to the current scope. No effect if not a government using militarised_society.
-alias[effect:add_militarised_society] = float
-
-## scope = country
 ###Adds tribal allegiance to the current scope. No effect if not a government using tribal_federation_mechanic.
 alias[effect:add_tribal_allegiance] = int
 
