@@ -79,10 +79,10 @@ types = {
 		# Only look for things inside <mechanic> = { powers = { HERE } }
 		skip_root_key = { any powers }
 		subtype[base_monthly_growth] = {
-			base_monthly_growth = float	
+			base_monthly_growth = float
 		}
 		subtype[development_scaled_monthly_growth] = {
-			development_scaled_monthly_growth = float	
+			development_scaled_monthly_growth = float
 		}
 		localisation = {
 			## required
@@ -183,7 +183,7 @@ government_mechanic = {
 			}
 			## cardinality = 0..1
 			show_before_interactions = yes
-		}	
+		}
 	}
 
 	## cardinality = 0..1
@@ -315,7 +315,7 @@ government_reform = {
 		mercs_do_not_cost_army_professionalism = bool
 	}
 
-	
+
 	subtype[legacy] = {
 		legacy_government = yes
 	}
@@ -327,7 +327,7 @@ government_reform = {
 	subtype[new] = {
 		legacy_equivalent = <government_reform.legacy>
 		legacy_equivalent = enum[hardcoded_legacygovernments]
-		
+
 		## cardinality = 0..1
 		assimilation_cultures = {
 			## cardinality = 1..inf
@@ -341,7 +341,7 @@ government_reform = {
 	subtype[!default] = {
 		## severity = info
 		icon = scalar #todo: refers to a file name in a certain folder
-		
+
 		## cardinality = 0..1
 		queen = bool
 		## cardinality = 0..1
@@ -364,7 +364,7 @@ government_reform = {
 		nation_designer_cost = int
 		## cardinality = 0..1
 		monarchy = bool
-		
+
 		## cardinality = 0..1
 		has_devotion = bool
 		## cardinality = 0..1
@@ -375,7 +375,7 @@ government_reform = {
 		different_religion_group_acceptance = int
 		## cardinality = 0..1
 		uses_revolutionary_zeal = bool
-	
+
 		## cardinality = 0..1
 		election_on_death = bool
 		## cardinality = 0..1
@@ -404,23 +404,23 @@ government_reform = {
 		rulers_can_be_generals = bool
 		## cardinality = 0..1
 		heirs_can_be_generals = bool
-		
+
 		## cardinality = 0..1
 		allow_convert = bool
-	
+
 		## cardinality = 0..1
 		maintain_dynasty = bool
-	
+
 		## cardinality = 0..1
 		allow_vassal_war = bool
 		## cardinality = 0..1
 		allow_vassal_alliance = bool
-	
+
 		## cardinality = 0..1
 		revolutionary = bool
 		## cardinality = 0..1
 		revolutionary_client_state = bool
-		
+
 		## cardinality = 0..1
 		free_concentrate_development = bool
 		## cardinality = 0..1
@@ -435,10 +435,10 @@ government_reform = {
 		allow_cawa = bool
 		## cardinality = 0..1
 		can_change_primary_culture = bool
-				
+
 		## cardinality = 0..1
 		replacement_on_independence_war = <government_reform.new>
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		nation_designer_trigger = {
@@ -464,25 +464,25 @@ government_reform = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
-		
+
 		## cardinality = 0..1
 		government_abilities = {
 			enum[government_mechanics]
@@ -614,6 +614,11 @@ government_reform = {
 				liberalists = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
+				## cardinality = 0..1
+				## replace_scope = { root = country this = country }
+				theocrats_statists = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
 			}
 
 			## cardinality = 0..1
@@ -624,7 +629,7 @@ government_reform = {
 			duration = int
 			## cardinality = 0..1
 			has_term_election = bool
-			
+
 			## cardinality = 0..1
 			factions = {
 				## cardinality = 0..inf
@@ -633,15 +638,15 @@ government_reform = {
 
 			## cardinality = 0..1
 			is_elective = bool
-			
+
 			## cardinality = 0..1
 			allow_banners = bool
 			## cardinality = 0..1
 			election_on_death = bool
-	
+
 			## cardinality = 0..1
 			raze_province = bool
-			
+
 			## cardinality = 0..1
 			custom_attributes = {
 				## cardinality = 0..1
@@ -684,10 +689,10 @@ government_reform = {
 				mercs_do_not_cost_army_professionalism = bool
 			}
 		}
-		
+
 		## cardinality = 0..1
 		can_form_trade_league = bool
-		
+
 		## cardinality = 0..1
 		has_term_election = bool
 		## cardinality = 0..1
@@ -698,16 +703,16 @@ government_reform = {
 		royal_marriage = bool
 		## cardinality = 0..1
 		boost_income = bool
-	
+
 		## cardinality = 0..1
 		factions = {
 			## cardinality = 1..inf
 			<faction>
 		}
-	
+
 		## cardinality = 0..1
 		republic = bool
-	
+
 		## cardinality = 0..1
 		custom_attributes = {
 			## cardinality = 0..1
@@ -761,7 +766,7 @@ government_reform = {
 			## cardinality = 0..inf
 			<trade_good>
 		}
-		
+
 		## cardinality = 0..1
 		post_removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
@@ -952,7 +957,7 @@ government = {
 			## cardinality = 3..3
 			int[0..255]
 		}
-	
+
 		reform_levels = {
 			## cardinality = 1..12
 			localisation = {
@@ -1017,7 +1022,7 @@ government_name = {
 			## cardinality = 1..10
 			int[1..10] = localisation
 		}
-	
+
 		ruler_male = {
 			## cardinality = 1..10
 			int[1..10] = localisation
@@ -1050,7 +1055,7 @@ government_name = {
 
 		government_reform = <government_reform.basic>
 	}
-	
+
 	subtype[!default] = {
 		rank = {
 			## cardinality = 0..10
