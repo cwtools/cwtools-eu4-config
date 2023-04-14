@@ -1246,7 +1246,7 @@ alias[effect:add_trust] = {
 }
 
 ## scope = country
-###Adds favors with the defined scope for the current scope. 
+###Adds favors with the defined scope for the current scope.
 alias[effect:add_favors] = {
 	who = scope[country]
 	who = enum[country_tags]
@@ -2214,7 +2214,7 @@ alias[effect:define_heir] = {
 	## cardinality = 0..1
 	change_dip = int[-6..6]
 	## cardinality = 0..1
-	change_mil = int[-6..6] 
+	change_mil = int[-6..6]
 }
 
 # Unlike its _scaled_ counterpart this one only accepts int
@@ -2377,6 +2377,7 @@ alias[effect:add_province_modifier] = {
 ###Adds an event modifier to the current province scope as a province modifier. Modifiers added with this effect persist through ownership changes.
 alias[effect:add_permanent_province_modifier] = {
 	name = <event_modifier>
+	name = <static_modifier>
 	## cardinality = 0..1
 	duration = int
 	## cardinality = 0..1
@@ -2699,14 +2700,14 @@ alias[effect:spawn_rebels] = {
 	estate = <estate>
 	## cardinality = 0..1
     should_take_capital = yes
-	
+
 	## cardinality = 0..1
 	leader_dynasty = localisation_synced
 	## cardinality = 0..1
 	as_if_faction = yes
 	## cardinality = 0..1
 	use_monarch_as_leader = yes
-	
+
 }
 
 ## scope = province
@@ -3452,7 +3453,7 @@ alias[effect:form_federation_nation] = {
 }
 
 ## scope = country
-###Changes the institutions of the current scope.  
+###Changes the institutions of the current scope.
 alias[effect:embrace_institutions_of] = native_sponsor_scope
 
 ## scope = country
@@ -3462,22 +3463,22 @@ alias[effect:change_subject_type] = {
 }
 
 ## scope = province
-###Change tribal land  
+###Change tribal land
 alias[effect:change_tribal_land] = ROOT
 
 ## scope = province
 alias[effect:change_tribal_land] = ---
 
 ## scope = country
-###Changes estate regent to ruler.  
+###Changes estate regent to ruler.
 alias[effect:change_estate_regent_to_ruler] = bool
 
 ## scope = country
-###set estate led regency privilege.  
+###set estate led regency privilege.
 alias[effect:set_estate_led_regency_privilege] = random
 
 ## scope = country
-###extend regency.  
+###extend regency.
 alias[effect:extend_regency] = int
 
 ## scope = country
@@ -3576,7 +3577,7 @@ alias[effect:support_independence_of] = enum[country_tags]
 alias[effect:support_independence_of] = scope[country]
 
 ## scope = country
-###Adds or removes X amount of land from the Estate's base land share. 
+###Adds or removes X amount of land from the Estate's base land share.
 alias[effect:change_estate_land_share] = {
 	estate = <estate>
 	estate = all
