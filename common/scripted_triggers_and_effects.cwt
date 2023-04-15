@@ -1,12 +1,11 @@
-
 types = {
 	# Add scripted triggers that we support explicitly below
-	## type_key_filter <> { has_completed_idea_group_of_category }
+	## type_key_filter <> { has_completed_idea_group_of_category has_completed_idea_group_of_category num_of_completed_idea_groups_by_category has_any_active_incomplete_idea_group_of_category }
 	type[scripted_trigger] = {
 		path = "game/common/scripted_triggers"
 	}
 	# Add scripted effets that we support explicitly below
-	## type_key_filter <> { add_latest_building unlock_merc_company kill_advisor_by_category_effect unlock_estate for_variable_amount show_points_needed_for_livionian_government_of_category count_won_battles_and_reward_at_end faction_in_power_effect }
+	## type_key_filter <> { add_latest_building unlock_merc_company kill_advisor_by_category_effect unlock_estate for_variable_amount show_points_needed_for_livionian_government_of_category count_won_battles_and_reward_at_end faction_in_power_effect add_inflation_scaled_to_trade unlock_estate allow_baseline_invite_scholar transfer_treasury upgrade_building add_years_of_trade_income for create_units_of_type create_units_of_type_in_province}
 	type[scripted_effect] = {
 		path = "game/common/scripted_effects"
 	}
@@ -22,7 +21,6 @@ scripted_effect = {
 
 ## scope = province
 ### Force scripted effect to work
-Event Scope Values.
 alias[effect:add_latest_building] = {
 	## cardinality = 0..1
 	government = yes
@@ -49,23 +47,44 @@ alias[effect:add_latest_building] = {
 
 ## scope = country
 ### Force scripted effect to work
-Event Scope Values.
 alias[effect:unlock_merc_company] = {
-	## cardinality = 0..1
 	merc_company = <mercenary_company>
 	## cardinality = 0..1
-	free_merc = yes
+	free_merc = bool
+	## cardinality = 0..1
+	global = bool
 }
 
 ## replace_scope = { this = country root = country }
 ### Forced scripted trigger to work
 alias[trigger:has_completed_idea_group_of_category] = {
 	## cardinality = 0..1
-	adm_ideas = yes
+	adm_ideas = bool
 	## cardinality = 0..1
-	mil_ideas = yes
+	mil_ideas = bool
 	## cardinality = 0..1
-	dip_ideas = yes
+	dip_ideas = bool
+}
+
+## scope = country
+alias[trigger:num_of_completed_idea_groups_by_category] = {
+	## cardinality = 0..1
+	adm_ideas = bool
+	## cardinality = 0..1
+	mil_ideas = bool
+	## cardinality = 0..1
+	dip_ideas = bool
+	amount = int[1..inf]
+}
+
+## scope = country
+alias[trigger:has_any_active_incomplete_idea_group_of_category] = {
+	## cardinality = 0..1
+	adm_ideas = bool
+	## cardinality = 0..1
+	mil_ideas = bool
+	## cardinality = 0..1
+	dip_ideas = bool
 }
 
 ## scope = country
@@ -125,4 +144,101 @@ alias[effect:faction_in_power_effect] = {
 	faction = <faction>
 	## cardinality 0..1
 	effect = scalar
+}
+
+## scope = country
+alias[effect:add_inflation_scaled_to_trade] = {
+	inflation = int
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = country
+alias[effect:unlock_estate] = {
+	estate = <estate>
+	## cardinality = 0..1
+	show_conditions = bool
+}
+
+## scope = country
+alias[effect:allow_baseline_invite_scholar] = {
+	religious_school = scalar
+	## cardinality = 0..1
+	religious_school_modifier = <event_modifier>
+	## cardinality = 0..1
+	religious_school_modifier = <static_modifier>
+}
+
+## scope = country
+alias[effect:transfer_treasury] = {
+	giver = enum[country_tags]
+	giver = scope[country]
+
+	taker = enum[country_tags]
+	taker = scope[country]
+
+	variable = int
+
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = province
+### Force scripted effect to work
+alias[effect:upgrade_building] = {
+	## cardinality = 0..1
+	government = yes
+	## cardinality = 0..1
+	production = yes
+	## cardinality = 0..1
+	manpower = yes
+	## cardinality = 0..1
+	sailors = yes
+	## cardinality = 0..1
+	army_forcelimit = yes
+	## cardinality = 0..1
+	navy_forcelimit = yes
+	## cardinality = 0..1
+	coastal = yes
+	## cardinality = 0..1
+	fort = yes
+	## cardinality = 0..1
+	tax = yes
+	## cardinality = 0..1
+	trade = yes
+}
+
+## scope = country
+alias[effect:add_years_of_trade_income] = {
+	years = int
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = any
+alias[effect:for] = {
+	amount = int
+	effect = scalar
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = country
+alias[effect:create_units_of_type] = {
+	amount = int
+	province = <province_id>
+	unit_type = <unit_type>
+	## cardinality = 0..1
+	custom_tooltip = localisation
+}
+
+## scope = country
+alias[effect:create_units_of_type_in_province] = {
+	amount = int
+	province = <province_id>
+	unit_type = <unit_type>
+	who = enum[country_tags]
+	who = scope[country]
+	## cardinality = 0..1
+	custom_tooltip = localisation
 }
