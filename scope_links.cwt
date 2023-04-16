@@ -259,6 +259,7 @@ alias[effect:random_list] = {
 	## cardinality = 2..inf
 	int = {
 		## cardinality = 0..1
+		###Must return true for this to be considered, if false this chance block is not considered
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
