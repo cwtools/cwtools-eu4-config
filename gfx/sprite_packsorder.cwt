@@ -64,7 +64,8 @@ enums = {
 		dlc024_vij_sprite_pack 
 		dlc028_boh_sprite_pack 
 		dlc028_bra_sprite_pack_bra
-		dlc028_eng_sprite_pack 
+		dlc028_eng_sprite_pack
+		dlc028_eng_sprite_pack_anglois
 		dlc028_fra_sprite_pack 
 		dlc028_hes_sprite_pack 
 		dlc028_ned_sprite_pack 
@@ -102,7 +103,8 @@ enums = {
 		dlc041_lxa_sprite_pack 
 		dlc041_lxa_unique_sprite_pack 
 		dlc041_tib_sprite_pack 
-		dlc042_eng_sprite_pack 
+		dlc042_eng_sprite_pack
+		dlc042_eng_sprite_pack_anglois
 		dlc042_ned_sprite_pack 
 		dlc042_por_sprite_pack 
 		dlc042_rus_sprite_pack 
@@ -119,7 +121,8 @@ enums = {
 		dlc048_nog_sprite_pack 
 		dlc048_shy_sprite_pack 
 		dlc048_tim_sprite_pack 
-		dlc049_ENG_sprite_pack 
+		dlc049_ENG_sprite_pack
+		dlc049_ENG_sprite_pack_anglois
 		dlc049_FRA_sprite_pack 
 		dlc049_SPA_sprite_pack 
 		dlc053_hab_sprite_pack 
@@ -248,6 +251,7 @@ enums = {
 		dlc103_sic_sprite_pack 
 		dlc103_swi_sprite_pack 
 		dlc104_ger_sprite_pack 
+		dlc104_ger_sprite_pack_lotharingia
 		dlc104_ita_sprite_pack 
 		dlc107_AYU_sprite_pack 
 		dlc107_BEI_sprite_pack 
@@ -274,6 +278,19 @@ enums = {
 		dlc116_SHL_sprite_pack
 		dlc116_DIT_sprite_pack
 		dlc116_DIT_sprite_pack_western
+		dlc120_AIN_sprite_pack
+		dlc120_CDL_sprite_pack
+		dlc120_CHP_sprite_pack
+		dlc120_LIE_sprite_pack
+		dlc120_LOR_sprite_pack
+		dlc120_SUL_sprite_pack
+		dlc120_TOU_sprite_pack
+		dlc120_WUU_sprite_pack
+		dlc120_SUL_sprite_pack_malay_group
+		dlc120_WUU_sprite_pack_chinese
+		dlc120_CDL_sprite_pack_tibetan_group
+		dlc120_LIE_sprite_pack_dutch
+		dlc120_CHP_sprite_pack_french
 	}
 }	
 
@@ -284,3 +301,4 @@ packorder = {
 	## cardinality = 0..inf
 	enum[spritepacks] = int
 }
+
