@@ -1807,3 +1807,9 @@ alias[modifier:can_transport_units] = bool
 ## scope = country
 ###Maximum terms a candidate can be re-elected for
 alias[modifier:max_terms] = int
+
+## scope = country
+alias[modifier:overextension_impact_modifier] = float
+
+## scope = country
+alias[modifier:same_religion_advisor_cost] = float
