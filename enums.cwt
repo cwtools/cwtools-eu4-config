@@ -333,7 +333,6 @@ enums = {
 		may_not_reduce_tax_on_foreign_exploitation
 		may_not_reduce_tax_on_own_exploitation
 		mercs_do_not_cost_army_professionalism
-		militarised_society
 		monarch_power_on_institutions
 		monastic_order
 		no_influence_from_fetishist_privileges

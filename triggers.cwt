@@ -2330,16 +2330,16 @@ alias[trigger:is_in_war] = {
 
 	## cardinality = 0..inf
 	defenders = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	attackers = scope[country]
-	
+
 	## cardinality = 0..inf
 	attackers = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	participants = scope[country]
-	
+
 	## cardinality = 0..inf
 	participants = enum[country_tags]
 }
@@ -2818,10 +2818,6 @@ alias[trigger:mil] = scope[country]
 ## scope = country
 ###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = enum[country_tags]
-
-## scope = country
-###Returns true if the country has a militarization of country of at least X.
-alias[trigger:militarised_society] = int
 
 ## scope = country
 ###Returns true if the country has at least X military power, or at least as much military power as the specified country.
@@ -4344,7 +4340,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..1
 	custom_tooltip = localisation
-	
+
 	## cardinality = 0..inf
 	export_to_variable = {
 		enum[which_varname] = value_set[variable]
@@ -5512,7 +5508,7 @@ alias[trigger:num_of_hussars] = int
 alias[trigger:owes_favors] = {
 	who = scope[country]
 	who = enum[country_tags]
-	value = int	
+	value = int
 }
 
 ## scope = country
