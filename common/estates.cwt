@@ -246,6 +246,32 @@ estate_privilege = {
 		###Specifies whether the tooltip should list it as positive or not
 		is_bad = bool
 	}
+	## cardinality = 0..inf
+	###Modifier that is applied if specified conditions are true, with its effect scaling on the influence of the estate
+	influence_scaled_conditional_modifier = {
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		###Specifies whether the tooltip should list it as positive or not
+		is_bad = bool
+	}
+	## cardinality = 0..inf
+	###Modifier that is applied if specified conditions are true, with its effect scaling on the loyalty of the estate
+	loyalty_scaled_conditional_modifier = {
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+		modifier = {
+			alias_name[modifier] = alias_match_left[modifier]
+		}
+		## cardinality = 0..1
+		###Specifies whether the tooltip should list it as positive or not
+		is_bad = bool
+	}
 	## cardinality = 0..1
 	###Multiplies the modifier by the % of land owned by the estate.
 	modifier_by_land_ownership = {
@@ -267,6 +293,8 @@ estate_privilege = {
 		vassal_liberty_affected_by_loyalty
 		## cardinality = 0..1
 		can_give_agendas_without_interaction
+		## cardinality = 0..1
+		no_estate_crownland_loss_from_developing
 	}
 
 	## cardinality = 0..1

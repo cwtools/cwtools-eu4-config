@@ -39,6 +39,7 @@ common/governments
 common/government_names
 common/government_ranks
 common/government_reforms
+common/government_mechanics
 common/great_projects
 common/hegemons
 common/holy_orders

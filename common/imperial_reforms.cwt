@@ -111,6 +111,11 @@ imperial_reform = {
 		empire = celestial_empire
 		## cardinality = 0..1
 		required_reform = <imperial_reform.china>
+		## cardinality = 0..1
+		###Whether the reform can be enacted
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 	}
 
 	## cardinality = 0..1

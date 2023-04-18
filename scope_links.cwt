@@ -259,6 +259,7 @@ alias[effect:random_list] = {
 	## cardinality = 2..inf
 	int = {
 		## cardinality = 0..1
+		###Must return true for this to be considered, if false this chance block is not considered
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
@@ -799,7 +800,7 @@ alias[effect:every_empty_neighbor_province] = {
 }
 
 
-## scope = province
+## scope = { province country }
 ## push_scope = province
 ###Scopes to all provinces sharing a border (or sea zone?) with the current scope. Does not include empty provinces.
 alias[effect:every_neighbor_province] = {
@@ -1422,7 +1423,7 @@ alias[trigger:any_friendly_coast_border_province] = {
 }
 
 
-## scope = province
+## scope = { province country }
 ## push_scope = province
 ###Scopes to one province that shares a border (or sea zone?) with the current scope.
 alias[trigger:any_neighbor_province] = {
@@ -1959,5 +1960,23 @@ alias[effect:random_war_enemy_country] = {
 	limit = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = province
+## push_scope = province
+###Scope to a random province in the area
+alias[effect:random_area_province] = {
+	## cardinality = 0..1
+	limit = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	alias_name[effect] = alias_match_left[effect]
+}
+
+## scope = { country province }
+## push_scope = country
+###Refers to the country (if it exists) that is currently the Papal Controller.
+alias[effect:papal_controller] = {
 	alias_name[effect] = alias_match_left[effect]
 }

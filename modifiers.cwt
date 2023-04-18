@@ -161,7 +161,6 @@ modifiers = {
 	horde_unity = country
 	meritocracy = country
 	monthly_militarized_society = country
-	yearly_tribal_allegiance = country
 	imperial_authority = country
 	imperial_authority_value = country
 	election_cycle = country
@@ -503,12 +502,12 @@ alias[modifier:monthly_gold_inflation_modifier] = float
 
 ## scope = country
 ### Country gold depletion chance modifier
-alias[modifier:gold_depletion_chance_modifier] = float	
+alias[modifier:gold_depletion_chance_modifier] = float
 
 ## scope = province
 ### Province gold depletion chance modifier
-alias[modifier:local_gold_depletion_chance_modifier] = float	
-	
+alias[modifier:local_gold_depletion_chance_modifier] = float
+
 ## scope = country
 ### Gobal monthly devastation
 alias[modifier:global_monthly_devastation] = float
@@ -516,19 +515,19 @@ alias[modifier:global_monthly_devastation] = float
 ## scope = country
 ### Global prosperity growth
 alias[modifier:global_prosperity_growth] = float
-	
+
 ## scope = country
 ### Global prosperity growth
 alias[modifier:global_prosperity_growth] = float
 
 ## scope = province
 ### Local prosperity growth
-alias[modifier:local_prosperity_growth] = float		
-	
+alias[modifier:local_prosperity_growth] = float
+
 ## scope = country
 ### Monthly favor modifier
-alias[modifier:monthly_favor_modifier] = float	
-	
+alias[modifier:monthly_favor_modifier] = float
+
 ## scope = country
 ### Tolerance of heretics capacity
 alias[modifier:tolerance_of_heretics_capacity] = float
@@ -536,26 +535,26 @@ alias[modifier:tolerance_of_heretics_capacity] = float
 ## scope = country
 ### Tolerance of heathens capacity
 alias[modifier:tolerance_of_heathens_capacity] = float
-	
+
 ## scope = country
 ### Move capital cost modifier
-alias[modifier:move_capital_cost_modifier] = float		
-	
+alias[modifier:move_capital_cost_modifier] = float
+
 ## scope = country
-### Movement speed in fleet modifier 
+### Movement speed in fleet modifier
 alias[modifier:movement_speed_in_fleet_modifier] = int
 
 ## scope = country
 ### yearly_authority
-alias[modifier:yearly_authority] = float			
-	
+alias[modifier:yearly_authority] = float
+
 ## scope = country
 ### Overlord naval forcelimit
 alias[modifier:overlord_naval_forcelimit] = float
 
 ## scope = country
 ### All estate loyalty equilibrium
-alias[modifier:all_estate_loyalty_equilibrium] = float	
+alias[modifier:all_estate_loyalty_equilibrium] = float
 
 ## scope = country
 ### All estate influence modifier
@@ -563,12 +562,12 @@ alias[modifier:all_estate_influence_modifier] = float
 
 ## scope = province
 ### Local amount of cawa
-alias[modifier:local_amount_of_cawa] = float		
+alias[modifier:local_amount_of_cawa] = float
 
 ## scope = country
 ### Is a cawa modifier
-alias[modifier:is_cawa_modifier] = bool	
- 
+alias[modifier:is_cawa_modifier] = bool
+
 ## scope = country
 ### Country amount of cawa
 alias[modifier:amount_of_cawa] = float
@@ -715,7 +714,7 @@ alias[modifier:amount_of_hussars] = float
 
 ## scope = country
 ###Grants attack bonus in provinces with the same terrain as capital province
-alias[modifier:attack_bonus_in_capital_terrain] = yes
+alias[modifier:attack_bonus_in_capital_terrain] = int
 
 ## scope = country
 ###Can recruit Hussars
@@ -926,10 +925,6 @@ alias[modifier:naval_attrition_in_fleet_modifier] = float
 alias[modifier:naval_tradition_in_fleet_modifier] = float
 
 ## scope = country
-###Colonies get +1 in each development type
-alias[modifier:can_colony_boost_development] = yes
-
-## scope = country
 ###Can use transfer vassal Peace Option
 alias[modifier:can_transfer_vassal_wargoal] = yes
 
@@ -1125,3 +1120,690 @@ alias[modifier:monthly_heir_claim_increase_modifier] = float
 ## scope = country
 ###Triples manpower gain on wars declared with a casus belli that has religious_war = yes
 alias[modifier:extra_manpower_at_religious_war] = bool
+
+## scope = country
+###Colonies get +X in each development type
+alias[modifier:colony_development_boost] = int
+
+## scope = country
+###Triples manpower gain on wars declared with a casus belli that has religious_war = yes
+alias[modifier:extra_manpower_at_religious_war] = bool
+
+## scope = country
+alias[modifier:reduced_trade_penalty_on_non_main_tradenode] = float
+
+## scope = country
+###Modifies the monthly gain of power for this mechanic power
+alias[modifier:monthly_<government_mechanic_power>] = float
+
+## scope = country
+###Modifies the gain from the add_government_power effect
+alias[modifier:<government_mechanic_power>_gain_modifier] = float
+
+## scope = country
+alias[modifier:special_unit_cost_modifier] = float
+
+## scope = country
+alias[modifier:monarch_power_tribute] = int
+
+## scope = country
+alias[modifier:tributary_conversion_cost_modifier] = float
+
+## scope = country
+alias[modifier:global_allowed_num_of_manufactories] = int
+
+## scope = country
+alias[modifier:can_claim_states] = bool
+
+## scope = country
+alias[modifier:free_concentrate_development] = yes
+
+## scope = country
+alias[modifier:expand_infrastructure_cost] = float
+
+## scope = country
+alias[modifier:expand_infrastructure_cost_modifier] = float
+
+## scope = country
+alias[modifier:max_absolutism_effect] = float
+
+## scope = country
+alias[modifier:chance_to_inherit] = float
+
+## scope = country
+alias[modifier:culture_conversion_time] = float
+
+## scope = province
+alias[modifier:local_culture_conversion_time] = float
+
+## scope = country
+alias[modifier:same_religion_advisor_cost] = float
+
+## scope = country
+alias[modifier:artillery_barrage_cost] = float
+
+## scope = country
+alias[modifier:great_project_upgrade_time] = float
+
+## scope = province
+alias[modifier:local_great_project_upgrade_time] = float
+
+## scope = country
+alias[modifier:warscore_from_battles_modifier] = float
+
+## scope = country
+alias[modifier:yearly_innovativeness] = float
+
+## scope = { country unit }
+alias[modifier:enable_forced_march] = yes
+
+## scope = country
+alias[modifier:reverse_relation_with_same_religion] = int
+
+## scope = country
+alias[modifier:janissary_cost_modifier] = float
+
+## scope = country
+alias[modifier:yearly_government_power] = float
+
+# TODO: add flagship scope
+## scope = country
+alias[modifier:number_of_cannons_modifier] = float
+
+# TODO: add flagship scope
+## scope = country
+alias[modifier:hull_size_modifier] = float
+
+## scope = country
+alias[modifier:max_flagships] = int
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:heavy_ship_cannons] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:heavy_ship_hull_size] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:light_ship_cannons] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:light_ship_hull_size] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:galley_cannons] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:galley_hullsize] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:transport_cannons] = float
+
+# TODO: add fleet/ship/flagship scope
+## scope = country
+alias[modifier:transport_hullsize] = float
+
+## scope = country
+alias[modifier:loyalty_change_on_revoked] = float
+
+## scope = country
+alias[modifier:estate_interaction_cooldown_modifier] = float
+
+## scope = country
+alias[modifier:all_estate_possible_privileges] = int
+
+## scope = { country unit }
+alias[modifier:allow_mercenary_drill] = yes
+
+## scope = { country unit }
+alias[modifier:merc_leader_army_tradition] = float
+
+## scope = country
+alias[modifier:merc_independent_from_trade_range] = yes
+
+## scope = { country unit }
+alias[modifier:allow_mercenaries_to_split] = yes
+
+## scope = country
+alias[modifier:centralize_state_cost] = float
+
+## scope = province
+alias[modifier:local_centralize_state_cost] = float
+
+# TODO: add army scope
+## scope = { country unit }
+alias[modifier:land_morale_constant] = float
+
+# TODO: add fleet/flagship/ship scopes
+## scope = country
+alias[modifier:naval_morale_constant] = float
+
+## scope = country
+alias[modifier:max_general_shock] = int
+
+## scope = country
+alias[modifier:max_general_fire] = int
+
+## scope = country
+alias[modifier:max_general_maneuver] = int
+
+## scope = country
+alias[modifier:max_general_siege] = int
+
+## scope = country
+alias[modifier:max_admiral_shock] = int
+
+## scope = country
+alias[modifier:max_admiral_fire] = int
+
+## scope = country
+alias[modifier:max_admiral_maneuver] = int
+
+## scope = country
+alias[modifier:max_admiral_siege] = int
+
+## scope = country
+alias[modifier:coast_raid_range] = int
+
+## scope = country
+alias[modifier:development_cost_in_primary_culture] = float
+
+## scope = country
+alias[modifier:reduced_trade_penalty_on_non_main_tradenode] = float
+
+## scope = country
+alias[modifier:colony_cost_modifier] = float
+
+## scope = province
+alias[modifier:local_colony_cost_modifier] = float
+
+## scope = country
+alias[modifier:spy_action_cost_modifier] = float
+
+## scope = country
+alias[modifier:placed_merchant_power_modifier] = float
+
+## scope = country
+alias[modifier:reduced_liberty_desire_on_other_continent] = int
+
+## scope = country
+alias[modifier:overextension_impact_modifier] = float
+
+## scope = { country unit }
+alias[modifier:artillery_level_modifier] = float
+
+## scope = province
+alias[modifier:local_tolerance_of_heretics] = float
+
+## scope = province
+alias[modifier:local_tolerance_of_heathens] = float
+
+## scope = country
+alias[modifier:garrison_damage] = float
+
+## scope = province
+alias[modifier:local_garrison_damage] = float
+
+## scope = country
+alias[modifier:assault_fort_cost_modifier] = float
+
+## scope = province
+alias[modifier:local_assault_fort_cost_modifier] = float
+
+## scope = country
+alias[modifier:assault_fort_ability] = float
+
+## scope = province
+alias[modifier:local_assault_fort_ability] = float
+
+## scope = country
+alias[modifier:vassal_manpower_bonus] = float
+
+## scope = country
+alias[modifier:vassal_sailors_bonus] = float
+
+## scope = country
+alias[modifier:vassal_naval_forcelimit_bonus] = float
+
+## scope = country
+alias[modifier:annexation_relations_impact] = float
+
+## scope = country
+alias[modifier:can_revoke_parliament_seats] = yes
+
+## scope = country
+alias[modifier:parliament_backing_chance] = float
+
+## scope = country
+alias[modifier:parliament_effect_duration] = int
+
+## scope = country
+alias[modifier:parliament_debate_duration] = int
+
+## scope = country
+alias[modifier:parliament_chance_of_decision] = float
+
+## scope = country
+alias[modifier:num_of_parliament_issues] = int
+
+## scope = country
+alias[modifier:max_possible_parliament_seats] = int
+
+## scope = country
+alias[modifier:can_recruit_cawa] = yes
+
+## scope = country
+alias[modifier:can_recruit_cossacks] = yes
+
+## scope = country
+alias[modifier:can_recruit_rajputs] = yes
+
+## scope = country
+alias[modifier:can_recruit_revolutionary_guards] = yes
+
+# TODO: fleet/ship scope
+## scope = country
+alias[modifier:naval_morale_damage] = float
+
+# TODO: fleet/ship scope
+## scope = country
+alias[modifier:naval_morale_damage_received] = float
+
+## scope = country
+alias[modifier:no_claim_cost_increasement] = yes
+
+## scope = country
+alias[modifier:has_tercio] = yes
+
+## scope = country
+alias[modifier:has_musketeer] = yes
+
+## scope = country
+alias[modifier:has_samurai] = yes
+
+## scope = country
+alias[modifier:has_geobukseon] = yes
+
+## scope = country
+alias[modifier:has_man_of_war] = yes
+
+## scope = country
+alias[modifier:has_galleon] = yes
+
+## scope = country
+alias[modifier:has_galleass] = yes
+
+## scope = country
+alias[modifier:has_caravel] = yes
+
+## scope = country
+alias[modifier:has_voc_indiamen] = yes
+
+## scope = country
+alias[modifier:has_streltsy] = yes
+
+## scope = province
+alias[modifier:local_has_tercio] = yes
+
+## scope = province
+alias[modifier:local_has_musketeers] = yes
+
+## scope = province
+alias[modifier:local_has_samurai] = yes
+
+## scope = province
+alias[modifier:local_has_geobukseon] = yes
+
+## scope = province
+alias[modifier:local_has_man_of_war] = yes
+
+## scope = province
+alias[modifier:local_has_galleon] = yes
+
+## scope = province
+alias[modifier:local_has_galleass] = yes
+
+## scope = province
+alias[modifier:local_has_caravel] = yes
+
+## scope = province
+alias[modifier:local_has_voc_indiamen] = yes
+
+## scope = province
+alias[modifier:local_has_streltsy] = yes
+
+## scope = country
+alias[modifier:allowed_tercio_fraction] = float
+
+## scope = country
+alias[modifier:allowed_musketeer_fraction] = float
+
+## scope = country
+alias[modifier:allowed_samurai_fraction] = float
+
+## scope = country
+alias[modifier:allowed_geobukseon_fraction] = float
+
+## scope = country
+alias[modifier:allowed_man_of_war_fraction] = float
+
+## scope = country
+alias[modifier:allowed_galleon_fraction] = float
+
+## scope = country
+alias[modifier:allowed_galleass_fraction] = float
+
+## scope = country
+alias[modifier:allowed_caravel_fraction] = float
+
+## scope = country
+alias[modifier:allowed_voc_indiamen_fraction] = float
+
+## scope = country
+alias[modifier:allowed_streltsy_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_tercio] = float
+
+## scope = country
+alias[modifier:amount_of_musketeer] = float
+
+## scope = country
+alias[modifier:amount_of_samurai] = float
+
+## scope = country
+alias[modifier:amount_of_geobukseon] = float
+
+## scope = country
+alias[modifier:amount_of_man_of_war] = float
+
+## scope = country
+alias[modifier:amount_of_galleon] = float
+
+## scope = country
+alias[modifier:amount_of_galleass] = float
+
+## scope = country
+alias[modifier:amount_of_caravel] = float
+
+## scope = country
+alias[modifier:amount_of_voc_indiamen] = float
+
+## scope = country
+alias[modifier:amount_of_streltsy] = float
+
+## scope = province
+alias[modifier:local_amount_of_tercio] = float
+
+## scope = province
+alias[modifier:local_amount_of_musketeer] = float
+
+## scope = province
+alias[modifier:local_amount_of_samurai] = float
+
+## scope = province
+alias[modifier:local_amount_of_geobukseon] = float
+
+## scope = province
+alias[modifier:local_amount_of_man_of_war] = float
+
+## scope = province
+alias[modifier:local_amount_of_galleon] = float
+
+## scope = province
+alias[modifier:local_amount_of_galleass] = float
+
+## scope = province
+alias[modifier:local_amount_of_caravel] = float
+
+## scope = province
+alias[modifier:local_amount_of_voc_indiamen] = float
+
+## scope = province
+alias[modifier:local_amount_of_streltsy] = float
+
+## scope = country
+alias[modifier:can_recruit_janissaries] = bool
+
+## scope = country
+alias[modifier:allow_janissaries_from_own_faith] = bool
+
+## scope = country
+alias[modifier:allowed_carolean_fraction] = float
+
+## scope = country
+alias[modifier:can_recruit_carolean] = float
+
+## scope = country
+alias[modifier:carolean_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_cawa] = bool
+
+## scope = province
+alias[modifier:local_has_cawa] = bool
+
+## scope = country
+alias[modifier:allowed_cawa_fraction] = float
+
+## scope = country
+alias[modifier:can_recruit_tercio] = float
+
+## scope = country
+alias[modifier:is_tercio_modifier] = float
+
+## scope = country
+alias[modifier:tercio_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_musketeer] = float
+
+## scope = country
+alias[modifier:is_musketeer_modifier] = float
+
+## scope = country
+alias[modifier:musketeer_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_samurai] = float
+
+## scope = country
+alias[modifier:is_samurai_modifier] = float
+
+## scope = country
+alias[modifier:samurai_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_geobukseon] = float
+
+## scope = country
+alias[modifier:is_geobukseon_modifier] = float
+
+## scope = country
+alias[modifier:geobukseon_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_man_of_war] = float
+
+## scope = country
+alias[modifier:is_man_of_war_modifier] = float
+
+## scope = country
+alias[modifier:man_of_war_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_galleon] = float
+
+## scope = country
+alias[modifier:is_galleon_modifier] = float
+
+## scope = country
+alias[modifier:galleon_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_galleass] = float
+
+## scope = country
+alias[modifier:is_galleass_modifier] = float
+
+## scope = country
+alias[modifier:galleass_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_caravel] = float
+
+## scope = country
+alias[modifier:is_caravel_modifier] = float
+
+## scope = country
+alias[modifier:caravel_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_voc_indiamen] = float
+
+## scope = country
+alias[modifier:is_voc_indiamen_modifier] = float
+
+## scope = country
+alias[modifier:voc_indiamen_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_hussars] = bool
+
+## scope = province
+alias[modifier:local_has_hussars] = bool
+
+## scope = country
+alias[modifier:allowed_hussars_fraction] = float
+
+## scope = country
+alias[modifier:has_marines] = bool
+
+## scope = province
+alias[modifier:local_has_marines] = bool
+
+## scope = country
+alias[modifier:amount_of_marines] = float
+
+## scope = province
+alias[modifier:local_amount_of_marines] = float
+
+## scope = country
+alias[modifier:can_recruit_marines] = float
+
+## scope = country
+alias[modifier:marines_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_revolutionary_guard] = bool
+
+## scope = province
+alias[modifier:local_has_revolutionary_guard] = bool
+
+## scope = country
+alias[modifier:allowed_revolutionary_guard_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_revolutionary_guard] = float
+
+## scope = province
+alias[modifier:local_amount_of_revolutionary_guard] = float
+
+## scope = country
+alias[modifier:allowed_banner_fraction] = float
+
+## scope = country
+alias[modifier:can_recruit_banner] = float
+
+## scope = country
+alias[modifier:banner_cost_modifier] = float
+
+## scope = country
+alias[modifier:can_recruit_streltsy] = float
+
+## scope = country
+alias[modifier:streltsy_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_cossacks] = bool
+
+## scope = province
+alias[modifier:local_has_cossacks] = bool
+
+## scope = country
+alias[modifier:allowed_cossacks_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_cossacks] = float
+
+## scope = province
+alias[modifier:local_amount_of_cossacks] = float
+
+## scope = country
+alias[modifier:is_cossacks_modifier] = float
+
+## scope = country
+alias[modifier:cossacks_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_janissaries] = bool
+
+## scope = province
+alias[modifier:local_has_janissaries] = bool
+
+## scope = country
+alias[modifier:allowed_janissaries_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_janissaries] = float
+
+## scope = province
+alias[modifier:local_amount_of_janissaries] = float
+
+## scope = country
+alias[modifier:is_janissaries_modifier] = float
+
+## scope = country
+alias[modifier:janissaries_cost_modifier] = float
+
+## scope = country
+alias[modifier:has_rajput] = bool
+
+## scope = province
+alias[modifier:local_has_rajput] = bool
+
+## scope = country
+alias[modifier:allowed_rajput_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_rajput] = float
+
+## scope = province
+alias[modifier:local_amount_of_rajput] = float
+
+## scope = country
+alias[modifier:is_rajput_modifier] = float
+
+## scope = country
+alias[modifier:rajput_cost_modifier] = float
+
+## scope = country
+alias[modifier:revolutionary_guard_cost_modifier] = float
+
+# TODO: add ship scope
+## scope = country
+alias[modifier:ship_trade_power_modifier] = float
+
+# TODO: add ship scope
+## scope = country
+alias[modifier:can_transport_units] = bool
+
+## scope = country
+###Maximum terms a candidate can be re-elected for
+alias[modifier:max_terms] = int

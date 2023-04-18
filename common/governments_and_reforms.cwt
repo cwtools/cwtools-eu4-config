@@ -67,6 +67,167 @@ types = {
 			government_reform = scalar
 		}
 	}
+	type[government_mechanic] = {
+		path = "game/common/government_mechanics"
+		localisation = {
+			## required
+			name = "ability_$"
+		}
+	}
+	type[government_mechanic_power] = {
+		path = "game/common/government_mechanics"
+		# Only look for things inside <mechanic> = { powers = { HERE } }
+		skip_root_key = { any powers }
+		subtype[base_monthly_growth] = {
+			base_monthly_growth = float
+		}
+		subtype[development_scaled_monthly_growth] = {
+			development_scaled_monthly_growth = float
+		}
+		localisation = {
+			## required
+			name = "$"
+			## required
+			gain_modifier = "$_gain_modifier"
+			subtype[base_monthly_growth] = {
+				## required
+				modifier = "monthly_$"
+			}
+			subtype[development_scaled_monthly_growth] = {
+				## required
+				modifier = "monthly_$"
+			}
+		}
+	}
+	type[government_mechanic_interaction] = {
+		path = "game/common/government_mechanics"
+		# Only look for things inside <mechanic> = { interactions = { HERE } }
+		skip_root_key = { any interactions }
+		localisation = {
+			## required
+			name = "$"
+			## required
+			desc = "$_desc"
+		}
+	}
+}
+
+government_mechanic = {
+	## cardinality = 0..1
+	###GFX icon strip the alert icon to use for this mechanic is in
+	alert_icon_gfx = scalar # TODO: make it a gfx value
+	## cardinality = 0..1
+	###the index of the icon for this mechanic in the strip of alert_icon_gfx
+	alert_icon_index = int[1..inf]
+	## replace_scope = { root = country this = country }
+	###criteria for the mechanic to be available
+	available = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	powers = {
+		## cardinality = 0..inf
+		<government_mechanic_power> = {
+			## cardinality = 0..1
+			###link to the gui that will be used to display this power. By default, it will be government_shared_power if it's not a power only associated with one action, or if it is a unique power for one interaction, this will be ignored and the bar from the interaction's gui will be used. New versions of this will need to contain the same elements so they can be filled in.
+			gui = scalar
+			###Maximum value the bar can go
+			max = int[1..inf]
+			## cardinality = 0..1
+			###Minimum value the bar can go
+			min = int
+			## cardinality = 0..1
+			###default power when resetting
+			default = int
+			## cardinality = 0..1
+			###Category of monarch power used for this mechanic
+			monarch_power = enum[power_categories]
+			## cardinality = 0..1
+			###How much it grows by each month
+			base_monthly_growth = float
+			## cardinality = 0..1
+			###Resets back to value defined in default (or 0 if not defined) when your ruler dies
+			reset_on_new_ruler = bool
+			## cardinality = 0..1
+			development_scaled_monthly_growth = float
+			## cardinality = 0..1
+			scaled_modifier = {
+				## cardinality = 0..1
+				trigger = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				modifier = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
+			}
+			## cardinality = 0..1
+			reverse_scaled_modifier = {
+				## cardinality = 0..1
+				trigger = {
+					alias_name[trigger] = alias_match_left[trigger]
+				}
+				modifier = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
+			}
+			## cardinality = 0..1
+			is_good = bool
+			## cardinality = 0..1
+			on_max_reached = {
+				alias_name[effect] = alias_match_left[effect]
+			}
+			## cardinality = 0..1
+			on_min_reached = {
+				alias_name[effect] = alias_match_left[effect]
+			}
+			## cardinality = 0..1
+			show_before_interactions = yes
+		}
+	}
+
+	## cardinality = 0..1
+	interactions = {
+		## cardinality = 0..inf
+		<government_mechanic_interaction> = {
+			## cardinality = 0..1
+			icon = scalar # TODO: make it a GFX
+			## cardinality = 0..1
+			gui = scalar # TODO: make it a GUI
+			## cardinality = 0..1
+			###Must be one of the costs defined in its powers
+			cost_type = <government_mechanic_power>
+			## cardinality = 0..1
+			cost = int
+			## cardinality = 0..1
+			## replace_scope = { root = country this = country }
+			trigger = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
+			## replace_scope = { root = country this = country }
+			effect = {
+				alias_name[effect] = alias_match_left[effect]
+			}
+			## cardinality = 0..1
+			center = bool
+			## cardinality = 0..1
+			cooldown_years = int
+			## cardinality = 0..1
+			###Token to use on cooldown, can be re-used across actions to make them all be put on cooldown when any is used
+			cooldown_token = value_set[cooldown_token]
+			## cardinality = 0..1
+			cooldown_token = value[cooldown_token]
+			## cardinality = 0..1
+			###defines the string to use for the name of the cooldown. If not specified, it will use the name of the interaction.
+			cooldown_desc = localisation
+			## cardinality = 0..1
+			## replace_scope = { root = country this = country }
+			ai_chance = {
+				factor = float[0..10000]
+				alias_name[modifier_rule] = alias_match_left[modifier_rule]
+			}
+		}
+	}
 }
 
 government_reform = {
@@ -77,7 +238,6 @@ government_reform = {
 		heirs_can_be_generals = bool
 		fixed_rank = int[0..3]
 		republican_name = bool
-		militarised_society = bool
 		government_abilities = { }
 		claim_states = bool
 		religion = bool
@@ -111,6 +271,7 @@ government_reform = {
 		papacy = bool
 		has_harem = bool
 		has_pashas = bool
+		has_janissaries = bool
 		allow_vassal_war = bool
 		allow_vassal_alliance = bool
 		min_autonomy = int
@@ -127,6 +288,7 @@ government_reform = {
 		factions_frame = 2
 		factions_frame = 9
 		force_admiral_leader = bool
+		force_general_leader = bool
 		admirals_become_rulers = bool
 		generals_become_rulers = bool
 		allow_banners = bool
@@ -145,9 +307,14 @@ government_reform = {
 		allow_cawa = bool
 		can_change_primary_culture = bool
 		allow_carolean = bool
+		can_inherit_personal_unions = bool
+		block_cultural_union = bool
+		has_cultural_union = bool
+		can_remove_idea_group = bool
+		mercs_do_not_cost_army_professionalism = bool
 	}
 
-	
+
 	subtype[legacy] = {
 		legacy_government = yes
 	}
@@ -159,7 +326,7 @@ government_reform = {
 	subtype[new] = {
 		legacy_equivalent = <government_reform.legacy>
 		legacy_equivalent = enum[hardcoded_legacygovernments]
-		
+
 		## cardinality = 0..1
 		assimilation_cultures = {
 			## cardinality = 1..inf
@@ -173,7 +340,7 @@ government_reform = {
 	subtype[!default] = {
 		## severity = info
 		icon = scalar #todo: refers to a file name in a certain folder
-		
+
 		## cardinality = 0..1
 		queen = bool
 		## cardinality = 0..1
@@ -196,7 +363,7 @@ government_reform = {
 		nation_designer_cost = int
 		## cardinality = 0..1
 		monarchy = bool
-		
+
 		## cardinality = 0..1
 		has_devotion = bool
 		## cardinality = 0..1
@@ -207,7 +374,7 @@ government_reform = {
 		different_religion_group_acceptance = int
 		## cardinality = 0..1
 		uses_revolutionary_zeal = bool
-	
+
 		## cardinality = 0..1
 		election_on_death = bool
 		## cardinality = 0..1
@@ -236,23 +403,23 @@ government_reform = {
 		rulers_can_be_generals = bool
 		## cardinality = 0..1
 		heirs_can_be_generals = bool
-		
+
 		## cardinality = 0..1
 		allow_convert = bool
-	
+
 		## cardinality = 0..1
 		maintain_dynasty = bool
-	
+
 		## cardinality = 0..1
 		allow_vassal_war = bool
 		## cardinality = 0..1
 		allow_vassal_alliance = bool
-	
+
 		## cardinality = 0..1
 		revolutionary = bool
 		## cardinality = 0..1
 		revolutionary_client_state = bool
-		
+
 		## cardinality = 0..1
 		free_concentrate_development = bool
 		## cardinality = 0..1
@@ -267,10 +434,10 @@ government_reform = {
 		allow_cawa = bool
 		## cardinality = 0..1
 		can_change_primary_culture = bool
-				
+
 		## cardinality = 0..1
-		replacement_on_independence_war = indep_daimyo
-		
+		replacement_on_independence_war = <government_reform.new>
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		nation_designer_trigger = {
@@ -296,28 +463,34 @@ government_reform = {
 		potential = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
-		
+
 		## replace_scope = { root = country this = country }
 		## cardinality = 0..1
 		removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
-		
+
 		## cardinality = 0..1
 		government_abilities = {
 			enum[government_mechanics]
+		}
+
+		## cardinality = 0..1
+		government_abilities = {
+			## cardinality = 1..inf
+			<government_mechanic>
 		}
 
 		## cardinality = 0..inf
@@ -362,13 +535,18 @@ government_reform = {
 			## cardinality = 0..1
 			has_pashas = bool
 			## cardinality = 0..1
+			has_janissaries = bool
+			## cardinality = 0..1
 			claim_states = bool
 			## cardinality = 0..1
 			government_abilities = {
 				enum[government_mechanics]
 			}
 			## cardinality = 0..1
-			militarised_society = bool
+			government_abilities = {
+				## cardinality = 1..inf
+				<government_mechanic>
+			}
 			## cardinality = 0..1
 			foreign_slave_rulers = bool
 			## cardinality = 0..1
@@ -433,6 +611,11 @@ government_reform = {
 				liberalists = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
+				## cardinality = 0..1
+				## replace_scope = { root = country this = country }
+				theocrats_statists = {
+					alias_name[modifier] = alias_match_left[modifier]
+				}
 			}
 
 			## cardinality = 0..1
@@ -443,7 +626,7 @@ government_reform = {
 			duration = int
 			## cardinality = 0..1
 			has_term_election = bool
-			
+
 			## cardinality = 0..1
 			factions = {
 				## cardinality = 0..inf
@@ -452,15 +635,15 @@ government_reform = {
 
 			## cardinality = 0..1
 			is_elective = bool
-			
+
 			## cardinality = 0..1
 			allow_banners = bool
 			## cardinality = 0..1
 			election_on_death = bool
-	
+
 			## cardinality = 0..1
 			raze_province = bool
-			
+
 			## cardinality = 0..1
 			custom_attributes = {
 				## cardinality = 0..1
@@ -484,6 +667,8 @@ government_reform = {
 				## cardinality = 0..1
 				force_admiral_leader = bool
 				## cardinality = 0..1
+				force_general_leader = bool
+				## cardinality = 0..1
 				admirals_become_rulers = bool
 				## cardinality = 0..1
 				gives_war_against_the_world_tooltip_dummy = yes
@@ -491,12 +676,20 @@ government_reform = {
 				cannot_become_dictatorship = bool
 				## cardinality = 0..inf
 				value_set[custom_attribute] = bool
+				## cardinality = 0..1
+				block_cultural_union = bool
+				## cardinality = 0..1
+				has_cultural_union = bool
+				## cardinality = 0..1
+				can_remove_idea_group = bool
+				## cardinality = 0..1
+				mercs_do_not_cost_army_professionalism = bool
 			}
 		}
-		
+
 		## cardinality = 0..1
 		can_form_trade_league = bool
-		
+
 		## cardinality = 0..1
 		has_term_election = bool
 		## cardinality = 0..1
@@ -507,16 +700,16 @@ government_reform = {
 		royal_marriage = bool
 		## cardinality = 0..1
 		boost_income = bool
-	
+
 		## cardinality = 0..1
 		factions = {
 			## cardinality = 1..inf
 			<faction>
 		}
-	
+
 		## cardinality = 0..1
 		republic = bool
-	
+
 		## cardinality = 0..1
 		custom_attributes = {
 			## cardinality = 0..1
@@ -540,6 +733,8 @@ government_reform = {
 			## cardinality = 0..1
 			force_admiral_leader = bool
 			## cardinality = 0..1
+			force_general_leader = bool
+			## cardinality = 0..1
 			admirals_become_rulers = bool
 			## cardinality = 0..1
 			gives_war_against_the_world_tooltip_dummy = yes
@@ -547,6 +742,14 @@ government_reform = {
 			cannot_become_dictatorship = bool
 			## cardinality = 0..inf
 			value_set[custom_attribute] = bool
+			## cardinality = 0..1
+			block_cultural_union = bool
+			## cardinality = 0..1
+			has_cultural_union = bool
+			## cardinality = 0..1
+			can_remove_idea_group = bool
+			## cardinality = 0..1
+			mercs_do_not_cost_army_professionalism = bool
 		}
 
 		## cardinality = 0..1
@@ -560,7 +763,7 @@ government_reform = {
 			## cardinality = 0..inf
 			<trade_good>
 		}
-		
+
 		## cardinality = 0..1
 		post_removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
@@ -751,7 +954,7 @@ government = {
 			## cardinality = 3..3
 			int[0..255]
 		}
-	
+
 		reform_levels = {
 			## cardinality = 1..12
 			localisation = {
@@ -816,7 +1019,7 @@ government_name = {
 			## cardinality = 1..10
 			int[1..10] = localisation
 		}
-	
+
 		ruler_male = {
 			## cardinality = 1..10
 			int[1..10] = localisation
@@ -849,7 +1052,7 @@ government_name = {
 
 		government_reform = <government_reform.basic>
 	}
-	
+
 	subtype[!default] = {
 		rank = {
 			## cardinality = 0..10

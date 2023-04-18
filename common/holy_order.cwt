@@ -20,6 +20,11 @@ holy_order = {
 	cost = int
 	cost_type = enum[holy_order_cost_types]
 
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
+
 	## replace_scope = { this = province root = province }
     per_province_effect = {
         alias_name[effect] = alias_match_left[effect]
@@ -37,6 +42,10 @@ holy_order = {
         factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
     }
+
+	# TODO: make it ask for localisation
+	###The right hand side must have localisation for $_short and $_full
+	localization = scalar
 }
 
 enums = {

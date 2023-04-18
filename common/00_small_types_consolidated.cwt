@@ -192,6 +192,14 @@ fervor = {
 	effect = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	## cardinality = 0..1
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 	## replace_scope = { root = country this = country }
 	ai_will_do = {
 		factor = float
@@ -247,10 +255,29 @@ natives = {
 
 
 decree = {
+	###Cost in meritocracy of enacting the decree
 	cost = int
+	###Duration in days of the modifier of the decree
 	duration = int
+	###If false the decree will not appear
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###If false you will not be able to take the decree
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###Modifiers active during the duration of the decree
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+	###Effects to run when the decree is enacted
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	###Effects to run when the decree is expired
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 	## replace_scope = { root = country this = country from = country }
 	###ai_will_do has to be 10 for AI to do it (with >=99 Meritocracy).
@@ -267,6 +294,10 @@ isolationism = {
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+	## cardinality = 0..1
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
 
 
@@ -279,6 +310,16 @@ naval_doctrine = {
 
 	country_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 
 	button_gfx = int
@@ -300,6 +341,16 @@ policy = {
 	alias_name[modifier] = alias_match_left[modifier]
 
 	alias_name[ability] = alias_match_left[ability]
+
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 
 	## replace_scope = { this = country root = country }
 	ai_will_do = {

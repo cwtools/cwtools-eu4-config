@@ -118,6 +118,7 @@ alias[trigger:ai_attitude] = {
 	who = enum[country_tags]
 	attitude = enum[attitudes]
 }
+
 ## scope = country
 ###Returns true if the country has an alliance with X.
 alias[trigger:alliance_with] = scope[any]
@@ -864,6 +865,12 @@ alias[trigger:employed_advisor] = {
 	type = <advisor_type>
 	## cardinality = 0..1
 	category = enum[power_categories]
+	## cardinality = 0..1
+	skill = int[0..5]
+	## cardinality = 0..1
+	discounted = yes
+	## cardinality = 0..1
+	name = scalar
 }
 
 ## scope = country
@@ -1386,6 +1393,15 @@ alias[trigger:has_global_modifier_value] = {
 alias[trigger:has_government_mechanic] = enum[government_mechanics]
 
 ## scope = country
+###Returns true if the country uses the specified government mechanic.
+alias[trigger:has_government_mechanic] = <government_mechanic>
+
+## scope = country
+###Returns true if the country uses the specified government mechanic.
+# It seems to accept a government power too
+alias[trigger:has_government_mechanic] = <government_mechanic_power>
+
+## scope = country
 ###No sure what this does and what values are accepted here, please report!
 alias[trigger:has_government_power] = unknown
 
@@ -1647,6 +1663,11 @@ alias[trigger:has_ruler_modifier] = <event_modifier>
 ###Returns true if the specified event target has been saved.
 ## severity = warning
 alias[trigger:has_saved_event_target] = value[event_target]
+
+## scope = any
+###Returns true if the specified event target has been saved.
+## severity = warning
+alias[trigger:has_saved_global_event_target] = value[global_event_target]
 
 ## scope = country
 ###Returns true if the vassal pays scutage.
@@ -2309,16 +2330,16 @@ alias[trigger:is_in_war] = {
 
 	## cardinality = 0..inf
 	defenders = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	attackers = scope[country]
-	
+
 	## cardinality = 0..inf
 	attackers = enum[country_tags]
-	
+
 	## cardinality = 0..inf
 	participants = scope[country]
-	
+
 	## cardinality = 0..inf
 	participants = enum[country_tags]
 }
@@ -2367,11 +2388,11 @@ alias[trigger:is_month] = int[0..11]
 ###Returns true if the country is a march.
 alias[trigger:is_march] = bool
 
-## scope = country
+## scope = { country province }
 ###Returns true if the country is neighbor of X.
 alias[trigger:is_neighbor_of] = scope[country]
 
-## scope = country
+## scope = { country province }
 ###Returns true if the country is neighbor of X.
 alias[trigger:is_neighbor_of] = enum[country_tags]
 
@@ -2797,10 +2818,6 @@ alias[trigger:mil] = scope[country]
 ## scope = country
 ###Returns true if the ountry has a ruler with a military skill of at least X, or at least as high military skill as the ruler of the specified country.
 alias[trigger:mil] = enum[country_tags]
-
-## scope = country
-###Returns true if the country has a militarization of country of at least X.
-alias[trigger:militarised_society] = int
 
 ## scope = country
 ###Returns true if the country has at least X military power, or at least as much military power as the specified country.
@@ -4323,7 +4340,7 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..1
 	custom_tooltip = localisation
-	
+
 	## cardinality = 0..inf
 	export_to_variable = {
 		enum[which_varname] = value_set[variable]
@@ -5491,7 +5508,7 @@ alias[trigger:num_of_hussars] = int
 alias[trigger:owes_favors] = {
 	who = scope[country]
 	who = enum[country_tags]
-	value = int	
+	value = int
 }
 
 ## scope = country
@@ -5536,3 +5553,297 @@ alias[trigger:trade_node_value] = int
 ## scope = country
 ###Returns whether the country has been forced to change religion
 alias[trigger:religion_enforced] = bool
+
+## scope = country
+###Returns true if the country has a defensive pact with X.
+alias[trigger:defensive_pact_with] = scope[any]
+
+## scope = country
+###Returns true if the country has a defensive pact with X.
+alias[trigger:defensive_pact_with] = enum[country_tags]
+
+## scope = country
+###Returns true if the country has at least X rebel progress.
+alias[trigger:rebel_progress_at_least] = {
+	value = int
+	# TODO: test if it accepts type like add_rebel_progress does
+}
+
+## scope = country
+###Returns true if government has mechanic X with power Y and value Z
+alias[trigger:has_government_power] = {
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+	value = int
+}
+
+## scope = ountry
+###Returns true if the government power is frozen
+alias[trigger:government_power_frozen] = {
+	mechanic_type = <government_mechanic>
+	power_type = <government_mechanic_power>
+}
+
+## scope = country
+###Returns true if country has at least X subjects of type Y with at least Z liberty desire
+alias[trigger:num_subjects_of_type_with_liberty_desire] = {
+	type = <subject_type>
+	liberty_desire = int
+	value = int
+}
+
+## scope = country
+alias[trigger:num_of_revolutionary_guard] = int
+
+## scope = country
+alias[trigger:num_of_special_units] = {
+	special_unit_category = enum[special_units]
+	type = enum[unit_types]
+	value = int
+}
+
+## scope = country
+###Returns true if scoped country has X years of manpower left
+alias[trigger:years_of_manpower] = float
+
+## scope = country
+###Returns true if scoped country has X years of sailors left
+alias[trigger:years_of_sailors] = float
+
+## scope = country
+###Returns true if the scoped country has been humiliated by the specified country
+alias[trigger:has_been_humiliated_by] = enum[country_tags]
+
+## scope = country
+###Returns true if the scoped country has been humiliated by the specified country
+alias[trigger:has_been_humiliated_by] = scope[country]
+
+## scope = country
+###Returns true if the scoped country has humiliated the specified country
+alias[trigger:humiliated] = enum[country_tags]
+
+## scope = country
+###Returns true if the scoped country has humiliated the specified country
+alias[trigger:humiliated] = scope[country]
+
+## scope = province
+###Returns true if scoped province is in the same trade node as specified province
+alias[trigger:same_trade_node_as] = scope[trade_node]
+
+## scope = province
+###Returns true if scoped province is in the same trade node as specified province
+alias[trigger:same_trade_node_as] = <trade_node>
+
+## scope = country
+###Returns true if scoped country has same home trade node as specified country
+alias[trigger:same_home_trade_node_as] = enum[country_tags]
+
+## scope = country
+###Returns true if scoped country has same home trade node as specified country
+alias[trigger:same_home_trade_node_as] = scope[country]
+
+## scope = province
+alias[trigger:has_owner_harmonized_religion] = yes
+
+## scope = province
+alias[trigger:has_owner_secondary_religion] = yes
+
+## scope = country
+###Returns true if country has secondary religion of X religion group
+alias[trigger:secondary_religion_group] = <religion_group>
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:has_assimilated_culture_group] = <culture_group>
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:has_assimilated_culture_group] = scope[province]
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:has_assimilated_culture] = <culture>
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:has_assimilated_culture] = enum[culture_new_variables]
+
+## scope = country
+###Returns true if the country accepts the specified culture.
+alias[trigger:has_assimilated_culture] = scope[province]
+
+## scope = country
+###Returns true if has at least X ships protecting trade or at least as specified country Y
+alias[trigger:num_ships_protecting_trade] = int
+
+## scope = country
+###Returns true if has at least X ships protecting trade or at least as specified country Y
+alias[trigger:num_ships_protecting_trade] = enum[country_tags]
+
+## scope = country
+###Returns true if has at least X ships protecting trade or at least as specified country Y
+alias[trigger:num_ships_protecting_trade] = scope[country]
+
+## scope = trade_node
+alias[trigger:has_protecting_trade_share_in_trade_node] = {
+	who = enum[country_tags]
+	who = scope[country]
+}
+
+## scope = trade_node
+alias[trigger:has_protecting_trade_share_in_trade_node] = {
+	share = float
+}
+
+## scope = country
+alias[trigger:num_of_pashas] = int
+
+## scope = country
+alias[trigger:transfers_trade_power_to] = enum[country_tags]
+
+## scope = country
+alias[trigger:transfers_trade_power_to] = scope[country]
+
+## scope = country
+alias[trigger:steers_trade_to] = enum[country_tags]
+
+## scope = country
+alias[trigger:steers_trade_to] = scope[country]
+
+## scope = country
+alias[trigger:receives_trade_power_from] = enum[country_tags]
+
+## scope = country
+alias[trigger:receives_trade_power_from] = scope[country]
+
+## scope = country
+alias[trigger:receives_trade_steering_from] = enum[country_tags]
+
+## scope = country
+alias[trigger:receives_trade_steering_from] = scope[country]
+
+## scope = country
+alias[trigger:has_advisor_type_in_pool] = <advisor_type>
+
+## scope = province
+###If the amount of possible buildings in the scoped province is at least X or higher
+alias[trigger:possible_buildings] = int
+
+## scope = province
+###Returns true if the scoped province is part of the specified trade node
+alias[trigger:trade_node] = <trade_node>
+
+## scope = province
+###Returns true if the scoped province is part of the specified trade node
+alias[trigger:trade_node] = scope[trade_node]
+
+## scope = country
+###Returns true if the scoped country has its home trade node the same as the specified trade node
+alias[trigger:home_trade_node] = <trade_node>
+
+## scope = country
+###Returns true if the scoped country has its home trade node the same as the specified trade node
+alias[trigger:home_trade_node] = scope[trade_node]
+
+## scope = province
+###Returns true if the province is owned by a subject of the specified country
+alias[trigger:owned_by_subject_of] = enum[country_tags]
+
+## scope = province
+###Returns true if the province is owned by a subject of the specified country
+alias[trigger:owned_by_subject_of] = scope[country]
+
+## scope = country
+alias[trigger:empire_of_china_num_reforms_passed] = int
+
+## scope = country
+alias[trigger:empire_of_china_has_active_decree] = <decree>
+
+## scope = country
+alias[trigger:empire_of_china_has_active_decree] = bool
+
+## scope = province
+alias[trigger:num_of_times_expanded_infrastructure] = int
+
+## scope = country
+alias[trigger:has_liberty_desire_modifier] = <timed_modifier>
+
+## scope = country
+###Returns true if specified country is too powerful (has eclipsed) the scoped country
+alias[trigger:has_eclipsed] = enum[country_tags]
+
+## scope = country
+###Returns true if specified country is too powerful (has eclipsed) the scoped country
+alias[trigger:has_eclipsed] = scope[country]
+
+## scope = country
+###Returns true if the scoped country is too powerful (has eclipsed) the specified country
+alias[trigger:has_been_eclipsed_by] = enum[country_tags]
+
+## scope = country
+###Returns true if the scoped country is too powerful (has eclipsed) the specified country
+alias[trigger:has_been_eclipsed_by] = scope[country]
+
+## scope = country
+###Returns true if any subject of the scoped country owns the specified province
+alias[trigger:subject_owns] = scope[province]
+
+## scope = country
+###Returns true if any subject of the scoped country owns the specified province
+alias[trigger:subject_owns] = <province_id>
+
+## scope = country
+###This is not documented and appears in government mechanics
+# appears in common/government_mechanics/00_cossacks.txt
+alias[trigger:needs_regiment_type] = cossacks
+
+## scope = country
+###This is not documented and appears in government mechanics
+# appears in common/government_mechancis/00_cossacks.txt
+alias[trigger:has_neighbor] = yes
+
+## scope = country
+###Returns true if selected naval doctrine is activated, or any
+alias[trigger:has_naval_doctrine] = <naval_doctrine>
+
+## scope = country
+###Returns true if selected naval doctrine is activated, or any
+alias[trigger:has_naval_doctrine] = any
+
+## scope = country
+alias[trigger:has_unembraced_institution] = bool
+
+## scope = country
+###Returns true if scoped country has ever humiliated the specified country
+alias[trigger:has_ever_humiliated] = enum[country_tags]
+
+## scope = country
+###Returns true if scoped country has ever humiliated the specified country
+alias[trigger:has_ever_humiliated] = scope[country]
+
+## scope = country
+alias[trigger:num_of_tercio] = int
+
+## scope = country
+alias[trigger:num_of_musketeer] = int
+
+## scope = country
+alias[trigger:num_of_samurai] = int
+
+## scope = country
+alias[trigger:num_of_geobukseon] = int
+
+## scope = country
+alias[trigger:num_of_man_of_war] = int
+
+## scope = country
+alias[trigger:num_of_galleon] = int
+
+## scope = country
+alias[trigger:num_of_galleass] = int
+
+## scope = country
+alias[trigger:num_of_caravel] = int
+
+## scope = country
+alias[trigger:num_of_voc_indiamen] = int

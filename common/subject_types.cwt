@@ -148,6 +148,32 @@ subject_type = {
 	## cardinality = 0..1
 	extend_trading_range = bool
 	## cardinality = 0..1
+	###If favors can be gained with subject like allies
+	can_gain_favors = bool
+	## cardinality = 0..1
+	###Enemies can force this subject to join defensive wars against the overlord
+	can_be_co_belligerented = bool
+	## cardinality = 0..1
+	###Overlord can use favors to ask subject to join wars, only effective if joins_overlords_wars = no
+	can_be_called_to_wars = bool
+	## cardinality = 0..1
+	favors_cost_to_join_offensive_wars = int
+	## cardinality = 0..1
+	favors_cost_to_join_defensive_wars = int
+	## cardinality = 0..1
+	###Opinion necessary to join the war, only applies if Leviathan DLC is not enabled
+	opinion_cost_to_join_offensive_wars = int
+	## cardinality = 0..1
+	###Opinion necessary to join the war, only applies if Leviathan DLC is not enabled
+	opinion_cost_to_join_defensive_wars = int
+	## cardinality = 0..1
+	###Whether subject require favors or opinion to join the war, if yes requires opinion, if no requires favors, which is the default unless Leviathan DLC is owned
+	opinion_cost_instead_of_favors_cost = bool
+	## cardinality = 0..1
+	###Opinion hit on subjects from seeing another subject integrated, defaults to -30
+	opinion_on_subject_integration = int
+
+	## cardinality = 0..1
 	###How much it costs in DIP to annex, based on development
 	annex_cost_per_development = float[0..inf]
 	
@@ -356,6 +382,15 @@ subject_type = {
 	change_colonial_type = bool
 	## cardinality = 0..1
 	upgrade_subject_type = bool
+	## cardinality = 0..1
+	###Seizes a month's worth of monarch power generation for +25% Liberty Desire
+	seize_court_resources = bool
+	## cardinality = 0..1
+	###Seizes a month's worth of manpower and sailors for +25% Liberty Desire
+	request_extra_levies = bool
+	## cardinality = 0..1
+	###Grants -10% Liberty Desire at the cost of -20 Reform Progress
+	grant_administrative_autonomy = bool
 	
 	## cardinality = 0..1
 	sword_hunt = bool
