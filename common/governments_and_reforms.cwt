@@ -79,10 +79,12 @@ types = {
 		# Only look for things inside <mechanic> = { powers = { HERE } }
 		skip_root_key = { any powers }
 		subtype[base_monthly_growth] = {
-			base_monthly_growth = float
+			base_monthly_growth = float[-inf..-0.1]
+			base_monthly_growth = float[0.1..inf]
 		}
 		subtype[development_scaled_monthly_growth] = {
-			development_scaled_monthly_growth = float
+			development_scaled_monthly_growth = float[-inf..-0.1]
+			development_scaled_monthly_growth = float[0.1..inf]
 		}
 		localisation = {
 			## required
