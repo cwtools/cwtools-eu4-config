@@ -19,20 +19,28 @@ types = {
 
 parliament_bribe = {
 	## cardinality = 0..1
-	name = estate_bribe
+	name = localisation
 	## cardinality = 0..1
 	estate = <estate>
-	
+
 	## replace_scope = { root = country this = country from = province }
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = country this = country from = province }
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	###Chance a bribe will appear in a parliament issue
+	chance = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
 	## replace_scope = { root = country this = country from = province }
 	ai_will_do = {
 		factor = float
@@ -48,7 +56,7 @@ parliament_issue = {
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	effect = {
@@ -60,12 +68,12 @@ parliament_issue = {
 	on_issue_taken = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
 	## cardinality = 0..1
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	chance = {
@@ -78,4 +86,20 @@ parliament_issue = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+
+	## cardinality = 0..1
+	###Percentage of seats that will back up the issue. Defaults to PARLIAMENT_BACKING_PERCENTAGE
+	backing_percentage = int
+
+	## cardinality = 0..1
+	###How many years the effects of a passed issue last, also prevents picking a new issue, defaults to PARLIAMENT_EFFECT_DURATION
+	effect_duration = int
+
+	## cardinality = 0..1
+	###How many years an issue will last before being able to be randomly decided on, defaults to PARLIAMENT_DEBATE_DURATION
+	debate_duration = int
+
+	## cardinality = 0..1
+	###Chance debate is decided upon after debate duration, defaults to PARLIAMENT_CHANCE_OF_DECISION
+	chance_of_decision = float
 }
