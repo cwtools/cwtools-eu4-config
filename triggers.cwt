@@ -876,9 +876,7 @@ alias[trigger:employed_advisor] = {
 ## scope = country
 ###Returns true if the estate X in the country has at least Y influence.
 alias[trigger:estate_influence] = {
-	## cardinality = 0..1
 	estate = <estate>
-	## cardinality = 0..1
 	estate = all
 	## cardinality = 0..1
 	less_than = yes
