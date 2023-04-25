@@ -22,17 +22,25 @@ parliament_bribe = {
 	name = estate_bribe
 	## cardinality = 0..1
 	estate = <estate>
-	
+
 	## replace_scope = { root = country this = country from = province }
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = country this = country from = province }
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	###Chance a bribe will appear in a parliament issue
+	chance = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+
 	## replace_scope = { root = country this = country from = province }
 	ai_will_do = {
 		factor = float
