@@ -521,4 +521,10 @@ enums = {
 		has_voc_indiamen
 		hussars
 	}
+	# Some named area, region, provincegroups, superregion, continent effect scopes support
+	# using type = random with amount = int to apply their effects within bounds
+	enum[random_repeating] = {
+		random
+		random_repeating
+	}
 }

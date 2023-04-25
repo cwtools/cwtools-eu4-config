@@ -43,6 +43,13 @@ alias[effect:<area.used>] = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the area, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int[1..inf]
 }
 
 ## scope = { country province }
@@ -65,6 +72,13 @@ alias[effect:<region>] = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the region, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int
 }
 
 ## scope = any
@@ -76,6 +90,13 @@ alias[effect:<superregion>] = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the superregion, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int
 }
 
 ## scope = { country province }
@@ -87,6 +108,13 @@ alias[effect:<continent>] = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the continent, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int
 }
 
 ## scope = { country province }
@@ -131,6 +159,13 @@ alias[trigger:<province_group.used>] = {
 	## cardinality = 0..1
 	type = enum[any_all]
 	alias_name[trigger] = alias_match_left[trigger]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the province group, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int
 }
 
 ## scope = { country province }
