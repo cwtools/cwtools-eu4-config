@@ -19,7 +19,7 @@ types = {
 
 parliament_bribe = {
 	## cardinality = 0..1
-	name = localisation
+	name = localisation_synced
 	## cardinality = 0..1
 	estate = <estate>
 
