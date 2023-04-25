@@ -151,7 +151,7 @@ government_mechanic = {
 			reset_on_new_ruler = bool
 			## cardinality = 0..1
 			development_scaled_monthly_growth = float
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			scaled_modifier = {
 				## cardinality = 0..1
 				trigger = {
@@ -161,7 +161,7 @@ government_mechanic = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
 			}
-			## cardinality = 0..1
+			## cardinality = 0..inf
 			reverse_scaled_modifier = {
 				## cardinality = 0..1
 				trigger = {
