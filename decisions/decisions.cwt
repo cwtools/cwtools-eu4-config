@@ -49,8 +49,17 @@ decision = {
 	ai_importance = int
 
 	## cardinality = 0..inf
+	###The AI will not try to integrate this country if the decision is available, meant to prevent them from using diplomatic power integrating countries that will get annexed or changed.
 	do_not_integrate = enum[country_tags]
 
 	## cardinality = 0..inf
+	###The AI will not try to core this province if the decision is available, meant to prevent them from using monarch power coring provinces that will get cored or given away to another country.
 	do_not_core = <province_id>
+
+	## cardinality = 0..1
+	###Changes the color used in the decision tab
+	color = {
+		## cardinality = 3..3
+		int[0..255]
+	}
 }
