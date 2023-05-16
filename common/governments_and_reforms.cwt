@@ -311,6 +311,7 @@ government_reform = {
 		allow_carolean = bool
 		can_inherit_personal_unions = bool
 		block_cultural_union = bool
+		has_cultural_union = bool
 		can_remove_idea_group = bool
 		mercs_do_not_cost_army_professionalism = bool
 	}
