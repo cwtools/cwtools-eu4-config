@@ -4232,3 +4232,12 @@ alias[effect:create_unit_forcelimit_percentage] = {
 
 ## scope = province
 alias[effect:add_local_autonomy_no_authority_effect] = float
+
+## scope = country
+###Removes the current consort of the current scope, saving them to the unique string.
+alias[effect:exile_consort_as] = value_set[exiled_consort]
+
+## scope = country
+###Makes an exiled consort the consort of the current scope.
+## severity = warning
+alias[effect:set_consort] = value[exiled_consort]
