@@ -2778,7 +2778,7 @@ on_action = {
     subtype[on_battle_lost_unit] = {
         alias_name[effect] = alias_match_left[effect]
 	}
-	
+
     ## replace_scope = { root = country this = country }
     subtype[on_holy_order_established] = {
         ## cardinality = 0..1
@@ -3888,6 +3888,40 @@ on_action = {
 	}
 	## replace_scope = { root = country this = country from = country }
 	subtype[on_mandate_reform_passed] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_new_age] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_hre_dismantled] = {
   	## cardinality = 0..1
   	events = {
   	    ## cardinality = 0..inf
