@@ -242,3 +242,22 @@ alias[effect:create_units_of_type_in_province] = {
 	## cardinality = 0..1
 	custom_tooltip = localisation
 }
+
+## scope = country
+### Force scripted effect to work
+alias[effect:ottoman_power_struggle_effect] = {
+	## cardinality = 0..1
+	legitimacy_effect = yes
+	## cardinality = 0..1
+	republican_tradition_effect = yes
+	## cardinality = 0..1
+	corruption_effect = yes
+	## cardinality = 0..1
+	monarch_power_effect = yes
+	## cardinality = 0..1
+	prestige_effect = yes
+	## cardinality = 0..1
+	treasury_effect = yes
+	## cardinality = 0..1
+	inflation_effect = yes
+}
