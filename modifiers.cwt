@@ -1614,7 +1614,7 @@ alias[modifier:musketeer_cost_modifier] = float
 alias[modifier:can_recruit_samurai] = float
 
 ## scope = country
-alias[modifier:is_samurai_modifier] = float
+alias[modifier:is_samurai_modifier] = bool
 
 ## scope = country
 alias[modifier:samurai_cost_modifier] = float
