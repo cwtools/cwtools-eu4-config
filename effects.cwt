@@ -306,7 +306,7 @@ alias[effect:add_tribal_allegiance] = int
 
 ## scope = country
 ###Changes the Organist-Statist balance. Positive moves towards Orangist, negative moves towards Statists.
-alias[effect:change_statists_vs_orangists] = float[-2.0..2.0]
+alias[effect:change_statists_vs_orangists] = float[-10.0..1.0]
 
 ## scope = country
 ###Changes the Organist-Monarchist balance. Positive (probably) moves towards Monarchist, negative (probably) moves towards Statists.
