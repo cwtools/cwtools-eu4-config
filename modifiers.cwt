@@ -1596,7 +1596,7 @@ alias[modifier:allowed_cawa_fraction] = float
 alias[modifier:can_recruit_tercio] = float
 
 ## scope = country
-alias[modifier:is_tercio_modifier] = float
+alias[modifier:is_tercio_modifier] = bool
 
 ## scope = country
 alias[modifier:tercio_cost_modifier] = float
