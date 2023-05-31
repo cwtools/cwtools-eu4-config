@@ -394,11 +394,11 @@ enums = {
 		}
 		start_from_root = yes
 	}
-	#no idea what all can go here
-	enum[modifiers] = {
+	enum[modifier_value] = {
 		cavalry_power
 		discipline
 		ship_durability
+		stability_cost_to_declare_war
 	}
 	enum[native_policies] = {
 		native_policy_coexist
