@@ -5845,3 +5845,7 @@ alias[trigger:num_of_caravel] = int
 
 ## scope = country
 alias[trigger:num_of_voc_indiamen] = int
+
+## scope = country
+###Country will support an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.
+alias[trigger:will_back_reform] = <imperial_reform>
