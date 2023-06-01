@@ -18,7 +18,6 @@ enums = {
 		heir_religion
 		manpower
 		max_manpower
-		max_terms
 		mil_advisor_culture
 		mil_advisor_religion
 		monthly_income
