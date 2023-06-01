@@ -398,6 +398,7 @@ enums = {
 		cavalry_power
 		discipline
 		infantry_power
+		missionaries
 		ship_durability
 		stability_cost_to_declare_war
 	}
