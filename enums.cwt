@@ -399,6 +399,7 @@ enums = {
 		discipline
 		female_advisor_chance
 		infantry_power
+		mercenary_discipline
 		missionaries
 		ship_durability
 		stability_cost_to_declare_war
