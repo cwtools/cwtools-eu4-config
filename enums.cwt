@@ -397,6 +397,7 @@ enums = {
 	enum[modifier_value] = {
 		cavalry_power
 		discipline
+		female_advisor_chance
 		infantry_power
 		missionaries
 		ship_durability
