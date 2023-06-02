@@ -397,6 +397,7 @@ enums = {
 	enum[modifier_value] = {
 		army_tradition
 		artillery_power
+		build_cost
 		cavalry_power
 		core_creation
 		defensiveness
