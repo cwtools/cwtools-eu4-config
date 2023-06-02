@@ -1633,7 +1633,7 @@ alias[modifier:geobukseon_cost_modifier] = float
 alias[modifier:can_recruit_man_of_war] = float
 
 ## scope = country
-alias[modifier:is_man_of_war_modifier] = float
+alias[modifier:is_man_of_war_modifier] = bool
 
 ## scope = country
 alias[modifier:man_of_war_cost_modifier] = float
