@@ -305,6 +305,7 @@ modifiers = {
 	imperial_mercenary_cost = country
 	max_free_cities = country
 	max_electors = country
+	max_terms = country
 	is_imperial_modifier = country
 	movement_speed_onto_off_boat_modifier = country
 }
@@ -1596,7 +1597,7 @@ alias[modifier:allowed_cawa_fraction] = float
 alias[modifier:can_recruit_tercio] = float
 
 ## scope = country
-alias[modifier:is_tercio_modifier] = float
+alias[modifier:is_tercio_modifier] = bool
 
 ## scope = country
 alias[modifier:tercio_cost_modifier] = float
@@ -1614,7 +1615,7 @@ alias[modifier:musketeer_cost_modifier] = float
 alias[modifier:can_recruit_samurai] = float
 
 ## scope = country
-alias[modifier:is_samurai_modifier] = float
+alias[modifier:is_samurai_modifier] = bool
 
 ## scope = country
 alias[modifier:samurai_cost_modifier] = float
@@ -1632,7 +1633,7 @@ alias[modifier:geobukseon_cost_modifier] = float
 alias[modifier:can_recruit_man_of_war] = float
 
 ## scope = country
-alias[modifier:is_man_of_war_modifier] = float
+alias[modifier:is_man_of_war_modifier] = bool
 
 ## scope = country
 alias[modifier:man_of_war_cost_modifier] = float

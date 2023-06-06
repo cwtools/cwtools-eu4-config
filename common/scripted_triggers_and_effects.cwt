@@ -177,7 +177,10 @@ alias[effect:transfer_treasury] = {
 	taker = enum[country_tags]
 	taker = scope[country]
 
+	## cardinality = 0..1
 	variable = int
+	## cardinality = 0..1
+	variable = value_set[variable]
 
 	## cardinality = 0..1
 	custom_tooltip = localisation

@@ -1380,7 +1380,7 @@ alias[trigger:has_global_flag] = value[global_flag]
 ## scope = country
 ###Returns true if the value of the specified modifier is at least X for the country.
 alias[trigger:has_global_modifier_value] = {
-	which = enum[modifiers] #todo
+	which = enum[modifier_value] #todo
 	value = float
 	## cardinality = 0..1
 	extra_shortcut = bool
@@ -1493,7 +1493,7 @@ alias[trigger:has_leader_with] = {
 ## scope = province
 ###Returns true if the value of the specified modifier is at least X for the province..
 alias[trigger:has_local_modifier_value] = {
-	which = enum[modifiers] #todo
+	which = enum[modifier_value] 
 	value = float
 }
 
@@ -5845,3 +5845,10 @@ alias[trigger:num_of_caravel] = int
 
 ## scope = country
 alias[trigger:num_of_voc_indiamen] = int
+
+## scope = country
+###Country will support an Imperial Reform. Imperial Reforms are found in /Europa Universalis IV/common/imperial_reforms/00_hre.txt.
+alias[trigger:will_back_reform] = <imperial_reform>
+
+## scope = country
+alias[trigger:has_spare_flagship_capacity] = bool

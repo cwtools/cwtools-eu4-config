@@ -306,7 +306,7 @@ alias[effect:add_tribal_allegiance] = int
 
 ## scope = country
 ###Changes the Organist-Statist balance. Positive moves towards Orangist, negative moves towards Statists.
-alias[effect:change_statists_vs_orangists] = float[-2.0..2.0]
+alias[effect:change_statists_vs_orangists] = float[-10.0..1.0]
 
 ## scope = country
 ###Changes the Organist-Monarchist balance. Positive (probably) moves towards Monarchist, negative (probably) moves towards Statists.
@@ -989,6 +989,8 @@ alias[effect:create_general] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -1758,10 +1760,16 @@ alias[effect:convert_female_ruler_to_general] = int
 ## scope = country
 ###Converts a male ruler into a general, a number can be provided instead of 'yes' to use as tradition during generation.
 alias[effect:convert_ruler_to_general] = yes
-
 ## scope = country
 ###Converts a male ruler into a general, a number can be provided instead of 'yes' to use as tradition during generation.
 alias[effect:convert_ruler_to_general] = int[0..inf]
+
+## scope = country
+###Converts a male ruler into a admiral, a number can be provided instead of 'yes' to use as tradition during generation.
+alias[effect:convert_ruler_to_admiral] = yes
+## scope = country
+###Converts a male ruler into a admiral, a number can be provided instead of 'yes' to use as tradition during generation.
+alias[effect:convert_ruler_to_admiral] = int[0..inf]
 
 ## scope = country
 ###Adds an event modifier to the current scope as a ruler modifier. Ruler modifiers are cleared when the ruler dies.

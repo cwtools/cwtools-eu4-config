@@ -394,11 +394,27 @@ enums = {
 		}
 		start_from_root = yes
 	}
-	#no idea what all can go here
-	enum[modifiers] = {
+	enum[modifier_value] = {
+		army_tradition
+		artillery_power
+		build_cost
 		cavalry_power
+		core_creation
+		defensiveness
 		discipline
+		female_advisor_chance
+		galley_power
+		global_manpower_modifier
+		heavy_ship_power
+		infantry_power
+		land_forcelimit_modifier
+		land_morale
+		mercenary_discipline
+		missionaries
+		naval_forcelimit_modifier
 		ship_durability
+		stability_cost_to_declare_war
+		tolerance_heathen
 	}
 	enum[native_policies] = {
 		native_policy_coexist
@@ -528,3 +544,4 @@ enums = {
 		random_repeating
 	}
 }
+
