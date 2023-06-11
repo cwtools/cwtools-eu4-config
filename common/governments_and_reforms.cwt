@@ -956,7 +956,7 @@ government = {
 		}
 
 		reform_levels = {
-			## cardinality = 1..12
+			## cardinality = 1..inf
 			localisation = {
 				reforms = {
 					## cardinality = 1..inf
