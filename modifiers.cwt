@@ -1740,7 +1740,7 @@ alias[modifier:has_cossacks] = bool
 alias[modifier:local_has_cossacks] = bool
 
 ## scope = country
-alias[modifier:allowed_cossacks_fraction] = float
+alias[modifier:allowed_cossack_fraction] = float
 
 ## scope = country
 alias[modifier:amount_of_cossacks] = float
