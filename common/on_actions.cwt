@@ -482,6 +482,8 @@ types = {
 		subtype[on_royal_marriage_broken] = { }
 		## type_key_filter = on_mandate_reform_passed
 		subtype[on_mandate_reform_passed] = { }
+		## type_key_filter = on_heir_disinherited
+		subtype[on_heir_disinherited] = { }
 	}
 }
 on_action = {
@@ -4153,5 +4155,21 @@ on_action = {
 
   	alias_name[effect] = alias_match_left[effect]
 	}
-}
+	## replace_scope = { root = country this = country from = country }
+	subtype[on_heir_disinherited] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
 
+  	alias_name[effect] = alias_match_left[effect]
+	}
+}
