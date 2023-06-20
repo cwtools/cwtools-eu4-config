@@ -1820,9 +1820,4 @@ alias[modifier:same_religion_advisor_cost] = float
 ## scope = country
 alias[modifier:<estate>_loyalty_modifier] = float
 
-## scope = country
-alias[modifier:allowed_cossack_fraction] = float
-
-## scope = country
-alias[modifier:allowed_rajput_fraction] = float
 
