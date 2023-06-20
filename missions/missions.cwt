@@ -50,7 +50,7 @@ mission_series = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## cardinality = 1..inf
+	## cardinality = 0..inf
 	<mission> = {
 		icon = <sprite>
 		## cardinality = 0..1
