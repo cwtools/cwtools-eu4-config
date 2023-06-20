@@ -181,6 +181,9 @@ estate_privilege = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
+	###Conditions for whether it is possible for the country to revoke this privilege
+	can_revoke = bool
+	## cardinality = 0..1
 	###Conditions for whether the country is allowed to select the privilege (with conditions for why not displayed)
 	can_select = {
 		alias_name[trigger] = alias_match_left[trigger]
