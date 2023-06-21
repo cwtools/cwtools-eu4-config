@@ -546,5 +546,12 @@ enums = {
 		random
 		random_repeating
 	}
+	enum[message_options] = {
+		MULTISUBJECTINTERACT
+	}
+	enum[message_data_options] = {
+		sword_hunt
+		sankin_kotai
+		expel_ronin
+	}
 }
-

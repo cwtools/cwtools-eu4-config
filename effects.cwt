@@ -148,6 +148,10 @@ alias[effect:add_country_modifier] = {
 	## cardinality = 0..1
 	###The string used to override the automatic duration string.
 	desc = localisation
+	## cardinality = 0..1
+	message = enum[message_options]
+	## cardinality = 0..1
+	message_data = enum[message_data_options]
 }
 
 ## scope = country
