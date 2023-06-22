@@ -199,6 +199,9 @@ enums = {
 		dlc121
 		dlc122
 		dlc123
+		dlc124
+		dlc125
+		dlc126
 	}
 	enum[key_name] = {
 		key
@@ -543,5 +546,12 @@ enums = {
 		random
 		random_repeating
 	}
+	enum[message_options] = {
+		MULTISUBJECTINTERACT
+	}
+	enum[message_data_options] = {
+		sword_hunt
+		sankin_kotai
+		expel_ronin
+	}
 }
-
