@@ -404,10 +404,12 @@ enums = {
 		cavalry_power
 		core_creation
 		defensiveness
+		diplomatic_reputation
 		discipline
 		female_advisor_chance
 		galley_power
 		global_manpower_modifier
+		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
 		land_forcelimit_modifier
