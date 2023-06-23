@@ -235,7 +235,7 @@ alias[effect:create_units_of_type] = {
 	custom_tooltip = localisation
 }
 
-## scope = country
+## scope = province
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
 	unit_type = <unit_type>
