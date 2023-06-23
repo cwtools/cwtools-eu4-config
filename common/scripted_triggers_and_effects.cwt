@@ -238,7 +238,6 @@ alias[effect:create_units_of_type] = {
 ## scope = country
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
-	province = <province_id>
 	unit_type = <unit_type>
 	who = enum[country_tags]
 	who = scope[country]
