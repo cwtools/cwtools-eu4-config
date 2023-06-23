@@ -404,6 +404,7 @@ enums = {
 		cavalry_power
 		core_creation
 		defensiveness
+		development_cost
 		diplomatic_reputation
 		discipline
 		female_advisor_chance
@@ -420,6 +421,7 @@ enums = {
 		ship_durability
 		stability_cost_to_declare_war
 		tolerance_heathen
+		tolerance_heretic
 	}
 	enum[native_policies] = {
 		native_policy_coexist
