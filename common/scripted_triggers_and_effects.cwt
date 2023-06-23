@@ -148,7 +148,7 @@ alias[effect:faction_in_power_effect] = {
 
 ## scope = country
 alias[effect:add_inflation_scaled_to_trade] = {
-	inflation = int
+	inflation = float
 	## cardinality = 0..1
 	custom_tooltip = localisation
 }
@@ -235,10 +235,9 @@ alias[effect:create_units_of_type] = {
 	custom_tooltip = localisation
 }
 
-## scope = country
+## scope = province
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
-	province = <province_id>
 	unit_type = <unit_type>
 	who = enum[country_tags]
 	who = scope[country]
