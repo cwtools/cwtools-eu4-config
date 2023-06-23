@@ -10,6 +10,7 @@ modifiers = {
 	allowed_cossack_fraction = country
 	allowed_num_of_buildings = province
 	allowed_rajput_fraction = country
+	allowed_rev_guard_fraction = country
 	amount_of_banners = country
 	army_tradition = country
 	army_tradition_decay = country
@@ -1820,4 +1821,5 @@ alias[modifier:same_religion_advisor_cost] = float
 ## scope = country
 alias[modifier:<estate>_loyalty_modifier] = float
 
-
+## scope = country
+alias[modifier:allowed_rev_guard_fraction] = float
