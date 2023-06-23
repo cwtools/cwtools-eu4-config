@@ -148,7 +148,7 @@ alias[effect:faction_in_power_effect] = {
 
 ## scope = country
 alias[effect:add_inflation_scaled_to_trade] = {
-	inflation = int
+	inflation = float
 	## cardinality = 0..1
 	custom_tooltip = localisation
 }
