@@ -1,30 +1,52 @@
+# Note Modifiers need to be added to the top and bottom of this file for autocomplete to work
+
+# added for autocomplete
 modifiers = {
 	accept_vassalization_reasons = country
+	add_tribal_land_cost = country
 	adm_advisor_cost = country
 	adm_tech_cost_modifier = country
 	administrative_efficiency = country
+	admiral_cost = country
 	advisor_cost = country
 	advisor_pool = country
 	ae_impact = country
+	all_estate_influence_modifier = country
+	all_estate_loyalty_equilibrium = country
 	all_power_cost = country
+	allow_client_states = country
 	allowed_cossack_fraction = country
+	allow_free_estate_privilege_revocation = country
+	allowed_marine_fraction = country
 	allowed_num_of_buildings = province
+	allowed_num_of_manufactories = province
 	allowed_rajput_fraction = country
 	allowed_rev_guard_fraction = country
 	amount_of_banners = country
+	amount_of_carolean = country
+	amount_of_cawa = country
+	amount_of_hussars = country
+	appoint_cardinal_cost = country
 	army_tradition = country
 	army_tradition_decay = country
 	army_tradition_from_battle = country
 	artillery_cost = country
+	artillery_fire = country
+	artillery_shock = country
 	artillery_levels_available_vs_fort = country
 	artillery_power = country
+	attack_bonus_in_capital_terrain = country
 	attrition = province
 	autonomy_change_time = country
+	available_province_loot = country
 	backrow_artillery_damage = country
+	blockade_force_required = province
 	block_introduce_heir = country
+	block_slave_raid = province
 	blockade_efficiency = country
 	build_cost = country
 	build_time = country
+ 	can_recruit_hussars = country
 	candidate_random_bonus = country
 	capture_ship_chance = country
 	caravan_power = country
@@ -32,16 +54,26 @@ modifiers = {
 	cavalry_cost = country
 	cavalry_flanking = country
 	cavalry_power = country
+	cavalry_fire = country
+	cavalry_shock = country
+	cawa_cost_modifier = country
 	cb_on_religious_enemies = country
+	center_of_trade_upgrade_cost = country
 	church_power_modifier = country
 	claim_duration = country
 	colonist_placement_chance = country
 	colonists = country
 	core_creation = country
 	core_decay_on_your_own = country
+	country_admin_power = country
+	country_diplomatic_power = country
+	country_military_power = country
 	culture_conversion_cost = country
+	curia_powers_cost = country
+	curia_treasury_contribution = country
 	defensiveness = country
 	development_cost = country
+	development_cost_modifier = country
 	devotion = country
 	dip_advisor_cost = country
 	dip_tech_cost_modifier = country
@@ -60,17 +92,22 @@ modifiers = {
 	enemy_core_creation = country
 	enforce_religion_cost = country
 	envoy_travel_time = country
+	establish_order_cost = country
 	expand_administration_cost = country
+	expel_minorities_cost = country
 	fabricate_claims_cost = country
 	female_advisor_chance = country
 	fire_damage = country
 	fire_damage_received = country
+	flagship_cost = country
+	free_land_leader_pool = country
 	fort_level = province
 	fort_maintenance_modifier = country
 	free_adm_policy = country
 	free_city_imperial_authority = country
 	free_dip_policy = country
 	free_leader_pool = country
+	free_navy_leader_pool = country
 	free_mil_policy = country
 	free_policy = country
 	galley_cost = country
@@ -78,18 +115,26 @@ modifiers = {
 	garrison_growth = province
 	garrison_size = country
 	general_cost = country
+	global_allowed_num_of_buildings = country
+	global_attacker_dice_roll_bonus = country
 	global_autonomy = country
 	global_colonial_growth = country
+	global_defender_dice_roll_bonus = country
 	global_foreign_trade_power = country
 	global_garrison_growth = country
+	global_heathen_missionary_strength = country
 	global_heretic_missionary_strength = country
 	global_institution_spread = country
 	global_manpower = country
 	global_manpower_modifier = country
 	global_missionary_strength = country
+	global_monthly_devastation = country
+	global_naval_barrage_cost = country
 	global_naval_engagement_modifier = country
 	global_own_trade_power = country
+	global_prosperity_growth = country
 	global_prov_trade_power_modifier = country
+	global_rebel_suppression_efficiency = country
 	global_regiment_cost = country
 	global_regiment_recruit_speed = country
 	global_religious_conversion_resistance = country
@@ -100,27 +145,39 @@ modifiers = {
 	global_ship_repair = country
 	global_ship_trade_power = country
 	global_spy_defence = country
+	global_supply_limit_modifier = country
 	global_tariffs = country
 	global_tax_income = country
 	global_tax_modifier = country
+	global_trade_goods_size = country
 	global_trade_goods_size_modifier = country
 	global_trade_power = country
 	global_unrest = country
+	gold_depletion_chance_modifier = country
 	governing_capacity = country
+	governing_capacity_modifier = country
+	great_project_upgrade_cost = country
 	harmonization_speed = country
 	harsh_treatment_cost = country
+	has_banners = country
+	has_carolean = country
 	heavy_ship_cost = country
 	heavy_ship_power = country
 	heir_chance = country
 	horde_unity = country
 	hostile_attrition = country
+	hostile_disembark_speed = province
+	hostile_fleet_attrition = province
 	idea_cost = country
 	imperial_authority = country
 	imperial_authority_value = country
+	imperial_reform_catholic_approval = country
 	imperial_mercenary_cost = country
 	improve_relation_modifier = country
 	infantry_cost = country
+	infantry_fire = country
 	infantry_power = country
+	infantry_shock = country
 	inflation_action_cost = country
 	inflation_reduction = country
 	inflation_reduction_local = province
@@ -128,8 +185,15 @@ modifiers = {
 	institution_growth = province
 	institution_spread_from_true_faith = country
 	interest = country
+	is_banner_modifier = country
+	is_carolean_modifier = country
+	is_cawa_modifier = country
+	is_cossack_modifier = country
+	is_hussars_modifier = country
 	is_imperial_modifier = country
+	is_marine_modifier = country
 	is_revolutionary_guard_modifier = country
+	is_streltsy_modifier = country
 	justify_trade_conflict_cost = country
 	land_attrition = country
 	land_forcelimit = country
@@ -151,16 +215,31 @@ modifiers = {
 	light_ship_cost = country
 	light_ship_power = country
 	local_amount_of_banners = province
+	local_amount_of_carolean = province
+	local_amount_of_cawa = province
+	local_amount_of_hussars = province
+	local_attacker_dice_roll_bonus = province
 	local_autonomy = province
 	local_build_cost = province
 	local_build_time = province
+	local_center_of_trade_upgrade_cost = country
 	local_colonial_growth = province
 	local_colonist_placement_chance = province
 	local_core_creation = province
 	local_culture_conversion_cost = province
+	local_defender_dice_roll_bonus = province
 	local_defensiveness = province
 	local_development_cost = province
+	local_development_cost_modifier = province
 	local_friendly_movement_speed = province
+	local_fort_maintenance_modifier = province
+	local_garrison_size = province
+	local_gold_depletion_chance_modifier = province
+	local_governing_cost = province
+	local_governing_cost_increase = province
+	local_great_project_upgrade_cost = province
+	local_has_carolean = province
+	local_has_banners = province
 	local_heir_adm = country
 	local_heir_dip = country
 	local_heir_mil = country
@@ -169,12 +248,16 @@ modifiers = {
 	local_institution_spread = province
 	local_manpower = province
 	local_manpower_modifier = province
+	local_missionary_maintenance_cost = province
 	local_missionary_strength = province
 	local_monthly_devastation = province
 	local_naval_engagement_modifier = province
+	local_own_coast_naval_combat_bonus = province
 	local_production_efficiency = province
+	local_prosperity_growth = province
 	local_regiment_cost = province
 	local_religious_conversion_resistance = province
+	local_religious_unity_contribution = province
 	local_sailors = province
 	local_sailors_modifier = province
 	local_ship_cost = province
@@ -184,11 +267,17 @@ modifiers = {
 	local_unrest = province
 	local_years_of_nationalism = province
 	loot_amount = country
+	manpower_in_accepted_culture_provinces = country
+	manpower_in_culture_group_provinces = country
+	manpower_in_own_culture_provinces = country
+	manpower_in_true_faith_provinces = country
 	manpower_recovery_speed = country
 	max_absolutism = country
 	max_attrition = province
 	max_electors = country
 	max_free_cities = country
+	max_hostile_attrition = country	
+	max_revolutionary_zeal = country
 	max_terms = country
 	may_perform_slave_raid = country
 	may_perform_slave_raid_on_same_religion = country
@@ -197,28 +286,46 @@ modifiers = {
 	mercantilism_cost = country
 	mercenary_cost = country
 	mercenary_discipline = country
+	mercenary_manpower = country
 	merchants = country
 	meritocracy = country
+	migration_cost = country
+	military_tactics = country
 	mil_advisor_cost = country
 	mil_tech_cost_modifier = country
 	min_autonomy = country
 	min_autonomy_in_territories = country
 	min_local_autonomy = province
 	missionaries = country
+	missionary_maintenance_cost = country
 	monarch_admin_power = country
 	monarch_diplomatic_power = country
 	monarch_lifespan = country
 	monarch_military_power = country
+	monthly_church_power = country
+	monthly_favor_modifier = country
+	monthly_federation_favor_growth = country
 	monthly_fervor_increase = country
+	monthly_gold_inflation_modifier = country
+	monthly_heir_claim_increase = country
 	monthly_karma = country
+	monthly_karma_accelerator = country
 	monthly_militarized_society = country
 	monthly_piety = country
+	monthly_piety_accelerator = country
+	monthly_reform_progress = country
+	monthly_reform_progress_building = country
+	monthly_reform_progress_modifier = country
 	monthly_splendor = country
+	monthly_support_heir_gain = country
+	move_capital_cost_modifier = country
 	movement_speed = country
+	movement_speed_in_fleet_modifier = country
 	movement_speed_onto_off_boat_modifier = country
 	native_assimilation = country
 	native_uprising_chance = country
 	naval_attrition = country
+	naval_tradition_from_trade = country
 	naval_forcelimit = country
 	naval_forcelimit_modifier = country
 	naval_maintenance_modifier = country
@@ -226,7 +333,10 @@ modifiers = {
 	naval_tradition_from_battle = country
 	navy_tradition = country
 	navy_tradition_decay = country
+	no_stability_loss_on_monarch_death = country
 	num_accepted_cultures = country
+	overlord_naval_forcelimit = country
+	overlord_naval_forcelimit_modifier = country
 	own_coast_naval_combat_bonus = country
 	papal_influence = country
 	papal_influence_from_cardinals = country
@@ -235,6 +345,8 @@ modifiers = {
 	possible_condottieri = country
 	possible_dip_policy = country
 	possible_mil_policy = country
+	possible_policy = country
+	power_projection_from_insults = country
 	prestige = country
 	prestige_decay = country
 	prestige_from_land = country
@@ -258,7 +370,11 @@ modifiers = {
 	regiment_recruit_speed = province
 	reinforce_cost_modifier = country
 	reinforce_speed = country
+	relation_with_heathens = country
 	relation_with_heretics = country
+	relation_with_same_culture = country
+	relation_with_same_culture_group = country
+	relation_with_same_religion = country
 	religious_unity = country
 	republican_tradition = country
 	reserves_organisation = country
@@ -268,6 +384,7 @@ modifiers = {
 	sailors_recovery_speed = country
 	same_culture_advisor_cost = country
 	secondary_religion = country
+	settle_cost = country
 	ship_durability = country
 	ship_power_propagation = country
 	ship_recruit_speed = province
@@ -278,8 +395,11 @@ modifiers = {
 	special_unit_forcelimit = country
 	spy_offence = country
 	stability_cost_modifier = country
+	stability_cost_to_declare_war = country
 	state_governing_cost = country
+	state_governing_cost_increase = country
 	state_maintenance_modifier = country
+	statewide_governing_cost = province
 	sunk_ship_morale_hit_recieved = country
 	supply_limit = province
 	supply_limit_modifier = province
@@ -287,8 +407,11 @@ modifiers = {
 	technology_cost = country
 	tolerance_heathen = country
 	tolerance_heretic = country
+	tolerance_of_heathens_capacity = country
+	tolerance_of_heretics_capacity = country
 	tolerance_own = country
 	trade_company_governing_cost = country
+	trade_company_investment_cost = country
 	trade_efficiency = country
 	trade_goods_size = province
 	trade_goods_size_modifier = province
@@ -299,7 +422,10 @@ modifiers = {
 	transfer_trade_power_reasons = country
 	transport_cost = country
 	transport_power = country
+	treasure_fleet_income = country
+	tribal_development_growth = country
 	unjustified_demands = country
+	unrest_catholic_provinces = country
 	vassal_forcelimit_bonus = country
 	vassal_income = country
 	war_exhaustion = country
@@ -308,12 +434,17 @@ modifiers = {
 	warscore_cost_vs_other_religion = country
 	yearly_absolutism = country
 	yearly_army_professionalism = country
+	yearly_authority = country
 	yearly_corruption = country
+	yearly_doom_reduction = country
 	yearly_harmony = country
+	yearly_karma_decay = country
+	yearly_revolutionary_zeal = country
 	years_of_nationalism = country
 }
 
-#These are the ones missed by the wiki
+
+# The items below are added for correct = int float bool etc
 
 ## scope = country
 ###Country can raise Banners Special Unit
@@ -359,16 +490,12 @@ alias[modifier:center_of_trade_upgrade_cost] = float
 alias[modifier:local_center_of_trade_upgrade_cost] = float
 
 ## scope = country
-alias[modifier:artillery_fire] = int
-## scope = country
 alias[modifier:possible_policy] = int
 ## scope = country
 alias[modifier:power_projection_from_insults] = float
 
 ## scope = province
 alias[modifier:local_religious_unity_contribution] = float
-
-#mr_<faction>_influence
 
 ## scope = country
 alias[modifier:country_admin_power] = int
@@ -386,16 +513,10 @@ alias[modifier:stability_cost_to_declare_war] = int
 alias[modifier:global_heathen_missionary_strength] = float
 
 ## scope = country
-alias[modifier:max_revolutionary_zeal] = int
-
-## scope = country
 alias[modifier:mercenary_manpower] = float
 
 ## scope = country
 alias[modifier:governing_capacity_modifier] = float
-
-## scope = country
-alias[modifier:governing_capacity] = int
 
 ## scope = country
 alias[modifier:manpower_in_true_faith_provinces] = float
@@ -520,10 +641,6 @@ alias[modifier:global_monthly_devastation] = float
 ### Global prosperity growth
 alias[modifier:global_prosperity_growth] = float
 
-## scope = country
-### Global prosperity growth
-alias[modifier:global_prosperity_growth] = float
-
 ## scope = province
 ### Local prosperity growth
 alias[modifier:local_prosperity_growth] = float
@@ -580,15 +697,6 @@ alias[modifier:amount_of_cawa] = float
 alias[modifier:<estate_modifier>] = float
 
 ## scope = country
-alias[modifier:country_admin_power] = int
-
-## scope = country
-alias[modifier:country_diplomatic_power] = int
-
-## scope = country
-alias[modifier:country_military_power] = int
-
-## scope = country
 alias[modifier:yearly_patriarch_authority] = float
 
 ## scope = country
@@ -596,9 +704,6 @@ alias[modifier:yearly_karma_decay] = float
 
 ## scope = country
 alias[modifier:available_province_loot] = float
-
-## scope = country
-alias[modifier:stability_cost_to_declare_war] = float
 
 ## scope = country
 alias[modifier:appoint_cardinal_cost] = float
@@ -628,6 +733,8 @@ alias[modifier:cavalry_fire] = float
 alias[modifier:cavalry_shock] = float
 
 ## scope = country
+alias[modifier:artillery_fire] = int
+## scope = country
 alias[modifier:artillery_fire] = float
 
 ## scope = country
@@ -638,9 +745,6 @@ alias[modifier:max_revolutionary_zeal] = int
 
 ## scope = country
 alias[modifier:yearly_revolutionary_zeal] = float
-
-## scope = country
-alias[modifier:mercenary_manpower] = float
 
 ## scope = country
 alias[modifier:flagship_cost] = float
@@ -659,6 +763,9 @@ alias[modifier:hostile_fleet_attrition] = float
 ## scope = country
 alias[modifier:governing_capacity] = float
 ## scope = country
+alias[modifier:governing_capacity] = int
+
+## scope = country
 alias[modifier:allowed_marine_fraction] = float
 
 ## scope = country
@@ -675,7 +782,6 @@ alias[modifier:may_recruit_female_generals] = bool
 alias[modifier:is_revolutionary_guard_modifier] = bool
 alias[modifier:special_unit_forcelimit] = float
 alias[modifier:global_religious_conversion_resistance] = float
-alias[modifier:local_religious_conversion_resistance] = float
 alias[modifier:legitimate_subject_elector] = int
 alias[modifier:mercantilism_cost] = float
 alias[modifier:secondary_religion] = bool
@@ -695,7 +801,6 @@ alias[modifier:free_navy_leader_pool] = float
 alias[modifier:relation_with_same_culture] = int
 alias[modifier:relation_with_same_culture_group] = int
 alias[modifier:is_marine_modifier] = bool
-alias[modifier:relation_with_heathens] = int
 alias[modifier:is_banner_modifier] = bool
 alias[modifier:is_streltsy_modifier] = bool
 alias[modifier:is_cossack_modifier] = bool
@@ -755,6 +860,9 @@ alias[modifier:is_carolean_modifier] = yes
 ## scope = country
 ###Causes modifier to only affect Hussar regiments
 alias[modifier:is_hussars_modifier] = yes
+
+## scope = province
+alias[modifier:local_religious_conversion_resistance] = float
 
 ## scope = province
 ###Increases how many caroleans can be raised in this province
@@ -972,10 +1080,6 @@ alias[modifier:free_maintenance_on_expl_conq] = yes
 alias[modifier:cb_on_overseas] = yes
 
 ## scope = country
-###Gains +1 when attacking in the terrain of your capital
-alias[modifier:attack_bonus_in_capital_terrain] = yes
-
-## scope = country
 alias[modifier:can_bypass_forts] = yes
 
 ## scope = country
@@ -1003,10 +1107,6 @@ alias[modifier:may_return_manpower_on_disband] = yes
 alias[modifier:auto_explore_adjacent_to_colony] = yes
 
 ## scope = country
-###May recruit female generals
-alias[modifier:may_recruit_female_generals] = yes
-
-## scope = country
 ###Reduces stability impact of certain actions
 alias[modifier:reduced_stab_impacts] = yes
 
@@ -1026,20 +1126,12 @@ alias[modifier:may_explore] = yes
 alias[modifier:may_establish_frontier] = yes
 
 ## scope = country
-###May perform slave raids
-alias[modifier:may_perform_slave_raid] = yes
-
-## scope = country
 ###Heretic and Heathen provinces do not give any penalties
 alias[modifier:no_religion_penalty] = yes
 
 ## scope = country
 ###Ships can repair when in coastal zones
 alias[modifier:sea_repair] = yes
-
-## scope = country
-###Permanent casus belli against neighboring heathens and heretics
-alias[modifier:cb_on_religious_enemies] = yes
 
 ## scope = country
 ###May fabricate claims for subjects
