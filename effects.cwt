@@ -51,11 +51,18 @@ alias[effect:divide_variable] = {
 }
 
 ## scope = any
+### Paradox reports that which = is optional
 alias[effect:change_variable] = {
 	## cardinality = 1..2
 	which = value_set[variable]
-	## cardinality = 0..1
+	## cardinality = 1..1
 	value = float
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
 }
 
 ## scope = any
