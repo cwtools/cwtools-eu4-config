@@ -5852,3 +5852,7 @@ alias[trigger:will_back_reform] = <imperial_reform>
 
 ## scope = country
 alias[trigger:has_spare_flagship_capacity] = bool
+
+## scope = country
+###Returns true if the country is a neighbor of the specified province.
+alias[trigger:is_neighbor_of_province] = <province_id>

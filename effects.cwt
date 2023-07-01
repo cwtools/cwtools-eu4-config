@@ -51,11 +51,18 @@ alias[effect:divide_variable] = {
 }
 
 ## scope = any
+### Paradox reports that which = is optional
 alias[effect:change_variable] = {
 	## cardinality = 1..2
 	which = value_set[variable]
 	## cardinality = 0..1
 	value = float
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
 }
 
 ## scope = any
@@ -1909,6 +1916,8 @@ alias[effect:define_ruler] = {
 	change_dip = int[-6..6]
 	## cardinality = 0..1
 	change_mil = int[-6..6]
+	## cardinality = 0..1
+	change_original_dynasty = bool
 }
 
 ## scope = country
