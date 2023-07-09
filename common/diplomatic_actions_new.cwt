@@ -50,6 +50,7 @@ new_diplomatic_action = {
 	on_accept = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+	## cardinality = 0..1
 	## replace_scope = { this = country root = country from = country }
 	on_decline = {
 		alias_name[effect] = alias_match_left[effect]
