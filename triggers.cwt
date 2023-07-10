@@ -4168,11 +4168,10 @@ alias[trigger:trade_goods] = <province_id>
 ###Returns true if the ratio of trade income to total income is at least X.
 alias[trigger:trade_income_percentage] = float[0.0..1.0]
 
-## scope = trade_node
+## scope = { trade_node capital_scope }
 ###Returns true if the trade node is within the trade range of the specified country.
 alias[trigger:trade_range] = scope[country]
-
-## scope = trade_node
+## scope = { trade_node capital_scope }
 ###Returns true if the trade node is within the trade range of the specified country.
 alias[trigger:trade_range] = enum[country_tags]
 
