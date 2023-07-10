@@ -1395,11 +1395,6 @@ alias[trigger:has_government_mechanic] = enum[government_mechanics]
 alias[trigger:has_government_mechanic] = <government_mechanic>
 
 ## scope = country
-###Returns true if the country uses the specified government mechanic.
-# It seems to accept a government power too
-alias[trigger:has_government_mechanic] = <government_mechanic_power>
-
-## scope = country
 ###No sure what this does and what values are accepted here, please report!
 alias[trigger:has_government_power] = unknown
 
@@ -1493,7 +1488,7 @@ alias[trigger:has_leader_with] = {
 ## scope = province
 ###Returns true if the value of the specified modifier is at least X for the province..
 alias[trigger:has_local_modifier_value] = {
-	which = enum[modifier_value] 
+	which = enum[modifier_value]
 	value = float
 }
 
