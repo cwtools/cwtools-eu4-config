@@ -3914,7 +3914,7 @@ alias[effect:add_random_development] = int
 alias[effect:add_rebel_progress] = {
 	value = int
 	## cardinality = 0..1
-	type = <rebel_type>
+	rebel_type = <rebel_type>
 }
 
 ## scope = country
