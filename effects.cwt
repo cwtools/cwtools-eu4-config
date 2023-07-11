@@ -883,6 +883,8 @@ alias[effect:create_admiral] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -922,7 +924,7 @@ alias[effect:create_explorer] = {
 	## cardinality = 0..1
 	name = localisation_synced
 	## cardinality = 0..1
-	female = yes
+	female = bool
 }
 
 ## scope = country
@@ -961,6 +963,8 @@ alias[effect:create_conquistador] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
