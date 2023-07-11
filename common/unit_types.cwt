@@ -35,6 +35,8 @@ unit_type = {
 		defensive_fire = int
 		offensive_shock = int
 		defensive_shock = int
+		## cardinality = 0..1
+		manpower = float
 	}
 	subtype[naval] = {
 		hull_size = int
