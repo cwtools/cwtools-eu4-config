@@ -184,6 +184,15 @@ faction = {
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
+
+	## cardinality = 0..1
+	triggered_faction_name = {
+		name = scalar
+
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
 }
 
 
