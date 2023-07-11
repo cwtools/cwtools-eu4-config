@@ -1122,6 +1122,10 @@ alias[modifier:cb_on_primitives] = yes
 alias[modifier:may_explore] = yes
 
 ## scope = country
+###May not reduce inflation
+alias[modifier:may_not_reduce_inflation] = yes
+
+## scope = country
 ###May establish frontier colonies like Siberian Frontier
 alias[modifier:may_establish_frontier] = yes
 
