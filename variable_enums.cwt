@@ -10,6 +10,7 @@ enums = {
 		consort_dip
 		consort_mil
 		consort_religion
+		culture
 		dip_advisor_culture
 		dip_advisor_religion
 		heir_adm
