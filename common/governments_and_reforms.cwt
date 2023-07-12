@@ -122,7 +122,8 @@ government_mechanic = {
 	###the index of the icon for this mechanic in the strip of alert_icon_gfx
 	alert_icon_index = int[1..inf]
 	## replace_scope = { root = country this = country }
-	###criteria for the mechanic to be available
+	###criteria for the mechanic to be available, regardless of what is here one must have a government reform with the mechanic in its government_mechanic = { } block.
+	## cardinality = 0..1
 	available = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
