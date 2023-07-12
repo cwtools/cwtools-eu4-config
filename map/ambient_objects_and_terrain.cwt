@@ -83,6 +83,7 @@ terrain = {
 		int[0..255]
 	}
 
+	alias_name[modifier] = alias_match_left[modifier]
 
 	## cardinality = 0..1
 	movement_cost = float
