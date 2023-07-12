@@ -26,3 +26,7 @@ alias[ability:cb_on_religious_enemies] = yes
 alias[ability:can_fabricate_for_vassals] = yes
 alias[ability:idea_claim_colonies] = yes
 alias[ability:may_perform_slave_raid_on_same_religion] = yes
+
+#the following stuff is not used anywhere
+
+alias[ability:may_not_reduce_inflation] = yes
