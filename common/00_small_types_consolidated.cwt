@@ -187,8 +187,9 @@ faction = {
 
 	## cardinality = 0..1
 	triggered_faction_name = {
-		name = scalar
+		name = localisation
 
+		## replace_scope = { this = country root = country }
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
