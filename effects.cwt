@@ -1832,7 +1832,7 @@ alias[effect:define_leader_to_ruler] = {
 }
 
 ## scope = country
-###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.
+###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.  If dynasty = historic_dynasty is used the game will pick one weighted by how many rulers a family has had.
 alias[effect:define_ruler] = {
 #	## cardinality = 0..1
 #	name = localisation_synced
