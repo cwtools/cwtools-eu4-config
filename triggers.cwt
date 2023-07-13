@@ -364,9 +364,12 @@ alias[trigger:cavalry_in_province] = enum[country_tags]
 ## scope = { province country }
 ###Returns true if the specified variable is at least X.
 alias[trigger:check_variable] = {
-	## cardinality = 1..2
+	## cardinality = 0..2
 	## severity = warning
 	which = value[variable]
+	## cardinality = 0..2
+	## severity = warning
+	value[variable] = float
 	## cardinality = 0..1
 	value = float
 }
@@ -4345,32 +4348,55 @@ alias[trigger:variable_arithmetic_trigger] = {
 
 	## cardinality = 0..inf
 	multiply_variable = {
-		## cardinality = 1..2
+		## cardinality = 0..2
 		which = value[variable]
+		## cardinality = 0..2
+		## severity = warning
+		value[variable] = float
 		## cardinality = 0..1
 		value = float
 	}
 
 	## cardinality = 0..inf
 	subtract_variable = {
-		## cardinality = 1..2
+		## cardinality = 0..2
 		which = value[variable]
+		## cardinality = 0..2
+		## severity = warning
+		value[variable] = float
 		## cardinality = 0..1
 		value = float
 	}
 
 	## cardinality = 0..inf
 	change_variable = {
-		## cardinality = 1..2
+		## cardinality = 0..2
 		which = value[variable]
+		## cardinality = 0..2
+		## severity = warning
+		value[variable] = float
 		## cardinality = 0..1
 		value = float
 	}
 
 	## cardinality = 0..inf
 	check_variable = {
-		## cardinality = 1..2
+		## cardinality = 0..2
 		which = value[variable]
+		## cardinality = 0..2
+		## severity = warning
+		value[variable] = float
+		## cardinality = 0..1
+		value = float
+	}
+
+	## cardinality = 0..inf
+	divide_variable = {
+		## cardinality = 0..2
+		which = value[variable]
+		## cardinality = 0..2
+		## severity = warning
+		value[variable] = float
 		## cardinality = 0..1
 		value = float
 	}

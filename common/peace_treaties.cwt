@@ -105,6 +105,15 @@ peace_treaty = {
 			value = int
 		}
 		## cardinality = 0..1
+		set_variable = {
+			## cardinality = 0..1
+			which = ai_value
+			## cardinality = 0..1
+			value = float
+			## cardinality = 0..1
+			ai_value = float
+		}
+		## cardinality = 0..1
 		## replace_scope = { root = country this = country from = country }
 		###if limit evaluates false, ai_weight will evaluate to 0 regardless
 		limit = { 

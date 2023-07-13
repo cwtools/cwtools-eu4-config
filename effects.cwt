@@ -43,11 +43,25 @@ alias[effect:multiply_variable] = {
 }
 
 ## scope = any
+### Paradox reports that which = is optional
+alias[effect:multiply_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
+}
+
+## scope = any
 alias[effect:divide_variable] = {
 	## cardinality = 1..2
 	which = value[variable]
 	## cardinality = 0..1
 	value = float
+}
+
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:divide_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
 }
 
 ## scope = any
@@ -74,6 +88,13 @@ alias[effect:subtract_variable] = {
 }
 
 ## scope = any
+### Paradox reports that which = is optional
+alias[effect:subtract_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
+}
+
+## scope = any
 alias[effect:set_variable] = {
 	## cardinality = 1..2
 	which = value_set[variable]
@@ -83,7 +104,12 @@ alias[effect:set_variable] = {
 	value = value[variable]
 }
 
-
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:set_variable] = {
+	## cardinality = 1..2
+	value_set[variable] = float
+}
 
 ## scope = any
 ###Defines a global flag.
