@@ -408,20 +408,37 @@ enums = {
 		diplomatic_reputation
 		discipline
 		female_advisor_chance
+		fire_damage
 		galley_power
+		global_manpower
 		global_manpower_modifier
+		global_missionary_strength
+		global_ship_trade_power
+		global_spy_defence
 		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
 		land_forcelimit_modifier
 		land_morale
+		local_build_time
+		local_development_cost
+		local_institution_spread
 		mercenary_discipline
 		missionaries
+		movement_speed
 		naval_forcelimit_modifier
+		num_accepted_cultures
+		prestige
 		ship_durability
+		shock_damage
+		siege_ability
+		spy_offence
 		stability_cost_to_declare_war
 		tolerance_heathen
 		tolerance_heretic
+		tolerance_own
+		trade_efficiency
+		trade_steering
 	}
 	enum[native_policies] = {
 		native_policy_coexist

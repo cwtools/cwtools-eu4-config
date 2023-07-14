@@ -1,8 +1,14 @@
 enums = {
 	enum[export_to_variable_data] = {
+		0
 		1
+		ADM
+		DIP
+		MIL
 		adm_advisor_culture
 		adm_advisor_religion
+		adm_tech
+		army_size
 		border_distance
 		consort_adm
 		consort_age
@@ -11,22 +17,32 @@ enums = {
 		consort_mil
 		consort_religion
 		culture
+		development
 		dip_advisor_culture
 		dip_advisor_religion
+		dip_tech
+		dominant_culture
 		heir_adm
 		heir_age
 		heir_culture
 		heir_dip
 		heir_mil
 		heir_religion
+		land_forcelimit
 		liberty_desire
 		manpower
 		max_manpower
 		mil_advisor_culture
 		mil_advisor_religion
+		mil_tech
+		modifier:accept_vassalization_reasons
+		modifier:diplomatic_reputation
 		monthly_income
 		num_of_loans
 		opinion
+		prestige
+		primary_culture
+		religion
 		ruler_adm
 		ruler_age
 		ruler_consort_marriage_length
@@ -35,24 +51,34 @@ enums = {
 		ruler_mil
 		ruler_religion
 		stability
+		total_development
 		treasury
+		trigger_value:always
+		trigger_value:army_size
 		trigger_value:base_manpower
 		trigger_value:base_production
 		trigger_value:base_tax
 		trigger_value:colonysize
+		trigger_value:construction_progress
+		trigger_value:development
 		trigger_value:diplomatic_reputation
-		trigger_value:native_size
-		trigger_value:production_income_percentage
-		trigger_value:trade_income_percentage
+		trigger_value:galleys_in_province
+		trigger_value:heavy_ships_in_province
+		trigger_value:light_ships_in_province
+		trigger_value:mercantilism
 		trigger_value:monthly_income
+		trigger_value:native_size
+		trigger_value:num_of_mercenaries
+		trigger_value:num_of_provinces_in_states
+		trigger_value:production_income_percentage
+		trigger_value:ruler_age
 		trigger_value:total_development
+		trigger_value:trade_income_percentage
+		trigger_value:trade_node_value
+		trigger_value:transports_in_province
 		trust
+		unrest
 		years_of_income
-		ADM
-		DIP
-		MIL
-		development
-		total_development
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture
