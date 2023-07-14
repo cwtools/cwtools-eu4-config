@@ -909,6 +909,8 @@ alias[effect:create_admiral] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -948,7 +950,7 @@ alias[effect:create_explorer] = {
 	## cardinality = 0..1
 	name = localisation_synced
 	## cardinality = 0..1
-	female = yes
+	female = bool
 }
 
 ## scope = country
@@ -987,6 +989,8 @@ alias[effect:create_conquistador] = {
 	culture = enum[country_tags]
 	## cardinality = 0..1
 	name = localisation_synced
+	## cardinality = 0..1
+	female = bool
 }
 
 ## scope = country
@@ -1854,7 +1858,7 @@ alias[effect:define_leader_to_ruler] = {
 }
 
 ## scope = country
-###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.
+###Creates the defined ruler for the current scope. The culture and religion attributes can utilise Event Scope Values. The name parameter can accept a saved name variable, see set_saved_name for more context.  If dynasty = historic_dynasty is used the game will pick one weighted by how many rulers a family has had.
 alias[effect:define_ruler] = {
 #	## cardinality = 0..1
 #	name = localisation_synced
@@ -1872,6 +1876,8 @@ alias[effect:define_ruler] = {
 	dynasty = enum[country_tags]
 	## cardinality = 0..1
 	dynasty = original_dynasty
+	## cardinality = 0..1
+	dynasty = historic_dynasty
 	## cardinality = 0..1
 	min_age = int
 	## cardinality = 0..1
@@ -3940,7 +3946,7 @@ alias[effect:add_random_development] = int
 alias[effect:add_rebel_progress] = {
 	value = int
 	## cardinality = 0..1
-	type = <rebel_type>
+	rebel_type = <rebel_type>
 }
 
 ## scope = country

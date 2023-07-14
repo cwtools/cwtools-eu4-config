@@ -180,7 +180,8 @@ customideas = {
 	may_explore = yes
 	## cardinality = 0..1
 	extra_manpower_at_religious_war = yes
-	
+	## cardinality = 0..1
+	may_not_reduce_inflation = yes
 	
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }

@@ -915,7 +915,7 @@ on_action = {
         alias_name[effect] = alias_match_left[effect]
     }
 	## replace_scope = { root = country this = country }
-    subtype[on_on_monthly_pulse] = {
+    subtype[on_monthly_pulse] = {
         ## cardinality = 0..1
         events = {
             ## cardinality = 0..inf
