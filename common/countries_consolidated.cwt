@@ -95,7 +95,7 @@ country_file = {
 	## cardinality = 0..1
 	revolutionary_colors = {
 		## cardinality = 3..3
-		int[0..16]
+		int[0..255]
 	}
 
 	#usually needed but the "specials" survive without
