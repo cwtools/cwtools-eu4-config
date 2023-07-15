@@ -1,5 +1,4 @@
 
-
 ## scope = any
 alias[effect:<scripted_effect>] = yes
 
@@ -41,6 +40,12 @@ alias[effect:multiply_variable] = {
 	## cardinality = 0..1
 	value = float
 }
+## scope = any
+### Alternative without using which or value
+alias[effect:multiply_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
+}
 
 ## scope = any
 alias[effect:divide_variable] = {
@@ -48,6 +53,12 @@ alias[effect:divide_variable] = {
 	which = value[variable]
 	## cardinality = 0..1
 	value = float
+}
+## scope = any
+### Alternative without using which or value
+alias[effect:divide_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
 }
 
 ## scope = any
@@ -57,6 +68,7 @@ alias[effect:change_variable] = {
 	which = value_set[variable]
 	## cardinality = 0..1
 	value = float
+	
 }
 ## scope = any
 ### Paradox reports that which = is optional
@@ -72,6 +84,12 @@ alias[effect:subtract_variable] = {
 	## cardinality = 0..1
 	value = float
 }
+## scope = any
+### Alternative without using which or value
+alias[effect:subtract_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
+}
 
 ## scope = any
 alias[effect:set_variable] = {
@@ -82,7 +100,12 @@ alias[effect:set_variable] = {
 	## cardinality = 0..1
 	value = value[variable]
 }
-
+## scope = any
+### Alternative without using which or value
+alias[effect:set_variable] = {
+	## cardinality = 1..2
+	value[variable] = float
+}
 
 
 ## scope = any
