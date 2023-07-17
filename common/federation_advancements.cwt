@@ -9,21 +9,8 @@ types = {
 	}
 }
 
-enums = {
-	enum[fedadvancments_gfx] = {
-		GFX_federal_constitution
-		GFX_unified_warbands
-		GFX_mutual_trust
-		GFX_joint_grain_depots
-		GFX_pax_americana
-		GFX_united_resistance
-		GFX_chartered_settlements
-		GFX_shared_knowledge
-	}
-}
-
 federation_advancements = {
-	gfx = enum[fedadvancments_gfx]
+	gfx = <sprite>
 	can_pick = {
 		## cardinality = 0..inf
 		## replace_scope = { root = country this = country }
