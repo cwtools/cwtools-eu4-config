@@ -40,6 +40,15 @@ types = {
 			description = "$_desc"
 		}
 	}
+	type[states_general_faction] = {
+		path = "game/common/government_reforms"
+		skip_root_key = { any conditional states_general_mechanic }
+
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
 	#necessary for localisations
 	## type_key_filter <> { defaults_reform republic_mechanic monarchy_mechanic theocracy_mechanic tribe_mechanic }
 	type[new_government_reform] = {
@@ -594,7 +603,7 @@ government_reform = {
 			states_general_mechanic = {
 				## cardinality = 2..2
 				## replace_scope = { root = country this = country }
-				scalar = {
+				<states_general_faction> = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
 			}
