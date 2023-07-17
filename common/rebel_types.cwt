@@ -59,6 +59,7 @@ enums = {
 		theocracy
 		anti
 		any
+		tribal
 	}
 	enum[rebel_defection] = {
 		culture
