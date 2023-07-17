@@ -275,7 +275,7 @@ government_reform = {
 		allow_convert = bool
 		rulers_can_be_generals = bool
 		heirs_can_be_generals = bool
-		fixed_rank = int[0..3]
+		fixed_rank = int
 		republican_name = bool
 		government_abilities = { }
 		claim_states = bool
@@ -487,7 +487,7 @@ government_reform = {
 
 
 		## cardinality = 0..1
-		fixed_rank = int[0..3]
+		fixed_rank = int
 
 		## replace_scope = { root = country this = country }
 		modifiers = {
