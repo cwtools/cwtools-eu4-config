@@ -36,7 +36,7 @@ game_age = {
 	religious_conflicts = yes
 
 	## cardinality = 0..1
-	papacy = float[1..2]
+	papacy = float
 	
 
 	## cardinality = 0..1
