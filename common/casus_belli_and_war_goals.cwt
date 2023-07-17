@@ -284,6 +284,12 @@ wargoal_type = {
 		}
 		## cardinality = 0..1
 		allowed_provinces_are_eligible = yes
+
+		## cardinality = 0..1
+		allow_annex = yes
+		
+		## cardinality = 0..1
+		deny_annex = yes
 		
 		## cardinality = 0..1
 		required_treaty_to_take_provinces = {
