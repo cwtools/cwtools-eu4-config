@@ -376,13 +376,17 @@ country_history = {
 		government_rank = int[1..3]
 		## cardinality = 0..1
 		mercantilism = int[0..100]
+		## cardinality = 0..1
 		technology_group = <technology_group>
 		## cardinality = 0..1
 		unit_type = <technology_group>
+		## cardinality = 0..1
 		religion = <religion>
 		## cardinality = 0..1
 		secondary_religion = <religion>
+		## cardinality = 0..1
 		primary_culture = <culture>
+		## cardinality = 0..1
 		capital = <province_id>
 		## cardinality = 0..1
 		###Cannot move capital away from this province & no power cost to move to it
