@@ -4852,7 +4852,7 @@ alias[trigger:has_or_building_flagship] = bool
 
 ## scope = country
 ###Checks who the current sikh guru is
-alias[trigger:current_guru_is] = enum[sikh_guru]
+alias[trigger:current_guru_is] = scalar
 
 ## scope = country
 ###Checks number of unassigned explorers
