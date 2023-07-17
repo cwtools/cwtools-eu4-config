@@ -193,7 +193,7 @@ alias[trigger:army_balance] = {
 
 ## scope = country
 ###Returns true if the country has an army tradition of at least X, or at least as high as the specified country.
-alias[trigger:army_tradition] = int[0..100]
+alias[trigger:army_tradition] = float[0.0..100.0]
 
 ## scope = country
 ###Returns true if the country has an army tradition of at least X, or at least as high as the specified country.
@@ -253,7 +253,7 @@ alias[trigger:average_home_autonomy] = int[0..100]
 
 ## scope = country
 ###Returns true if the country has an average unrest in its provinces of at least X.
-alias[trigger:average_unrest] = int
+alias[trigger:average_unrest] = float
 
 ## scope = province
 ###Returns true if the base manpower of the province is at least X.
@@ -2953,7 +2953,7 @@ alias[trigger:navy_balance] = {
 
 ## scope = country
 ###Returns true if the country has a navy tradition of at least X, or an at least as high navy tradition as specified country.
-alias[trigger:navy_tradition] = int
+alias[trigger:navy_tradition] = float[0.0..100.0]
 
 ## scope = any
 ###Returns true if game is set to use normal or historical nations.
@@ -4076,7 +4076,7 @@ alias[trigger:technology_group] = enum[country_tags]
 
 ## scope = { province country }
 ###Returns true if the country has a tolerance of at least X towards the religion of the country or scoped province.
-alias[trigger:tolerance_to_this] = int
+alias[trigger:tolerance_to_this] = float
 
 ## scope = country
 ###Returns true if the base tax of the country's provinces totals at least X, or at least as much total base tax as the specified country.
@@ -4567,7 +4567,7 @@ alias[trigger:has_monsoon] = enum[monsoons]
 
 
 ## scope = country
-alias[trigger:innovativeness] = int[1..100]
+alias[trigger:innovativeness] = float[0.0..100.0]
 
 
 ## scope = any
@@ -5249,7 +5249,7 @@ alias[trigger:crown_land_share] = int[1..100]
 
 ## scope = country
 ###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.
-alias[trigger:crown_land_share] = 0.1
+alias[trigger:crown_land_share] = float
 
 ## scope = country
 ###Returns true if the percentage of the country's development that is held by the Crown Land is at least X.

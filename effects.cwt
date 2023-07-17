@@ -316,7 +316,7 @@ alias[effect:add_republican_tradition] = float
 
 ## scope = country
 ###Adds republican tradition to the current scope. Scales to the government's election cycle duration. No effect if not a government using republic.
-alias[effect:add_scaled_republican_tradition] = int
+alias[effect:add_scaled_republican_tradition] = float
 
 ## scope = country
 ###Adds devotion to the current scope. No effect if not a government using has_devotion.
@@ -544,7 +544,7 @@ alias[effect:add_fervor] = int
 
 ## scope = country
 ###Adds Karma to the current scope. No effect if the country does not hold a religion using uses_karma.
-alias[effect:add_karma] = int
+alias[effect:add_karma] = float
 
 ## scope = country
 ###Sets the Karma value for the current scope. No effect if the country does not hold a religion using uses_karma.
@@ -864,7 +864,7 @@ alias[effect:add_sailors] = float[-1.0..1.0]
 
 ## scope = country
 ###Adds manpower to the current scope, as a percentage of total yearly manpower. 1 is equal to 100% of total yearly manpower.
-alias[effect:add_yearly_manpower] = float[-10.0..15.0] # ming crisis uses 15
+alias[effect:add_yearly_manpower] = float
 
 ## scope = country
 ###Adds sailors to the current scope, as a percentage of total yearly sailors. 1 is equal to 100% of total yearly sailors.
@@ -1619,7 +1619,7 @@ alias[effect:add_estate_influence_modifier] = {
 	estate = all
 	## cardinality = 0..1
 	desc = localisation
-	influence = int
+	influence = float
 	duration = int
 	## cardinality = 0..1
 	add = yes
@@ -1630,7 +1630,7 @@ alias[effect:add_estate_influence_modifier] = {
 ###Adds loyalty for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty] = {
 	estate = <estate>
-	loyalty = int
+	loyalty = float
 	## cardinality = 0..1
 	short = yes
 }
@@ -1638,7 +1638,7 @@ alias[effect:add_estate_loyalty] = {
 ###Adds loyalty for the defined estate used by the current scope. Estates are found in /Europa Universalis IV/common/estates/*.txt
 alias[effect:add_estate_loyalty] = {
 	estate = enum[estate_all]
-	loyalty = int
+	loyalty = float
 	## cardinality = 0..1
 	short = yes
 }
@@ -1648,7 +1648,7 @@ alias[effect:add_estate_loyalty_modifier] = {
 	estate = <estate>
 	estate = all
 	desc = localisation
-	loyalty = int
+	loyalty = float
 	duration = int
 }
 
@@ -2727,7 +2727,7 @@ alias[effect:spawn_rebels] = {
 	## cardinality = 0..1
 	type = religious_rebels
 	#should be 0.5..6 but parsing floats is bugged
-	size = float[0..6]
+	size = float
 	## cardinality = 0..1
 	culture = <culture>
 	## cardinality = 0..1
@@ -3196,7 +3196,7 @@ alias[effect:add_to_trade_company] = enum[country_tags]
 alias[effect:add_to_trade_company] = ---
 
 ## scope = country
-alias[effect:add_years_of_manpower_scaled_to_seats] = int
+alias[effect:add_years_of_manpower_scaled_to_seats] = float
 
 ## scope = country
 alias[effect:add_years_of_sailors_scaled_to_seats] = int
