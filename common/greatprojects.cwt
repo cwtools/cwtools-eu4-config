@@ -8,13 +8,13 @@ types = {
 			## optional
 			desc = "$_desc"
 		}
-	}
-}
 
-enums = {
-	enum[greatproject_type] = {
-		canal
-		monument
+		subtype[monument] = {
+			type = monument
+		}
+		subtype[canal] = {
+			type = canal
+		}
 	}
 }
 
@@ -34,7 +34,13 @@ great_project = {
 	
 	
 	starting_tier = int
-	type = enum[greatproject_type]
+
+	subtype[monument] = {
+		type = monument
+	}
+	subtype[canal] = {
+		type = canal
+	}
 	
 	## replace_scope = { root = province this = province from = owner }
 	build_trigger = {		
@@ -45,7 +51,7 @@ great_project = {
 	## cardinality = 0..1
 	on_built = {
 		## cardinality = 0..1
-		add_canal = scalar
+		add_canal = <great_project.canal>
 		## cardinality = 0..2
 		show_ambient_object = <great_project>
 		## cardinality = 0..2
@@ -57,7 +63,7 @@ great_project = {
 	## cardinality = 0..1
 	on_destroyed = {
 		## cardinality = 0..1
-		remove_canal = scalar
+		remove_canal = <great_project.canal>
 		## cardinality = 0..2
 		hide_ambient_object = <great_project>
 		## cardinality = 0..2
@@ -115,7 +121,7 @@ great_project = {
 			alias_name[effect] = alias_match_left[effect]
 
 			## cardinality = 0..1
-			add_canal = scalar
+			add_canal = <great_project.canal>
 		}
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
@@ -165,7 +171,7 @@ great_project = {
 			alias_name[effect] = alias_match_left[effect]
 			
 			## cardinality = 0..1
-			add_canal = scalar
+			add_canal = <great_project.canal>
 		}
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
@@ -215,7 +221,7 @@ great_project = {
 			alias_name[effect] = alias_match_left[effect]
 
 			## cardinality = 0..1
-			add_canal = scalar
+			add_canal = <great_project.canal>
 		}
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
@@ -265,7 +271,7 @@ great_project = {
 			alias_name[effect] = alias_match_left[effect]
 
 			## cardinality = 0..1
-			add_canal = scalar
+			add_canal = <great_project.canal>
 		}
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.

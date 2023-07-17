@@ -3507,9 +3507,9 @@ alias[effect:add_great_project_tier] = {
 }
 
 ## scope = province
-alias[effect:add_canal] = scalar
+alias[effect:add_canal] = <great_project.canal>
 ## scope = province
-alias[effect:remove_canal] = scalar
+alias[effect:remove_canal] = <great_project.canal>
 
 ## scope = province
 ###Settles a tribal province belonging to the owner of the ROOT province scope
