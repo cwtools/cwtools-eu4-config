@@ -356,7 +356,7 @@ alias[effect:change_government] = enum[reb_nativesponsor]
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
-alias[effect:set_government_rank] = int[1..3]
+alias[effect:set_government_rank] = int
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic.
@@ -3520,7 +3520,7 @@ alias[effect:settle_province] = scope[country]
 
 ## scope = country
 ###Changes the government rank of the current scope. Default range is 1 to 3.
-alias[effect:set_government_rank_force] = int[1..3]
+alias[effect:set_government_rank_force] = int
 
 ## scope = country
 ###Disband Federation.
