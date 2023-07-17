@@ -68,6 +68,24 @@ types = {
 			name = "$"
 		}
 	}
+	type[guru] = {
+		path = "game/common/religions"
+		skip_root_key = { any any gurus }
+
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
+	type[guru_teaching] = {
+		path = "game/common/religions"
+		skip_root_key = { any any gurus any teachings }
+
+		localisation = {
+			## required
+			name = "$"
+		}
+	}
 	type[personal_deity] = {
 		path = "game/common/personal_deities"
 		localisation = {
@@ -721,7 +739,7 @@ religion_group = {
 		## cardinality = 0..1
 		gurus = {
 			## cardinality = 0..inf
-			scalar = {
+			<guru> = {
 				## cardinality = 0..1
 				potential = {
 					alias_name[trigger] = alias_match_left[trigger]
@@ -743,7 +761,7 @@ religion_group = {
 				}
 				teachings = {
 					## cardinality = 0..inf
-					scalar = {
+					<guru_teaching> = {
 						## cardinality = 0..1
 						type = ADM
 						## cardinality = 0..1
