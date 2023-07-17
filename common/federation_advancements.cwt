@@ -23,7 +23,7 @@ enums = {
 }
 
 federation_advancements = {
-	gfx = enum[fedadvancments_gfx]
+	gfx = <sprite>
 	can_pick = {
 		## cardinality = 0..inf
 		## replace_scope = { root = country this = country }
