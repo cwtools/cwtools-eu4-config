@@ -592,69 +592,9 @@ government_reform = {
 			foreign_slave_rulers = bool
 			## cardinality = 0..1
 			states_general_mechanic = {
-				## cardinality = 0..1
+				## cardinality = 2..2
 				## replace_scope = { root = country this = country }
-				statists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				orangists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				monarchists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				revolutionaries = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				militarists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				theocrats = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				catholics = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				utraquists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				federalists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				centralists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				conservatives = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				liberalists = {
-					alias_name[modifier] = alias_match_left[modifier]
-				}
-				## cardinality = 0..1
-				## replace_scope = { root = country this = country }
-				theocrats_statists = {
+				scalar = {
 					alias_name[modifier] = alias_match_left[modifier]
 				}
 			}
