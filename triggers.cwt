@@ -436,7 +436,7 @@ alias[trigger:colonysize] = int
 
 ## scope = country
 ###Returns true if the country has a consort with an administrative skill of at least X.
-alias[trigger:consort_adm] = int[0..6]
+alias[trigger:consort_adm] = int
 
 ## scope = country
 ###Returns true if the country's consort has an age of at least X.
@@ -444,7 +444,7 @@ alias[trigger:consort_age] = int
 
 ## scope = country
 ###Returns true if the country has a consort with an diplomatic skill of at least X.
-alias[trigger:consort_dip] = int[0..6]
+alias[trigger:consort_dip] = int
 
 ## scope = country
 ###Returns true if the country's consort has the specified culture. Can utilise Event Scope Values.
@@ -476,7 +476,7 @@ alias[trigger:consort_has_personality] = <ruler_personality>
 
 ## scope = country
 ###Returns true if the country has a consort with an military skill of at least X.
-alias[trigger:consort_mil] = int[0..6]
+alias[trigger:consort_mil] = int
 
 ## scope = country
 ###Returns true if the country's consort has the specified religion. Can utilise Event Scope Values.
@@ -1800,7 +1800,7 @@ alias[trigger:heavy_ships_in_province] = enum[country_tags]
 
 ## scope = country
 ###Returns true if the country has an heir with an administrative skill of at least X.
-alias[trigger:heir_adm] = int[0..6]
+alias[trigger:heir_adm] = int
 
 ## scope = country
 ###Returns true if the country has an heir that is at least X years old.
@@ -1808,7 +1808,7 @@ alias[trigger:heir_age] = int
 
 ## scope = country
 ###Returns true if the country has an heir with a diplomatic skill of at least X.
-alias[trigger:heir_dip] = int[0..6]
+alias[trigger:heir_dip] = int
 
 ## scope = country
 ###Returns true if the country has an heir with a claim strength of at least X.
@@ -1852,7 +1852,7 @@ alias[trigger:heir_has_ruler_dynasty] = bool
 
 ## scope = country
 ###Returns true if the country has an heir with a military skill of at least X.
-alias[trigger:heir_mil] = int[0..6]
+alias[trigger:heir_mil] = int
 
 ## scope = country
 ###Returns true if the country has an heir with nationality X.
