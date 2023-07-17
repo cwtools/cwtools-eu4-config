@@ -134,6 +134,7 @@ alias[personality_modifier:random_insults] = yes
 alias[personality_modifier:wants_disclose_attack] = yes
 alias[personality_modifier:wants_debase] = yes
 alias[personality_modifier:wants_sell_provinces] = yes
+alias[personality_modifier:wants_sell_ships] = yes
 alias[personality_modifier:wants_colonies] = yes
 alias[personality_modifier:wants_avoid_debase] = yes
 alias[personality_modifier:wants_land] = yes
