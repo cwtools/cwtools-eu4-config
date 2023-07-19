@@ -35,6 +35,9 @@ unit_type = {
 		defensive_fire = int
 		offensive_shock = int
 		defensive_shock = int
+		## cardinality = 0..1
+		###Changes the manpower cost to recruit, 1 is 1000 manpower
+		manpower = float
 	}
 	subtype[naval] = {
 		hull_size = int

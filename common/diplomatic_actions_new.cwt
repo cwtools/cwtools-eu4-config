@@ -74,7 +74,6 @@ new_diplomatic_action = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
 
-
 			## cardinality = 0..inf
 			export_to_variable = {
 				enum[which_varname] = ai_value
@@ -84,11 +83,35 @@ new_diplomatic_action = {
 				## cardinality = 0..1
 				with = scope[country]
 			}
+			
+			## cardinality = 0..inf
+			set_variable = {
+				which = ai_value
+				value = float
+			}
+			## cardinality = 0..inf
+			set_variable = {
+				ai_value = float
+			}
 
 			## cardinality = 0..inf
 			multiply_variable = {
 				which = ai_value
 				value = float
+			}
+			## cardinality = 0..inf
+			multiply_variable = {
+				ai_value = float
+			}
+			
+			## cardinality = 0..inf
+			divide_variable = {
+				which = ai_value
+				value = float
+			}
+			## cardinality = 0..inf
+			divide_variable = {
+				ai_value = float
 			}
 
 			## cardinality = 0..inf
@@ -96,11 +119,19 @@ new_diplomatic_action = {
 				which = ai_value
 				value = float
 			}
+			## cardinality = 0..inf
+			subtract_variable = {
+				ai_value = float
+			}
 
 			## cardinality = 0..inf
 			change_variable = {
 				which = ai_value
 				value = float
+			}
+			## cardinality = 0..inf
+			change_variable = {
+				ai_value = float
 			}
 
 			## cardinality = 0..inf
@@ -110,7 +141,11 @@ new_diplomatic_action = {
 				cardinality = 2..2
 				which = value[variable]
 			}
-
+			## cardinality = 0..inf
+			check_variable = {
+				ai_value = float
+			}
+			
 			## cardinality = 0..inf
 			is_variable_equal = {
 				cardinality = 2..2

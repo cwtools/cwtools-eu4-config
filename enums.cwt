@@ -408,20 +408,37 @@ enums = {
 		diplomatic_reputation
 		discipline
 		female_advisor_chance
+		fire_damage
 		galley_power
+		global_manpower
 		global_manpower_modifier
+		global_missionary_strength
+		global_ship_trade_power
+		global_spy_defence
 		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
 		land_forcelimit_modifier
 		land_morale
+		local_build_time
+		local_development_cost
+		local_institution_spread
 		mercenary_discipline
 		missionaries
+		movement_speed
 		naval_forcelimit_modifier
+		num_accepted_cultures
+		prestige
 		ship_durability
+		shock_damage
+		siege_ability
+		spy_offence
 		stability_cost_to_declare_war
 		tolerance_heathen
 		tolerance_heretic
+		tolerance_own
+		trade_efficiency
+		trade_steering
 	}
 	enum[native_policies] = {
 		native_policy_coexist
@@ -450,54 +467,6 @@ enums = {
 		harsh
 		neutral
 		concilatory
-	}
-	enum[sikh_guru] = {
-		guru_nanak
-		guru_angad
-		guru_amar_das
-		guru_ram_das
-		guru_arjan
-		guru_hargobind
-		guru_har_rai
-		guru_har_krishan
-		guru_tegh_bahadur
-		guru_gobind_singh
-		guru_granth_sahib
-	}
-	enum[guru_teachings] = {
-		share_and_consume
-		work_honestly
-		recite_his_name
-		gurmukhi_script_teaching
-		temple_langar
-		wrestling_akhara
-		dasvandh_collection
-		anand_karaj
-		sanghat_equality
-		legitimize_inheritance
-		scripture_hymns
-		masand_system
-		adi_granth
-		the_abode_of_god
-		martyrdom
-		throne_of_the_timeless_one
-		protection_of_the_poor
-		miri_and_piri
-		impartial_manjis
-		the_fragrance_of_a_flower
-		one_guru
-		treat_the_sick
-		illiterate_recites_saloks
-		young_humility
-		the_word_of_sikh
-		all_kings_must_pass
-		resist_persecution
-		pluralism
-		dharam_yudh
-		the_khalsa_sikh
-		eternally_living_guru
-		divine_justice
-		the_unchanging_writing
 	}
 	enum[great_project] = {
 		any

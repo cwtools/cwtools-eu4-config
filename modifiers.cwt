@@ -990,7 +990,7 @@ alias[modifier:exploration_mission_range_in_fleet_modifier] = float
 
 ## scope = country
 ###Modifies the trade power in the flagship's fleet
-alias[modifier:trade_power_in_fleet_modifier] = int
+alias[modifier:trade_power_in_fleet_modifier] = float
 
 ## scope = country
 ###Modifies the naval engagement width in the flagship's fleet
@@ -1002,7 +1002,7 @@ alias[modifier:barrage_cost_in_fleet_modifier] = float
 
 ## scope = country
 ###Modifies the amount of cannons available for hunting pirates in the flagship's fleet
-alias[modifier:cannons_for_hunting_pirates_in_fleet] = int
+alias[modifier:cannons_for_hunting_pirates_in_fleet] = float
 
 ## scope = country
 ###Modifies the speed onto and off transports in the flagship's fleet
@@ -1120,6 +1120,10 @@ alias[modifier:cb_on_primitives] = yes
 ## scope = country
 ###May use explorers to explore provinces
 alias[modifier:may_explore] = yes
+
+## scope = country
+###May not reduce inflation
+alias[modifier:may_not_reduce_inflation] = yes
 
 ## scope = country
 ###May establish frontier colonies like Siberian Frontier

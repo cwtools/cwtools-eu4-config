@@ -99,6 +99,9 @@ triggered_modifier = {
 
 
 province_triggered_modifier = {
+	## cardinality = 0..1
+	picture = scalar #todo
+	
 	##replace_scope = { this = province root = province }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
