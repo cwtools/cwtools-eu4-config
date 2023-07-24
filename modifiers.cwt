@@ -1654,37 +1654,34 @@ alias[modifier:is_musketeer_modifier] = bool
 alias[modifier:is_samurai_modifier] = bool
 
 ## scope = country
-alias[modifier:is_geobukseon_modifier] = float
+alias[modifier:is_geobukseon_modifier] = bool
 
 ## scope = country
 alias[modifier:is_man_of_war_modifier] = bool
 
 ## scope = country
-alias[modifier:is_galleon_modifier] = float
+alias[modifier:is_galleon_modifier] = bool
 
 ## scope = country
-alias[modifier:is_galleass_modifier] = float
+alias[modifier:is_galleass_modifier] = bool
 
 ## scope = country
-alias[modifier:is_caravel_modifier] = float
+alias[modifier:is_caravel_modifier] = bool
 
 ## scope = country
-alias[modifier:is_voc_indiamen_modifier] = float
+alias[modifier:is_voc_indiamen_modifier] = bool
 
 ## scope = country
 alias[modifier:allowed_cossack_fraction] = float
 
 ## scope = country
-alias[modifier:is_cossacks_modifier] = float
-
-## scope = country
-alias[modifier:is_janissaries_modifier] = float
+alias[modifier:is_janissary_modifier] = bool
 
 ## scope = country
 alias[modifier:allowed_rajput_fraction] = float
 
 ## scope = country
-alias[modifier:is_rajput_modifier] = float
+alias[modifier:is_rajput_modifier] = bool
 
 # TODO: add ship scope
 ## scope = country
