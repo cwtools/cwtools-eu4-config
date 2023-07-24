@@ -276,7 +276,7 @@ modifiers = {
 	max_attrition = province
 	max_electors = country
 	max_free_cities = country
-	max_hostile_attrition = country	
+	max_hostile_attrition = country
 	max_revolutionary_zeal = country
 	max_terms = country
 	may_perform_slave_raid = country
@@ -1612,7 +1612,7 @@ alias[modifier:allowed_streltsy_fraction] = float
 alias[modifier:amount_of_tercio] = float
 
 ## scope = country
-alias[modifier:amount_of_musketeer] = float
+alias[modifier:amount_of_musketeers] = float
 
 ## scope = country
 alias[modifier:amount_of_samurai] = float
