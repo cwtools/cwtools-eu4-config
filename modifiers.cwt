@@ -1678,7 +1678,7 @@ alias[modifier:allow_janissaries_from_own_faith] = bool
 alias[modifier:allowed_carolean_fraction] = float
 
 ## scope = country
-alias[modifier:can_recruit_carolean] = float
+alias[modifier:can_recruit_carolean] = bool
 
 ## scope = country
 alias[modifier:carolean_cost_modifier] = float
@@ -1693,7 +1693,7 @@ alias[modifier:local_has_cawa] = bool
 alias[modifier:allowed_cawa_fraction] = float
 
 ## scope = country
-alias[modifier:can_recruit_tercio] = float
+alias[modifier:can_recruit_tercio] = bool
 
 ## scope = country
 alias[modifier:is_tercio_modifier] = bool
@@ -1702,16 +1702,16 @@ alias[modifier:is_tercio_modifier] = bool
 alias[modifier:tercio_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_musketeer] = float
+alias[modifier:can_recruit_musketeer] = bool
 
 ## scope = country
-alias[modifier:is_musketeer_modifier] = float
+alias[modifier:is_musketeer_modifier] = bool
 
 ## scope = country
 alias[modifier:musketeer_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_samurai] = float
+alias[modifier:can_recruit_samurai] = bool
 
 ## scope = country
 alias[modifier:is_samurai_modifier] = bool
@@ -1720,7 +1720,7 @@ alias[modifier:is_samurai_modifier] = bool
 alias[modifier:samurai_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_geobukseon] = float
+alias[modifier:can_recruit_geobukseon] = bool
 
 ## scope = country
 alias[modifier:is_geobukseon_modifier] = float
@@ -1729,7 +1729,7 @@ alias[modifier:is_geobukseon_modifier] = float
 alias[modifier:geobukseon_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_man_of_war] = float
+alias[modifier:can_recruit_man_of_war] = bool
 
 ## scope = country
 alias[modifier:is_man_of_war_modifier] = bool
@@ -1738,7 +1738,7 @@ alias[modifier:is_man_of_war_modifier] = bool
 alias[modifier:man_of_war_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_galleon] = float
+alias[modifier:can_recruit_galleon] = bool
 
 ## scope = country
 alias[modifier:is_galleon_modifier] = float
@@ -1747,7 +1747,7 @@ alias[modifier:is_galleon_modifier] = float
 alias[modifier:galleon_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_galleass] = float
+alias[modifier:can_recruit_galleass] = bool
 
 ## scope = country
 alias[modifier:is_galleass_modifier] = float
@@ -1756,7 +1756,7 @@ alias[modifier:is_galleass_modifier] = float
 alias[modifier:galleass_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_caravel] = float
+alias[modifier:can_recruit_caravel] = bool
 
 ## scope = country
 alias[modifier:is_caravel_modifier] = float
@@ -1765,7 +1765,7 @@ alias[modifier:is_caravel_modifier] = float
 alias[modifier:caravel_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_voc_indiamen] = float
+alias[modifier:can_recruit_voc_indiamen] = bool
 
 ## scope = country
 alias[modifier:is_voc_indiamen_modifier] = float
@@ -1795,7 +1795,7 @@ alias[modifier:amount_of_marines] = float
 alias[modifier:local_amount_of_marines] = float
 
 ## scope = country
-alias[modifier:can_recruit_marines] = float
+alias[modifier:can_recruit_marines] = bool
 
 ## scope = country
 alias[modifier:marines_cost_modifier] = float
@@ -1819,13 +1819,13 @@ alias[modifier:local_amount_of_revolutionary_guard] = float
 alias[modifier:allowed_banner_fraction] = float
 
 ## scope = country
-alias[modifier:can_recruit_banner] = float
+alias[modifier:can_recruit_banner] = bool
 
 ## scope = country
 alias[modifier:banner_cost_modifier] = float
 
 ## scope = country
-alias[modifier:can_recruit_streltsy] = float
+alias[modifier:can_recruit_streltsy] = bool
 
 ## scope = country
 alias[modifier:streltsy_cost_modifier] = float
