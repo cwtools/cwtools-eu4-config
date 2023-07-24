@@ -1645,12 +1645,6 @@ alias[modifier:can_recruit_janissaries] = bool
 alias[modifier:allow_janissaries_from_own_faith] = bool
 
 ## scope = country
-alias[modifier:has_cawa] = bool
-
-## scope = province
-alias[modifier:local_has_cawa] = bool
-
-## scope = country
 alias[modifier:is_tercio_modifier] = bool
 
 ## scope = country
@@ -1678,49 +1672,13 @@ alias[modifier:is_caravel_modifier] = float
 alias[modifier:is_voc_indiamen_modifier] = float
 
 ## scope = country
-alias[modifier:has_hussars] = bool
-
-## scope = province
-alias[modifier:local_has_hussars] = bool
-
-## scope = country
-alias[modifier:has_marines] = bool
-
-## scope = province
-alias[modifier:local_has_marines] = bool
-
-## scope = country
-alias[modifier:has_revolutionary_guard] = bool
-
-## scope = province
-alias[modifier:local_has_revolutionary_guard] = bool
-
-## scope = country
-alias[modifier:has_cossacks] = bool
-
-## scope = province
-alias[modifier:local_has_cossacks] = bool
-
-## scope = country
 alias[modifier:allowed_cossack_fraction] = float
 
 ## scope = country
 alias[modifier:is_cossacks_modifier] = float
 
 ## scope = country
-alias[modifier:has_janissaries] = bool
-
-## scope = province
-alias[modifier:local_has_janissaries] = bool
-
-## scope = country
 alias[modifier:is_janissaries_modifier] = float
-
-## scope = country
-alias[modifier:has_rajput] = bool
-
-## scope = province
-alias[modifier:local_has_rajput] = bool
 
 ## scope = country
 alias[modifier:allowed_rajput_fraction] = float
