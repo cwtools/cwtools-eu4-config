@@ -1645,16 +1645,10 @@ alias[modifier:can_recruit_janissaries] = bool
 alias[modifier:allow_janissaries_from_own_faith] = bool
 
 ## scope = country
-alias[modifier:allowed_carolean_fraction] = float
-
-## scope = country
 alias[modifier:has_cawa] = bool
 
 ## scope = province
 alias[modifier:local_has_cawa] = bool
-
-## scope = country
-alias[modifier:allowed_cawa_fraction] = float
 
 ## scope = country
 alias[modifier:is_tercio_modifier] = bool
@@ -1690,9 +1684,6 @@ alias[modifier:has_hussars] = bool
 alias[modifier:local_has_hussars] = bool
 
 ## scope = country
-alias[modifier:allowed_hussars_fraction] = float
-
-## scope = country
 alias[modifier:has_marines] = bool
 
 ## scope = province
@@ -1703,12 +1694,6 @@ alias[modifier:has_revolutionary_guard] = bool
 
 ## scope = province
 alias[modifier:local_has_revolutionary_guard] = bool
-
-## scope = country
-alias[modifier:allowed_revolutionary_guard_fraction] = float
-
-## scope = country
-alias[modifier:allowed_banner_fraction] = float
 
 ## scope = country
 alias[modifier:has_cossacks] = bool
@@ -1727,9 +1712,6 @@ alias[modifier:has_janissaries] = bool
 
 ## scope = province
 alias[modifier:local_has_janissaries] = bool
-
-## scope = country
-alias[modifier:allowed_janissaries_fraction] = float
 
 ## scope = country
 alias[modifier:is_janissaries_modifier] = float
