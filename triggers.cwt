@@ -3690,11 +3690,15 @@ alias[trigger:real_month_of_year] = int
 alias[trigger:reform_desire] = float
 
 ## scope = province
-###Returns true if the province is part of the region X.
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
 alias[trigger:region] = <region>
 
 ## scope = province
-###Returns true if the province is part of the region X.
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
+alias[trigger:region] = scope[country]
+
+## scope = province
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
 alias[trigger:region] = scope[province]
 
 ## scope = { country province }
