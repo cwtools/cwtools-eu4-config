@@ -1988,8 +1988,8 @@ alias[effect:every_war_enemy_country] = {
 }
 
 ## scope = country
-## push_scope = province
-###Scope to a random war enemy province.
+## push_scope = country
+###Scope to a random war enemy country.
 alias[effect:random_war_enemy_country] = {
 	## cardinality = 0..1
 	limit = {
