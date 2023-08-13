@@ -68,7 +68,7 @@ alias[effect:change_variable] = {
 	which = value_set[variable]
 	## cardinality = 0..1
 	value = float
-	
+
 }
 ## scope = any
 ### Paradox reports that which = is optional
@@ -4299,3 +4299,19 @@ alias[effect:exile_consort_as] = value_set[exiled_consort]
 ###Makes an exiled consort the consort of the current scope.
 ## severity = warning
 alias[effect:set_consort] = value[exiled_consort]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = scope[country]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = enum[country_tags]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = scope[country]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = enum[country_tags]
