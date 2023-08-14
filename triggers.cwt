@@ -4349,7 +4349,11 @@ alias[trigger:variable_arithmetic_trigger] = {
 		## cardinality = 0..1
 		who = scope[country]
 		## cardinality = 0..1
+		who = enum[country_tags]
+		## cardinality = 0..1
 		with = scope[country] #for when you use "trust"
+		## cardinality = 0..1
+		with = enum[country_tags] #for when you use "trust"
 	}
 
 	## cardinality = 0..inf
