@@ -2615,9 +2615,14 @@ alias[trigger:is_vassal] = bool
 ## scope = any
 ###Returns true if the specified variable is equal to X.
 alias[trigger:is_variable_equal] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+
+## scope = any
+###Returns true if the specified variable is equal to X.
+alias[trigger:is_variable_equal] = {
+	which = value[variable]
 	value = float
 }
 
