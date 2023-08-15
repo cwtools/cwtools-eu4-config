@@ -28,6 +28,9 @@ alias[effect:export_to_variable] = {
 	who = scope[country]
 	## cardinality = 0..1
 	###Takes a country scope for country-level value and a province scope on province-level value
+	who = enum[country_tags]
+	## cardinality = 0..1
+	###Takes a country scope for country-level value and a province scope on province-level value
 	who = scope[province]
 	## cardinality = 0..1
 	with = scope[country] #for when you use "trust"
@@ -35,9 +38,12 @@ alias[effect:export_to_variable] = {
 
 ## scope = any
 alias[effect:multiply_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:multiply_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any
@@ -49,9 +55,12 @@ alias[effect:multiply_variable] = {
 
 ## scope = any
 alias[effect:divide_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:divide_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any
@@ -64,11 +73,14 @@ alias[effect:divide_variable] = {
 ## scope = any
 ### Paradox reports that which = is optional
 alias[effect:change_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value_set[variable]
-	## cardinality = 0..1
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	which = value_set[variable]
 	value = float
-
 }
 ## scope = any
 ### Paradox reports that which = is optional
@@ -79,9 +91,12 @@ alias[effect:change_variable] = {
 
 ## scope = any
 alias[effect:subtract_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:subtract_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any

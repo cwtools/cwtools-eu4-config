@@ -2615,6 +2615,13 @@ alias[trigger:is_vassal] = bool
 ## scope = any
 ###Returns true if the specified variable is equal to X.
 alias[trigger:is_variable_equal] = {
+	## cardinality = 2..2
+	which = value[variable]
+}
+
+## scope = any
+###Returns true if the specified variable is equal to X.
+alias[trigger:is_variable_equal] = {
 	which = value[variable]
 	value = float
 }
@@ -4347,7 +4354,11 @@ alias[trigger:variable_arithmetic_trigger] = {
 		## cardinality = 0..1
 		who = scope[country]
 		## cardinality = 0..1
+		who = enum[country_tags]
+		## cardinality = 0..1
 		with = scope[country] #for when you use "trust"
+		## cardinality = 0..1
+		with = enum[country_tags] #for when you use "trust"
 	}
 
 	## cardinality = 0..inf
