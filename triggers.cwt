@@ -4373,8 +4373,6 @@ alias[trigger:variable_arithmetic_trigger] = {
 	divide_variable = {
 		## cardinality = 2..2
 		which = value[variable]
-		## cardinality = 0..1
-		value = float
 	}
 
 	## cardinality = 0..inf
