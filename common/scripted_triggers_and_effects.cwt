@@ -90,9 +90,12 @@ alias[trigger:has_any_active_incomplete_idea_group_of_category] = {
 ## scope = country
 ###Kills a hired advisor of a monarch power type for the current scope. Displays the advisor death message box when used.
 alias[effect:kill_advisor_by_category_effect] = {
-	## cardinality 1..1
-	###Which monarch power advisor to kill.
-	enum[power_categories] = yes
+	## cardinality 0..1
+	ADM = yes
+	## cardinality 0..1
+	DIP = yes
+	## cardinality 0..1
+	MIL = yes
 }
 
 ## scope = country
