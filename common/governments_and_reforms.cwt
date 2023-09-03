@@ -534,11 +534,6 @@ government_reform = {
 
 		## cardinality = 0..1
 		government_abilities = {
-			enum[government_mechanics]
-		}
-
-		## cardinality = 0..1
-		government_abilities = {
 			## cardinality = 1..inf
 			<government_mechanic>
 		}
@@ -588,10 +583,6 @@ government_reform = {
 			has_janissaries = bool
 			## cardinality = 0..1
 			claim_states = bool
-			## cardinality = 0..1
-			government_abilities = {
-				enum[government_mechanics]
-			}
 			## cardinality = 0..1
 			government_abilities = {
 				## cardinality = 1..inf
