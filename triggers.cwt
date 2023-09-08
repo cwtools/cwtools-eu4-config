@@ -2469,7 +2469,7 @@ alias[trigger:is_possible_vassal] = enum[country_tags]
 alias[trigger:is_previous_papal_controller] = bool
 
 ## scope = province
-###Returns true if the province is prosperous. NOTE: Does not have a tooltip.
+###Returns true if the province is prosperous.
 alias[trigger:is_prosperous] = bool
 
 ## scope = country
