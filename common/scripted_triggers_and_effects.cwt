@@ -5,7 +5,7 @@ types = {
 		path = "game/common/scripted_triggers"
 	}
 	# Add scripted effets that we support explicitly below
-	## type_key_filter <> { add_latest_building unlock_merc_company kill_advisor_by_category_effect unlock_estate for_variable_amount show_points_needed_for_livionian_government_of_category count_won_battles_and_reward_at_end faction_in_power_effect add_inflation_scaled_to_trade unlock_estate allow_baseline_invite_scholar transfer_treasury upgrade_building add_years_of_trade_income for create_units_of_type create_units_of_type_in_province}
+	## type_key_filter <> { add_latest_building unlock_merc_company unlock_estate for_variable_amount show_points_needed_for_livionian_government_of_category count_won_battles_and_reward_at_end faction_in_power_effect add_inflation_scaled_to_trade unlock_estate allow_baseline_invite_scholar transfer_treasury upgrade_building add_years_of_trade_income for create_units_of_type create_units_of_type_in_province}
 	type[scripted_effect] = {
 		path = "game/common/scripted_effects"
 	}
@@ -90,8 +90,7 @@ alias[trigger:has_any_active_incomplete_idea_group_of_category] = {
 ## scope = country
 ###Kills a hired advisor of a monarch power type for the current scope. Displays the advisor death message box when used.
 alias[effect:kill_advisor_by_category_effect] = {
-	## cardinality 1..1
-	###Which monarch power advisor to kill.
+	## cardinality 1..3
 	enum[power_categories] = yes
 }
 

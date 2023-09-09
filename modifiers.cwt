@@ -1702,7 +1702,4 @@ alias[modifier:overextension_impact_modifier] = float
 alias[modifier:same_religion_advisor_cost] = float
 
 ## scope = country
-alias[modifier:<estate>_loyalty_modifier] = float
-
-## scope = country
 alias[modifier:allowed_rev_guard_fraction] = float

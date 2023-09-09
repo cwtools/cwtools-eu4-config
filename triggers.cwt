@@ -1391,10 +1391,6 @@ alias[trigger:has_global_modifier_value] = {
 
 ## scope = country
 ###Returns true if the country uses the specified government mechanic.
-alias[trigger:has_government_mechanic] = enum[government_mechanics]
-
-## scope = country
-###Returns true if the country uses the specified government mechanic.
 alias[trigger:has_government_mechanic] = <government_mechanic>
 
 ## scope = country
@@ -2473,7 +2469,7 @@ alias[trigger:is_possible_vassal] = enum[country_tags]
 alias[trigger:is_previous_papal_controller] = bool
 
 ## scope = province
-###Returns true if the province is prosperous. NOTE: Does not have a tooltip.
+###Returns true if the province is prosperous.
 alias[trigger:is_prosperous] = bool
 
 ## scope = country
