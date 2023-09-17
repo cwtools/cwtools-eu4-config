@@ -1319,7 +1319,7 @@ alias[modifier:max_flagships] = int
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:heavy_ship_cannons] = float
+alias[modifier:heavy_ship_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1327,7 +1327,7 @@ alias[modifier:heavy_ship_hull_size] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:light_ship_cannons] = float
+alias[modifier:light_ship_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1335,7 +1335,7 @@ alias[modifier:light_ship_hull_size] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:galley_cannons] = float
+alias[modifier:galley_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1343,7 +1343,7 @@ alias[modifier:galley_hullsize] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:transport_cannons] = float
+alias[modifier:transport_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
