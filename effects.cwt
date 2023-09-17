@@ -409,7 +409,7 @@ alias[effect:unfreeze_government_power] = {
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic, scaled to number of seats in parliament.
-alias[effect:add_government_power_scaled_to_eats] = {
+alias[effect:add_government_power_scaled_to_seats] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
