@@ -1391,10 +1391,6 @@ alias[trigger:has_global_modifier_value] = {
 
 ## scope = country
 ###Returns true if the country uses the specified government mechanic.
-alias[trigger:has_government_mechanic] = enum[government_mechanics]
-
-## scope = country
-###Returns true if the country uses the specified government mechanic.
 alias[trigger:has_government_mechanic] = <government_mechanic>
 
 ## scope = country
@@ -2473,7 +2469,7 @@ alias[trigger:is_possible_vassal] = enum[country_tags]
 alias[trigger:is_previous_papal_controller] = bool
 
 ## scope = province
-###Returns true if the province is prosperous. NOTE: Does not have a tooltip.
+###Returns true if the province is prosperous.
 alias[trigger:is_prosperous] = bool
 
 ## scope = country
@@ -2611,6 +2607,13 @@ alias[trigger:is_tribal] = bool
 ## scope = country
 ###Returns true if the country is a vassal.
 alias[trigger:is_vassal] = bool
+
+## scope = any
+###Returns true if the specified variable is equal to X.
+alias[trigger:is_variable_equal] = {
+	## cardinality = 2..2
+	which = value[variable]
+}
 
 ## scope = any
 ###Returns true if the specified variable is equal to X.
@@ -3690,11 +3693,15 @@ alias[trigger:real_month_of_year] = int
 alias[trigger:reform_desire] = float
 
 ## scope = province
-###Returns true if the province is part of the region X.
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
 alias[trigger:region] = <region>
 
 ## scope = province
-###Returns true if the province is part of the region X.
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
+alias[trigger:region] = scope[country]
+
+## scope = province
+###Returns true if the province is located on region X, or on the same region as the (capital of the) specified scope.
 alias[trigger:region] = scope[province]
 
 ## scope = { country province }
@@ -4343,7 +4350,11 @@ alias[trigger:variable_arithmetic_trigger] = {
 		## cardinality = 0..1
 		who = scope[country]
 		## cardinality = 0..1
+		who = enum[country_tags]
+		## cardinality = 0..1
 		with = scope[country] #for when you use "trust"
+		## cardinality = 0..1
+		with = enum[country_tags] #for when you use "trust"
 	}
 
 	## cardinality = 0..inf
@@ -4351,6 +4362,18 @@ alias[trigger:variable_arithmetic_trigger] = {
 		## cardinality = 1..2
 		which = value[variable]
 		## cardinality = 0..1
+		value = float
+	}
+
+	## cardinality = 0..inf
+	divide_variable = {
+		## cardinality = 2..2
+		which = value[variable]
+	}
+
+	## cardinality = 0..inf
+	divide_variable = {
+		which = value[variable]
 		value = float
 	}
 

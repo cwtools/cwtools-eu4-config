@@ -28,6 +28,9 @@ alias[effect:export_to_variable] = {
 	who = scope[country]
 	## cardinality = 0..1
 	###Takes a country scope for country-level value and a province scope on province-level value
+	who = enum[country_tags]
+	## cardinality = 0..1
+	###Takes a country scope for country-level value and a province scope on province-level value
 	who = scope[province]
 	## cardinality = 0..1
 	with = scope[country] #for when you use "trust"
@@ -35,9 +38,12 @@ alias[effect:export_to_variable] = {
 
 ## scope = any
 alias[effect:multiply_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:multiply_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any
@@ -49,9 +55,12 @@ alias[effect:multiply_variable] = {
 
 ## scope = any
 alias[effect:divide_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:divide_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any
@@ -64,11 +73,14 @@ alias[effect:divide_variable] = {
 ## scope = any
 ### Paradox reports that which = is optional
 alias[effect:change_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value_set[variable]
-	## cardinality = 0..1
+}
+## scope = any
+### Paradox reports that which = is optional
+alias[effect:change_variable] = {
+	which = value_set[variable]
 	value = float
-	
 }
 ## scope = any
 ### Paradox reports that which = is optional
@@ -79,9 +91,12 @@ alias[effect:change_variable] = {
 
 ## scope = any
 alias[effect:subtract_variable] = {
-	## cardinality = 1..2
+	## cardinality = 2..2
 	which = value[variable]
-	## cardinality = 0..1
+}
+## scope = any
+alias[effect:subtract_variable] = {
+	which = value[variable]
 	value = float
 }
 ## scope = any
@@ -394,7 +409,7 @@ alias[effect:unfreeze_government_power] = {
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic, scaled to number of seats in parliament.
-alias[effect:add_government_power_scaled_to_eats] = {
+alias[effect:add_government_power_scaled_to_seats] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
@@ -1042,18 +1057,6 @@ alias[effect:kill_leader] = {
 	type = random
 	type = localisation_synced #value[leader_name]
 }
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = enum[military_leader_types]
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = random
-
-## scope = { country province }
-###In country scope, kills a leader held by the current scope matching the type used. Format: kill_leader = { type = general/random/name }. In province scope, kills a leader in the current province scope if they match the type used. Format: kill_leader = general/random/name Only works if the leader is assigned to a unit that is stationed in the current province.
-alias[effect:kill_leader] = localisation_synced #value[leader_name]
 
 ## scope = country
 ###Creates an admiral with the defined attributes for the current scope. Leader traits can be found in /Europa Universalis IV/common/leader_personalities/*.txt. Siege improves Blockade Efficiency for admirals. The name parameter can accept a saved name variable, see set_saved_name for more context.
@@ -4299,3 +4302,19 @@ alias[effect:exile_consort_as] = value_set[exiled_consort]
 ###Makes an exiled consort the consort of the current scope.
 ## severity = warning
 alias[effect:set_consort] = value[exiled_consort]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = scope[country]
+
+## scope = province
+###Creates a Banner Infantry in the scoped province, for the defined scope
+alias[effect:banner_infantry] = enum[country_tags]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = scope[country]
+
+## scope = province
+###Creates a Banner Cavalry in the scoped province, for the defined scope
+alias[effect:banner_cavalry] = enum[country_tags]

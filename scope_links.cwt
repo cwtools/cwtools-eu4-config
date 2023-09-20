@@ -1759,7 +1759,7 @@ alias[effect:home_province] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## scope = mercenary_company
+## scope = { mercenary_company unit }
 ## push_scope = province
 alias[trigger:location] = {
 	alias_name[trigger] = alias_match_left[trigger]
@@ -1777,7 +1777,7 @@ alias[trigger:any_other_great_power] = {
 	alias_name[trigger] = alias_match_left[trigger]
 }
 
-## scope = mercenary_company
+## scope = { mercenary_company unit }
 ## push_scope = province
 alias[effect:location] = {
 	alias_name[effect] = alias_match_left[effect]
@@ -1988,8 +1988,8 @@ alias[effect:every_war_enemy_country] = {
 }
 
 ## scope = country
-## push_scope = province
-###Scope to a random war enemy province.
+## push_scope = country
+###Scope to a random war enemy country.
 alias[effect:random_war_enemy_country] = {
 	## cardinality = 0..1
 	limit = {
