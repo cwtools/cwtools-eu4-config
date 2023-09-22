@@ -476,8 +476,12 @@ types = {
 		subtype[on_parliament_seat_given] = { }
 		## type_key_filter = on_parliament_seat_lost
 		subtype[on_parliament_seat_lost] = { }
+		## type_key_filter = on_alliance_created
+		subtype[on_alliance_created] = { }
 		## type_key_filter = on_alliance_broken
 		subtype[on_alliance_broken] = { }
+		## type_key_filter = on_royal_marriage
+		subtype[on_royal_marriage] = { }
 		## type_key_filter = on_royal_marriage_broken
 		subtype[on_royal_marriage_broken] = { }
 		## type_key_filter = on_mandate_reform_passed
@@ -4070,7 +4074,43 @@ on_action = {
 	}
 	## replace_scope = { root = country this = country from = country }
 	###ROOT is country that sent the request to ally, FROM is country that accepted it
+	subtype[on_alliance_created] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	###ROOT is country that sent the request to ally, FROM is country that accepted it
 	subtype[on_alliance_broken] = {
+  	## cardinality = 0..1
+  	events = {
+  	    ## cardinality = 0..inf
+  	    <event.country>
+  	}
+  	## cardinality = 0..1
+  	random_events = {
+  	    ## cardinality = 0..inf
+  	    int = 0
+  	    ## cardinality = 0..inf
+  	    int = <event.country>
+  	}
+
+  	alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country from = country }
+	###ROOT is country that sent the request to marry, FROM is country that accepted it
+	subtype[on_royal_marriage] = {
   	## cardinality = 0..1
   	events = {
   	    ## cardinality = 0..inf
