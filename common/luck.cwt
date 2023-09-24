@@ -1,0 +1,10 @@
+types = {
+	type[luck] = {
+		path = "game/common"
+		path_file = "historial_lucky.txt"
+	}
+}
+
+luck = {
+	alias_name[trigger] = alias_match_left[trigger]
+}
