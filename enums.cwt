@@ -398,6 +398,7 @@ enums = {
 		start_from_root = yes
 	}
 	enum[modifier_value] = {
+		administrative_efficiency
 		army_tradition
 		artillery_power
 		build_cost
