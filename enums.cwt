@@ -416,6 +416,7 @@ enums = {
 		global_missionary_strength
 		global_ship_trade_power
 		global_spy_defence
+		global_tax_modifier
 		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
