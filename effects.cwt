@@ -636,6 +636,10 @@ alias[effect:add_harmonized_religion] = <religion>
 
 ## scope = country
 ###Adds a religion to the list of Harmonized religions for the current scope. No effect if the country does not hold a religion using uses_harmony.
+alias[effect:add_harmonized_religion] = <religion_group>
+
+## scope = country
+###Adds a religion to the list of Harmonized religions for the current scope. No effect if the country does not hold a religion using uses_harmony.
 alias[effect:add_harmonized_religion] = enum[religion_new_variables]
 
 ## scope = country
