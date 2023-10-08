@@ -57,10 +57,10 @@ types = {
 
 estate = {
 	icon = int
-	
+
 	## cardinality = 0..1
 	other_religion_group_only = yes
-	
+
 	color = {
 		## cardinality = 3..3
 		int[0..255]
@@ -79,13 +79,13 @@ estate = {
 	independence_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	###If true, country will get estate
 	##replace_scope = { this = country root = country }
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	###These scale with loyalty & power
 	country_modifier_happy = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -93,7 +93,7 @@ estate = {
 	###These scale with loyalty & power
 	country_modifier_neutral = {
 		alias_name[modifier] = alias_match_left[modifier]
-	}	
+	}
 	###These scale with loyalty & power
 	country_modifier_angry = {
 		alias_name[modifier] = alias_match_left[modifier]
@@ -102,9 +102,9 @@ estate = {
 	land_ownership_modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
-	
-	
+
+
+
 	base_influence = int
 
 	## cardinality = 0..inf
@@ -116,7 +116,7 @@ estate = {
 		}
 		influence = int[-100..100]
 	}
-	
+
 	## cardinality = 0..inf
 	loyalty_modifier = {
 		desc = localisation
@@ -126,7 +126,7 @@ estate = {
 		}
 		loyalty = int[-100..100]
 	}
-	
+
 	## cardinality = 0..inf
 	custom_name = {
 		desc = localisation
@@ -135,7 +135,7 @@ estate = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
-	
+
 	#1.30 new stuff
 
 	##replace_scope = { this = province root = province }
@@ -165,7 +165,7 @@ estate = {
 ## replace_scope = { root = country this = country }
 estate_privilege = {
 	icon = scalar
-	
+
 	## cardinality = 0..1
 	land_share = int
 	## cardinality = 0..1
@@ -252,6 +252,8 @@ estate_privilege = {
 	## cardinality = 0..inf
 	###Modifier that is applied if specified conditions are true, with its effect scaling on the influence of the estate
 	influence_scaled_conditional_modifier = {
+		## cardinality = 0..1
+		###Conditions under which this modifier will be active, if empty it will be always
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
