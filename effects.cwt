@@ -296,7 +296,7 @@ alias[effect:add_tariff_value] = float
 ###Changes the loan size of the current scope. Size is the number of months in monthly income that a single loan is equal to.
 alias[effect:loan_size] = int[1..inf]
 
-## scope = country
+## scope = any
 ###Changes the price of a trade good globally. Tradegood prices are found in /Europa Universalis IV/common/prices/*.txt. The new price is the base price + (base price * value). Duration accepts -1 for unlimited duration.
 alias[effect:change_price] = {
 	trade_goods = <trade_good>
