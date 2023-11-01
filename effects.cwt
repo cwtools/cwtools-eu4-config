@@ -4324,5 +4324,5 @@ alias[effect:banner_cavalry] = enum[country_tags]
 alias[effect:transfer_papal_controller] = scope[country]
 
 ## scope = country
-###Transfer the current Papal controller to the given country
-alias[effect:transfer_papal_controller] = enum[country_tags]
+###Sets the naval doctrine of the country, ignores the can_select restrictions of the naval doctrine
+alias[effect:set_naval_doctrine] = <naval_doctrine>
