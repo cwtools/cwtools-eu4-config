@@ -1706,3 +1706,12 @@ alias[modifier:allowed_rev_guard_fraction] = float
 
 ## scope = country
 alias[modifier:has_marines] = bool
+
+## scope = province
+alias[modifier:local_has_qizilbash] = bool
+
+## scope = province
+alias[modifier:local_has_mamluks] = bool
+
+## scope = country
+alias[modifier:num_of_pronoiars] = int
