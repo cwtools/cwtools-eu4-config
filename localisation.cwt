@@ -71,4 +71,8 @@ localisation_commands = {
 	Leader = unit
 	Location = unit
 	enum[defined_text_commands] = any
+	GetJanissariesName = country
+	GetEunuchsName = country
+	GetQizilbashName = country
+	GetGhilmanName = country
 }
