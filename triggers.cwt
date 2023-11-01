@@ -5884,3 +5884,6 @@ alias[trigger:is_mod_active] = scalar
 ## scope = country
 ###Returns true if the country has an army of at least X k janissaries.
 alias[trigger:mamluks_percentage] = float[0.0..1.0]
+
+## scope = country
+alias[trigger:num_of_qizilbash] = int
