@@ -14,20 +14,32 @@ hegemon = {
 	allow = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## push_scope = country
 	base = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## push_scope = country
 	###At max 100% tickup.
 	scale = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-	
+
 	## push_scope = country
 	max = {
 		alias_name[modifier] = alias_match_left[modifier]
+	}
+
+	## cardinality = 0..1
+	###When Hegemony is proclaimed
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
+	## cardinality = 0..1
+	###When Hegemony is lost
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 }
