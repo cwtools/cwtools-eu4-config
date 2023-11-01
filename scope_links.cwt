@@ -1510,7 +1510,7 @@ alias[trigger:any_trade_node_member_country] = {
 }
 
 ## push_scope = province
-## scope = trade_node
+## scope = { trade_node province }
 ###Scopes to all provinces in the current trade node.
 alias[trigger:all_trade_node_member_province] = {
 	alias_name[trigger] = alias_match_left[trigger]
