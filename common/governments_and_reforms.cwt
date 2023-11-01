@@ -269,6 +269,7 @@ government_mechanic = {
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			ai_chance = {
+				## cardinality = 0..1
 				factor = float[0..10000]
 				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
