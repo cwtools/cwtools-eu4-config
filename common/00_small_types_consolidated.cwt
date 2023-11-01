@@ -230,6 +230,16 @@ cult = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+	## replace_scope = { root = country this = country }
+	## cardinality = 0..1
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	## replace_scope = { root = country this = country }
+	## cardinality = 0..1
+	removed_effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
 }
 
 ## replace_scope = { root = province this = province }
