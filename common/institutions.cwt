@@ -47,6 +47,12 @@ institution = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## replace_scope = { this = country root = country }
+	###Effect that runs when the country embraces it
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
 	## replace_scope = { this = province root = province }
 	###any_friendly_coast_border_province is a special scope made for institution spread. It checks for adjacent provinces or provinces one seazone away. Friendly is defined as at positive relations or owned by the same country that owns the province.
 	embracement_speed = {
