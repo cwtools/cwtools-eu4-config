@@ -5876,3 +5876,7 @@ alias[trigger:has_spare_flagship_capacity] = bool
 ## scope = country
 ###Returns true if the country is a neighbor of the specified province.
 alias[trigger:is_neighbor_of_province] = <province_id>
+
+## scope = any
+###Returns true if the given name matches the Name field of the descriptor.mod of any enabled mods, e.g. "Example Mod" will return true if a mod is enabled that contains Name="Example Mod" in its descriptor.mod
+alias[trigger:is_mod_active] = scalar
