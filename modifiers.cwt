@@ -1703,3 +1703,6 @@ alias[modifier:same_religion_advisor_cost] = float
 
 ## scope = country
 alias[modifier:allowed_rev_guard_fraction] = float
+
+## scope = country
+alias[modifier:has_marines] = bool
