@@ -4318,3 +4318,11 @@ alias[effect:banner_cavalry] = scope[country]
 ## scope = province
 ###Creates a Banner Cavalry in the scoped province, for the defined scope
 alias[effect:banner_cavalry] = enum[country_tags]
+
+## scope = country
+###Transfer the current Papal controller to the given country
+alias[effect:transfer_papal_controller] = scope[country]
+
+## scope = country
+###Transfer the current Papal controller to the given country
+alias[effect:transfer_papal_controller] = enum[country_tags]
