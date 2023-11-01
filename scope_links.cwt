@@ -797,6 +797,13 @@ alias[effect:random_owned_province] = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	alias_name[effect] = alias_match_left[effect]
+
+	## cardinality = 0..1
+	###Apply effect to random provinces in the area, use combined with amount
+	type = enum[random_repeating]
+	## cardinality = 0..1
+	###How many provinces to apply the effect, implies 'type = random' unless explicitly set
+	amount = int[1..inf]
 }
 
 ## push_scope = trade_node
