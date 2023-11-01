@@ -359,6 +359,7 @@ government_reform = {
 		has_cultural_union = bool
 		can_remove_idea_group = bool
 		mercs_do_not_cost_army_professionalism = bool
+		is_eligible_for_hre_emperor = bool
 	}
 
 
@@ -744,6 +745,9 @@ government_reform = {
 		post_removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
+
+		## cardinality = 0..1
+		is_eligible_for_hre_emperor = bool
 	}
 }
 
