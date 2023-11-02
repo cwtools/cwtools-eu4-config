@@ -436,6 +436,17 @@ edict = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
+
+	## replace_scope = { root = country this = country from = province }
+	## cardinality = 0..1
+	###If true an alert will appear, ROOT is the country, FROM are the provinces owned by ROOT in the area
+	notify_trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## cardinality = 0..1
+	###How many years the edict needs to be active to show an alert
+	years_to_notify = int
 }
 
 
