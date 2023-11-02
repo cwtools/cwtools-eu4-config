@@ -602,8 +602,11 @@ alias[effect:excommunicate] = scope[country]
 alias[effect:excommunicate] = enum[country_tags]
 
 ## scope = country
-###Enables or disables the Papacy mechanic.
-alias[effect:set_papacy_active] = bool
+###Enables or disables the Papacy mechanic for the given religion.
+alias[effect:set_religion_papacy_active] = {
+	religion = <religion>
+	active = bool
+}
 
 ## scope = country
 ###Adds Piety to the current scope. No effect if the country does not hold a religion using uses_piety
