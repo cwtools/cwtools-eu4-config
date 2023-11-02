@@ -393,7 +393,10 @@ subject_type = {
 	## cardinality = 0..1
 	###Grants -10% Liberty Desire at the cost of -20 Reform Progress
 	grant_administrative_autonomy = bool
-	
+	## cardinality = 0..1
+	###Use this to disable inheritance on Subject types that use inheriting (Personal Union) mechanics
+	disable_inheritance = bool
+
 	## cardinality = 0..1
 	sword_hunt = bool
 	## cardinality = 0..1
