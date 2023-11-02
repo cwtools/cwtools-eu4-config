@@ -342,6 +342,10 @@ naval_doctrine = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
+	## cardinality = 0..1
+	###money cost per each sailor employed in the whole navy
+	cost = float
+
 	button_gfx = int
 }
 
