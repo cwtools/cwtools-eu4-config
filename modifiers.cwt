@@ -1715,3 +1715,21 @@ alias[modifier:local_has_mamluks] = bool
 
 ## scope = country
 alias[modifier:num_of_pronoiars] = int
+
+## scope = country
+alias[modifier:allowed_qizilbash_fraction] = int
+
+## scope = country
+alias[modifier:amount_of_qizilbash] = int
+
+## scope = country
+alias[modifier:allowed_mamluks_fraction] = int
+
+## scope = country
+alias[modifier:amount_of_mamluks] = int
+
+## scope = country
+alias[modifier:has_qizilbash] = bool
+
+## scope = country
+alias[modifier:has_mamluks] = bool
