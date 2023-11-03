@@ -1733,3 +1733,6 @@ alias[modifier:has_qizilbash] = bool
 
 ## scope = country
 alias[modifier:has_mamluks] = bool
+
+## scope = country
+alias[modifier:allowed_qizilbash_fraction] = float
