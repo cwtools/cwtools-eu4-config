@@ -53,6 +53,7 @@ enums = {
 		stability
 		total_development
 		treasury
+		trigger_value:adm_power
 		trigger_value:always
 		trigger_value:army_size
 		trigger_value:base_manpower
@@ -61,12 +62,15 @@ enums = {
 		trigger_value:colonysize
 		trigger_value:construction_progress
 		trigger_value:development
+		trigger_value:dip_power
 		trigger_value:diplomatic_reputation
 		trigger_value:galleys_in_province
 		trigger_value:heavy_ships_in_province
 		trigger_value:light_ships_in_province
+		trigger_value:mil_power
 		trigger_value:mercantilism
 		trigger_value:monthly_income
+		trigger_value:nationalism
 		trigger_value:native_size
 		trigger_value:num_of_mercenaries
 		trigger_value:num_of_provinces_in_states
