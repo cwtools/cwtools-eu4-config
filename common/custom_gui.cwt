@@ -1,0 +1,106 @@
+types = {
+	## type_key_filter = custom_button
+	type[custom_button] = {
+		path = "game/common/custom_gui"
+		start_from_root = yes
+		name_field = name
+	}
+	## type_key_filter = custom_text_box
+	type[custom_text_box] = {
+		path = "game/common/custom_gui"
+		start_from_root = yes
+		name_field = name
+	}
+	## type_key_filter = custom_icon
+	type[custom_icon] = {
+		path = "game/common/custom_gui"
+		start_from_root = yes
+		name_field = name
+	}
+	## type_key_filter = custom_shield
+	type[custom_shield] = {
+		path = "game/common/custom_gui"
+		start_from_root = yes
+		name_field = name
+	}
+}
+
+custom_button = {
+	###Must match a scripted guiButtonType in a .gui file
+	name = scalar
+	###If true, the button will be shown in the interface
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###If true, the button will be clickable
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###The code that runs when the button is clicked
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	tooltip = localisation
+	## cardinality = 0..inf
+	###Which frame file to use
+	frame = {
+		###Which frame of the frame file to use
+		number = int
+		###When to use the specified frame
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
+}
+
+custom_text_box = {
+	###Must match a scripted instantTextBoxType in a .gui file
+	name = scalar
+	###If true, the text box will be shown
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	tooltip = localisation
+}
+
+custom_icon = {
+	###Must match a scripted iconType in a .gui file
+	name = scalar
+	###If true, the icon will be shown in the interface
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	tooltip = localisation
+	## cardinality = 0..inf
+	###Which frame file to use
+	frame = {
+		###Which frame of the frame file to use
+		number = int
+		###When to use the specified frame
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
+}
+
+custom_shield = {
+	###Must match a scripted guiButtonType in a .gui file
+	name = scalar
+	###If true, the shield will be visible
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###If true, the shield is clickable
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+	###The code that runs when clicked
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	tooltip = localisation
+	###Global event target name
+	global_event_target = <country_event>
+	###If clicking opens the country view
+	open_country = bool
+}
