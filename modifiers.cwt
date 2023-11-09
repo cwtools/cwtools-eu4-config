@@ -1723,7 +1723,7 @@ alias[modifier:allowed_qizilbash_fraction] = int
 alias[modifier:amount_of_qizilbash] = int
 
 ## scope = country
-alias[modifier:allowed_mamluks_fraction] = int
+alias[modifier:allowed_mamluks_fraction] = float
 
 ## scope = country
 alias[modifier:amount_of_mamluks] = int
