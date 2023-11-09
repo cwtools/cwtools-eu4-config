@@ -607,6 +607,8 @@ government_reform = {
 			duration = int
 			## cardinality = 0..1
 			has_term_election = bool
+			## cardinality = 0..1
+			is_eligible_for_hre_emperor = no
 
 			## cardinality = 0..1
 			factions = {
