@@ -285,7 +285,10 @@ government_reform = {
 		heirs_can_be_generals = bool
 		fixed_rank = int
 		republican_name = bool
-		government_abilities = { }
+		government_abilities = {
+			## cardinality = 0..inf
+			<government_mechanic>
+		}
 		claim_states = bool
 		religion = bool
 		republic = bool
