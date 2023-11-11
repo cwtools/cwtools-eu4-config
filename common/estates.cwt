@@ -239,6 +239,10 @@ estate_privilege = {
 	## cardinality = 0..inf
 	###Modifier that are applied if the specified conditions are true.
 	conditional_modifier = {
+		###If true will show the conditional modifier, will be hidden otherwise
+		tooltip_potential = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
