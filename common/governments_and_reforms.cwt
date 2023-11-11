@@ -486,6 +486,13 @@ government_reform = {
 		has_cultural_union = bool
 
 		## cardinality = 0..1
+		allow_banners = bool
+		## cardinality = 0..1
+		has_meritocracy = bool
+		## cardinality = 0..1
+		trade_city_reform = <government_reform>
+
+		## cardinality = 0..1
 		replacement_on_independence_war = <government_reform.new>
 
 		## replace_scope = { root = country this = country }
