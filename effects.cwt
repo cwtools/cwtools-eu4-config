@@ -380,6 +380,7 @@ alias[effect:add_government_power] = {
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
 	value = float
+	scaled_with_gain_modifier = bool
 }
 
 ## scope = country
@@ -414,6 +415,7 @@ alias[effect:add_government_power_scaled_to_seats] = {
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
 	value = int
+	scaled_with_gain_modifier = bool
 }
 
 ## scope = country
