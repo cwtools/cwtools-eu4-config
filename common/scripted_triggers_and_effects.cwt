@@ -572,3 +572,24 @@ enums = {
 		"FROM = { add_next_institution_embracement = -0.5 }"
 	}
 }
+
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_completed_agenda_effect] = {
+	estate = <estate>
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:take_estate_land_share_small] = {
+	estate = <estate>
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_failed_agenda_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:clr_auto_complete_flag] = yes

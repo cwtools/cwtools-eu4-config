@@ -5887,3 +5887,6 @@ alias[trigger:mamluks_percentage] = float[0.0..1.0]
 
 ## scope = country
 alias[trigger:num_of_qizilbash] = int
+
+# scope = country
+alias[trigger:num_of_mamluks] = int
