@@ -573,7 +573,6 @@ enums = {
 	}
 }
 
-
 ## scope = country
 ### Force scripted effect to work
 alias[effect:on_completed_agenda_effect] = {
@@ -585,6 +584,79 @@ alias[effect:on_completed_agenda_effect] = {
 alias[effect:take_estate_land_share_small] = {
 	estate = <estate>
 }
+## scope = country
+### Force scripted effect to work
+alias[effect:take_estate_land_share_small] = {
+	estate = all
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:take_estate_land_share_massive] = {
+	estate = <estate>
+}
+## scope = country
+### Force scripted effect to work
+alias[effect:take_estate_land_share_massive] = {
+	estate = all
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:give_estate_land_share_gigantic] = {
+	estate = <estate>
+}
+## scope = country
+### Force scripted effect to work
+alias[effect:give_estate_land_share_gigantic] = {
+	estate = all
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:block_estate_removing_reforms] = {
+	estate = <estate>
+}
+## scope = country
+### Force scripted effect to work
+alias[effect:block_estate_removing_reforms] = {
+	estate = all
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:unblock_estate_removing_reforms] = {
+	estate = <estate>
+}
+## scope = country
+### Force scripted effect to work
+alias[effect:unblock_estate_removing_reforms] = {
+	estate = all
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:enable_estate_action] = {
+	estate_action = enum[estate_action_enum]
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:disable_estate_action] = {
+	estate_action = enum[estate_action_enum]
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:scaling_with_influence_privilege_tooltip] = {
+	estate_privilege = <estate_privilege>
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:scaling_with_loyalty_privilege_tooltip] = {
+	estate_privilege = <estate_privilege>
+}
 
 ## scope = country
 ### Force scripted effect to work
@@ -593,3 +665,11 @@ alias[effect:on_failed_agenda_effect] = yes
 ## scope = country
 ### Force scripted effect to work
 alias[effect:clr_auto_complete_flag] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:spawn_rebels_seize_land_switch] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:re_add_loyalty_from_seized_land] = yes

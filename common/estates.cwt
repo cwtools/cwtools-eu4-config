@@ -239,13 +239,11 @@ estate_privilege = {
 	## cardinality = 0..inf
 	###Modifier that are applied if the specified conditions are true.
 	conditional_modifier = {
-		###If true will show the conditional modifier, will be hidden otherwise
-		tooltip_potential = {
-			alias_name[trigger] = alias_match_left[trigger]
-		}
+		## cardinality = 0..1
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
+		## cardinality = 0..inf
 		modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
@@ -317,6 +315,15 @@ estate_privilege = {
 	ai_will_do = {
 		factor = float
 		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	additional_description = {
+		## cardinality = 0..1
+		cossacks_regiment
+		## cardinality = 0..1
+		rajput_regiment
+		## cardinality = 0..inf
+		scalar
 	}
 }
 
