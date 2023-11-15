@@ -4350,3 +4350,27 @@ alias[effect:set_naval_doctrine] = <naval_doctrine>
 ## scope = any
 ###Plays a sound effect as defined in an .asset file in the sould/ folder
 alias[effect:play_sound] = scalar
+
+## scope = province
+alias[effect:qizilbash_infantry] = scope[country]
+
+## scope = province
+alias[effect:qizilbash_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:qizilbash_cavalry] = scope[country]
+
+## scope = province
+alias[effect:qizilbash_cavalry] = enum[country_tags]
+
+## scope = province
+alias[effect:mamluks_infantry] = scope[country]
+
+## scope = province
+alias[effect:mamluks_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:mamluks_cavalry] = scope[country]
+
+## scope = province
+alias[effect:mamluks_cavalry] = enum[country_tags]
