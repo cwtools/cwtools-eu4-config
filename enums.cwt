@@ -421,6 +421,7 @@ enums = {
 		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
+		influence_to_vassal_elevation_cost
 		land_forcelimit_modifier
 		land_morale
 		local_build_time
