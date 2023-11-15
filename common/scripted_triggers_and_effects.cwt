@@ -675,3 +675,14 @@ alias[effect:spawn_rebels_seize_land_switch] = yes
 ## scope = country
 ### Force scripted effect to work
 alias[effect:re_add_loyalty_from_seized_land] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:give_estate_land_share_init] = {
+	estate = <estate>
+}
+## scope = country
+### Force scripted effect to work
+alias[effect:give_estate_land_share_init] = {
+	estate = all
+}
