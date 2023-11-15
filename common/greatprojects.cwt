@@ -127,6 +127,7 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
 			###If true will show the conditional modifier, will be hidden otherwise
 			tooltip_potential = {
 				alias_name[trigger] = alias_match_left[trigger]
@@ -181,6 +182,7 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
 			###If true will show the conditional modifier, will be hidden otherwise
 			tooltip_potential = {
 				alias_name[trigger] = alias_match_left[trigger]
@@ -235,6 +237,7 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
 			###If true will show the conditional modifier, will be hidden otherwise
 			tooltip_potential = {
 				alias_name[trigger] = alias_match_left[trigger]
@@ -289,6 +292,7 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
 			###If true will show the conditional modifier, will be hidden otherwise
 			tooltip_potential = {
 				alias_name[trigger] = alias_match_left[trigger]
