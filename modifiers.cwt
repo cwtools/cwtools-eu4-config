@@ -181,6 +181,7 @@ modifiers = {
 	inflation_action_cost = country
 	inflation_reduction = country
 	inflation_reduction_local = province
+	influence_to_vassal_elevation_cost = country
 	innovativeness_gain = country
 	institution_growth = province
 	institution_spread_from_true_faith = country
@@ -1744,3 +1745,6 @@ alias[modifier:is_qizilbash_modifier] = bool
 
 ## scope = country
 alias[modifier:is_mamluks_modifier] = bool
+
+## scope = country
+alias[modifier:influence_to_vassal_elevation_cost] = int
