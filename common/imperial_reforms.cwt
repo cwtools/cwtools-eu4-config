@@ -112,6 +112,8 @@ imperial_reform = {
 		## cardinality = 0..1
 		required_reform = <imperial_reform.china>
 		## cardinality = 0..1
+		disabled_by = <imperial_reform.china>
+		## cardinality = 0..1
 		###Whether the reform can be enacted
 		trigger = {
 			alias_name[trigger] = alias_match_left[trigger]
