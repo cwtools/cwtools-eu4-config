@@ -686,3 +686,11 @@ alias[effect:give_estate_land_share_init] = {
 alias[effect:give_estate_land_share_init] = {
 	estate = all
 }
+
+## scope = country
+### Forced scripted trigger to work
+alias[trigger:BYZ_reached_pronia_slot_limit] = bool
+
+## scope = country
+### Forced scripted trigger to work
+alias[trigger:BYZ_enough_pronoia_slots] = bool
