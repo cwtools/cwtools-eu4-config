@@ -191,7 +191,9 @@ modifiers = {
 	is_cossack_modifier = country
 	is_hussars_modifier = country
 	is_imperial_modifier = country
+	is_mamluks_modifier = country
 	is_marine_modifier = country
+	is_qizilbash_modifier = country
 	is_revolutionary_guard_modifier = country
 	is_streltsy_modifier = country
 	justify_trade_conflict_cost = country
@@ -1736,3 +1738,9 @@ alias[modifier:has_mamluks] = bool
 
 ## scope = country
 alias[modifier:allowed_qizilbash_fraction] = float
+
+## scope = country
+alias[modifier:is_qizilbash_modifier] = bool
+
+## scope = country
+alias[modifier:is_mamluks_modifier] = bool
