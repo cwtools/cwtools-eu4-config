@@ -230,6 +230,7 @@ alias[effect:create_units_of_type] = {
 	amount = int
 	province = <province_id>
 	unit_type = <unit_type>
+	unit_type = enum[special_unit_types]
 	## cardinality = 0..1
 	custom_tooltip = localisation
 }
@@ -238,6 +239,7 @@ alias[effect:create_units_of_type] = {
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
 	unit_type = <unit_type>
+	unit_type = enum[special_unit_types]
 	who = enum[country_tags]
 	who = scope[country]
 	## cardinality = 0..1
