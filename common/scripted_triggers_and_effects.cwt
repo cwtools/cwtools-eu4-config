@@ -738,3 +738,116 @@ alias[effect:on_primary_culture_changed_privileges_effect] = yes
 ## scope = country
 ### Force scripted effect to work
 alias[effect:on_trade_good_changed_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:issue_effect_scaling_with_estate_influence] = {
+	estate = <estate>
+	## cardinality = 0..1
+	effect1 = "create_admiral = { tradition = 15 }"
+	## cardinality = 0..1
+	effect2 = "create_admiral = { tradition = 30 }"
+	## cardinality = 0..1
+	effect3 = "create_admiral = { tradition = 45 }"
+	## cardinality = 0..1
+	effect4 = "create_admiral = { tradition = 60 }"
+	## cardinality = 0..1
+	effect5 = "create_admiral = { tradition = 75 }"
+	## cardinality = 0..1
+	fallback_effect = "create_admiral = { tradition = 45 }"
+	## cardinality = 0..1
+	effect1 = "
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+			}
+			"		
+	## cardinality = 0..1
+	effect2 = "
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+				cost_multiplier = 0.75
+			}
+			"
+	## cardinality = 0..1		
+	effect3 = "
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+				cost_multiplier = 0.5
+			}
+			"
+	## cardinality = 0..1
+	effect4 = "
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			"
+	## cardinality = 0..1		
+	effect5 = "	
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+				cost_multiplier = 0.1
+			}
+			"
+	## cardinality = 0..1
+	fallback_effect = "
+			define_advisor = {
+				type = colonial_governor
+				skill = 3
+				cost_multiplier = 0.75
+			}
+			"
+	## cardinality = 0..1			
+	effect1 = "add_years_of_sailors_scaled_to_seats = 0.5"
+	## cardinality = 0..1
+	effect2 = "add_years_of_sailors_scaled_to_seats = 0.75"
+	## cardinality = 0..1
+	effect3 = "add_years_of_sailors_scaled_to_seats = 1"
+	## cardinality = 0..1
+	effect4 = "add_years_of_sailors_scaled_to_seats = 1.25"
+	## cardinality = 0..1
+	effect5 = "add_years_of_sailors_scaled_to_seats = 1.5"
+	## cardinality = 0..1
+	fallback_effect = "add_years_of_sailors_scaled_to_seats = 1"	
+	## cardinality = 0..1
+	effect1 = "add_navy_tradition = 2"
+	## cardinality = 0..1
+	effect2 = "add_navy_tradition = 4"
+	## cardinality = 0..1
+	effect3 = "add_navy_tradition = 6"
+	## cardinality = 0..1
+	effect4 = "add_navy_tradition = 8"
+	## cardinality = 0..1
+	effect5 = "add_navy_tradition = 10"
+	## cardinality = 0..1
+	fallback_effect = "add_navy_tradition = 5"
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:select_biggest_country_of_scope_type] = {
+	limit = "
+					has_regency = no
+					is_free_or_tributary_trigger = yes
+					OR = {
+						has_estate = estate_nobles
+						has_estate = estate_brahmins
+						has_estate = estate_rajput
+					}
+					government = monarchy
+					NOT = { war_with = ROOT }
+					if = {
+						limit = {
+							ROOT = { religion_group = christian }
+						}
+						religion_group = christian
+					}
+				"
+				trigger_scope = "any_neighbor_country"
+				effect_scope = "random_neighbor_country"
+			}
