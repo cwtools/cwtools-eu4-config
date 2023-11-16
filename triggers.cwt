@@ -4561,10 +4561,11 @@ alias[trigger:is_in_important_war] = bool
 
 
 ## scope = country
+## severity = warning
 ###Checks whether the country's government uses a specified attribute
 alias[trigger:has_government_attribute] = enum[government_attributes]
-
 ## scope = country
+## severity = warning
 ###Checks whether the country's government uses a specified attribute
 alias[trigger:has_government_attribute] = value[custom_attribute]
 
