@@ -338,6 +338,7 @@ modifiers = {
 	navy_tradition_decay = country
 	no_stability_loss_on_monarch_death = country
 	num_accepted_cultures = country
+	num_of_pronoiars = country
 	overlord_naval_forcelimit = country
 	overlord_naval_forcelimit_modifier = country
 	own_coast_naval_combat_bonus = country
@@ -358,6 +359,7 @@ modifiers = {
 	privateer_efficiency = country
 	production_efficiency = country
 	promote_culture_cost = country
+	pronoia_amount_check_influence = country
 	province_trade_power_modifier = province
 	province_trade_power_value = province
 	province_warscore_cost = country
@@ -1748,3 +1750,6 @@ alias[modifier:is_mamluks_modifier] = bool
 
 ## scope = country
 alias[modifier:influence_to_vassal_elevation_cost] = int
+
+## scope = country
+alias[modifier:pronoia_amount_check_influence] = int
