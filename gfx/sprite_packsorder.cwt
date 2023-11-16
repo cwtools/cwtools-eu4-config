@@ -25,7 +25,9 @@ enums = {
 		dlc001_sco_sprite_pack 
 		dlc002_mam_sprite_pack 
 		dlc002_per_sprite_pack 
-		dlc002_tur_sprite_pack 
+		dlc002_tur_sprite_pack
+		dlc002_mam_sprite_pack_culture
+		dlc002_tur_sprite_pack_culture
 		dlc003_lit_sprite_pack 
 		dlc003_pol_sprite_pack 
 		dlc003_rus_sprite_pack 
@@ -109,6 +111,7 @@ enums = {
 		dlc042_por_sprite_pack 
 		dlc042_rus_sprite_pack 
 		dlc042_tur_sprite_pack 
+		dlc042_tur_sprite_pack_turkish_culture
 		dlc043_frn_sprite_pack 
 		dlc043_ham_sprite_pack 
 		dlc043_num_sprite_pack 
@@ -291,6 +294,14 @@ enums = {
 		dlc120_CDL_sprite_pack_tibetan_group
 		dlc120_LIE_sprite_pack_dutch
 		dlc120_CHP_sprite_pack_french
+		dlc129_ARM_sprite_pack
+		dlc129_CYP_sprite_pack
+		dlc129_GEO_sprite_pack
+		dlc129_ISR_sprite_pack
+		dlc129_KAR_sprite_pack 
+		dlc129_SYR_sprite_pack
+		dlc129_TLC_sprite_pack
+		dlc129_TRE_sprite_pack
 	}
 }	
 
@@ -301,4 +312,3 @@ packorder = {
 	## cardinality = 0..inf
 	enum[spritepacks] = int
 }
-
