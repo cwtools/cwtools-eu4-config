@@ -282,16 +282,28 @@ alias[effect:bribe_effect_scaling_with_estate_loyalty] = {
 
 enums = {
 	enum[bribe_effect_options] = {
-		"add_yearly_manpower = -0.01"
-		"add_yearly_manpower = -0.02"
-		"add_yearly_manpower = -0.04"
-		"add_yearly_manpower = -0.05"
-		"add_yearly_manpower = -0.08"
-		"add_yearly_manpower = -0.1"
-		"add_yearly_manpower = -0.16"
-		"add_yearly_manpower = -0.2"
-		"add_yearly_manpower = -0.4"
-		"add_yearly_manpower = -0.8"
+		"FROM = { add_local_autonomy = 16 }"
+		"FROM = { add_local_autonomy = 2 }"
+		"FROM = { add_local_autonomy = 32 }"
+		"FROM = { add_local_autonomy = 4 }"
+		"FROM = { add_local_autonomy = 8 }"
+		"FROM = { add_next_institution_embracement = -0.5 }"
+		"FROM = { add_next_institution_embracement = -1 }"
+		"FROM = { add_next_institution_embracement = -2 }"
+		"FROM = { add_next_institution_embracement = -2.5 }"
+		"FROM = { add_next_institution_embracement = -4 }"
+		"FROM = { add_next_institution_embracement = -8 }"
+		"add_army_professionalism = -0.001"
+		"add_army_professionalism = -0.002"
+		"add_army_professionalism = -0.004"
+		"add_army_professionalism = -0.005"
+		"add_army_professionalism = -0.008"
+		"add_army_professionalism = -0.01"
+		"add_army_professionalism = -0.016"
+		"add_army_professionalism = -0.02"
+		"add_army_professionalism = -0.032"
+		"add_army_professionalism = -0.04"
+		"add_army_professionalism = -0.08"
 		"add_army_tradition = -0.25"
 		"add_army_tradition = -0.5"
 		"add_army_tradition = -1"
@@ -302,21 +314,118 @@ enums = {
 		"add_army_tradition = -20"
 		"add_army_tradition = -4"
 		"add_army_tradition = -5"
-		"FROM = { add_local_autonomy = 32 }"
-		"FROM = { add_local_autonomy = 16 }"
-		"FROM = { add_local_autonomy = 8 }"
-		"FROM = { add_local_autonomy = 4 }"
-		"FROM = { add_local_autonomy = 2 }"
-		"add_war_exhaustion = 0.16"
-		"add_war_exhaustion = 0.08"
-		"add_war_exhaustion = 0.05"
-		"add_war_exhaustion = 0.04"
-		"add_war_exhaustion = 0.02"
-		"add_war_exhaustion = 0.01"
-		"add_war_exhaustion = 0.8"
-		"add_war_exhaustion = 0.4"
-		"add_war_exhaustion = 0.2"
-		"add_war_exhaustion = 0.1"
+		"add_church_power = -0.1"
+		"add_church_power = -0.2"
+		"add_church_power = -0.4"
+		"add_church_power = -0.8"
+		"add_church_power = -1"
+		"add_church_power = -1.6"
+		"add_church_power = -10"
+		"add_church_power = -16"
+		"add_church_power = -2"
+		"add_church_power = -20"
+		"add_church_power = -3.2"
+		"add_church_power = -4"
+		"add_church_power = -40"
+		"add_church_power = -5"
+		"add_church_power = -8"
+		"add_church_power = -80"
+		"add_corruption = 0.01"
+		"add_corruption = 0.02"
+		"add_corruption = 0.04"
+		"add_corruption = 0.05"
+		"add_corruption = 0.08"
+		"add_corruption = 0.1"
+		"add_corruption = 0.16"
+		"add_corruption = 0.2"
+		"add_corruption = 0.4"
+		"add_corruption = 0.44"
+		"add_corruption = 0.8"
+		"add_devotion = -0.1"
+		"add_devotion = -0.2"
+		"add_devotion = -0.4"
+		"add_devotion = -0.8"
+		"add_devotion = -1"
+		"add_devotion = -1.6"
+		"add_devotion = -16"
+		"add_devotion = -2"
+		"add_devotion = -3.2"
+		"add_devotion = -4"
+		"add_devotion = -8"
+		"add_fervor = -0.1"
+		"add_fervor = -0.2"
+		"add_fervor = -0.4"
+		"add_fervor = -0.5"
+		"add_fervor = -0.8"
+		"add_fervor = -1"
+		"add_fervor = -1.6"
+		"add_fervor = -10"
+		"add_fervor = -16"
+		"add_fervor = -2"
+		"add_fervor = -2.5"
+		"add_fervor = -20"
+		"add_fervor = -3.2"
+		"add_fervor = -4"
+		"add_fervor = -40"
+		"add_fervor = -5"
+		"add_fervor = -8"
+		"add_harmony = -0.1"
+		"add_harmony = -0.2"
+		"add_harmony = -0.25"
+		"add_harmony = -0.4"
+		"add_harmony = -0.5"
+		"add_harmony = -0.8"
+		"add_harmony = -1"
+		"add_harmony = -1.6"
+		"add_harmony = -16"
+		"add_harmony = -2"
+		"add_harmony = -3.2"
+		"add_harmony = -4"
+		"add_harmony = -8"
+		"add_horde_unity = -0.1"
+		"add_horde_unity = -0.2"
+		"add_horde_unity = -0.4"
+		"add_horde_unity = -0.8"
+		"add_horde_unity = -1"
+		"add_horde_unity = -1.6"
+		"add_horde_unity = -16"
+		"add_horde_unity = -2"
+		"add_horde_unity = -3.2"
+		"add_horde_unity = -4"
+		"add_horde_unity = -8"
+		"add_inflation = 0.01"
+		"add_inflation = 0.02"
+		"add_inflation = 0.04"
+		"add_inflation = 0.05"
+		"add_inflation = 0.08"
+		"add_inflation = 0.1"
+		"add_inflation = 0.16"
+		"add_inflation = 0.2"
+		"add_inflation = 0.4"
+		"add_inflation = 0.44"
+		"add_inflation = 0.8"
+		"add_legitimacy = -0.1"
+		"add_legitimacy = -0.2"
+		"add_legitimacy = -0.4"
+		"add_legitimacy = -0.8"
+		"add_legitimacy = -1"
+		"add_legitimacy = -1.6"
+		"add_legitimacy = -16"
+		"add_legitimacy = -2"
+		"add_legitimacy = -3.2"
+		"add_legitimacy = -4"
+		"add_legitimacy = -8"
+		"add_meritocracy = -0.1"
+		"add_meritocracy = -0.2"
+		"add_meritocracy = -0.4"
+		"add_meritocracy = -0.8"
+		"add_meritocracy = -1"
+		"add_meritocracy = -1.6"
+		"add_meritocracy = -16"
+		"add_meritocracy = -2"
+		"add_meritocracy = -3.2"
+		"add_meritocracy = -4"
+		"add_meritocracy = -8"
 		"add_navy_tradition = -0.25"
 		"add_navy_tradition = -0.5"
 		"add_navy_tradition = -1"
@@ -327,50 +436,42 @@ enums = {
 		"add_navy_tradition = -20"
 		"add_navy_tradition = -4"
 		"add_navy_tradition = -5"
-		"adm_power_cost = 16"
-		"adm_power_cost = 8"
-		"adm_power_cost = 5"
-		"adm_power_cost = 4"
-		"adm_power_cost = 2"
-		"adm_power_cost = 1"
-		"adm_power_cost = 80"
-		"adm_power_cost = 40"
-		"adm_power_cost = 20"
-		"adm_power_cost = 10"
-		"dip_power_cost = 16"
-		"dip_power_cost = 8"
-		"dip_power_cost = 5"
-		"dip_power_cost = 4"
-		"dip_power_cost = 2"
-		"dip_power_cost = 1"
-		"dip_power_cost = 80"
-		"dip_power_cost = 40"
-		"dip_power_cost = 20"
-		"dip_power_cost = 10"
-		"add_corruption = 0.16"
-		"add_corruption = 0.08"
-		"add_corruption = 0.05"
-		"add_corruption = 0.04"
-		"add_corruption = 0.02"
-		"add_corruption = 0.01"
-		"add_corruption = 0.8"
-		"add_corruption = 0.4"
-		"add_corruption = 0.44"
-		"add_corruption = 0.2"
-		"add_corruption = 0.1"
-		"add_inflation = 0.16"
-		"add_inflation = 0.08"
-		"add_inflation = 0.05"
-		"add_inflation = 0.04"
-		"add_inflation = 0.02"
-		"add_inflation = 0.01"
-		"add_inflation = 0.8"
-		"add_inflation = 0.4"
-		"add_inflation = 0.44"
-		"add_inflation = 0.2"
-		"add_inflation = 0.1"
-		"add_prestige = -0.5"
+		"add_papal_influence = -0.1"
+		"add_papal_influence = -0.2"
+		"add_papal_influence = -0.4"
+		"add_papal_influence = -0.8"
+		"add_papal_influence = -1"
+		"add_papal_influence = -1.6"
+		"add_papal_influence = -10"
+		"add_papal_influence = -16"
+		"add_papal_influence = -2"
+		"add_papal_influence = -20"
+		"add_papal_influence = -3.2"
+		"add_papal_influence = -4"
+		"add_papal_influence = -40"
+		"add_papal_influence = -5"
+		"add_papal_influence = -8"
+		"add_papal_influence = -80"
+		"add_patriarch_authority = -0.005"
+		"add_patriarch_authority = -0.01"
+		"add_patriarch_authority = -0.02"
+		"add_patriarch_authority = -0.04"
+		"add_patriarch_authority = -0.08"
+		"add_patriarch_authority = -0.1"
+		"add_patriarch_authority = -0.16"
+		"add_patriarch_authority = -0.2"
+		"add_patriarch_authority = -0.32"
+		"add_patriarch_authority = -0.4"
+		"add_patriarch_authority = -0.8"
+		"add_patriarch_authority = -1"
+		"add_patriarch_authority = -1.6"
+		"add_patriarch_authority = -16"
+		"add_patriarch_authority = -2"
+		"add_patriarch_authority = -3.2"
+		"add_patriarch_authority = -4"
+		"add_patriarch_authority = -8"
 		"add_prestige = -0.25"
+		"add_prestige = -0.5"
 		"add_prestige = -1"
 		"add_prestige = -1.25"
 		"add_prestige = -10"
@@ -379,6 +480,37 @@ enums = {
 		"add_prestige = -20"
 		"add_prestige = -4"
 		"add_prestige = -5"
+		"add_republican_tradition = -0.1"
+		"add_republican_tradition = -0.2"
+		"add_republican_tradition = -0.4"
+		"add_republican_tradition = -0.5"
+		"add_republican_tradition = -0.8"
+		"add_republican_tradition = -1"
+		"add_republican_tradition = -1.6"
+		"add_republican_tradition = -2"
+		"add_republican_tradition = -3.2"
+		"add_republican_tradition = -4"
+		"add_republican_tradition = -8"
+		"add_war_exhaustion = 0.01"
+		"add_war_exhaustion = 0.02"
+		"add_war_exhaustion = 0.04"
+		"add_war_exhaustion = 0.05"
+		"add_war_exhaustion = 0.08"
+		"add_war_exhaustion = 0.1"
+		"add_war_exhaustion = 0.16"
+		"add_war_exhaustion = 0.2"
+		"add_war_exhaustion = 0.4"
+		"add_war_exhaustion = 0.8"
+		"add_yearly_manpower = -0.01"
+		"add_yearly_manpower = -0.02"
+		"add_yearly_manpower = -0.04"
+		"add_yearly_manpower = -0.05"
+		"add_yearly_manpower = -0.08"
+		"add_yearly_manpower = -0.1"
+		"add_yearly_manpower = -0.16"
+		"add_yearly_manpower = -0.2"
+		"add_yearly_manpower = -0.4"
+		"add_yearly_manpower = -0.8"
 		"add_yearly_sailors = -0.01"
 		"add_yearly_sailors = -0.02"
 		"add_yearly_sailors = -0.04"
@@ -389,16 +521,6 @@ enums = {
 		"add_yearly_sailors = -0.2"
 		"add_yearly_sailors = -0.4"
 		"add_yearly_sailors = -0.8"
-		"mil_power_cost = 16"
-		"mil_power_cost = 8"
-		"mil_power_cost = 5"
-		"mil_power_cost = 4"
-		"mil_power_cost = 2"
-		"mil_power_cost = 1"
-		"mil_power_cost = 80"
-		"mil_power_cost = 40"
-		"mil_power_cost = 20"
-		"mil_power_cost = 10"
 		"add_years_of_income = -0.01"
 		"add_years_of_income = -0.02"
 		"add_years_of_income = -0.04"
@@ -410,168 +532,1146 @@ enums = {
 		"add_years_of_income = -0.32"
 		"add_years_of_income = -0.4"
 		"add_years_of_income = -0.8"
-		"add_army_professionalism = -0.032"
-		"add_army_professionalism = -0.016"
-		"add_army_professionalism = -0.008"
-		"add_army_professionalism = -0.005"
-		"add_army_professionalism = -0.004"
-		"add_army_professionalism = -0.002"
-		"add_army_professionalism = -0.001"
-		"add_army_professionalism = -0.08"
-		"add_army_professionalism = -0.04"
-		"add_army_professionalism = -0.02"
-		"add_army_professionalism = -0.01"
-		"add_legitimacy = -16"
-		"add_legitimacy = -8"
-		"add_legitimacy = -4"
-		"add_legitimacy = -3.2"
-		"add_legitimacy = -2"
-		"add_legitimacy = -1.6"
-		"add_legitimacy = -1"
-		"add_legitimacy = -0.8"
-		"add_legitimacy = -0.4"
-		"add_legitimacy = -0.2"
-		"add_legitimacy = -0.1"
-		"add_republican_tradition = -8"
-		"add_republican_tradition = -4"
-		"add_republican_tradition = -2"
-		"add_republican_tradition = -1"
-		"add_republican_tradition = -0.5"
-		"add_republican_tradition = -3.2"
-		"add_republican_tradition = -1.6"
-		"add_republican_tradition = -0.8"
-		"add_republican_tradition = -0.4"
-		"add_republican_tradition = -0.2"
-		"add_republican_tradition = -0.1"
-		"add_devotion = -16"
-		"add_devotion = -8"
-		"add_devotion = -4"
-		"add_devotion = -2"
-		"add_devotion = -1"
-		"add_devotion = -3.2"
-		"add_devotion = -1.6"
-		"add_devotion = -0.8"
-		"add_devotion = -0.4"
-		"add_devotion = -0.2"
-		"add_devotion = -0.1"
-		"add_horde_unity = -16"
-		"add_horde_unity = -8"
-		"add_horde_unity = -4"
-		"add_horde_unity = -2"
-		"add_horde_unity = -1"
-		"add_horde_unity = -3.2"
-		"add_horde_unity = -1.6"
-		"add_horde_unity = -0.8"
-		"add_horde_unity = -0.4"
-		"add_horde_unity = -0.2"
-		"add_horde_unity = -0.1"
-		"add_meritocracy = -16"
-		"add_meritocracy = -8"
-		"add_meritocracy = -4"
-		"add_meritocracy = -2"
-		"add_meritocracy = -1"
-		"add_meritocracy = -3.2"
-		"add_meritocracy = -1.6"
-		"add_meritocracy = -0.8"
-		"add_meritocracy = -0.4"
-		"add_meritocracy = -0.2"
-		"add_meritocracy = -0.1"
-		"add_church_power = -80"
-		"add_church_power = -40"
-		"add_church_power = -20"
-		"add_church_power = -10"
-		"add_church_power = -5"
-		"add_church_power = -16"
-		"add_church_power = -8"
-		"add_church_power = -4"
-		"add_church_power = -2"
-		"add_church_power = -1"
-		"add_church_power = -3.2"
-		"add_church_power = -1.6"
-		"add_church_power = -0.8"
-		"add_church_power = -0.4"
-		"add_church_power = -0.2"
-		"add_church_power = -0.1"
-		"add_patriarch_authority = -16"
-		"add_patriarch_authority = -8"
-		"add_patriarch_authority = -4"
-		"add_patriarch_authority = -2"
-		"add_patriarch_authority = -1"
-		"add_patriarch_authority = -3.2"
-		"add_patriarch_authority = -1.6"
-		"add_patriarch_authority = -0.8"
-		"add_patriarch_authority = -0.4"
-		"add_patriarch_authority = -0.2"
-		"add_patriarch_authority = -0.1"
-		"add_patriarch_authority = -0.32"
-		"add_patriarch_authority = -0.16"
-		"add_patriarch_authority = -0.08"
-		"add_patriarch_authority = -0.04"
-		"add_patriarch_authority = -0.02"
-		"add_patriarch_authority = -0.01"
-		"add_patriarch_authority = -0.005"
-		"add_papal_influence = -80"
-		"add_papal_influence = -40"
-		"add_papal_influence = -20"
-		"add_papal_influence = -10"
-		"add_papal_influence = -5"
-		"add_papal_influence = -16"
-		"add_papal_influence = -8"
-		"add_papal_influence = -4"
-		"add_papal_influence = -2"
-		"add_papal_influence = -1"
-		"add_papal_influence = -3.2"
-		"add_papal_influence = -1.6"
-		"add_papal_influence = -0.8"
-		"add_papal_influence = -0.4"
-		"add_papal_influence = -0.2"
-		"add_papal_influence = -0.1"
-		"add_fervor = -40"
-		"add_fervor = -20"
-		"add_fervor = -10"
-		"add_fervor = -5"
-		"add_fervor = -16"
-		"add_fervor = -8"
-		"add_fervor = -4"
-		"add_fervor = -2"
-		"add_fervor = -1"
-		"add_fervor = -3.2"
-		"add_fervor = -2.5"
-		"add_fervor = -1.6"
-		"add_fervor = -0.8"
-		"add_fervor = -0.4"
-		"add_fervor = -0.2"
-		"add_fervor = -0.1"
-		"add_fervor = -0.5"
-		"add_harmony = -16"
-		"add_harmony = -8"
-		"add_harmony = -4"
-		"add_harmony = -2"
-		"add_harmony = -1"
-		"add_harmony = -3.2"
-		"add_harmony = -1.6"
-		"add_harmony = -0.8"
-		"add_harmony = -0.4"
-		"add_harmony = -0.2"
-		"add_harmony = -0.1"
-		"add_harmony = -0.5"
-		"add_harmony = -0.25"
-		"change_government_reform_progress = -8"
-		"change_government_reform_progress = -4"
-		"change_government_reform_progress = -2.5"
-		"change_government_reform_progress = -2"
-		"change_government_reform_progress = -1"
+		"adm_power_cost = 1"
+		"adm_power_cost = 10"
+		"adm_power_cost = 16"
+		"adm_power_cost = 2"
+		"adm_power_cost = 20"
+		"adm_power_cost = 4"
+		"adm_power_cost = 40"
+		"adm_power_cost = 5"
+		"adm_power_cost = 8"
+		"adm_power_cost = 80"
 		"change_government_reform_progress = -0.5"
-		"change_government_reform_progress = -80"
-		"change_government_reform_progress = -40"
-		"change_government_reform_progress = -20"
+		"change_government_reform_progress = -1"
 		"change_government_reform_progress = -10"
-		"FROM = { add_next_institution_embracement = -8 }"
-		"FROM = { add_next_institution_embracement = -4 }"
-		"FROM = { add_next_institution_embracement = -2.5 }"
-		"FROM = { add_next_institution_embracement = -2 }"
-		"FROM = { add_next_institution_embracement = -1 }"
-		"FROM = { add_next_institution_embracement = -0.5 }"
+		"change_government_reform_progress = -2"
+		"change_government_reform_progress = -2.5"
+		"change_government_reform_progress = -20"
+		"change_government_reform_progress = -4"
+		"change_government_reform_progress = -40"
+		"change_government_reform_progress = -8"
+		"change_government_reform_progress = -80"
+		"dip_power_cost = 1"
+		"dip_power_cost = 10"
+		"dip_power_cost = 16"
+		"dip_power_cost = 2"
+		"dip_power_cost = 20"
+		"dip_power_cost = 4"
+		"dip_power_cost = 40"
+		"dip_power_cost = 5"
+		"dip_power_cost = 8"
+		"dip_power_cost = 80"
+		"mil_power_cost = 1"
+		"mil_power_cost = 10"
+		"mil_power_cost = 16"
+		"mil_power_cost = 2"
+		"mil_power_cost = 20"
+		"mil_power_cost = 4"
+		"mil_power_cost = 40"
+		"mil_power_cost = 5"
+		"mil_power_cost = 8"
+		"mil_power_cost = 80"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = militarization_mechanic
+					power_type = militarized_society
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = tribal_federation_mechanic
+					power_type = tribal_allegiance
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_modernization_mechanic
+					power_type = russian_modernization
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = hessian_militarization_mechanic
+					power_type = hessian_militarization
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = system_of_councils_mechanic
+					power_type = council_consensus
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = cossacks_mechanic
+					power_type = cossacks_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_administrative_rule
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_diplomatic_rule
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_rule_mechanic
+					power_type = russian_military_rule
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -0.25
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -0.25
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_1
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_2
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = land_of_the_christian_sun_mechanic
+					power_type = christian_japan_3
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -2
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -2
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_dip_power
+					value = -0.5
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -0.5
+				}"
+		"
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanicic
+					power_type = mamluk_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = mamluk_mechanic
+					power_type = mamluk_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_adm_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanicc
+					power_type = russian_dip_power
+					value = -1
+				}
+				add_government_power = {
+					mechanic_type = russian_mechanic
+					power_type = russian_mil_power
+					value = -1
+				}"
+		"
+				add_government_power = {
+					mechanic_type = ottoman_decadence_mechanic
+					power_type = ottoman_decadence
+					value = 0.04
+				}"
+		"
+				add_government_power = {
+					mechanic_type = ottoman_decadence_mechanic
+					power_type = ottoman_decadence
+					value = 0.02
+				}"
+		"
+				add_government_power = {
+					mechanic_type = ottoman_decadence_mechanic
+					power_type = ottoman_decadence
+					value = 0.01
+				}"
+		"
+				add_government_power = {
+					mechanic_type = ottoman_decadence_mechanic
+					power_type = ottoman_decadence
+					value = 0.4
+				}"
 	}
 }
 
@@ -743,89 +1843,271 @@ alias[effect:on_trade_good_changed_estate_privileges_effect] = yes
 ### Force scripted effect to work
 alias[effect:issue_effect_scaling_with_estate_influence] = {
 	estate = <estate>
-	## cardinality = 0..1
-	effect1 = "create_admiral = { tradition = 15 }"
-	## cardinality = 0..1
-	effect2 = "create_admiral = { tradition = 30 }"
-	## cardinality = 0..1
-	effect3 = "create_admiral = { tradition = 45 }"
-	## cardinality = 0..1
-	effect4 = "create_admiral = { tradition = 60 }"
-	## cardinality = 0..1
-	effect5 = "create_admiral = { tradition = 75 }"
-	## cardinality = 0..1
-	fallback_effect = "create_admiral = { tradition = 45 }"
-	## cardinality = 0..1
-	effect1 = "
+	effect1 = enum[scaling_with_estate_influence_options]
+	effect2 = enum[scaling_with_estate_influence_options]
+	effect3 = enum[scaling_with_estate_influence_options]
+	effect4 = enum[scaling_with_estate_influence_options]
+	effect5 = enum[scaling_with_estate_influence_options]
+	fallback_effect = enum[scaling_with_estate_influence_options]
+}
+
+enums = {
+	enum[scaling_with_estate_influence_options] = { 
+		"add_adm_power = 10"
+		"add_adm_power = 100"
+		"add_adm_power = 25"
+		"add_adm_power = 50"
+		"add_adm_power = 75"
+		"add_corruption = -0.25"
+		"add_corruption = -0.5"
+		"add_corruption = -0.75"
+		"add_corruption = -1"
+		"add_corruption = -1.25"
+		"add_dip_power = 10"
+		"add_dip_power = 100"
+		"add_dip_power = 100"
+		"add_dip_power = 125"
+		"add_dip_power = 25"
+		"add_dip_power = 25"
+		"add_dip_power = 50"
+		"add_dip_power = 50"
+		"add_dip_power = 75"
+		"add_dip_power = 75"
+		"add_mil_power = 10"
+		"add_mil_power = 100"
+		"add_mil_power = 25"
+		"add_mil_power = 50"
+		"add_mil_power = 75"
+		"add_navy_tradition = 10"
+		"add_navy_tradition = 2"
+		"add_navy_tradition = 4"
+		"add_navy_tradition = 5"
+		"add_navy_tradition = 6"
+		"add_navy_tradition = 8"
+		"add_prestige_scaled_to_seats = 10"
+		"add_prestige_scaled_to_seats = 15"
+		"add_prestige_scaled_to_seats = 20"
+		"add_prestige_scaled_to_seats = 25"
+		"add_prestige_scaled_to_seats = 5"
+		"add_republican_tradition = 10"
+		"add_republican_tradition = 13"
+		"add_republican_tradition = 15"
+		"add_republican_tradition = 5"
+		"add_republican_tradition = 8"
+		"add_treasury = 125"
+		"add_treasury = 200"
+		"add_treasury = 275"
+		"add_treasury = 350"
+		"add_treasury = 50"
+		"add_years_of_manpower_scaled_to_seats = 0.5"
+		"add_years_of_manpower_scaled_to_seats = 0.75"
+		"add_years_of_manpower_scaled_to_seats = 1"
+		"add_years_of_manpower_scaled_to_seats = 1.25"
+		"add_years_of_manpower_scaled_to_seats = 1.5"
+		"add_years_of_sailors_scaled_to_seats = 0.5"
+		"add_years_of_sailors_scaled_to_seats = 0.75"
+		"add_years_of_sailors_scaled_to_seats = 1"
+		"add_years_of_sailors_scaled_to_seats = 1.25"
+		"add_years_of_sailors_scaled_to_seats = 1.5"
+		"add_years_of_tax_scaled_to_seats = 0.75"
+		"add_years_of_tax_scaled_to_seats = 1"
+		"add_years_of_tax_scaled_to_seats = 1.25"
+		"add_years_of_tax_scaled_to_seats = 1.5"
+		"add_years_of_tax_scaled_to_seats = 1.75"
+		"change_government_reform_progress = 15"
+		"change_government_reform_progress = 30"
+		"change_government_reform_progress = 45"
+		"change_government_reform_progress = 60"
+		"change_government_reform_progress = 75"
+		"create_admiral = { tradition = 15 }"
+		"create_admiral = { tradition = 30 }"
+		"create_admiral = { tradition = 45 }"
+		"create_admiral = { tradition = 60 }"
+		"create_admiral = { tradition = 75 }"
+		"create_explorer = { tradition = 15 }"
+		"create_explorer = { tradition = 30 }"
+		"create_explorer = { tradition = 45 }"
+		"create_explorer = { tradition = 60 }"
+		"create_explorer = { tradition = 75 }"
+		"create_general = { tradition = 15 }"
+		"create_general = { tradition = 30 }"
+		"create_general = { tradition = 45 }"
+		"create_general = { tradition = 60 }"
+		"create_general = { tradition = 75 }" 
+		"
+			add_legitimacy = 5
+			add_heir_claim = 5
+			"
+		"
+			add_legitimacy = 10
+			add_heir_claim = 10
+			"
+		"
+			add_legitimacy = 15
+			add_heir_claim = 15
+			"
+		"
+			add_legitimacy = 20
+			add_heir_claim = 20
+			"
+		"
+			add_legitimacy = 25
+			add_heir_claim = 25
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+			}
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.75
+			}
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.5
+			}
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.1
+			}
+			"
+		"
+			define_advisor = {
+				type = statesman
+				skill = 3
+				cost_multiplier = 0.75
+			}
+			"
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 			}
 			"		
-	## cardinality = 0..1
-	effect2 = "
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 				cost_multiplier = 0.75
 			}
 			"
-	## cardinality = 0..1		
-	effect3 = "
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 				cost_multiplier = 0.5
 			}
 			"
-	## cardinality = 0..1
-	effect4 = "
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 				cost_multiplier = 0.25
 			}
 			"
-	## cardinality = 0..1		
-	effect5 = "	
+		"	
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 				cost_multiplier = 0.1
 			}
 			"
-	## cardinality = 0..1
-	fallback_effect = "
+		"
 			define_advisor = {
 				type = colonial_governor
 				skill = 3
 				cost_multiplier = 0.75
 			}
 			"
-	## cardinality = 0..1			
-	effect1 = "add_years_of_sailors_scaled_to_seats = 0.5"
-	## cardinality = 0..1
-	effect2 = "add_years_of_sailors_scaled_to_seats = 0.75"
-	## cardinality = 0..1
-	effect3 = "add_years_of_sailors_scaled_to_seats = 1"
-	## cardinality = 0..1
-	effect4 = "add_years_of_sailors_scaled_to_seats = 1.25"
-	## cardinality = 0..1
-	effect5 = "add_years_of_sailors_scaled_to_seats = 1.5"
-	## cardinality = 0..1
-	fallback_effect = "add_years_of_sailors_scaled_to_seats = 1"	
-	## cardinality = 0..1
-	effect1 = "add_navy_tradition = 2"
-	## cardinality = 0..1
-	effect2 = "add_navy_tradition = 4"
-	## cardinality = 0..1
-	effect3 = "add_navy_tradition = 6"
-	## cardinality = 0..1
-	effect4 = "add_navy_tradition = 8"
-	## cardinality = 0..1
-	effect5 = "add_navy_tradition = 10"
-	## cardinality = 0..1
-	fallback_effect = "add_navy_tradition = 5"
+		"
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+			}
+			"
+		"
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.75
+			}
+			"
+		"
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.5
+			}
+			"
+		"
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.25
+			}
+			"
+		"
+			define_advisor = {
+				type = inquisitor
+				skill = 3
+				cost_multiplier = 0.1
+			}
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -5
+				}
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -10
+				}
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -15
+				}
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -20
+				}
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -20
+				}
+				change_government_reform_progress = 25
+			"
+		"
+				random_owned_province = {
+					limit = { local_autonomy = 20 }
+					add_local_autonomy = -10
+				}
+			"
+	}
 }
 
 ## scope = country
