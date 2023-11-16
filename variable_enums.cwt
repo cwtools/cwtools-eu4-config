@@ -17,6 +17,7 @@ enums = {
 		consort_mil
 		consort_religion
 		culture
+		current_amount_of_pronoiars
 		development
 		dip_advisor_culture
 		dip_advisor_religion
@@ -31,6 +32,7 @@ enums = {
 		land_forcelimit
 		liberty_desire
 		manpower
+		max_amount_of_pronoiars
 		max_manpower
 		mil_advisor_culture
 		mil_advisor_religion
@@ -83,6 +85,8 @@ enums = {
 		trust
 		unrest
 		years_of_income
+		modifier:pronoia_amount_check_influence
+		modifier:num_of_pronoiars
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture
