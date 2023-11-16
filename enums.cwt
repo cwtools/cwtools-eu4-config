@@ -203,6 +203,12 @@ enums = {
 		dlc124
 		dlc125
 		dlc126
+		dlc127
+		dlc128
+		dlc129
+		dlc130
+		dlc131
+		dlc132
 	}
 	enum[key_name] = {
 		key
