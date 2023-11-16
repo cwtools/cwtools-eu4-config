@@ -2511,8 +2511,10 @@ alias[effect:remove_province_modifier] = <event_modifier>
 alias[effect:set_province_flag] = value_set[province_flag]
 
 ## scope = province
+## severity = warning
 ###Clears a defined province flag for the current province scope.
 alias[effect:clr_province_flag] = value[province_flag]
+
 
 ## scope = province
 ###Changes the province name of the current province scope to the defined name.
