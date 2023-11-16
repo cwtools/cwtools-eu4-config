@@ -694,3 +694,47 @@ alias[trigger:BYZ_reached_pronia_slot_limit] = bool
 ## scope = country
 ### Forced scripted trigger to work
 alias[trigger:BYZ_enough_pronoia_slots] = bool
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_religion_change_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_secondary_religion_change_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_annexed_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_province_culture_converted_estate_privilges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_province_owner_change_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_harmonized_religion_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_culture_promoted_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_culture_demoted_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_loan_repaid_estate_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_primary_culture_changed_privileges_effect] = yes
+
+## scope = country
+### Force scripted effect to work
+alias[effect:on_trade_good_changed_estate_privileges_effect] = yes
