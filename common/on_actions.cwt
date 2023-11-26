@@ -2464,7 +2464,7 @@ on_action = {
 
         alias_name[effect] = alias_match_left[effect]
     }
-    ## replace_scope = { root = province this = province from = country }
+    ## replace_scope = { root = mercenary_company this = province from = country }
     subtype[on_mercenary_recruited] = {
         ## cardinality = 0..1
         events = {
