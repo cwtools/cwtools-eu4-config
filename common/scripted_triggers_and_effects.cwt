@@ -2153,3 +2153,13 @@ alias[effect:update_entire_culture] = {
 	## cardinality = 0..1
 	clear_previous_accepted_culture = yes
 }
+
+## scope = country
+### Force scripted effect to work
+alias[effect:unlock_estate_privilege] = {
+	estate_privilege = <estate_privilege>
+	## cardinality = 0..1
+	modifier_tooltip = <event_modifier>
+	## cardinality = 0..1
+	effect_tooltip = scalar
+}
