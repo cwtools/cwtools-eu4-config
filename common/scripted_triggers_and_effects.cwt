@@ -69,6 +69,8 @@ alias[trigger:has_completed_idea_group_of_category] = {
 ## scope = country
 alias[trigger:num_of_completed_idea_groups_by_category] = {
 	## cardinality = 0..1
+	type = enum[power_categories]
+	## cardinality = 0..1
 	adm_ideas = bool
 	## cardinality = 0..1
 	mil_ideas = bool
@@ -2162,4 +2164,99 @@ alias[effect:unlock_estate_privilege] = {
 	modifier_tooltip = <event_modifier>
 	## cardinality = 0..1
 	effect_tooltip = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:simple_dynamic_effect] = {
+	## cardinality = 0..inf
+	scalar = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:complex_dynamic_effect] = {
+	## cardinality = 0..inf
+	scalar = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:simple_dynamic_effect_without_alternative] = {
+	## cardinality = 0..inf
+	scalar = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:complex_dynamic_effect_without_alternative] = {
+	## cardinality = 0..inf
+	scalar = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:country_event_with_insight] = {
+	id = <event.country>
+	insight_tooltip = scalar
+	effect_tooltip = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:country_event_with_option_insight] = {
+	id = <event.country>
+	option_1 = scalar
+	## cardinality = 0..1
+	option_2 = scalar
+	## cardinality = 0..1
+	option_3 = scalar
+	## cardinality = 0..1
+	option_4 = scalar
+	## cardinality = 0..1
+	option_5 = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:country_event_with_effect_insight] = {
+	id = <event.country>
+	effect = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:for_every_level_of_advisor_do] = {
+	type = enum[power_categories]
+	effect = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:add_country_modifier_for_age] = {
+	name = <event_modifier>
+	age = <game_age>
+	## cardinality = 0..1
+	else = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:unlock_decision] = {
+	type = <decision>
+	effect_tooltip = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:num_of_issues_passed] = {
+	amount = int
+	alternative_trigger = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:european_trade_node_scope] = {
+	## cardinality = 0..inf
+	scalar = scalar
 }
