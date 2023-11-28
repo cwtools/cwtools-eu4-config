@@ -68,8 +68,10 @@ enums = {
 		trigger_value:diplomatic_reputation
 		trigger_value:galleys_in_province
 		trigger_value:heavy_ships_in_province
+		trigger_value:imperial_influence
 		trigger_value:liberty_desire
 		trigger_value:light_ships_in_province
+		trigger_value:legitimacy_equivalent
 		trigger_value:mil_power
 		trigger_value:mercantilism
 		trigger_value:monthly_income
