@@ -1263,8 +1263,10 @@ alias[modifier:can_claim_states] = bool
 ## scope = country
 alias[modifier:free_concentrate_development] = yes
 
+# PDX claims this was added in 1.35 but as of 1.36.1
+# this is not present in the game
 ## scope = country
-alias[modifier:expand_infrastructure_cost] = float
+#alias[modifier:expand_infrastructure_cost] = float
 
 ## scope = country
 alias[modifier:expand_infrastructure_cost_modifier] = float
