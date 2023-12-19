@@ -1503,6 +1503,11 @@ alias[effect:release_all_subjects] = yes
 ## scope = country
 ###The current scope is granted independence from their overlord.
 alias[effect:grant_independence] = yes
+## scope = country
+###The current scope is granted independence from their overlord.
+alias[effect:grant_independence] = {
+	keep_liberty_desire = bool
+}
 
 ## scope = country
 ###Creates a no casus belli war against the defined scope for the current scope.
