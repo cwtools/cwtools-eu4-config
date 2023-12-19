@@ -135,8 +135,15 @@ estate = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
-
-	#1.30 new stuff
+	
+	## cardinality = 0..inf
+	custom_desc = {
+		desc = localisation
+		##replace_scope = { this = country root = country }
+		trigger = {
+			alias_name[trigger] = alias_match_left[trigger]
+		}
+	}
 
 	##replace_scope = { this = province root = province }
 	province_independence_weight = {
