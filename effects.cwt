@@ -2379,7 +2379,7 @@ alias[effect:set_hre_heretic_religion] = <religion>
 
 ## scope = country
 ###Locks the official and heretic religion assignments, ending the Religious Leagues.
-alias[effect:set_hre_religion_locked] = yes
+alias[effect:set_hre_religion_locked] = bool
 
 ## scope = country
 ###Ends the Religious Leagues with no set religions.
