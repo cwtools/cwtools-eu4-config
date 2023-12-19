@@ -49,21 +49,6 @@ types = {
 			name = "$"
 		}
 	}
-	#necessary for localisations
-	## type_key_filter <> { defaults_reform republic_mechanic monarchy_mechanic theocracy_mechanic tribe_mechanic }
-	type[new_government_reform] = {
-		path = "game/common/government_reforms"
-		subtype[new] = {
-			## cardinality = 0..1
-			legacy_government = no
-		}
-		localisation = {
-			subtype[new] = {
-				## required
-				description = "$_desc"
-			}
-		}
-	}
 	type[government_ranks] = {
 		path = "game/common/government_ranks"
 		path_file = "00_government_ranks.txt"
