@@ -145,6 +145,8 @@ government_mechanic = {
 			###Resets back to value defined in default (or 0 if not defined) when your ruler dies
 			reset_on_new_ruler = bool
 			## cardinality = 0..1
+			increases_with_global = bool
+			## cardinality = 0..1
 			development_scaled_monthly_growth = float
 			## cardinality = 0..1
 			development_scaled_capped_monthly_growth = float

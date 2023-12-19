@@ -5891,3 +5891,6 @@ alias[trigger:num_of_qizilbash] = int
 
 # scope = country
 alias[trigger:num_of_mamluks] = int
+
+# scope = country
+alias[trigger:monthly_trade_income] = int
