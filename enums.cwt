@@ -504,7 +504,7 @@ enums = {
 	}
 	# special units
 	enum[special_units] = {
-		banners
+		banner
 		caravel
 		carolean
 		cawa
@@ -514,7 +514,7 @@ enums = {
 		geobukseon
 		janissaries
 		man_of_war
-		mustekeer
+		musketeer
 		rajput
 		revolutionary_guard
 		samurai
@@ -524,7 +524,7 @@ enums = {
 		hussars
 		qizilbash
 		mamluks
-		marine
+		marines
 	}
 	# Special Unit Types, that can be used in create_units_of_type
 	# this list is incomplete, help expand it
