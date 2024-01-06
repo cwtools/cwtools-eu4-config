@@ -4313,7 +4313,6 @@ alias[effect:voc_indiamen_light] = enum[country_tags]
 alias[effect:create_unit_forcelimit_percentage] = {
 	###Using a unit type that does not exist will create a unit that when selected will cause a Crash to Desktop
 	type = enum[unit_types]
-	## cardinality = 0..1
 	force_limit_percentage = float
 	## cardinality = 0..1
 	###Does not respect special_unit_category restrictions to a unit type, allowing creation of nonsencial units, for example 'Man of War Infantry', 'Carolean Heavy Frigate', 'Samurai Coehorn Mortar', etc.
