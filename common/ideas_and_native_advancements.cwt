@@ -108,6 +108,10 @@ idea_group = {
 		effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
+		## cardinality = 0..1
+		removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
 	}
 
 
