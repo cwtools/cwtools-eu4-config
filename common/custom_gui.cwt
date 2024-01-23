@@ -40,8 +40,7 @@ custom_button = {
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	## cardinality = 0..1
-	###Tooltip to display while hovering this element
+	###Tooltip to display while hovering this button. Not required, but highly recommended.
 	tooltip = localisation
 	## cardinality = 0..inf
 	###Which frame file to use
@@ -63,7 +62,7 @@ custom_text_box = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
-	###Tooltip to display while hovering this element
+	###Tooltip to display while hovering this text. Optional.
 	tooltip = localisation
 }
 
@@ -75,7 +74,7 @@ custom_icon = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	## cardinality = 0..1
-	###Tooltip to display while hovering this element
+	###Tooltip to display while hovering this icon. Optional.
 	tooltip = localisation
 	## cardinality = 0..inf
 	###Which frame file to use
@@ -105,7 +104,7 @@ custom_shield = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	## cardinality = 0..1
-	###Tooltip to display while hovering this element
+	###Tooltip to display while hovering this shield. Optional.
 	tooltip = localisation
 	###Global event target name
 	global_event_target = <country_event>
