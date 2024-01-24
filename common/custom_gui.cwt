@@ -41,6 +41,8 @@ custom_button = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	###Tooltip to display while hovering this button. Not required, but highly recommended.
+	## cardinality = 1..1
+	## severity = warning
 	tooltip = localisation
 	## cardinality = 0..inf
 	###Which frame file to use
