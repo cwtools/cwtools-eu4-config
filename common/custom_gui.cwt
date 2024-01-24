@@ -40,6 +40,9 @@ custom_button = {
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+	###Tooltip to display while hovering this button. Not required, but highly recommended.
+	## cardinality = 1..1
+	## severity = warning
 	tooltip = localisation
 	## cardinality = 0..inf
 	###Which frame file to use
@@ -60,6 +63,8 @@ custom_text_box = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	###Tooltip to display while hovering this text. Optional.
 	tooltip = localisation
 }
 
@@ -70,6 +75,8 @@ custom_icon = {
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+	## cardinality = 0..1
+	###Tooltip to display while hovering this icon. Optional.
 	tooltip = localisation
 	## cardinality = 0..inf
 	###Which frame file to use
@@ -98,6 +105,8 @@ custom_shield = {
 	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
+	## cardinality = 0..1
+	###Tooltip to display while hovering this shield. Optional.
 	tooltip = localisation
 	###Global event target name
 	global_event_target = <country_event>
