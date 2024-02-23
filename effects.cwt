@@ -296,7 +296,7 @@ alias[effect:add_tariff_value] = float
 ###Changes the loan size of the current scope. Size is the number of months in monthly income that a single loan is equal to.
 alias[effect:loan_size] = int[1..inf]
 
-## scope = country
+## scope = any
 ###Changes the price of a trade good globally. Tradegood prices are found in /Europa Universalis IV/common/prices/*.txt. The new price is the base price + (base price * value). Duration accepts -1 for unlimited duration.
 alias[effect:change_price] = {
 	trade_goods = <trade_good>
@@ -380,6 +380,8 @@ alias[effect:add_government_power] = {
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
 	value = float
+	## cardinality = 0..1
+	scaled_with_gain_modifier = bool
 }
 
 ## scope = country
@@ -409,11 +411,13 @@ alias[effect:unfreeze_government_power] = {
 
 ## scope = country
 ###Changes the pool size of one of the power pools within a government mechanic, scaled to number of seats in parliament.
-alias[effect:add_government_power_scaled_to_eats] = {
+alias[effect:add_government_power_scaled_to_seats] = {
 	###Which government mechanic to add power to.
 	mechanic_type = <government_mechanic>
 	power_type = <government_mechanic_power>
 	value = int
+	## cardinality = 0..1
+	scaled_with_gain_modifier = bool
 }
 
 ## scope = country
@@ -602,8 +606,11 @@ alias[effect:excommunicate] = scope[country]
 alias[effect:excommunicate] = enum[country_tags]
 
 ## scope = country
-###Enables or disables the Papacy mechanic.
-alias[effect:set_papacy_active] = bool
+###Enables or disables the Papacy mechanic for the given religion.
+alias[effect:set_religion_papacy_active] = {
+	religion = <religion>
+	active = bool
+}
 
 ## scope = country
 ###Adds Piety to the current scope. No effect if the country does not hold a religion using uses_piety
@@ -1496,6 +1503,11 @@ alias[effect:release_all_subjects] = yes
 ## scope = country
 ###The current scope is granted independence from their overlord.
 alias[effect:grant_independence] = yes
+## scope = country
+###The current scope is granted independence from their overlord.
+alias[effect:grant_independence] = {
+	keep_liberty_desire = bool
+}
 
 ## scope = country
 ###Creates a no casus belli war against the defined scope for the current scope.
@@ -2233,6 +2245,8 @@ alias[effect:define_heir] = {
 	name = localisation_synced #value_set[heir_name]
 	## cardinality = 0..1
 	name = value[saved_name]
+	## cardinality = 0..1
+	monarch_name = localisation_synced #value_set[ruler_name]
 #	## cardinality = 0..1
 #	dynasty = localisation_synced
 	## cardinality = 0..1
@@ -2367,7 +2381,7 @@ alias[effect:set_hre_heretic_religion] = <religion>
 
 ## scope = country
 ###Locks the official and heretic religion assignments, ending the Religious Leagues.
-alias[effect:set_hre_religion_locked] = yes
+alias[effect:set_hre_religion_locked] = bool
 
 ## scope = country
 ###Ends the Religious Leagues with no set religions.
@@ -2504,8 +2518,10 @@ alias[effect:remove_province_modifier] = <event_modifier>
 alias[effect:set_province_flag] = value_set[province_flag]
 
 ## scope = province
+## severity = warning
 ###Clears a defined province flag for the current province scope.
 alias[effect:clr_province_flag] = value[province_flag]
+
 
 ## scope = province
 ###Changes the province name of the current province scope to the defined name.
@@ -3020,12 +3036,24 @@ alias[effect:streltsy_infantry] = scope[country]
 alias[effect:streltsy_infantry] = enum[country_tags]
 
 ## scope = province
-###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.
-alias[effect:cossack_cavalry] = scope[country]
+###Spawns a marine infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
+alias[effect:marine_infantry] = scope[country]
 
 ## scope = province
 ###Spawns a marine infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
-alias[effect:marine_infantry] = scope[country]
+alias[effect:marine_infantry] = enum[country_tags]
+
+## scope = province
+###Spawns a cossack infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
+alias[effect:cossack_infantry] = scope[country]
+
+## scope = province
+###Spawns a cossack infantry unit in the current province scope for the defined country scope. Uses the currently selected infantry unit.
+alias[effect:cossack_infantry] = enum[country_tags]
+
+## scope = province
+###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.
+alias[effect:cossack_cavalry] = scope[country]
 
 ## scope = province
 ###Spawns a cossack cavalry unit in the current province scope for the defined country scope. Uses the currently selected cavalry unit.
@@ -4285,9 +4313,12 @@ alias[effect:voc_indiamen_light] = enum[country_tags]
 
 ## scope = country
 alias[effect:create_unit_forcelimit_percentage] = {
+	###Using a unit type that does not exist will create a unit that when selected will cause a Crash to Desktop
 	type = enum[unit_types]
+	## cardinality = 0..1
 	force_limit_percentage = float
 	## cardinality = 0..1
+	###Does not respect special_unit_category restrictions to a unit type, allowing creation of nonsencial units, for example 'Man of War Infantry', 'Carolean Heavy Frigate', 'Samurai Coehorn Mortar', etc.
 	special_unit_category = enum[special_units]
 }
 
@@ -4318,3 +4349,40 @@ alias[effect:banner_cavalry] = scope[country]
 ## scope = province
 ###Creates a Banner Cavalry in the scoped province, for the defined scope
 alias[effect:banner_cavalry] = enum[country_tags]
+
+## scope = country
+###Transfer the current Papal controller to the given country
+alias[effect:transfer_papal_controller] = scope[country]
+
+## scope = country
+###Sets the naval doctrine of the country, ignores the can_select restrictions of the naval doctrine
+alias[effect:set_naval_doctrine] = <naval_doctrine>
+
+#TODO: create a sound_asset type for auto-completion
+## scope = any
+###Plays a sound effect as defined in an .asset file in the sould/ folder
+alias[effect:play_sound] = scalar
+
+## scope = province
+alias[effect:qizilbash_infantry] = scope[country]
+
+## scope = province
+alias[effect:qizilbash_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:qizilbash_cavalry] = scope[country]
+
+## scope = province
+alias[effect:qizilbash_cavalry] = enum[country_tags]
+
+## scope = province
+alias[effect:mamluks_infantry] = scope[country]
+
+## scope = province
+alias[effect:mamluks_infantry] = enum[country_tags]
+
+## scope = province
+alias[effect:mamluks_cavalry] = scope[country]
+
+## scope = province
+alias[effect:mamluks_cavalry] = enum[country_tags]

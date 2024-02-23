@@ -2,7 +2,7 @@
 types = {
 	type[idea_group] = {
 		path = "game/common/ideas"
-		
+
 		localisation = {
 			## required
 			name = "$"
@@ -81,6 +81,15 @@ idea_group = {
 		alias_name[modifier] = alias_match_left[modifier]
 
 		alias_name[ability] = alias_match_left[ability]
+
+		## cardinality = 0..1
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
 	}
 
 	## cardinality = 0..1
@@ -88,36 +97,54 @@ idea_group = {
 	trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..7
 	<idea> = {
 		alias_name[modifier] = alias_match_left[modifier]
 
 		alias_name[ability] = alias_match_left[ability]
+
+		## cardinality = 0..1
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
 	}
-	
-	
+
+
 	subtype[country_idea] = {
 		start = {
 			alias_name[modifier] = alias_match_left[modifier]
-			
+
 			alias_name[ability] = alias_match_left[ability]
 		}
 		free = yes
+
+		## cardinality = 0..1
+		effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
+		## cardinality = 0..1
+		removed_effect = {
+			alias_name[effect] = alias_match_left[effect]
+		}
 	}
 }
 
 #todo: not sure if these are referred to anywhere. Maybe they count as ideas.
 native_advancement_group = {
 	category = enum[power_categories]
-	
+
 	## cardinality = 5..5
 	<native_advancement> = {
 		alias_name[modifier] = alias_match_left[modifier]
-		
+
 		alias_name[ability] = alias_match_left[ability]
 	}
-	
+
 	###ai_will do does not actually determine weighting, but AI will not pick an idea with ai_will_do = 0
 	ai_will_do = {
 		factor = int[0..1]
@@ -161,7 +188,7 @@ customideas = {
 	level_cost_10 = int
 	## cardinality = 0..1
 	default = int
-	
+
 	## cardinality = 0..1
 	may_perform_slave_raid = yes
 	## cardinality = 0..1
@@ -182,7 +209,7 @@ customideas = {
 	extra_manpower_at_religious_war = yes
 	## cardinality = 0..1
 	may_not_reduce_inflation = yes
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = country root = country }
 	enabled = {

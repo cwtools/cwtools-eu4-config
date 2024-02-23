@@ -20,19 +20,19 @@ types = {
 
 great_project = {
 	start = int
-	
+
 	date = scalar
-	
+
 	time = {
 		months = int
 	}
 	build_cost = int
 	can_be_moved = bool
-	
+
 	## cardinality = 0..1
 	move_days_per_unit_distance = int
-	
-	
+
+
 	starting_tier = int
 
 	subtype[monument] = {
@@ -41,12 +41,12 @@ great_project = {
 	subtype[canal] = {
 		type = canal
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
-	build_trigger = {		
+	build_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
 	## cardinality = 0..1
 	on_built = {
@@ -58,7 +58,7 @@ great_project = {
 		show_ambient_object = <ambient_object>
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
 	## cardinality = 0..1
 	on_destroyed = {
@@ -68,25 +68,25 @@ great_project = {
 		hide_ambient_object = <great_project>
 		## cardinality = 0..2
 		hide_ambient_object = <ambient_object>
-		
+
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
 	can_use_modifiers_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
 	can_upgrade_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = province this = province from = owner }
 	keep_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	tier_0 = {
 		upgrade_time = {
 			months = int
@@ -98,6 +98,7 @@ great_project = {
 		province_modifiers = {
 			alias_name[modifier] = alias_match_left[modifier]
 		}
+		## cardinality = 0..1
 		## replace_scope = { root = province this = province }
 		area_modifier = {
 			alias_name[modifier] = alias_match_left[modifier]
@@ -126,6 +127,11 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
+			###If true will show the conditional modifier, will be hidden otherwise
+			tooltip_potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
@@ -169,13 +175,18 @@ great_project = {
 		###Effects to run when the project is upgraded to tier 1
 		on_upgraded = {
 			alias_name[effect] = alias_match_left[effect]
-			
+
 			## cardinality = 0..1
 			add_canal = <great_project.canal>
 		}
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
+			###If true will show the conditional modifier, will be hidden otherwise
+			tooltip_potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
@@ -226,6 +237,11 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
+			###If true will show the conditional modifier, will be hidden otherwise
+			tooltip_potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}
@@ -276,6 +292,11 @@ great_project = {
 		## cardinality = 0..inf
 		###Modifier that are applied if the specified conditions are true.
 		conditional_modifier = {
+			## cardinality = 0..1
+			###If true will show the conditional modifier, will be hidden otherwise
+			tooltip_potential = {
+				alias_name[trigger] = alias_match_left[trigger]
+			}
 			trigger = {
 				alias_name[trigger] = alias_match_left[trigger]
 			}

@@ -17,6 +17,7 @@ enums = {
 		consort_mil
 		consort_religion
 		culture
+		current_amount_of_pronoiars
 		development
 		dip_advisor_culture
 		dip_advisor_religion
@@ -31,6 +32,7 @@ enums = {
 		land_forcelimit
 		liberty_desire
 		manpower
+		max_amount_of_pronoiars
 		max_manpower
 		mil_advisor_culture
 		mil_advisor_religion
@@ -53,6 +55,7 @@ enums = {
 		stability
 		total_development
 		treasury
+		trigger_value:adm_power
 		trigger_value:always
 		trigger_value:army_size
 		trigger_value:base_manpower
@@ -61,12 +64,18 @@ enums = {
 		trigger_value:colonysize
 		trigger_value:construction_progress
 		trigger_value:development
+		trigger_value:dip_power
 		trigger_value:diplomatic_reputation
 		trigger_value:galleys_in_province
 		trigger_value:heavy_ships_in_province
+		trigger_value:imperial_influence
+		trigger_value:liberty_desire
 		trigger_value:light_ships_in_province
+		trigger_value:legitimacy_equivalent
+		trigger_value:mil_power
 		trigger_value:mercantilism
 		trigger_value:monthly_income
+		trigger_value:nationalism
 		trigger_value:native_size
 		trigger_value:num_of_mercenaries
 		trigger_value:num_of_provinces_in_states
@@ -79,6 +88,8 @@ enums = {
 		trust
 		unrest
 		years_of_income
+		modifier:pronoia_amount_check_influence
+		modifier:num_of_pronoiars
 	}
 	enum[culture_new_variables] = {
 		new_variable:consort_culture

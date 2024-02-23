@@ -181,6 +181,7 @@ modifiers = {
 	inflation_action_cost = country
 	inflation_reduction = country
 	inflation_reduction_local = province
+	influence_to_vassal_elevation_cost = country
 	innovativeness_gain = country
 	institution_growth = province
 	institution_spread_from_true_faith = country
@@ -191,7 +192,9 @@ modifiers = {
 	is_cossack_modifier = country
 	is_hussars_modifier = country
 	is_imperial_modifier = country
+	is_mamluks_modifier = country
 	is_marine_modifier = country
+	is_qizilbash_modifier = country
 	is_revolutionary_guard_modifier = country
 	is_streltsy_modifier = country
 	justify_trade_conflict_cost = country
@@ -335,6 +338,7 @@ modifiers = {
 	navy_tradition_decay = country
 	no_stability_loss_on_monarch_death = country
 	num_accepted_cultures = country
+	num_of_pronoiars = country
 	overlord_naval_forcelimit = country
 	overlord_naval_forcelimit_modifier = country
 	own_coast_naval_combat_bonus = country
@@ -355,6 +359,7 @@ modifiers = {
 	privateer_efficiency = country
 	production_efficiency = country
 	promote_culture_cost = country
+	pronoia_amount_check_influence = country
 	province_trade_power_modifier = province
 	province_trade_power_value = province
 	province_warscore_cost = country
@@ -1258,8 +1263,10 @@ alias[modifier:can_claim_states] = bool
 ## scope = country
 alias[modifier:free_concentrate_development] = yes
 
+# PDX claims this was added in 1.35 but as of 1.36.1
+# this is not present in the game
 ## scope = country
-alias[modifier:expand_infrastructure_cost] = float
+#alias[modifier:expand_infrastructure_cost] = float
 
 ## scope = country
 alias[modifier:expand_infrastructure_cost_modifier] = float
@@ -1319,7 +1326,7 @@ alias[modifier:max_flagships] = int
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:heavy_ship_cannons] = float
+alias[modifier:heavy_ship_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1327,7 +1334,7 @@ alias[modifier:heavy_ship_hull_size] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:light_ship_cannons] = float
+alias[modifier:light_ship_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1335,7 +1342,7 @@ alias[modifier:light_ship_hull_size] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:galley_cannons] = float
+alias[modifier:galley_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1343,7 +1350,7 @@ alias[modifier:galley_hullsize] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
-alias[modifier:transport_cannons] = float
+alias[modifier:transport_number_of_cannons_modifier] = float
 
 # TODO: add fleet/ship/flagship scope
 ## scope = country
@@ -1703,3 +1710,48 @@ alias[modifier:same_religion_advisor_cost] = float
 
 ## scope = country
 alias[modifier:allowed_rev_guard_fraction] = float
+
+## scope = country
+alias[modifier:has_marines] = bool
+
+## scope = province
+alias[modifier:local_has_qizilbash] = bool
+
+## scope = province
+alias[modifier:local_has_mamluks] = bool
+
+## scope = country
+alias[modifier:num_of_pronoiars] = int
+
+## scope = country
+alias[modifier:allowed_qizilbash_fraction] = int
+
+## scope = country
+alias[modifier:amount_of_qizilbash] = int
+
+## scope = country
+alias[modifier:allowed_mamluks_fraction] = float
+
+## scope = country
+alias[modifier:amount_of_mamluks] = int
+
+## scope = country
+alias[modifier:has_qizilbash] = bool
+
+## scope = country
+alias[modifier:has_mamluks] = bool
+
+## scope = country
+alias[modifier:allowed_qizilbash_fraction] = float
+
+## scope = country
+alias[modifier:is_qizilbash_modifier] = bool
+
+## scope = country
+alias[modifier:is_mamluks_modifier] = bool
+
+## scope = country
+alias[modifier:influence_to_vassal_elevation_cost] = int
+
+## scope = country
+alias[modifier:pronoia_amount_check_influence] = int

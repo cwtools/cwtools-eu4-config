@@ -78,7 +78,8 @@ enums = {
 		"Leviathan"
 		"Origins"
 		"Lions of the North"
-		Domination
+		"Domination"
+		"King of Kings"
 	}
 	enum[DLCNUM] = {
 		dlc001
@@ -202,6 +203,12 @@ enums = {
 		dlc124
 		dlc125
 		dlc126
+		dlc127
+		dlc128
+		dlc129
+		dlc130
+		dlc131
+		dlc132
 	}
 	enum[key_name] = {
 		key
@@ -398,6 +405,7 @@ enums = {
 		start_from_root = yes
 	}
 	enum[modifier_value] = {
+		administrative_efficiency
 		army_tradition
 		artillery_power
 		build_cost
@@ -415,9 +423,11 @@ enums = {
 		global_missionary_strength
 		global_ship_trade_power
 		global_spy_defence
+		global_tax_modifier
 		global_trade_goods_size_modifier
 		heavy_ship_power
 		infantry_power
+		influence_to_vassal_elevation_cost
 		land_forcelimit_modifier
 		land_morale
 		local_build_time
@@ -494,24 +504,58 @@ enums = {
 	}
 	# special units
 	enum[special_units] = {
-		banners
+		banner
 		caravel
 		carolean
 		cawa
 		cossacks
 		galleass
 		galleon
-		geobukeson
+		geobukseon
 		janissaries
 		man_of_war
-		mustekeer
+		musketeer
 		rajput
 		revolutionary_guard
 		samurai
 		streltsy
 		tercio
-		has_voc_indiamen
+		voc_indiamen
 		hussars
+		qizilbash
+		mamluks
+		marines
+	}
+	# Special Unit Types, that can be used in create_units_of_type
+	# this list is incomplete, help expand it
+	enum[special_unit_types] = {
+		# Land
+		marine_infantry
+		banner_infantry
+		banner_cavalry
+		carolean_infantry
+		cawa_infantry
+		cossack_infantry
+		cossack_cavalry
+		janissary_infantry
+		musketeer_infantry
+		rajput_infantry
+		samurai_infantry
+		streltsy_infantry
+		tercio_infantry
+		hussars_cavalry
+		qizilbash_cavalry
+		qizilbash_infantry
+		mamluks_infantry
+		mamluks_cavalry
+		# Ships
+		caravel_light
+		galleass_galley
+		galleon_heavy
+		geobukseon_galley
+		man_of_war_heavy
+		man_of_war_light
+		voc_indiamen_light
 	}
 	# Some named area, region, provincegroups, superregion, continent effect scopes support
 	# using type = random with amount = int to apply their effects within bounds
@@ -526,5 +570,72 @@ enums = {
 		sword_hunt
 		sankin_kotai
 		expel_ronin
+	}
+	enum[estate_action_enum] = {
+		 ASK_FOR_CONTRIBUTION_BURGHERS
+		 ASK_FOR_CONTRIBUTION_VAISYAS
+		 CALL_DIET_NOBLES
+		 COMISSION_MERCHANT_SHIPS_FOR_WAR_BURGHERS
+		 COMISSION_MERCHANT_SHIPS_FOR_WAR_VAISYAS
+		 COMMISSION_JAIN_SCRIPTURES_JAINS
+		 CONSCRIPT_COSSACK_ELITE_COSSACKS
+		 CONTRIBUTE_WARRIORS_NOMADIC_TRIBES
+		 COSSACK_CONQUISTADOR_COSSACKS
+		 DEMAND_CONTRIBUTION_DHIMMI
+		 DEMAND_MORE_TROOPS_NOBLES
+		 DEMAND_SUPPORT_BRAHMINS
+		 DEMAND_SUPPORT_BURGHERS
+		 DEMAND_SUPPORT_CHURCH
+		 DEMAND_SUPPORT_JAINS
+		 DEMAND_SUPPORT_MARATHA
+		 DEMAND_SUPPORT_NOBLES
+		 DEMAND_SUPPORT_RAJPUT
+		 DEMAND_SUPPORT_VAISYAS
+		 EXEMPT_FROM_JIZYA_RAJPUT
+		 EXPAND_COSSACK_REGISTRY_COSSACKS
+		 GRANT_ADMIRALSHIP_BURGHERS
+		 GRANT_GENERALSHIP_NOBLES
+		 GRANT_MONOPOLY_CHARTER_BURGHERS
+		 GRANT_NEW_WORLD_CHARTER_BURGHERS
+		 GRANT_QIZILBASH_HORSES
+		 INVESTIGATE_CORRUPTION_JAINS
+		 LIGHTEN_DHIMMI_TAX_BURDEN_DHIMMI
+		 LOOK_UP_PURBIAS_RAJPUT
+		 MAKE_GENEROUS_DONATION_BRAHMINS
+		 MAKE_GENEROUS_DONATION_CHURCH
+		 NEW_WORLD_MISSION_CHURCH
+		 PATRONIZE_JAIN_FAMILIES_JAINS
+		 PERMIT_SELF_GOVERNANCE_COSSACKS
+		 PROCURE_LOANS_JAINS
+		 PROMOTE_CAUCASIAN_TROOPS
+		 PROMOTE_DHIMMI_NOBLES_DHIMMI
+		 PROMOTE_MARATHA_NOBILITY_MARATHA
+		 PROMOTE_RAJPUT_NOBILITY_RAJPUT
+		 RAISE_COSSACK_HOST_COSSACKS
+		 RAISE_HOST_NOMADIC_TRIBES
+		 RECRUIT_CONQUISTADOR_ESTATES_NOBLES
+		 RECRUIT_FROM_THE_DHIMMI_DHIMMI
+		 RECRUIT_INQUISITOR_BRAHMINS
+		 RECRUIT_INQUISITOR_CHURCH
+		 RECRUIT_MARATHI_TROOPS_MARATHA
+		 RECRUIT_MINISTER_BRAHMINS
+		 RECRUIT_MINISTER_BURGHERS
+		 RECRUIT_MINISTER_CHURCH
+		 RECRUIT_MINISTER_COSSACKS
+		 RECRUIT_MINISTER_DHIMMI
+		 RECRUIT_MINISTER_MARATHA
+		 RECRUIT_MINISTER_NOBLES
+		 RECRUIT_MINISTER_NOMADIC_TRIBES
+		 RECRUIT_MINISTER_VAISYAS
+		 RECRUIT_RAJPUT_GENERAL_RAJPUT
+		 RECRUIT_RAJPUT_TROOPS_RAJPUT
+		 REDISTRIBUTE_HORDE_AUTHORITY_TRIBES
+		 RELIGIOUS_DELEGATION_CHURCH
+		 SEEK_BRAHMIN_LEGITIMACY_BRAHMINS
+		 SEEK_GUILD_SUPPORT_VAISYAS
+		 SEEK_SUPPORT_OF_BRAHMINS
+		 SEEK_SUPPORT_OF_CLERGY_CHURCH
+		 SUPPLY_ARMS_COSSACKS
+		 SUPPORT_TRIBES_NOMADIC_TRIBES
 	}
 }

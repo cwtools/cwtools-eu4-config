@@ -73,7 +73,15 @@ parliament_issue = {
 	modifier = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
-
+	
+	## cardinality = 0..1
+	influence_scaled_modifier = {
+		alias_name[modifier] = alias_match_left[modifier]
+	}
+	
+	## cardinality = 0..1
+	scale_estate_influence = <estate>
+	
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country }
 	chance = {

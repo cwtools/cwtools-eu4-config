@@ -14,7 +14,7 @@ types = {
 			PEACE = "PEACE_$"
 		}
 	}
-} 
+}
 
 
 ###This functionality was made to fully support modded subject types. It can probably also be used for other things, but has the following limitations: These treaties don't support having a different Taker/Giver than the two countries that are negotiating. Nor do they support setting provinces (like cede province) or third party countries (like annul treaties) as targets. The following strings need localization: -"make_dummy_desc" (uses text processing, supporting bracket notation) ("[FROM.GetName] becomes a [THIS.GetName] Dummy"); -"CB_ALLOWED_make_dummy" (uses plain localization) ("Enforced Dumbness"); -"PEACE_make_dummy" (uses plain localization, but with support for $TAKER$, $TAKERS$, $GIVER$ and $GIVERS$) ("Become $TAKERS$ Dummy")
@@ -35,7 +35,7 @@ peace_treaty = {
 	## cardinality = 0..1
 	###Base factor for aggressive expansion. Scales with war score cost.
 	ae_base = float
-	
+
 	###Which of the giver's provinces' war score costs are included and by how much. All entries default to 0. Any combination of entries can be used. Try negative values at your own risk.
 	warscore_cost = {
 		## cardinality = 0..1
@@ -63,7 +63,7 @@ peace_treaty = {
 		###This one should not be relevant here since Giver can't be a cancelled subject. Including anyway for completeness
 		concede_colonial_region = float[0.0..inf]
 	}
-	
+
 	## cardinality = 0..1
 	###Warscore cost will never go above this value. Only enabled if non-negative. This value defaults to -1.
 	warscore_cap = int[-1..200]
@@ -76,28 +76,31 @@ peace_treaty = {
 	## cardinality = 0..1
 	###If set to "yes", treaty will only be visible when explicitly allowed by casus belli. If not, it will be available but cost diplomatic power.
 	requires_is_allowed = bool
-	
-	
+	## cardinality = 0..1
+	###If set to "yes", the peace treaty option will only be to the target of the war, not the war leader
+	applies_to_war_target = bool
+
+
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country from = country }
 	###Defaults to equivalent of "always = yes"
 	is_visible = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { root = country this = country from = country }
 	###Defaults to equivalent of "always = yes"
-	is_allowed = { 
+	is_allowed = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## replace_scope = { root = country this = country from = country }
 	###Defaults to empty effect (which makes error log entry but is safe)
-	effect = { 
+	effect = {
 		alias_name[effect] = alias_match_left[effect]
 	}
-	
+
 	###Defaults to always evaluate to 0. Mandatory to have entry called "ai_value". Its value at the end of the ai_weight scope is what will be used
 	ai_weight = {
 		export_to_variable = {
@@ -107,7 +110,7 @@ peace_treaty = {
 		## cardinality = 0..1
 		## replace_scope = { root = country this = country from = country }
 		###if limit evaluates false, ai_weight will evaluate to 0 regardless
-		limit = { 
+		limit = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}

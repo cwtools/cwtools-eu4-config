@@ -31,7 +31,7 @@ institution = {
 	history = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
-	
+
 	## cardinality = 0..1
 	## replace_scope = { this = province root = province }
 	can_start = {
@@ -45,6 +45,13 @@ institution = {
 	## replace_scope = { this = province root = province }
 	can_embrace = {
 		alias_name[trigger] = alias_match_left[trigger]
+	}
+
+	## replace_scope = { this = country root = country }
+	## cardinality = 0..1
+	###Effect that runs when the country embraces it
+	effect = {
+		alias_name[effect] = alias_match_left[effect]
 	}
 
 	## replace_scope = { this = province root = province }
@@ -87,7 +94,7 @@ institution = {
 			}
 		}
 	}
-	
+
 	###Cost of embracing institution must be lower than this factor * last month's regular income, and higher if loans are needed. (Or it has a more than long term goal...)
 	ai_will_do = {
 		factor = float

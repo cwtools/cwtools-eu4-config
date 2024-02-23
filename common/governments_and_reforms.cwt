@@ -49,21 +49,6 @@ types = {
 			name = "$"
 		}
 	}
-	#necessary for localisations
-	## type_key_filter <> { defaults_reform republic_mechanic monarchy_mechanic theocracy_mechanic tribe_mechanic }
-	type[new_government_reform] = {
-		path = "game/common/government_reforms"
-		subtype[new] = {
-			## cardinality = 0..1
-			legacy_government = no
-		}
-		localisation = {
-			subtype[new] = {
-				## required
-				description = "$_desc"
-			}
-		}
-	}
 	type[government_ranks] = {
 		path = "game/common/government_ranks"
 		path_file = "00_government_ranks.txt"
@@ -159,6 +144,8 @@ government_mechanic = {
 			## cardinality = 0..1
 			###Resets back to value defined in default (or 0 if not defined) when your ruler dies
 			reset_on_new_ruler = bool
+			## cardinality = 0..1
+			increases_with_global = bool
 			## cardinality = 0..1
 			development_scaled_monthly_growth = float
 			## cardinality = 0..1
@@ -269,6 +256,7 @@ government_mechanic = {
 			## cardinality = 0..1
 			## replace_scope = { root = country this = country }
 			ai_chance = {
+				## cardinality = 0..1
 				factor = float[0..10000]
 				alias_name[modifier_rule] = alias_match_left[modifier_rule]
 			}
@@ -284,7 +272,6 @@ government_reform = {
 		heirs_can_be_generals = bool
 		fixed_rank = int
 		republican_name = bool
-		government_abilities = { }
 		claim_states = bool
 		religion = bool
 		republic = bool
@@ -321,18 +308,19 @@ government_reform = {
 		allow_vassal_war = bool
 		allow_vassal_alliance = bool
 		min_autonomy = int
+		factions_frame = int
 		factions = { }
 		foreign_slave_rulers = bool
 		royal_marriage = bool
 		nomad = bool
+		raze_province = bool
 		assimilation_cultures = { }
 		states_general_mechanic = { }
 		valid_for_nation_designer = bool
 		allow_normal_conversion = bool
+		force_conversion_gives_global_holy_war_released_modifier = bool
 		start_territory_to_estates = float
 		has_term_election = bool
-		factions_frame = 2
-		factions_frame = 9
 		force_admiral_leader = bool
 		force_general_leader = bool
 		admirals_become_rulers = bool
@@ -341,14 +329,12 @@ government_reform = {
 		uses_revolutionary_zeal = bool
 		revolutionary = bool
 		revolutionary_client_state = bool
+		allow_draft_transport_ships = bool
+		free_concentrate_development = bool
 		disallowed_trade_goods = {
 			## cardinality = 0..inf
 			<trade_good>
 		}
-		free_concentrate_development = bool
-		raze_province = bool
-		force_conversion_gives_global_holy_war_released_modifier = bool
-		allow_draft_transport_ships = bool
 		can_customise_heir = bool
 		allow_cawa = bool
 		can_change_primary_culture = bool
@@ -358,6 +344,12 @@ government_reform = {
 		has_cultural_union = bool
 		can_remove_idea_group = bool
 		mercs_do_not_cost_army_professionalism = bool
+		is_eligible_for_hre_emperor = bool
+		## cardinality = 0..1
+		government_abilities = {
+			## cardinality = 1..inf
+			<government_mechanic>
+		}
 	}
 
 
@@ -605,6 +597,8 @@ government_reform = {
 			duration = int
 			## cardinality = 0..1
 			has_term_election = bool
+			## cardinality = 0..1
+			is_eligible_for_hre_emperor = no
 
 			## cardinality = 0..1
 			factions = {
@@ -743,6 +737,9 @@ government_reform = {
 		post_removed_effect = {
 			alias_name[effect] = alias_match_left[effect]
 		}
+
+		## cardinality = 0..1
+		is_eligible_for_hre_emperor = bool
 	}
 }
 
@@ -1076,4 +1073,3 @@ government_name = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 }
-
