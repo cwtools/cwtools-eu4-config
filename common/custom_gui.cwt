@@ -109,7 +109,7 @@ custom_shield = {
 	###Tooltip to display while hovering this shield. Optional.
 	tooltip = localisation
 	###Global event target name
-	global_event_target = <country_event>
+	global_event_target = value[global_event_target]
 	###If clicking opens the country view
 	open_country = bool
 }
