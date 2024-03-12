@@ -1,4 +1,3 @@
-
 types = {
 	type[ai_army] = {
 		path = "game/common/ai_army"
@@ -6,17 +5,29 @@ types = {
 	}
 }
 
-###Scripts in ai_army can be used to influence how the army AI behaves when certain conditions (Defined in the "active" trigger) are met. It is intended not to control daily decision making of armies but to define a general attitude that will influence (or overwrite) hard-coded AI behaviour.
+enums = {
+	enum[ai_army_eval] = {
+		eval_add
+		eval_multiply
+	}
+}
+
+###Scripts in ai_army can be used to influence how the army AI behaves when certain conditions (Defined in the "active" trigger) are met. It is intended not to control daily decision making of armies but to define a general attitude that will influence (or overwrite) hard-coded AI behaviour. AI chooses the province with the LOWEST value. Requires at least one eval_add or eval_multiply block.
 ai_army = {
 	## replace_scope = { this = country root = country }
 	###The "active" trigger (I.e. the trigger that decides what attitude is currently active) is evaluated when any of the following happens: * A war begins or ends. * A country gains or loses a province. * A year without wars or province changes passes.
 	active = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
+
+	### Modifies the province score by adding or multiplying it with the factor. The factor is modified further by optional modifier blocks, which modify multiplicatively.
+	## cardinality = 1..inf
 	## replace_scope = { this = province root = province }
-	eval_multiply = {
+	enum[ai_army_eval] = {
 		factor = float
+		## cardinality = 0..inf
 		modifier = {
+			factor = float
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
