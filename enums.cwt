@@ -638,4 +638,19 @@ enums = {
 		 SUPPLY_ARMS_COSSACKS
 		 SUPPORT_TRIBES_NOMADIC_TRIBES
 	}
+	# While the `category =` field of a new diplomatic action
+	# can use any of the keyword values, Let's define it here
+	# and allow it to be used for auto-completion
+	enum[diplomatic_actions_new] = {
+		alliance
+		influence
+		relation
+		dynasty
+		covert
+		economy
+		access
+		emperor
+		papacy
+		great_powers
+	}
 }

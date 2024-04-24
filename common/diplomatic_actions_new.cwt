@@ -29,6 +29,10 @@ new_diplomatic_action = {
 	## cardinality = 0..inf
 	category = scalar
 
+	## cardinality = 0..inf
+	# For auto-completion
+	category = enum[diplomatic_actions_new]
+
 	###Can the other side decline? defaults to no
 	## cardinality = 0..1
 	require_acceptance = bool
