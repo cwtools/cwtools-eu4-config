@@ -4404,3 +4404,6 @@ alias[effect:add_accepted_culture_or_dip_power] = {
 	## cardinality = 0..1
 	free = yes
 }
+
+## scope = province
+alias[effect:set_state_edict] = <edict>
