@@ -444,6 +444,20 @@ edict = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
+	## replace_scope = { root = province this = province from = country }
+	## cardinality = 0..1
+	###triggers an effect when the state edict is added
+	on_state_edict_enacted = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+	
+	## replace_scope = { root = province this = province from = country }
+	## cardinality = 0..1
+	###triggers an effect when the state edict is revoked
+	on_state_edict_revoked = {
+		alias_name[effect] = alias_match_left[effect]
+	}
+
 	## cardinality = 0..1
 	###How many years the edict needs to be active to show an alert
 	years_to_notify = int
