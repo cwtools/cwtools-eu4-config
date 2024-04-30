@@ -448,6 +448,9 @@ government_reform = {
 		lock_level_when_selected = bool
 
 		## cardinality = 0..1
+		block_cultural_union = bool
+
+		## cardinality = 0..1
 		rulers_can_be_generals = bool
 		## cardinality = 0..1
 		heirs_can_be_generals = bool
