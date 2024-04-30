@@ -371,6 +371,16 @@ government_reform = {
 			## replace_scope = { root = country this = country }
 			<culture_group> = {
 				alias_name[modifier] = alias_match_left[modifier]
+				## cardinality = 0..1
+				###Run when the culture fully assimilated
+				effect = { 
+					alias_name[effect] = alias_match_left[effect]
+				}
+				## cardinality = 0..1
+				###Run when the culture is no longer fully assimilated
+				removed_effect = {
+					alias_name[effect] = alias_match_left[effect]
+				}
 			}
 		}
 	}
