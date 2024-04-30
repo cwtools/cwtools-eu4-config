@@ -4386,3 +4386,9 @@ alias[effect:mamluks_cavalry] = scope[country]
 
 ## scope = province
 alias[effect:mamluks_cavalry] = enum[country_tags]
+
+## scope = country
+alias[effect:force_create_marriage] = scope[country]
+
+## scope = country
+alias[effect:force_create_marriage] = enum[country_tags]
