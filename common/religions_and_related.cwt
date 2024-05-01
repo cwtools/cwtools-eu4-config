@@ -347,6 +347,8 @@ religion_group = {
 		## cardinality = 0..1
 		reform_tooltip = localisation
 
+		## cardinality = 0..1
+		require_reformed_for_institution_development = yes
 
 		## cardinality = 0..1
 		allowed_conversion = {
