@@ -439,6 +439,7 @@ enums = {
 		local_build_time
 		local_development_cost
 		local_institution_spread
+		max_absolutism
 		mercenary_discipline
 		missionaries
 		movement_speed
