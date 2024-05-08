@@ -446,6 +446,8 @@ modifiers = {
 	yearly_karma_decay = country
 	yearly_revolutionary_zeal = country
 	years_of_nationalism = country
+	reverse_relation_with_heretic_religion = country
+	reverse_relation_with_heathen_religion = country
 }
 
 
@@ -1755,3 +1757,9 @@ alias[modifier:influence_to_vassal_elevation_cost] = int
 
 ## scope = country
 alias[modifier:pronoia_amount_check_influence] = int
+
+## scope = country
+alias[modifier:reverse_relation_with_heretic_religion] = int
+
+## scope = country
+alias[modifier:reverse_relation_with_heathen_religion] = int

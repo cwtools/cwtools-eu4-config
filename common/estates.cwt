@@ -185,6 +185,10 @@ estate_privilege = {
 	influence = float[-0.95..0.95]
 
 	## cardinality = 0..1
+	###Defaults to yes
+	check_valid_when_tag_switching = no
+
+	## cardinality = 0..1
 	###Conditions for whether it is possible for the country to have this privilege (it will not display on the list if they are false, and will be revoked if it has already been granted)
 	is_valid = {
 		alias_name[trigger] = alias_match_left[trigger]

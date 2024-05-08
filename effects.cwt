@@ -4386,3 +4386,24 @@ alias[effect:mamluks_cavalry] = scope[country]
 
 ## scope = province
 alias[effect:mamluks_cavalry] = enum[country_tags]
+
+## scope = country
+alias[effect:force_create_marriage] = scope[country]
+
+## scope = country
+alias[effect:force_create_marriage] = enum[country_tags]
+
+## scope = country
+alias[effect:add_accepted_culture_or_dip_power] = {
+	culture = <culture>
+	## cardinality = 0..1
+	###Defaults to a 100 dip
+	value = int
+	## cardinality = 0..1
+	dip_reward = yes
+	## cardinality = 0..1
+	free = yes
+}
+
+## scope = province
+alias[effect:set_state_edict] = <edict>

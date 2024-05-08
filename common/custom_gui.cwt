@@ -23,6 +23,12 @@ types = {
 		start_from_root = yes
 		name_field = name
 	}
+	## type_key_filter = custom_window
+	type[custom_window] = {
+		path = "game/common/custom_gui"
+		start_from_root = yes
+		name_field = name
+	}
 }
 
 custom_button = {
@@ -88,6 +94,9 @@ custom_icon = {
 			alias_name[trigger] = alias_match_left[trigger]
 		}
 	}
+	## cardinality = 0..1
+	###Use the value of a variable to determine the icon frame
+	frame_variable = scalar
 }
 
 custom_shield = {
@@ -112,4 +121,13 @@ custom_shield = {
 	global_event_target = value[global_event_target]
 	###If clicking opens the country view
 	open_country = bool
+}
+
+custom_window = {
+	###Must match a scripted windowType in a .gui file
+	name = scalar
+	###Determines when the window is visible, and will affect every other gui object inside it, not running their potentials if the window isn't visible.
+	potential = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
 }
