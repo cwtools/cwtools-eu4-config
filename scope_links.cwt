@@ -981,7 +981,7 @@ alias[effect:random_trade_node_member_country] = {
 }
 
 ## push_scope = province
-## scope = trade_node
+## scope = { trade_node province }
 ###Scopes to every province in the current trade node.
 alias[effect:every_trade_node_member_province] = {
 	## cardinality = 0..1
