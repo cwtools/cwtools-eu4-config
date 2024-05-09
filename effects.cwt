@@ -114,6 +114,8 @@ alias[effect:set_variable] = {
 	value = float
 	## cardinality = 0..1
 	value = value[variable]
+	## cardinality = 0..1
+	value = enum[export_to_variable_data]
 }
 ## scope = any
 ### Alternative without using which or value
