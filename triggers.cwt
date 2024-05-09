@@ -5830,7 +5830,7 @@ alias[trigger:has_naval_doctrine] = <naval_doctrine>
 alias[trigger:has_naval_doctrine] = any
 
 ## scope = country
-alias[trigger:has_unembraced_institution] = bool
+alias[trigger:has_unembraced_institution] = <institution>
 
 ## scope = country
 ###Returns true if scoped country has ever humiliated the specified country
