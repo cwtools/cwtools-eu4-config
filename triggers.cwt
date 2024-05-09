@@ -2892,7 +2892,7 @@ alias[trigger:native_hostileness] = int
 
 ## scope = province
 ###Returns true if size of natives in the province is at least X.
-alias[trigger:native_size] = int
+alias[trigger:native_size] = float
 
 ## scope = country
 ###Returns true if the country has a naval force limit of at least X, or at least as large a naval force limit as the specified country.
