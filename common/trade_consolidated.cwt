@@ -271,7 +271,10 @@ trading_policy = {
 
 	## cardinality = 0..1
 	show_alert = yes
-	
+
+	## cardinality = 0..1
+	cooldown = bool
+
 	button_gfx = <sprite>
 
 	## cardinality = 0..1
