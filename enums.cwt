@@ -434,8 +434,10 @@ enums = {
 		heavy_ship_power
 		infantry_power
 		influence_to_vassal_elevation_cost
+		inti_reforms_passed
 		land_forcelimit_modifier
 		land_morale
+		legitimacy
 		local_build_time
 		local_development_cost
 		local_institution_spread
