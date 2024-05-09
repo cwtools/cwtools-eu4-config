@@ -2606,6 +2606,8 @@ alias[effect:add_great_project] = {
 	## cardinality = 0..1
 	###Defines if the Great Project will be built instantly or not.
 	instant = bool
+	## cardinality = 0..1
+	builder = scope[country]
 }
 
 ## scope = province
