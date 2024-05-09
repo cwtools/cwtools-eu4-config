@@ -4320,6 +4320,8 @@ alias[effect:create_unit_forcelimit_percentage] = {
 	## cardinality = 0..1
 	###Does not respect special_unit_category restrictions to a unit type, allowing creation of nonsencial units, for example 'Man of War Infantry', 'Carolean Heavy Frigate', 'Samurai Coehorn Mortar', etc.
 	special_unit_category = enum[special_units]
+	## cardinality = 0..1
+	capped_by_special_force_limit = bool
 }
 
 ## scope = province
