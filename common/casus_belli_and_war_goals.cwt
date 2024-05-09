@@ -142,7 +142,7 @@ casus_belli = {
 	holy_war = yes
 	
 	## cardinality = 0..1
-	valid_for_subject = no
+	valid_for_subject = bool
 
 	## cardinality = 0..1
 	support_rebels = yes

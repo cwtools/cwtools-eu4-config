@@ -102,6 +102,10 @@ subject_type = {
 	###Whether distance between borders counts this subject type as part of its overlord's borders.
 	counts_for_borders = bool
 	## cardinality = 0..1
+	counts_as_overlord_holding = bool
+	## cardinality = 0..1
+	integration_requires_same_religion_group = bool
+	## cardinality = 0..1
 	###Whether the overlord can enforce peace on the subject's enemy even when the subject is the attacker
 	overlord_enforce_peace_attacking = bool
 	## cardinality = 0..1
