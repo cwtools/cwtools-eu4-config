@@ -2265,3 +2265,10 @@ alias[trigger:every_trunk_road_province_trigger] = {
 	trigger = scalar
 	tooltip = localisation
 }
+
+## scope = country
+### Force scripted effect to work
+alias[effect:add_accepted_culture_or_dip_power_stated] = {
+	culture = <culture>
+	dip_reward = bool
+}
