@@ -3651,6 +3651,11 @@ alias[trigger:province_distance] = {
 	who = scope[province]
 	distance = int
 }
+alias[trigger:province_distance] = {
+	who = scope[country]
+	distance = int
+}
+
 ## scope = province
 ###Returns true if the province has the ID X or the same ID as the specified province scope.
 alias[trigger:province_id] = <province_id>
