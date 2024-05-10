@@ -241,6 +241,7 @@ alias[effect:create_units_of_type] = {
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
 	unit_type = <unit_type>
+	unit_type = enum[unit_types]
 	unit_type = enum[special_unit_types]
 	who = enum[country_tags]
 	who = scope[country]
