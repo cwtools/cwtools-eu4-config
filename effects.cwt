@@ -75,6 +75,12 @@ alias[effect:divide_variable] = {
 	## cardinality = 1..2
 	value[variable] = float
 }
+## scope = any
+### Alternative
+alias[effect:divide_variable] = {
+	which = enum[export_to_variable_data]
+	value = enum[export_to_variable_data]
+}
 
 ## scope = any
 ### Paradox reports that which = is optional
@@ -110,6 +116,12 @@ alias[effect:subtract_variable] = {
 alias[effect:subtract_variable] = {
 	## cardinality = 1..2
 	value[variable] = float
+}
+## scope = any
+### Alternative
+alias[effect:subtract_variable] = {
+	which = enum[export_to_variable_data]
+	value = enum[export_to_variable_data]
 }
 
 ## scope = any
@@ -2520,6 +2532,12 @@ alias[effect:extend_province_modifier] = {
 ## scope = province
 ###Removes an already assigned province modifier from the current province scope.
 alias[effect:remove_province_modifier] = <event_modifier>
+## scope = province
+###Removes an already assigned province modifier from the current province scope.
+alias[effect:remove_province_modifier] = <province_triggered_modifier>
+## scope = province
+###Removes an already assigned province modifier from the current province scope.
+alias[effect:remove_province_modifier] = <static_modifier>
 
 ## scope = province
 ###Defines a province flag for the current province scope. Flags can be appended with scopes or event targets with @scope.
