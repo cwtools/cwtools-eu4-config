@@ -9,6 +9,7 @@ enums = {
 		adm_advisor_religion
 		adm_tech
 		army_size
+		army_tradition
 		ArmyTradtionOfFROM
 		border_distance
 		consort_adm
@@ -43,6 +44,7 @@ enums = {
 		monthly_income
 		num_of_loans
 		opinion
+		OpinionOfFROM
 		prestige
 		primary_culture
 		religion
