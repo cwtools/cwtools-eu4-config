@@ -1104,6 +1104,9 @@ alias[trigger:has_active_debate] = bool
 ## scope = country
 ###Returns true if the country has activated a fervor effect.
 alias[trigger:has_active_fervor] = bool
+## scope = country
+###Returns true if the country has activated a fervor effect.
+alias[trigger:has_active_fervor] = <fervor>
 
 ## scope = country
 ###Returns true if country has the specified policy active.
