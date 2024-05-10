@@ -2290,3 +2290,11 @@ alias[trigger:INC_has_any_provinces_to_colonize_with_trigger] = {
 	## cardinality = 0..1
 	tooltip = localisation
 }
+
+## scope = country
+### Force scripted effect to work
+alias[effect:GER_unlock_reform_based_on_culture] = {
+	## cardinality = 0..1
+	reform = bool
+}
+
