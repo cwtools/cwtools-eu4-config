@@ -2256,6 +2256,7 @@ alias[effect:distribute_development] = {
 	amount = int
 	type = enum[building_development_type]
 	limit = scalar
+	## cardinality = 0..1
 	tooltip = localisation
 }
 
@@ -2263,6 +2264,7 @@ alias[effect:distribute_development] = {
 ### CW Tools ignores items in quotes
 alias[trigger:every_trunk_road_province_trigger] = {
 	trigger = scalar
+	## cardinality = 0..1
 	tooltip = localisation
 }
 
