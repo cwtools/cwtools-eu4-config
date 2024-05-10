@@ -241,6 +241,7 @@ alias[effect:create_units_of_type] = {
 alias[effect:create_units_of_type_in_province] = {
 	amount = int
 	unit_type = <unit_type>
+	unit_type = enum[unit_types]
 	unit_type = enum[special_unit_types]
 	who = enum[country_tags]
 	who = scope[country]
@@ -2247,4 +2248,27 @@ alias[trigger:num_of_issues_passed] = {
 alias[trigger:european_trade_node_scope] = {
 	## cardinality = 0..inf
 	scalar = scalar
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[effect:distribute_development] = {
+	amount = int
+	type = enum[building_development_type]
+	limit = scalar
+	tooltip = localisation
+}
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:every_trunk_road_province_trigger] = {
+	trigger = scalar
+	tooltip = localisation
+}
+
+## scope = country
+### Force scripted effect to work
+alias[effect:add_accepted_culture_or_dip_power_stated] = {
+	culture = <culture>
+	dip_reward = bool
 }
