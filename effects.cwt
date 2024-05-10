@@ -75,6 +75,12 @@ alias[effect:divide_variable] = {
 	## cardinality = 1..2
 	value[variable] = float
 }
+## scope = any
+### Alternative
+alias[effect:divide_variable] = {
+	which = enum[export_to_variable_data]
+	value = enum[export_to_variable_data]
+}
 
 ## scope = any
 ### Paradox reports that which = is optional
