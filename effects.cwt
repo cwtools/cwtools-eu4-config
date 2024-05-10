@@ -4437,3 +4437,9 @@ alias[effect:add_accepted_culture_or_dip_power] = {
 
 ## scope = province
 alias[effect:set_state_edict] = <edict>
+
+## scope = country
+alias[effect:add_active_fervor] = <fervor>
+
+## scope = country
+alias[effect:remove_active_fervor] = <fervor>

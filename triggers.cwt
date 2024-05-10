@@ -1104,6 +1104,9 @@ alias[trigger:has_active_debate] = bool
 ## scope = country
 ###Returns true if the country has activated a fervor effect.
 alias[trigger:has_active_fervor] = bool
+## scope = country
+###Returns true if the country has activated a fervor effect.
+alias[trigger:has_active_fervor] = <fervor>
 
 ## scope = country
 ###Returns true if country has the specified policy active.
@@ -3648,6 +3651,11 @@ alias[trigger:province_distance] = {
 	who = scope[province]
 	distance = int
 }
+alias[trigger:province_distance] = {
+	who = scope[country]
+	distance = int
+}
+
 ## scope = province
 ###Returns true if the province has the ID X or the same ID as the specified province scope.
 alias[trigger:province_id] = <province_id>
@@ -4025,7 +4033,7 @@ alias[trigger:started_in] = date_field
 
 ## scope = country
 ###Returns true if Statists vs Orangists is at least X.
-alias[trigger:statists_vs_orangists] = float[0.0..1.0]
+alias[trigger:statists_vs_orangists] = float
 
 ## scope = country
 ###Returns true if the country receives subsidies of at least X% of its monthly income.
