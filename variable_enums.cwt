@@ -41,6 +41,8 @@ enums = {
 		mil_tech
 		modifier:accept_vassalization_reasons
 		modifier:diplomatic_reputation
+		modifier:num_of_soyurghals
+		modifier:soyurghals_amount_check_influence
 		monthly_income
 		num_of_loans
 		opinion
