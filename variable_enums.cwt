@@ -9,6 +9,7 @@ enums = {
 		adm_advisor_religion
 		adm_tech
 		army_size
+		ArmyTradtionOfFROM
 		border_distance
 		consort_adm
 		consort_age
