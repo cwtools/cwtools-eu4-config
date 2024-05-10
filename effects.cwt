@@ -52,6 +52,12 @@ alias[effect:multiply_variable] = {
 	## cardinality = 1..2
 	value[variable] = float
 }
+## scope = any
+### Alternative
+alias[effect:multiply_variable] = {
+	which = enum[export_to_variable_data]
+	value = enum[export_to_variable_data]
+}
 
 ## scope = any
 alias[effect:divide_variable] = {
