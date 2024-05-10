@@ -74,6 +74,9 @@ enums = {
 		trigger_value:legitimacy_equivalent
 		trigger_value:mil_power
 		trigger_value:mercantilism
+		trigger_value:monthly_adm
+		trigger_value:monthly_dip
+		trigger_value:monthly_mil
 		trigger_value:monthly_income
 		trigger_value:nationalism
 		trigger_value:native_size
