@@ -117,6 +117,12 @@ alias[effect:subtract_variable] = {
 	## cardinality = 1..2
 	value[variable] = float
 }
+## scope = any
+### Alternative
+alias[effect:subtract_variable] = {
+	which = enum[export_to_variable_data]
+	value = enum[export_to_variable_data]
+}
 
 ## scope = any
 alias[effect:set_variable] = {
