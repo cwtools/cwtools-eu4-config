@@ -4025,7 +4025,7 @@ alias[trigger:started_in] = date_field
 
 ## scope = country
 ###Returns true if Statists vs Orangists is at least X.
-alias[trigger:statists_vs_orangists] = float[0.0..1.0]
+alias[trigger:statists_vs_orangists] = float
 
 ## scope = country
 ###Returns true if the country receives subsidies of at least X% of its monthly income.
