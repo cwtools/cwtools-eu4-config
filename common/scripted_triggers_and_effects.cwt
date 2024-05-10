@@ -2282,3 +2282,11 @@ alias[trigger:INC_every_part_of_route] = {
 	## cardinality = 0..1
 	tooltip = localisation
 }
+
+## scope = country
+### CW Tools ignores items in quotes
+alias[trigger:INC_has_any_provinces_to_colonize_with_trigger] = {
+	trigger = scalar
+	## cardinality = 0..1
+	tooltip = localisation
+}
