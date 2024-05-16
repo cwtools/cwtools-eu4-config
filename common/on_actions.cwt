@@ -504,6 +504,8 @@ types = {
 		subtype[on_war_ended] = { }
 		## type_key_filter = on_overrun
 		subtype[on_overrun] = { }
+		## type_key_filter = on_admiral_recruited_effect
+		subtype[on_admiral_recruited_effect] = { }
 	}
 }
 on_action = {
@@ -4330,4 +4332,22 @@ on_action = {
 
   	alias_name[effect] = alias_match_left[effect]
 	}
+
+    ## replace_scope = { root = country this = country from = country }
+    subtype[on_admiral_recruited_effect] = {
+        ## cardinality = 0..1
+        events = {
+            ## cardinality = 0..inf
+            <event.country>
+        }
+        ## cardinality = 0..1
+        random_events = {
+            ## cardinality = 0..inf
+            int = 0
+            ## cardinality = 0..inf
+            int = <event.country>
+        }
+
+        alias_name[effect] = alias_match_left[effect]
+    }
 }
