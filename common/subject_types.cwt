@@ -242,13 +242,13 @@ subject_type = {
 		## cardinality = 0..inf
 		other_overlord = <subject_type>
 		## cardinality = 0..1
-		neighboring_primitives = yes
+		neighboring_primitives = bool
 		## cardinality = 0..1
-		colonial_region_nations = yes
+		colonial_region_nations = bool
 		## cardinality = 0..1
-		independent_nations = yes
+		independent_nations = bool
 		## cardinality = 0..1
-		can_send_tribute = yes
+		can_send_tribute = bool
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
@@ -261,13 +261,13 @@ subject_type = {
 		## cardinality = 0..inf
 		other_overlord = all
 		## cardinality = 0..1
-		neighboring_primitives = yes
+		neighboring_primitives = bool
 		## cardinality = 0..1
-		colonial_region_nations = yes
+		colonial_region_nations = bool
 		## cardinality = 0..1
-		independent_nations = yes
+		independent_nations = bool
 		## cardinality = 0..1
-		can_send_tribute = yes
+		can_send_tribute = bool
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
@@ -280,13 +280,13 @@ subject_type = {
 		## cardinality = 0..inf
 		other_overlord = all
 		## cardinality = 0..1
-		neighboring_primitives = yes
+		neighboring_primitives = bool
 		## cardinality = 0..1
-		colonial_region_nations = yes
+		colonial_region_nations = bool
 		## cardinality = 0..1
-		independent_nations = yes
+		independent_nations = bool
 		## cardinality = 0..1
-		can_send_tribute = yes
+		can_send_tribute = bool
 	}
 	## cardinality = 0..1
 	###Root = subject, from = overlord.
@@ -301,13 +301,13 @@ subject_type = {
 		## cardinality = 0..inf
 		other_overlord = all
 		## cardinality = 0..1
-		neighboring_primitives = yes
+		neighboring_primitives = bool
 		## cardinality = 0..1
-		colonial_region_nations = yes
+		colonial_region_nations = bool
 		## cardinality = 0..1
-		independent_nations = yes
+		independent_nations = bool
 		## cardinality = 0..1
-		can_send_tribute = yes
+		can_send_tribute = bool
 	}
 
 	## cardinality = 0..1
@@ -494,4 +494,3 @@ subject_upgrades = {
 		alias_name[modifier] = alias_match_left[modifier]
 	}
 }
-
