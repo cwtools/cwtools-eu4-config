@@ -5841,6 +5841,9 @@ alias[trigger:has_naval_doctrine] = any
 alias[trigger:has_unembraced_institution] = <institution>
 
 ## scope = country
+alias[trigger:has_unembraced_institution] = bool
+
+## scope = country
 ###Returns true if scoped country has ever humiliated the specified country
 alias[trigger:has_ever_humiliated] = enum[country_tags]
 
