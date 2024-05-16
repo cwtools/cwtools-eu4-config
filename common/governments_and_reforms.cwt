@@ -550,6 +550,11 @@ government_reform = {
 				NOT = {
 					## cardinality = 0..inf
 					has_dlc = enum[DLCs]
+					## cardinality = 0..inf
+					OR = {
+						## cardinality = 0..inf
+						has_dlc = enum[DLCs]
+					}
 				}
 				## cardinality = 0..inf
 				OR = {
