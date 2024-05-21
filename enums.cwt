@@ -458,6 +458,7 @@ enums = {
 		tolerance_own
 		trade_efficiency
 		trade_steering
+		naval_morale
 	}
 	enum[native_policies] = {
 		native_policy_coexist
