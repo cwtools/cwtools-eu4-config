@@ -459,6 +459,8 @@ enums = {
 		trade_efficiency
 		trade_steering
 		naval_morale
+		maya_reforms_passed
+		num_of_age_rewards
 	}
 	enum[native_policies] = {
 		native_policy_coexist
