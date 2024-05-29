@@ -109,7 +109,8 @@ enums = {
 		dlc042_eng_sprite_pack_anglois
 		dlc042_ned_sprite_pack 
 		dlc042_por_sprite_pack 
-		dlc042_rus_sprite_pack 
+		dlc042_rus_sprite_pack
+		dlc042_rus_sprite_pack_culture_group	
 		dlc042_tur_sprite_pack 
 		dlc042_tur_sprite_pack_turkish_culture
 		dlc043_frn_sprite_pack 
