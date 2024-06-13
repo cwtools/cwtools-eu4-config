@@ -1,6 +1,6 @@
 types = {
 	# Add scripted triggers that we support explicitly below
-	## type_key_filter <> { has_completed_idea_group_of_category has_completed_idea_group_of_category num_of_completed_idea_groups_by_category has_any_active_incomplete_idea_group_of_category }
+	## type_key_filter <> { has_completed_idea_group_of_category has_completed_idea_group_of_category num_of_completed_idea_groups_by_category has_any_active_incomplete_idea_group_of_category has_unlocked_government_reform }
 	type[scripted_trigger] = {
 		path = "game/common/scripted_triggers"
 	}
@@ -2298,3 +2298,15 @@ alias[effect:GER_unlock_reform_based_on_culture] = {
 	reform = bool
 }
 
+
+## scope = country
+### Has unlocked Government Reform
+alias[trigger:has_unlocked_government_reform] = {
+	## cardinality = 0..1
+	government_reform = <government_reform.new>
+	## cardinality = 0..1
+	custom_trigger_tooltip = {
+		tooltip = localisation
+		has_country_flag = <government_reform.new>
+	}
+}
