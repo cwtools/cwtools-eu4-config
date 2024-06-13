@@ -387,6 +387,7 @@ enums = {
 		manpower_from_capturing_forts
 		civil_war_on_every_new_ruler
 		selectable_trade_goods_for_colonies
+		gain_monarch_power_from_force_converting
 	}
 	enum[monsoons] = {
 		severe_monsoon
@@ -459,7 +460,6 @@ enums = {
 		trade_efficiency
 		trade_steering
 		naval_morale
-		maya_reforms_passed
 		num_of_age_rewards
 	}
 	enum[native_policies] = {
