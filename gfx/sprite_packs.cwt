@@ -37,6 +37,15 @@ enums = {
 		ORL_ARTILLERY_1
 		AUV_ARTILLERY_1
 		ENG_HYW_ARTILLERY_1
+		PER_CAVALRY_1_hotcup
+		MAM_CAVALRY_1_hotcup
+		TUR_CAVALRY_1_hotcup
+		MAM_CAVALRY_2_hotcup
+		TUR_CAVALRY_2_hotcup
+		PER_CAVALRY_2_hotcup
+		MAM_CAVALRY_3_hotcup
+		TUR_CAVALRY_3_hotcup
+		PER_CAVALRY_3_hotcup
 		MAM_CAVALRY_4_hotcup
 		TUR_CAVALRY_4_hotcup
 		PER_CAVALRY_4_hotcup
