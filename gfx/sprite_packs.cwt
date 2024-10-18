@@ -13,6 +13,63 @@ types = {
 	}
 }
 
+enums = {
+	enum[builtin_dlc] = {
+		ORL_INFANTRY_1
+		AUV_INFANTRY_1
+		SCO_HYW_INFANTRY_1
+		BUR_INFANTRY_1
+		PRO_INFANTRY_1
+		FRA_HYW_INFANTRY_1
+		FOI_INFANTRY_1
+		BRI_INFANTRY_1
+		BOU_INFANTRY_1
+		ENG_HYW_INFANTRY_1
+		AMG_INFANTRY_1
+		SCO_HYW_ARTILLERY_1
+		FOI_ARTILLERY_1
+		BUR_ARTILLERY_1
+		PRO_ARTILLERY_1
+		FRA_HYW_ARTILLERY_1
+		BOU_ARTILLERY_1
+		BRI_ARTILLERY_1
+		AMG_ARTILLERY_1
+		ORL_ARTILLERY_1
+		AUV_ARTILLERY_1
+		ENG_HYW_ARTILLERY_1
+		PER_CAVALRY_1_hotcup
+		MAM_CAVALRY_1_hotcup
+		TUR_CAVALRY_1_hotcup
+		MAM_CAVALRY_2_hotcup
+		TUR_CAVALRY_2_hotcup
+		PER_CAVALRY_2_hotcup
+		MAM_CAVALRY_3_hotcup
+		TUR_CAVALRY_3_hotcup
+		PER_CAVALRY_3_hotcup
+		MAM_CAVALRY_4_hotcup
+		TUR_CAVALRY_4_hotcup
+		PER_CAVALRY_4_hotcup
+		USA_INFANTRY_3
+		USA_ARTILLERY_3
+		USA_CAVALRY_3
+		USA_INFANTRY_4
+		USA_ARTILLERY_4
+		USA_CAVALRY_4
+		BYZ_INFANTRY_1
+		BYZ_INFANTRY_2
+		BYZ_INFANTRY_3
+		BYZ_INFANTRY_4
+		BYZ_CAVALRY_1
+		BYZ_CAVALRY_2
+		BYZ_CAVALRY_3
+		BYZ_CAVALRY_4
+		BYZ_ARTILLERY_1
+		BYZ_ARTILLERY_2
+		BYZ_ARTILLERY_3
+		BYZ_ARTILLERY_4
+	}
+}
+
 sprite_pack = {
 	## cardinality = 0..1
 	available_for_custom_nation = bool
@@ -35,32 +92,56 @@ sprite_pack = {
 		## cardinality = 0..1
 		0 = <entity>
 		## cardinality = 0..1
+		0 = enum[builtin_dlc]
+		## cardinality = 0..1
 		1 = <entity>
+		## cardinality = 0..1
+		1 = enum[builtin_dlc]
 		## cardinality = 0..1
 		2 = <entity>
 		## cardinality = 0..1
+		2 = enum[builtin_dlc]
+		## cardinality = 0..1
 		3 = <entity>
+		## cardinality = 0..1
+		3 = enum[builtin_dlc]
 	}
 	## cardinality = 0..1
 	sprite_cavalry = {
 		## cardinality = 0..1
 		0 = <entity>
 		## cardinality = 0..1
+		0 = enum[builtin_dlc]
+		## cardinality = 0..1
 		1 = <entity>
+		## cardinality = 0..1
+		1 = enum[builtin_dlc]
 		## cardinality = 0..1
 		2 = <entity>
 		## cardinality = 0..1
+		2 = enum[builtin_dlc]
+		## cardinality = 0..1
 		3 = <entity>
+		## cardinality = 0..1
+		3 = enum[builtin_dlc]
 	}
 	## cardinality = 0..1
 	sprite_artillery = {
 		## cardinality = 0..1
 		0 = <entity>
 		## cardinality = 0..1
+		0 = enum[builtin_dlc]
+		## cardinality = 0..1
 		1 = <entity>
+		## cardinality = 0..1
+		1 = enum[builtin_dlc]
 		## cardinality = 0..1
 		2 = <entity>
 		## cardinality = 0..1
+		2 = enum[builtin_dlc]
+		## cardinality = 0..1
 		3 = <entity>
+		## cardinality = 0..1
+		3 = enum[builtin_dlc]
 	}
 }
