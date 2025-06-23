@@ -75,4 +75,6 @@ localisation_commands = {
 	GetEunuchsName = country
 	GetQizilbashName = country
 	GetGhilmanName = country
+	OriginalReligion = province
+	NativeCulture = province
 }
