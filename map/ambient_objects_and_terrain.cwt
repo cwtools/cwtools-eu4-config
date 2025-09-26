@@ -86,14 +86,20 @@ terrain = {
 	## cardinality = 0..inf
 	## replace_scope = { root = province this = province }
 	alias_name[modifier] = alias_match_left[modifier]
-	
+
 	## cardinality = 0..1
 	cs_only_local_development_cost = float
 	## cardinality = 0..1
+	### Addition to defence roll in combat in this terrain
 	defence = int
 	## cardinality = 0..1
+	### Multiplier to increase or decrease combat width in this terrain
+	combat_width = float
+	## cardinality = 0..1
+	### Multiplier to movement time into/out of province with terrain
 	movement_cost = float
 	## cardinality = 0..1
+	### Extra cost multiplier when picked in the Nation Designer
 	nation_designer_cost_multiplier = float
 	
 	## cardinality = 0..1
