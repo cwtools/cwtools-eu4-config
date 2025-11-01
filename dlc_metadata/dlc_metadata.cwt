@@ -23,7 +23,7 @@ dlc_info = {
 	subscription_promo = scalar
 	## cardinality = 0..1
 	recommendations = {
-		## cardinality = 1..5
+		## cardinality = 0..5
 		<dlc_info>
 	}
 	## cardinality = 0..1
