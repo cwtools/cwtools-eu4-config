@@ -3642,7 +3642,7 @@ alias[effect:appoint_next_guru] = yes
 
 ## scope = province
 ###set permanent province flag
-alias[effect:set_permanent_province_flag] = scalar
+alias[effect:set_permanent_province_flag] = value_set[province_flag]
 
 ## scope = province
 ###Used only in the Europa Universalis IV/common/buildings/*.txt file.
