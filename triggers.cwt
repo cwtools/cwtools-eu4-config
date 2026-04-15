@@ -3518,8 +3518,8 @@ alias[trigger:owns_or_subject_of] = scope[province]
 alias[trigger:papacy_active] = bool
 
 ## scope = country
-###Returns true if the country's papal influence is at least X, or if the country has at least as much papal influence as the specified country.
-alias[trigger:papal_influence] = int[0..100]
+###Returns true if the country's papal influence is at least X, or if the country has at least as much papal influence as the specified country.  Defines sets the maximum to be 200.
+alias[trigger:papal_influence] = int[0..200]
 
 ## scope = country
 ###Returns true if the country's papal influence is at least X, or if the country has at least as much papal influence as the specified country.
