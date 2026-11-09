@@ -13,7 +13,7 @@ alias[effect:enum[country_tags]] = {
 	alias_name[effect] = alias_match_left[effect]
 }
 
-## scope = { country province }
+## scope = { country province empty }
 ## push_scope = country
 ###Refers to the country tags listed /Europa Universalis IV/common/country_tags
 alias[trigger:enum[country_tags]] = {
