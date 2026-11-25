@@ -1,0 +1,35 @@
+# Country flags the game sets by itself (achievements and age objectives check them), so no script sets them
+values = {
+	value[country_flag] = {
+		aaa_credit
+		beat_big_leader
+		brothers_in_arms
+		brown_noser
+		cherry_picker
+		cold_war
+		conquered_province
+		core_fu
+		doom_reached_100
+		doom_reached_95
+		force_converted
+		gentle_convincing
+		greedy_set_from_code
+		has_corrupted_officials
+		has_stolen_map
+		has_won_war
+		have_berlin_wall
+		have_diploannexed
+		have_razed_wealthy_province
+		have_threatened_war
+		installed_union
+		just_a_statistic
+		killed_tenkey
+		pick_your_poison
+		queen_of_conquest
+		religious_league_war_on_winning_side
+		supported_rebels
+		treasure_fleet_looted
+		white_company
+		won_religious_league_war
+	}
+}
