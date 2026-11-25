@@ -109,7 +109,7 @@ types = {
 government_mechanic = {
 	## cardinality = 0..1
 	###GFX icon strip the alert icon to use for this mechanic is in
-	alert_icon_gfx = scalar # TODO: make it a gfx value
+	alert_icon_gfx = <sprite>
 	## cardinality = 0..1
 	###the index of the icon for this mechanic in the strip of alert_icon_gfx
 	alert_icon_index = int[1..inf]
@@ -224,7 +224,7 @@ government_mechanic = {
 		## cardinality = 0..inf
 		<government_mechanic_interaction> = {
 			## cardinality = 0..1
-			icon = scalar # TODO: make it a GFX
+			icon = <sprite>
 			## cardinality = 0..1
 			gui = scalar # TODO: make it a GUI
 			## cardinality = 0..1

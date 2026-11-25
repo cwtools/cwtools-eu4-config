@@ -173,7 +173,7 @@ estate = {
 
 ## replace_scope = { root = country this = country }
 estate_privilege = {
-	icon = scalar
+	icon = <sprite>
 
 	## cardinality = 0..1
 	land_share = int
