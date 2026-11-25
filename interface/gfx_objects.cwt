@@ -1,0 +1,233 @@
+#objectTypes and bitmapfonts in interface/*.gfx
+
+types = {
+	## type_key_filter = pdxmesh
+	type[pdxmesh] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = objectTypes
+		severity = warning
+	}
+	## type_key_filter = pdxparticle
+	type[pdxparticle] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = objectTypes
+		severity = warning
+	}
+	## type_key_filter = animatedmaptext
+	type[animatedmaptext] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = objectTypes
+		severity = warning
+	}
+	## type_key_filter = arrowType
+	type[arrow_type] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = objectTypes
+		severity = warning
+	}
+	## type_key_filter = tradeRouteType
+	type[trade_route_type] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = objectTypes
+		severity = warning
+	}
+	## type_key_filter = bitmapfont
+	type[font] = {
+		name_field = "name"
+		path = "game/interface"
+		skip_root_key = bitmapfonts
+		severity = warning
+	}
+}
+
+enums = {
+	enum[map_text_format] = {
+		left
+		center
+		centre
+		right
+	}
+}
+
+pdxmesh = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	file = scalar
+	## cardinality = 0..1
+	scale = float
+	## cardinality = 0..1
+	cull_distance = scalar
+	## cardinality = 0..1
+	preload_textures = bool
+	## cardinality = 0..inf
+	animation = {
+		## cardinality = 0..1
+		id = scalar
+		## cardinality = 0..1
+		type = scalar
+	}
+	## cardinality = 0..inf
+	meshsettings = {
+		## cardinality = 0..1
+		index = int
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		shader = scalar
+		## cardinality = 0..1
+		shader_file = scalar
+	}
+}
+
+pdxparticle = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	type = scalar
+	## cardinality = 0..1
+	scale = float
+	## cardinality = 0..1
+	cull_distance = scalar
+}
+
+animatedmaptext = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	speed = float
+	## cardinality = 0..1
+	maxWidth = int
+	## cardinality = 0..1
+	scale = float
+	## cardinality = 0..1
+	cull_distance = scalar
+	## cardinality = 0..1
+	position = {
+		## cardinality = 1..inf
+		float
+	}
+	## cardinality = 0..1
+	textblock = {
+		## cardinality = 0..1
+		text = scalar
+		## cardinality = 0..1
+		font = <font>
+		## cardinality = 0..1
+		format = enum[map_text_format]
+		## cardinality = 0..1
+		color = {
+			## cardinality = 3..4
+			float
+		}
+		## cardinality = 0..1
+		position = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+	}
+}
+
+arrow_type = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	effect = scalar
+	## cardinality = 0..1
+	texture = scalar
+	## cardinality = 0..1
+	normal = scalar
+	## cardinality = 0..1
+	specular = scalar
+	## cardinality = 0..1
+	overlay = scalar
+	## cardinality = 0..1
+	type = int
+	## cardinality = 0..1
+	size = float
+	## cardinality = 0..1
+	height = float
+	## cardinality = 0..1
+	heading = float
+	## cardinality = 0..1
+	endAt = float
+	## cardinality = 0..1
+	color = {
+		## cardinality = 3..4
+		float
+	}
+	## cardinality = 0..1
+	colortwo = {
+		## cardinality = 3..4
+		float
+	}
+	## cardinality = 0..1
+	scale = float
+	## cardinality = 0..1
+	cull_distance = scalar
+}
+
+trade_route_type = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	effect = scalar
+	## cardinality = 0..1
+	textureFile = scalar
+	## cardinality = 0..1
+	textureFile2 = scalar
+	## cardinality = 0..1
+	textureFile3 = scalar
+	## cardinality = 0..1
+	scale = float
+	## cardinality = 0..1
+	cull_distance = scalar
+}
+
+font = {
+	## cardinality = 1..1
+	name = scalar
+	## cardinality = 0..1
+	path = scalar
+	## cardinality = 0..1
+	scaled_path = scalar
+	### A hex value like 0xffffffff
+	## cardinality = 0..1
+	color = scalar
+	### A hex value like 0xffffffff
+	## cardinality = 0..1
+	border_color = scalar
+	## cardinality = 0..1
+	icon_scale = float
+	## cardinality = 0..1
+	cursor_offset = {
+		## cardinality = 2..2
+		int
+	}
+	## cardinality = 0..1
+	effect = bool
+	## cardinality = 0..1
+	icons_add_height = bool
+	## cardinality = 0..1
+	textcolors = {
+		## cardinality = 0..inf
+		scalar = {
+			## cardinality = 3..3
+			int
+		}
+	}
+}
