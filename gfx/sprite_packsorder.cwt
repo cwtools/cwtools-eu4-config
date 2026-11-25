@@ -33,7 +33,9 @@ enums = {
 		dlc003_rus_sprite_pack 
 		dlc005_usa_sprite_pack 
 		dlc006_byz_sprite_pack 
+		dlc011_por_custom_sprite_pack
 		dlc011_por_sprite_pack 
+		dlc011_spa_custom_sprite_pack
 		dlc011_spa_sprite_pack 
 		dlc012_apa_sprite_pack 
 		dlc012_che_sprite_pack 
@@ -53,7 +55,9 @@ enums = {
 		dlc015_oji_sprite_pack 
 		dlc015_pot_sprite_pack 
 		dlc015_sho_sprite_pack 
+		dlc016_eng_custom_sprite_pack
 		dlc016_eng_sprite_pack 
+		dlc016_fra_custom_sprite_pack
 		dlc016_fra_sprite_pack 
 		dlc020_ara_sprite_pack 
 		dlc020_gen_sprite_pack 
@@ -65,7 +69,9 @@ enums = {
 		dlc024_mul_sprite_pack 
 		dlc024_vij_sprite_pack 
 		dlc028_boh_sprite_pack 
+		dlc028_bra_sprite_pack
 		dlc028_bra_sprite_pack_bra
+		dlc028_dan_sprite_pack
 		dlc028_eng_sprite_pack
 		dlc028_eng_sprite_pack_anglois
 		dlc028_fra_sprite_pack 
@@ -119,6 +125,7 @@ enums = {
 		dlc043_ulm_sprite_pack 
 		dlc047_cir_sprite_pack 
 		dlc047_cri_sprite_pack 
+		dlc047_feo_ger_sprite_pack
 		dlc047_feo_sprite_pack 
 		dlc047_zaz_sprite_pack 
 		dlc048_gol_sprite_pack 
@@ -136,6 +143,7 @@ enums = {
 		dlc053_spa_sprite_pack 
 		dlc053_spa_sprite_pack 
 		dlc054_fra_sprite_pack 
+		dlc054_pru_sprite_pack
 		dlc054_pru_sprite_pack_bra
 		dlc054_swe_sprite_pack 
 		dlc056_aqu_sprite_pack
@@ -157,6 +165,18 @@ enums = {
 		dlc058_mor_sprite_pack 
 		dlc058_tun_sprite_pack 
 		dlc058_tun_sprite_pack 
+		dlc061_aug_sprite_pack
+		dlc061_bav_sprite_pack
+		dlc061_boh_sprite_pack
+		dlc061_han_sprite_pack
+		dlc061_kol_sprite_pack
+		dlc061_mai_sprite_pack
+		dlc061_pal_sprite_pack
+		dlc061_pom_sprite_pack
+		dlc061_sax_sprite_pack
+		dlc061_tri_sprite_pack
+		dlc061_wbg_sprite_pack
+		dlc061_wur_sprite_pack
 		dlc062_air_sprite_pack 
 		dlc062_ben_sprite_pack 
 		dlc062_hau_sprite_pack 
@@ -229,6 +249,7 @@ enums = {
 		dlc088_mth_sprite_pack 
 		dlc088_nol_sprite_pack 
 		dlc088_nrm_sprite_pack 
+		dlc090_south_east_asian_elephant_sprite_pack
 		dlc091_gdw_sprite_pack 
 		dlc091_mer_sprite_pack 
 		dlc091_mys_sprite_pack 
@@ -286,6 +307,7 @@ enums = {
 		dlc120_AIN_sprite_pack
 		dlc120_CDL_sprite_pack
 		dlc120_CHP_sprite_pack
+		dlc120_CMI_CYI_sprite_pack
 		dlc120_LIE_sprite_pack
 		dlc120_LOR_sprite_pack
 		dlc120_SUL_sprite_pack
