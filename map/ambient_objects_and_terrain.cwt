@@ -31,7 +31,6 @@ types = {
 		path_file = "terrain.txt"
 	}
 	type[trade_winds] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/map"
 		path_file = "trade_winds.txt"

@@ -127,18 +127,15 @@ types = {
 	}
 	type[dynasty_colors] = {
 		path = "game/common/dynasty_colors"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	type[region_colors] = {
 		path = "game/common/region_colors"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	#todo: The name of the file must be a country tag, culture or cultural group
 	type[province_names] = {
 		path = "game/common/province_names"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	type[achievement] = {

@@ -2,7 +2,6 @@
 types = {
 	type[packorder] = {
 		path = "game/gfx/sprite_packs_order"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	type[packentity] = {

@@ -52,7 +52,6 @@ types = {
 	type[government_ranks] = {
 		path = "game/common/government_ranks"
 		path_file = "00_government_ranks.txt"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	type[government_name] = {

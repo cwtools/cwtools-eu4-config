@@ -57,7 +57,6 @@ types = {
 	}
 	type[prices] = {
 		path = "game/common/prices"
-		name_from_file = yes
 		type_per_file = yes
 	}
 	type[trade_center] = {

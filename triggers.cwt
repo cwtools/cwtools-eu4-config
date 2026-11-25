@@ -3973,9 +3973,13 @@ alias[trigger:same_continent] = scope[province]
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
 alias[trigger:same_continent] = <province_id>
 
-## scope = { capital_scope }
+## scope = { country }
 ###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
-alias[trigger:same_continent] = scope[capital_scope]
+alias[trigger:same_continent] = scope[province]
+
+## scope = { province }
+###In country scope, returns true if the countries' capitals are on the same continent. In province scope, returns true if the specified provinces are on the same continent.
+alias[trigger:same_continent] = scope[country]
 
 ## scope = country
 ###Returns true the secondary religion of the country is X.
@@ -4183,10 +4187,10 @@ alias[trigger:trade_goods] = <province_id>
 ###Returns true if the ratio of trade income to total income is at least X.
 alias[trigger:trade_income_percentage] = float[0.0..1.0]
 
-## scope = { trade_node capital_scope }
+## scope = { trade_node province }
 ###Returns true if the trade node is within the trade range of the specified country.
 alias[trigger:trade_range] = scope[country]
-## scope = { trade_node capital_scope }
+## scope = { trade_node province }
 ###Returns true if the trade node is within the trade range of the specified country.
 alias[trigger:trade_range] = enum[country_tags]
 

@@ -1,7 +1,6 @@
 types = {
     type[on_action] = {
         path = "game/common/on_actions"
-        start_from_root = yes
         ## type_key_filter = on_startup
         subtype[on_startup] = { }
         ## type_key_filter = on_religion_change

@@ -6,7 +6,6 @@ types = {
 	}
     type[diplomacy_history] = {
         path = "game/history/diplomacy"
-        name_from_file = yes
         type_per_file = yes
         subtype[normal] = {
             ## cardinality = 0..0
@@ -26,7 +25,6 @@ types = {
 	## push_scope = province
 	type[province_history] = {
 		path = "game/history/provinces"
-		name_from_file = yes
 		type_per_file = yes
 
 		subtype[not_sea] = {
@@ -39,7 +37,6 @@ types = {
 	#todo: does this work with two name_x stuff?
 	type[war_history] = {
 		path = "game/history/wars"
-		name_from_file = yes
 		type_per_file = yes
 
 		name_field = "name"
@@ -47,7 +44,6 @@ types = {
 	#Todo: The name presumably has some requirements, but they are ignored for now
 	type[country_history] = {
 		path = "game/history/countries"
-		name_from_file = yes
 		type_per_file = yes
 
 		subtype[not_nat_pir_reb] = {

@@ -42,12 +42,12 @@ great_project = {
 		type = canal
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	build_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	## cardinality = 0..1
 	on_built = {
 		## cardinality = 0..1
@@ -59,7 +59,7 @@ great_project = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	## cardinality = 0..1
 	on_destroyed = {
 		## cardinality = 0..1
@@ -72,17 +72,17 @@ great_project = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	can_use_modifiers_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	can_upgrade_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	keep_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}

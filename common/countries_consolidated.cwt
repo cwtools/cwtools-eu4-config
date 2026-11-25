@@ -5,17 +5,14 @@ types = {
 #	}
 	#Note: I do name from file because so far as I know this is not referred to elsewhere and this lets me check whether you have used a valid country tag
 	type[country_color_file] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/common/country_colors"
 	}
 	type[country_file] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/common/countries"
 	}
 	type[custom_country_colors] = {
-		name_from_file = yes
 		type_per_file = yes
 		path = "game/common/countries"
 		path_file = "00_custom_country_colors.txt"

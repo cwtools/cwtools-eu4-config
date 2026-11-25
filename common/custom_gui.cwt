@@ -2,31 +2,26 @@ types = {
 	## type_key_filter = custom_button
 	type[custom_button] = {
 		path = "game/common/custom_gui"
-		start_from_root = yes
 		name_field = name
 	}
 	## type_key_filter = custom_text_box
 	type[custom_text_box] = {
 		path = "game/common/custom_gui"
-		start_from_root = yes
 		name_field = name
 	}
 	## type_key_filter = custom_icon
 	type[custom_icon] = {
 		path = "game/common/custom_gui"
-		start_from_root = yes
 		name_field = name
 	}
 	## type_key_filter = custom_shield
 	type[custom_shield] = {
 		path = "game/common/custom_gui"
-		start_from_root = yes
 		name_field = name
 	}
 	## type_key_filter = custom_window
 	type[custom_window] = {
 		path = "game/common/custom_gui"
-		start_from_root = yes
 		name_field = name
 	}
 }

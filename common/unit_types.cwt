@@ -3,7 +3,6 @@
 types = {
 	type[unit_type] = {
 		path = "game/common/units"
-		name_from_file = yes
 		type_per_file = yes
 		path_strict = yes
 

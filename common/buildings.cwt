@@ -28,7 +28,7 @@ building = {
 	}
 	
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	###An and trigger that needs to be fullfilled to build the building
 	build_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
@@ -36,32 +36,32 @@ building = {
 
 
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	###An and trigger that needs to be fullfilled to keep the building
 	keep_trigger = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	potential = {
 		alias_name[trigger] = alias_match_left[trigger]
 	}
 	
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	on_built = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	on_destroyed = {
 		alias_name[effect] = alias_match_left[effect]
 	}
 	
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	on_obsolete = {
 		alias_name[effect] = alias_match_left[effect]
 	}
@@ -113,7 +113,7 @@ building = {
 	onmap = bool
 	
 	## cardinality = 0..1
-	## replace_scope = { root = province this = province from = owner }
+	## replace_scope = { root = province this = province from = country }
 	###Building AI is now mainly hard-coded. The AI will estimate how much it gains yearly from each building, convert the value to ducats, and take the building with biggest yearly return as a percentage of the build cost. If lower than 1%, the AI will not consider the yearly return worth it. It will also require higher yearly return if the economy in not in prime shape. Forts' value also get converted to a yearly return based on terrain and strategic position, as well as available budget for fort maintenance. AI can still be modded though; it will multiply the yearly return with the value of ai_will_do. If you don't want the AI to build a building at all, make ai_will_do become 0. AI will consider each building to be worth 0.01 ducats per year as a base, so making ai_will_do above cost will have them build it at some point. It will still check whether it can afford a building before doing so though, but may save up to it.
 	ai_will_do = {
 		factor = float

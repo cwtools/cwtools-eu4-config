@@ -10,7 +10,6 @@ types = {
 	}
 	type[dlc_recommendation] = {
 		path = "game/dlc_metadata/dlc_recommendations"
-		name_from_file = yes
 		type_per_file = yes
 	}
 }
