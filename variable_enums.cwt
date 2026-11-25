@@ -131,3 +131,13 @@ enums = {
 		noreligion
 	}
 }
+
+#Variables that the game sets itself, or that scripted effects build from a parameter
+#(final_ducat_price_$trade_goods$ in calculate_trade_goods_price)
+values = {
+	value[variable] = {
+		num_converted_religion
+		final_ducat_price_<trade_good>
+		final_adm_cost_<trade_good>
+	}
+}

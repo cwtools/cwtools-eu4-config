@@ -1,0 +1,8 @@
+#Message types in interface/messagetypes.txt, e.g. RELIGIOUS_SCHOLAR_EXPIRY.
+#Their texts are <name>_TITLE, <name>_LOG and so on, not <name> itself.
+types = {
+	type[message_type] = {
+		path = "game/interface"
+		path_file = "messagetypes.txt"
+	}
+}

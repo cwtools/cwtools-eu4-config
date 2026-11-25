@@ -75,7 +75,8 @@ static_modifier = {
 	###Tells the AI and will only show the alert if country has none
 	is_scholar_modifier = yes
 	## cardinality = 0..1
-	expire_message_type = localisation
+	###A message type from interface/messagetypes.txt
+	expire_message_type = <message_type>
 }
 
 

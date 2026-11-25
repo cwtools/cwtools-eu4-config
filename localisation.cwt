@@ -1,3 +1,31 @@
+#Scope links used in localisation, e.g. [Root.Monarch.Culture.GetName].
+#When this block is present CWTools uses it instead of its built-in list, so it holds the whole set.
+localisation_links = {
+	Capital = { input_scopes = { country } output_scope = province }
+	ColonialParent = { input_scopes = { country } output_scope = country }
+	#Rulers have their own culture, e.g. [Root.Monarch.Culture.GetName]
+	Culture = { input_scopes = { country province rebel_faction monarch } output_scope = culture }
+	Dynasty = { input_scopes = { consort monarch heir } output_scope = any }
+	Heir = { input_scopes = { country } output_scope = heir }
+	#The leader of a unit or a mercenary company, e.g. [unpaid_mercs.Leader.GetName]
+	Leader = { input_scopes = { unit mercenary_company } output_scope = leader }
+	Location = { input_scopes = { rebel_faction } output_scope = any }
+	Monarch = { input_scopes = { country } output_scope = monarch }
+	Owner = { input_scopes = { province } output_scope = country }
+	Religion = { input_scopes = { country province rebel_faction } output_scope = religion }
+	SecondaryReligion = { input_scopes = { country } output_scope = religion }
+	TradeCompany = { input_scopes = { country province } output_scope = country }
+	Dip_Advisor = { input_scopes = { country } output_scope = advisor }
+	Adm_Advisor = { input_scopes = { country } output_scope = advisor }
+	Mil_Advisor = { input_scopes = { country } output_scope = advisor }
+	Country = { input_scopes = { country rebel_faction } output_scope = country }
+	Province = { input_scopes = { any } output_scope = province }
+	Overlord = { input_scopes = { country } output_scope = country }
+	Consort = { input_scopes = { country } output_scope = consort }
+	NativeCulture = { input_scopes = { province } output_scope = culture }
+	OriginalReligion = { input_scopes = { province } output_scope = religion }
+}
+
 localisation_commands = {
 	GetAdjective = country
 	GetAdjectiveCap = country
@@ -68,7 +96,6 @@ localisation_commands = {
 	GetCachedAgendasFlavorText = country
 	GetParliamentName = country
 	GetParliamentWithGrammer = country
-	Leader = unit
 	Location = unit
 	enum[defined_text_commands] = any
 	GetJanissariesName = country
