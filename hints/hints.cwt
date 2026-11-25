@@ -1,0 +1,21 @@
+types = {
+	type[hint] = {
+		path = "game/hints"
+	}
+}
+
+hint = {
+	### Name of a window in the interface files, "hints_test" in vanilla
+	window = scalar
+	title = localisation
+	## cardinality = 1..inf
+	text = localisation
+	### Opens another hint
+	## cardinality = 0..inf
+	button = <hint>
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	trigger = {
+		alias_name[trigger] = alias_match_left[trigger]
+	}
+}

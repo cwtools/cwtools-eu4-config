@@ -17,8 +17,7 @@ types = {
 	type[custom_country_colors] = {
 		name_from_file = yes
 		type_per_file = yes
-		path = "game/common/countries"
-		path_file = "00_custom_country_colors.txt"
+		path = "game/common/custom_country_colors"
 	}
 }
 
@@ -156,8 +155,9 @@ custom_country_colors = {
 	}
 	## cardinality = 1..inf
 	textures = {
+		## cardinality = 1..inf
 		texture = {
-			file = scalar #todo: sortof filepath - "gfx\\custom_flags\\pattern.tga"
+			file = filepath
 			size = {
 				x = int
 				y = int

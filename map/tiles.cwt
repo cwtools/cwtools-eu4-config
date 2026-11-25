@@ -5,6 +5,125 @@ types = {
 		type_per_file = yes
 		path = "game/map/random/tiles"
 	}
+	type[rnw_scenario] = {
+		path = "game/map/random"
+		path_file = "RNWScenarios.txt"
+	}
+	type[rnw_lake_names] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/map/random"
+		path_file = "RandomLakeNames.txt"
+	}
+	type[rnw_sea_names] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/map/random"
+		path_file = "RandomSeaNames.txt"
+	}
+	type[rnw_land_names] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/map/random"
+		path_file = "RandomLandNames.txt"
+	}
+}
+
+rnw_scenario = {
+	## cardinality = 0..1
+	tile_index = int
+	## cardinality = 0..1
+	min_provinces = int
+	## cardinality = 0..1
+	max_provinces = int
+
+	## cardinality = 0..1
+	temperate = bool
+	arid = bool
+	arctic = bool
+	tropical = bool
+
+	## cardinality = 0..1
+	fantasy = yes
+	## cardinality = 0..1
+	force_apart = yes
+	## cardinality = 0..1
+	force_together = yes
+	## cardinality = 0..1
+	force_coastal = yes
+	## cardinality = 0..1
+	force_all_provinces_owned = yes
+	## cardinality = 0..1
+	minor_tags = yes
+
+	## cardinality = 0..1
+	min_countries = int
+	## cardinality = 0..1
+	max_countries = int
+	## cardinality = 0..1
+	min_country_size = int
+	## cardinality = 0..1
+	max_country_size = int
+
+	min_native_size = int
+	max_native_size = int
+	min_native_hostility = int
+	max_native_hostility = int
+	min_native_ferocity = int
+	max_native_ferocity = int
+
+	## cardinality = 0..1
+	culture = <culture>
+	## cardinality = 0..1
+	culture_group = <culture_group>
+	## cardinality = 0..1
+	government = <government>
+	## cardinality = 0..1
+	starting_reform = <government_reform>
+	## cardinality = 0..1
+	country_religion = <religion>
+	religion = <religion>
+	## cardinality = 0..1
+	technology_group = <technology_group>
+	## cardinality = 0..1
+	unit_type = <technology_group>
+	## cardinality = 0..1
+	graphical_culture = enum[graphical_cultures]
+
+	### Requires unique = yes
+	## cardinality = 0..1
+	region = localisation
+	### Requires unique = yes
+	## cardinality = 0..1
+	names = {
+		## cardinality = 1..inf
+		localisation
+	}
+
+	unique = bool
+	chance = int
+}
+
+rnw_lake_names = {
+	random_names = {
+		## cardinality = 1..inf
+		localisation
+	}
+}
+
+rnw_sea_names = {
+	random_names = {
+		## cardinality = 1..inf
+		localisation
+	}
+}
+
+### Entries may end in :coast, :island, :island2, :plains, :forest, :jungle, :hills, :mountains, :desert, :glacial, :marsh, :river, :wasteland, :arctic, :arid, :temperate or :tropical
+rnw_land_names = {
+	random_names = {
+		## cardinality = 1..inf
+		scalar
+	}
 }
 
 rnw_tiles = {

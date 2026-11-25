@@ -1,0 +1,20 @@
+
+types = {
+	type[lakes] = {
+		name_from_file = yes
+		type_per_file = yes
+		path = "game/map/lakes"
+	}
+}
+
+lakes = {
+	## cardinality = 0..inf
+	lake = {
+		### Map pixel coordinates, as x y pairs
+		triangle_strip = {
+			## cardinality = 6..inf
+			int[0..inf]
+		}
+		height = int
+	}
+}

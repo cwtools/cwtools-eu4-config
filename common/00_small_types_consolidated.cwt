@@ -135,6 +135,11 @@ types = {
 		name_from_file = yes
 		type_per_file = yes
 	}
+	type[units_display] = {
+		path = "game/common/units_display"
+		name_from_file = yes
+		type_per_file = yes
+	}
 	#todo: The name of the file must be a country tag, culture or cultural group
 	type[province_names] = {
 		path = "game/common/province_names"
@@ -528,6 +533,27 @@ region_colors = {
 	color = {
 		## cardinality = 3..3
 		int[0..255]
+	}
+}
+
+units_display = {
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	infantry = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	cavalry = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
+	}
+	## cardinality = 0..1
+	## replace_scope = { root = country this = country }
+	artillery = {
+		factor = float
+		alias_name[modifier_rule] = alias_match_left[modifier_rule]
 	}
 }
 
