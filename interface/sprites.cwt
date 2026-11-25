@@ -1,20 +1,625 @@
-#sprites are saved in *.gfx files (like meshes) and are by and large stored in /interface
-#I don't know anything about interface modding. For now I have just rigged up the sprites to show because that is rather useful.
-
 types = {
-	## type_key_filter = spriteType
-	type[sprite] = { #these are links that start with the GFX_ prefix in vanilla
+	## type_key_filter = { spriteType quadTextureSprite corneredTileSpriteType frameAnimatedSpriteType textSpriteType progressbartype resizeableSpriteType tileSpriteType maskedShieldType PieChartType LineChartType }
+	type[sprite] = {
 		name_field = "name"
 		path = "game/interface"
 		skip_root_key = spriteTypes
 		severity = warning
+		## type_key_filter = spriteType
+		subtype[normal] = {}
+		## type_key_filter = quadTextureSprite
+		subtype[quad_texture] = {}
+		## type_key_filter = corneredTileSpriteType
+		subtype[cornered_tile_sprite] = {}
+		## type_key_filter = frameAnimatedSpriteType
+		subtype[frame_animated_sprite] = {}
+		## type_key_filter = textSpriteType
+		subtype[text_sprite] = {}
+		## type_key_filter = progressbartype
+		subtype[progressbar] = {}
+		## type_key_filter = resizeableSpriteType
+		subtype[resizeable_sprite] = {}
+		## type_key_filter = tileSpriteType
+		subtype[tile_sprite] = {}
+		## type_key_filter = maskedShieldType
+		subtype[masked_shield] = {}
+		## type_key_filter = PieChartType
+		subtype[pie_chart] = {}
+		## type_key_filter = LineChartType
+		subtype[line_chart] = {}
 	}
 }
 
-#I just want to know the name. So the validation is obviously incomplete
+enums = {
+	enum[gfx_load_type] = {
+		FRONTEND
+		INGAME
+	}
+}
+
 sprite = {
-	name = scalar
-	
-	## cardinality = 0..inf
-	scalar = scalar
+	subtype[normal] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alphamaskfile = scalar
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		animation = {
+			## cardinality = 0..1
+			animationblendmode = scalar
+			## cardinality = 0..1
+			animationdelay = float
+			## cardinality = 0..1
+			animationlooping = bool
+			## cardinality = 0..1
+			animationmaskfile = scalar
+			## cardinality = 0..1
+			animationrotation = float
+			## cardinality = 0..1
+			animationtexturefile = scalar
+			## cardinality = 0..1
+			animationtime = float
+			## cardinality = 0..1
+			animationtype = scalar
+			## cardinality = 0..1
+			animationframes = {
+				## cardinality = 0..inf
+				int
+			}
+			## cardinality = 0..1
+			animationrotationoffset = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+			## cardinality = 0..1
+			animationtexturescale = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+		}
+		## cardinality = 0..1
+		can_be_lowres = bool
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		framedirectiony = bool
+		## cardinality = 0..1
+		legacy_lazy_load = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		masking_texture = scalar
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		overlay_frames_per_row = int
+		## cardinality = 0..1
+		overlay_rows = int
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		texturesize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		transparencecheck = bool
+	}
+	subtype[quad_texture] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alphamaskfile = scalar
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		animation = {
+			## cardinality = 0..1
+			animationblendmode = scalar
+			## cardinality = 0..1
+			animationdelay = float
+			## cardinality = 0..1
+			animationlooping = bool
+			## cardinality = 0..1
+			animationmaskfile = scalar
+			## cardinality = 0..1
+			animationrotation = float
+			## cardinality = 0..1
+			animationtexturefile = scalar
+			## cardinality = 0..1
+			animationtime = float
+			## cardinality = 0..1
+			animationtype = scalar
+			## cardinality = 0..1
+			animationframes = {
+				## cardinality = 0..inf
+				int
+			}
+			## cardinality = 0..1
+			animationrotationoffset = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+			## cardinality = 0..1
+			animationtexturescale = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+		}
+		## cardinality = 0..1
+		can_be_lowres = bool
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		framedirectiony = bool
+		## cardinality = 0..1
+		legacy_lazy_load = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		masking_texture = scalar
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		overlay_frames_per_row = int
+		## cardinality = 0..1
+		overlay_rows = int
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		texturesize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		transparencecheck = bool
+	}
+	subtype[cornered_tile_sprite] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		borderSize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		tilingCenter = bool
+	}
+	subtype[frame_animated_sprite] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alphamaskfile = scalar
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		animation = {
+			## cardinality = 0..1
+			animationblendmode = scalar
+			## cardinality = 0..1
+			animationdelay = float
+			## cardinality = 0..1
+			animationlooping = bool
+			## cardinality = 0..1
+			animationmaskfile = scalar
+			## cardinality = 0..1
+			animationrotation = float
+			## cardinality = 0..1
+			animationtexturefile = scalar
+			## cardinality = 0..1
+			animationtime = float
+			## cardinality = 0..1
+			animationtype = scalar
+			## cardinality = 0..1
+			animationframes = {
+				## cardinality = 0..inf
+				int
+			}
+			## cardinality = 0..1
+			animationrotationoffset = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+			## cardinality = 0..1
+			animationtexturescale = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+		}
+		## cardinality = 0..1
+		animation_rate_fps = float
+		## cardinality = 0..1
+		animation_rate_spf = float
+		## cardinality = 0..1
+		can_be_lowres = bool
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		framedirectiony = bool
+		## cardinality = 0..1
+		legacy_lazy_load = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		looping = bool
+		## cardinality = 0..1
+		masking_texture = scalar
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		overlay_frames_per_row = int
+		## cardinality = 0..1
+		overlay_rows = int
+		## cardinality = 0..1
+		pause_on_loop = float
+		## cardinality = 0..1
+		play_on_show = bool
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		texturesize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		transparencecheck = bool
+	}
+	subtype[text_sprite] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		textureFile = scalar
+	}
+	subtype[progressbar] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		color = {
+			## cardinality = 3..4
+			float
+		}
+		## cardinality = 0..1
+		colortwo = {
+			## cardinality = 3..4
+			float
+		}
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		horizontal = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		steps = int
+		## cardinality = 0..1
+		textureFile1 = scalar
+		## cardinality = 0..1
+		textureFile2 = scalar
+	}
+	subtype[resizeable_sprite] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = int
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		textureFile = scalar
+	}
+	subtype[tile_sprite] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alphamaskfile = scalar
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		animation = {
+			## cardinality = 0..1
+			animationblendmode = scalar
+			## cardinality = 0..1
+			animationdelay = float
+			## cardinality = 0..1
+			animationlooping = bool
+			## cardinality = 0..1
+			animationmaskfile = scalar
+			## cardinality = 0..1
+			animationrotation = float
+			## cardinality = 0..1
+			animationtexturefile = scalar
+			## cardinality = 0..1
+			animationtime = float
+			## cardinality = 0..1
+			animationtype = scalar
+			## cardinality = 0..1
+			animationframes = {
+				## cardinality = 0..inf
+				int
+			}
+			## cardinality = 0..1
+			animationrotationoffset = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+			## cardinality = 0..1
+			animationtexturescale = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+		}
+		## cardinality = 0..1
+		can_be_lowres = bool
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		framedirectiony = bool
+		## cardinality = 0..1
+		legacy_lazy_load = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		masking_texture = scalar
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		overlay_frames_per_row = int
+		## cardinality = 0..1
+		overlay_rows = int
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		texturesize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		transparencecheck = bool
+	}
+	subtype[masked_shield] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		allwaystransparent = bool
+		## cardinality = 0..1
+		alphamaskfile = scalar
+		## cardinality = 0..1
+		alwaystransparent = bool
+		## cardinality = 0..1
+		animation = {
+			## cardinality = 0..1
+			animationblendmode = scalar
+			## cardinality = 0..1
+			animationdelay = float
+			## cardinality = 0..1
+			animationlooping = bool
+			## cardinality = 0..1
+			animationmaskfile = scalar
+			## cardinality = 0..1
+			animationrotation = float
+			## cardinality = 0..1
+			animationtexturefile = scalar
+			## cardinality = 0..1
+			animationtime = float
+			## cardinality = 0..1
+			animationtype = scalar
+			## cardinality = 0..1
+			animationframes = {
+				## cardinality = 0..inf
+				int
+			}
+			## cardinality = 0..1
+			animationrotationoffset = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+			## cardinality = 0..1
+			animationtexturescale = {
+				## cardinality = 0..1
+				x = float
+				## cardinality = 0..1
+				y = float
+			}
+		}
+		## cardinality = 0..1
+		can_be_lowres = bool
+		## cardinality = 0..1
+		clicksound = scalar
+		## cardinality = 0..1
+		defaultAnimationTime = float
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		framedirectiony = bool
+		## cardinality = 0..1
+		legacy_lazy_load = bool
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		masking_texture = scalar
+		## cardinality = 0..1
+		noOfFrames = int
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		overlay_frames_per_row = int
+		## cardinality = 0..1
+		overlay_rows = int
+		## cardinality = 0..1
+		textureFile = scalar
+		## cardinality = 0..1
+		textureFile1 = scalar
+		## cardinality = 0..1
+		textureFile2 = scalar
+		## cardinality = 0..1
+		textureFile3 = scalar
+		## cardinality = 0..1
+		texturesize = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+		## cardinality = 0..1
+		transparencecheck = bool
+	}
+	subtype[pie_chart] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		colors = {
+			## cardinality = 0..inf
+			scalar = scalar
+		}
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		size = int
+	}
+	subtype[line_chart] = {
+		## cardinality = 0..1
+		name = scalar
+		## cardinality = 0..1
+		effectFile = scalar
+		## cardinality = 0..1
+		linewidth = float
+		## cardinality = 0..1
+		loadType = enum[gfx_load_type]
+		## cardinality = 0..1
+		norefcount = bool
+		## cardinality = 0..1
+		size = {
+			## cardinality = 0..1
+			x = int
+			## cardinality = 0..1
+			y = int
+		}
+	}
 }
