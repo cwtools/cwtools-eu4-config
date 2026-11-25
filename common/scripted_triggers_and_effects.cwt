@@ -276,11 +276,19 @@ alias[effect:bribe_effect_scaling_with_estate_loyalty] = {
 	## cardinality = 1..1
 	effect_angry = enum[bribe_effect_options]
 	## cardinality = 1..1
+	effect_angry = scalar
+	## cardinality = 1..1
 	effect_neutral = enum[bribe_effect_options]
+	## cardinality = 1..1
+	effect_neutral = scalar
 	## cardinality = 1..1
 	effect_happy = enum[bribe_effect_options]
 	## cardinality = 1..1
+	effect_happy = scalar
+	## cardinality = 1..1
 	default_effect = enum[bribe_effect_options]
+	## cardinality = 1..1
+	default_effect = scalar
 }
 
 enums = {
@@ -1847,11 +1855,17 @@ alias[effect:on_trade_good_changed_estate_privileges_effect] = yes
 alias[effect:issue_effect_scaling_with_estate_influence] = {
 	estate = <estate>
 	effect1 = enum[scaling_with_estate_influence_options]
+	effect1 = scalar
 	effect2 = enum[scaling_with_estate_influence_options]
+	effect2 = scalar
 	effect3 = enum[scaling_with_estate_influence_options]
+	effect3 = scalar
 	effect4 = enum[scaling_with_estate_influence_options]
+	effect4 = scalar
 	effect5 = enum[scaling_with_estate_influence_options]
+	effect5 = scalar
 	fallback_effect = enum[scaling_with_estate_influence_options]
+	fallback_effect = scalar
 }
 
 enums = {
